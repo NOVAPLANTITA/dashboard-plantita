@@ -184,7 +184,7 @@ const VENDA = [{"item": "Purina R/G", "marca": "Purina", "categoria": "Ração",
 const fmtInt = n => new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0}).format(n);
 const fmtPrice = n => n == null ? '—' : new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(n);
 const esc = s => String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
-const csvText = await fetch(${CSV_URL}&_=${Date.now()}, { cache: 'no-store' }).then(r => {
+const csvText = await fetch(CSV_URL).then(r => {
   if (!r.ok) throw new Error("Erro ao acessar a planilha");
   return r.text();
 });
