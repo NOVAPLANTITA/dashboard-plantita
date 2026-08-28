@@ -246,7 +246,7 @@ if (rows.length > 1) {
       peso: obj["Peso"] || "",
       observacao: obj["Observação"] || "",
       quantidade: Number(qtd) || 0,
-      preco: null
+      preco: Number(String(obj["Preço de venda"] || "").replace(/[R$\s.]/g, "").replace(",", ".")) || null
     };
   }).filter(x => x.produto);
 }
