@@ -1,0 +1,1 @@
+Banner v6: arquivo binário corrigido e CSS ajustado para exibição integral sem faixa cinza.
