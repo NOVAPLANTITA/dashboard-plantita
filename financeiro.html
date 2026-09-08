@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#031214">
+<title>Plantita • Financeiro</title>
+<style>
+:root{--bg:#031214;--panel:#08262b;--line:#165159;--green:#19e38c;--blue:#1698eb;--gold:#f4b844;--red:#ff6b70;--text:#f5fbfa;--muted:#9bb4b1}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#0a3c32,#06191c 34%,#031214 74%);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;min-height:100vh}
+.wrap{max-width:1380px;margin:auto;padding:14px 14px 40px}.top{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px;position:sticky;top:0;z-index:20;background:#031214e8;backdrop-filter:blur(10px);padding:8px 0}
+.back{color:#fff;text-decoration:none;background:#0c393e;border:1px solid #287079;border-radius:12px;padding:11px 14px;font-weight:800}.title h1{font-size:21px;margin:0}.title small{color:var(--muted)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.card,.panel{background:linear-gradient(135deg,#092b30,#071f25);border:1px solid var(--line);border-radius:14px;box-shadow:inset 0 1px rgba(255,255,255,.03)}
+.card{padding:14px;min-height:112px}.label{font-size:11px;color:#b9cbca}.value{font-size:25px;font-weight:900;margin:8px 0 5px}.hint{font-size:10px;color:var(--muted)}.good{color:var(--green)}.warn{color:var(--gold)}.bad{color:var(--red)}
+.main{display:grid;grid-template-columns:1.15fr .85fr;gap:10px;margin-top:10px}.panel{padding:15px}.panel h2{margin:0 0 12px;font-size:16px}
+.inputs{display:grid;grid-template-columns:1fr 1fr;gap:12px}.inputbox{background:#061b1f;border:1px solid #174a50;border-radius:11px;padding:11px}.inputbox label{display:block;font-size:11px;color:#c7d6d4;margin-bottom:7px}.inputbox input{width:100%;background:#031214;color:#fff;border:1px solid #22616a;border-radius:8px;padding:10px;font-size:15px;font-weight:800}.inputbox input[type=range]{padding:0;border:0}
+.result{margin-top:12px;display:grid;gap:8px}.rrow{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #123a3f;padding:9px 0;font-size:12px}.rrow b{font-size:13px}
+.progress{height:14px;background:#0a363b;border-radius:999px;overflow:hidden;margin-top:8px}.progress i{display:block;height:100%;background:linear-gradient(90deg,#16c77c,#4ff0aa);width:0}.progress.red i{background:linear-gradient(90deg,#b74148,#ff6b70)}
+.section{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.bars{display:grid;gap:9px}.barrow{display:grid;grid-template-columns:64px 1fr 90px;gap:8px;align-items:center;font-size:10px}.track{height:14px;background:#0b3b40;border-radius:4px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#159be9,#49c4ff)}
+.tabs{display:flex;gap:7px;margin-bottom:10px}.tab{border:1px solid #22606a;background:#07262b;color:#dbe9e7;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}.tab.active{background:#19d889;color:#003225;border-color:#19d889}
+.tablewrap{overflow:auto;max-height:430px;border:1px solid #164a50;border-radius:11px}table{width:100%;border-collapse:collapse;min-width:760px;font-size:11px}th{position:sticky;top:0;background:#0b3439;color:#dff7f0;text-align:left;padding:10px;border-bottom:1px solid #1d5c64}td{padding:9px 10px;border-bottom:1px solid #123b40;color:#d4e1df}td.num{text-align:right;font-weight:800}
+.note{font-size:10px;line-height:1.5;color:#9eb5b2;margin-top:10px;padding:10px;border-left:3px solid #1bd88d;background:#061b1f;border-radius:8px}
+@media(max-width:900px){.grid4{grid-template-columns:1fr 1fr}.main,.section{grid-template-columns:1fr}.wrap{padding:8px 8px 28px}.top{align-items:flex-start}.title h1{font-size:17px}.value{font-size:20px}}
+@media(max-width:560px){.grid4{grid-template-columns:1fr 1fr}.card{min-height:100px;padding:11px}.inputs{grid-template-columns:1fr}.back{padding:9px 10px;font-size:12px}.title small{font-size:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="back" href="index.html">← Dashboard</a>
+    <div class="title"><h1>Financeiro • Ponto de Equilíbrio</h1><small id="stamp">Carregando base financeira...</small></div>
+  </div>
+
+  <div class="grid4">
+    <div class="card"><div class="label">Vendas acumuladas no movimento diário</div><div class="value" id="vendasAtual">R$ 0,00</div><div class="hint" id="diasVenda">Base diária do dashboard</div></div>
+    <div class="card"><div class="label">Ponto de equilíbrio simulado</div><div class="value warn" id="peCard">R$ 0,00</div><div class="hint">Custos fixos ÷ margem de contribuição</div></div>
+    <div class="card"><div class="label">Falta para atingir o equilíbrio</div><div class="value" id="faltaCard">R$ 0,00</div><div class="hint" id="statusPe">Acompanhamento do mês</div></div>
+    <div class="card"><div class="label">Compromissos de caixa • Setembro</div><div class="value" id="caixaSet">R$ 0,00</div><div class="hint">Custos fixos + boletos do mês</div></div>
+  </div>
+
+  <div class="main">
+    <div class="panel">
+      <h2>Simulador de ponto de equilíbrio</h2>
+      <div class="inputs">
+        <div class="inputbox"><label>Margem de contribuição (%)</label><input id="margem" type="number" min="5" max="80" step="1" value="30"></div>
+        <div class="inputbox"><label>Custos fixos operacionais (R$)</label><input id="fixos" type="number" step="100" value="41287.81"></div>
+        <div class="inputbox"><label>Vendas previstas no mês (R$)</label><input id="vendasPrev" type="number" step="1000" value="309614.86"></div>
+        <div class="inputbox"><label>Boletos considerados no caixa (R$)</label><input id="boletosSim" type="number" step="100" value="20787.20"></div>
+      </div>
+      <div class="result">
+        <div class="rrow"><span>Ponto de equilíbrio mensal</span><b id="peResult">R$ 0,00</b></div>
+        <div class="rrow"><span>Meta diária para 30 dias</span><b id="metaDia">R$ 0,00</b></div>
+        <div class="rrow"><span>Resultado econômico projetado</span><b id="resultadoProj">R$ 0,00</b></div>
+        <div class="rrow"><span>Caixa necessário (fixos + boletos)</span><b id="caixaNec">R$ 0,00</b></div>
+        <div class="rrow"><span>Projeção pelo ritmo de vendas atual</span><b id="projRitmo">R$ 0,00</b></div>
+      </div>
+      <div class="progress" id="progWrap"><i id="prog"></i></div>
+      <div class="hint" id="progTxt" style="margin-top:6px">0% do ponto de equilíbrio atingido</div>
+      <div class="note">Os boletos entram no acompanhamento de caixa, mas não são somados automaticamente ao custo econômico do mês. Isso evita tratar parcelas de compras antigas como se fossem custo integral de setembro.</div>
+    </div>
+
+    <div class="panel">
+      <h2>Composição financeira atual</h2>
+      <div class="result">
+        <div class="rrow"><span>Aluguel</span><b id="aluguel">R$ 0,00</b></div>
+        <div class="rrow"><span>Funcionários</span><b id="func">R$ 0,00</b></div>
+        <div class="rrow"><span>Pagamentos em dinheiro</span><b id="dinheiro">R$ 0,00</b></div>
+        <div class="rrow"><span>Boletos Setembro</span><b id="bolSet">R$ 0,00</b></div>
+        <div class="rrow"><span>Boletos Outubro</span><b id="bolOut">R$ 0,00</b></div>
+        <div class="rrow"><span>Faturamento-base Setembro</span><b id="fatBase">R$ 0,00</b></div>
+      </div>
+      <div class="note">O faturamento-base vem da planilha financeira consolidada. O card de vendas acumuladas acima lê o arquivo de movimentos diários do próprio dashboard.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="panel">
+      <h2>Histórico de faturamento</h2>
+      <div class="bars" id="history"></div>
+    </div>
+    <div class="panel">
+      <h2>Leitura gerencial</h2>
+      <div class="result" id="leitura"></div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:10px">
+    <h2>Boletos e vencimentos</h2>
+    <div class="tabs"><button class="tab active" data-mes="Setembro 2026">Setembro</button><button class="tab" data-mes="Outubro 2026">Outubro</button></div>
+    <div class="tablewrap"><table><thead><tr><th>Vencimento</th><th>Fornecedor</th><th>Documento</th><th>Banco</th><th style="text-align:right">Valor</th></tr></thead><tbody id="boletosBody"></tbody></table></div>
+  </div>
+</div>
+<script>
+const BRL=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'});
+let F=null, movimentos=[], vendasAtuais=0, diasComVenda=0;
+const salesTypes=new Set(['Getnet','Cielo','Mercado Pago','Dinheiro','PIX']);
+function n(v){return Number(v)||0}
+function set(id,val){document.getElementById(id).textContent=val}
+async function load(){
+  const [fr,mr]=await Promise.all([
+    fetch('data/financeiro.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()),
+    fetch('data/movimentos-diarios.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.json()).catch(()=>({movimentos:[]}))
+  ]);
+  F=fr; movimentos=mr.movimentos||[];
+  const dias=new Set();
+  vendasAtuais=movimentos.filter(x=>salesTypes.has(x.tipo)).reduce((s,x)=>{dias.add(x.data);return s+n(x.valor)},0);
+  diasComVenda=dias.size;
+  set('stamp','Base financeira atualizada em '+F.atualizadoEm+' • movimento diário: '+(mr.atualizadoEm||'sem data'));
+  set('vendasAtual',BRL.format(vendasAtuais));
+  set('diasVenda',(diasComVenda||0)+' dia(s) de movimento considerados');
+  const p=F.premissas;
+  document.getElementById('margem').value=(p.margem_contribuicao_padrao*100).toFixed(0);
+  document.getElementById('fixos').value=p.custos_fixos_operacionais.toFixed(2);
+  document.getElementById('vendasPrev').value=p.faturamento_setembro_base.toFixed(2);
+  document.getElementById('boletosSim').value=p.boletos_setembro.toFixed(2);
+  set('aluguel',BRL.format(p.aluguel)); set('func',BRL.format(p.funcionarios)); set('dinheiro',BRL.format(p.pagamentos_dinheiro));
+  set('bolSet',BRL.format(p.boletos_setembro)); set('bolOut',BRL.format(p.boletos_outubro)); set('fatBase',BRL.format(p.faturamento_setembro_base));
+  renderHistory(); renderBoletos('Setembro 2026'); recalc();
+}
+function recalc(){
+  if(!F)return;
+  const margem=Math.max(.01,n(document.getElementById('margem').value)/100);
+  const fixos=n(document.getElementById('fixos').value);
+  const vendas=n(document.getElementById('vendasPrev').value);
+  const boletos=n(document.getElementById('boletosSim').value);
+  const pe=fixos/margem, meta=pe/30, result=vendas*margem-fixos, caixa=fixos+boletos;
+  const proj=diasComVenda ? vendasAtuais/diasComVenda*30 : 0;
+  const falta=Math.max(0,pe-vendasAtuais), pct=pe?Math.min(100,vendasAtuais/pe*100):0;
+  set('peCard',BRL.format(pe)); set('faltaCard',BRL.format(falta)); set('caixaSet',BRL.format(caixa));
+  set('peResult',BRL.format(pe)); set('metaDia',BRL.format(meta)); set('resultadoProj',BRL.format(result)); set('caixaNec',BRL.format(caixa)); set('projRitmo',BRL.format(proj));
+  const faltaEl=document.getElementById('faltaCard');faltaEl.className='value '+(falta===0?'good':'bad');
+  set('statusPe',falta===0?'Ponto de equilíbrio atingido':'Ainda falta faturamento para o equilíbrio');
+  document.getElementById('prog').style.width=pct+'%'; set('progTxt',pct.toFixed(1).replace('.',',')+'% do ponto de equilíbrio atingido');
+  const leitura=[];
+  leitura.push(['Margem simulada',(margem*100).toFixed(0)+'%']);
+  leitura.push(['Folga da previsão sobre o PE',BRL.format(vendas-pe)]);
+  leitura.push(['Cobertura dos boletos',boletos? (vendas/boletos).toFixed(1).replace('.',',')+'x':'—']);
+  leitura.push(['Ritmo projetado vs. PE',proj>=pe?'Acima do equilíbrio':'Abaixo do equilíbrio']);
+  leitura.push(['Diferença do ritmo',BRL.format(proj-pe)]);
+  document.getElementById('leitura').innerHTML=leitura.map(x=>'<div class="rrow"><span>'+x[0]+'</span><b>'+x[1]+'</b></div>').join('');
+}
+function renderHistory(){
+  const h=F.historico||[]; const max=Math.max(...h.map(x=>n(x.faturamento)),1);
+  document.getElementById('history').innerHTML=h.map(x=>'<div class="barrow"><span>'+x.mes+'</span><div class="track"><div class="fill" style="width:'+((n(x.faturamento)/max)*100).toFixed(1)+'%"></div></div><b>'+BRL.format(x.faturamento)+'</b></div>').join('');
+}
+function renderBoletos(mes){
+  const rows=(F.boletos||[]).filter(x=>x.mes===mes);
+  document.getElementById('boletosBody').innerHTML=rows.map(x=>'<tr><td>'+x.vencimento+'</td><td>'+x.fornecedor+'</td><td>'+x.documento+'</td><td>'+x.banco+'</td><td class="num">'+BRL.format(x.valor)+'</td></tr>').join('');
+}
+document.querySelectorAll('input').forEach(el=>el.addEventListener('input',recalc));
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderBoletos(btn.dataset.mes)}));
+load().catch(e=>{set('stamp','Erro ao carregar dados financeiros');console.error(e)});
+</script>
+</body></html>
