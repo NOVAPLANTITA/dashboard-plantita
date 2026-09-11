@@ -12,8 +12,8 @@
     }
     *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top left,#17345c 0,#0b1220 38%,#070b13 100%);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);overflow:hidden}
     .deck{height:100vh;width:100vw;display:grid;place-items:center;padding:18px}.slide{display:none;width:min(1180px,100%);height:min(680px,calc(100vh - 36px));background:linear-gradient(145deg,rgba(16,26,47,.96),rgba(11,18,32,.96));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:44px 52px;position:relative;overflow:hidden}.slide.active{display:block}.slide:before{content:"";position:absolute;right:-120px;top:-130px;width:360px;height:360px;border-radius:50%;background:rgba(38,208,124,.13);filter:blur(2px)}.slide:after{content:"Plantita";position:absolute;right:36px;bottom:24px;color:rgba(255,255,255,.13);font-weight:800;letter-spacing:.08em}
-    h1{font-size:58px;line-height:1.02;margin:0 0 22px;font-weight:900;letter-spacing:-.04em}h2{font-size:42px;line-height:1.08;margin:0 0 22px;font-weight:850;letter-spacing:-.03em}h3{font-size:22px;margin:0 0 8px;color:var(--muted);font-weight:650}.eyebrow{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.06);border-radius:999px;padding:8px 14px;color:#d9fbe9;font-weight:700;margin-bottom:22px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:26px}.card{background:rgba(255,255,255,.065);border:1px solid var(--line);border-radius:22px;padding:22px}.big{font-size:46px;font-weight:900;letter-spacing:-.04em}.money{font-variant-numeric:tabular-nums}.green{color:var(--green)}.amber{color:var(--amber)}.red{color:var(--red)}.blue{color:var(--blue)}.muted{color:var(--muted)}p{font-size:21px;line-height:1.38;color:#d7deea;margin:0 0 16px}.lead{font-size:26px;max-width:870px}.bar{height:16px;background:rgba(255,255,255,.11);border-radius:999px;overflow:hidden;margin:12px 0 8px}.fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--green),var(--blue))}.fill.warn{background:linear-gradient(90deg,var(--amber),var(--red))}.list{display:grid;gap:14px}.item{display:flex;gap:14px;align-items:flex-start;font-size:21px;color:#e8edf7}.dot{width:12px;height:12px;border-radius:50%;background:var(--green);margin-top:9px;flex:none}.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}.kpi{background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:18px;padding:16px}.kpi .v{font-size:27px;font-weight:900}.equation{font-size:34px;line-height:1.35;font-weight:850;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:24px;padding:24px}.tag{display:inline-block;padding:7px 11px;border-radius:999px;background:rgba(38,208,124,.15);border:1px solid rgba(38,208,124,.35);font-weight:800;color:#c9ffe2}.controls{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:10px;z-index:5}.controls button{border:1px solid var(--line);background:rgba(16,26,47,.88);color:var(--text);padding:10px 14px;border-radius:999px;font-weight:800;cursor:pointer}.n{min-width:98px;text-align:center}.print{position:fixed;right:18px;bottom:18px;z-index:5}.mini{font-size:15px;color:var(--muted)}
-    @media(max-width:800px){body{overflow:auto}.deck{height:auto;padding:10px}.slide{height:auto;min-height:calc(100vh - 20px);padding:30px 22px;margin-bottom:12px;display:block}.slide:not(.active){display:none}h1{font-size:42px}h2{font-size:32px}.grid,.grid2,.kpi-row{grid-template-columns:1fr}.big{font-size:38px}.controls{bottom:10px}.print{display:none}}
+    h1{font-size:58px;line-height:1.02;margin:0 0 22px;font-weight:900;letter-spacing:-.04em}h2{font-size:42px;line-height:1.08;margin:0 0 22px;font-weight:850;letter-spacing:-.03em}h3{font-size:22px;margin:0 0 8px;color:var(--muted);font-weight:650}.eyebrow{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.06);border-radius:999px;padding:8px 14px;color:#d9fbe9;font-weight:700;margin-bottom:22px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:26px}.card{background:rgba(255,255,255,.065);border:1px solid var(--line);border-radius:22px;padding:22px}.big{font-size:46px;font-weight:900;letter-spacing:-.04em}.money{font-variant-numeric:tabular-nums}.green{color:var(--green)}.amber{color:var(--amber)}.red{color:var(--red)}.blue{color:var(--blue)}.muted{color:var(--muted)}p{font-size:21px;line-height:1.38;color:#d7deea;margin:0 0 16px}.lead{font-size:26px;max-width:900px}.bar{height:16px;background:rgba(255,255,255,.11);border-radius:999px;overflow:hidden;margin:12px 0 8px}.fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--green),var(--blue))}.fill.warn{background:linear-gradient(90deg,var(--amber),var(--red))}.list{display:grid;gap:14px}.item{display:flex;gap:14px;align-items:flex-start;font-size:21px;color:#e8edf7}.dot{width:12px;height:12px;border-radius:50%;background:var(--green);margin-top:9px;flex:none}.dot.amberdot{background:var(--amber)}.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}.kpi{background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:18px;padding:16px}.kpi .v{font-size:27px;font-weight:900}.equation{font-size:34px;line-height:1.35;font-weight:850;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:24px;padding:24px}.tag{display:inline-block;padding:7px 11px;border-radius:999px;background:rgba(38,208,124,.15);border:1px solid rgba(38,208,124,.35);font-weight:800;color:#c9ffe2}.tag.warn{background:rgba(255,191,71,.15);border-color:rgba(255,191,71,.35);color:#ffe6ac}.controls{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:10px;z-index:5}.controls button{border:1px solid var(--line);background:rgba(16,26,47,.88);color:var(--text);padding:10px 14px;border-radius:999px;font-weight:800;cursor:pointer}.n{min-width:98px;text-align:center}.print{position:fixed;right:18px;bottom:18px;z-index:5}.mini{font-size:15px;color:var(--muted)}
+    @media(max-width:800px){body{overflow:auto}.deck{height:auto;padding:10px}.slide{height:auto;min-height:calc(100vh - 20px);padding:30px 22px;margin-bottom:12px;display:block}.slide:not(.active){display:none}h1{font-size:42px}h2{font-size:32px}.grid,.grid2,.kpi-row{grid-template-columns:1fr}.big{font-size:38px}.equation{font-size:27px}.controls{bottom:10px}.print{display:none}}
     @media print{body{background:white;color:black;overflow:visible}.deck{display:block;height:auto;padding:0}.slide{display:block;page-break-after:always;width:100%;height:100vh;box-shadow:none;border:none;border-radius:0;background:#0b1220}.controls,.print{display:none}}
   </style>
 </head>
@@ -22,11 +22,11 @@
     <section class="slide active">
       <span class="eyebrow">Apresentação gerencial • Setembro/2026</span>
       <h1>Ponto de equilíbrio de vendas da Plantita</h1>
-      <p class="lead">A leitura principal é separar o ponto de equilíbrio econômico da pressão de caixa criada por boletos de compras atuais e antigas.</p>
+      <p class="lead">A leitura correta é separar três coisas: ponto de equilíbrio operacional, meta de faturamento e pressão de caixa dos compromissos de setembro.</p>
       <div class="grid" style="margin-top:38px">
         <div class="card"><h3>Ponto econômico</h3><div class="big money green">R$ 122,5 mil</div><p class="mini">Venda mínima para cobrir custos fixos usando a margem de contribuição atual.</p></div>
-        <div class="card"><h3>Alvo base setembro</h3><div class="big money blue">R$ 309,6 mil</div><p class="mini">Base atual usada no dashboard financeiro.</p></div>
-        <div class="card"><h3>Pressão de caixa</h3><div class="big money amber">R$ 690,3 mil</div><p class="mini">Venda necessária se o mês tiver que pagar fixos + boletos de setembro + empréstimo.</p></div>
+        <div class="card"><h3>Alvo base setembro</h3><div class="big money blue">R$ 309,6 mil</div><p class="mini">Meta de faturamento usada como referência no dashboard financeiro.</p></div>
+        <div class="card"><h3>Pressão de caixa</h3><div class="big money amber">R$ 232,7 mil</div><p class="mini">Desembolso estimado de setembro: fixos + boletos do mês + empréstimo.</p></div>
       </div>
     </section>
 
@@ -40,9 +40,9 @@
       </div>
       <div class="grid2" style="margin-top:28px">
         <div class="card"><h3>Custos fixos confirmados</h3><div class="big money">R$ 41.287,81</div><p>Inclui aluguel, funcionários e pagamentos em dinheiro já classificados no financeiro.</p></div>
-        <div class="card"><h3>Compromissos de setembro</h3><div class="big money amber">R$ 188.804,42</div><p>Boletos de setembro: R$ 168.017,22 de compras anteriores + R$ 20.787,20 de compras novas.</p></div>
+        <div class="card"><h3>Boletos de setembro</h3><div class="big money amber">R$ 188.804,42</div><p>R$ 168.017,22 de compras anteriores + R$ 20.787,20 de compras novas.</p></div>
       </div>
-      <p class="mini" style="margin-top:18px">Observação: boletos antigos entram como pressão de caixa, não como custo econômico novo do mês.</p>
+      <p class="mini" style="margin-top:18px">Observação: entram aqui apenas os vencimentos de setembro, não todas as parcelas futuras dos boletos.</p>
     </section>
 
     <section class="slide">
@@ -85,20 +85,22 @@
     </section>
 
     <section class="slide">
-      <h2>O alerta: caixa é diferente de lucro</h2>
+      <h2>Pressão de caixa de setembro</h2>
       <div class="grid2">
         <div>
-          <div class="equation money">(R$ 41.287,81 + R$ 188.804,42 + R$ 2.583,33) ÷ 33,71%<br><span class="amber">= R$ 690.312,86</span></div>
-          <p style="margin-top:20px">Esse número não é o ponto de equilíbrio econômico. Ele mostra a venda necessária para bancar o caixa do mês se todos os boletos tiverem que sair do resultado de setembro.</p>
+          <div class="equation money">R$ 41.287,81 + R$ 188.804,42 + R$ 2.583,33<br><span class="amber">= R$ 232.675,56</span></div>
+          <p style="margin-top:20px">Esse é o dinheiro que precisa sair no mês considerando os compromissos classificados para setembro.</p>
         </div>
         <div class="card">
-          <h3>Comparação com o alvo base</h3>
-          <div class="big money red">+ R$ 380,7 mil</div>
-          <p>Diferença entre a pressão de caixa e o faturamento base de setembro.</p>
-          <div class="bar"><div class="fill warn" style="width:55%"></div></div>
-          <p class="mini">Para cobrir o caixa completo, seriam R$ 29.884,60/dia nos 20 dias restantes.</p>
+          <h3>O que entrou nesse número?</h3>
+          <div class="list">
+            <div class="item"><span class="dot amberdot"></span><span>Custos fixos confirmados de setembro.</span></div>
+            <div class="item"><span class="dot amberdot"></span><span>Somente boletos com vencimento em setembro.</span></div>
+            <div class="item"><span class="dot amberdot"></span><span>Não inclui parcelas futuras de outubro em diante.</span></div>
+          </div>
         </div>
       </div>
+      <div class="card" style="margin-top:24px"><p><span class="tag warn">Atenção</span> R$ 690,3 mil não deve aparecer como ponto de equilíbrio. Esse valor é apenas uma simulação de quanto teria que vender se toda a pressão de caixa de setembro fosse coberta pela margem de 33,71% das vendas do próprio mês.</p></div>
     </section>
 
     <section class="slide">
