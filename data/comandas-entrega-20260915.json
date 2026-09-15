@@ -182,6 +182,19 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Produto R$ 77,00 + taxa de entrega R$ 5,00 = total R$ 82,00; revisar telefone, endereço e descrição exata do produto"
+    },
+    {
+      "data": "15/09/2026",
+      "cliente": "Marcia (leitura aproximada)",
+      "telefone": "973436447 (leitura aproximada)",
+      "endereco": "R. Silvio Pereira (restante pouco legível), 55",
+      "descricao": "1 Tussedan R$ 68,00",
+      "valorProduto": 68,
+      "taxaEntrega": 5,
+      "total": 73,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Revisar grafia do nome, telefone e endereço; produto R$ 68,00 + taxa de entrega R$ 5,00 = total R$ 73,00."
     }
   ]
 }
