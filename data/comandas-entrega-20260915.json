@@ -143,6 +143,19 @@
       "pagamento": "Pago",
       "prazo": "",
       "conferencia": "Revisar nome; quantidades/pesos não legíveis; forma de pagamento não informada; sem taxa discriminada"
+    },
+    {
+      "data": "15/09/2026",
+      "cliente": "Doralice",
+      "telefone": "",
+      "endereco": "Alcino Antônio de Moraes, 305",
+      "descricao": "3 kg Golden Cat Frango",
+      "valorProduto": 78,
+      "taxaEntrega": 5,
+      "total": 83,
+      "pagamento": "Dinheiro",
+      "prazo": "",
+      "conferencia": "OK — comanda de 15/09/2026; produto R$ 78,00 + taxa R$ 5,00 = total R$ 83,00."
     }
   ]
 }
