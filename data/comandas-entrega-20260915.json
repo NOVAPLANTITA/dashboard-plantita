@@ -156,6 +156,32 @@
       "pagamento": "Dinheiro",
       "prazo": "",
       "conferencia": "OK — comanda de 15/09/2026; produto R$ 78,00 + taxa R$ 5,00 = total R$ 83,00."
+    },
+    {
+      "data": "15/09/2026",
+      "cliente": "Jilda (leitura aproximada)",
+      "telefone": "941481889",
+      "endereco": "R. Nova Lino de Moraes, 496 (leitura aproximada)",
+      "descricao": "1 Special Dog 15 kg",
+      "valorProduto": 109,
+      "taxaEntrega": 0,
+      "total": 109,
+      "pagamento": "Pago",
+      "prazo": "",
+      "conferencia": "Revisar nome, telefone, endereço e variante do produto; total manuscrito R$ 109,00; sem taxa discriminada"
+    },
+    {
+      "data": "15/09/2026",
+      "cliente": "Evelyn",
+      "telefone": "944536679",
+      "endereco": "R. Palomino, 123 (leitura aproximada)",
+      "descricao": "1 Golden Frango R/P (leitura aproximada)",
+      "valorProduto": 77,
+      "taxaEntrega": 5,
+      "total": 82,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Produto R$ 77,00 + taxa de entrega R$ 5,00 = total R$ 82,00; revisar telefone, endereço e descrição exata do produto"
     }
   ]
 }
