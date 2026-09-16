@@ -156,6 +156,32 @@
       "pagamento": "Dinheiro (troco para R$ 100,00; conferir)",
       "prazo": "",
       "conferencia": "Confirmar grafia do cliente, rua e telefone antes de usar para contato/rota. Comanda indica 'Troco 100,00': se for troco para nota de R$ 100,00, levar R$ 40,00; não há confirmação de recebimento. Produto R$ 50,00 + taxa R$ 10,00 = total R$ 60,00. Fonte: IMG-20260916-WA0036.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Marcelo",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Fórmula MB (variante/apresentação a conferir) R$ 270,00",
+      "valorProduto": 270,
+      "taxaEntrega": 0,
+      "total": 270,
+      "pagamento": "Dinheiro",
+      "prazo": "",
+      "conferencia": "Nome Marcelo; 1 Fórmula MB e total manuscrito R$ 270,00; pagamento em dinheiro; sem taxa de entrega discriminada. Confirmar apresentação do produto. Fonte: IMG-20260916-WA0043.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Maria",
+      "telefone": "",
+      "endereco": "Rua Sílvio Ferreira Domingues, 31 (leitura aproximada)",
+      "descricao": "3 kg Magnus Gato Filhote R$ 42,00; 3 pct. 'cocote' (leitura aproximada) R$ 2,50; 2 kg 'ferro' (leitura aproximada) R$ 6,00; taxa de entrega R$ 5,00",
+      "valorProduto": 50.5,
+      "taxaEntrega": 5,
+      "total": 55.5,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Conferir grafia da rua e descrições dos dois itens após Magnus; 3 kg Magnus Gato Filhote R$ 42,00 + outros itens R$ 2,50 e R$ 6,00 + entrega R$ 5,00 = total manuscrito R$ 55,50. Fonte: IMG-20260916-WA0041.jpg."
     }
   ]
 }
