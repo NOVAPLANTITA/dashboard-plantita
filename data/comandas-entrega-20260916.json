@@ -1,0 +1,57 @@
+{
+  "atualizadoEm": "16/09/2026",
+  "comandas": [
+    {
+      "data": "16/09/2026",
+      "cliente": "Silvano de Almeida (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 saco 2 Origens Classic 15 kg (leitura aproximada)",
+      "valorProduto": 120,
+      "taxaEntrega": 0,
+      "total": 120,
+      "pagamento": "Pago",
+      "prazo": "",
+      "conferencia": "Revisar grafia do nome e marca/variante do produto. Há anotação '229' no campo telefone, insuficiente para contato; 'Sandra' na assinatura. Total manuscrito R$ 120,00, sem taxa discriminada. Fonte: IMG-20260916-WA0006.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Karin (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Fórmula Filhote MG R$ 273,00 + NexGard R$ 115,00 (variantes e quantidades a conferir)",
+      "valorProduto": 388,
+      "taxaEntrega": 0,
+      "total": 388,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Revisar grafia do nome, apresentação da Fórmula Filhote, NexGard e quantidades. Valores anotados R$ 273,00 + R$ 115,00; total R$ 388,00, sem taxa discriminada. Fonte: IMG-20260916-WA0005.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Bárbara / Simone (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Premier Salmão (variante a conferir) R$ 252,00 + Vita de Carne R$ 145,00 (descrição a conferir)",
+      "valorProduto": 397,
+      "taxaEntrega": 0,
+      "total": 397,
+      "pagamento": "Marcado",
+      "prazo": "",
+      "conferencia": "Revisar nome da cliente, produtos, pesos e quantidades. R$ 252,00 + R$ 145,00 = R$ 397,00; sem taxa discriminada. Fonte: IMG-20260916-WA0002.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Luciana (Ótica)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 sachê gato R$ 10,00 + 1 sachê cachorro R$ 10,00 + Class 4 kg (leitura aproximada) R$ 14,00 + 1 kg Golden Gato R$ 20,00",
+      "valorProduto": 54,
+      "taxaEntrega": 0,
+      "total": 54,
+      "pagamento": "Marcado",
+      "prazo": "",
+      "conferencia": "Revisar descrição 'Class 4k' e quantidade/peso do Golden Gato. R$ 10,00 + R$ 10,00 + R$ 14,00 + R$ 20,00 = R$ 54,00. Sem taxa discriminada. Fonte: IMG-20260916-WA0003.jpg."
+    }
+  ]
+}
