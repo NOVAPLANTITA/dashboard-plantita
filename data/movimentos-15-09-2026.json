@@ -1,0 +1,20 @@
+{
+  "atualizadoEm": "15/09/2026",
+  "totalInformadoComanda": 9573.00,
+  "totalLancamentos": 9775.60,
+  "diferencaConferencia": 202.60,
+  "observacao": "Total manuscrito da comanda: R$ 9.573,00. Soma dos 11 lançamentos lidos: R$ 9.775,60, diferença de R$ 202,60. Valores com escrita sobreposta, especialmente GETNET 1, PIX ALAN e PIX AMANDA, precisam de confirmação; não foi feita correção automática para forçar o fechamento. Data manuscrita: 15/09/2026.",
+  "movimentos": [
+    {"data":"15/09/2026","tipo":"Dinheiro","descricao":"DINHEIRO","valor":1200.00,"conferencia":"Leitura visual"},
+    {"data":"15/09/2026","tipo":"Getnet","descricao":"GETNET 1","valor":1185.90,"conferencia":"Valor manuscrito com sobreposição; conferir"},
+    {"data":"15/09/2026","tipo":"Getnet","descricao":"GETNET 2","valor":773.00,"conferencia":"Leitura visual"},
+    {"data":"15/09/2026","tipo":"Cielo","descricao":"CIELO","valor":4511.80,"conferencia":"Leitura visual"},
+    {"data":"15/09/2026","tipo":"Mercado Pago","descricao":"MERCADO PG","valor":887.00,"conferencia":"Leitura visual"},
+    {"data":"15/09/2026","tipo":"Outros","descricao":"CAFÉ","valor":24.90,"conferencia":"Leitura visual"},
+    {"data":"15/09/2026","tipo":"PIX","descricao":"ALAN","valor":519.00,"conferencia":"Valor sobrescrito; conferir"},
+    {"data":"15/09/2026","tipo":"PIX","descricao":"ANA CAROLINA","valor":79.00,"conferencia":"Leitura visual"},
+    {"data":"15/09/2026","tipo":"PIX","descricao":"FERNANDA","valor":95.00,"conferencia":"Leitura visual"},
+    {"data":"15/09/2026","tipo":"PIX","descricao":"AMANDA","valor":300.00,"conferencia":"Valor sobrescrito; conferir"},
+    {"data":"15/09/2026","tipo":"Outros","descricao":"BOMBA (forma de pagamento não indicada)","valor":200.00,"conferencia":"Forma de pagamento a confirmar"}
+  ]
+}
