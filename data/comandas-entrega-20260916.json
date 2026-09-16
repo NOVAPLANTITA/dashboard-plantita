@@ -143,6 +143,19 @@
       "pagamento": "Pix",
       "prazo": "",
       "conferencia": "Conferir nome do cliente, endereço, produtos e quantidades. R$ 14,00 + R$ 49,40 + R$ 5,00 entrega = R$ 68,40. Fonte: IMG-20260916-WA0014.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Luiz (leitura aproximada)",
+      "telefone": "",
+      "endereco": "R. Sebastião ... Leite, 163 (leitura parcial)",
+      "descricao": "1 milho 25 kg R$ 50,00 + taxa de entrega R$ 10,00",
+      "valorProduto": 50,
+      "taxaEntrega": 10,
+      "total": 60,
+      "pagamento": "Dinheiro (troco para R$ 100,00; conferir)",
+      "prazo": "",
+      "conferencia": "Confirmar grafia do cliente, rua e telefone antes de usar para contato/rota. Comanda indica 'Troco 100,00': se for troco para nota de R$ 100,00, levar R$ 40,00; não há confirmação de recebimento. Produto R$ 50,00 + taxa R$ 10,00 = total R$ 60,00. Fonte: IMG-20260916-WA0036.jpg."
     }
   ]
 }
