@@ -52,6 +52,97 @@
       "pagamento": "Marcado",
       "prazo": "",
       "conferencia": "Revisar descrição 'Class 4k' e quantidade/peso do Golden Gato. R$ 10,00 + R$ 10,00 + R$ 14,00 + R$ 20,00 = R$ 54,00. Sem taxa discriminada. Fonte: IMG-20260916-WA0003.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Lucas (leitura aproximada)",
+      "telefone": "",
+      "endereco": "Rua ... 124 (grafia a conferir)",
+      "descricao": "1 Especial Dog 15 kg (variante a conferir) R$ 100,00 + entrega R$ 5,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Dinheiro (sem troco)",
+      "prazo": "",
+      "conferencia": "Confirmar nome, rua e telefone manuscritos. Comanda indica 'Dinheiro ñ troco'. Total R$ 105,00 = produto R$ 100,00 + entrega R$ 5,00. Fonte: IMG-20260916-WA0035.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Gustavo (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 kg de paico (leitura aproximada) R$ 14,00; 1 kg girassol R$ 8,00; 1 Denta Stix R$ 20,00; 1 Savor (leitura aproximada) R$ 25,00; 5 kg milho R$ 74,00; 5 kg quirera fina R$ 25,00; 1 biscoito R$ 15,00",
+      "valorProduto": 180,
+      "taxaEntrega": 0,
+      "total": 180,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir itens e valores: soma das linhas legíveis R$ 181,00, mas total manuscrito R$ 180,00, mantido conforme comanda. IMG-20260916-WA0025.jpg e IMG-20260916-WA0018.jpg são fotos da mesma comanda; lançada somente uma vez. Sem taxa de entrega discriminada."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Heloísa (Bilu; leitura aproximada)",
+      "telefone": "",
+      "endereco": "Rua José Domingues de Moraes, 16 (leitura aproximada)",
+      "descricao": "6 kg Magnus Carne (variante a conferir) R$ 84,00 + entrega R$ 5,00",
+      "valorProduto": 84,
+      "taxaEntrega": 5,
+      "total": 89,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Conferir grafia do nome, endereço e telefone. Comanda indica R$ 84,00 em produto e R$ 5,00 de taxa; total R$ 89,00. Fonte: IMG-20260916-WA0026.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Ed... (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 kg pastel R$ 16,00; 1 kg Golden R$ 20,00; 2 kg M. Sty (leitura aproximada) R$ 18,00; 1 peça/pepesco (leitura aproximada) R$ 9,00; 4 itens 'uisca' R$ 14,00; 4 itens 'creia' R$ 24,00",
+      "valorProduto": 100,
+      "taxaEntrega": 0,
+      "total": 100,
+      "pagamento": "Dinheiro",
+      "prazo": "",
+      "conferencia": "Revisar nome do cliente e descrições dos itens. Soma das linhas R$ 101,00, total manuscrito R$ 100,00; mantido o total da comanda. Nenhuma taxa separada. Fonte: IMG-20260916-WA0016.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Dona Norma (leitura aproximada)",
+      "telefone": "",
+      "endereco": "Monte ... (endereço a conferir)",
+      "descricao": "Cest. frango (descrição a conferir) R$ 80,00; 1 tapete higiênico sem valor individual anotado; 1 pct. de granulado R$ 90,00; produto para gatos 10 kg R$ 55,00",
+      "valorProduto": 225,
+      "taxaEntrega": 0,
+      "total": 225,
+      "pagamento": "Marcado",
+      "prazo": "",
+      "conferencia": "Revisar endereço, itens e preço do tapete higiênico, que não tem valor individual informado. Demais linhas somam R$ 225,00, igual ao total manuscrito; sem taxa separada. Fonte: IMG-20260916-WA0017.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Luc... (nome a conferir)",
+      "telefone": "",
+      "endereco": "Ót. LC (anotação a conferir)",
+      "descricao": "Item anotado como 'OT Os...' (descrição ilegível; conferir original)",
+      "valorProduto": 90,
+      "taxaEntrega": 0,
+      "total": 90,
+      "pagamento": "Marcado",
+      "prazo": "",
+      "conferencia": "Confirmar nome, descrição e se é pedido distinto da comanda Luciana (Ótica) de R$ 54,00 já registrada em 16/09. Valores diferentes e itens manuscritos distintos; lançada separadamente, sujeita a conferência. Total R$ 90,00. Fonte: IMG-20260916-WA0015.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Nu Talent. (leitura aproximada)",
+      "telefone": "",
+      "endereco": "Rua Novalino Moraes, 9 (leitura aproximada)",
+      "descricao": "1 kg Magnus Carne (variante a conferir) R$ 14,00; 3 itens variados (descrição a conferir) R$ 49,40; entrega R$ 5,00",
+      "valorProduto": 63.4,
+      "taxaEntrega": 5,
+      "total": 68.4,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Conferir nome do cliente, endereço, produtos e quantidades. R$ 14,00 + R$ 49,40 + R$ 5,00 entrega = R$ 68,40. Fonte: IMG-20260916-WA0014.jpg."
     }
   ]
 }
