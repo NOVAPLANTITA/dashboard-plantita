@@ -1,0 +1,18 @@
+{
+  "atualizadoEm": "17/09/2026",
+  "totalInformadoComanda": 5712.07,
+  "totalLancamentos": 5772.07,
+  "diferencaConferencia": 60.00,
+  "observacao": "Foto da comanda datada de 17/09/2026. Soma dos nove lançamentos lidos: R$ 5.772,07; total manuscrito: R$ 5.712,07. Diferença de R$ 60,00 pendente de conferência, sem ajuste arbitrário. Confirmar os nomes dos PIX e os valores manuscritos caso necessário.",
+  "movimentos": [
+    {"data":"17/09/2026","tipo":"Dinheiro","descricao":"DINHEIRO","valor":1100.00,"conferencia":"Leitura visual"},
+    {"data":"17/09/2026","tipo":"Getnet","descricao":"GETNET 1","valor":663.50,"conferencia":"Leitura visual"},
+    {"data":"17/09/2026","tipo":"Getnet","descricao":"GETNET 2","valor":1365.50,"conferencia":"Leitura visual; confirmar na conciliação devido a divergência total"},
+    {"data":"17/09/2026","tipo":"Cielo","descricao":"CIELO","valor":1450.76,"conferencia":"Leitura visual"},
+    {"data":"17/09/2026","tipo":"Mercado Pago","descricao":"MERCADO PG","valor":791.00,"conferencia":"Leitura visual"},
+    {"data":"17/09/2026","tipo":"Outros","descricao":"CAFÉ","valor":29.31,"conferencia":"Leitura visual; forma de pagamento não identificada"},
+    {"data":"17/09/2026","tipo":"PIX","descricao":"SILVÂNIA DA SILVA (nome a conferir)","valor":160.00,"conferencia":"Nome manuscrito a confirmar"},
+    {"data":"17/09/2026","tipo":"PIX","descricao":"PAULO DA COSTA","valor":172.00,"conferencia":"Leitura visual"},
+    {"data":"17/09/2026","tipo":"PIX","descricao":"MATHEUS GUILHERME (nome a conferir)","valor":40.00,"conferencia":"Nome manuscrito a confirmar"}
+  ]
+}
