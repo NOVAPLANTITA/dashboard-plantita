@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "16/09/2026",
+  "atualizadoEm": "18/09/2026 (inclusão de comandas de 16/09)",
   "comandas": [
     {
       "data": "16/09/2026",
@@ -195,6 +195,45 @@
       "pagamento": "Não informado",
       "prazo": "",
       "conferencia": "Conferir nome do produto, endereço e forma de pagamento. Total manuscrito R$ 230,00; sem taxa de entrega discriminada. Fonte: IMG-20260916-WA0049.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Vânia (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "3 unidades Ultra Life Frango (descrição/quantidade a confirmar), R$ 78,00; taxa de entrega R$ 5,00",
+      "valorProduto": 78,
+      "taxaEntrega": 5,
+      "total": 83,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Confirmar grafia do cliente, quantidade e variante do produto. Valor do item interpretado R$ 78,00, taxa R$ 5,00 e total geral R$ 83,00. Fonte: IMG-20260916-WA0059.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Samir (leitura aproximada)",
+      "telefone": "",
+      "endereco": "R. ... de São João, 230 (leitura parcial; confirmar)",
+      "descricao": "2 kg Golden Cast Carne (leitura aproximada) R$ 40,00 + 3 kg alimento para calopsita R$ 30,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 70,
+      "taxaEntrega": 5,
+      "total": 75,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Confirmar cliente, nome da rua, produtos, quantidades e pagamento. R$ 40,00 + R$ 30,00 + R$ 5,00 = R$ 75,00. Fonte: IMG-20260916-WA0058.jpg."
+    },
+    {
+      "data": "16/09/2026",
+      "cliente": "Almeida (leitura aproximada)",
+      "telefone": "",
+      "endereco": "R. Álvaro Almeida Leme, 420 (leitura aproximada; confirmar)",
+      "descricao": "1 Premier Pelo Longo / Salmão (leitura aproximada; valor da linha parece R$ 85,00 ou R$ 86,00) + 1 Premier 15 kg (variante ilegível) R$ 250,00",
+      "valorProduto": 335,
+      "taxaEntrega": 0,
+      "total": 335,
+      "pagamento": "Cartão (leitura aproximada)",
+      "prazo": "",
+      "conferencia": "Total geral manuscrito R$ 335,00 mantido. Primeira linha pode parecer R$ 85,00 ou R$ 86,00; se R$ 86,00, soma seria R$ 336,00. Confirmar cliente, endereço, descrição e preço individual dos produtos. Sem taxa discriminada. Fonte: IMG-20260916-WA0057.jpg."
     }
   ]
 }
