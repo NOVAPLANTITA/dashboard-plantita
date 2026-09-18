@@ -1,0 +1,57 @@
+{
+  "atualizadoEm": "18/09/2026 (4 fotos recebidas: 2 comandas de 17/09 e 2 datadas 17/08)",
+  "comandas": [
+    {
+      "data": "17/09/2026",
+      "cliente": "Adriana",
+      "telefone": "",
+      "endereco": "R. Armando Salles, 501 (leitura aproximada)",
+      "descricao": "1 milho 50 kg R$ 87,00 + taxa de entrega R$ 6,00",
+      "valorProduto": 87,
+      "taxaEntrega": 6,
+      "total": 93,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir grafia do endereço. Comanda datada 17/09/2026, R$ 87,00 de produto e R$ 6,00 de taxa; total R$ 93,00. Fonte: IMG-20260917-WA0013.jpg."
+    },
+    {
+      "data": "17/09/2026",
+      "cliente": "Lilian (leitura aproximada)",
+      "telefone": "",
+      "endereco": "R. da Banda, 97 (leitura aproximada)",
+      "descricao": "3 unidades Class (apresentação a conferir) R$ 82,00 + 1 item com descrição manuscrita pouco legível R$ 55,50",
+      "valorProduto": 137.5,
+      "taxaEntrega": 0,
+      "total": 137.5,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Confirmar grafia do nome, endereço e descrição do segundo produto. Valores interpretados R$ 82,00 + R$ 55,50 = total manuscrito R$ 137,50. Sem taxa discriminada. Data manuscrita 17/09/2026. Fonte: IMG-20260917-WA0011.jpg."
+    },
+    {
+      "data": "17/08/2026",
+      "cliente": "Elena / Reginaldo (leitura aproximada)",
+      "telefone": "",
+      "endereco": "Estrada Matsu... (leitura parcial), 134A",
+      "descricao": "3 kg Golden Gato Castrado Frango R$ 60,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 60,
+      "taxaEntrega": 5,
+      "total": 65,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "ATENÇÃO: data manuscrita 17/08/2026, não 17/09; foto recebida em setembro. Confirmar data, nomes e endereço. Produto R$ 60,00 + taxa R$ 5,00 = total R$ 65,00. Fonte: IMG-20260917-WA0005.jpg."
+    },
+    {
+      "data": "17/08/2026",
+      "cliente": "Graça",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Melis Vet 2 mg (leitura aproximada) R$ 30,00 + 1 produto Natural (descrição parcial) R$ 20,00 + 3 unidades de item 'Magi...' (leitura aproximada) R$ 9,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 59,
+      "taxaEntrega": 5,
+      "total": 64,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "ATENÇÃO: data manuscrita 17/08/2026, não 17/09; foto recebida em setembro. Confirmar data e descrições dos três itens. Valores R$ 30,00 + R$ 20,00 + R$ 9,00 + R$ 5,00 = total R$ 64,00. Fonte: IMG-20260917-WA0003.jpg."
+    }
+  ]
+}
