@@ -1,0 +1,19 @@
+{
+  "atualizadoEm": "18/09/2026",
+  "totalInformadoComanda": 7134.00,
+  "totalLancamentos": 7136.10,
+  "diferencaConferencia": 2.10,
+  "observacao": "Comanda fotografada e datada de 18/09/2026. A soma dos 10 valores individualmente anotados é R$ 7.136,10; o total manuscrito é R$ 7.134,00. Diferença de R$ 2,10 pendente de conferência, sem ajuste arbitrário. Conferir também se os lançamentos avulsos de débito/crédito Mercado Pago já integram o subtotal Mercado PG, para evitar dupla contagem.",
+  "movimentos": [
+    {"data":"18/09/2026","tipo":"Getnet","descricao":"GETNET 1","valor":1714.00,"conferencia":"Leitura visual"},
+    {"data":"18/09/2026","tipo":"Getnet","descricao":"GETNET 2","valor":1443.50,"conferencia":"Leitura visual"},
+    {"data":"18/09/2026","tipo":"Cielo","descricao":"CIELO","valor":425.00,"conferencia":"Leitura visual"},
+    {"data":"18/09/2026","tipo":"Mercado Pago","descricao":"MERCADO PG","valor":2434.70,"conferencia":"Leitura visual; confirmar se inclui as operações avulsas de débito e crédito Mercado Pago"},
+    {"data":"18/09/2026","tipo":"Dinheiro","descricao":"DINHEIRO","valor":700.00,"conferencia":"Leitura visual"},
+    {"data":"18/09/2026","tipo":"Outros","descricao":"CAFÉ","valor":23.90,"conferencia":"Leitura visual; forma de pagamento não identificada"},
+    {"data":"18/09/2026","tipo":"PIX","descricao":"IDALINA XAVIER","valor":234.00,"conferencia":"Leitura visual; confirmar nome manuscrito"},
+    {"data":"18/09/2026","tipo":"PIX","descricao":"DOUGLAS AUGUSTO","valor":93.00,"conferencia":"Leitura visual"},
+    {"data":"18/09/2026","tipo":"Mercado Pago","descricao":"DÉBITO MERCADO PAGO","valor":20.00,"conferencia":"Leitura visual; conferir se já incluído no subtotal Mercado PG"},
+    {"data":"18/09/2026","tipo":"Mercado Pago","descricao":"CRÉDITO MERCADO PAGO","valor":48.00,"conferencia":"Leitura visual; conferir se já incluído no subtotal Mercado PG"}
+  ]
+}
