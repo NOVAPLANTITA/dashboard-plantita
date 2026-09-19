@@ -1,0 +1,18 @@
+{
+  "atualizadoEm": "19/09/2026 (1 comanda; conferir leitura do produto, endereço, telefone e forma de pagamento)",
+  "comandas": [
+    {
+      "data": "19/09/2026",
+      "cliente": "Thais",
+      "telefone": "934767780 (leitura aproximada; conferir)",
+      "endereco": "R. Mirandópolis, 65, CH (leitura aproximada; conferir)",
+      "descricao": "1 Origens Cast Carne (apresentação/peso manuscrito incerto) R$ 160,00 + taxa de entrega R$ 6,00",
+      "valorProduto": 160,
+      "taxaEntrega": 6,
+      "total": 166,
+      "pagamento": "Não confirmado (anotação 'cartão' aparentemente riscada)",
+      "prazo": "",
+      "conferencia": "Comanda de 19/09/2026. Confirmar apresentação/peso da ração, grafia do endereço, telefone e forma de pagamento, pois 'cartão' parece riscado. Valores: 160 + 6 = 166. Fonte: IMG-20260919-WA0003.jpg."
+    }
+  ]
+}
