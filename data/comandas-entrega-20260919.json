@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "19/09/2026 (14 comandas: 13 anteriores + nova comanda de Golden porte pequeno 15 kg; valores manuscritos preservados e leituras ambíguas sinalizadas)",
+  "atualizadoEm": "19/09/2026 (15 comandas: 14 anteriores + Jeferson, Origens Filhote R$ 190,00 e taxa R$ 5,00; valores manuscritos preservados e leituras ambíguas sinalizadas)",
   "comandas": [
     {
       "data": "19/09/2026",
@@ -182,6 +182,19 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Confirmar grafia do cliente, nome da rua e se 120 é número do endereço ou anotação de telefone; confirmar variedade exata da Golden. Total manuscrito R$ 178,00, sem taxa de entrega indicada. Data manuscrita 19/09/2026. Fonte: IMG-20260919-WA0024.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Jeferson (leitura aproximada; confirmar grafia)",
+      "telefone": "",
+      "endereco": "Benedito Antonio, 145 (leitura aproximada; confirmar nome da via)",
+      "descricao": "1 ração Origens Filhote (peso não informado) R$ 190,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 190,
+      "taxaEntrega": 5,
+      "total": 195,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Comanda sem data escrita; atribuída a 19/09/2026 pelo lote recebido. Confirmar grafia do cliente e endereço e apresentação/peso do produto. Soma 190 + 5 = 195, igual ao total manuscrito. Sem indicação de pagamento. Fonte: IMG-20260919-WA0027.jpg."
     }
   ]
 }
