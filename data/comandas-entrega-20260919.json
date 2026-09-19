@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "19/09/2026 (13 comandas: 12 anteriores + comanda Fábio Luiz; valores manuscritos preservados e leituras ambíguas sinalizadas)",
+  "atualizadoEm": "19/09/2026 (14 comandas: 13 anteriores + nova comanda de Golden porte pequeno 15 kg; valores manuscritos preservados e leituras ambíguas sinalizadas)",
   "comandas": [
     {
       "data": "19/09/2026",
@@ -169,6 +169,19 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Conferir nome exato do produto de 25 kg, grafia do endereço e telefone. Total manuscrito R$ 135,00 = 130 + 5; taxa registrada separadamente. Comanda de 19/09/2026. Fonte: IMG-20260919-WA0023.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Alício (leitura aproximada; conferir)",
+      "telefone": "120 (anotado no campo Tel.; não é telefone completo, verificar se número do endereço)",
+      "endereco": "Emílio de Medeiros (leitura aproximada; nº 120 a confirmar)",
+      "descricao": "1 Golden, porte pequeno, 15 kg (prefixo manuscrito anterior a 'Golden' pouco legível) R$ 178,00",
+      "valorProduto": 178,
+      "taxaEntrega": 0,
+      "total": 178,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Confirmar grafia do cliente, nome da rua e se 120 é número do endereço ou anotação de telefone; confirmar variedade exata da Golden. Total manuscrito R$ 178,00, sem taxa de entrega indicada. Data manuscrita 19/09/2026. Fonte: IMG-20260919-WA0024.jpg."
     }
   ]
 }
