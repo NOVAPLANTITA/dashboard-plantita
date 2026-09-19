@@ -1,0 +1,28 @@
+{
+  "atualizadoEm": "19/09/2026",
+  "totalInformadoComanda": 14039.00,
+  "totalLancamentos": 14043.11,
+  "diferencaConferencia": 4.11,
+  "observacao": "Comanda enviada em 19/09/2026, sem data preenchida no papel; data atribuída ao envio. Total manuscrito: R$ 14.039,00. Soma dos 19 valores lidos: R$ 14.043,11. Diferença de R$ 4,11 pendente de conferência; nenhum lançamento foi alterado para forçar o fechamento. Café sem forma de pagamento indicada; conferir sua natureza antes de considerá-lo venda. Confirmar se algum PIX já está incluído nos subtotais de máquinas para evitar duplicidade. Nomes de leitura incerta identificados individualmente.",
+  "movimentos": [
+    {"data":"19/09/2026","tipo":"Dinheiro","descricao":"DINHEIRO","valor":1900.00,"conferencia":"Leitura visual"},
+    {"data":"19/09/2026","tipo":"Getnet","descricao":"GETNET 1","valor":1076.94,"conferencia":"Leitura visual"},
+    {"data":"19/09/2026","tipo":"Getnet","descricao":"GETNET 2","valor":2116.50,"conferencia":"Leitura visual"},
+    {"data":"19/09/2026","tipo":"Cielo","descricao":"CIELO","valor":2091.30,"conferencia":"Leitura visual"},
+    {"data":"19/09/2026","tipo":"Mercado Pago","descricao":"MERCADO PG","valor":4852.67,"conferencia":"Leitura visual"},
+    {"data":"19/09/2026","tipo":"Outros","descricao":"CAFÉ","valor":23.90,"conferencia":"Forma de pagamento e natureza do lançamento não identificadas; confirmar se é venda ou despesa"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"JÉSSICA","valor":115.00,"conferencia":"Leitura visual"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"CAIO","valor":65.00,"conferencia":"Leitura visual; conferir nome"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"ADEILDO (leitura aproximada)","valor":126.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"GRAZIELLY (leitura aproximada)","valor":157.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"SILVANA","valor":310.00,"conferencia":"Leitura visual"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"BRUNA","valor":52.80,"conferencia":"Leitura visual"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"GIOVANNA","valor":113.00,"conferencia":"Leitura visual"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"PATÍNIO (leitura aproximada)","valor":80.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"LARISSA","valor":177.00,"conferencia":"Leitura visual"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"EXPRESS... (leitura parcial)","valor":100.00,"conferencia":"Descrição manuscrita a conferir"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"JEFFERSON P... (leitura parcial)","valor":195.00,"conferencia":"Descrição manuscrita a conferir"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"CLUBE 007 (leitura aproximada)","valor":380.00,"conferencia":"Descrição manuscrita a conferir"},
+    {"data":"19/09/2026","tipo":"PIX","descricao":"MARINA VIEIRA","valor":111.00,"conferencia":"Leitura visual"}
+  ]
+}
