@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "19/09/2026 (12 comandas: 1 já existente + 10 novas fotos + comanda de Ricardo; valores manuscritos preservados e leituras ambíguas sinalizadas)",
+  "atualizadoEm": "19/09/2026 (13 comandas: 12 anteriores + comanda Fábio Luiz; valores manuscritos preservados e leituras ambíguas sinalizadas)",
   "comandas": [
     {
       "data": "19/09/2026",
@@ -156,6 +156,19 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Total manuscrito R$ 623,00 = 368 + 255. Preços unitários inferidos: R$ 184,00 (2 un.) e R$ 85,00 (3 un.); campo unitário não está preenchido na comanda. Confirmar apresentações, descrição do segundo item, nome da rua e telefone. Não há taxa de entrega discriminada. Fonte: IMG-20260919-WA0022.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Fábio Luiz (leitura aproximada)",
+      "telefone": "Telefone manuscrito de leitura incerta (conferir)",
+      "endereco": "R. Lagoa Paulino, 424 (leitura aproximada; conferir)",
+      "descricao": "1 produto 25 kg (descrição manuscrita parcialmente ilegível; confirmar nome e marca) R$ 130,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 130,
+      "taxaEntrega": 5,
+      "total": 135,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir nome exato do produto de 25 kg, grafia do endereço e telefone. Total manuscrito R$ 135,00 = 130 + 5; taxa registrada separadamente. Comanda de 19/09/2026. Fonte: IMG-20260919-WA0023.jpg."
     }
   ]
 }
