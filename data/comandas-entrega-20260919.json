@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "19/09/2026 (1 comanda; conferir leitura do produto, endereço, telefone e forma de pagamento)",
+  "atualizadoEm": "19/09/2026 (11 comandas: 1 já existente + 10 novas fotos; valores manuscritos preservados e leituras ambíguas sinalizadas)",
   "comandas": [
     {
       "data": "19/09/2026",
@@ -13,6 +13,136 @@
       "pagamento": "Não confirmado (anotação 'cartão' aparentemente riscada)",
       "prazo": "",
       "conferencia": "Comanda de 19/09/2026. Confirmar apresentação/peso da ração, grafia do endereço, telefone e forma de pagamento, pois 'cartão' parece riscado. Valores: 160 + 6 = 166. Fonte: IMG-20260919-WA0003.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Dona Tereza (leitura aproximada)",
+      "telefone": "",
+      "endereco": "Vizinha Ana (referência manuscrita; confirmar endereço)",
+      "descricao": "1 Golden (variedade/peso a confirmar) R$ 165,00 + 3 unidades de item com nome pouco legível R$ 40,00 + 2 unidades de quirera 1 kg (leitura aproximada) R$ 44,00",
+      "valorProduto": 249,
+      "taxaEntrega": 0,
+      "total": 249,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "Levar lá atrás (orientação manuscrita)",
+      "conferencia": "Conferir nome, apresentação da Golden, os dois itens seguintes e endereço. Valor total manuscrito R$ 249,00 = 165 + 40 + 44. Não foi indicada taxa de entrega. Fonte: IMG-20260919-WA0018.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Daniela",
+      "telefone": "Telefone manuscrito de leitura incerta (conferir)",
+      "endereco": "",
+      "descricao": "1 Origens SHB 10 kg (descrição aproximada) R$ 110,00 + 1 kg de produto com nome ilegível R$ 64,00 + 1 Class 20 kg (leitura aproximada) R$ 66,00",
+      "valorProduto": 240,
+      "taxaEntrega": 0,
+      "total": 240,
+      "pagamento": "Cartão (anotação de pago; conferir)",
+      "prazo": "",
+      "conferencia": "Confirmar identificação das três mercadorias, telefone e pagamento. Primeira linha parece R$ 110,00 e os itens somam 110 + 64 + 66 = 240, igual ao total manuscrito. Fonte: IMG-20260919-WA0017.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "José",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 item com descrição semelhante a 'Lester 15' R$ 70,00 + 3 kg postura R$ 15,00 + 2 coentros R$ 5,00 + 1 alface R$ 2,50 + taxa de entrega R$ 5,00",
+      "valorProduto": 92.5,
+      "taxaEntrega": 5,
+      "total": 97.5,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir primeira descrição e quantidade de postura. Soma 70 + 15 + 5 + 2,50 + 5 = 97,50. Taxa discriminada separadamente. Fonte: IMG-20260919-WA0014.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Nelson Bernardo (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Origens Cast Carne 10 kg (leitura aproximada) R$ 160,00",
+      "valorProduto": 160,
+      "taxaEntrega": 0,
+      "total": 160,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "",
+      "conferencia": "Confirmar nome e apresentação exata da ração. Total manuscrito R$ 160,00; sem taxa indicada. Fonte: IMG-20260919-WA0013.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Creilda (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 quirera grossa 25 kg R$ 96,00 + 1 Avitrin Vermífugo (leitura aproximada) R$ 20,00 + taxa de entrega R$ 10,00",
+      "valorProduto": 116,
+      "taxaEntrega": 10,
+      "total": 126,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Conferir grafia do nome, marca do medicamento e peso da quirera. Valores 96 + 20 + 10 = 126. Fonte: IMG-20260919-WA0012.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Lucas",
+      "telefone": "",
+      "endereco": "Endereço manuscrito parcialmente legível, n.º 400 (conferir)",
+      "descricao": "1 P.P. Cat (descrição parcial) R$ 14,00 + 1 produto 'BB Gems' (leitura incerta) R$ 50,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 64,
+      "taxaEntrega": 5,
+      "total": 69,
+      "pagamento": "Não confirmado ('cartão' riscado)",
+      "prazo": "",
+      "conferencia": "Data ausente na comanda; atribuída a 19/09 pelo lote, confirmar. Verificar endereço, produtos e meio de pagamento, pois 'cartão' está riscado. Soma 14 + 50 + 5 = 69. Fonte: IMG-20260919-WA0011.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Glei (nome incompleto; conferir)",
+      "telefone": "",
+      "endereco": "Anotação parcial 'dona ... 1105' (conferir)",
+      "descricao": "1 Magnus (variedade/peso a confirmar) R$ 100,00 + 1 Golden (variedade a confirmar) R$ 40,00 + 1 sachê (descrição a conferir, valor aproximado R$ 12,00) + taxa de entrega R$ 5,00",
+      "valorProduto": 152,
+      "taxaEntrega": 5,
+      "total": 157,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Total R$ 157,00 anotado separadamente acima do total geral rasurado; itens aparentam 100 + 40 + 11,96 e taxa 5 (soma R$ 156,96, arredondada a R$ 157,00). Confirmar preço do sachê, nome, endereço e total. Data não escrita; atribuição pelo lote 19/09. Fonte: IMG-20260919-WA0010.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Marcelo Nascimento (leitura aproximada)",
+      "telefone": "",
+      "endereco": "Estr. Paulo Rodrigues de Barros, 18 (leitura aproximada; conferir)",
+      "descricao": "1 GranPlus Choice 15 kg (leitura aproximada) R$ 156,00 + 1 milho 20 kg R$ 145,00",
+      "valorProduto": 301,
+      "taxaEntrega": 0,
+      "total": 301,
+      "pagamento": "Marcado",
+      "prazo": "",
+      "conferencia": "Confirmar nome, endereço e identificação das rações. Valor total manuscrito R$ 301,00 = 156 + 145. Sem taxa de entrega indicada. Fonte: IMG-20260919-WA0006.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Jéssica (leitura aproximada)",
+      "telefone": "Telefone manuscrito a conferir",
+      "endereco": "Vila Francisco Flávio de Oliveira Silva, 73 (leitura aproximada; conferir)",
+      "descricao": "1 Magnus (variedade/peso a confirmar) R$ 100,00 + 1 Golden Filhote (apresentação a confirmar) R$ 15,00; anotação 'taxa' sem valor discriminado",
+      "valorProduto": 115,
+      "taxaEntrega": 0,
+      "total": 115,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Confirmar descrições, endereço e se há taxa de entrega embutida: palavra 'taxa' aparece sem preço próprio. Preservado total manuscrito R$ 115,00 = 100 + 15 e taxa separada R$ 0,00 até conferência. Data 19/09/2026. Fonte: IMG-20260919-WA0005.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Andreia",
+      "telefone": "",
+      "endereco": "Rua Saracosa, 238 (leitura aproximada; conferir)",
+      "descricao": "1 Magnus Todo Dia 15 kg R$ 100,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Confirmar grafia da rua. Valor total R$ 105,00 = 100 + 5. Fonte: IMG-20260919-WA0004.jpg."
     }
   ]
 }
