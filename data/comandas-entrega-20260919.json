@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "19/09/2026 (15 comandas: 14 anteriores + Jeferson, Origens Filhote R$ 190,00 e taxa R$ 5,00; valores manuscritos preservados e leituras ambíguas sinalizadas)",
+  "atualizadoEm": "19/09/2026 (16 comandas: 15 anteriores + Willian, BioNatural Filhote Grande 15 kg R$ 254,00 e taxa R$ 5,00; valores manuscritos preservados e leituras ambíguas sinalizadas)",
   "comandas": [
     {
       "data": "19/09/2026",
@@ -195,6 +195,19 @@
       "pagamento": "Não informado",
       "prazo": "",
       "conferencia": "Comanda sem data escrita; atribuída a 19/09/2026 pelo lote recebido. Confirmar grafia do cliente e endereço e apresentação/peso do produto. Soma 190 + 5 = 195, igual ao total manuscrito. Sem indicação de pagamento. Fonte: IMG-20260919-WA0027.jpg."
+    },
+    {
+      "data": "19/09/2026",
+      "cliente": "Willian (leitura aproximada; conferir grafia)",
+      "telefone": "986605583 (número manuscrito sem DDD; conferir)",
+      "endereco": "Rua Aston Bargo, 90, Chácara Vista Alegre (nome da rua manuscrito incerto; conferir)",
+      "descricao": "1 BioNatural Filhote Grande 15 kg R$ 254,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 254,
+      "taxaEntrega": 5,
+      "total": 259,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "",
+      "conferencia": "Data 19/09/2026. Nome do cliente, grafia da rua e telefone a confirmar. O peso de 15 kg está escrito no campo unitário; valor do produto R$ 254,00. Taxa R$ 5,00; total manuscrito R$ 259,00. Marcado 'Pago', sem meio de pagamento. Fonte: IMG-20260919-WA0030.jpg."
     }
   ]
 }
