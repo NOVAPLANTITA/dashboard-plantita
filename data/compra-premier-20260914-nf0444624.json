@@ -1,0 +1,32 @@
+{
+  "id": "premier-pet-nf-0444624-20260914",
+  "tipo": "compra_mercadorias",
+  "competencia": "09/2026",
+  "data_emissao": "14/09/2026",
+  "fornecedor_documento": "PREMIER PET COMERCIAL LTDA",
+  "fornecedor_apelido_informado": "Adimax",
+  "observacao_fornecedor": "As fotos da DANFE e dos boletos identificam PREMIER PET COMERCIAL LTDA; não classificar automaticamente como Adimax.",
+  "nf_numero": "0444624",
+  "nf_serie": "1",
+  "comprador": "COMERCIAL NOVA PLANTITA ME",
+  "valor_produtos": 11777.50,
+  "valor_frete": 0.00,
+  "valor_desconto": 0.00,
+  "valor_total_nf": 11777.50,
+  "condicao_pagamento": "5 boletos de R$ 2.355,50",
+  "banco_boletos": "Safra 422-7",
+  "status_pagamento": "não informado; fotos dos boletos não são comprovantes de quitação",
+  "itens": {
+    "status": "pendente de conferência de todas as linhas da DANFE para atualizar custos unitários e estoque",
+    "observacao": "A compra foi registrada financeiramente pelo total integral, sem alterar estoque físico e sem inventar preço de venda."
+  },
+  "parcelas": [
+    {"documento":"0444624/01","parcela":1,"vencimento":"05/10/2026","mes_caixa":"10/2026","valor":2355.50,"status":"não informado"},
+    {"documento":"0444624/02","parcela":2,"vencimento":"12/10/2026","mes_caixa":"10/2026","valor":2355.50,"status":"não informado"},
+    {"documento":"0444624/03","parcela":3,"vencimento":"19/10/2026","mes_caixa":"10/2026","valor":2355.50,"status":"não informado"},
+    {"documento":"0444624/04","parcela":4,"vencimento":"26/10/2026","mes_caixa":"10/2026","valor":2355.50,"status":"não informado"},
+    {"documento":"0444624/05","parcela":5,"vencimento":"02/11/2026","mes_caixa":"11/2026","valor":2355.50,"status":"não informado"}
+  ],
+  "resumo_caixa_compra": {"09/2026":0,"10/2026":9422.00,"11/2026":2355.50},
+  "conferencia": "5 x R$ 2.355,50 = R$ 11.777,50; total confere com a DANFE."
+}
