@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "20/09/2026 (2 comandas; produtos R$ 200,00; taxas R$ 13,00; total R$ 213,00; endereço de Tiago a conferir)",
+  "atualizadoEm": "20/09/2026 (5 comandas; produtos R$ 621,00; taxas R$ 28,00; total R$ 649,00; leituras incertas marcadas para conferência)",
   "comandas": [
     {
       "data": "20/09/2026",
@@ -26,6 +26,45 @@
       "pagamento": "Dinheiro",
       "prazo": "",
       "conferencia": "Confirmar telefone e grafia do endereço. Total manuscrito R$ 108,00 = 100 + 8. Fonte: IMG-20260920-WA0001.jpg."
+    },
+    {
+      "data": "20/09/2026",
+      "cliente": "Laly (leitura aproximada; conferir grafia)",
+      "telefone": "Telefone manuscrito parcialmente legível; conferir",
+      "endereco": "Rua Saragosa, 238, Jardim São Marcos (grafia da rua a confirmar)",
+      "descricao": "1 escova de dedo R$ 3,00 + 1 creme dental R$ 15,00 + 1 roupa R$ 40,00 + 1 shampoo antiparasitário R$ 16,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 74,
+      "taxaEntrega": 5,
+      "total": 79,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Confirmar grafia do nome, telefone, rua e apresentação do shampoo. Soma 3 + 15 + 40 + 16 + 5 = 79, igual ao total manuscrito. Fonte: IMG-20260920-WA0006.jpg."
+    },
+    {
+      "data": "20/09/2026",
+      "cliente": "Gledice (leitura aproximada; conferir grafia)",
+      "telefone": "Telefone manuscrito cortado à direita; conferir",
+      "endereco": "Rua Alcindo Antonio de Moraes, 94 A (leitura aproximada; conferir)",
+      "descricao": "1 Magnus 15 kg R$ 100,00 + 1 BioNatural P/P 10 kg (variedade e peso a confirmar) R$ 85,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 185,
+      "taxaEntrega": 5,
+      "total": 190,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Conferir nome da cliente, endereço, telefone e identificação/peso da segunda ração. Soma 100 + 85 + 5 = 190, igual ao total manuscrito. Fonte: IMG-20260920-WA0007.jpg."
+    },
+    {
+      "data": "20/09/2026",
+      "cliente": "Rebeca",
+      "telefone": "98672-3961 (sem DDD; conferir)",
+      "endereco": "Rua Canela, 7A (grafia da rua a confirmar)",
+      "descricao": "1 Golden Special 15 kg R$ 162,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 162,
+      "taxaEntrega": 5,
+      "total": 167,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Confirmar grafia da rua e telefone; total manuscrito R$ 167,00 = 162 + 5. Fonte: IMG-20260920-WA0005.jpg."
     }
   ]
 }
