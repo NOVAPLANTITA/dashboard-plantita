@@ -1,0 +1,31 @@
+{
+  "atualizadoEm": "20/09/2026 (2 comandas; produtos R$ 200,00; taxas R$ 13,00; total R$ 213,00; endereço de Tiago a conferir)",
+  "comandas": [
+    {
+      "data": "20/09/2026",
+      "cliente": "Tiago",
+      "telefone": "",
+      "endereco": "Travessa José Carlos de Godoy, 171 (leitura aproximada; conferir número)",
+      "descricao": "1 Magnus Todo Dia 15 kg R$ 100,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Confirmar número do endereço, cuja anotação está próxima à borda da foto. Total manuscrito R$ 105,00 = 100 + 5. Fonte: IMG-20260920-WA0002.jpg."
+    },
+    {
+      "data": "20/09/2026",
+      "cliente": "Carlos",
+      "telefone": "99827-7740 (sem DDD; conferir)",
+      "endereco": "Rua Concórdia, 10, Castilho (conferir grafia)",
+      "descricao": "1 Magnus Todo Dia 15 kg R$ 100,00 + taxa de entrega R$ 8,00",
+      "valorProduto": 100,
+      "taxaEntrega": 8,
+      "total": 108,
+      "pagamento": "Dinheiro",
+      "prazo": "",
+      "conferencia": "Confirmar telefone e grafia do endereço. Total manuscrito R$ 108,00 = 100 + 8. Fonte: IMG-20260920-WA0001.jpg."
+    }
+  ]
+}
