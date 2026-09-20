@@ -1,0 +1,15 @@
+{
+  "atualizadoEm": "20/09/2026",
+  "totalInformadoComanda": 5779.00,
+  "totalLancamentos": 5780.50,
+  "diferencaConferencia": 1.50,
+  "observacao": "Comanda datada de 20/09/2026. Total manuscrito R$ 5.779,00; soma dos seis lançamentos lidos R$ 5.780,50. Diferença de R$ 1,50 pendente de conferência: não ajustar nenhum valor para forçar o fechamento. Nomes dos dois PIX lidos de forma aproximada e a confirmar. Conferir se PIX integra algum total de maquininha para evitar duplicidade. Dados do controle diário, não do controle de entregas.",
+  "movimentos": [
+    {"data":"20/09/2026","tipo":"Getnet","descricao":"GETNET 1","valor":774.80,"conferencia":"Leitura visual"},
+    {"data":"20/09/2026","tipo":"Getnet","descricao":"GETNET 2","valor":714.00,"conferencia":"Leitura visual"},
+    {"data":"20/09/2026","tipo":"Mercado Pago","descricao":"MERCADO PG","valor":3151.70,"conferencia":"Leitura visual"},
+    {"data":"20/09/2026","tipo":"Dinheiro","descricao":"DINHEIRO","valor":750.00,"conferencia":"Leitura visual"},
+    {"data":"20/09/2026","tipo":"PIX","descricao":"GLENICE PIRES (leitura aproximada)","valor":190.00,"conferencia":"Nome manuscrito a conferir; classificação PIX indicada na comanda"},
+    {"data":"20/09/2026","tipo":"PIX","descricao":"CAMILA SOUZA (leitura aproximada)","valor":200.00,"conferencia":"Nome manuscrito a conferir; PIX presumido por agrupamento na comanda"}
+  ]
+}
