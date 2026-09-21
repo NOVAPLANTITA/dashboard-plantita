@@ -16,7 +16,7 @@
 const $=s=>document.querySelector(s);
 const fmt=v=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(Number(v)||0);
 const escapeHtml=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
-const fontes=['data/movimentos-diarios.json','data/movimentos-07-09-2026.json','data/movimentos-09-09-2026.json','data/movimentos-10-09-2026.json','data/movimentos-11-09-2026.json','data/movimentos-12-09-2026.json','data/movimentos-13-09-2026.json','data/movimentos-14-09-2026.json','data/movimentos-15-09-2026.json','data/movimentos-17-09-2026.json','data/movimentos-18-09-2026.json','data/movimentos-19-09-2026.json','data/movimentos-20-09-2026.json','data/movimentos-21-09-2026.json'];
+const fontes=['data/movimentos-diarios.json','data/movimentos-07-09-2026.json','data/movimentos-09-09-2026.json','data/movimentos-10-09-2026.json','data/movimentos-11-09-2026.json','data/movimentos-12-09-2026.json','data/movimentos-13-09-2026.json','data/movimentos-14-09-2026.json','data/movimentos-15-09-2026.json','data/movimentos-16-09-2026.json','data/movimentos-17-09-2026.json','data/movimentos-18-09-2026.json','data/movimentos-19-09-2026.json','data/movimentos-20-09-2026.json','data/movimentos-21-09-2026.json'];
 const order=['PIX','Getnet','Cielo','Mercado Pago','Dinheiro','Outros'];
 let data=[],bases=[],falhas=[];
 function showWarning(messages){const warning=$('#warning');warning.style.display=messages.length?'block':'none';warning.textContent=messages.join(' ')}
@@ -43,7 +43,7 @@ function render(){
 async function carregar(){
  $('#reload').disabled=true;$('#date').disabled=true;$('#updated').textContent='Carregando os registros...';$('#empty').style.display='block';$('#empty').textContent='Carregando movimentos...';showWarning([]);
  const anterior=$('#date').value;
- const resultados=await Promise.allSettled(fontes.map(async u=>{const r=await fetch(u+'?v=20260921-diario21a&ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const j=await r.json();if(!j||!Array.isArray(j.movimentos))throw new Error('formato inválido');return j}));
+ const resultados=await Promise.allSettled(fontes.map(async u=>{const r=await fetch(u+'?v=20260921-diario16b&ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const j=await r.json();if(!j||!Array.isArray(j.movimentos))throw new Error('formato inválido');return j}));
  bases=[];falhas=[];
  resultados.forEach((r,i)=>{if(r.status==='fulfilled')bases.push(r.value);else falhas.push(fontes[i]+' ('+(r.reason?.message||'falha')+')')});
  data=bases.flatMap(b=>b.movimentos).filter(x=>x&&typeof x.data==='string'&&typeof x.tipo==='string'&&Number.isFinite(Number(x.valor)));
