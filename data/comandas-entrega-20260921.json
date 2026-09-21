@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "21/09/2026 (4 comandas; produtos R$ 636,00; taxas R$ 15,00; total R$ 651,00; descrições e dados incertos sinalizados para conferência)",
+  "atualizadoEm": "21/09/2026 (7 comandas; produtos R$ 1.057,00; taxas R$ 25,00; total R$ 1.082,00; descrições e dados incertos sinalizados para conferência)",
   "comandas": [
     {
       "data": "21/09/2026",
@@ -52,6 +52,45 @@
       "pagamento": "Marcado (anotação manuscrita; recebimento não confirmado)",
       "prazo": "",
       "conferencia": "Confirmar nome da cliente, grafia do endereço, peso/apresentação da Golden e situação de pagamento ('marcado'). Não há taxa discriminada. Total R$ 184,00. Fonte: IMG-20260921-WA0001.jpg."
+    },
+    {
+      "data": "21/09/2026",
+      "cliente": "Juver (leitura aproximada; conferir)",
+      "telefone": "Telefone manuscrito a conferir",
+      "endereco": "Rua Milão, 60 — ao lado da oficina (grafia a confirmar)",
+      "descricao": "1 Especial Dog (linha e peso a conferir) R$ 100,00 + 1 mistura para papagaio 1 kg R$ 18,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 118,
+      "taxaEntrega": 5,
+      "total": 123,
+      "pagamento": "PIX (anotação fraca; conferir)",
+      "prazo": "",
+      "conferencia": "Conferir grafia do cliente, telefone, endereço, versão/peso da Especial Dog e forma de pagamento. Valores na comanda: R$ 100,00 + R$ 18,00 + entrega R$ 5,00 = total manuscrito R$ 123,00. Fonte: IMG-20260921-WA0035.jpg."
+    },
+    {
+      "data": "21/09/2026",
+      "cliente": "Maria",
+      "telefone": "Telefone manuscrito a conferir",
+      "endereco": "Rua Hockenheim, 141 (grafia a confirmar)",
+      "descricao": "1 Guabi Salmão 3 kg (apresentação a confirmar) R$ 53,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 53,
+      "taxaEntrega": 5,
+      "total": 58,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Confirmar grafia da rua, telefone, apresentação do produto e forma de pagamento. Valores na comanda: R$ 53,00 + entrega R$ 5,00 = total manuscrito R$ 58,00. Fonte: IMG-20260921-WA0029.jpg."
+    },
+    {
+      "data": "21/09/2026",
+      "cliente": "José Manoel",
+      "telefone": "",
+      "endereco": "Rua Álvaro de Almeida Leme, 338",
+      "descricao": "1 Premier R/P Frango 15 kg R$ 250,00 (sigla R/P a confirmar)",
+      "valorProduto": 250,
+      "taxaEntrega": 0,
+      "total": 250,
+      "pagamento": "Cartão (modalidade não especificada)",
+      "prazo": "",
+      "conferencia": "Confirmar apresentação exata da ração e modalidade do cartão. Sem taxa de entrega discriminada. Total manuscrito R$ 250,00. Fonte: IMG-20260921-WA0014.jpg."
     }
   ]
 }
