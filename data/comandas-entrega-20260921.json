@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "21/09/2026 (10 comandas; produtos R$ 2.783,00; taxas R$ 30,00; total R$ 2.813,00; Mariza incluída sem duplicar as 9 comandas anteriores; leituras incertas sinalizadas)",
+  "atualizadoEm": "21/09/2026 (11 comandas; produtos R$ 2.923,00; taxas R$ 35,00; total R$ 2.958,00; Fernanda incluída sem duplicar as 10 anteriores; leituras incertas sinalizadas)",
   "comandas": [
     {
       "data": "21/09/2026",
@@ -130,6 +130,19 @@
       "pagamento": "PIX (anotação manuscrita; conferir)",
       "prazo": "",
       "conferencia": "Conferir grafia da cliente e do endereço, nome do segundo e quarto produtos, apresentação dos granulados e pagamento. Total geral manuscrito aparenta R$ 792,00; valores unitários não discriminados, sem taxa separada. Fonte: IMG-20260921-WA0040.jpg."
+    },
+    {
+      "data": "21/09/2026",
+      "cliente": "Fernanda (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Rua Feliciano [sobrenome a conferir], 166 (número a confirmar)",
+      "descricao": "1 Magnus Cat Carne (apresentação/peso a confirmar) R$ 140,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 140,
+      "taxaEntrega": 5,
+      "total": 145,
+      "pagamento": "PIX (anotado na comanda; recebimento não confirmado)",
+      "prazo": "",
+      "conferencia": "Conferir nome, grafia completa da Rua Feliciano e número 166, além da versão/peso da ração. Linha de produto R$ 140,00 + taxa de entrega R$ 5,00 = total manuscrito R$ 145,00. PIX anotado, sem comprovante de recebimento. Fonte: IMG-20260921-WA0059.jpg."
     }
   ]
 }
