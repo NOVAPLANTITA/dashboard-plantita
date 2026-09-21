@@ -1,0 +1,57 @@
+{
+  "atualizadoEm": "21/09/2026 (4 comandas; produtos R$ 636,00; taxas R$ 15,00; total R$ 651,00; descrições e dados incertos sinalizados para conferência)",
+  "comandas": [
+    {
+      "data": "21/09/2026",
+      "cliente": "Juliane Dias (leitura aproximada; conferir)",
+      "telefone": "Telefone manuscrito a conferir",
+      "endereco": "Av. das Nações, 20 (leitura aproximada; conferir)",
+      "descricao": "1 Magnus 20 kg R$ 145,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 145,
+      "taxaEntrega": 5,
+      "total": 150,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Confirmar grafia do nome, telefone e endereço e apresentação exata da ração. Total manuscrito R$ 150,00 = 145 + 5. Fonte: IMG-20260921-WA0010.jpg."
+    },
+    {
+      "data": "21/09/2026",
+      "cliente": "Tiana (leitura aproximada; conferir)",
+      "telefone": "Telefone manuscrito a conferir",
+      "endereco": "Estrada João Rodrigues de Moraes, 15 (leitura aproximada; conferir)",
+      "descricao": "2 unidades de produto com descrição manuscrita incerta ('... comum ...') R$ 140,00 + 3 unidades de produto semelhante a 'corante' R$ 14,00 + 1 coleira tamanho 5 R$ 13,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 167,
+      "taxaEntrega": 5,
+      "total": 172,
+      "pagamento": "Cartão parcelado (anotação manuscrita; conferir)",
+      "prazo": "Parcelamento sem número de parcelas informado",
+      "conferencia": "Conferir nome, endereço, telefone, identificação e quantidades dos três produtos e modalidade do cartão. Valores manuscritos por linha 140 + 14 + 13 + taxa 5 = total geral R$ 172,00. Fonte: IMG-20260921-WA0009.jpg."
+    },
+    {
+      "data": "21/09/2026",
+      "cliente": "Caroline (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Gold Life (descrição manuscrita aproximada; conferir marca e apresentação) R$ 140,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 140,
+      "taxaEntrega": 5,
+      "total": 145,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Confirmar nome e identificação exata do produto (anotação semelhante a 'Gold Life'); endereço e telefone não informados. Total R$ 145,00 = 140 + 5. Fonte: IMG-20260921-WA0004.jpg."
+    },
+    {
+      "data": "21/09/2026",
+      "cliente": "Nanci (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Estrada dos Andrade, 257 (grafia a confirmar)",
+      "descricao": "1 Golden Salmão Cast (castrados; peso não informado) R$ 184,00",
+      "valorProduto": 184,
+      "taxaEntrega": 0,
+      "total": 184,
+      "pagamento": "Marcado (anotação manuscrita; recebimento não confirmado)",
+      "prazo": "",
+      "conferencia": "Confirmar nome da cliente, grafia do endereço, peso/apresentação da Golden e situação de pagamento ('marcado'). Não há taxa discriminada. Total R$ 184,00. Fonte: IMG-20260921-WA0001.jpg."
+    }
+  ]
+}
