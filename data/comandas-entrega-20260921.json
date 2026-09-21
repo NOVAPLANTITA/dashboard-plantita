@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "21/09/2026 (7 comandas; produtos R$ 1.057,00; taxas R$ 25,00; total R$ 1.082,00; descrições e dados incertos sinalizados para conferência)",
+  "atualizadoEm": "21/09/2026 (9 comandas; produtos R$ 1.991,00; taxas R$ 30,00; total R$ 2.021,00; Heide e Taquara adicionados, Juver já constava na base e não foi duplicado; leituras incertas sinalizadas)",
   "comandas": [
     {
       "data": "21/09/2026",
@@ -64,7 +64,7 @@
       "total": 123,
       "pagamento": "PIX (anotação fraca; conferir)",
       "prazo": "",
-      "conferencia": "Conferir grafia do cliente, telefone, endereço, versão/peso da Especial Dog e forma de pagamento. Valores na comanda: R$ 100,00 + R$ 18,00 + entrega R$ 5,00 = total manuscrito R$ 123,00. Fonte: IMG-20260921-WA0035.jpg."
+      "conferencia": "Conferir grafia do cliente, telefone, endereço, versão/peso da Especial Dog e forma de pagamento. Valores na comanda: R$ 100,00 + R$ 18,00 + entrega R$ 5,00 = total manuscrito R$ 123,00. Fontes: IMG-20260921-WA0035.jpg e IMG-20260921-WA0035(1).jpg (mesma comanda, não duplicar)."
     },
     {
       "data": "21/09/2026",
@@ -91,6 +91,32 @@
       "pagamento": "Cartão (modalidade não especificada)",
       "prazo": "",
       "conferencia": "Confirmar apresentação exata da ração e modalidade do cartão. Sem taxa de entrega discriminada. Total manuscrito R$ 250,00. Fonte: IMG-20260921-WA0014.jpg."
+    },
+    {
+      "data": "21/09/2026",
+      "cliente": "Heide",
+      "telefone": "",
+      "endereco": "Rua Marrocos, 1749 B (complemento manuscrito a conferir)",
+      "descricao": "Origens Sênior Mini 10 kg (grafia da marca a confirmar) R$ 130,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 130,
+      "taxaEntrega": 5,
+      "total": 135,
+      "pagamento": "Cartão (anotado na comanda)",
+      "prazo": "",
+      "conferencia": "Confirmar grafia do cliente, complemento do endereço e marca/apresentação da ração. R$ 130,00 + entrega R$ 5,00 = total manuscrito R$ 135,00. Fonte: IMG-20260921-WA0039.jpg."
+    },
+    {
+      "data": "21/09/2026",
+      "cliente": "Taquara (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 Golden R$ 384,00 + 2 Pro Horse (leitura aproximada; conferir marca/apresentação) R$ 250,00 + item de nome ilegível R$ 170,00",
+      "valorProduto": 804,
+      "taxaEntrega": 0,
+      "total": 804,
+      "pagamento": "Mercado Pago (anotado 'mercado'; confirmar modalidade)",
+      "prazo": "",
+      "conferencia": "Conferir nome do cliente, marcas/apresentações dos três produtos e modalidade de pagamento. Valores manuscritos: R$ 384,00 + R$ 250,00 + R$ 170,00 = R$ 804,00, sem taxa discriminada. Endereço e telefone não preenchidos. Fonte: IMG-20260921-WA0038.jpg."
     }
   ]
 }
