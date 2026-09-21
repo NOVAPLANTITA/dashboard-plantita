@@ -1,0 +1,26 @@
+{
+  "atualizadoEm": "21/09/2026",
+  "totalInformadoComanda": 7061.20,
+  "totalLancamentos": 7062.97,
+  "diferencaConferencia": 1.77,
+  "observacao": "Comanda manuscrita de 16/09/2026, recebida em 21/09. Total geral lido provisoriamente como R$ 7.061,20; soma das 17 linhas transcritas R$ 7.062,97; diferenca R$ 1,77 sem ajuste arbitrario. Conferir especialmente GETNET 1, CIELO, CAFE, PIX EDSON DA SILVA e ultima linha JANTA (R$ 100,40 lidos provisoriamente; escrita pode indicar R$ 160,40). JANTA esta em Outros provisoriamente porque a natureza e forma de pagamento nao estao indicadas: confirmar se e despesa/retirada. Nome do PIX AMANA a confirmar. Linha rasurada entre AMANA e JANTA nao foi lancada.",
+  "movimentos": [
+    {"data":"16/09/2026","tipo":"Dinheiro","descricao":"DINHEIRO","valor":1200.00,"conferencia":"Leitura visual; confirmar valor se necessario"},
+    {"data":"16/09/2026","tipo":"Getnet","descricao":"GETNET 1","valor":724.00,"conferencia":"Leitura visual; algarismos pouco nitidos, conferir"},
+    {"data":"16/09/2026","tipo":"Getnet","descricao":"GETNET 2","valor":1390.00,"conferencia":"Leitura visual"},
+    {"data":"16/09/2026","tipo":"Cielo","descricao":"CIELO","valor":448.09,"conferencia":"Centavos pouco nitidos; conferir"},
+    {"data":"16/09/2026","tipo":"Mercado Pago","descricao":"MERCADO PG","valor":2282.76,"conferencia":"Leitura visual"},
+    {"data":"16/09/2026","tipo":"Outros","descricao":"CAFE","valor":23.52,"conferencia":"Centavos pouco nitidos; forma de pagamento nao indicada"},
+    {"data":"16/09/2026","tipo":"PIX","descricao":"PAMELA","valor":78.00,"conferencia":"Leitura visual"},
+    {"data":"16/09/2026","tipo":"PIX","descricao":"EDSON DA SILVA","valor":88.00,"conferencia":"Leitura visual; primeiro algarismo do valor a conferir"},
+    {"data":"16/09/2026","tipo":"PIX","descricao":"EDILSON FERMINO","valor":230.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"16/09/2026","tipo":"PIX","descricao":"HELOISA","valor":89.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"16/09/2026","tipo":"PIX","descricao":"LOURDES","valor":5.00,"conferencia":"Leitura visual"},
+    {"data":"16/09/2026","tipo":"PIX","descricao":"KATIA MARIA","valor":68.40,"conferencia":"Leitura visual"},
+    {"data":"16/09/2026","tipo":"PIX","descricao":"MARCIO ANJOS","valor":55.00,"conferencia":"Leitura visual"},
+    {"data":"16/09/2026","tipo":"PIX","descricao":"TALITA MOREIRA","valor":105.20,"conferencia":"Leitura visual"},
+    {"data":"16/09/2026","tipo":"PIX","descricao":"AMANA (nome a conferir)","valor":75.60,"conferencia":"Nome e centavos manuscritos a confirmar"},
+    {"data":"16/09/2026","tipo":"Outros","descricao":"LANCAMENTO SEM DESCRICAO (ANTES DE JANTA)","valor":100.00,"conferencia":"Valor sem descricao legivel; linha imediatamente acima rasurada, conferir natureza e forma de pagamento"},
+    {"data":"16/09/2026","tipo":"Outros","descricao":"JANTA (natureza a confirmar)","valor":100.40,"conferencia":"Valor incerto: pode estar escrito R$ 160,40; confirmar se e despesa/retirada e forma de pagamento"}
+  ]
+}
