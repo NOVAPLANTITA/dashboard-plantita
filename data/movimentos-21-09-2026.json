@@ -1,0 +1,21 @@
+{
+  "atualizadoEm": "21/09/2026",
+  "totalInformadoComanda": 10393.00,
+  "totalLancamentos": 10444.40,
+  "diferencaConferencia": 51.40,
+  "observacao": "Comanda diária datada de 21/09/2026. Total manuscrito R$ 10.393,00; soma dos 12 valores lidos R$ 10.444,40; diferença de R$ 51,40 pendente de conferência. Não ajustar valores para forçar o fechamento. Confirmar a leitura dos nomes manuscritos sinalizados e se os PIX já integram subtotais das maquininhas. Café sem indicação de natureza/forma de pagamento: verificar se é venda ou despesa. Registro exclusivo do Controle Diário, sem duplicar no Controle de Entregas.",
+  "movimentos": [
+    {"data":"21/09/2026","tipo":"Dinheiro","descricao":"DINHEIRO","valor":1500.00,"conferencia":"Leitura visual"},
+    {"data":"21/09/2026","tipo":"Getnet","descricao":"GETNET 1","valor":1172.00,"conferencia":"Leitura visual"},
+    {"data":"21/09/2026","tipo":"Getnet","descricao":"GETNET 2","valor":2078.00,"conferencia":"Leitura visual"},
+    {"data":"21/09/2026","tipo":"Cielo","descricao":"CIELO","valor":624.00,"conferencia":"Leitura visual"},
+    {"data":"21/09/2026","tipo":"Mercado Pago","descricao":"MERCADO PG","valor":3579.50,"conferencia":"Leitura visual"},
+    {"data":"21/09/2026","tipo":"Outros","descricao":"CAFÉ","valor":33.90,"conferencia":"Forma de pagamento e natureza não identificadas; confirmar se é venda ou despesa"},
+    {"data":"21/09/2026","tipo":"PIX","descricao":"JULIANE DIAS (leitura aproximada)","valor":150.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"21/09/2026","tipo":"PIX","descricao":"MARIA JOSÉ (leitura aproximada)","valor":58.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"21/09/2026","tipo":"PIX","descricao":"CAICA CRISTINA (leitura aproximada)","valor":22.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"21/09/2026","tipo":"PIX","descricao":"TUTTO PARTICIPAÇÃO (leitura aproximada)","valor":804.00,"conferencia":"Descrição manuscrita a conferir"},
+    {"data":"21/09/2026","tipo":"PIX","descricao":"JILLYFER (leitura aproximada)","valor":123.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"21/09/2026","tipo":"PIX","descricao":"LUCIANO","valor":300.00,"conferencia":"Leitura visual"}
+  ]
+}
