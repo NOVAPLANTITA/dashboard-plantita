@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "21/09/2026 (11 comandas; produtos R$ 2.923,00; taxas R$ 35,00; total R$ 2.958,00; Fernanda incluída sem duplicar as 10 anteriores; leituras incertas sinalizadas)",
+  "atualizadoEm": "21/09/2026 (12 comandas; produtos R$ 3.023,00; taxas R$ 35,00; total R$ 3.058,00; Luciana incluída sem duplicar as 11 anteriores; leituras incertas sinalizadas)",
   "comandas": [
     {
       "data": "21/09/2026",
@@ -143,6 +143,19 @@
       "pagamento": "PIX (anotado na comanda; recebimento não confirmado)",
       "prazo": "",
       "conferencia": "Conferir nome, grafia completa da Rua Feliciano e número 166, além da versão/peso da ração. Linha de produto R$ 140,00 + taxa de entrega R$ 5,00 = total manuscrito R$ 145,00. PIX anotado, sem comprovante de recebimento. Fonte: IMG-20260921-WA0059.jpg."
+    },
+    {
+      "data": "21/09/2026",
+      "cliente": "Luciana (sobrenome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 Classic (variante manuscrita a conferir) R$ 28,00 + 2 sachês Golden Gato (variante a conferir) R$ 26,00 + 2 sachês (sabor/linha manuscrita a conferir) R$ 20,00 + Golden Gato Filhote (quantidade não preenchida) R$ 26,00",
+      "valorProduto": 100,
+      "taxaEntrega": 0,
+      "total": 100,
+      "pagamento": "Anotação semelhante a 'Pg' (recebimento não confirmado)",
+      "prazo": "",
+      "conferencia": "Conferir sobrenome, descrições dos produtos, quantidades das linhas, especialmente Golden Gato Filhote sem quantidade indicada, e situação de pagamento. Valores por linha: R$ 28,00 + R$ 26,00 + R$ 20,00 + R$ 26,00 = total geral manuscrito R$ 100,00; taxa de entrega não discriminada; telefone e endereço em branco. Fonte: IMG-20260921-WA0060.jpg."
     }
   ]
 }
