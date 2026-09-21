@@ -15,7 +15,7 @@
 'use strict';
 const $=s=>document.querySelector(s);
 const fmt=v=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(Number(v)||0);
-const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;':'&gt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fontes=['data/movimentos-diarios.json','data/movimentos-07-09-2026.json','data/movimentos-09-09-2026.json','data/movimentos-10-09-2026.json','data/movimentos-11-09-2026.json','data/movimentos-12-09-2026.json','data/movimentos-13-09-2026.json','data/movimentos-14-09-2026.json','data/movimentos-15-09-2026.json','data/movimentos-17-09-2026.json','data/movimentos-18-09-2026.json','data/movimentos-19-09-2026.json','data/movimentos-20-09-2026.json'];
 const order=['PIX','Getnet','Cielo','Mercado Pago','Dinheiro','Outros'];
 let data=[],bases=[],falhas=[];
@@ -43,10 +43,12 @@ function render(){
 async function carregar(){
  $('#reload').disabled=true;$('#date').disabled=true;$('#updated').textContent='Carregando os registros...';$('#empty').style.display='block';$('#empty').textContent='Carregando movimentos...';showWarning([]);
  const anterior=$('#date').value;
- const resultados=await Promise.allSettled(fontes.map(async u=>{const r=await fetch(u+'?v=20260921-correcao1&ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const j=await r.json();if(!j||!Array.isArray(j.movimentos))throw new Error('formato inválido');return j}));
+ const resultados=await Promise.allSettled(fontes.map(async u=>{const r=await fetch(u+'?v=20260921-yvna105-garantido&ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const j=await r.json();if(!j||!Array.isArray(j.movimentos))throw new Error('formato inválido');return j}));
  bases=[];falhas=[];
  resultados.forEach((r,i)=>{if(r.status==='fulfilled')bases.push(r.value);else falhas.push(fontes[i]+' ('+(r.reason?.message||'falha')+')')});
  data=bases.flatMap(b=>b.movimentos).filter(x=>x&&typeof x.data==='string'&&typeof x.tipo==='string'&&Number.isFinite(Number(x.valor)));
+ // Correção informada pelo responsável: o PIX de YVNA em 01/09/2026 é R$ 105,00, não R$ 405,00. Aplica-se também se um arquivo antigo for servido pelo cache.
+ data.forEach(x=>{if(x.data==='01/09/2026'&&String(x.tipo).trim().toUpperCase()==='PIX'&&String(x.descricao||'').trim().toUpperCase()==='YVNA'){x.valor=105;x.conferencia='Corrigido por Eric em 21/09/2026: de R$ 405,00 para R$ 105,00';}});
  const dates=[...new Set(data.map(x=>x.data))].sort((a,b)=>b.split('/').reverse().join('').localeCompare(a.split('/').reverse().join('')));
  $('#date').innerHTML=dates.length?dates.map(x=>`<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join(''):'<option value="">Sem datas</option>';
  if(dates.length)$('#date').value=dates.includes(anterior)?anterior:dates[0];$('#date').disabled=!dates.length;
