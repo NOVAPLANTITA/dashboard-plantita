@@ -1,0 +1,83 @@
+{
+  "atualizadoEm": "22/09/2026 (lote de 6 imagens: 1 comanda de 21/09 e 5 comandas de 22/09; R$ 814,00 no lote; leituras incertas sinalizadas)",
+  "comandas": [
+    {
+      "data": "22/09/2026",
+      "cliente": "Maria",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Golden Carne 15 kg (apresentação a confirmar) R$ 178,00 + Golden Gato Castrado Carne (apresentação a confirmar) R$ 20,00 + sachês Whiskas R$ 25,50 + sachês Pedigree R$ 26,50",
+      "valorProduto": 250,
+      "taxaEntrega": 0,
+      "total": 250,
+      "pagamento": "PIX (anotado; recebimento não confirmado)",
+      "prazo": "",
+      "conferencia": "A comanda não tem data preenchida: 22/09 atribuído provisoriamente pela data do lote; confirmar. Conferir peso, quantidades, sabores e apresentação dos produtos. Linhas R$ 178,00 + R$ 20,00 + R$ 25,50 + R$ 26,50 = total manuscrito R$ 250,00. 'Dinheiro' riscado e PIX indicado. Fonte: IMG-20260922-WA0010.jpg."
+    },
+    {
+      "data": "22/09/2026",
+      "cliente": "Nome manuscrito ilegível (conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 unidades de produto cuja descrição manuscrita é incerta (parece '... cst') R$ 40,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 40,
+      "taxaEntrega": 5,
+      "total": 45,
+      "pagamento": "Cartão (anotação manuscrita a confirmar)",
+      "prazo": "",
+      "conferencia": "Conferir nome, produto e apresentação, quantidade e forma de pagamento. Total manuscrito R$ 45,00 = 40 + taxa 5. Endereço e telefone em branco. Fonte: IMG-20260922-WA0009.jpg."
+    },
+    {
+      "data": "21/09/2026",
+      "cliente": "Irene (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 item com descrição manuscrita semelhante a 'Pet Tal Fon 1x' (produto a identificar) R$ 180,00 + taxa de entrega R$ 10,00",
+      "valorProduto": 180,
+      "taxaEntrega": 10,
+      "total": 190,
+      "pagamento": "Marcado (recebimento não confirmado)",
+      "prazo": "",
+      "conferencia": "Data escrita 21/09/2026: registrar no dia 21, sem misturar com as cinco comandas de 22/09. Conferir cliente, descrição do produto e modalidade 'marcado'. R$ 180,00 + taxa R$ 10,00 = total manuscrito interpretado R$ 190,00. Fonte: IMG-20260922-WA0004.jpg."
+    },
+    {
+      "data": "22/09/2026",
+      "cliente": "Laura (grafia a confirmar)",
+      "telefone": "911668479 (leitura aproximada; conferir DDD e dígitos)",
+      "endereco": "Jorge Fando, 55? (leitura aproximada; conferir rua e número)",
+      "descricao": "1 item com descrição manuscrita semelhante a 'Lester 15' (produto a identificar) R$ 70,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 70,
+      "taxaEntrega": 5,
+      "total": 75,
+      "pagamento": "Não informado",
+      "prazo": "Após 18h30",
+      "conferencia": "Confirmar nome, telefone, rua, número e identificação do produto. R$ 70,00 + taxa R$ 5,00 = total R$ 75,00. Anotação de entrega 'APÓS 18:30'. Fonte: IMG-20260922-WA0003.jpg."
+    },
+    {
+      "data": "22/09/2026",
+      "cliente": "Dona Hortência (grafia a confirmar)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Golden Gato Castrado Salmão (peso e quantidade a confirmar) R$ 184,00",
+      "valorProduto": 184,
+      "taxaEntrega": 0,
+      "total": 184,
+      "pagamento": "Marcado (recebimento não confirmado)",
+      "prazo": "",
+      "conferencia": "Confirmar grafia da cliente, apresentação da ração e situação do pagamento marcado. Sem taxa de entrega discriminada; total manuscrito R$ 184,00. Fonte: IMG-20260922-WA0002.jpg."
+    },
+    {
+      "data": "22/09/2026",
+      "cliente": "Daniele (grafia a confirmar)",
+      "telefone": "985076102 (leitura aproximada; conferir DDD e dígitos)",
+      "endereco": "Rua Carlos Damião Gomes, 52 (leitura aproximada; conferir grafia)",
+      "descricao": "Golden 2 kg (variante e descrição manuscrita a confirmar) R$ 60,00 + taxa de entrega R$ 10,00",
+      "valorProduto": 60,
+      "taxaEntrega": 10,
+      "total": 70,
+      "pagamento": "PIX (anotado; recebimento não confirmado)",
+      "prazo": "",
+      "conferencia": "Confirmar sobrenome da cliente, telefone, endereço e variante/peso do produto. R$ 60,00 + entrega R$ 10,00 = total manuscrito R$ 70,00. Fonte: IMG-20260922-WA0001.jpg."
+    }
+  ]
+}
