@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "22/09/2026 (lote de 6 imagens: 1 comanda de 21/09 e 5 comandas de 22/09; R$ 814,00 no lote; leituras incertas sinalizadas)",
+  "atualizadoEm": "22/09/2026 (lote anterior: 6 imagens, 1 comanda de 21/09 e 5 de 22/09; inclusão IMG-20260922-WA0013.jpg: mais 1 comanda de 22/09, R$ 63,00; leituras incertas sinalizadas)",
   "comandas": [
     {
       "data": "22/09/2026",
@@ -78,6 +78,19 @@
       "pagamento": "PIX (anotado; recebimento não confirmado)",
       "prazo": "",
       "conferencia": "Confirmar sobrenome da cliente, telefone, endereço e variante/peso do produto. R$ 60,00 + entrega R$ 10,00 = total manuscrito R$ 70,00. Fonte: IMG-20260922-WA0001.jpg."
+    },
+    {
+      "data": "22/09/2026",
+      "cliente": "Raquel (sobrenome a conferir)",
+      "telefone": "",
+      "endereco": "R. Refúgio da Serra, 263 (leitura aproximada)",
+      "descricao": "1 fralda tamanho G R$ 30,00 + 1 fralda tamanho M R$ 28,00",
+      "valorProduto": 58,
+      "taxaEntrega": 5,
+      "total": 63,
+      "pagamento": "Cartão (anotado; recebimento não confirmado)",
+      "prazo": "",
+      "conferencia": "Conferir sobrenome da cliente, telefone parcialmente rasurado, grafia do endereço e marca/apresentação das fraldas. R$ 30,00 + R$ 28,00 + taxa de entrega R$ 5,00 = total manuscrito R$ 63,00. Fonte: IMG-20260922-WA0013.jpg."
     }
   ]
 }
