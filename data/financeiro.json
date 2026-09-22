@@ -1,12 +1,13 @@
 {
-  "atualizadoEm": "20/09/2026",
-  "fonte": "Plantita_Consolidado_com_Ponto_de_Equilibrio.xlsx + lotes de preços 08/09/2026 + DOC-20260831-WA0047_dashboard_consolidado.xlsx + DAS 07/2026 + DANFE Premier Pet 0444624 de 14/09/2026 e boletos 01-05",
+  "atualizadoEm": "22/09/2026",
+  "fonte": "Plantita_Consolidado_com_Ponto_de_Equilibrio.xlsx + lotes de preços 08/09/2026 + DOC-20260831-WA0047_dashboard_consolidado.xlsx + DAS 07/2026 + DANFE Premier Pet 0444624 de 14/09/2026 e boletos 01-05 + imagem FIXOS enviada em 22/09/2026 (1000333549.jpg)",
   "premissas": {
     "faturamento_setembro_base": 309614.86,
     "margem_contribuicao_padrao": 0.3370581256,
     "margem_bruta_produtos": 0.3685607183,
     "produtos_com_custo_venda": 494,
-    "custos_fixos_confirmados": 41287.81,
+    "custos_fixos_confirmados": 38202.47,
+    "fixos_obrigacoes_informados": 45878.26,
     "boletos_setembro_anteriores": 168017.22,
     "boletos_setembro_novos": 20787.20,
     "boletos_setembro": 188804.42,
@@ -17,11 +18,11 @@
   },
   "custos_fixos": {
     "aluguel": 7000.00,
-    "funcionarios": 27142.02,
-    "pagamentos_dinheiro": 7145.79,
-    "energia": 0,
+    "funcionarios": 28434.02,
+    "pagamentos_dinheiro": 0,
+    "energia": 1700.00,
     "agua": 0,
-    "internet_telefone": 0,
+    "internet_telefone": 1068.45,
     "contabilidade": 0,
     "sistemas": 0,
     "manutencao": 0,
@@ -52,7 +53,35 @@
   },
   "compromissos_caixa": {
     "boletos_setembro": 188804.42,
-    "emprestimo_mensal_referencia": 2583.33
+    "emprestimo_mensal_referencia": 6411.33,
+    "seguros_consorcio_sem_desmembramento": 1264.46,
+    "total_fixos_informados": 45878.26,
+    "despesas_operacionais_identificadas": 38202.47,
+    "necessidade_caixa_referencia": 234682.68,
+    "criterio": "R$ 45.878,26 = R$ 38.202,47 de despesas operacionais identificáveis + R$ 1.264,46 de seguro e consórcio misturados + R$ 6.411,33 de empréstimo. Empréstimo e consórcio são obrigações de caixa; sua parcela de juros, despesas de seguro e eventual impacto contábil exigem desmembramento antes de integrar a DRE. Necessidade de caixa referencial soma os R$ 45.878,26 e boletos antigos/novos de setembro de base anterior, sem presumir que a lista de boletos esteja fechada ou que não existam sobreposições."
+  },
+  "fixos_recebidos": {
+    "competencia_assumida": "09/2026",
+    "data_recebimento": "22/09/2026",
+    "fonte": "Imagem FIXOS 1000333549.jpg enviada pelo usuário; competência mensal pressuposta, a confirmar",
+    "itens": [
+      {"descricao":"Folha de pagamento","valor":28434.02,"tratamento":"despesa_operacional"},
+      {"descricao":"Aluguel","valor":7000.00,"tratamento":"despesa_operacional"},
+      {"descricao":"Água e luz","valor":1700.00,"tratamento":"despesa_operacional"},
+      {"descricao":"Telefonia","valor":1068.45,"tratamento":"despesa_operacional"},
+      {"descricao":"Seguro e consórcio","valor":1264.46,"tratamento":"caixa_pendente_desmembramento"},
+      {"descricao":"Empréstimo","valor":6411.33,"tratamento":"caixa_financiamento"}
+    ],
+    "total":45878.26,
+    "total_operacional_identificavel":38202.47,
+    "total_financeiro_pendente_classificacao":7675.79,
+    "observacao":"Total R$ 45.878,26 confere com os seis valores da imagem. Não somar o antigo pagamento em dinheiro R$ 7.145,79 sem verificar duplicidade. Empréstimo não é integralmente despesa da DRE; seguro/consórcio requer divisão."
+  },
+  "itens_antigos_a_conciliar": {
+    "folha_anterior":27142.02,
+    "pagamentos_dinheiro_anteriores":7145.79,
+    "emprestimo_mensal_anterior":2583.33,
+    "observacao":"Referências da base anterior substituídas na fotografia de fixos de 22/09; não acrescentar automaticamente aos novos custos. Confirmar competência, despesas em dinheiro e sobreposição com o novo quadro."
   },
   "compras_mes": {
     "competencia": "09/2026",
@@ -73,15 +102,15 @@
     {"mes":"09/2026","faturamento":309614.86}
   ],
   "notas": [
-    "A margem padrão do simulador deriva de 494 produtos com custo e preço de venda cadastrados.",
-    "Foram incorporados 48 produtos do lote de 08/09: Farmabago/Biogenesis Bago, Martes Pet e Continental Aquarismo.",
-    "A margem bruta ponderada da base de preços é 36,86%.",
-    "A DAS real de 07/2026 foi R$ 8.924,90 sobre faturamento de R$ 283.306,84, equivalente a 3,1503% de alíquota efetiva usada como referência tributária.",
-    "A DAS pertence à competência julho/2026 e ao fluxo de caixa de agosto/2026; não deve ser duplicada.",
+    "Em 22/09, quadro FIXOS enviado com total R$ 45.878,26; são obrigações mensais informadas, não necessariamente todas despesas operacionais do mês.",
+    "Despesas operacionais identificáveis na imagem: folha R$ 28.434,02, aluguel R$ 7.000,00, água/luz R$ 1.700,00 e telefonia R$ 1.068,45: R$ 38.202,47.",
+    "Seguro e consórcio juntos R$ 1.264,46 e empréstimo R$ 6.411,33 ficam em caixa até conciliação de seguro, juros e principal; não duplicar no ponto econômico.",
+    "Pagamento em dinheiro anterior R$ 7.145,79 fica pendente de conciliação, não é somado ao novo quadro.",
+    "A margem padrão do simulador deriva de 494 produtos com custo e preço de venda cadastrados, incluindo 48 itens do lote de 08/09.",
+    "A margem bruta ponderada da base de preços é 36,86%; referência de imposto efetivo: DAS julho/2026 R$ 8.924,90 sobre R$ 283.306,84 (3,1503%).",
     "Boletos e empréstimos são compromissos de caixa separados do ponto de equilíbrio econômico para evitar dupla contagem de compras antigas.",
-    "DANFE Premier Pet 0444624 emitida em 14/09/2026, valor R$ 11.777,50, registra compra de setembro por competência, mas nenhum dos cinco boletos vence em setembro.",
-    "Somente os cinco vencimentos da NF 0444624: outubro R$ 9.422,00 (dias 05, 12, 19, 26) e novembro R$ 2.355,50 (dia 02).",
-    "Boletos de outubro estimados R$ 36.607,95 = base de R$ 27.185,95 de 08/09 mais R$ 9.422,00 da NF; conferir demais lançamentos posteriores a 08/09 antes de considerar total fechado.",
-    "A documentação enviada identifica fornecedor PREMIER PET COMERCIAL LTDA, apesar da referência Adimax na mensagem do usuário. Não misturar fornecedores nem presumir pagamento, recebimento físico ou preço de venda."
+    "DANFE Premier Pet 0444624 de 14/09/2026, valor R$ 11.777,50; boletos desta nota só vencem em outubro/novembro, sem impacto nos vencimentos de setembro.",
+    "Boletos de setembro R$ 188.804,42 provêm de base anterior, sujeitos à atualização com novos lotes e conferência de sobreposições.",
+    "A documentação da nota 0444624 identifica PREMIER PET COMERCIAL LTDA, apesar da referência Adimax na mensagem anterior; não misturar fornecedores."
   ]
 }
