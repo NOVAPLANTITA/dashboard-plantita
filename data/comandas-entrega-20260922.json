@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "22/09/2026 (lote anterior: 6 imagens, 1 comanda de 21/09 e 5 de 22/09; inclusão IMG-20260922-WA0013.jpg: mais 1 comanda de 22/09, R$ 63,00; leituras incertas sinalizadas)",
+  "atualizadoEm": "22/09/2026 (incluído novo lote de 4 comandas: IMG-20260922-WA0029, WA0027, WA0026 e WA0024; leituras incertas sinalizadas para conferência)",
   "comandas": [
     {
       "data": "22/09/2026",
@@ -91,6 +91,58 @@
       "pagamento": "Cartão (anotado; recebimento não confirmado)",
       "prazo": "",
       "conferencia": "Conferir sobrenome da cliente, telefone parcialmente rasurado, grafia do endereço e marca/apresentação das fraldas. R$ 30,00 + R$ 28,00 + taxa de entrega R$ 5,00 = total manuscrito R$ 63,00. Fonte: IMG-20260922-WA0013.jpg."
+    },
+    {
+      "data": "22/09/2026",
+      "cliente": "Ronan (grafia a confirmar)",
+      "telefone": "",
+      "endereco": "Endereço manuscrito semelhante a 'Juvagão' (conferir)",
+      "descricao": "1 Milho 50 kg R$ 97,00 + 1 produto/ração 20 kg (nome manuscrito incerto) R$ 56,00 + 1 Especial Dog 15 kg R$ 100,00 + 1 produto/ração 10 kg (descrição manuscrita incerta). Total geral da comanda R$ 383,00.",
+      "valorProduto": 383,
+      "taxaEntrega": 0,
+      "total": 383,
+      "pagamento": "PIX (anotado; recebimento não confirmado)",
+      "prazo": "",
+      "conferencia": "Conferir grafia do cliente/endereço e identificação dos produtos de 20 kg e 10 kg. Valores legíveis: R$ 97,00 + R$ 56,00 + R$ 100,00; a última linha não tem valor individual claramente legível, mas o total geral manuscrito é R$ 383,00. Fonte: IMG-20260922-WA0029.jpg."
+    },
+    {
+      "data": "22/09/2026",
+      "cliente": "Welyn (grafia a confirmar)",
+      "telefone": "980273104 (leitura aproximada; conferir DDD e dígitos)",
+      "endereco": "R. [ilegível], 355 (conferir)",
+      "descricao": "1 ração/produto 15 kg (nome manuscrito incerto) R$ 95,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 95,
+      "taxaEntrega": 5,
+      "total": 100,
+      "pagamento": "Dinheiro, sem troco (anotado)",
+      "prazo": "",
+      "conferencia": "Confirmar nome do cliente, telefone, endereço e marca do produto. R$ 95,00 + entrega R$ 5,00 = total manuscrito R$ 100,00. Fonte: IMG-20260922-WA0027.jpg."
+    },
+    {
+      "data": "22/09/2026",
+      "cliente": "Vanina (grafia a confirmar)",
+      "telefone": "",
+      "endereco": "Endereço manuscrito pouco legível; nº 114 aparente (conferir)",
+      "descricao": "1 ração/produto 15 kg R$ 70,00 + 4 sachês Whiskas (sabor/anotação a confirmar) R$ 11,96 + taxa de entrega R$ 5,00",
+      "valorProduto": 82,
+      "taxaEntrega": 5,
+      "total": 87,
+      "pagamento": "Dinheiro, sem troco (anotado)",
+      "prazo": "",
+      "conferencia": "Confirmar cliente, endereço, marca da ração de 15 kg e detalhes dos sachês. A soma dos valores legíveis R$ 70,00 + R$ 11,96 + R$ 5,00 = R$ 86,96, enquanto o total manuscrito é R$ 87,00; mantido o total da comanda e valorProduto arredondado para R$ 82,00 até conferência. Fonte: IMG-20260922-WA0026.jpg."
+    },
+    {
+      "data": "22/09/2026",
+      "cliente": "Marcia",
+      "telefone": "971590495 (leitura aproximada; conferir DDD e dígitos)",
+      "endereco": "R. Silvio Ferreira Domingues, 36 (leitura aproximada; conferir grafia)",
+      "descricao": "Item principal com descrição manuscrita incerta (parece 'Dermacare') R$ 46,00 + 1 caramelo (sabor a confirmar) R$ 2,50 + 1 caramelo churrasco R$ 2,50 + 2 caramelos picadinho R$ 5,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 56,
+      "taxaEntrega": 5,
+      "total": 61,
+      "pagamento": "PIX (anotado; recebimento não confirmado)",
+      "prazo": "",
+      "conferencia": "Conferir telefone, endereço e identificação exata do item principal. Valores legíveis R$ 46,00 + R$ 2,50 + R$ 2,50 + R$ 5,00 + entrega R$ 5,00 = total manuscrito R$ 61,00. Fonte: IMG-20260922-WA0024.jpg."
     }
   ]
 }
