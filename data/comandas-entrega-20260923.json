@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "23/09/2026 (lote de 8 imagens; 7 comandas únicas, pois IMG-20260923-WA0012 e WA0013 são duplicatas da mesma comanda da Alana; leituras incertas sinalizadas para conferência)",
+  "atualizadoEm": "23/09/2026 (lote acumulado de 10 imagens; 9 comandas únicas; IMG-20260923-WA0012 e WA0013 são duplicatas da mesma comanda da Alana; leituras incertas sinalizadas para conferência)",
   "comandas": [
     {
       "data": "23/09/2026",
@@ -91,6 +91,32 @@
       "pagamento": "PIX",
       "prazo": "",
       "conferencia": "Confirmar telefone e grafia do endereço. Valores legíveis somam R$ 60,00 em produtos + R$ 5,00 de taxa = total R$ 65,00. Fonte: IMG-20260923-WA0001.jpg."
+    },
+    {
+      "data": "23/09/2026",
+      "cliente": "Célio Souza",
+      "telefone": "989246306 (leitura aproximada; conferir)",
+      "endereco": "R. Assunção, 1080 (leitura aproximada; conferir)",
+      "descricao": "1 Premier 15 kg (variante pouco legível) R$ 100,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Confirmar telefone, grafia do endereço e variante exata da Premier. Total manuscrito R$ 105,00 = produto R$ 100,00 + taxa R$ 5,00. Fonte: IMG-20260923-WA0015.jpg."
+    },
+    {
+      "data": "23/09/2026",
+      "cliente": "Vinor (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "R. Albano Almeida Leone, 126 (leitura aproximada; conferir grafia)",
+      "descricao": "1 Fórmula Natural 15 kg (variante pouco legível) R$ 260,00 + 1 Biscoito Fórmula Natural R$ 16,00",
+      "valorProduto": 276,
+      "taxaEntrega": 0,
+      "total": 276,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Confirmar nome do cliente, grafia do endereço e variante exata da Fórmula Natural. Total manuscrito R$ 276,00. Fonte: IMG-20260923-WA0014.jpg."
     }
   ]
 }
