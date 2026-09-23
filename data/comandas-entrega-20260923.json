@@ -1,0 +1,96 @@
+{
+  "atualizadoEm": "23/09/2026 (lote de 8 imagens; 7 comandas únicas, pois IMG-20260923-WA0012 e WA0013 são duplicatas da mesma comanda da Alana; leituras incertas sinalizadas para conferência)",
+  "comandas": [
+    {
+      "data": "23/09/2026",
+      "cliente": "Leica (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Rua Nuno Ferreira de Souza, 7265 (leitura aproximada; conferir grafia/número)",
+      "descricao": "1 Magnus Todo Dia 15 kg R$ 100,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Pago (forma não indicada)",
+      "prazo": "",
+      "conferencia": "Confirmar grafia do nome e endereço. Total manuscrito R$ 105,00 = produto R$ 100,00 + taxa R$ 5,00. Fonte: IMG-20260923-WA0003.jpg."
+    },
+    {
+      "data": "23/09/2026",
+      "cliente": "Alana",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Golden Canine Porte GD (apresentação/peso a confirmar) R$ 178,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 178,
+      "taxaEntrega": 5,
+      "total": 183,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Comanda fotografada duas vezes (IMG-20260923-WA0013.jpg e IMG-20260923-WA0012.jpg); registrada apenas uma vez. Confirmar apresentação/peso do produto. Total R$ 183,00."
+    },
+    {
+      "data": "23/09/2026",
+      "cliente": "Paulo (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Piratinga (leitura aproximada; conferir)",
+      "descricao": "Premier (apresentação/peso não legíveis) R$ 100,00",
+      "valorProduto": 100,
+      "taxaEntrega": 0,
+      "total": 100,
+      "pagamento": "Cartão (anotação riscada; conferir)",
+      "prazo": "",
+      "conferencia": "Confirmar cliente, endereço, produto e forma de pagamento. Total manuscrito R$ 100,00. Fonte: IMG-20260923-WA0006.jpg."
+    },
+    {
+      "data": "23/09/2026",
+      "cliente": "Cristiano (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Produto/ração com descrição pouco legível R$ 65,00 + taxa de entrega R$ 8,00",
+      "valorProduto": 65,
+      "taxaEntrega": 8,
+      "total": 73,
+      "pagamento": "Cartão (anotação riscada; conferir)",
+      "prazo": "",
+      "conferencia": "Confirmar nome do cliente, descrição do produto e forma de pagamento. Total manuscrito R$ 73,00 = R$ 65,00 + taxa R$ 8,00. Fonte: IMG-20260923-WA0005.jpg."
+    },
+    {
+      "data": "23/09/2026",
+      "cliente": "Anna",
+      "telefone": "994976073 (leitura aproximada; conferir DDD e dígitos)",
+      "endereco": "Mirandópolis, 65 (leitura aproximada; conferir)",
+      "descricao": "1 Magnus 15 kg R$ 100,00 + 1 Bifinho (descrição complementar pouco legível) R$ 27,00 + taxa de entrega R$ 6,00",
+      "valorProduto": 127,
+      "taxaEntrega": 6,
+      "total": 133,
+      "pagamento": "Cartão",
+      "prazo": "Amanhã às 9:00",
+      "conferencia": "Confirmar telefone, endereço e descrição exata do bifinho. Total R$ 133,00. Fonte: IMG-20260923-WA0009.jpg."
+    },
+    {
+      "data": "23/09/2026",
+      "cliente": "Vagnilson (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 Golden Cat Frango R$ 40,00 + 1 Magnus 15 kg R$ 100,00 + 1 Areia R$ 14,00 + Golden (variante/filhote, leitura parcial) R$ 40,00",
+      "valorProduto": 194,
+      "taxaEntrega": 0,
+      "total": 194,
+      "pagamento": "Não informado",
+      "prazo": "19:00",
+      "conferencia": "Há linhas rasuradas. O campo Total Geral está rasurado, mas há R$ 194,00 manuscrito no corpo e a soma dos valores legíveis 40 + 100 + 14 + 40 = R$ 194,00. Confirmar cliente e descrições exatas. Fonte: IMG-20260923-WA0004.jpg."
+    },
+    {
+      "data": "23/09/2026",
+      "cliente": "Susana",
+      "telefone": "950413948 (leitura aproximada; conferir DDD e dígitos)",
+      "endereco": "Nhã Jorda, 111 (leitura aproximada; conferir grafia)",
+      "descricao": "6 sachês Whiskas carne R$ 18,00 + 6 sachês Whiskas peixe R$ 18,00 + 8 sachês Sheba R$ 24,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 60,
+      "taxaEntrega": 5,
+      "total": 65,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Confirmar telefone e grafia do endereço. Valores legíveis somam R$ 60,00 em produtos + R$ 5,00 de taxa = total R$ 65,00. Fonte: IMG-20260923-WA0001.jpg."
+    }
+  ]
+}
