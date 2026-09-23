@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "23/09/2026 (lote acumulado de 10 imagens; 9 comandas únicas; IMG-20260923-WA0012 e WA0013 são duplicatas da mesma comanda da Alana; leituras incertas sinalizadas para conferência)",
+  "atualizadoEm": "23/09/2026 (lote acumulado de 11 imagens; 10 comandas únicas; IMG-20260923-WA0012 e WA0013 são duplicatas da mesma comanda da Alana; leituras incertas sinalizadas para conferência)",
   "comandas": [
     {
       "data": "23/09/2026",
@@ -117,6 +117,19 @@
       "pagamento": "PIX",
       "prazo": "",
       "conferencia": "Confirmar nome do cliente, grafia do endereço e variante exata da Fórmula Natural. Total manuscrito R$ 276,00. Fonte: IMG-20260923-WA0014.jpg."
+    },
+    {
+      "data": "23/09/2026",
+      "cliente": "Liliane (leitura aproximada; conferir)",
+      "telefone": "940298330 (leitura aproximada; conferir)",
+      "endereco": "R. Veneza, 131",
+      "descricao": "1 Lactobac Cat R$ 50,00 + 1 Antitóxico R$ 12,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 62,
+      "taxaEntrega": 5,
+      "total": 67,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Confirmar grafia do nome e telefone. Endereço lido como R. Veneza, 131. Total manuscrito R$ 67,00 = R$ 50,00 + R$ 12,00 + taxa R$ 5,00. Fonte: IMG-20260923-WA0022.jpg."
     }
   ]
 }
