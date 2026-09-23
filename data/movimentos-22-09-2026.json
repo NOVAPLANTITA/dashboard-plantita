@@ -1,0 +1,24 @@
+{
+  "atualizadoEm": "23/09/2026",
+  "dataComanda": "22/09/2026",
+  "totalInformadoComanda": 6581.00,
+  "totalLancamentos": 6581.00,
+  "diferencaConferencia": 0.00,
+  "observacao": "Comanda diária datada de 22/09/2026. Total manuscrito R$ 6.581,00. O valor de DINHEIRO foi registrado como R$ 1.345,00: o campo Unitário aparenta R$ 1.350,00, mas há correção manuscrita no campo Total e R$ 1.345,00 reconcilia exatamente com o total geral. Manter como valor a conferir. Alguns nomes de PIX têm leitura aproximada. Registro exclusivo do Controle Diário, sem duplicar no Controle de Entregas.",
+  "movimentos": [
+    {"data":"22/09/2026","tipo":"Dinheiro","descricao":"DINHEIRO","valor":1345.00,"conferencia":"Leitura da correção no campo Total; campo Unitário aparenta R$ 1.350,00. Conferir."},
+    {"data":"22/09/2026","tipo":"Getnet","descricao":"GETNET 1","valor":141.00,"conferencia":"Leitura visual"},
+    {"data":"22/09/2026","tipo":"Getnet","descricao":"GETNET 2","valor":1188.80,"conferencia":"Leitura visual"},
+    {"data":"22/09/2026","tipo":"Cielo","descricao":"CIELO","valor":451.00,"conferencia":"Leitura visual"},
+    {"data":"22/09/2026","tipo":"Mercado Pago","descricao":"MERCADO PG","valor":2546.20,"conferencia":"Leitura visual"},
+    {"data":"22/09/2026","tipo":"PIX","descricao":"ANGÉLICA","valor":45.00,"conferencia":"Leitura visual"},
+    {"data":"22/09/2026","tipo":"PIX","descricao":"NANETE (leitura aproximada)","valor":70.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"22/09/2026","tipo":"PIX","descricao":"MÁRCIA","valor":65.00,"conferencia":"Leitura visual"},
+    {"data":"22/09/2026","tipo":"PIX","descricao":"PATRÍCIA ARAUJO (leitura aproximada)","valor":15.00,"conferencia":"Sobrenome manuscrito a conferir"},
+    {"data":"22/09/2026","tipo":"PIX","descricao":"ROBSON RAMOS (leitura aproximada)","valor":383.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"22/09/2026","tipo":"PIX","descricao":"LUDYMILA RAIOA (leitura aproximada)","valor":45.00,"conferencia":"Nome/sobrenome manuscrito a conferir"},
+    {"data":"22/09/2026","tipo":"PIX","descricao":"DÉBORA","valor":150.00,"conferencia":"Leitura visual"},
+    {"data":"22/09/2026","tipo":"PIX","descricao":"DÉBORA","valor":26.00,"conferencia":"Leitura visual"},
+    {"data":"22/09/2026","tipo":"PIX","descricao":"ELIANA","valor":110.00,"conferencia":"Leitura visual"}
+  ]
+}
