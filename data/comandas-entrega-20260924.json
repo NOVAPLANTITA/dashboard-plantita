@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "24/09/2026 (9 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência)",
+  "atualizadoEm": "24/09/2026 (10 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência)",
   "comandas": [
     {
       "data": "24/09/2026",
@@ -117,6 +117,19 @@
       "pagamento": "Marcado",
       "prazo": "",
       "conferencia": "Nome lido aproximadamente como 'Sr. Deni'. Os 8 valores legíveis somam R$ 270,00, igual ao total geral manuscrito. Confirmar a grafia do cliente e as descrições exatas dos itens. Fonte: IMG-20260924-WA0025.jpg."
+    },
+    {
+      "data": "24/09/2026",
+      "cliente": "Milton",
+      "telefone": "",
+      "endereco": "Rio Jordão, 155 (leitura aproximada; conferir)",
+      "descricao": "Primeiro item com quantidade 2 (descrição manuscrita pouco legível) R$ 20,00 + 1 item com descrição terminando em 'Free' R$ 72,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 92,
+      "taxaEntrega": 5,
+      "total": 97,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Confirmar endereço e descrições exatas dos produtos. Total manuscrito R$ 97,00 = produtos R$ 92,00 + taxa R$ 5,00. Fonte: IMG-20260924-WA0027.jpg."
     }
   ]
 }
