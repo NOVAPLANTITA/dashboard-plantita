@@ -1,0 +1,20 @@
+{
+  "atualizadoEm": "24/09/2026",
+  "dataComanda": "23/09/2026",
+  "totalInformadoComanda": 7214.00,
+  "totalLancamentos": 7218.10,
+  "diferencaConferencia": 4.10,
+  "observacao": "Comanda diária datada de 23/09/2026. Total manuscrito R$ 7.214,00; soma dos 10 valores lidos R$ 7.218,10; diferença de R$ 4,10 pendente de conferência. Não ajustar valores para forçar o fechamento. Café sem indicação de natureza/forma de pagamento: verificar se é venda ou despesa. Registro exclusivo do Controle Diário, sem duplicar no Controle de Entregas.",
+  "movimentos": [
+    {"data":"23/09/2026","tipo":"Dinheiro","descricao":"DINHEIRO","valor":1000.00,"conferencia":"Leitura visual"},
+    {"data":"23/09/2026","tipo":"Mercado Pago","descricao":"MERCADO PAGO","valor":2196.00,"conferencia":"Leitura visual"},
+    {"data":"23/09/2026","tipo":"Cielo","descricao":"CIELO","valor":622.00,"conferencia":"Leitura visual"},
+    {"data":"23/09/2026","tipo":"Getnet","descricao":"GETNET 1","valor":924.00,"conferencia":"Leitura visual"},
+    {"data":"23/09/2026","tipo":"Getnet","descricao":"GETNET 2","valor":1926.70,"conferencia":"Leitura visual"},
+    {"data":"23/09/2026","tipo":"Outros","descricao":"CAFÉ","valor":23.40,"conferencia":"Forma de pagamento e natureza não identificadas; confirmar se é venda ou despesa"},
+    {"data":"23/09/2026","tipo":"PIX","descricao":"ANA CAROLINA","valor":276.00,"conferencia":"Leitura visual"},
+    {"data":"23/09/2026","tipo":"PIX","descricao":"THIAGO","valor":89.00,"conferencia":"Leitura visual"},
+    {"data":"23/09/2026","tipo":"PIX","descricao":"VAGNALIA (leitura aproximada)","valor":94.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"23/09/2026","tipo":"PIX","descricao":"ELIANE","valor":67.00,"conferencia":"Leitura visual"}
+  ]
+}
