@@ -1,0 +1,25 @@
+{
+  "atualizadoEm": "24/09/2026",
+  "dataComanda": "24/09/2026",
+  "totalInformadoComanda": 7835.00,
+  "totalLancamentos": 7894.00,
+  "diferencaConferencia": 59.00,
+  "observacao": "Comanda diária datada de 24/09/2026. Total manuscrito R$ 7.835,00; soma dos 15 valores lidos R$ 7.894,00; diferença de R$ 59,00 pendente de conferência. Não ajustar valores para forçar o fechamento. CIELO aparece sem valor e, por isso, não foi lançado. Café mantido como Outros. Registro exclusivo do Controle Diário, sem duplicar no Controle de Entregas.",
+  "movimentos": [
+    {"data":"24/09/2026","tipo":"Dinheiro","descricao":"DINHEIRO","valor":800.00,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"Getnet","descricao":"GETNET 1","valor":1122.00,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"Getnet","descricao":"GETNET 2","valor":1648.90,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"Mercado Pago","descricao":"MERCADO PAGO","valor":2617.10,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"Outros","descricao":"CAFÉ","valor":25.00,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"PIX","descricao":"MARCIA","valor":250.00,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"PIX","descricao":"ISAC","valor":14.00,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"PIX","descricao":"ELENITA (leitura aproximada)","valor":163.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"24/09/2026","tipo":"PIX","descricao":"JOÃO","valor":130.00,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"PIX","descricao":"FRANCISCO NASCIMENTO","valor":300.00,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"PIX","descricao":"ISAC","valor":183.00,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"PIX","descricao":"KATIA DE OLIVEIRA","valor":125.00,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"PIX","descricao":"LETICIA","valor":82.00,"conferencia":"Leitura visual"},
+    {"data":"24/09/2026","tipo":"PIX","descricao":"ANDRETO (leitura aproximada)","valor":210.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"24/09/2026","tipo":"PIX","descricao":"JONAS","valor":224.00,"conferencia":"Leitura visual"}
+  ]
+}
