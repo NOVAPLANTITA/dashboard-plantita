@@ -1,0 +1,96 @@
+{
+  "atualizadoEm": "24/09/2026 (7 imagens; 7 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência)",
+  "comandas": [
+    {
+      "data": "24/09/2026",
+      "cliente": "Roberta",
+      "telefone": "",
+      "endereco": "R. Quinze de Novembro, 1020, ap. 54, bloco B (leitura aproximada; conferir número)",
+      "descricao": "1 Premier 7 a 11 anos frango R$ 85,00 + 2 Churu sachão R$ 50,00",
+      "valorProduto": 135,
+      "taxaEntrega": 0,
+      "total": 135,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 135,00 = R$ 85,00 + R$ 50,00. Confirmar número do endereço/apartamento. Fonte: IMG-20260924-WA0001.jpg."
+    },
+    {
+      "data": "24/09/2026",
+      "cliente": "Elena (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "R. Angola, 231",
+      "descricao": "1 Origens Cat frango (leitura aproximada) R$ 160,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 160,
+      "taxaEntrega": 5,
+      "total": 165,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Confirmar grafia do nome e descrição exata do produto. Total manuscrito R$ 165,00 = produto R$ 160,00 + taxa R$ 5,00. Fonte: IMG-20260924-WA0002.jpg."
+    },
+    {
+      "data": "24/09/2026",
+      "cliente": "Julia (leitura aproximada; conferir)",
+      "telefone": "995654780 (leitura aproximada; conferir)",
+      "endereco": "R. Platina, 445",
+      "descricao": "1 Simparic Trio 40 a 60 kg (leitura aproximada) R$ 182,00 + 1 Credeli 5 a 11 kg (leitura aproximada) R$ 70,00 + 1 item com descrição pouco legível R$ 26,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 278,
+      "taxaEntrega": 5,
+      "total": 283,
+      "pagamento": "Dinheiro",
+      "prazo": "",
+      "conferencia": "Confirmar nome, telefone e descrições exatas dos 3 itens. Valores legíveis somam R$ 278,00 em produtos + taxa R$ 5,00 = total R$ 283,00. Fonte: IMG-20260924-WA0008.jpg."
+    },
+    {
+      "data": "24/09/2026",
+      "cliente": "Henrique (leitura aproximada; conferir)",
+      "telefone": "964466595 (leitura aproximada; conferir)",
+      "endereco": "R. Eduardo Coutinho, 1216 (complemento pouco legível; conferir)",
+      "descricao": "1 Special Dog filhote (leitura aproximada) R$ 100,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Confirmar sobrenome/apelido do cliente, complemento do endereço e descrição exata do produto. Total manuscrito R$ 105,00 = produto R$ 100,00 + taxa R$ 5,00. Fonte: IMG-20260924-WA0018.jpg."
+    },
+    {
+      "data": "24/09/2026",
+      "cliente": "Maria Gonçalves",
+      "telefone": "",
+      "endereco": "Estr. Borba Gato, 3345 (leitura aproximada; conferir)",
+      "descricao": "1 ração 25 kg (descrição pouco legível) R$ 97,00 + 1 Magnus 10 kg (variante pouco legível) R$ 85,00 + 1 ração 25 kg (descrição pouco legível) R$ 100,00 + 1 milho 10 kg R$ 28,00 + 3 kg milho quebrado R$ 15,00 + taxa de entrega R$ 10,00",
+      "valorProduto": 325,
+      "taxaEntrega": 10,
+      "total": 335,
+      "pagamento": "Mercado Pago (anotação 'mercado'; conferir)",
+      "prazo": "",
+      "conferencia": "Confirmar descrições exatas das rações e forma de pagamento. Valores legíveis somam R$ 325,00 em produtos + taxa R$ 10,00 = total R$ 335,00. Fonte: IMG-20260924-WA0017.jpg."
+    },
+    {
+      "data": "24/09/2026",
+      "cliente": "Tiffany (leitura aproximada; conferir)",
+      "telefone": "932295142 (leitura aproximada; conferir)",
+      "endereco": "R. Pastor Nathan Rogers Domingues, 58 (leitura aproximada; conferir grafia)",
+      "descricao": "2 ração para coelho 5 kg R$ 52,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 52,
+      "taxaEntrega": 5,
+      "total": 57,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Confirmar grafia do nome, telefone e endereço. Total manuscrito R$ 57,00 = produtos R$ 52,00 + taxa R$ 5,00. Fonte: IMG-20260924-WA0015.jpg."
+    },
+    {
+      "data": "24/09/2026",
+      "cliente": "Felipe",
+      "telefone": "01931095... (parcial; conferir)",
+      "endereco": "Av. do Tesouro, 261 (leitura aproximada; conferir)",
+      "descricao": "1 Fórmula Natural Life adulto (descrição parcial; conferir) R$ 70,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 70,
+      "taxaEntrega": 5,
+      "total": 75,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Telefone aparece parcialmente cortado na imagem; confirmar telefone, endereço e descrição exata do produto. Total manuscrito R$ 75,00 = produto R$ 70,00 + taxa R$ 5,00. Fonte: IMG-20260924-WA0014.jpg."
+    }
+  ]
+}
