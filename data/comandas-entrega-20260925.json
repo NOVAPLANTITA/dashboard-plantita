@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "25/09/2026 (13 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência; produtos R$ 1.989,00 + taxas R$ 24,00 = total R$ 2.013,00)",
+  "atualizadoEm": "25/09/2026 (16 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência; produtos R$ 2.484,00 + taxas R$ 34,00 = total R$ 2.518,00)",
   "comandas": [
     {
       "data": "25/09/2026",
@@ -169,6 +169,45 @@
       "pagamento": "Cartão",
       "prazo": "Até 15:15",
       "conferencia": "Total manuscrito R$ 205,00. Confirmar grafia do cliente, telefone, endereço e descrição/peso exatos do produto. Fonte: IMG-20260925-WA0028.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Daiane (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 itens Classic (descrição/peso pouco legível) R$ 88,00 + 1 caixa de sachê Friskies R$ 57,00",
+      "valorProduto": 145,
+      "taxaEntrega": 0,
+      "total": 145,
+      "pagamento": "Cartão",
+      "prazo": "Até 15:00",
+      "conferencia": "Total manuscrito R$ 145,00 = R$ 88,00 + R$ 57,00. Confirmar grafia do cliente e descrição/peso exatos do item Classic. Fonte: IMG-20260925-WA0034.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Ruben",
+      "telefone": "",
+      "endereco": "Rua Benedito Antonio Gonçalves, 74",
+      "descricao": "1 Premier R$ 250,00",
+      "valorProduto": 250,
+      "taxaEntrega": 0,
+      "total": 250,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 250,00. Data manuscrita 25/09/2026. Fonte: IMG-20260925-WA0031.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Sheila",
+      "telefone": "957530477",
+      "endereco": "R. Leonilda de Oliveira Cintra, 62",
+      "descricao": "1 Special Dog 15 kg R$ 100,00 + taxa de entrega R$ 10,00",
+      "valorProduto": 100,
+      "taxaEntrega": 10,
+      "total": 110,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 110,00 = produto R$ 100,00 + taxa de entrega R$ 10,00. Confirmar grafia do endereço/telefone. Fonte: IMG-20260925-WA0029.jpg."
     }
   ]
 }
