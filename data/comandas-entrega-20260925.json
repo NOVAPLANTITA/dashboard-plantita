@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "25/09/2026 (9 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência; produtos R$ 1.376,00 + taxas R$ 24,00 = total R$ 1.400,00)",
+  "atualizadoEm": "25/09/2026 (11 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência; produtos R$ 1.646,00 + taxas R$ 24,00 = total R$ 1.670,00)",
   "comandas": [
     {
       "data": "25/09/2026",
@@ -117,6 +117,32 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Total manuscrito R$ 250,00 = R$ 184,00 + R$ 66,00. Confirmar telefone, endereço e faixa do Credeli. Fonte: IMG-20260925-WA0014.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Renato (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Rosa de Saron (trecho entre parênteses pouco legível; conferir)",
+      "descricao": "1 Credeli 5 a 11 kg R$ 70,00",
+      "valorProduto": 70,
+      "taxaEntrega": 0,
+      "total": 70,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 70,00; pagamento PIX. Confirmar grafia do cliente, endereço e faixa exata do Credeli. Fonte: IMG-20260925-WA0016.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Natalia",
+      "telefone": "",
+      "endereco": "Av. Nove de Julho, 1257",
+      "descricao": "1 Magnus Cat carne 10 kg R$ 140,00 + 1 Classic 20 kg (descrição parcialmente ilegível) R$ 60,00",
+      "valorProduto": 200,
+      "taxaEntrega": 0,
+      "total": 200,
+      "pagamento": "Pago",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 200,00 = R$ 140,00 + R$ 60,00. Anotação 'PG' indica pago, mas sem forma de pagamento identificada. Confirmar descrição exata do item Classic. Fonte: IMG-20260925-WA0015.jpg."
     }
   ]
 }
