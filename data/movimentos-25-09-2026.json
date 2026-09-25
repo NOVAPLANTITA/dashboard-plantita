@@ -1,0 +1,27 @@
+{
+  "atualizadoEm": "25/09/2026",
+  "dataComanda": "25/09/2026",
+  "totalInformadoComanda": 9176.00,
+  "totalLancamentos": 9119.80,
+  "diferencaConferencia": -56.20,
+  "observacao": "Comanda diária datada de 25/09/2026. Total manuscrito R$ 9.176,00. Soma das 16 entradas lidas R$ 9.119,80; diferença de R$ 56,20 pendente de conferência. Há ainda uma retirada de R$ 450,00 (pagamento Celia), registrada separadamente como Retiradas e não somada às vendas. Não ajustar valores para forçar o fechamento. Café mantido como Outros. Registro exclusivo do Controle Diário, sem duplicar no Controle de Entregas.",
+  "movimentos": [
+    {"data":"25/09/2026","tipo":"Dinheiro","descricao":"DINHEIRO","valor":1200.00,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"Getnet","descricao":"GETNET 1","valor":1910.00,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"Getnet","descricao":"GETNET 2","valor":978.80,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"Cielo","descricao":"CIELO","valor":570.80,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"Mercado Pago","descricao":"MERCADO PAGO","valor":3021.80,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"Outros","descricao":"CAFÉ","valor":23.90,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"PIX","descricao":"RENATO PESSOA","valor":88.00,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"PIX","descricao":"JAIRMA APARECIDA (leitura aproximada)","valor":77.00,"conferencia":"Nome manuscrito a conferir"},
+    {"data":"25/09/2026","tipo":"PIX","descricao":"ANGELICA","valor":106.00,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"PIX","descricao":"JULIA","valor":44.00,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"PIX","descricao":"VIVIAN REBELATTO","valor":125.00,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"PIX","descricao":"SHEILA GUIMARAES","valor":550.00,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"PIX","descricao":"JOSE PEREIRA","valor":80.00,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"PIX","descricao":"LUANA VICARI","valor":70.00,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"PIX","descricao":"THAMILES","valor":105.00,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"PIX","descricao":"PRISCILA NATALIA","valor":169.50,"conferencia":"Leitura visual"},
+    {"data":"25/09/2026","tipo":"Retiradas","descricao":"RETIRADA PAGAMENTO CELIA","valor":450.00,"conferencia":"Leitura visual; retirada não contabilizada como venda"}
+  ]
+}
