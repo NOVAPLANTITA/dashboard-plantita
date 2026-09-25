@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "25/09/2026 (12 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência; produtos R$ 1.784,00 + taxas R$ 24,00 = total R$ 1.808,00)",
+  "atualizadoEm": "25/09/2026 (13 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência; produtos R$ 1.989,00 + taxas R$ 24,00 = total R$ 2.013,00)",
   "comandas": [
     {
       "data": "25/09/2026",
@@ -156,6 +156,19 @@
       "pagamento": "Dinheiro",
       "prazo": "Sem troco (anotação na comanda)",
       "conferencia": "Total manuscrito R$ 138,00 = R$ 100,00 + R$ 38,00. Anotação 'Dinheiro ñ troco'. Confirmar grafia do cliente e descrição completa do item de R$ 38,00. Fonte: IMG-20260925-WA0017.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Monica (leitura aproximada; conferir)",
+      "telefone": "953354071 (leitura aproximada; conferir)",
+      "endereco": "R. Formosa, 10 (leitura aproximada; conferir)",
+      "descricao": "1 Golden Special (descrição complementar/peso pouco legível) R$ 205,00",
+      "valorProduto": 205,
+      "taxaEntrega": 0,
+      "total": 205,
+      "pagamento": "Cartão",
+      "prazo": "Até 15:15",
+      "conferencia": "Total manuscrito R$ 205,00. Confirmar grafia do cliente, telefone, endereço e descrição/peso exatos do produto. Fonte: IMG-20260925-WA0028.jpg."
     }
   ]
 }
