@@ -1,0 +1,122 @@
+{
+  "atualizadoEm": "25/09/2026 (9 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência; produtos R$ 1.376,00 + taxas R$ 24,00 = total R$ 1.400,00)",
+  "comandas": [
+    {
+      "data": "25/09/2026",
+      "cliente": "Luciana Otica (leitura aproximada; conferir grafia)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "5 sachês cachorro carne R$ 20,00 + 2 sachês Golden gato R$ 26,00 + 1 kg Golden filhote R$ 20,00",
+      "valorProduto": 66,
+      "taxaEntrega": 0,
+      "total": 66,
+      "pagamento": "Marcado",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 66,00 = R$ 20,00 + R$ 26,00 + R$ 20,00. Confirmar grafia do sobrenome. Fonte: IMG-20260925-WA0003.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Vivian",
+      "telefone": "",
+      "endereco": "Rua Manoel Maximino da Rosa, 129",
+      "descricao": "1 Origen Class 15 kg (leitura aproximada) R$ 120,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 120,
+      "taxaEntrega": 5,
+      "total": 125,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 125,00 = produto R$ 120,00 + taxa R$ 5,00. Confirmar grafia exata da marca/linha. Fonte: IMG-20260925-WA0008.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Lúcia (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Special frango R$ 170,00",
+      "valorProduto": 170,
+      "taxaEntrega": 0,
+      "total": 170,
+      "pagamento": "Não informado",
+      "prazo": "Pago à tarde (anotação na comanda)",
+      "conferencia": "A comanda traz a anotação 'pago tarde', sem forma de pagamento identificada. Confirmar nome e forma de pagamento. Fonte: IMG-20260925-WA0007.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Priscila",
+      "telefone": "994759963 (leitura aproximada; conferir)",
+      "endereco": "R. Alcino Antonio Moraes, 77 (leitura aproximada; conferir)",
+      "descricao": "1 Life 15 kg RR (leitura aproximada) R$ 260,00 + 2 Sanol R$ 36,00",
+      "valorProduto": 296,
+      "taxaEntrega": 0,
+      "total": 296,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 296,00 = R$ 260,00 + R$ 36,00. Confirmar telefone, endereço e descrição exata de 'Life 15 kg RR'. Fonte: IMG-20260925-WA0005.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Ana",
+      "telefone": "",
+      "endereco": "Estr. João Rodrigues Moraes (leitura aproximada; conferir)",
+      "descricao": "1 Candora 25 kg (leitura aproximada) R$ 99,00 + 1 Vetcoc (leitura aproximada) R$ 7,00",
+      "valorProduto": 106,
+      "taxaEntrega": 0,
+      "total": 106,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 106,00 = R$ 99,00 + R$ 7,00. Confirmar grafia das duas descrições e do endereço. Fonte: IMG-20260925-WA0004.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Maria Isabel",
+      "telefone": "",
+      "endereco": "R. Val Paraíso, 22 • Jd. Paraíso (leitura aproximada; conferir)",
+      "descricao": "1 Magnus 15 kg R$ 100,00 + taxa de entrega R$ 7,00",
+      "valorProduto": 100,
+      "taxaEntrega": 7,
+      "total": 107,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 107,00 = produto R$ 100,00 + taxa R$ 7,00. Confirmar endereço/bairro. Fonte: IMG-20260925-WA0009.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Gerasa (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Magnus 15 kg (leitura aproximada) R$ 100,00 + 1 item pouco legível R$ 12,00 + 1 petisco/pato 400 g (leitura aproximada) R$ 24,00 + 1 item pouco legível R$ 12,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 148,
+      "taxaEntrega": 5,
+      "total": 153,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Os quatro valores de produtos somam R$ 148,00; com taxa R$ 5,00, total manuscrito R$ 153,00. Confirmar nome do cliente e descrições dos itens. Fonte: IMG-20260925-WA0011.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Cleide",
+      "telefone": "",
+      "endereco": "R. Auxiliadora, 108 (leitura aproximada; conferir)",
+      "descricao": "1 ração canina 25 kg (marca pouco legível; parece 'Nester') R$ 120,00 + taxa de entrega R$ 7,00",
+      "valorProduto": 120,
+      "taxaEntrega": 7,
+      "total": 127,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 127,00 = produto R$ 120,00 + taxa R$ 7,00. Confirmar marca e endereço. Fonte: IMG-20260925-WA0012.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Jefferson",
+      "telefone": "933627648 (leitura aproximada; conferir)",
+      "endereco": "R. Montevideo, 929 (leitura aproximada; conferir)",
+      "descricao": "1 Golden Fórmula 15 kg adulto (leitura aproximada) R$ 184,00 + 1 Credeli (anotação de peso/faixa pouco legível) R$ 66,00",
+      "valorProduto": 250,
+      "taxaEntrega": 0,
+      "total": 250,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 250,00 = R$ 184,00 + R$ 66,00. Confirmar telefone, endereço e faixa do Credeli. Fonte: IMG-20260925-WA0014.jpg."
+    }
+  ]
+}
