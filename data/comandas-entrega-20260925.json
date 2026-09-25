@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "25/09/2026 (18 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência; produtos R$ 2.674,00 + taxas R$ 34,00 = total R$ 2.708,00)",
+  "atualizadoEm": "25/09/2026 (20 comandas únicas; valores conferidos pelos totais manuscritos; leituras incertas sinalizadas para conferência; produtos R$ 2.938,00 + taxas R$ 44,00 = total R$ 2.982,00)",
   "comandas": [
     {
       "data": "25/09/2026",
@@ -234,6 +234,32 @@
       "pagamento": "PIX",
       "prazo": "",
       "conferencia": "Total manuscrito R$ 110,00. Anotação 'Emitir nota'. Confirmar endereço e descrição exata do item. Fonte: IMG-20260925-WA0035.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Priscila",
+      "telefone": "",
+      "endereco": "Av. Constantino [trecho pouco legível], 1360",
+      "descricao": "12 sachês Origens carne/frango com batata-doce R$ 24,00 + 1 Golden carne 10 kg R$ 140,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 164,
+      "taxaEntrega": 5,
+      "total": 169,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 169,00 = R$ 24,00 + R$ 140,00 + taxa R$ 5,00. Confirmar grafia completa do endereço e descrição exata dos sachês. Fonte: IMG-20260925-WA0060.jpg."
+    },
+    {
+      "data": "25/09/2026",
+      "cliente": "Heny (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Estr. Joaquim Cardoso Filho, 600, casa 13",
+      "descricao": "1 Magnus Todo Dia 15 kg R$ 100,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Valores lançados pela soma da comanda: produto R$ 100,00 + taxa R$ 5,00 = R$ 105,00. O total manuscrito parece R$ 105,00. Confirmar grafia do cliente. Fonte: IMG-20260925-WA0056.jpg."
     }
   ]
 }
