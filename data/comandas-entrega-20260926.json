@@ -1,0 +1,31 @@
+{
+  "atualizadoEm": "26/09/2026 (2 comandas novas; totais manuscritos R$ 200,00 e R$ 205,00, total do lote R$ 405,00; leituras incertas sinalizadas)",
+  "comandas": [
+    {
+      "data": "26/09/2026",
+      "cliente": "Rinaldo (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "R. Constantino [trecho pouco legível], 809 (conferir)",
+      "descricao": "1 Especial Dog 20 kg R$ 140,00 + 1 Origens Gato Filhote R$ 60,00 (descrições aproximadas; conferir)",
+      "valorProduto": 200,
+      "taxaEntrega": 0,
+      "total": 200,
+      "pagamento": "Pago (forma não informada)",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 200,00 = R$ 140,00 + R$ 60,00. Anotação 'Pago'; forma de pagamento não consta. Confirmar nome do cliente, endereço e especificações dos produtos. Fonte: IMG-20260926-WA0002.jpg."
+    },
+    {
+      "data": "26/09/2026",
+      "cliente": "Jadete (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Magnus (descrição/peso não identificados; leitura aproximada)",
+      "valorProduto": 205,
+      "taxaEntrega": 0,
+      "total": 205,
+      "pagamento": "Não informado",
+      "prazo": "Anotação manuscrita adicional pouco legível; conferir",
+      "conferencia": "Total manuscrito R$ 205,00. Palavra na descrição parece 'Magnus'; anotação central não permite confirmar modalidade ou pagamento. Confirmar nome, produto e situação de pagamento. Fonte: IMG-20260926-WA0001.jpg."
+    }
+  ]
+}
