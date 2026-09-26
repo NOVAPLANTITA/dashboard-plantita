@@ -1,0 +1,115 @@
+{
+  "atualizadoEm": "26/09/2026",
+  "dataComanda": "26/09/2026",
+  "totalInformadoComanda": 10013,
+  "totalLancamentos": 10014.3,
+  "diferencaConferencia": 1.3,
+  "observacao": "Comanda diária de 26/09/2026. Total manuscrito lido R$ 10.013,00. Soma de 15 lançamentos lidos R$ 10.014,30, diferença +R$ 1,30 pendente. PIX Amanda interpretado provisoriamente como R$ 143,00 (centavos pouco nítidos). Alguns nomes de PIX não estão completamente legíveis. Não ajustar valores para forçar fechamento; café mantido em Outros conforme padrão histórico. Débitos Mercado Pago mantidos individualmente; não duplicar no Controle de Entregas.",
+  "movimentos": [
+    {
+      "data": "26/09/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1800,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1103.8,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 911,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1500.2,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 3762.3,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 20,
+      "conferencia": "Leitura visual; manter em Outros conforme padrão histórico, verificar classificação gerencial"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "PIX",
+      "descricao": "AMANDA",
+      "valor": 143,
+      "conferencia": "Centavos pouco nítidos na foto: leitura provisória R$ 143,00; confirmar"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "PIX",
+      "descricao": "RENAN",
+      "valor": 180,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "PIX",
+      "descricao": "PEDRO ALEXANDRE",
+      "valor": 225,
+      "conferencia": "Nome manuscrito a conferir"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "PIX",
+      "descricao": "CRISTIANE (1º lançamento)",
+      "valor": 45,
+      "conferencia": "Nome manuscrito a conferir; lançamento independente"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "PIX",
+      "descricao": "CRISTIANE (2º lançamento)",
+      "valor": 35,
+      "conferencia": "Nome manuscrito a conferir; lançamento independente"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "PIX",
+      "descricao": "NOME MANUSCRITO A CONFERIR",
+      "valor": 100,
+      "conferencia": "Descrição do PIX pouco legível; valor R$ 100,00"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO (1º)",
+      "valor": 40,
+      "conferencia": "Leitura visual; lançamento independente"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO (2º)",
+      "valor": 34,
+      "conferencia": "Leitura visual; lançamento independente"
+    },
+    {
+      "data": "26/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO (3º)",
+      "valor": 115,
+      "conferencia": "Leitura visual; lançamento independente"
+    }
+  ]
+}
