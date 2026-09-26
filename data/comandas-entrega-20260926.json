@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "26/09/2026 (7 comandas únicas; produtos R$ 1.274,00 + taxas R$ 10,00 = total R$ 1.284,00; leituras incertas sinalizadas)",
+  "atualizadoEm": "26/09/2026 (8 comandas únicas; produtos R$ 1.405,96 + taxas R$ 10,00 = total R$ 1.415,96; leituras incertas sinalizadas)",
   "comandas": [
     {
       "data": "26/09/2026",
@@ -91,6 +91,19 @@
       "pagamento": "Cartão (anotação circulada; conferir)",
       "prazo": "",
       "conferencia": "Total manuscrito R$ 114,00 = produtos R$ 45,00 + R$ 10,00 + R$ 42,00 + R$ 12,00, mais taxa de entrega R$ 5,00. Nome/descrições pouco legíveis. Anotação inferior parece 'cartão'. Fonte: IMG-20260926-WA0009.jpg."
+    },
+    {
+      "data": "26/09/2026",
+      "cliente": "Ari (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Sacolão Varejão (leitura aproximada; conferir)",
+      "descricao": "1 Origens 15 kg (linha a confirmar) R$ 120,00 + 4 sachês Whiskas (sabores anotados: carne, frango e peixe; distribuição a confirmar) R$ 11,96",
+      "valorProduto": 131.96,
+      "taxaEntrega": 0,
+      "total": 131.96,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 131,96 = Origens R$ 120,00 + sachês Whiskas R$ 11,96. PIX indicado. Quantidade de sachês aparenta ser 4; conferir distribuição por sabor, grafia do cliente e referência de entrega. Fonte: IMG-20260926-WA0011.jpg."
     }
   ]
 }
