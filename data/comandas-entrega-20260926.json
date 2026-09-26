@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "26/09/2026 (2 comandas novas; totais manuscritos R$ 200,00 e R$ 205,00, total do lote R$ 405,00; leituras incertas sinalizadas)",
+  "atualizadoEm": "26/09/2026 (5 comandas únicas; produtos R$ 750,00 + taxas R$ 5,00 = total R$ 755,00; leituras incertas sinalizadas)",
   "comandas": [
     {
       "data": "26/09/2026",
@@ -26,6 +26,45 @@
       "pagamento": "Não informado",
       "prazo": "Anotação manuscrita adicional pouco legível; conferir",
       "conferencia": "Total manuscrito R$ 205,00. Palavra na descrição parece 'Magnus'; anotação central não permite confirmar modalidade ou pagamento. Confirmar nome, produto e situação de pagamento. Fonte: IMG-20260926-WA0001.jpg."
+    },
+    {
+      "data": "26/09/2026",
+      "cliente": "Wellington (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 item 'Fórmula' (marca, apresentação e peso não especificados) R$ 67,00",
+      "valorProduto": 67,
+      "taxaEntrega": 0,
+      "total": 67,
+      "pagamento": "Cartão (conferir)",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 67,00. Nome e indicação 'Cartão' com leitura aproximada. A data escrita pode parecer 26/09/25; registrado em 26/09/2026 pelo lote enviado neste dia, confirmar ano. Confirmar descrição completa do item. Fonte: IMG-20260926-WA0008.jpg."
+    },
+    {
+      "data": "26/09/2026",
+      "cliente": "Renn (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Magnus (linha e peso não indicados) R$ 100,00 + 2 kg Magnus Gato F (leitura aproximada) R$ 28,00 + 1 milho 25 (apresentação a confirmar) R$ 50,00",
+      "valorProduto": 178,
+      "taxaEntrega": 0,
+      "total": 178,
+      "pagamento": "PIX e dinheiro (rateio não informado)",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 178,00 = R$ 100,00 + R$ 28,00 + R$ 50,00. Anotação 'PIX e dinheiro', sem divisão de valor por forma; não somar duas vezes nos movimentos financeiros. Confirmar nome, linha do Magnus, especificação de 'gato F' e unidade do milho. Fonte: IMG-20260926-WA0007.jpg."
+    },
+    {
+      "data": "26/09/2026",
+      "cliente": "Bruna",
+      "telefone": "983475340 (leitura aproximada; conferir)",
+      "endereco": "R. Pedra Mole, 626 (leitura aproximada; conferir)",
+      "descricao": "1 Magnus 25 kg (linha/peso manuscritos pouco legíveis; conferir) R$ 100,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Cartão",
+      "prazo": "Portão de madeira (referência para entrega)",
+      "conferencia": "Total manuscrito R$ 105,00 = R$ 100,00 + taxa R$ 5,00. Confirmar linha/peso do produto, telefone e endereço. Fonte: IMG-20260926-WA0005.jpg."
     }
   ]
 }
