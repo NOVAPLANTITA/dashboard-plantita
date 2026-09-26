@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "26/09/2026 (15 comandas únicas; produtos R$ 2536.96 + taxas R$ 25.00 = total R$ 2561.96; leituras incertas sinalizadas)",
+  "atualizadoEm": "26/09/2026 (16 comandas únicas; produtos R$ 2639.76 + taxas R$ 25.00 = total R$ 2664.76; leituras incertas sinalizadas)",
   "comandas": [
     {
       "data": "26/09/2026",
@@ -195,6 +195,19 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Total geral manuscrito R$ 110,00 = produto R$ 105,00 + taxa R$ 5,00. Nome 'Erik', endereço e apresentação da ração lidos da comanda; conferir grafia do endereço e telefone, não transcrito por baixa legibilidade. Anotação 'CARTÃO'. Fonte: IMG-20260926-WA0031.jpg."
+    },
+    {
+      "data": "26/09/2026",
+      "cliente": "Rosângela (leitura aproximada; conferir grafia)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Bio Natural R$ 82,80 + item anotado 'Quatri' (possivelmente Quatree; apresentação a confirmar) R$ 20,00",
+      "valorProduto": 102.8,
+      "taxaEntrega": 0,
+      "total": 102.8,
+      "pagamento": "Pago (forma não informada)",
+      "prazo": "",
+      "conferencia": "Total geral manuscrito R$ 102,80 = R$ 82,80 + R$ 20,00. Anotação 'Pago'; não consta a forma de recebimento. Confirmar grafia da cliente e identificação exata/apresentação dos itens. Taxa de entrega não destacada. Fonte: IMG-20260926-WA0032.jpg."
     }
   ]
 }
