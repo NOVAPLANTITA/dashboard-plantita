@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "26/09/2026 (16 comandas únicas; produtos R$ 2639.76 + taxas R$ 25.00 = total R$ 2664.76; leituras incertas sinalizadas)",
+  "atualizadoEm": "26/09/2026 (17 comandas únicas; produtos R$ 2709.76 + taxas R$ 25.00 = total R$ 2734.76; leituras incertas sinalizadas)",
   "comandas": [
     {
       "data": "26/09/2026",
@@ -208,6 +208,19 @@
       "pagamento": "Pago (forma não informada)",
       "prazo": "",
       "conferencia": "Total geral manuscrito R$ 102,80 = R$ 82,80 + R$ 20,00. Anotação 'Pago'; não consta a forma de recebimento. Confirmar grafia da cliente e identificação exata/apresentação dos itens. Taxa de entrega não destacada. Fonte: IMG-20260926-WA0032.jpg."
+    },
+    {
+      "data": "26/09/2026",
+      "cliente": "Neide (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Comanda sem mercadoria individualizada; texto no campo de descrição aparenta 'credi...' (leitura incerta; conferir)",
+      "valorProduto": 70,
+      "taxaEntrega": 0,
+      "total": 70,
+      "pagamento": "A conferir (anotação 'cartão' com risco/rasura; recebimento não confirmado)",
+      "prazo": "",
+      "conferencia": "Total geral manuscrito R$ 70,00; data 26/09/26. Nome parece Neide; anotação '1749 B' na parte superior, sem identificação clara de seu significado. Texto do campo descrição parece 'credi...' e há anotação central semelhante a 'cartão' com risco/rasura; confirmar antes de classificar o pagamento ou realizar baixa. Nenhuma taxa de entrega discriminada. Fonte: IMG-20260926-WA0033.jpg."
     }
   ]
 }
