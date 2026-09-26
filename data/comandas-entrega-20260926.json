@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "26/09/2026 (5 comandas únicas; produtos R$ 750,00 + taxas R$ 5,00 = total R$ 755,00; leituras incertas sinalizadas)",
+  "atualizadoEm": "26/09/2026 (7 comandas únicas; produtos R$ 1.274,00 + taxas R$ 10,00 = total R$ 1.284,00; leituras incertas sinalizadas)",
   "comandas": [
     {
       "data": "26/09/2026",
@@ -65,6 +65,32 @@
       "pagamento": "Cartão",
       "prazo": "Portão de madeira (referência para entrega)",
       "conferencia": "Total manuscrito R$ 105,00 = R$ 100,00 + taxa R$ 5,00. Confirmar linha/peso do produto, telefone e endereço. Fonte: IMG-20260926-WA0005.jpg."
+    },
+    {
+      "data": "26/09/2026",
+      "cliente": "Joyce (Pátio; conferir grafia)",
+      "telefone": "",
+      "endereco": "Pátio (referência na comanda)",
+      "descricao": "1 Magnus 20 (peso/linha a confirmar) R$ 150,00 + 1 Premier Filhote 15 kg R$ 265,00",
+      "valorProduto": 415,
+      "taxaEntrega": 0,
+      "total": 415,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 415,00 = R$ 150,00 + R$ 265,00. PIX indicado. Confirmar grafia do cliente e especificação completa da ração Magnus. Fonte: IMG-20260926-WA0010.jpg."
+    },
+    {
+      "data": "26/09/2026",
+      "cliente": "Cliente com nome ilegível (conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Item 'Dog' (leitura aproximada) R$ 45,00 + item 'crescimento' (leitura aproximada) R$ 10,00 + item Magnus (especificação a conferir) R$ 42,00 + item pouco legível (possivelmente sachê/café; conferir) R$ 12,00",
+      "valorProduto": 109,
+      "taxaEntrega": 5,
+      "total": 114,
+      "pagamento": "Cartão (anotação circulada; conferir)",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 114,00 = produtos R$ 45,00 + R$ 10,00 + R$ 42,00 + R$ 12,00, mais taxa de entrega R$ 5,00. Nome/descrições pouco legíveis. Anotação inferior parece 'cartão'. Fonte: IMG-20260926-WA0009.jpg."
     }
   ]
 }
