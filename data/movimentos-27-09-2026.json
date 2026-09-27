@@ -1,0 +1,52 @@
+{
+  "atualizadoEm": "27/09/2026",
+  "dataComanda": "27/09/2026",
+  "totalInformadoComanda": 5871.11,
+  "totalLancamentos": 5868.43,
+  "diferencaConferencia": -2.68,
+  "observacao": "Comanda diária de 27/09/2026. Total manuscrito lido como R$ 5.871,11. Soma provisória de seis lançamentos lidos R$ 5.868,43; diferença de -R$ 2,68 pendente de conferência. Valores de Dinheiro (R$ 800,60), Getnet da segunda linha (R$ 480,60) e Cielo (R$ 421,02) lidos visualmente; confirmar no original devido à caligrafia. Não ajustar lançamentos para forçar fechamento. Café mantido em Outros, conforme padrão histórico. Exclusivo do Controle Diário, sem duplicar Controle de Entregas.",
+  "movimentos": [
+    {
+      "data": "27/09/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 800.6,
+      "conferencia": "Leitura visual provisória: R$ 800,60; confirmar centavos"
+    },
+    {
+      "data": "27/09/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET (1ª LINHA)",
+      "valor": 1223.5,
+      "conferencia": "Leitura visual; comanda registra duas linhas Getnet"
+    },
+    {
+      "data": "27/09/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET (2ª LINHA)",
+      "valor": 480.6,
+      "conferencia": "Leitura visual provisória: R$ 480,60; confirmar"
+    },
+    {
+      "data": "27/09/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 421.02,
+      "conferencia": "Leitura visual provisória: R$ 421,02; confirmar centavos"
+    },
+    {
+      "data": "27/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 2921.4,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "27/09/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 21.31,
+      "conferencia": "Leitura visual; manter em Outros conforme padrão histórico"
+    }
+  ]
+}
