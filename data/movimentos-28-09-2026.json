@@ -1,0 +1,129 @@
+{
+  "atualizadoEm": "28/09/2026",
+  "dataComanda": "28/09/2026",
+  "totalInformadoComanda": 6321,
+  "totalLancamentos": 6422.9,
+  "diferencaConferencia": 101.9,
+  "observacao": "Comanda diária de 28/09/2026, foto 20260928_180035.jpg. Total manuscrito R$ 6.321,00; 17 lançamentos visualmente transcritos somam R$ 6.422,90, diferença de +R$ 101,90. PIX MERCEARIA (R$ 246,00), PIX JOSÉ (R$ 100,00), nomes/sobrenomes e demais detalhes indicados requerem conciliação; não ajustar para forçar fechamento. CAFÉ preservado em Outros (despesa a classificar); débitos Mercado Pago registrados separadamente. Exclusivo do Controle Diário, sem duplicar comandas de entrega.",
+  "movimentos": [
+    {
+      "data": "28/09/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1200,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 898.8,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1083,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 555,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 2031.5,
+      "conferencia": "Leitura visual; primeiro total da maquininha, débitos abaixo são lançamentos adicionais"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 21,
+      "conferencia": "Leitura visual; manter separado de vendas elegíveis na análise gerencial"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "PIX",
+      "descricao": "JOSÉ",
+      "valor": 100,
+      "conferencia": "Leitura visual; confirmar nome e valor na conciliação"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "PIX",
+      "descricao": "BRUNA",
+      "valor": 59.6,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "PIX",
+      "descricao": "SÍLVIA",
+      "valor": 73,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "PIX",
+      "descricao": "MERCEARIA (nome a conferir)",
+      "valor": 246,
+      "conferencia": "Leitura visual provisória; nome e valor pouco nítidos"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "PIX",
+      "descricao": "PATRÍCIA (sobrenome a conferir)",
+      "valor": 15,
+      "conferencia": "Sobrenome manuscrito pouco nítido"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO (1º)",
+      "valor": 24,
+      "conferencia": "Lançamento individual"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "PIX",
+      "descricao": "PIX SEM DESCRIÇÃO",
+      "valor": 10,
+      "conferencia": "Na linha aparece apenas PIX"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO (2º)",
+      "valor": 60,
+      "conferencia": "Lançamento individual"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO (3º)",
+      "valor": 9,
+      "conferencia": "Lançamento individual"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO (4º)",
+      "valor": 20,
+      "conferencia": "Lançamento individual"
+    },
+    {
+      "data": "28/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO (5º)",
+      "valor": 17,
+      "conferencia": "Lançamento individual"
+    }
+  ]
+}
