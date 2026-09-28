@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "28/09/2026 (7 comandas; produtos R$ 3079,00 + taxa R$ 5,00 = total R$ 3084,00; marcado/a receber R$ 2266,00; leituras aproximadas sinalizadas)",
+  "atualizadoEm": "28/09/2026 (8 comandas; produtos R$ 3153,00 + taxa R$ 10,00 = total R$ 3163,00; marcado/a receber R$ 2266,00; leituras aproximadas sinalizadas)",
   "comandas": [
     {
       "data": "28/09/2026",
@@ -91,6 +91,19 @@
       "pagamento": "Marcado (a receber; não pago)",
       "prazo": "Não informado",
       "conferencia": "Total Geral R$ 1.449,00 = R$ 150,00 + R$ 214,00 + R$ 140,00 + R$ 105,00 + R$ 840,00. 'MARCADO' manuscrito: não registrar entrada no caixa. Confirmar nome do cliente, grafia/apresentação dos itens e unidades. Fonte: IMG-20260928-WA0041.jpg."
+    },
+    {
+      "data": "28/09/2026",
+      "cliente": "Ana Lúcia",
+      "telefone": "",
+      "endereco": "Rua Nova Rezende, 23, próximo ao ASA (leitura aproximada; conferir)",
+      "descricao": "1 Premier Filhote R/P R$ 42,00 + 1 Quatree Filhote Frango R$ 32,00",
+      "valorProduto": 74,
+      "taxaEntrega": 5,
+      "total": 79,
+      "pagamento": "Cartão (anotado; confirmar recebimento)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 79,00 = R$ 42,00 + R$ 32,00 + taxa R$ 5,00. 'CARTÃO' manuscrito; confirmar recebimento. Conferir grafia da rua, referência e apresentações exatas dos produtos. Fonte: IMG-20260928-WA0052.jpg."
     }
   ]
 }
