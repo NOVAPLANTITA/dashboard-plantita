@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "28/09/2026 (4 comandas deste lote; produtos R$ 959,00 + taxa R$ 5,00 = total R$ 964,00; marcado R$ 246,00; leituras aproximadas sinalizadas)",
+  "atualizadoEm": "28/09/2026 (7 comandas; produtos R$ 3079,00 + taxa R$ 5,00 = total R$ 3084,00; marcado/a receber R$ 2266,00; leituras aproximadas sinalizadas)",
   "comandas": [
     {
       "data": "28/09/2026",
@@ -52,6 +52,45 @@
       "pagamento": "PIX (anotado; confirmar recebimento)",
       "prazo": "",
       "conferencia": "Total Geral R$ 89,00 = produto R$ 84,00 + taxa R$ 5,00; PIX manuscrito. Confirmar nome, nome exato do produto e endereço. Fonte: IMG-20260928-WA0001.jpg."
+    },
+    {
+      "data": "28/09/2026",
+      "cliente": "Luciana (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 areia R$ 28,00 + 8 sachês R$ 20,00 + 8 sachês R$ 20,00 + ração (quantidade não anotada) R$ 32,00",
+      "valorProduto": 100,
+      "taxaEntrega": 0,
+      "total": 100,
+      "pagamento": "Não informado (comanda anotada 'PEGO')",
+      "prazo": "Pego/retirado (anotação manuscrita)",
+      "conferencia": "Total Geral R$ 100,00 = R$ 28,00 + R$ 20,00 + R$ 20,00 + R$ 32,00. 'PEGO' não confirma pagamento; não computar como recebido sem conferir. Conferir grafia do nome e descrição da ração e dos sachês. Fonte: IMG-20260928-WA0044.jpg."
+    },
+    {
+      "data": "28/09/2026",
+      "cliente": "Patrícia",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "4 unidades de produto anotado 'FRO PIPICAT ...' (leitura parcial) R$ 321,00 + 1 Seresto R$ 250,00; anotação adicional 'Vela Fuls mant Carne' (leitura incerta, sem valor/quantidade associado)",
+      "valorProduto": 571,
+      "taxaEntrega": 0,
+      "total": 571,
+      "pagamento": "Marcado (a receber; não pago)",
+      "prazo": "Não informado",
+      "conferencia": "Total Geral R$ 571,00 = R$ 321,00 + R$ 250,00. 'MARCADO' manuscrito: não registrar entrada no caixa. Confirmar produto/quantidade do primeiro item, anotação adicional sem preço e a apresentação do Seresto. Fonte: IMG-20260928-WA0043.jpg."
+    },
+    {
+      "data": "28/09/2026",
+      "cliente": "Sr. Raim... (nome parcial; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 'Magno Chip 20' (leitura aproximada) R$ 150,00 + 2 'Can Mil' R$ 214,00 + 1 Special Dog 20 R$ 140,00 + 1 'Magno Filhot' R$ 105,00 + 12 'Flocks' R$ 840,00 (descrições manuscritas a conferir)",
+      "valorProduto": 1449,
+      "taxaEntrega": 0,
+      "total": 1449,
+      "pagamento": "Marcado (a receber; não pago)",
+      "prazo": "Não informado",
+      "conferencia": "Total Geral R$ 1.449,00 = R$ 150,00 + R$ 214,00 + R$ 140,00 + R$ 105,00 + R$ 840,00. 'MARCADO' manuscrito: não registrar entrada no caixa. Confirmar nome do cliente, grafia/apresentação dos itens e unidades. Fonte: IMG-20260928-WA0041.jpg."
     }
   ]
 }
