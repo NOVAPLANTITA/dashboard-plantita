@@ -1,0 +1,57 @@
+{
+  "atualizadoEm": "28/09/2026 (4 comandas deste lote; produtos R$ 959,00 + taxa R$ 5,00 = total R$ 964,00; marcado R$ 246,00; leituras aproximadas sinalizadas)",
+  "comandas": [
+    {
+      "data": "28/09/2026",
+      "cliente": "Mirco (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 milho 50 (apresentação a confirmar) R$ 84,00 + 1 Golden Life 20 (leitura aproximada) R$ 180,00 + 2 VS (descrição a confirmar) R$ 180,00 + 2 item 'Milva' (leitura aproximada) R$ 85,00",
+      "valorProduto": 529,
+      "taxaEntrega": 0,
+      "total": 529,
+      "pagamento": "Cartão (anotado; confirmar recebimento)",
+      "prazo": "",
+      "conferencia": "Total R$ 529,00 manuscrito no centro e parcelas interpretadas R$ 84,00 + R$ 180,00 + R$ 180,00 + R$ 85,00. Campo Total Geral rasurado; considerar R$ 529,00 provisoriamente e conferir a rasura, nome e itens. Anotação 'CARTÃO'. Fonte: IMG-20260928-WA0006.jpg."
+    },
+    {
+      "data": "28/09/2026",
+      "cliente": "Sandro (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "R. Joaquim C. Filho (leitura aproximada; número a confirmar)",
+      "descricao": "1 milho 50 kg R$ 90,00 + 3 unidades de item anotado 'Pedrão farelada' (leitura aproximada) R$ 10,00",
+      "valorProduto": 100,
+      "taxaEntrega": 0,
+      "total": 100,
+      "pagamento": "PIX (anotado; confirmar recebimento)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 100,00 = R$ 90,00 + R$ 10,00. 'PIX' manuscrito. Confirmar grafia do cliente, endereço, descrição e quantidade do segundo item. Fonte: IMG-20260928-WA0003.jpg."
+    },
+    {
+      "data": "28/09/2026",
+      "cliente": "Eliane (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Milho R$ 100,00 + postura R$ 96,00 + item pouco legível R$ 20,00 + item anotado 'pico-pau' (leitura aproximada) R$ 30,00",
+      "valorProduto": 246,
+      "taxaEntrega": 0,
+      "total": 246,
+      "pagamento": "Marcado (a receber; não pago)",
+      "prazo": "Não informado",
+      "conferencia": "Total Geral R$ 246,00 = R$ 100,00 + R$ 96,00 + R$ 20,00 + R$ 30,00. 'MARCADO' manuscrito: não registrar como entrada recebida. Nome e itens finais a confirmar. Fonte: IMG-20260928-WA0002.jpg."
+    },
+    {
+      "data": "28/09/2026",
+      "cliente": "Daniel(a) (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Palmeiras, 94 (leitura aproximada; conferir)",
+      "descricao": "1 item anotado 'farelo' (leitura aproximada) R$ 84,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 84,
+      "taxaEntrega": 5,
+      "total": 89,
+      "pagamento": "PIX (anotado; confirmar recebimento)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 89,00 = produto R$ 84,00 + taxa R$ 5,00; PIX manuscrito. Confirmar nome, nome exato do produto e endereço. Fonte: IMG-20260928-WA0001.jpg."
+    }
+  ]
+}
