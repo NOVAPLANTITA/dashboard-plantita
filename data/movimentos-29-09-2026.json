@@ -1,0 +1,122 @@
+{
+  "atualizadoEm": "29/09/2026",
+  "dataComanda": "29/09/2026",
+  "totalInformadoComanda": 8192,
+  "totalLancamentos": 8193.4,
+  "diferencaConferencia": 1.4,
+  "observacao": "Comanda diária recebida em 29/09/2026, foto IMG-20260929-WA0031.jpg. Total manuscrito R$ 8.192,00; 16 lançamentos transcritos visualmente somam R$ 8.193,40 (diferença +R$ 1,40). Conferir principalmente valor de PIX SANDRA (rasurado), VALÉRIA BARBOSA, nomes e identificação da linha de R$ 250,00. SACO PE 2X mantido em Outros, com classificação a conferir. Não ajustar valores para fechar artificialmente nem duplicar comandas de entrega.",
+  "movimentos": [
+    {
+      "data": "29/09/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 714,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 971.5,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 297,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 2429.4,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1350,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "PIX",
+      "descricao": "GUILHERME",
+      "valor": 176,
+      "conferencia": "Leitura visual; nome a conferir"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "PIX",
+      "descricao": "JOSÉ",
+      "valor": 165,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "PIX",
+      "descricao": "ELAINE",
+      "valor": 271,
+      "conferencia": "Leitura visual; nome a conferir"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "Outros",
+      "descricao": "LANÇAMENTO (descrição manuscrita semelhante a PERCLUTI)",
+      "valor": 250,
+      "conferencia": "Descrição e forma de pagamento a conferir; não classificar como PIX sem confirmação"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "PIX",
+      "descricao": "SANDRA",
+      "valor": 68,
+      "conferencia": "Valor no total rasurado; R$ 68,00 também indicado na coluna Unitário; conferir"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "PIX",
+      "descricao": "RIO CENTRO (nome a conferir)",
+      "valor": 415,
+      "conferencia": "Nome manuscrito pouco nítido"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "PIX",
+      "descricao": "JOÃO (sobrenome a conferir)",
+      "valor": 150,
+      "conferencia": "Leitura visual; nome/sobrenome a conferir"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "PIX",
+      "descricao": "VALÉRIA BARBOSA (nome a conferir)",
+      "valor": 513.5,
+      "conferencia": "Leitura visual provisória; centavos e nome a conferir"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "PIX",
+      "descricao": "CLUBE DE TIRO 007",
+      "valor": 260,
+      "conferencia": "Leitura visual; identificação a conferir"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "Outros",
+      "descricao": "SACO PE 2X",
+      "valor": 68,
+      "conferencia": "Classificação do movimento a conferir: item sem indicação de pagamento PIX"
+    },
+    {
+      "data": "29/09/2026",
+      "tipo": "PIX",
+      "descricao": "AMANDA",
+      "valor": 95,
+      "conferencia": "Leitura visual"
+    }
+  ]
+}
