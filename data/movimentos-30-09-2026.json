@@ -1,0 +1,122 @@
+{
+  "atualizadoEm": "30/09/2026",
+  "dataComanda": "30/09/2026",
+  "totalInformadoComanda": 7516,
+  "totalLancamentos": 7837.4,
+  "diferencaConferencia": 321.4,
+  "observacao": "Comanda diária recebida em 30/09/2026, foto 20260930_175955.jpg. Total manuscrito R$ 7.516,00; 16 lançamentos transcritos visualmente somam R$ 7.837,40 (diferença +R$ 321,40). Não ajustar valores para fechar artificialmente. Conferir principalmente o PIX IVONE (R$ 98,00), o nome DANIELE e a natureza do lançamento JOÃO, que não tem indicação de PIX na margem. CAFÉ mantido em Outros, seguindo o padrão histórico do controle diário.",
+  "movimentos": [
+    {
+      "data": "30/09/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1300,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 597,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 830.6,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 588,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 3088.8,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 23,
+      "conferencia": "Leitura visual; classificação mantida conforme padrão histórico"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "PIX",
+      "descricao": "TANIA REGINA",
+      "valor": 132,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "PIX",
+      "descricao": "IVONE",
+      "valor": 98,
+      "conferencia": "Leitura visual; valor a conferir"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "PIX",
+      "descricao": "JANAINA",
+      "valor": 132,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "PIX",
+      "descricao": "DANIELE",
+      "valor": 30,
+      "conferencia": "Nome a conferir; leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "PIX",
+      "descricao": "FRANCISCA",
+      "valor": 167,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "PIX",
+      "descricao": "ADRIANA GONÇALVES",
+      "valor": 111,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "PIX",
+      "descricao": "SHIRLEY",
+      "valor": 339,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "Outros",
+      "descricao": "JOÃO",
+      "valor": 330,
+      "conferencia": "Sem indicação de PIX na margem; forma de pagamento a conferir"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "PIX",
+      "descricao": "EDUARDA",
+      "valor": 26,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "30/09/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO",
+      "valor": 45,
+      "conferencia": "Leitura visual"
+    }
+  ]
+}
