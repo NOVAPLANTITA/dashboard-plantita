@@ -1,26 +1,28 @@
 {
-  "atualizadoEm": "22/09/2026",
-  "fonte": "Plantita_Consolidado_com_Ponto_de_Equilibrio.xlsx + lotes de preços 08/09/2026 + DOC-20260831-WA0047_dashboard_consolidado.xlsx + DAS 07/2026 + DANFE Premier Pet 0444624 de 14/09/2026 e boletos 01-05 + imagem FIXOS enviada em 22/09/2026 (1000333549.jpg)",
+  "atualizadoEm": "01/10/2026",
+  "fonte": "Controle diário Plantita 01–30/09/2026 + Plantita_Consolidado_com_Ponto_de_Equilibrio.xlsx + lotes de preços 08/09/2026 + DOC-20260831-WA0047_dashboard_consolidado.xlsx + DAS 07/2026 + DANFE Premier Pet 0444624 de 14/09/2026 e boletos 01-05 + imagem FIXOS enviada em 22/09/2026 (1000333549.jpg)",
   "premissas": {
-    "faturamento_setembro_base": 309614.86,
+    "faturamento_setembro_base": 263428.97,
     "margem_contribuicao_padrao": 0.3370581256,
     "margem_bruta_produtos": 0.3685607183,
     "produtos_com_custo_venda": 494,
     "custos_fixos_confirmados": 38202.47,
     "fixos_obrigacoes_informados": 45878.26,
     "boletos_setembro_anteriores": 168017.22,
-    "boletos_setembro_novos": 20787.20,
+    "boletos_setembro_novos": 20787.2,
     "boletos_setembro": 188804.42,
     "boletos_outubro": 36607.95,
     "boletos_outubro_base_08_09": 27185.95,
-    "boletos_outubro_adicionados_premier_0444624": 9422.00,
-    "boletos_novembro_adicionados_premier_0444624": 2355.50
+    "boletos_outubro_adicionados_premier_0444624": 9422,
+    "boletos_novembro_adicionados_premier_0444624": 2355.5,
+    "faturamento_setembro_controle_diario": 263428.97,
+    "faturamento_setembro_base_anterior_nao_realizado": 309614.86
   },
   "custos_fixos": {
-    "aluguel": 7000.00,
+    "aluguel": 7000,
     "funcionarios": 28434.02,
     "pagamentos_dinheiro": 0,
-    "energia": 1700.00,
+    "energia": 1700,
     "agua": 0,
     "internet_telefone": 1068.45,
     "contabilidade": 0,
@@ -37,16 +39,23 @@
   "das": {
     "competencia": "07/2026",
     "vencimento": "20/08/2026",
-    "valor": 8924.90,
+    "valor": 8924.9,
     "faturamento_competencia": 283306.84,
     "aliquota_efetiva_pct": 3.15025927,
-    "composicao": {"IRPJ":490.87,"CSLL":312.37,"COFINS":1137.03,"PIS":246.33,"INSS":3748.46,"ICMS":2989.84},
+    "composicao": {
+      "IRPJ": 490.87,
+      "CSLL": 312.37,
+      "COFINS": 1137.03,
+      "PIS": 246.33,
+      "INSS": 3748.46,
+      "ICMS": 2989.84
+    },
     "criterio": "Competência 07/2026 no resultado gerencial e desembolso em 08/2026 no fluxo de caixa, sem dupla contagem."
   },
   "base_produtos": {
     "quantidade": 494,
     "custo_total_amostra": 34952.69,
-    "venda_total_amostra": 55354.00,
+    "venda_total_amostra": 55354,
     "margem_bruta_ponderada_pct": 36.85607183,
     "margem_contribuicao_apos_imposto_pct": 33.70581256,
     "metodo": "Margem ponderada pelo valor de venda: (soma vendas - soma custos) / soma vendas. A base de 446 produtos recebeu mais 48 itens legíveis de Farmabago/Biogenesis Bago, Martes Pet e Continental Aquarismo enviados em 08/09/2026. A carga tributária usa a alíquota efetiva da DAS de 07/2026 como referência até entrar a DAS da competência analisada. A compra Premier Pet NF 0444624 não altera esta base sem conciliação dos itens e preços de venda."
@@ -65,43 +74,97 @@
     "data_recebimento": "22/09/2026",
     "fonte": "Imagem FIXOS 1000333549.jpg enviada pelo usuário; competência mensal pressuposta, a confirmar",
     "itens": [
-      {"descricao":"Folha de pagamento","valor":28434.02,"tratamento":"despesa_operacional"},
-      {"descricao":"Aluguel","valor":7000.00,"tratamento":"despesa_operacional"},
-      {"descricao":"Água e luz","valor":1700.00,"tratamento":"despesa_operacional"},
-      {"descricao":"Telefonia","valor":1068.45,"tratamento":"despesa_operacional"},
-      {"descricao":"Seguro e consórcio","valor":1264.46,"tratamento":"caixa_pendente_desmembramento"},
-      {"descricao":"Empréstimo","valor":6411.33,"tratamento":"caixa_financiamento"}
+      {
+        "descricao": "Folha de pagamento",
+        "valor": 28434.02,
+        "tratamento": "despesa_operacional"
+      },
+      {
+        "descricao": "Aluguel",
+        "valor": 7000,
+        "tratamento": "despesa_operacional"
+      },
+      {
+        "descricao": "Água e luz",
+        "valor": 1700,
+        "tratamento": "despesa_operacional"
+      },
+      {
+        "descricao": "Telefonia",
+        "valor": 1068.45,
+        "tratamento": "despesa_operacional"
+      },
+      {
+        "descricao": "Seguro e consórcio",
+        "valor": 1264.46,
+        "tratamento": "caixa_pendente_desmembramento"
+      },
+      {
+        "descricao": "Empréstimo",
+        "valor": 6411.33,
+        "tratamento": "caixa_financiamento"
+      }
     ],
-    "total":45878.26,
-    "total_operacional_identificavel":38202.47,
-    "total_financeiro_pendente_classificacao":7675.79,
-    "observacao":"Total R$ 45.878,26 confere com os seis valores da imagem. Não somar o antigo pagamento em dinheiro R$ 7.145,79 sem verificar duplicidade. Empréstimo não é integralmente despesa da DRE; seguro/consórcio requer divisão."
+    "total": 45878.26,
+    "total_operacional_identificavel": 38202.47,
+    "total_financeiro_pendente_classificacao": 7675.79,
+    "observacao": "Total R$ 45.878,26 confere com os seis valores da imagem. Não somar o antigo pagamento em dinheiro R$ 7.145,79 sem verificar duplicidade. Empréstimo não é integralmente despesa da DRE; seguro/consórcio requer divisão."
   },
   "itens_antigos_a_conciliar": {
-    "folha_anterior":27142.02,
-    "pagamentos_dinheiro_anteriores":7145.79,
-    "emprestimo_mensal_anterior":2583.33,
-    "observacao":"Referências da base anterior substituídas na fotografia de fixos de 22/09; não acrescentar automaticamente aos novos custos. Confirmar competência, despesas em dinheiro e sobreposição com o novo quadro."
+    "folha_anterior": 27142.02,
+    "pagamentos_dinheiro_anteriores": 7145.79,
+    "emprestimo_mensal_anterior": 2583.33,
+    "observacao": "Referências da base anterior substituídas na fotografia de fixos de 22/09; não acrescentar automaticamente aos novos custos. Confirmar competência, despesas em dinheiro e sobreposição com o novo quadro."
   },
   "compras_mes": {
     "competencia": "09/2026",
     "registros_adicionados_nesta_atualizacao": 1,
-    "valor_adicionado_nesta_atualizacao": 11777.50,
+    "valor_adicionado_nesta_atualizacao": 11777.5,
     "observacao": "Valor apenas da nova NF 0444624, não é total consolidado de todas as compras de setembro; não somar ao CMV sem conciliação de estoque/vendas.",
-    "documentos": ["data/compra-premier-20260914-nf0444624.json"]
+    "documentos": [
+      "data/compra-premier-20260914-nf0444624.json"
+    ]
   },
   "historico": [
-    {"mes":"12/2025","faturamento":276646.02},
-    {"mes":"01/2026","faturamento":283908.59},
-    {"mes":"02/2026","faturamento":269264.80},
-    {"mes":"03/2026","faturamento":280146.97},
-    {"mes":"04/2026","faturamento":274779.58},
-    {"mes":"06/2026","faturamento":281203.91},
-    {"mes":"07/2026","faturamento":283306.84},
-    {"mes":"08/2026","faturamento":288710.80},
-    {"mes":"09/2026","faturamento":309614.86}
+    {
+      "mes": "12/2025",
+      "faturamento": 276646.02
+    },
+    {
+      "mes": "01/2026",
+      "faturamento": 283908.59
+    },
+    {
+      "mes": "02/2026",
+      "faturamento": 269264.8
+    },
+    {
+      "mes": "03/2026",
+      "faturamento": 280146.97
+    },
+    {
+      "mes": "04/2026",
+      "faturamento": 274779.58
+    },
+    {
+      "mes": "06/2026",
+      "faturamento": 281203.91
+    },
+    {
+      "mes": "07/2026",
+      "faturamento": 283306.84
+    },
+    {
+      "mes": "08/2026",
+      "faturamento": 288710.8
+    },
+    {
+      "mes": "09/2026",
+      "faturamento": 263428.97
+    }
   ],
   "notas": [
+    "Fechamento corrigido em 01/10/2026: faturamento registrado no Controle Diário de 01 a 30/09/2026 = R$ 263.428,97. O valor anterior de R$ 309.614,86 era uma premissa financeira estática e não correspondia à soma das comandas diárias.",
     "Em 22/09, quadro FIXOS enviado com total R$ 45.878,26; são obrigações mensais informadas, não necessariamente todas despesas operacionais do mês.",
     "Despesas operacionais identificáveis na imagem: folha R$ 28.434,02, aluguel R$ 7.000,00, água/luz R$ 1.700,00 e telefonia R$ 1.068,45: R$ 38.202,47.",
     "Seguro e consórcio juntos R$ 1.264,46 e empréstimo R$ 6.411,33 ficam em caixa até conciliação de seguro, juros e principal; não duplicar no ponto econômico.",
