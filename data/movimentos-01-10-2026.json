@@ -1,0 +1,115 @@
+{
+  "atualizadoEm": "02/10/2026",
+  "dataComanda": "01/10/2026",
+  "totalInformadoComanda": 10601,
+  "totalLancamentos": 10604.75,
+  "diferencaConferencia": 3.75,
+  "observacao": "Comanda diária de 01/10/2026 recebida em 02/10/2026, foto IMG-20261001-WA0069.jpg. Total manuscrito R$ 10.601,00; 15 lançamentos transcritos visualmente somam R$ 10.604,75, diferença de +R$ 3,75. Não ajustar valores para fechar artificialmente. Nomes manuscritos de alguns PIX e a natureza de COMPRA PEIXE / COMPRA BOMBA ficam sinalizados para conferência. CAFÉ e compras sem indicação de meio de pagamento mantidos em Outros, seguindo o padrão histórico do Controle Diário.",
+  "movimentos": [
+    {
+      "data": "01/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1450,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1734.8,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 455,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO 1",
+      "valor": 346.9,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 3578.65,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 28.9,
+      "conferencia": "Leitura visual; classificação mantida conforme padrão histórico"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "PIX",
+      "descricao": "JOSÉ ALMI",
+      "valor": 1027.5,
+      "conferencia": "Nome manuscrito a conferir"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "PIX",
+      "descricao": "ROSANA RAMOS (nome a conferir)",
+      "valor": 80,
+      "conferencia": "Leitura visual; nome a conferir"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "PIX",
+      "descricao": "ROMEIRO SILVA (nome a conferir)",
+      "valor": 233,
+      "conferencia": "Leitura visual; nome a conferir"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "PIX",
+      "descricao": "KEITI LAURA (nome a conferir)",
+      "valor": 98,
+      "conferencia": "Leitura visual; nome a conferir"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "PIX",
+      "descricao": "VERENA RAPP (nome a conferir)",
+      "valor": 239,
+      "conferencia": "Leitura visual; nome a conferir"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "PIX",
+      "descricao": "MÁRCIA REGINA",
+      "valor": 263,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "PIX",
+      "descricao": "ASSOCIAÇÃO DOS ANIMAIS (descrição a conferir)",
+      "valor": 574,
+      "conferencia": "Leitura visual; descrição manuscrita a conferir"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "Outros",
+      "descricao": "COMPRA PEIXE",
+      "valor": 206,
+      "conferencia": "Sem indicação de meio de pagamento; natureza do lançamento a conferir"
+    },
+    {
+      "data": "01/10/2026",
+      "tipo": "Outros",
+      "descricao": "COMPRA BOMBA",
+      "valor": 290,
+      "conferencia": "Sem indicação de meio de pagamento; natureza do lançamento a conferir"
+    }
+  ]
+}
