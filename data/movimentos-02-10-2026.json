@@ -1,0 +1,101 @@
+{
+  "atualizadoEm": "02/10/2026",
+  "dataComanda": "02/10/2026",
+  "totalInformadoComanda": 10487,
+  "totalLancamentos": 10485.19,
+  "diferencaConferencia": -1.81,
+  "observacao": "Comanda diária de 02/10/2026 recebida em 02/10/2026, foto 1000337812.jpg. Total manuscrito R$ 10.487,00; 13 lançamentos transcritos visualmente somam R$ 10.485,19, diferença de -R$ 1,81. Não ajustar valores para fechar artificialmente. Alguns nomes de PIX foram sinalizados para conferência. CAFÉ mantido em Outros, seguindo o padrão histórico do Controle Diário.",
+  "movimentos": [
+    {
+      "data": "02/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1600,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1711,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1264.1,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 734.8,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 3235.3,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 23.9,
+      "conferencia": "Leitura visual; classificação mantida conforme padrão histórico"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "PIX",
+      "descricao": "ROBSON RAMOS (nome a conferir)",
+      "valor": 100,
+      "conferencia": "Leitura visual; nome a conferir"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "PIX",
+      "descricao": "KARINA",
+      "valor": 110,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "PIX",
+      "descricao": "JOCIANE (nome a conferir)",
+      "valor": 165,
+      "conferencia": "Leitura visual; nome a conferir"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "PIX",
+      "descricao": "GEORGES (nome a conferir)",
+      "valor": 1046.99,
+      "conferencia": "Leitura visual; nome a conferir"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARTA",
+      "valor": 308.1,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "PIX",
+      "descricao": "NICOLLY MOREIRA (nome a conferir)",
+      "valor": 36,
+      "conferencia": "Leitura visual; nome a conferir"
+    },
+    {
+      "data": "02/10/2026",
+      "tipo": "PIX",
+      "descricao": "DIANA HENRIQUE (nome a conferir)",
+      "valor": 150,
+      "conferencia": "Leitura visual; nome a conferir"
+    }
+  ]
+}
