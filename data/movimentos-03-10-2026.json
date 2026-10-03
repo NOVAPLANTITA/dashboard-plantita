@@ -1,0 +1,94 @@
+{
+  "atualizadoEm": "03/10/2026",
+  "dataComanda": "03/10/2026",
+  "totalInformadoComanda": 14267,
+  "totalLancamentos": 14269.08,
+  "diferencaConferencia": 2.08,
+  "observacao": "Comanda diária de 03/10/2026 recebida em 03/10/2026, foto 20261003_175725.jpg. Total manuscrito lido como R$ 14.267,00; 12 lançamentos transcritos visualmente somam R$ 14.269,08, diferença de +R$ 2,08. Não ajustar valores para fechar artificialmente. O nome GUIZARETTI foi mantido com sinalização para conferência. CAFÉ mantido em Outros, seguindo o padrão histórico do Controle Diário. DÉBITO MERCADO PAGO mantido em Mercado Pago.",
+  "movimentos": [
+    {
+      "data": "03/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1650,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "03/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 3578,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "03/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 3493.5,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "03/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 599,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "03/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 3484.65,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "03/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 26.93,
+      "conferencia": "Leitura visual; classificação mantida conforme padrão histórico"
+    },
+    {
+      "data": "03/10/2026",
+      "tipo": "PIX",
+      "descricao": "ANGELICA",
+      "valor": 95,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "03/10/2026",
+      "tipo": "PIX",
+      "descricao": "GUIZARETTI (nome a conferir)",
+      "valor": 67,
+      "conferencia": "Leitura visual; nome manuscrito a conferir"
+    },
+    {
+      "data": "03/10/2026",
+      "tipo": "PIX",
+      "descricao": "SILVANO RODRIGUES",
+      "valor": 105,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "03/10/2026",
+      "tipo": "PIX",
+      "descricao": "JORGE ROBERTO",
+      "valor": 890,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "03/10/2026",
+      "tipo": "PIX",
+      "descricao": "CLUBE TIRO",
+      "valor": 220,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "03/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO",
+      "valor": 60,
+      "conferencia": "Leitura visual"
+    }
+  ]
+}
