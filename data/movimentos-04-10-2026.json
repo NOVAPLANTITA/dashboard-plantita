@@ -1,0 +1,59 @@
+{
+  "atualizadoEm": "05/10/2026",
+  "dataComanda": "04/10/2026",
+  "totalInformadoComanda": 4739.52,
+  "totalLancamentos": 4739.81,
+  "diferencaConferencia": 0.29,
+  "observacao": "Comanda diária de 04/10/2026 recebida em 05/10/2026, foto IMG-20261005-WA0008.jpg. A foto lista meios de pagamento e fechamento diário, portanto foi registrada no Controle Diário. Total manuscrito lido como aproximadamente R$ 4.739,52; 7 lançamentos transcritos visualmente somam R$ 4.739,81, diferença de +R$ 0,29. Não ajustar valores para fechar artificialmente. Nome do PIX sinalizado para conferência. CAFÉ mantido em Outros, seguindo o padrão histórico do Controle Diário.",
+  "movimentos": [
+    {
+      "data": "04/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 650,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "04/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 241.25,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "04/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 660.66,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "04/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1096,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "04/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PG",
+      "valor": 1832.4,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "04/10/2026",
+      "tipo": "PIX",
+      "descricao": "FRAYNA GOES (nome a conferir)",
+      "valor": 228,
+      "conferencia": "Leitura visual; nome manuscrito a conferir"
+    },
+    {
+      "data": "04/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 31.5,
+      "conferencia": "Leitura visual; classificação mantida conforme padrão histórico"
+    }
+  ]
+}
