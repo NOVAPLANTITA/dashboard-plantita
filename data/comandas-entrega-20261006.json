@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "06/10/2026 (9 comandas; produtos R$ 3.271,00 + taxas R$ 21,00 = total R$ 3.292,00; leituras aproximadas sinalizadas)",
+  "atualizadoEm": "06/10/2026 (11 comandas; produtos R$ 3.443,00 + taxas R$ 21,00 = total R$ 3.464,00; leituras aproximadas sinalizadas)",
   "comandas": [
     {
       "data": "06/10/2026",
@@ -117,6 +117,32 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Total Geral R$ 148,00 = R$ 84,00 + R$ 64,00. Conferir descrições e pesos exatos dos produtos. Fonte: IMG-20261006-WA0041.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Julia",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Special Dog R$ 100,00",
+      "valorProduto": 100,
+      "taxaEntrega": 0,
+      "total": 100,
+      "pagamento": "",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 100,00. A mesma comanda foi enviada em duas fotos; contabilizada somente uma vez. Fonte: IMG-20261006-WA0044.jpg e IMG-20261006-WA0042.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "D. Antonia",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Golden Light 3 kg R$ 63,00 + 3 sachês R$ 9,00",
+      "valorProduto": 72,
+      "taxaEntrega": 0,
+      "total": 72,
+      "pagamento": "Dinheiro",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 72,00 = R$ 63,00 + R$ 9,00. Anotado 'Troco 100,00' na comanda (levar troco para R$ 100,00). Conferir grafia exata do produto Golden Light. Fonte: IMG-20261006-WA0043.jpg."
     }
   ]
 }
