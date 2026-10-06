@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "06/10/2026 (13 comandas; produtos R$ 3.806,00 + taxas R$ 31,00 = total R$ 3.837,00; leituras aproximadas sinalizadas)",
+  "atualizadoEm": "06/10/2026 (16 comandas; produtos R$ 4.104,50 + taxas R$ 41,00 = total R$ 4.145,50; leituras aproximadas sinalizadas)",
   "comandas": [
     {
       "data": "06/10/2026",
@@ -169,6 +169,45 @@
       "pagamento": "Prazo",
       "prazo": "A receber",
       "conferencia": "Total Geral R$ 118,00 = produtos R$ 113,00 + taxa de entrega R$ 5,00. Pagamento anotado como 'Prazo'. Conferir telefone e nome da rua. Fonte: IMG-20261006-WA0053.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Waleska (leitura aproximada; conferir)",
+      "telefone": "96752-149? (leitura parcial; conferir)",
+      "endereco": "R. Monção, 63 (leitura aproximada; conferir)",
+      "descricao": "1 Recovery R$ 52,50",
+      "valorProduto": 52.5,
+      "taxaEntrega": 5,
+      "total": 57.5,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 57,50 = produto R$ 52,50 + taxa de entrega R$ 5,00. Conferir grafia do nome, telefone e endereço. Fonte: IMG-20261006-WA0056.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Lilen (leitura aproximada; conferir)",
+      "telefone": "9619778?? (leitura parcial; conferir)",
+      "endereco": "R. Pedro Antonio da Silva, 525",
+      "descricao": "1 item '... 6A' (descrição pouco legível; conferir) R$ 80,00",
+      "valorProduto": 80,
+      "taxaEntrega": 5,
+      "total": 85,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 85,00 = produto R$ 80,00 + taxa de entrega R$ 5,00. Conferir nome, telefone e descrição exata do produto. Fonte: IMG-20261006-WA0055.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Thaiane (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Av. Constantino, 217 (leitura aproximada; conferir)",
+      "descricao": "1 Magnus RP 20 kg (leitura aproximada) R$ 156,00 + 2 kg crescimento R$ 10,00",
+      "valorProduto": 166,
+      "taxaEntrega": 0,
+      "total": 166,
+      "pagamento": "Prazo",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 166,00 = R$ 156,00 + R$ 10,00. Pagamento anotado como 'Prazo'. Conferir nome, endereço e descrição exata do primeiro produto. Fonte: IMG-20261006-WA0054.jpg."
     }
   ]
 }
