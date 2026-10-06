@@ -1,1 +1,122 @@
-{"atualizadoEm":"06/10/2026 (1 comanda; produtos R$ 226,00 + taxas R$ 0,00 = total R$ 226,00; leituras aproximadas sinalizadas)","comandas":[{"data":"06/10/2026","cliente":"Nona (sobrenome pouco legível; conferir)","telefone":"","endereco":"R. Mansaro (leitura aproximada; conferir)","descricao":"3 Maxi Cat 1 kg R$ 18,00 + 2 kg (descrição pouco legível) R$ 32,00 + 2 kg Golden Salmão p/ cast. R$ 60,00 + 3 kg Gatan R$ 27,00 + 0,5 kg mistura para papagaio R$ 10,00 + 1 kg Golden (variedade/carne; leitura aproximada) R$ 15,00 + 1 Prediderm 20 mg R$ 60,00 + 1 item final (descrição pouco legível) R$ 4,00","valorProduto":226,"taxaEntrega":0,"total":226,"pagamento":"Pix","prazo":"","conferencia":"Total Geral R$ 226,00 = R$ 18,00 + R$ 32,00 + R$ 60,00 + R$ 27,00 + R$ 10,00 + R$ 15,00 + R$ 60,00 + R$ 4,00. Conferir sobrenome do cliente, endereço e descrições dos itens pouco legíveis. Fonte: IMG-20261006-WA0024.jpg."}]}
+{
+  "atualizadoEm": "06/10/2026 (9 comandas; produtos R$ 3.271,00 + taxas R$ 21,00 = total R$ 3.292,00; leituras aproximadas sinalizadas)",
+  "comandas": [
+    {
+      "data": "06/10/2026",
+      "cliente": "Nona (sobrenome pouco legível; conferir)",
+      "telefone": "",
+      "endereco": "R. Mansaro (leitura aproximada; conferir)",
+      "descricao": "3 Maxi Cat 1 kg R$ 18,00 + 2 kg (descrição pouco legível) R$ 32,00 + 2 kg Golden Salmão p/ cast. R$ 60,00 + 3 kg Gatan R$ 27,00 + 0,5 kg mistura para papagaio R$ 10,00 + 1 kg Golden (variedade/carne; leitura aproximada) R$ 15,00 + 1 Prediderm 20 mg R$ 60,00 + 1 item final (descrição pouco legível) R$ 4,00",
+      "valorProduto": 226,
+      "taxaEntrega": 0,
+      "total": 226,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 226,00 = R$ 18,00 + R$ 32,00 + R$ 60,00 + R$ 27,00 + R$ 10,00 + R$ 15,00 + R$ 60,00 + R$ 4,00. Conferir sobrenome do cliente, endereço e descrições dos itens pouco legíveis. Fonte: IMG-20261006-WA0024.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Yahi (leitura aproximada; conferir)",
+      "telefone": "96502-2259 (leitura aproximada; conferir)",
+      "endereco": "África, 8 (leitura aproximada; conferir)",
+      "descricao": "1 Flock (descrição conforme leitura da comanda; conferir grafia) R$ 70,00",
+      "valorProduto": 70,
+      "taxaEntrega": 5,
+      "total": 75,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 75,00 = produto R$ 70,00 + taxa de entrega R$ 5,00. Comanda anotada como 'marcado'. Conferir nome, telefone, endereço e grafia do produto. Fonte: IMG-20261006-WA0030.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Sítio Taquaral",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 Top Hors R$ 250,00 + 2 Golden salmão R$ 380,00 + 10 MDI papagaio R$ 170,00 + 2 itens 'RC + verm...' (descrição pouco legível) R$ 30,00",
+      "valorProduto": 830,
+      "taxaEntrega": 0,
+      "total": 830,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 830,00 = R$ 250,00 + R$ 380,00 + R$ 170,00 + R$ 30,00. Comanda anotada como 'marcado'. Conferir grafia exata das descrições, sobretudo o último item. Fonte: IMG-20261006-WA0031.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Thiago (complemento do nome pouco legível; conferir)",
+      "telefone": "",
+      "endereco": "R. Dom Moreira(s), 700 (leitura aproximada; conferir)",
+      "descricao": "5 kg Whiskas salmão (leitura aproximada) R$ 114,40 + 2 Golden 12 kg (leitura aproximada) R$ 128,00 + 1 Classic 12 kg R$ 42,00 + 1 item pequeno (descrição pouco legível) R$ 10,00 + 3 kg Pedigree (leitura aproximada) R$ 42,00 + 2 kg milho R$ 5,60; subtotal anotado R$ 342,00, com desconto para R$ 330,00",
+      "valorProduto": 330,
+      "taxaEntrega": 0,
+      "total": 330,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total final anotado R$ 330,00 após desconto; subtotal indicado R$ 342,00. Conferir complemento do nome, endereço e descrições exatas dos itens. Fonte: IMG-20261006-WA0033.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Nilsece (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Maximus 15 kg (leitura aproximada) R$ 100,00 + 6 kg Classic (leitura aproximada) R$ 84,00 + 5 kg item 'Guabi...' (descrição pouco legível) R$ 90,00",
+      "valorProduto": 274,
+      "taxaEntrega": 6,
+      "total": 280,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 280,00 = produtos R$ 274,00 + taxa de entrega R$ 6,00. Conferir nome do cliente e descrições/pesos exatos dos produtos. Fonte: IMG-20261006-WA0035.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Alemão (complemento pouco legível; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "3 Magnus 20 kg (leitura aproximada) R$ 345,00 + 5 kg milho R$ 74,00 + 1 kg Golden Cat frango (leitura aproximada) R$ 20,00 + 2 itens 'Class...' (descrição pouco legível) R$ 54,00",
+      "valorProduto": 493,
+      "taxaEntrega": 0,
+      "total": 493,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 493,00 = R$ 345,00 + R$ 74,00 + R$ 20,00 + R$ 54,00. Conferir complemento do nome e descrições/pesos exatos. Fonte: IMG-20261006-WA0036.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Sheila",
+      "telefone": "",
+      "endereco": "Estr. Leon... de Oliveira Cunha, 62 (leitura parcial; conferir)",
+      "descricao": "1 Special Dog 20 kg (leitura aproximada) R$ 140,00 + 1 biscoito Magnus 1 kg (leitura aproximada) R$ 37,00 + 1 biscoito Magnus 500 g R$ 18,00",
+      "valorProduto": 195,
+      "taxaEntrega": 10,
+      "total": 205,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 205,00 = produtos R$ 195,00 + taxa de entrega R$ 10,00. Conferir endereço e descrições/pesos exatos. Fonte: IMG-20261006-WA0040.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Fabiano",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "5 milho 50 kg (leitura aproximada) R$ 535,00 + 1 item 20 kg (descrição pouco legível) R$ 100,00 + 5 kg aveia (leitura aproximada) R$ 50,00 + 2 kg milho 10-10-10 (leitura aproximada) R$ 20,00",
+      "valorProduto": 705,
+      "taxaEntrega": 0,
+      "total": 705,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 705,00 = R$ 535,00 + R$ 100,00 + R$ 50,00 + R$ 20,00. Comanda anotada como 'marcado'. Conferir descrições/pesos exatos. Fonte: IMG-20261006-WA0039.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Larissa",
+      "telefone": "",
+      "endereco": "R. Paraguai, 622",
+      "descricao": "3 kg Fórmula Natural (cães/frango; leitura aproximada) R$ 84,00 + 1 Golden 2 kg (leitura aproximada) R$ 64,00",
+      "valorProduto": 148,
+      "taxaEntrega": 0,
+      "total": 148,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 148,00 = R$ 84,00 + R$ 64,00. Conferir descrições e pesos exatos dos produtos. Fonte: IMG-20261006-WA0041.jpg."
+    }
+  ]
+}
