@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "06/10/2026 (16 comandas; produtos R$ 4.104,50 + taxas R$ 41,00 = total R$ 4.145,50; leituras aproximadas sinalizadas)",
+  "atualizadoEm": "06/10/2026 (17 comandas; produtos R$ 4.269,50 + taxas R$ 46,00 = total R$ 4.315,50; leituras aproximadas sinalizadas)",
   "comandas": [
     {
       "data": "06/10/2026",
@@ -208,6 +208,19 @@
       "pagamento": "Prazo",
       "prazo": "A receber",
       "conferencia": "Total Geral R$ 166,00 = R$ 156,00 + R$ 10,00. Pagamento anotado como 'Prazo'. Conferir nome, endereço e descrição exata do primeiro produto. Fonte: IMG-20261006-WA0054.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Aline",
+      "telefone": "96411-8919",
+      "endereco": "R. Montevideo, 623",
+      "descricao": "1 Origens Salmão Castrados 10 kg (leitura aproximada; conferir grafia/peso) R$ 165,00",
+      "valorProduto": 165,
+      "taxaEntrega": 5,
+      "total": 170,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 170,00 = produto R$ 165,00 + taxa de entrega R$ 5,00. Conferir grafia/peso exatos do produto. Fonte: IMG-20261006-WA0061.jpg."
     }
   ]
 }
