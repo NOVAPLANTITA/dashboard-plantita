@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "06/10/2026 (12 comandas; produtos R$ 3.693,00 + taxas R$ 26,00 = total R$ 3.719,00; leituras aproximadas sinalizadas)",
+  "atualizadoEm": "06/10/2026 (13 comandas; produtos R$ 3.806,00 + taxas R$ 31,00 = total R$ 3.837,00; leituras aproximadas sinalizadas)",
   "comandas": [
     {
       "data": "06/10/2026",
@@ -156,6 +156,19 @@
       "pagamento": "Pix",
       "prazo": "",
       "conferencia": "Total Geral R$ 255,00 = produto R$ 250,00 + taxa de entrega R$ 5,00. Pagamento Pix. Conferir grafia/peso exatos da descrição 'Premier RC RA 15'. Fonte: IMG-20261006-WA0049.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Kelly",
+      "telefone": "96460-0302 (leitura aproximada; conferir)",
+      "endereco": "R. [nome pouco legível], 202 (conferir)",
+      "descricao": "1 milho 50 kg R$ 87,00 + 1 osso palito 1 kg R$ 26,00",
+      "valorProduto": 113,
+      "taxaEntrega": 5,
+      "total": 118,
+      "pagamento": "Prazo",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 118,00 = produtos R$ 113,00 + taxa de entrega R$ 5,00. Pagamento anotado como 'Prazo'. Conferir telefone e nome da rua. Fonte: IMG-20261006-WA0053.jpg."
     }
   ]
 }
