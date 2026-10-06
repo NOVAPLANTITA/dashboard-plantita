@@ -1,0 +1,122 @@
+{
+  "atualizadoEm": "06/10/2026",
+  "dataComanda": "06/10/2026",
+  "totalInformadoComanda": 16044,
+  "totalLancamentos": 16050.4,
+  "diferencaConferencia": 6.4,
+  "observacao": "Comanda diária de 06/10/2026 recebida em 06/10/2026, foto 1000339159.jpg. Total manuscrito lido como R$ 16.044,00; 16 lançamentos transcritos visualmente somam R$ 16.050,40, diferença de +R$ 6,40. Não ajustar valores para fechar artificialmente. DINHEIRO foi lido como R$ 2.350,00 no campo à esquerda, enquanto o campo Total está rasurado. Dois nomes de PIX estão pouco legíveis e foram sinalizados para conferência. CAFÉ mantido em Outros, seguindo o padrão histórico do Controle Diário.",
+  "movimentos": [
+    {
+      "data": "06/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 2350,
+      "conferencia": "Leitura visual; valor legível à esquerda e campo Total rasurado"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1280,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 2515.5,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1381,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PG",
+      "valor": 5236.7,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 26.9,
+      "conferencia": "Leitura visual; classificação mantida conforme padrão histórico"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "PIX",
+      "descricao": "IMPRESSÕES (nome a conferir)",
+      "valor": 89,
+      "conferencia": "Nome manuscrito pouco legível; valor lido como R$ 89,00"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "PIX",
+      "descricao": "PIX (nome a conferir)",
+      "valor": 80,
+      "conferencia": "Nome manuscrito pouco legível"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "PIX",
+      "descricao": "THIAGO DE SOUZA",
+      "valor": 226,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "PIX",
+      "descricao": "SILVEIRA GIMENES",
+      "valor": 200,
+      "conferencia": "Leitura visual; sobrenome a conferir"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "PIX",
+      "descricao": "THIAGO",
+      "valor": 342,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "PIX",
+      "descricao": "MAURICIO CONTADOR",
+      "valor": 73,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARIO",
+      "valor": 1890,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "PIX",
+      "descricao": "AUTO ESCOLA SANTO TEREZA",
+      "valor": 255.3,
+      "conferencia": "Leitura visual; nome manuscrito a conferir"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "PIX",
+      "descricao": "GIOVANNA DOMINGUES",
+      "valor": 30,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "06/10/2026",
+      "tipo": "PIX",
+      "descricao": "LUCIANA",
+      "valor": 75,
+      "conferencia": "Leitura visual"
+    }
+  ]
+}
