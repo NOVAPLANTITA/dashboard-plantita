@@ -1,0 +1,115 @@
+{
+  "atualizadoEm": "06/10/2026",
+  "dataComanda": "05/10/2026",
+  "totalInformadoComanda": 9633.19,
+  "totalLancamentos": 9545.19,
+  "diferencaConferencia": -88,
+  "observacao": "Comanda diária de 05/10/2026 recebida em 06/10/2026, foto 1000338992.jpg. Total manuscrito lido como R$ 9.633,19; 15 lançamentos transcritos visualmente somam R$ 9.545,19, diferença de -R$ 88,00. Não ajustar valores para fechar artificialmente. CAFÉ mantido em Outros, seguindo o padrão histórico do Controle Diário. FÁBIO foi classificado como PIX pelo contexto da lista, embora a marca PIX não esteja nítida na margem.",
+  "movimentos": [
+    {
+      "data": "05/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1350,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 999,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1166,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 620.14,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PG",
+      "valor": 4566.92,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 21.23,
+      "conferencia": "Leitura visual; classificação mantida conforme padrão histórico"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "PIX",
+      "descricao": "NICOLLY MOREIRA",
+      "valor": 36,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "PIX",
+      "descricao": "ROBERTO MORAES",
+      "valor": 80,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "PIX",
+      "descricao": "FÁBIO",
+      "valor": 244,
+      "conferencia": "PIX não nítido na margem; classificado pelo contexto"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "PIX",
+      "descricao": "ROBERTA MACIEL",
+      "valor": 40,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "PIX",
+      "descricao": "VALIANE",
+      "valor": 56,
+      "conferencia": "Nome manuscrito a conferir"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "PIX",
+      "descricao": "NEHEMIA",
+      "valor": 79,
+      "conferencia": "Nome manuscrito a conferir"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "PIX",
+      "descricao": "CRISTIANE VASCONCELOS",
+      "valor": 200,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "PIX",
+      "descricao": "KATIA",
+      "valor": 59.9,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "05/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARIA EDUARDA",
+      "valor": 27,
+      "conferencia": "Leitura visual"
+    }
+  ]
+}
