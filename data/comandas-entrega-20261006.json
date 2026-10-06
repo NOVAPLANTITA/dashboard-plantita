@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "06/10/2026 (11 comandas; produtos R$ 3.443,00 + taxas R$ 21,00 = total R$ 3.464,00; leituras aproximadas sinalizadas)",
+  "atualizadoEm": "06/10/2026 (12 comandas; produtos R$ 3.693,00 + taxas R$ 26,00 = total R$ 3.719,00; leituras aproximadas sinalizadas)",
   "comandas": [
     {
       "data": "06/10/2026",
@@ -143,6 +143,19 @@
       "pagamento": "Dinheiro",
       "prazo": "",
       "conferencia": "Total Geral R$ 72,00 = R$ 63,00 + R$ 9,00. Anotado 'Troco 100,00' na comanda (levar troco para R$ 100,00). Conferir grafia exata do produto Golden Light. Fonte: IMG-20261006-WA0043.jpg."
+    },
+    {
+      "data": "06/10/2026",
+      "cliente": "Karina",
+      "telefone": "96761-4974",
+      "endereco": "R. Salzburg, 257",
+      "descricao": "1 Premier RC RA 15 (descrição conforme leitura da comanda; conferir grafia/peso) R$ 250,00",
+      "valorProduto": 250,
+      "taxaEntrega": 5,
+      "total": 255,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 255,00 = produto R$ 250,00 + taxa de entrega R$ 5,00. Pagamento Pix. Conferir grafia/peso exatos da descrição 'Premier RC RA 15'. Fonte: IMG-20261006-WA0049.jpg."
     }
   ]
 }
