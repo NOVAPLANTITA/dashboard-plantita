@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#031214">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Plantita • Controle de Granel</title>
+<script src="auth.js?v=20261001-auth4"></script>
+<script>PlantitaAuth.require('supervisor');</script>
+<style>
+*{box-sizing:border-box}
+:root{--bg:#031214;--panel:#071d22;--panel2:#0b2529;--line:#1b4b50;--txt:#eefafa;--muted:#91b9bc;--green:#20e492;--blue:#6ed5ff;--yellow:#ffd27a;--red:#ff858b}
+body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,#031214 76%);color:var(--txt);font-family:Arial,sans-serif;min-height:100vh}
+.top{position:sticky;top:0;z-index:10;background:rgba(6,25,28,.96);border-bottom:1px solid #17474c;padding:12px 16px;display:flex;gap:12px;align-items:center;justify-content:space-between;backdrop-filter:blur(10px)}
+.top h1{font-size:19px;margin:0}.top-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.top a,.top button,.role{color:#fff;text-decoration:none;background:#0b3439;border:1px solid #2d6f75;border-radius:12px;padding:9px 12px;font-weight:800;font-size:11px;cursor:pointer}
+.role{background:#12272b;color:#9ce3c5}.logout{background:#5a2530!important}.sync{background:#0b5b68!important}.config{background:#6b4f12!important}
+.wrap{max-width:1200px;margin:auto;padding:18px}.hero{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.card{background:linear-gradient(180deg,#0a252a,#071b1f);border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:0 18px 45px rgba(0,0,0,.22)}
+.card h2{margin:0 0 6px;font-size:18px}.sub{color:var(--muted);font-size:12px;line-height:1.5}.status{margin-top:10px;font-size:11px;color:var(--muted)}.ok{color:var(--green)}.warn{color:var(--yellow)}.bad{color:var(--red)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}.kpi{background:var(--panel2);border:1px solid var(--line);border-radius:15px;padding:13px}.kpi span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;font-weight:800;margin-bottom:7px}.kpi b{display:block;font-size:21px}
+.section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:18px 0 9px}.section-title h2{margin:0;font-size:17px}.pill{background:#0d2a2e;border:1px solid #285b62;padding:7px 10px;border-radius:999px;font-size:10px;color:#b9d5d4}
+.modules{display:grid;grid-template-columns:1fr 1fr;gap:14px}.module{background:linear-gradient(180deg,#0a252a,#071b1f);border:1px solid var(--line);border-radius:18px;padding:17px}.module .icon{font-size:30px}.module h3{margin:7px 0 5px}.module p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}.big{font-size:28px;font-weight:900;margin-top:13px}.smallgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}.mini{background:#0b2529;border:1px solid #17474c;border-radius:12px;padding:10px}.mini span{display:block;color:#7fa6a8;font-size:10px}.mini b{display:block;margin-top:4px;font-size:16px}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:15px}.tablewrap table{width:100%;border-collapse:collapse;min-width:560px;background:#081a1c}th,td{padding:10px;border-bottom:1px solid #163a3e;text-align:left;font-size:12px}th{background:#0d292c;color:#b9d4d1}.right{text-align:right}.empty{padding:16px;color:var(--muted);font-size:12px}
+@media(max-width:820px){.hero,.modules{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.wrap{padding:10px}.top{align-items:flex-start}.top h1{font-size:15px}.top a,.top button,.role{font-size:9px;padding:8px}.kpi b{font-size:18px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>🌾 Controle de Granel</h1>
+  <div class="top-actions">
+    <span class="role">SUPERVISOR</span>
+    <button class="sync" id="refresh">↻ ATUALIZAR</button>
+    <button class="config" id="config">⚙ CONFIGURAR GOOGLE</button>
+    <a href="dashboard-v13.html?v=20261007-granel1">← DASHBOARD</a>
+    <a class="logout" href="#" onclick="PlantitaAuth.logout();return false">SAIR</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="card">
+      <h2>Base central do granel</h2>
+      <div class="sub">Esta tela reúne as vendas lidas na balança e os sacos abertos para venda a granel. Os números vêm da mesma ponte do Google Sheets usada pelos dois leitores.</div>
+      <div id="status" class="status">Verificando conexão…</div>
+    </div>
+    <div class="card">
+      <h2>Atualização automática</h2>
+      <div class="sub">A página consulta o resumo central automaticamente. Na primeira utilização nesta dashboard, use <b>CONFIGURAR GOOGLE</b> e cole a mesma URL <b>/exec</b> já usada nos programas do PC.</div>
+      <div id="updated" class="status">Última consulta: —</div>
+    </div>
+  </section>
+
+  <div class="section-title"><h2>Hoje</h2><span class="pill" id="todayLabel">—</span></div>
+  <section class="kpis">
+    <div class="kpi"><span>Vendas / bipagens</span><b id="todayReads">—</b></div>
+    <div class="kpi"><span>Valor vendido na balança</span><b id="todaySales">—</b></div>
+    <div class="kpi"><span>Sacos abertos</span><b id="todayBags">—</b></div>
+    <div class="kpi"><span>Kg adicionados ao granel</span><b id="todayKg">—</b></div>
+  </section>
+
+  <div class="section-title"><h2>Mês atual</h2><span class="pill" id="monthLabel">—</span></div>
+  <section class="kpis">
+    <div class="kpi"><span>Vendas / bipagens</span><b id="monthReads">—</b></div>
+    <div class="kpi"><span>Valor vendido na balança</span><b id="monthSales">—</b></div>
+    <div class="kpi"><span>Sacos abertos</span><b id="monthBags">—</b></div>
+    <div class="kpi"><span>Kg adicionados ao granel</span><b id="monthKg">—</b></div>
+  </section>
+
+  <section class="modules">
+    <article class="module" id="vendas">
+      <div class="icon">⚖️</div>
+      <h3>Controle de vendas da balança</h3>
+      <p>Acompanha cada etiqueta bipada, quantidade de vendas e valor total registrado pela balança.</p>
+      <div class="big" id="salesBig">—</div>
+      <div class="smallgrid"><div class="mini"><span>Bipagens no mês</span><b id="salesReads">—</b></div><div class="mini"><span>Média por bipagem</span><b id="salesAvg">—</b></div></div>
+    </article>
+    <article class="module" id="sacos">
+      <div class="icon">📦</div>
+      <h3>Controle de sacos abertos para granel</h3>
+      <p>Acompanha quantos sacos foram abertos e quantos quilos foram adicionados ao estoque de venda a granel.</p>
+      <div class="big" id="bagsBig">—</div>
+      <div class="smallgrid"><div class="mini"><span>Sacos no mês</span><b id="bagsCount">—</b></div><div class="mini"><span>Média kg por saco</span><b id="bagsAvg">—</b></div></div>
+    </article>
+  </section>
+
+  <div class="section-title"><h2>Ranking de marcas • sacos abertos no mês</h2></div>
+  <section class="card" style="padding:0">
+    <div class="tablewrap">
+      <table><thead><tr><th>Marca</th><th class="right">Sacos</th><th class="right">Kg</th></tr></thead><tbody id="ranking"></tbody></table>
+      <div id="rankingEmpty" class="empty">Aguardando dados da base central.</div>
+    </div>
+  </section>
+</main>
+
+<script>
+const ENDPOINT_KEY='plantita_granel_dashboard_endpoint_v1';
+const LEGACY_KEY='plantita_granel_sync_endpoint_v1';
+const $=id=>document.getElementById(id);
+const money=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(Number(n)||0);
+const num=n=>new Intl.NumberFormat('pt-BR',{maximumFractionDigits:3}).format(Number(n)||0);
+function endpoint(){return (localStorage.getItem(ENDPOINT_KEY)||localStorage.getItem(LEGACY_KEY)||'').trim()}
+function setStatus(msg,cls=''){const e=$('status');e.className='status '+cls;e.textContent=msg}
+function configurar(){
+  const atual=endpoint();
+  const url=prompt('Cole a mesma URL /exec do Google Apps Script usada nos programas da balança e dos sacos:',atual);
+  if(url===null)return;
+  const limpo=url.trim();
+  if(!limpo){localStorage.removeItem(ENDPOINT_KEY);setStatus('Conexão da dashboard removida.','warn');return}
+  if(!/^https:\/\/script\.google\.com\/macros\/s\//i.test(limpo)&&!/^https:\/\/script\.googleusercontent\.com\//i.test(limpo)){alert('Essa URL não parece ser uma implantação do Google Apps Script.');return}
+  localStorage.setItem(ENDPOINT_KEY,limpo);
+  carregar();
+}
+function jsonp(url){
+  return new Promise((resolve,reject)=>{
+    const cb='plantitaGranelCb_'+Date.now()+'_'+Math.floor(Math.random()*100000);
+    const s=document.createElement('script');
+    const timer=setTimeout(()=>finish(new Error('Tempo esgotado ao consultar a base central.')),12000);
+    function finish(err,data){clearTimeout(timer);try{delete window[cb]}catch{};s.remove();err?reject(err):resolve(data)}
+    window[cb]=data=>finish(null,data);
+    s.onerror=()=>finish(new Error('Não foi possível acessar a ponte do Google.'));
+    s.src=url+(url.includes('?')?'&':'?')+'callback='+encodeURIComponent(cb)+'&_='+Date.now();
+    document.head.appendChild(s);
+  })
+}
+function render(d){
+  const t=d.today||{},m=d.month||{};
+  $('todayLabel').textContent=t.date||'—';$('monthLabel').textContent=m.label||'—';
+  $('todayReads').textContent=Number(t.bipagens||0).toLocaleString('pt-BR');$('todaySales').textContent=money(t.valor);
+  $('todayBags').textContent=Number(t.sacos||0).toLocaleString('pt-BR');$('todayKg').textContent=num(t.kg)+' kg';
+  $('monthReads').textContent=Number(m.bipagens||0).toLocaleString('pt-BR');$('monthSales').textContent=money(m.valor);
+  $('monthBags').textContent=Number(m.sacos||0).toLocaleString('pt-BR');$('monthKg').textContent=num(m.kg)+' kg';
+  $('salesBig').textContent=money(m.valor);$('salesReads').textContent=Number(m.bipagens||0).toLocaleString('pt-BR');
+  $('salesAvg').textContent=money(Number(m.bipagens)>0?Number(m.valor||0)/Number(m.bipagens):0);
+  $('bagsBig').textContent=num(m.kg)+' kg';$('bagsCount').textContent=Number(m.sacos||0).toLocaleString('pt-BR');
+  $('bagsAvg').textContent=(Number(m.sacos)>0?num(Number(m.kg||0)/Number(m.sacos)):num(0))+' kg';
+  const rank=Array.isArray(m.rankingMarcas)?m.rankingMarcas:[];
+  $('ranking').innerHTML=rank.map(x=>'<tr><td>'+String(x.marca||'Sem marca').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))+'</td><td class="right">'+Number(x.sacos||0).toLocaleString('pt-BR')+'</td><td class="right">'+num(x.kg)+' kg</td></tr>').join('');
+  $('rankingEmpty').style.display=rank.length?'none':'block';
+  $('updated').textContent='Última consulta: '+new Date().toLocaleString('pt-BR');
+}
+async function carregar(){
+  const url=endpoint();
+  if(!url){setStatus('Dashboard ainda não configurada. Clique em CONFIGURAR GOOGLE para conectar a base central.','warn');$('updated').textContent='Última consulta: —';return}
+  setStatus('Consultando a base central…');
+  try{
+    const d=await jsonp(url);
+    if(!d||d.ok!==true)throw new Error((d&&d.error)||'Resposta inválida.');
+    render(d);setStatus('Base central conectada • atualização automática ativa.','ok');
+  }catch(e){console.warn(e);setStatus('Não foi possível atualizar agora. Os programas do PC continuam salvando normalmente.','bad')}
+}
+$('config').onclick=configurar;$('refresh').onclick=carregar;
+carregar();setInterval(carregar,60000);
+</script>
+</body>
+</html>
