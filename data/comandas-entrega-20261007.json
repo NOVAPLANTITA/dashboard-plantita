@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "07/10/2026 (10 comandas; produtos R$ 2.140,00 + taxas R$ 30,00 = total R$ 2.170,00; leituras aproximadas sinalizadas)",
+  "atualizadoEm": "07/10/2026 (13 comandas; produtos R$ 2.626,00 + taxas R$ 35,00 = total R$ 2.661,00; leituras aproximadas sinalizadas)",
   "comandas": [
     {
       "data": "07/10/2026",
@@ -130,6 +130,45 @@
       "pagamento": "Pix",
       "prazo": "",
       "conferencia": "Total Geral R$ 89,00 = produto R$ 84,00 + taxa de entrega R$ 5,00. Pagamento anotado como Pix. Conferir nome, endereço e descrição exata. Fonte: IMG-20261007-WA0013.jpg."
+    },
+    {
+      "data": "07/10/2026",
+      "cliente": "Eliete",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Bio Natural (descrição/peso não especificados) R$ 170,00",
+      "valorProduto": 170,
+      "taxaEntrega": 0,
+      "total": 170,
+      "pagamento": "Pago",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 170,00. Anotação grande 'PG' na comanda; registrado como Pago. Conferir descrição/peso exatos. Fonte: IMG-20261007-WA0003.jpg."
+    },
+    {
+      "data": "07/10/2026",
+      "cliente": "Juliana",
+      "telefone": "",
+      "endereco": "... Joana, 126 (leitura aproximada; conferir)",
+      "descricao": "Itens diversos: 1 item 'Floral' (leitura aproximada) R$ 64,00 + 3 sachês R$ 20,00 + item Whiskas (descrição parcial) R$ 30,00 + item Golden (descrição parcial) R$ 50,00 + Matacura R$ 12,00",
+      "valorProduto": 176,
+      "taxaEntrega": 5,
+      "total": 181,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 181,00 = produtos R$ 176,00 + taxa R$ 5,00. Pagamento anotado como Pix. Conferir endereço e descrições exatas dos itens. Fonte: IMG-20261007-WA0004.jpg."
+    },
+    {
+      "data": "07/10/2026",
+      "cliente": "Luiza",
+      "telefone": "",
+      "endereco": "V. Angelo Tavares, 26 (leitura aproximada; conferir)",
+      "descricao": "1 Magnus 15 kg (leitura aproximada) R$ 100,00 + 2 kg Golden carne (leitura aproximada) R$ 40,00",
+      "valorProduto": 140,
+      "taxaEntrega": 0,
+      "total": 140,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 140,00 = R$ 100,00 + R$ 40,00. Forma de pagamento não está claramente indicada. As fotos IMG-20261007-WA0005.jpg e IMG-20261007-WA0007.jpg mostram a mesma comanda; registrada uma única vez para evitar duplicidade. Conferir endereço e descrições exatas."
     }
   ]
 }
