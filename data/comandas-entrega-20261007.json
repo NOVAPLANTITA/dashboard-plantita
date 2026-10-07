@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "07/10/2026 (13 comandas; produtos R$ 2.626,00 + taxas R$ 35,00 = total R$ 2.661,00; leituras aproximadas sinalizadas)",
+  "atualizadoEm": "07/10/2026 (16 comandas; produtos R$ 3.251,00 + taxas R$ 40,00 = R$ 3.291,00; total das comandas R$ 3.292,00; diferença sinalizada R$ 1,00; leituras aproximadas sinalizadas)",
   "comandas": [
     {
       "data": "07/10/2026",
@@ -169,6 +169,45 @@
       "pagamento": "Não informado",
       "prazo": "",
       "conferencia": "Total Geral R$ 140,00 = R$ 100,00 + R$ 40,00. Forma de pagamento não está claramente indicada. As fotos IMG-20261007-WA0005.jpg e IMG-20261007-WA0007.jpg mostram a mesma comanda; registrada uma única vez para evitar duplicidade. Conferir endereço e descrições exatas."
+    },
+    {
+      "data": "07/10/2026",
+      "cliente": "Luciana Ótica",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Areia Classic 4 kg R$ 28,00 + sachê Whiskas gato R$ 20,00 + sachê para cão (descrição parcial; conferir) R$ 20,00 + GranPlus gato filhote (leitura aproximada; conferir) R$ 32,00",
+      "valorProduto": 100,
+      "taxaEntrega": 0,
+      "total": 100,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 100,00. Pagamento anotado como Pix. Conferir descrição exata do terceiro item e a leitura de GranPlus gato filhote. Fonte: 1000339585.jpg."
+    },
+    {
+      "data": "07/10/2026",
+      "cliente": "Marinete (leitura aproximada; conferir)",
+      "telefone": "97222-2330 (leitura aproximada; conferir)",
+      "endereco": "R. Joana, 60 (leitura aproximada; conferir)",
+      "descricao": "1 item/medicamento com descrição pouco legível R$ 60,00 + taxa de entrega R$ 5,00",
+      "valorProduto": 60,
+      "taxaEntrega": 5,
+      "total": 66,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "A comanda mostra item R$ 60,00 + taxa de entrega R$ 5,00, mas o Total Geral manuscrito está R$ 66,00 (diferença de R$ 1,00). Registrado o total manuscrito e sinalizado para conferência. Nome, telefone, endereço e descrição do item também precisam ser conferidos. Fonte: 1000339584.jpg."
+    },
+    {
+      "data": "07/10/2026",
+      "cliente": "Benedita",
+      "telefone": "",
+      "endereco": "Estr./Est. Vitório Triângulo, 70 (leitura aproximada; conferir)",
+      "descricao": "1 Premier (descrição/peso parcial; parece 20 kg) R$ 330,00 + 1 Credeli (descrição/apresentação parcial) R$ 125,00 + taxa/acréscimo anotado de aproximadamente R$ 9,60",
+      "valorProduto": 465,
+      "taxaEntrega": 0,
+      "total": 465,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 465,00. Pagamento anotado como Cartão. Os itens aparentam somar R$ 455,00 e há uma anotação de taxa/acréscimo próxima de R$ 9,60; o total manuscrito foi mantido. Conferir endereço, apresentações e valor exato da taxa/acréscimo. Fonte: 1000339583.jpg."
     }
   ]
 }
