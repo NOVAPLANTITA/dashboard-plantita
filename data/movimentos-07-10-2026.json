@@ -1,0 +1,143 @@
+{
+  "atualizadoEm": "07/10/2026",
+  "dataComanda": "07/10/2026",
+  "totalInformadoComanda": 12470,
+  "totalLancamentos": 11472.3,
+  "diferencaConferencia": -997.7,
+  "observacao": "Comanda diária de 07/10/2026, foto 20261007_181030.jpg. Total manuscrito R$ 12.470,00; soma dos 19 lançamentos individualizados R$ 11.472,30; diferença de -R$ 997,70. Preservados valores da foto, sem ajuste artificial. Nomes de alguns PIX estão pouco legíveis e marcados para conferência. CAFÉ em Outros conforme histórico do Controle Diário.",
+  "movimentos": [
+    {
+      "data": "07/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 2577.6,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1738.5,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 414,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PG",
+      "valor": 3414.3,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1500,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 21.9,
+      "conferencia": "Leitura visual; classificação mantida conforme padrão histórico"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "STEFAN SILMOND (nome a conferir)",
+      "valor": 414,
+      "conferencia": "Nome manuscrito a conferir; valor lido visualmente"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "RENATA NEVES",
+      "valor": 127,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "ANALIBAR II (nome a conferir)",
+      "valor": 31,
+      "conferencia": "Nome manuscrito a conferir; valor lido visualmente"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "JBL PROCUREMENT (nome a conferir)",
+      "valor": 181,
+      "conferencia": "Nome manuscrito a conferir; valor lido visualmente"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "JBL PROCUREMENT (nome a conferir)",
+      "valor": 16,
+      "conferencia": "Nome manuscrito a conferir; valor lido visualmente"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "HELOÍSA HELENA",
+      "valor": 89,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "FELIPE GUSTAVO",
+      "valor": 91,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "KLAINTON (nome a conferir)",
+      "valor": 81,
+      "conferencia": "Nome manuscrito a conferir; valor lido visualmente"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "TISAINA (nome a conferir)",
+      "valor": 134,
+      "conferencia": "Nome manuscrito a conferir; valor lido visualmente"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "THALITA",
+      "valor": 227,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "TERESA ALVES (nome a conferir)",
+      "valor": 250,
+      "conferencia": "Nome manuscrito a conferir; valor lido visualmente"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "LUCIANA APARECIDA",
+      "valor": 100,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "07/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARINETE (nome a conferir)",
+      "valor": 65,
+      "conferencia": "Nome manuscrito a conferir; valor lido visualmente"
+    }
+  ]
+}
