@@ -34,8 +34,8 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
   <div class="top-actions">
     <span class="role">SUPERVISOR</span>
     <button class="sync" id="refresh">↻ ATUALIZAR</button>
-    <button class="config" id="config">⚙ CONFIGURAR GOOGLE</button>
-    <a href="dashboard-v13.html?v=20261007-granel1">← DASHBOARD</a>
+    <button class="config" id="config">⚙ CONECTAR GOOGLE</button>
+    <a href="dashboard-v13.html?v=20261007-granel2">← DASHBOARD</a>
     <a class="logout" href="#" onclick="PlantitaAuth.logout();return false">SAIR</a>
   </div>
 </header>
@@ -49,7 +49,7 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
     </div>
     <div class="card">
       <h2>Atualização automática</h2>
-      <div class="sub">A página consulta o resumo central automaticamente. Na primeira utilização nesta dashboard, use <b>CONFIGURAR GOOGLE</b> e cole a mesma URL <b>/exec</b> já usada nos programas do PC.</div>
+      <div class="sub">A página consulta o resumo central automaticamente. No celular, a conexão precisa ser feita uma vez neste aparelho. Toque em <b>CONECTAR GOOGLE</b> e cole a mesma URL <b>/exec</b> usada pelos leitores no PC. Depois, a atualização funciona automaticamente.</div>
       <div id="updated" class="status">Última consulta: —</div>
     </div>
   </section>
@@ -99,10 +99,11 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
 <script>
 const ENDPOINT_KEY='plantita_granel_dashboard_endpoint_v1';
 const LEGACY_KEY='plantita_granel_sync_endpoint_v1';
+let carregando=false;
 const $=id=>document.getElementById(id);
 const money=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(Number(n)||0);
 const num=n=>new Intl.NumberFormat('pt-BR',{maximumFractionDigits:3}).format(Number(n)||0);
-function endpoint(){return (localStorage.getItem(ENDPOINT_KEY)||localStorage.getItem(LEGACY_KEY)||'').trim()}
+function endpoint(){try{return (localStorage.getItem(ENDPOINT_KEY)||localStorage.getItem(LEGACY_KEY)||'').trim()}catch(e){return ''}}
 function setStatus(msg,cls=''){const e=$('status');e.className='status '+cls;e.textContent=msg}
 function configurar(){
   const atual=endpoint();
@@ -118,7 +119,7 @@ function jsonp(url){
   return new Promise((resolve,reject)=>{
     const cb='plantitaGranelCb_'+Date.now()+'_'+Math.floor(Math.random()*100000);
     const s=document.createElement('script');
-    const timer=setTimeout(()=>finish(new Error('Tempo esgotado ao consultar a base central.')),12000);
+    const timer=setTimeout(()=>finish(new Error('Tempo esgotado ao consultar a base central.')),20000);
     function finish(err,data){clearTimeout(timer);try{delete window[cb]}catch{};s.remove();err?reject(err):resolve(data)}
     window[cb]=data=>finish(null,data);
     s.onerror=()=>finish(new Error('Não foi possível acessar a ponte do Google.'));
@@ -140,20 +141,27 @@ function render(d){
   const rank=Array.isArray(m.rankingMarcas)?m.rankingMarcas:[];
   $('ranking').innerHTML=rank.map(x=>'<tr><td>'+String(x.marca||'Sem marca').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))+'</td><td class="right">'+Number(x.sacos||0).toLocaleString('pt-BR')+'</td><td class="right">'+num(x.kg)+' kg</td></tr>').join('');
   $('rankingEmpty').style.display=rank.length?'none':'block';
-  $('updated').textContent='Última consulta: '+new Date().toLocaleString('pt-BR');
+  const src=d.generatedAt?new Date(d.generatedAt):null;
+  const atualizado=src&&!isNaN(src.getTime())?' • Resumo da base: '+src.toLocaleString('pt-BR'):'';
+  $('updated').textContent='Última consulta no celular: '+new Date().toLocaleString('pt-BR')+atualizado;
 }
 async function carregar(){
   const url=endpoint();
-  if(!url){setStatus('Dashboard ainda não configurada. Clique em CONFIGURAR GOOGLE para conectar a base central.','warn');$('updated').textContent='Última consulta: —';return}
+  if(!url){setStatus('Este celular ainda não está conectado ao Google. Toque em CONECTAR GOOGLE e cole a URL /exec usada no PC. A configuração feita no computador não passa automaticamente para o celular.','warn');$('updated').textContent='Nenhuma consulta feita neste aparelho.';return}
+  if(carregando)return;
+  carregando=true;
   setStatus('Consultando a base central…');
   try{
     const d=await jsonp(url);
     if(!d||d.ok!==true)throw new Error((d&&d.error)||'Resposta inválida.');
-    render(d);setStatus('Base central conectada • atualização automática ativa.','ok');
-  }catch(e){console.warn(e);setStatus('Não foi possível atualizar agora. Os programas do PC continuam salvando normalmente.','bad')}
+    render(d);setStatus('Google conectado neste aparelho • dados consultados com sucesso • atualização automática ativa.','ok');
+  }catch(e){console.warn(e);setStatus('Falha ao consultar o Google neste celular: '+(e.message||'erro desconhecido')+'. Confira a URL /exec e a implantação do Apps Script.','bad')}
+  finally{carregando=false}
 }
 $('config').onclick=configurar;$('refresh').onclick=carregar;
-carregar();setInterval(carregar,60000);
+carregar();setInterval(()=>{if(!document.hidden)carregar()},60000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)carregar()});
+window.addEventListener('pageshow',e=>{if(e.persisted)carregar()});
 </script>
 </body>
 </html>
