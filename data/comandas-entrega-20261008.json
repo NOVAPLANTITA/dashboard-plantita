@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "08/10/2026 (8 comandas; produtos R$ 952,00 + taxas R$ 25,00 = R$ 977,00; vendas marcadas R$ 265,00; leituras aproximadas sinalizadas)",
+  "atualizadoEm": "08/10/2026 (9 comandas; produtos R$ 980,00 + taxas R$ 25,00 = R$ 1005,00; vendas marcadas R$ 265,00; leituras aproximadas sinalizadas)",
   "comandas": [
     {
       "data": "08/10/2026",
@@ -104,6 +104,19 @@
       "pagamento": "Pago",
       "prazo": "",
       "conferencia": "Total Geral R$ 172,00 = R$ 87,00 + R$ 85,00. Anotação PG, sem identificação clara do meio de pagamento; conferir produtos e endereço. Fonte: 1000340231.jpg."
+    },
+    {
+      "data": "08/10/2026",
+      "cliente": "DN - Neide (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "10 milho (unidade não indicada na comanda) — R$ 28,00",
+      "valorProduto": 28,
+      "taxaEntrega": 0,
+      "total": 28,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 28,00; 10 milho, unidade/apresentação não informada. Nome manuscrito parece 'DN - Neide'; conferir. Comanda sem forma de pagamento ou taxa de entrega indicada; não presumir quitação. Fonte: IMG-20261008-WA0048.jpg."
     }
   ]
 }
