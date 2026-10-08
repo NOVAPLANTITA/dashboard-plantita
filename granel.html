@@ -24,7 +24,7 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}.kpi{background:var(--panel2);border:1px solid var(--line);border-radius:15px;padding:13px}.kpi span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;font-weight:800;margin-bottom:7px}.kpi b{display:block;font-size:21px}
 .section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:18px 0 9px}.section-title h2{margin:0;font-size:17px}.pill{background:#0d2a2e;border:1px solid #285b62;padding:7px 10px;border-radius:999px;font-size:10px;color:#b9d5d4}
 .modules{display:grid;grid-template-columns:1fr 1fr;gap:14px}.module{background:linear-gradient(180deg,#0a252a,#071b1f);border:1px solid var(--line);border-radius:18px;padding:17px}.module .icon{font-size:30px}.module h3{margin:7px 0 5px}.module p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}.big{font-size:28px;font-weight:900;margin-top:13px}.smallgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}.mini{background:#0b2529;border:1px solid #17474c;border-radius:12px;padding:10px}.mini span{display:block;color:#7fa6a8;font-size:10px}.mini b{display:block;margin-top:4px;font-size:16px}
-.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:15px}.tablewrap table{width:100%;border-collapse:collapse;min-width:560px;background:#081a1c}th,td{padding:10px;border-bottom:1px solid #163a3e;text-align:left;font-size:12px}th{background:#0d292c;color:#b9d4d1}.right{text-align:right}.empty{padding:16px;color:var(--muted);font-size:12px}
+.product-search{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:12px 14px}.product-search label{color:var(--muted);font-size:12px}.product-search input{width:min(100%,350px);padding:11px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);color:var(--txt);font-size:14px}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:15px}.tablewrap table{width:100%;border-collapse:collapse;min-width:560px;background:#081a1c}th,td{padding:10px;border-bottom:1px solid #163a3e;text-align:left;font-size:12px}th{background:#0d292c;color:#b9d4d1}.right{text-align:right}.empty{padding:16px;color:var(--muted);font-size:12px}
 @media(max-width:820px){.hero,.modules{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.wrap{padding:10px}.top{align-items:flex-start}.top h1{font-size:15px}.top a,.top button,.role{font-size:9px;padding:8px}.kpi b{font-size:18px}}
 </style>
 </head>
@@ -35,7 +35,7 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
     <span class="role">SUPERVISOR</span>
     <button class="sync" id="refresh">↻ ATUALIZAR</button>
     <button class="config" id="config">⚙ CONECTAR GOOGLE</button>
-    <a href="dashboard-v13.html?v=20261007-granel2">← DASHBOARD</a>
+    <a href="dashboard-v13.html?v=20261008-granel-produtos1">← DASHBOARD</a>
     <a class="logout" href="#" onclick="PlantitaAuth.logout();return false">SAIR</a>
   </div>
 </header>
@@ -87,11 +87,12 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
     </article>
   </section>
 
-  <div class="section-title"><h2>Ranking de marcas • sacos abertos no mês</h2></div>
+  <div class="section-title"><h2>Sacos abertos por produto • mês atual</h2></div>
   <section class="card" style="padding:0">
+    <div class="product-search"><label for="productFilter">Quantidade de sacos abertos de cada produto</label><input type="search" id="productFilter" placeholder="Pesquisar produto..." aria-label="Pesquisar produto"></div>
     <div class="tablewrap">
-      <table><thead><tr><th>Marca</th><th class="right">Sacos</th><th class="right">Kg</th></tr></thead><tbody id="ranking"></tbody></table>
-      <div id="rankingEmpty" class="empty">Aguardando dados da base central.</div>
+      <table><thead><tr><th>Produto</th><th class="right">Sacos abertos</th><th class="right">Kg repostos</th></tr></thead><tbody id="ranking"></tbody></table>
+      <div id="rankingEmpty" class="empty">Aguardando dados por produto da base central.</div>
     </div>
   </section>
 </main>
@@ -100,6 +101,7 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
 const ENDPOINT_KEY='plantita_granel_dashboard_endpoint_v1';
 const LEGACY_KEY='plantita_granel_sync_endpoint_v1';
 let carregando=false;
+let ultimoResumo=null;
 const $=id=>document.getElementById(id);
 const money=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(Number(n)||0);
 const num=n=>new Intl.NumberFormat('pt-BR',{maximumFractionDigits:3}).format(Number(n)||0);
@@ -127,7 +129,17 @@ function jsonp(url){
     document.head.appendChild(s);
   })
 }
+function renderRanking(m){
+  const rank=Array.isArray(m.rankingProdutos)?m.rankingProdutos:[];
+  const filtro=String($('productFilter').value||'').trim().toLocaleLowerCase('pt-BR');
+  const filtrados=rank.filter(x=>String(x.produto||'').toLocaleLowerCase('pt-BR').includes(filtro));
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  $('ranking').innerHTML=filtrados.map(x=>'<tr><td>'+esc(x.produto||'Produto não identificado')+'</td><td class="right">'+Number(x.sacos||0).toLocaleString('pt-BR')+'</td><td class="right">'+num(x.kg)+' kg</td></tr>').join('');
+  $('rankingEmpty').style.display=filtrados.length?'none':'block';
+  $('rankingEmpty').textContent=rank.length?'Nenhum produto encontrado nesta busca.':'A ponte Google ainda não enviou o ranking por produto. A aba Ranking_Produtos da Base Central já está atualizada; falta habilitar rankingProdutos no Apps Script.';
+}
 function render(d){
+  ultimoResumo=d;
   const t=d.today||{},m=d.month||{};
   $('todayLabel').textContent=t.date||'—';$('monthLabel').textContent=m.label||'—';
   $('todayReads').textContent=Number(t.bipagens||0).toLocaleString('pt-BR');$('todaySales').textContent=money(t.valor);
@@ -138,9 +150,7 @@ function render(d){
   $('salesAvg').textContent=money(Number(m.bipagens)>0?Number(m.valor||0)/Number(m.bipagens):0);
   $('bagsBig').textContent=num(m.kg)+' kg';$('bagsCount').textContent=Number(m.sacos||0).toLocaleString('pt-BR');
   $('bagsAvg').textContent=(Number(m.sacos)>0?num(Number(m.kg||0)/Number(m.sacos)):num(0))+' kg';
-  const rank=Array.isArray(m.rankingMarcas)?m.rankingMarcas:[];
-  $('ranking').innerHTML=rank.map(x=>'<tr><td>'+String(x.marca||'Sem marca').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))+'</td><td class="right">'+Number(x.sacos||0).toLocaleString('pt-BR')+'</td><td class="right">'+num(x.kg)+' kg</td></tr>').join('');
-  $('rankingEmpty').style.display=rank.length?'none':'block';
+  renderRanking(m);
   const src=d.generatedAt?new Date(d.generatedAt):null;
   const atualizado=src&&!isNaN(src.getTime())?' • Resumo da base: '+src.toLocaleString('pt-BR'):'';
   $('updated').textContent='Última consulta no celular: '+new Date().toLocaleString('pt-BR')+atualizado;
@@ -159,6 +169,7 @@ async function carregar(){
   finally{carregando=false}
 }
 $('config').onclick=configurar;$('refresh').onclick=carregar;
+$('productFilter').addEventListener('input',()=>{if(ultimoResumo)renderRanking(ultimoResumo.month||{})});
 carregar();setInterval(()=>{if(!document.hidden)carregar()},60000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)carregar()});
 window.addEventListener('pageshow',e=>{if(e.persisted)carregar()});
