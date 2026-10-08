@@ -91,8 +91,8 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
   <section class="card" style="padding:0">
     <div class="product-search"><label for="productFilter">Quantidade de sacos abertos de cada produto</label><input type="search" id="productFilter" placeholder="Pesquisar produto..." aria-label="Pesquisar produto"></div>
     <div class="tablewrap">
-      <table><thead><tr><th>Produto</th><th class="right">Sacos abertos</th><th class="right">Kg repostos</th></tr></thead><tbody id="ranking"></tbody></table>
-      <div id="rankingEmpty" class="empty">Aguardando dados por produto da base central.</div>
+      <table><thead><tr><th id="rankingColTitle">Produto</th><th class="right">Sacos abertos</th><th class="right">Kg repostos</th></tr></thead><tbody id="ranking"></tbody></table>
+      <div id="rankingNotice" class="empty" style="display:none"></div><div id="rankingEmpty" class="empty">Aguardando dados por produto da base central.</div>
     </div>
   </section>
 </main>
@@ -130,13 +130,17 @@ function jsonp(url){
   })
 }
 function renderRanking(m){
-  const rank=Array.isArray(m.rankingProdutos)?m.rankingProdutos:[];
+  const temProdutos=Array.isArray(m.rankingProdutos);
+  const rank=temProdutos?m.rankingProdutos:(Array.isArray(m.rankingMarcas)?m.rankingMarcas:[]);
   const filtro=String($('productFilter').value||'').trim().toLocaleLowerCase('pt-BR');
-  const filtrados=rank.filter(x=>String(x.produto||'').toLocaleLowerCase('pt-BR').includes(filtro));
+  const filtrados=rank.filter(x=>String(x.produto||x.marca||'').toLocaleLowerCase('pt-BR').includes(filtro));
+  $('rankingColTitle').textContent=temProdutos?'Produto':'Marca (temporário)';
+  $('rankingNotice').style.display=temProdutos?'none':'block';
+  $('rankingNotice').textContent='Aguardando atualização da ponte do Google para a contagem automática por produto. Até lá, este quadro mantém o ranking anterior por marca. A contagem por produto já está pronta na aba Ranking_Produtos da Base Central.';
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  $('ranking').innerHTML=filtrados.map(x=>'<tr><td>'+esc(x.produto||'Produto não identificado')+'</td><td class="right">'+Number(x.sacos||0).toLocaleString('pt-BR')+'</td><td class="right">'+num(x.kg)+' kg</td></tr>').join('');
+  $('ranking').innerHTML=filtrados.map(x=>'<tr><td>'+esc(x.produto||x.marca||'Não identificado')+'</td><td class="right">'+Number(x.sacos||0).toLocaleString('pt-BR')+'</td><td class="right">'+num(x.kg)+' kg</td></tr>').join('');
   $('rankingEmpty').style.display=filtrados.length?'none':'block';
-  $('rankingEmpty').textContent=rank.length?'Nenhum produto encontrado nesta busca.':'A ponte Google ainda não enviou o ranking por produto. A aba Ranking_Produtos da Base Central já está atualizada; falta habilitar rankingProdutos no Apps Script.';
+  $('rankingEmpty').textContent=rank.length?'Nenhum resultado encontrado nesta busca.':'Nenhum dado disponível nesta consulta.';
 }
 function render(d){
   ultimoResumo=d;
