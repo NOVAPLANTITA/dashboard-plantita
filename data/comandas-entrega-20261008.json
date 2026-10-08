@@ -1,0 +1,109 @@
+{
+  "atualizadoEm": "08/10/2026 (8 comandas; produtos R$ 952,00 + taxas R$ 25,00 = R$ 977,00; vendas marcadas R$ 265,00; leituras aproximadas sinalizadas)",
+  "comandas": [
+    {
+      "data": "08/10/2026",
+      "cliente": "Luciane (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Item com descrição manuscrita pouco legível — R$ 150,00",
+      "valorProduto": 150,
+      "taxaEntrega": 0,
+      "total": 150,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 150,00; Pix anotado. Conferir nome e descrição do produto. Fonte: 1000340223.jpg."
+    },
+    {
+      "data": "08/10/2026",
+      "cliente": "Vanessa (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "R. Benedito Pereira Rodrigues, 63 (leitura aproximada; conferir)",
+      "descricao": "2 Nexgard 100 mg — R$ 60,00 + 4 sachês Golden Cão — R$ 13,00",
+      "valorProduto": 73,
+      "taxaEntrega": 5,
+      "total": 78,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 78,00 = itens R$ 73,00 + taxa R$ 5,00; anotação Cartão. Conferir cliente, endereço e descrição exata do medicamento. Fonte: 1000340224.jpg."
+    },
+    {
+      "data": "08/10/2026",
+      "cliente": "Raiza (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Golden Senior 15 kg — R$ 192,00",
+      "valorProduto": 192,
+      "taxaEntrega": 0,
+      "total": 192,
+      "pagamento": "Link (pago)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 192,00. Comanda com anotações LINK e PG; registrado como pago via link. Conferir nome. Fonte: 1000340225.jpg."
+    },
+    {
+      "data": "08/10/2026",
+      "cliente": "Ana (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Sítio (complemento pouco legível; conferir)",
+      "descricao": "1 Origens 25 kg (descrição/peso aproximados) — R$ 95,00",
+      "valorProduto": 95,
+      "taxaEntrega": 0,
+      "total": 95,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 95,00; anotação MARCADO. Conferir cliente, endereço e produto. Fonte: 1000340226.jpg."
+    },
+    {
+      "data": "08/10/2026",
+      "cliente": "Dr. Norma (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "4 kg Golden Frango — R$ 80,00 + 30 sachês Whiskas Carne (leitura aproximada) — R$ 90,00",
+      "valorProduto": 170,
+      "taxaEntrega": 0,
+      "total": 170,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 170,00 = R$ 80,00 + R$ 90,00. Anotação MARCADO; conferir cliente e descrição dos sachês. Fonte: 1000340228.jpg."
+    },
+    {
+      "data": "08/10/2026",
+      "cliente": "Paulo (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Milho (quantidade não legível) — R$ 50,00",
+      "valorProduto": 50,
+      "taxaEntrega": 10,
+      "total": 60,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 60,00 = R$ 50,00 + taxa R$ 10,00; Pix anotado. Conferir descrição/quantidade exata. Fonte: 1000340229.jpg."
+    },
+    {
+      "data": "08/10/2026",
+      "cliente": "Isaías / Paulo (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Milho 25 (unidade/embalagem a conferir) — R$ 50,00",
+      "valorProduto": 50,
+      "taxaEntrega": 10,
+      "total": 60,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 60,00 = R$ 50,00 + taxa R$ 10,00; anotações Pix e PG. Conferir nome e unidade do milho. Fonte: 1000340230.jpg."
+    },
+    {
+      "data": "08/10/2026",
+      "cliente": "Márcio",
+      "telefone": "",
+      "endereco": "R. Margarida, 297 (leitura aproximada; conferir)",
+      "descricao": "3 milho 50 kg (quantidade/apresentação a conferir) — R$ 87,00 + 3 Magnus (descrição/peso pouco legíveis) — R$ 85,00",
+      "valorProduto": 172,
+      "taxaEntrega": 0,
+      "total": 172,
+      "pagamento": "Pago",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 172,00 = R$ 87,00 + R$ 85,00. Anotação PG, sem identificação clara do meio de pagamento; conferir produtos e endereço. Fonte: 1000340231.jpg."
+    }
+  ]
+}
