@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "09/10/2026 (9 comandas; produtos R$ 3.702,00 + taxas R$ 17,00 = R$ 3.719,00; vendas marcadas R$ 2.680,00; campos pouco legíveis sinalizados)",
+  "atualizadoEm": "09/10/2026 (11 comandas; produtos R$ 3.913,00 + taxas R$ 27,00 = R$ 3.940,00; total de comandas R$ 3.946,00; divergência a conferir R$ 6,00; vendas marcadas R$ 2.680,00; campos pouco legíveis sinalizados)",
   "comandas": [
     {
       "data": "09/10/2026",
@@ -117,6 +117,32 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Total Geral R$ 100,00; anotação Cartão. Observação de endereço 'funcionamento em frente ao ...' pouco legível. Fonte: 1000340597.jpg."
+    },
+    {
+      "data": "09/10/2026",
+      "cliente": "Nailton (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Vito Jordão, 185 (leitura aproximada; conferir)",
+      "descricao": "1 Mandy Cat 10 kg — R$ 55,00",
+      "valorProduto": 55,
+      "taxaEntrega": 5,
+      "total": 60,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 60,00 = produto R$ 55,00 + taxa R$ 5,00. Conferir grafia do cliente, rua e nome exato da ração. Fonte: 1000340757.jpg."
+    },
+    {
+      "data": "09/10/2026",
+      "cliente": "Vanessa (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Gatão 20 kg (leitura aproximada; conferir) — R$ 156,00",
+      "valorProduto": 156,
+      "taxaEntrega": 5,
+      "total": 167,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "ATENÇÃO: Total Geral manuscrito parece R$ 167,00, mas produto R$ 156,00 + taxa R$ 5,00 = R$ 161,00; divergência de R$ 6,00. Total mantido conforme leitura do campo Total Geral, não inferir valor de produtos adicional. Conferir valor com a loja e nome exato da ração. Fonte: 1000340756.jpg."
     }
   ]
 }
