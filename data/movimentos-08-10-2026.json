@@ -1,0 +1,122 @@
+{
+  "atualizadoEm": "09/10/2026",
+  "dataComanda": "08/10/2026",
+  "totalInformadoComanda": 9138.05,
+  "totalLancamentos": 9138.05,
+  "diferencaConferencia": 0,
+  "observacao": "Comanda diária de 08/10/2026 recebida por foto em 09/10/2026. Total manuscrito R$ 9.138,05; 16 lançamentos transcritos da foto somam R$ 9.138,05. LINX (R$ 192,00) mantido em Outros por não haver marcação clara como PIX. CAFÉ (R$ 28,31) mantido em Outros conforme padrão histórico, sem confirmação de tratar-se de faturamento. Nomes pouco legíveis e classificação de LINX sinalizados para conferência.",
+  "movimentos": [
+    {
+      "data": "08/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1500,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 2010,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 242.3,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PG",
+      "valor": 2332.44,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1200,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 28.31,
+      "conferencia": "Leitura visual; classificado em Outros conforme padrão histórico"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "PIX",
+      "descricao": "LUCIANE DIAS",
+      "valor": 150,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "PIX",
+      "descricao": "MÁRCIO",
+      "valor": 230,
+      "conferencia": "Leitura visual; nome manuscrito a conferir"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "Outros",
+      "descricao": "LINX",
+      "valor": 192,
+      "conferencia": "Descrição lida como LINX; sem indicação explícita de PIX; forma de pagamento a conferir"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "PIX",
+      "descricao": "GABRIEL COQUEIRO (nome a conferir)",
+      "valor": 60,
+      "conferencia": "Nome manuscrito pouco legível"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "PIX",
+      "descricao": "CLOTILDES (nome a conferir)",
+      "valor": 165,
+      "conferencia": "Nome manuscrito pouco legível"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "PIX",
+      "descricao": "MÁRCIO",
+      "valor": 172,
+      "conferencia": "Leitura visual; nome manuscrito a conferir"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "PIX",
+      "descricao": "JOSÉ PEREIRA",
+      "valor": 30,
+      "conferencia": "Leitura visual; sobrenome a conferir"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "PIX",
+      "descricao": "CRISTINA",
+      "valor": 490,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARCELO ROBERTO",
+      "valor": 186,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "08/10/2026",
+      "tipo": "PIX",
+      "descricao": "LUCAS",
+      "valor": 150,
+      "conferencia": "Leitura visual"
+    }
+  ]
+}
