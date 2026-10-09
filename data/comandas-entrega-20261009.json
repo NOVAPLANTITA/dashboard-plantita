@@ -1,0 +1,122 @@
+{
+  "atualizadoEm": "09/10/2026 (9 comandas; produtos R$ 3.702,00 + taxas R$ 17,00 = R$ 3.719,00; vendas marcadas R$ 2.680,00; campos pouco legíveis sinalizados)",
+  "comandas": [
+    {
+      "data": "09/10/2026",
+      "cliente": "Rosel (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "R. Pelúcio da Serra, 263 (leitura aproximada; conferir)",
+      "descricao": "1 Golden DP Carne 15 kg — R$ 178,00",
+      "valorProduto": 178,
+      "taxaEntrega": 5,
+      "total": 183,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 183,00 = R$ 178,00 + entrega R$ 5,00. Nome, rua e versão exata da ração a conferir. Fonte: 1000340605.jpg."
+    },
+    {
+      "data": "09/10/2026",
+      "cliente": "Dalvano (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Premier 15 kg — R$ 250,00 + Premier Carne 15 kg — R$ 250,00 (descrições e quantidades a conferir)",
+      "valorProduto": 500,
+      "taxaEntrega": 0,
+      "total": 500,
+      "pagamento": "Cartão ou dinheiro (a confirmar)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 500,00 = 2 linhas de R$ 250,00. Anotação 'Cartão ou dinheiro'; meio efetivo não identificado. Verificar quantidades e descrições. Fonte: 1000340604.jpg."
+    },
+    {
+      "data": "09/10/2026",
+      "cliente": "Dito Alan",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Citronela — R$ 40,00",
+      "valorProduto": 40,
+      "taxaEntrega": 0,
+      "total": 40,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 40,00; anotação MARCADO. Pedido separado do mesmo cliente com Dog Chow. Fonte: 1000340603.jpg."
+    },
+    {
+      "data": "09/10/2026",
+      "cliente": "Alessandra (sobrenome a conferir)",
+      "telefone": "",
+      "endereco": "R. Touca, 13 (leitura aproximada; conferir)",
+      "descricao": "6 metros de tela de galinheiro 1,80 m — R$ 66,00",
+      "valorProduto": 66,
+      "taxaEntrega": 7,
+      "total": 73,
+      "pagamento": "Dinheiro (troco)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 73,00 = R$ 66,00 + entrega R$ 7,00; anotação 'Dinheiro / troco'. Conferir endereço, sobrenome e largura da tela. Fonte: 1000340602.jpg."
+    },
+    {
+      "data": "09/10/2026",
+      "cliente": "Dra. Eunice (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "R. Marcos, 1757 (leitura aproximada; conferir)",
+      "descricao": "2 kg Origens Carne — R$ 36,00 + 2 kg Origens Peixe — R$ 36,00 + 2 kg Origens Salmão — R$ 36,00",
+      "valorProduto": 108,
+      "taxaEntrega": 5,
+      "total": 113,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 113,00 = 3 linhas de R$ 36,00 + entrega R$ 5,00; anotação Cartão. Conferir nome/endereço e sabores. Fonte: 1000340601.jpg."
+    },
+    {
+      "data": "09/10/2026",
+      "cliente": "Aline",
+      "telefone": "",
+      "endereco": "R. Pedro Mole, 638 (leitura aproximada; conferir)",
+      "descricao": "Cão ML (descrição manuscrita pouco legível) — R$ 70,00",
+      "valorProduto": 70,
+      "taxaEntrega": 0,
+      "total": 70,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 70,00; anotação Cartão. Conferir nome exato do produto e logradouro. Fonte: 1000340600.jpg."
+    },
+    {
+      "data": "09/10/2026",
+      "cliente": "Dona Silvana",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "10 Origens 20 kg — R$ 2.100,00",
+      "valorProduto": 2100,
+      "taxaEntrega": 0,
+      "total": 2100,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 2.100,00; anotação MARCADO. Conferir apresentação/variante do produto. Fonte: 1000340599.jpg."
+    },
+    {
+      "data": "09/10/2026",
+      "cliente": "Dito Alan",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "3 Dog Chow 15 kg — R$ 540,00",
+      "valorProduto": 540,
+      "taxaEntrega": 0,
+      "total": 540,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 540,00; anotação MARCADO. Pedido separado do mesmo cliente com Citronela. Fonte: 1000340598.jpg."
+    },
+    {
+      "data": "09/10/2026",
+      "cliente": "Rodrigo (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "R. Juvenal Garcia Castro, 24 (leitura aproximada; conferir)",
+      "descricao": "1 Special Dog Carne 15 kg — R$ 100,00",
+      "valorProduto": 100,
+      "taxaEntrega": 0,
+      "total": 100,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 100,00; anotação Cartão. Observação de endereço 'funcionamento em frente ao ...' pouco legível. Fonte: 1000340597.jpg."
+    }
+  ]
+}
