@@ -1,0 +1,87 @@
+{
+  "atualizadoEm": "10/10/2026",
+  "dataComanda": "10/10/2026",
+  "totalInformadoComanda": 9027,
+  "totalLancamentos": 9030.42,
+  "diferencaConferencia": -3.42,
+  "observacao": "Comanda diária de 10/10/2026 enviada por foto. Total manuscrito R$ 9.027,00; soma dos 11 lançamentos R$ 9.030,42; diferença de -R$ 3,42 (total escrito menos soma). Valores preservados sem ajuste artificial. Alguns nomes PIX possuem grafia a conferir. CAFÉ e COMPRA 6 COELHOS mantidos provisoriamente em Outros conforme a prática do painel; a compra de coelhos pode representar saída, confirmar antes de usar como receita.",
+  "movimentos": [
+    {
+      "data": "10/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1400,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "10/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1174.5,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "10/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 2144.4,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "10/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1140.6,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "10/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PG",
+      "valor": 2453.4,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "10/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 33.12,
+      "conferencia": "Classificado em Outros conforme histórico; conferir se integra faturamento"
+    },
+    {
+      "data": "10/10/2026",
+      "tipo": "PIX",
+      "descricao": "BRUNA CANECOS (nome a conferir)",
+      "valor": 73.9,
+      "conferencia": "PIX indicado na comanda; grafia do nome a conferir"
+    },
+    {
+      "data": "10/10/2026",
+      "tipo": "PIX",
+      "descricao": "KÁTIA MARQUES",
+      "valor": 208,
+      "conferencia": "PIX indicado na comanda; grafia do nome a conferir"
+    },
+    {
+      "data": "10/10/2026",
+      "tipo": "PIX",
+      "descricao": "NATÁLIA BAROLINE (nome a conferir)",
+      "valor": 100,
+      "conferencia": "PIX indicado na comanda; grafia do nome pouco legível"
+    },
+    {
+      "data": "10/10/2026",
+      "tipo": "PIX",
+      "descricao": "ANA",
+      "valor": 190,
+      "conferencia": "Leitura visual; PIX indicado na comanda"
+    },
+    {
+      "data": "10/10/2026",
+      "tipo": "Outros",
+      "descricao": "COMPRA 6 COELHOS",
+      "valor": 112.5,
+      "conferencia": "Possível despesa/compra de animais; classificado provisoriamente em Outros, verificar tratamento no faturamento"
+    }
+  ]
+}
