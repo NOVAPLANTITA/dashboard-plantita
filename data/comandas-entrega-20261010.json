@@ -1,0 +1,83 @@
+{
+  "atualizadoEm": "10/10/2026 (6 comandas; produtos R$ 832,00 + taxas R$ 38,00 = total R$ 870,00; campos de leitura e pagamentos duvidosos sinalizados para conferência)",
+  "comandas": [
+    {
+      "data": "10/10/2026",
+      "cliente": "D. João (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 sacos de produto/ração (descrição e apresentação pouco legíveis) — R$ 150,00",
+      "valorProduto": 150,
+      "taxaEntrega": 10,
+      "total": 160,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 160,00 = R$ 150,00 + taxa R$ 10,00. Anotação PG; conferir nome do cliente, nome do produto e quantidade/apresentação. Fonte: 1000341036.jpg."
+    },
+    {
+      "data": "10/10/2026",
+      "cliente": "Lidiane",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Aurivet — R$ 105,00",
+      "valorProduto": 105,
+      "taxaEntrega": 0,
+      "total": 105,
+      "pagamento": "A confirmar (cartão riscado)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 105,00. Nome do produto parece Aurivet; anotação Cartão está riscada, não confirmar forma de pagamento sem checagem. Fonte: 1000341037.jpg."
+    },
+    {
+      "data": "10/10/2026",
+      "cliente": "Kátia (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 Magnus (variante/peso não legíveis) — R$ 200,00",
+      "valorProduto": 200,
+      "taxaEntrega": 8,
+      "total": 208,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 208,00 = R$ 200,00 + taxa R$ 8,00. Anotação Pix. Conferir nome do cliente e apresentação exata de Magnus. Fonte: 1000341038.jpg."
+    },
+    {
+      "data": "10/10/2026",
+      "cliente": "RTO (nome manuscrito a conferir)",
+      "telefone": "",
+      "endereco": "R. ... Domingos da Silva, 245 (leitura parcial; conferir)",
+      "descricao": "Sachês, 30 unidades (marca a conferir) — R$ 97,00",
+      "valorProduto": 97,
+      "taxaEntrega": 5,
+      "total": 102,
+      "pagamento": "Pix",
+      "prazo": "Entregar até as 16h",
+      "conferencia": "Total Geral R$ 102,00 = R$ 97,00 + taxa R$ 5,00. Pix anotado; entregar até 16:00. Conferir nome, rua e marca dos sachês. Fonte: 1000341041.jpg."
+    },
+    {
+      "data": "10/10/2026",
+      "cliente": "Elizania (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Estr. Joaquim Cardoso Filho, 375 (conferir)",
+      "descricao": "Golden Cão Carne 20 kg — R$ 168,00 + Pipicat 12 kg — R$ 44,00 + Chemital caixa rosa — R$ 20,00 (descrições a conferir)",
+      "valorProduto": 232,
+      "taxaEntrega": 10,
+      "total": 242,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 242,00 = itens R$ 168,00 + R$ 44,00 + R$ 20,00 + taxa R$ 10,00. Anotação Cartão. Conferir nome, endereço e versões exatas dos produtos. Fonte: 1000341040.jpg."
+    },
+    {
+      "data": "10/10/2026",
+      "cliente": "M. Enzo (leitura aproximada; conferir)",
+      "telefone": "",
+      "endereco": "Moçambia, 1860 (leitura aproximada; conferir)",
+      "descricao": "Premier (apresentação não legível) — R$ 48,00",
+      "valorProduto": 48,
+      "taxaEntrega": 5,
+      "total": 53,
+      "pagamento": "A confirmar (cartão riscado)",
+      "prazo": "À tarde / 15h (anotação a conferir)",
+      "conferencia": "Total Geral R$ 53,00 = R$ 48,00 + taxa R$ 5,00. Cartão parece riscado. Conferir nome do cliente, logradouro, produto e anotação 'tarde / 15:00'. Fonte: 1000341039.jpg."
+    }
+  ]
+}
