@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "10/10/2026 (6 comandas; produtos R$ 832,00 + taxas R$ 38,00 = total R$ 870,00; campos de leitura e pagamentos duvidosos sinalizados para conferência)",
+  "atualizadoEm": "10/10/2026 (8 comandas; produtos R$ 1.192,00 + taxas R$ 43,00 = total R$ 1.235,00; campos incertos sinalizados para conferência; sem duplicar comanda 1000341041.jpg já existente)",
   "comandas": [
     {
       "data": "10/10/2026",
@@ -78,6 +78,32 @@
       "pagamento": "A confirmar (cartão riscado)",
       "prazo": "À tarde / 15h (anotação a conferir)",
       "conferencia": "Total Geral R$ 53,00 = R$ 48,00 + taxa R$ 5,00. Cartão parece riscado. Conferir nome do cliente, logradouro, produto e anotação 'tarde / 15:00'. Fonte: 1000341039.jpg."
+    },
+    {
+      "data": "10/10/2026",
+      "cliente": "Maria",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Golden Cat Salmão — R$ 185,00 + 1 Nutrópica (variante não legível; conferir) — R$ 83,00",
+      "valorProduto": 268,
+      "taxaEntrega": 0,
+      "total": 268,
+      "pagamento": "Cartão — pago (anotação na comanda)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 268,00 = R$ 185,00 + R$ 83,00, sem taxa anotada. Nome Maria. Anotação 'cartão pago'; número '33' no campo ao lado não foi interpretado como telefone. Conferir descrição exata dos produtos e apresentação. Fonte: 1000341087.jpg."
+    },
+    {
+      "data": "10/10/2026",
+      "cliente": "Nome manuscrito a conferir (1000341086)",
+      "telefone": "",
+      "endereco": "Alcino ... de Moraes (leitura parcial; conferir)",
+      "descricao": "1 Hemolitan Pet — R$ 46,00 + 1 Carbo Vet (leitura aproximada) — R$ 20,00 + 1 terceiro item (nome a conferir) — R$ 26,00",
+      "valorProduto": 92,
+      "taxaEntrega": 5,
+      "total": 97,
+      "pagamento": "Não informado (a conferir)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 97,00 = produtos R$ 46,00 + R$ 20,00 + R$ 26,00 + taxa R$ 5,00. A palavra ao centro indica 'taxa', não Pix; pagamento não visível. Nome, telefone, endereço e descrição exata dos itens a conferir. Fonte: 1000341086.jpg."
     }
   ]
 }
