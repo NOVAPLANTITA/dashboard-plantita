@@ -1,0 +1,73 @@
+{
+  "atualizadoEm": "10/10/2026",
+  "dataComanda": "09/10/2026",
+  "totalInformadoComanda": 8001.48,
+  "totalLancamentos": 8001.45,
+  "diferencaConferencia": -0.03,
+  "observacao": "Comanda diária de 09/10/2026 enviada por foto em 10/10/2026 (1000340991.jpg). Total manuscrito R$ 8.001,48; soma de 9 lançamentos lidos R$ 8.001,45; diferença de -R$ 0,03. Valores preservados sem ajuste artificial. R$ 168,00 de Fernando Dias e R$ 3.818,80 de Mercado Pago possuem escrita sobreposta; conferir. CAFÉ e pagamento Daria Teo classificados provisoriamente em Outros; este último sem meio de pagamento claro.",
+  "movimentos": [
+    {
+      "data": "09/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1880,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "09/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 833.65,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "09/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 932,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "09/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 129,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "09/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 3818.8,
+      "conferencia": "Valor manuscrito com rasura/sobreposição na casa das dezenas; leitura aproximada de R$ 3.818,80; conferir"
+    },
+    {
+      "data": "09/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 25,
+      "conferencia": "Classificado em Outros conforme histórico; confirmar se integra faturamento"
+    },
+    {
+      "data": "09/10/2026",
+      "tipo": "PIX",
+      "descricao": "FERNANDO DIAS",
+      "valor": 168,
+      "conferencia": "Valor manuscrito parece R$ 168,00 (último algarismo sobrescrito); conferir"
+    },
+    {
+      "data": "09/10/2026",
+      "tipo": "PIX",
+      "descricao": "MÁRCIA LÚCIA",
+      "valor": 85,
+      "conferencia": "Nome lido aproximadamente; conferir grafia"
+    },
+    {
+      "data": "09/10/2026",
+      "tipo": "Outros",
+      "descricao": "PAGAMENTO DARIA TEO (nome a conferir)",
+      "valor": 130,
+      "conferencia": "Forma de pagamento não identificada; nome manuscrito pouco legível; classificado provisoriamente em Outros"
+    }
+  ]
+}
