@@ -4,7 +4,7 @@
   "totalInformadoComanda": 9027,
   "totalLancamentos": 9030.42,
   "diferencaConferencia": -3.42,
-  "observacao": "Comanda diária de 10/10/2026 enviada por foto. Total manuscrito R$ 9.027,00; soma dos 11 lançamentos R$ 9.030,42; diferença de -R$ 3,42 (total escrito menos soma). Valores preservados sem ajuste artificial. Alguns nomes PIX possuem grafia a conferir. CAFÉ e COMPRA 6 COELHOS mantidos provisoriamente em Outros conforme a prática do painel; a compra de coelhos pode representar saída, confirmar antes de usar como receita.",
+  "observacao": "Comanda diária de 10/10/2026 enviada por foto. Total manuscrito R$ 9.027,00; soma dos 11 lançamentos R$ 9.030,42; diferença de -R$ 3,42 (total escrito menos soma). Valores preservados sem ajuste artificial. Alguns nomes PIX possuem grafia a conferir. CAFÉ e COMPRA 6 COELHOS mantidos provisoriamente em Outros conforme a prática do painel; a compra de coelhos pode representar saída, confirmar antes de usar como receita. Comprovante extra de PIX enviado pelo cliente RENAN FARIAS RAIMUNDO em 10/10/2026 às 19h12, R$ 55,00 em favor da Plantita, registrado adicionalmente à comanda original. Total e diferença de conferência acima referem-se apenas aos 11 lançamentos originais manuscritos; após Pix adicional há 12 registros totalizando R$ 9085,42 na base do dia. Conferir no extrato Santander antes de considerar conciliado.",
   "movimentos": [
     {
       "data": "10/10/2026",
@@ -82,6 +82,15 @@
       "descricao": "COMPRA 6 COELHOS",
       "valor": 112.5,
       "conferencia": "Possível despesa/compra de animais; classificado provisoriamente em Outros, verificar tratamento no faturamento"
+    },
+    {
+      "data": "10/10/2026",
+      "tipo": "PIX",
+      "descricao": "RENAN FARIAS RAIMUNDO — PIX Banco Inter 19h12",
+      "valor": 55,
+      "conferencia": "Recebimento Plantita conforme comprovante Pix Inter de 10/10/2026 às 19h12; crédito na conta Santander a conciliar com extrato; lançamento adicional à comanda."
     }
-  ]
+  ],
+  "totalAdicionalComprovantePix": 55,
+  "totalMovimentosRegistradosComAdicional": 9085.42
 }
