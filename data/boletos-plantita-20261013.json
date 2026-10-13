@@ -1,0 +1,509 @@
+{
+  "atualizadoEm": "13/10/2026",
+  "data_corte": "2026-10-13",
+  "arquivo_origem": "controle_boletos_consolidado_atualizado.xlsx",
+  "criterio": "Lote vigente de 13/10/2026. A base de 02/10/2026 permanece arquivada para conciliação e não é somada automaticamente; boletos podem se sobrepor. Sem confirmação externa de pagamento.",
+  "resumo": {
+    "titulos_unicos": 35,
+    "total_cadastrado": 44168.61,
+    "saldo_aberto": 44168.61,
+    "valor_pago": 0,
+    "por_mes": {
+      "01/2027": 4872.76,
+      "10/2026": 6172.81,
+      "11/2026": 20727.26,
+      "12/2026": 12395.78
+    },
+    "por_dia": {
+      "2026-10-18": 681.5,
+      "2026-10-25": 1713.3,
+      "2026-10-28": 471.85,
+      "2026-10-30": 3306.16,
+      "2026-11-03": 681.5,
+      "2026-11-04": 569.45,
+      "2026-11-05": 1912.97,
+      "2026-11-06": 3037.32,
+      "2026-11-09": 268.84,
+      "2026-11-11": 569.45,
+      "2026-11-12": 881.17,
+      "2026-11-13": 3037.32,
+      "2026-11-17": 681.49,
+      "2026-11-18": 569.45,
+      "2026-11-19": 2475.14,
+      "2026-11-20": 3037.33,
+      "2026-11-25": 569.45,
+      "2026-11-27": 2436.38,
+      "2026-12-04": 3761.51,
+      "2026-12-11": 2436.38,
+      "2026-12-18": 2436.38,
+      "2026-12-19": 1325.13,
+      "2026-12-25": 2436.38,
+      "2027-01-01": 2436.38,
+      "2027-01-08": 2436.38
+    }
+  },
+  "fornecedores": [
+    {
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "saldo": 26800.18
+    },
+    {
+      "fornecedor": "Tem de Tudo Atacado Ltda.",
+      "saldo": 3975.4
+    },
+    {
+      "fornecedor": "Nestlé Brasil Ltda",
+      "saldo": 2725.99
+    },
+    {
+      "fornecedor": "DANREAL IND E COM LTDA",
+      "saldo": 2643.5
+    },
+    {
+      "fornecedor": "Expar Comércio de Cereais Importação e Exportação Ltda.",
+      "saldo": 2403.77
+    },
+    {
+      "fornecedor": "Eburneo & Monteiro Coml. Ltda.",
+      "saldo": 2277.8
+    },
+    {
+      "fornecedor": "Ibiúna Alimentos",
+      "saldo": 2063.6
+    },
+    {
+      "fornecedor": "Casa das Vacinas R. P. Ltda.",
+      "saldo": 806.52
+    },
+    {
+      "fornecedor": "Continental C A P Ltda.",
+      "saldo": 471.85
+    }
+  ],
+  "boletos": [
+    {
+      "id": "B20261013-001",
+      "fornecedor": "Nestlé Brasil Ltda",
+      "banco": "Bradesco",
+      "documento": "01/04",
+      "vencimento": "2026-10-18",
+      "valor": 681.5,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "NF 000118779 • C974",
+      "planilha_origem": "controle_boletos_nestle.xlsx"
+    },
+    {
+      "id": "B20261013-002",
+      "fornecedor": "Ibiúna Alimentos",
+      "banco": "Itaú",
+      "documento": "017831 1",
+      "vencimento": "2026-10-25",
+      "valor": 1031.8,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "Conferir vencimento na imagem original",
+      "planilha_origem": "controle_boletos_ibiuna.xlsx"
+    },
+    {
+      "id": "B20261013-003",
+      "fornecedor": "Nestlé Brasil Ltda",
+      "banco": "Bradesco",
+      "documento": "02/04",
+      "vencimento": "2026-10-25",
+      "valor": 681.5,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "NF 000118779 • C974",
+      "planilha_origem": "controle_boletos_nestle.xlsx"
+    },
+    {
+      "id": "B20261013-004",
+      "fornecedor": "Continental C A P Ltda.",
+      "banco": "Itaú",
+      "documento": "105309",
+      "vencimento": "2026-10-28",
+      "valor": 471.85,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "Duas vias do mesmo boleto; conferir situação de pagamento",
+      "planilha_origem": "boletos_continental_itau.xlsx"
+    },
+    {
+      "id": "B20261013-005",
+      "fornecedor": "Expar Comércio de Cereais Importação e Exportação Ltda.",
+      "banco": "Bradesco",
+      "documento": "68148-1",
+      "vencimento": "2026-10-30",
+      "valor": 600.94,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_expar.xlsx"
+    },
+    {
+      "id": "B20261013-006",
+      "fornecedor": "Casa das Vacinas R. P. Ltda.",
+      "banco": "Bradesco",
+      "documento": "1642243-01",
+      "vencimento": "2026-10-30",
+      "valor": 268.84,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "boletos_casa_das_vacinas_2026.xlsx"
+    },
+    {
+      "id": "B20261013-007",
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "banco": "Bradesco",
+      "documento": "866934/01",
+      "vencimento": "2026-10-30",
+      "valor": 2436.38,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_adimax_atualizado.xlsx"
+    },
+    {
+      "id": "B20261013-008",
+      "fornecedor": "Nestlé Brasil Ltda",
+      "banco": "Bradesco",
+      "documento": "03/04",
+      "vencimento": "2026-11-03",
+      "valor": 681.5,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "NF 000118779 • C974",
+      "planilha_origem": "controle_boletos_nestle.xlsx"
+    },
+    {
+      "id": "B20261013-009",
+      "fornecedor": "Eburneo & Monteiro Coml. Ltda.",
+      "banco": "Bradesco",
+      "documento": "502988 1",
+      "vencimento": "2026-11-04",
+      "valor": 569.45,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_eburneo_monteiro.xlsx"
+    },
+    {
+      "id": "B20261013-010",
+      "fornecedor": "DANREAL IND E COM LTDA",
+      "banco": "Itaú",
+      "documento": "150414 1-3",
+      "vencimento": "2026-11-05",
+      "valor": 881.17,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "NF-e 150414",
+      "planilha_origem": "boletos_danreal_novembro_2026.xlsx"
+    },
+    {
+      "id": "B20261013-011",
+      "fornecedor": "Ibiúna Alimentos",
+      "banco": "Itaú",
+      "documento": "017831 2",
+      "vencimento": "2026-11-05",
+      "valor": 1031.8,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_ibiuna.xlsx"
+    },
+    {
+      "id": "B20261013-012",
+      "fornecedor": "Expar Comércio de Cereais Importação e Exportação Ltda.",
+      "banco": "Bradesco",
+      "documento": "68148-2",
+      "vencimento": "2026-11-06",
+      "valor": 600.94,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_expar.xlsx"
+    },
+    {
+      "id": "B20261013-013",
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "banco": "Bradesco",
+      "documento": "866934/02",
+      "vencimento": "2026-11-06",
+      "valor": 2436.38,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_adimax_atualizado.xlsx"
+    },
+    {
+      "id": "B20261013-014",
+      "fornecedor": "Casa das Vacinas R. P. Ltda.",
+      "banco": "Bradesco",
+      "documento": "1642243-02",
+      "vencimento": "2026-11-09",
+      "valor": 268.84,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "boletos_casa_das_vacinas_2026.xlsx"
+    },
+    {
+      "id": "B20261013-015",
+      "fornecedor": "Eburneo & Monteiro Coml. Ltda.",
+      "banco": "Bradesco",
+      "documento": "502988 2",
+      "vencimento": "2026-11-11",
+      "valor": 569.45,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_eburneo_monteiro.xlsx"
+    },
+    {
+      "id": "B20261013-016",
+      "fornecedor": "DANREAL IND E COM LTDA",
+      "banco": "Itaú",
+      "documento": "150414 2-3",
+      "vencimento": "2026-11-12",
+      "valor": 881.17,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "NF-e 150414",
+      "planilha_origem": "boletos_danreal_novembro_2026.xlsx"
+    },
+    {
+      "id": "B20261013-017",
+      "fornecedor": "Expar Comércio de Cereais Importação e Exportação Ltda.",
+      "banco": "Bradesco",
+      "documento": "68148-3",
+      "vencimento": "2026-11-13",
+      "valor": 600.94,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_expar.xlsx"
+    },
+    {
+      "id": "B20261013-018",
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "banco": "Bradesco",
+      "documento": "866934/03",
+      "vencimento": "2026-11-13",
+      "valor": 2436.38,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_adimax_atualizado.xlsx"
+    },
+    {
+      "id": "B20261013-019",
+      "fornecedor": "Nestlé Brasil Ltda",
+      "banco": "Bradesco",
+      "documento": "04/04",
+      "vencimento": "2026-11-17",
+      "valor": 681.49,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "NF 000118779 • C974",
+      "planilha_origem": "controle_boletos_nestle.xlsx"
+    },
+    {
+      "id": "B20261013-020",
+      "fornecedor": "Eburneo & Monteiro Coml. Ltda.",
+      "banco": "Bradesco",
+      "documento": "502988 3",
+      "vencimento": "2026-11-18",
+      "valor": 569.45,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_eburneo_monteiro.xlsx"
+    },
+    {
+      "id": "B20261013-021",
+      "fornecedor": "DANREAL IND E COM LTDA",
+      "banco": "Itaú",
+      "documento": "150414 3-3",
+      "vencimento": "2026-11-19",
+      "valor": 881.16,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "NF-e 150414",
+      "planilha_origem": "boletos_danreal_novembro_2026.xlsx"
+    },
+    {
+      "id": "B20261013-022",
+      "fornecedor": "Tem de Tudo Atacado Ltda.",
+      "banco": "Itaú",
+      "documento": "56539401",
+      "vencimento": "2026-11-19",
+      "valor": 1325.14,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_tem_de_tudo.xlsx"
+    },
+    {
+      "id": "B20261013-023",
+      "fornecedor": "Casa das Vacinas R. P. Ltda.",
+      "banco": "Bradesco",
+      "documento": "1642243-03",
+      "vencimento": "2026-11-19",
+      "valor": 268.84,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "boletos_casa_das_vacinas_2026.xlsx"
+    },
+    {
+      "id": "B20261013-024",
+      "fornecedor": "Expar Comércio de Cereais Importação e Exportação Ltda.",
+      "banco": "Bradesco",
+      "documento": "68148-4",
+      "vencimento": "2026-11-20",
+      "valor": 600.95,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_expar.xlsx"
+    },
+    {
+      "id": "B20261013-025",
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "banco": "Bradesco",
+      "documento": "866934/04",
+      "vencimento": "2026-11-20",
+      "valor": 2436.38,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_adimax_atualizado.xlsx"
+    },
+    {
+      "id": "B20261013-026",
+      "fornecedor": "Eburneo & Monteiro Coml. Ltda.",
+      "banco": "Bradesco",
+      "documento": "502988 4",
+      "vencimento": "2026-11-25",
+      "valor": 569.45,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_eburneo_monteiro.xlsx"
+    },
+    {
+      "id": "B20261013-027",
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "banco": "Bradesco",
+      "documento": "866934/05",
+      "vencimento": "2026-11-27",
+      "valor": 2436.38,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_adimax_atualizado.xlsx"
+    },
+    {
+      "id": "B20261013-028",
+      "fornecedor": "Tem de Tudo Atacado Ltda.",
+      "banco": "Itaú",
+      "documento": "56539402",
+      "vencimento": "2026-12-04",
+      "valor": 1325.13,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_tem_de_tudo.xlsx"
+    },
+    {
+      "id": "B20261013-029",
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "banco": "Bradesco",
+      "documento": "866934/06",
+      "vencimento": "2026-12-04",
+      "valor": 2436.38,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_adimax_atualizado.xlsx"
+    },
+    {
+      "id": "B20261013-030",
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "banco": "Bradesco",
+      "documento": "866934/07",
+      "vencimento": "2026-12-11",
+      "valor": 2436.38,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_adimax_atualizado.xlsx"
+    },
+    {
+      "id": "B20261013-031",
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "banco": "Bradesco",
+      "documento": "866934/08",
+      "vencimento": "2026-12-18",
+      "valor": 2436.38,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_adimax_atualizado.xlsx"
+    },
+    {
+      "id": "B20261013-032",
+      "fornecedor": "Tem de Tudo Atacado Ltda.",
+      "banco": "Itaú",
+      "documento": "56539403",
+      "vencimento": "2026-12-19",
+      "valor": 1325.13,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_tem_de_tudo.xlsx"
+    },
+    {
+      "id": "B20261013-033",
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "banco": "Bradesco",
+      "documento": "866934/09",
+      "vencimento": "2026-12-25",
+      "valor": 2436.38,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_adimax_atualizado.xlsx"
+    },
+    {
+      "id": "B20261013-034",
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "banco": "Bradesco",
+      "documento": "866934/10",
+      "vencimento": "2027-01-01",
+      "valor": 2436.38,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_adimax_atualizado.xlsx"
+    },
+    {
+      "id": "B20261013-035",
+      "fornecedor": "Adimax Indústria e Comércio de Alimentos Ltda.",
+      "banco": "Bradesco",
+      "documento": "866934/11",
+      "vencimento": "2027-01-08",
+      "valor": 2436.38,
+      "situacao": "Pendente",
+      "data_pagamento": null,
+      "observacoes": "",
+      "planilha_origem": "controle_boletos_adimax_atualizado.xlsx"
+    }
+  ],
+  "alertas": [
+    "Ibiúna: vencimento do documento 017831 1 requer conferência na imagem original.",
+    "Continental: duas vias do boleto 105309; conferir pagamento e possível duplicidade."
+  ]
+}
