@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "13/10/2026 (10 comandas novas; produtos R$ 2202.40 + taxas R$ 30.00 = total R$ 2232.40; dados de escrita difícil sinalizados para conferência; valores lidos preservados)",
+  "atualizadoEm": "13/10/2026 (11 comandas; produtos R$ 2302.40 + taxas R$ 35.00 = total R$ 2337.40; escritas incertas sinalizadas para conferência)",
   "comandas": [
     {
       "data": "13/10/2026",
@@ -130,6 +130,19 @@
       "pagamento": "Não informado (R$ 350,00 anotado à parte)",
       "prazo": "",
       "conferencia": "Total Geral R$ 328,00 confere com R$ 180,00 + R$ 100,00 + R$ 33,00 + R$ 5,00 + entrega R$ 10,00. R$ 350,00 anotados à parte podem indicar dinheiro recebido/troco; NÃO confirmar pagamento sem checar. Nome, telefone e endereço pouco legíveis. Fonte: 1000341898.jpg."
+    },
+    {
+      "data": "13/10/2026",
+      "cliente": "Gabriel",
+      "telefone": "",
+      "endereco": "R. Montevideo, 48 (grafia a conferir)",
+      "descricao": "5 kg Whiskas Carne — R$ 100,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 105,00 = produto R$ 100,00 + taxa de entrega R$ 5,00. Pix anotado na comanda. Endereço manuscrito parece Rua Montevideo, 48; conferir grafia. Fonte: 1000341917.jpg."
     }
   ]
 }
