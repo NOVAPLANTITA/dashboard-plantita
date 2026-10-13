@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "13/10/2026 (1 comanda atribuída a 12/10 pela data manuscrita parcialmente rasurada; produtos R$ 128,00 + entrega R$ 6,00 = R$ 134,00; conferir dia e descrição)",
+  "atualizadoEm": "13/10/2026 (5 comandas em 12/10: produtos R$ 725,00 + taxas R$ 11,00 = total R$ 736,00; nomes e descrições incertos sinalizados)",
   "comandas": [
     {
       "data": "12/10/2026",
@@ -13,6 +13,58 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Total Geral R$ 134,00 confere com R$ 128,00 + taxa R$ 6,00. CARTÃO indicado. Primeiro algarismo da data manuscrita parece corrigido/rasurado; interpretada provisoriamente como 12/10/2026, confirmar data. Produto, marca e endereço a conferir. Fonte: 1000341873.jpg."
+    },
+    {
+      "data": "12/10/2026",
+      "cliente": "Diany (grafia a conferir)",
+      "telefone": "",
+      "endereco": "R. Monte... nº 1068 (logradouro a conferir)",
+      "descricao": "1 Bio Natural RP 2 kg (variante a confirmar) — R$ 72,00; 1 Classic 4 kg (descrição a confirmar) — R$ 14,00",
+      "valorProduto": 86,
+      "taxaEntrega": 5,
+      "total": 91,
+      "pagamento": "PIX",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 91,00 = R$ 72,00 + R$ 14,00 + taxa entrega R$ 5,00. Anotação PIX. Nome, endereço e variantes de produtos a confirmar. Fonte: 1000341888.jpg."
+    },
+    {
+      "data": "12/10/2026",
+      "cliente": "Dona Cida (grafia a conferir)",
+      "telefone": "",
+      "endereco": "Jardim Gomes (local a conferir)",
+      "descricao": "1 Giardicid 500 mg (nome a conferir) — R$ 100,00; 2 Prolindox (nome do produto a conferir) — R$ 40,00",
+      "valorProduto": 140,
+      "taxaEntrega": 0,
+      "total": 140,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 140,00 = R$ 100,00 + R$ 40,00, anotação CARTÃO. Nome da cliente, apresentação dos medicamentos e endereço a conferir. Fonte: 1000341887.jpg."
+    },
+    {
+      "data": "12/10/2026",
+      "cliente": "Domício (grafia a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Origens (apresentação não indicada) — R$ 125,00; Cubo (descrição a conferir) — R$ 50,00",
+      "valorProduto": 175,
+      "taxaEntrega": 0,
+      "total": 175,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 175,00 = R$ 125,00 + R$ 50,00, anotação PAGO. Meio de pagamento, nome do cliente e produtos a conferir. Fonte: 1000341886.jpg."
+    },
+    {
+      "data": "12/10/2026",
+      "cliente": "Fernando (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 milho quebrado 25 kg — R$ 96,00; 1 Engorda 25 kg — R$ 100,00",
+      "valorProduto": 196,
+      "taxaEntrega": 0,
+      "total": 196,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 196,00 = R$ 96,00 + R$ 100,00; anotação MARCADO. Grafia do nome do cliente e apresentações dos produtos a confirmar. Fonte: 1000341885.jpg."
     }
   ]
 }
