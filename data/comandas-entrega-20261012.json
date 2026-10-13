@@ -1,0 +1,18 @@
+{
+  "atualizadoEm": "13/10/2026 (1 comanda atribuída a 12/10 pela data manuscrita parcialmente rasurada; produtos R$ 128,00 + entrega R$ 6,00 = R$ 134,00; conferir dia e descrição)",
+  "comandas": [
+    {
+      "data": "12/10/2026",
+      "cliente": "Edgar",
+      "telefone": "",
+      "endereco": "R. Taquara, 528 — Jd. Branca Flor (conferir)",
+      "descricao": "2 unidades Pipicat Floral (apresentação a conferir) — R$ 128,00",
+      "valorProduto": 128,
+      "taxaEntrega": 6,
+      "total": 134,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 134,00 confere com R$ 128,00 + taxa R$ 6,00. CARTÃO indicado. Primeiro algarismo da data manuscrita parece corrigido/rasurado; interpretada provisoriamente como 12/10/2026, confirmar data. Produto, marca e endereço a conferir. Fonte: 1000341873.jpg."
+    }
+  ]
+}
