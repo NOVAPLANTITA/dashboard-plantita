@@ -336,14 +336,14 @@
     {
       "id": "B20261013-022",
       "fornecedor": "Tem de Tudo Atacado Ltda.",
-      "banco": "Itaú",
+      "banco": "Sicoob",
       "documento": "56539401",
       "vencimento": "2026-11-19",
       "valor": 1325.14,
       "situacao": "Pendente",
       "data_pagamento": null,
-      "observacoes": "",
-      "planilha_origem": "controle_boletos_tem_de_tudo.xlsx"
+      "observacoes": "Nosso número: 0499420-5",
+      "planilha_origem": "boletos_tem_de_tudo_sicoob.xlsx"
     },
     {
       "id": "B20261013-023",
@@ -408,14 +408,14 @@
     {
       "id": "B20261013-028",
       "fornecedor": "Tem de Tudo Atacado Ltda.",
-      "banco": "Itaú",
+      "banco": "Sicoob",
       "documento": "56539402",
       "vencimento": "2026-12-04",
       "valor": 1325.13,
       "situacao": "Pendente",
       "data_pagamento": null,
-      "observacoes": "",
-      "planilha_origem": "controle_boletos_tem_de_tudo.xlsx"
+      "observacoes": "Nosso número: 0499421-2",
+      "planilha_origem": "boletos_tem_de_tudo_sicoob.xlsx"
     },
     {
       "id": "B20261013-029",
@@ -456,14 +456,14 @@
     {
       "id": "B20261013-032",
       "fornecedor": "Tem de Tudo Atacado Ltda.",
-      "banco": "Itaú",
+      "banco": "Sicoob",
       "documento": "56539403",
       "vencimento": "2026-12-19",
       "valor": 1325.13,
       "situacao": "Pendente",
       "data_pagamento": null,
-      "observacoes": "",
-      "planilha_origem": "controle_boletos_tem_de_tudo.xlsx"
+      "observacoes": "Nosso número: 0499422-0",
+      "planilha_origem": "boletos_tem_de_tudo_sicoob.xlsx"
     },
     {
       "id": "B20261013-033",
