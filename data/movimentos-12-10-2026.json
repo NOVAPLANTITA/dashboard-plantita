@@ -1,0 +1,122 @@
+{
+  "atualizadoEm": "13/10/2026",
+  "dataComanda": "12/10/2026",
+  "totalInformadoComanda": 5020,
+  "totalLancamentos": 5024,
+  "diferencaConferencia": -4,
+  "observacao": "Foto da comanda de 12/10/2026 enviada em 13/10/2026. Total manuscrito R$ 5.020,00; soma dos 16 lançamentos R$ 5.024,00; diferença de -R$ 4,00. Nomes e centavos de alguns itens a conferir. HENRIQUE, JOÃO, DONIZETE, MATHEUS e GUSTAVO (R$ 150,00 e 4 x R$ 130,00), assim como CAFÉ, mantidos provisoriamente em Outros (podem ser despesas, portanto não devem ser considerados como vendas conciliadas). Duas anotações 'CARTÃO DEPOIS QUE FECHOU' com operadora desconhecida também em Outros. Sem ajuste artificial.",
+  "movimentos": [
+    {
+      "data": "12/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 500,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 725.5,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 579.25,
+      "conferencia": "Centavos manuscritos a conferir"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 179.5,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PG",
+      "valor": 1837,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "PIX",
+      "descricao": "DIANY LEIS (nome a conferir)",
+      "valor": 95,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARCOS ROCHA",
+      "valor": 40,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 26.75,
+      "conferencia": "Classificado em Outros conforme histórico; verificar se integra faturamento"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Outros",
+      "descricao": "HENRIQUE",
+      "valor": 150,
+      "conferencia": "Meio de pagamento e natureza a conferir; possível despesa/adiantamento"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Outros",
+      "descricao": "JOÃO",
+      "valor": 130,
+      "conferencia": "Meio de pagamento e natureza a conferir; possível despesa/adiantamento"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Outros",
+      "descricao": "DONIZETE",
+      "valor": 130,
+      "conferencia": "Meio de pagamento e natureza a conferir; possível despesa/adiantamento"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Outros",
+      "descricao": "MATHEUS",
+      "valor": 130,
+      "conferencia": "Meio de pagamento e natureza a conferir; possível despesa/adiantamento"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Outros",
+      "descricao": "GUSTAVO",
+      "valor": 130,
+      "conferencia": "Meio de pagamento e natureza a conferir; possível despesa/adiantamento"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "PIX",
+      "descricao": "LUANE",
+      "valor": 92,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Outros",
+      "descricao": "CARTÃO DEPOIS QUE FECHOU (1)",
+      "valor": 100,
+      "conferencia": "Pagamento em cartão após fechamento, operadora não identificada; reclassificar quando conferido"
+    },
+    {
+      "data": "12/10/2026",
+      "tipo": "Outros",
+      "descricao": "CARTÃO DEPOIS QUE FECHOU (2)",
+      "valor": 179,
+      "conferencia": "Pagamento em cartão após fechamento, operadora não identificada; reclassificar quando conferido"
+    }
+  ]
+}
