@@ -1,0 +1,115 @@
+{
+  "atualizadoEm": "13/10/2026",
+  "dataComanda": "13/10/2026",
+  "totalInformadoComanda": 11753,
+  "totalLancamentos": 11754.44,
+  "diferencaConferencia": -1.44,
+  "observacao": "Foto da comanda de 13/10/2026. Total manuscrito R$ 11.753,00; soma de 15 lançamentos R$ 11.754,44, diferença -R$ 1,44 (total escrito menos soma). Valores preservados sem ajuste artificial. Nomes de alguns PIX pouco legíveis a conferir. CAFÉ mantido provisoriamente em Outros e pode representar despesa, não venda. CRÉDITO MERCADO PAGO de R$ 250,00 a conferir para evitar dupla contagem.",
+  "movimentos": [
+    {
+      "data": "13/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1400,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 2636.44,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 915,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1711.9,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PG",
+      "valor": 2791.62,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 23.98,
+      "conferencia": "Despesa ou consumo; mantido em Outros como histórico do painel, não tratar como venda conciliada"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "PIX",
+      "descricao": "JÚLIO (nome a conferir)",
+      "valor": 28,
+      "conferencia": "PIX indicado à esquerda da comanda; grafia a conferir"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "PIX",
+      "descricao": "TUTTO (1)",
+      "valor": 830,
+      "conferencia": "PIX indicado na comanda; grafia do nome a conferir"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "PIX",
+      "descricao": "TUTTO (2)",
+      "valor": 128,
+      "conferencia": "PIX indicado na comanda; grafia do nome a conferir"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "PIX",
+      "descricao": "ISQ ASSESSORIA (nome a conferir)",
+      "valor": 367,
+      "conferencia": "PIX indicado na comanda; grafia pouco legível"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "PIX",
+      "descricao": "ANA CAROLINE",
+      "valor": 197.5,
+      "conferencia": "PIX indicado na comanda; centavos a conferir"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "PIX",
+      "descricao": "GABRIEL DOS SANTOS",
+      "valor": 105,
+      "conferencia": "PIX indicado na comanda; leitura visual"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "PIX",
+      "descricao": "PAULO GOMES",
+      "valor": 250,
+      "conferencia": "PIX indicado na comanda; leitura visual"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "PIX",
+      "descricao": "BRANANDA (nome a conferir)",
+      "valor": 120,
+      "conferencia": "PIX indicado na comanda; nome pouco legível"
+    },
+    {
+      "data": "13/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "CRÉDITO MERCADO PAGO",
+      "valor": 250,
+      "conferencia": "Crédito Mercado Pago indicado no fechamento; confirmar natureza/duplicidade"
+    }
+  ]
+}
