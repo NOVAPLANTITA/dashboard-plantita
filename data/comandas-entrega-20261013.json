@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "13/10/2026 (11 comandas; produtos R$ 2302.40 + taxas R$ 35.00 = total R$ 2337.40; escritas incertas sinalizadas para conferência)",
+  "atualizadoEm": "13/10/2026 (14 comandas; produtos R$ 2984.40 + taxas R$ 35.00 = total R$ 3019.40; escritas incertas sinalizadas para conferência)",
   "comandas": [
     {
       "data": "13/10/2026",
@@ -143,6 +143,45 @@
       "pagamento": "Pix",
       "prazo": "",
       "conferencia": "Total Geral R$ 105,00 = produto R$ 100,00 + taxa de entrega R$ 5,00. Pix anotado na comanda. Endereço manuscrito parece Rua Montevideo, 48; conferir grafia. Fonte: 1000341917.jpg."
+    },
+    {
+      "data": "13/10/2026",
+      "cliente": "Gilza (grafia a conferir)",
+      "telefone": "",
+      "endereco": "R. Manoel Maximino da Rosa, 678 (grafia a conferir)",
+      "descricao": "1 Premier Adulto (variante manuscrita a conferir) — R$ 250,00",
+      "valorProduto": 250,
+      "taxaEntrega": 0,
+      "total": 250,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 250,00; PIX anotado. Conferir grafia do nome, telefone, endereço e variante exata do produto. Fonte: 1000341989.jpg."
+    },
+    {
+      "data": "13/10/2026",
+      "cliente": "Maurício",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 sacos 'Jo-Jo-Jo' (nome exato do produto e apresentação a conferir) — R$ 300,00",
+      "valorProduto": 300,
+      "taxaEntrega": 0,
+      "total": 300,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 300,00; PIX anotado. Item manuscrito parece 'SACOS JO-JO-JO', sem marca/apresentação segura; confirmar antes de classificar. Fonte: 1000341988.jpg."
+    },
+    {
+      "data": "13/10/2026",
+      "cliente": "Bernarda (grafia a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "3 Pipicat Class 1 (variante e apresentação a conferir) — R$ 132,00",
+      "valorProduto": 132,
+      "taxaEntrega": 0,
+      "total": 132,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 132,00; PIX anotado. Conferir nome da cliente e descrição 'Pipicat Class 1' (possivelmente Classic, apresentação não explícita). Fonte: 1000341987.jpg."
     }
   ]
 }
