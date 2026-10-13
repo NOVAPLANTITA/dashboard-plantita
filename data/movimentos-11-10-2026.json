@@ -1,0 +1,66 @@
+{
+  "atualizadoEm": "13/10/2026",
+  "dataComanda": "11/10/2026",
+  "totalInformadoComanda": 6328.2,
+  "totalLancamentos": 6388.2,
+  "diferencaConferencia": -60,
+  "observacao": "Foto da comanda de 11/10/2026 enviada em 13/10/2026. Total manuscrito R$ 6.328,20; soma dos 8 lançamentos R$ 6.388,20; diferença de -R$ 60,00. Em especial, PIX de LÍGIA parece R$ 79,00 (não R$ 19,00); conferir. SACOLAS + BOBINAS (R$ 390,00) pode ser despesa e está provisoriamente em Outros. Sem ajuste artificial.",
+  "movimentos": [
+    {
+      "data": "11/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 200,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "11/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 85,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "11/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1060.5,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "11/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1410.4,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "11/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PG",
+      "valor": 2845.3,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "11/10/2026",
+      "tipo": "PIX",
+      "descricao": "MÁRCIA",
+      "valor": 318,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "11/10/2026",
+      "tipo": "PIX",
+      "descricao": "LÍGIA (nome a conferir)",
+      "valor": 79,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "11/10/2026",
+      "tipo": "Outros",
+      "descricao": "SACOLAS + BOBINAS",
+      "valor": 390,
+      "conferencia": "Possível despesa/compra de materiais; meio de pagamento não indicado, classificado provisoriamente em Outros, não tratar como venda conciliada"
+    }
+  ]
+}
