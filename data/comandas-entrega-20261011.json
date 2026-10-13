@@ -1,0 +1,57 @@
+{
+  "atualizadoEm": "13/10/2026 (4 comandas referentes a 11/10: produtos R$ 809,00 + taxas R$ 10,00 = R$ 819,00; escritas incertas indicadas para conferência)",
+  "comandas": [
+    {
+      "data": "11/10/2026",
+      "cliente": "Dona Maria (complemento do nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Vita Gold 50 ml — R$ 30,00; 4 pacotes de semente (tipo a conferir) — R$ 10,00; 1 alface lisa — R$ 2,50; 1 alface crespa — R$ 2,50; 1 milho (descrição/peso a conferir) — R$ 107,00; 1 produto de R$ 150,00 (nome pouco legível)",
+      "valorProduto": 302,
+      "taxaEntrega": 5,
+      "total": 307,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Total Geral R$ 307,00 confere com R$ 30,00 + R$ 10,00 + R$ 2,50 + R$ 2,50 + R$ 107,00 + R$ 150,00 + entrega R$ 5,00. Escrita dos produtos e identificação completa da cliente a conferir. Anotação MARCADO na comanda. Fonte: 1000341874.jpg."
+    },
+    {
+      "data": "11/10/2026",
+      "cliente": "Nome manuscrito a conferir (comanda 1000341872)",
+      "telefone": "9 1077-7493 (conferir)",
+      "endereco": "Estr. João R. de Morais, perto da borracharia do Alan (endereço a conferir)",
+      "descricao": "3 kg Magnus Todo Dia — R$ 27,00; 2 kg Golden Salmão (variante a conferir) — R$ 40,00",
+      "valorProduto": 67,
+      "taxaEntrega": 5,
+      "total": 72,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 72,00 = R$ 27,00 + R$ 40,00 + entrega R$ 5,00. CARTÃO escrito na comanda; telefone, nome do cliente e endereço precisam ser conferidos. Fonte: 1000341872.jpg."
+    },
+    {
+      "data": "11/10/2026",
+      "cliente": "Ana",
+      "telefone": "",
+      "endereco": "João Rodrigues (logradouro/número a conferir)",
+      "descricao": "1 saco de milho 50 (unidade/peso a confirmar) — R$ 90,00",
+      "valorProduto": 90,
+      "taxaEntrega": 0,
+      "total": 90,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 90,00, CARTÃO escrito na comanda. A anotação '50' do produto pode indicar peso (kg); conferir. Fonte: 1000341871.jpg."
+    },
+    {
+      "data": "11/10/2026",
+      "cliente": "Jobelito (grafia a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "4 pedriscos 5 kg — R$ 300,00; 1 milho 25 kg — R$ 50,00",
+      "valorProduto": 350,
+      "taxaEntrega": 0,
+      "total": 350,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "",
+      "conferencia": "Total Geral R$ 350,00 = R$ 300,00 + R$ 50,00, anotação PAGO; forma não visível. Confirmar cliente e apresentações. Fonte: 1000341870.jpg."
+    }
+  ]
+}
