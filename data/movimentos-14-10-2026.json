@@ -1,0 +1,59 @@
+{
+  "atualizadoEm": "14/10/2026",
+  "dataComanda": "14/10/2026",
+  "totalInformadoComanda": 6343,
+  "totalLancamentos": 6345.04,
+  "diferencaConferencia": -2.04,
+  "observacao": "Foto da comanda de 14/10/2026. Total manuscrito R$ 6.343,00; soma dos sete lançamentos R$ 6.345,04. Diferença -R$ 2,04 (total escrito menos soma), pendente de conferência. Valores preservados sem ajuste artificial. CAFÉ mantido provisoriamente em Outros, conforme histórico do painel; confirmar se representa despesa. Grafia do nome do PIX a conferir.",
+  "movimentos": [
+    {
+      "data": "14/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1000,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "14/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1222,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "14/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1484.34,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "14/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 775.6,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "14/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 1539.2,
+      "conferencia": "Leitura visual"
+    },
+    {
+      "data": "14/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 23.9,
+      "conferencia": "Despesa ou consumo; mantido em Outros como histórico do painel, não tratar como venda conciliada"
+    },
+    {
+      "data": "14/10/2026",
+      "tipo": "PIX",
+      "descricao": "MAURÍCIO MARTINS (nome a conferir)",
+      "valor": 300,
+      "conferencia": "PIX indicado na comanda; grafia do sobrenome a conferir"
+    }
+  ]
+}
