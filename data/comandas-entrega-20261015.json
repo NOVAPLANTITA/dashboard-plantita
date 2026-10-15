@@ -1,0 +1,83 @@
+{
+  "atualizadoEm": "15/10/2026 — 6 comandas; leituras incertas sinalizadas.",
+  "comandas": [
+    {
+      "data": "15/10/2026",
+      "cliente": "Cleof. (nome a conferir)",
+      "telefone": "",
+      "endereco": "Estr. João Rodrigues, Mombaça (leitura parcial)",
+      "descricao": "1 crescimento 25 kg — R$ 100,00",
+      "valorProduto": 100,
+      "taxaEntrega": 0,
+      "total": 100,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Anotação: entregar em casa; conferir nome e endereço. Taxa não discriminada. Fonte: IMG-20261015-WA0001.jpg."
+    },
+    {
+      "data": "15/10/2026",
+      "cliente": "Jaqueline (grafia a conferir)",
+      "telefone": "",
+      "endereco": "Av. Presidente Jânio da Silva Quadros, 971 (leitura a conferir)",
+      "descricao": "2 kg Premier raças pequenas — R$ 36,00; 2 kg Premier Cat salmão — R$ 58,00",
+      "valorProduto": 94,
+      "taxaEntrega": 5,
+      "total": 99,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir nome, endereço e variantes dos produtos. Fonte: IMG-20261015-WA0007.jpg."
+    },
+    {
+      "data": "15/10/2026",
+      "cliente": "Juliano",
+      "telefone": "",
+      "endereco": "Itamar, 52 (grafia a conferir)",
+      "descricao": "Sacola — R$ 185,00 (conteúdo não discriminado)",
+      "valorProduto": 185,
+      "taxaEntrega": 0,
+      "total": 185,
+      "pagamento": "Cartão — pago",
+      "prazo": "",
+      "conferencia": "Comanda indica PG. Taxa não discriminada. Fonte: IMG-20261015-WA0008.jpg."
+    },
+    {
+      "data": "15/10/2026",
+      "cliente": "Márcia",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Golden raças pequenas carne 15 kg — R$ 178,00; 1 Prediderm 5 (leitura a conferir) — R$ 24,00; 6 sachês Whiskas — R$ 18,00; 1 Classi — R$ 13,00",
+      "valorProduto": 233,
+      "taxaEntrega": 0,
+      "total": 233,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Foto desfocada: conferir nomes/apresentações; soma dos itens R$ 233,00. Taxa não discriminada. Fonte: IMG-20261015-WA0009.jpg."
+    },
+    {
+      "data": "15/10/2026",
+      "cliente": "Laço Diego (nome a conferir)",
+      "telefone": "",
+      "endereco": "R. Álvaro Almeida Lima (grafia a conferir)",
+      "descricao": "1 Magnus 15 kg — R$ 103,00",
+      "valorProduto": 103,
+      "taxaEntrega": 0,
+      "total": 103,
+      "pagamento": "Dinheiro",
+      "prazo": "",
+      "conferencia": "Conferir nome e endereço. Taxa não discriminada. Fonte: IMG-20261015-WA0010.jpg."
+    },
+    {
+      "data": "15/10/2026",
+      "cliente": "Dona Elqui (grafia a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Proverm — R$ 10,00; 2 rastelos verdes — R$ 80,00",
+      "valorProduto": 90,
+      "taxaEntrega": 0,
+      "total": 90,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Conferir grafia do nome e produto Proverm. Taxa não discriminada. Fonte: IMG-20261015-WA0012.jpg."
+    }
+  ]
+}
