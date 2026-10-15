@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "15/10/2026 — 6 comandas; leituras incertas sinalizadas.",
+  "atualizadoEm": "15/10/2026 — 9 comandas; leituras incertas sinalizadas.",
   "comandas": [
     {
       "data": "15/10/2026",
@@ -78,6 +78,45 @@
       "pagamento": "Marcado",
       "prazo": "A receber",
       "conferencia": "Conferir grafia do nome e produto Proverm. Taxa não discriminada. Fonte: IMG-20261015-WA0012.jpg."
+    },
+    {
+      "data": "15/10/2026",
+      "telefone": "",
+      "prazo": "",
+      "cliente": "Jéssica (grafia a conferir)",
+      "endereco": "",
+      "descricao": "1 Magnus 15 kg — R$ 106,00",
+      "valorProduto": 106,
+      "taxaEntrega": 0,
+      "total": 106,
+      "pagamento": "Pix",
+      "conferencia": "Complemento do nome pouco legível; conferir. Taxa não discriminada. Fonte: IMG-20261015-WA0015.jpg."
+    },
+    {
+      "data": "15/10/2026",
+      "telefone": "",
+      "prazo": "",
+      "cliente": "Zilda (grafia a conferir)",
+      "endereco": "R. José Domingues de Moraes, 16 (grafia a conferir)",
+      "descricao": "1 Magnus não castrado carne (apresentação a conferir) — R$ 84,00",
+      "valorProduto": 84,
+      "taxaEntrega": 5,
+      "total": 89,
+      "pagamento": "Pix",
+      "conferencia": "Conferir nome, endereço e variante da ração. Taxa de R$ 5,00 discriminada. Fonte: IMG-20261015-WA0014.jpg."
+    },
+    {
+      "data": "15/10/2026",
+      "telefone": "",
+      "prazo": "",
+      "cliente": "Luciano",
+      "endereco": "R. Oceania / Montesano (leitura a conferir)",
+      "descricao": "1 kg Golden Filhote — R$ 20,00; 4 sachês Golden — R$ 13,00",
+      "valorProduto": 33,
+      "taxaEntrega": 0,
+      "total": 33,
+      "pagamento": "Dinheiro",
+      "conferencia": "Troco para R$ 50,00: R$ 17,00. Anotação: Oficial. Conferir endereço. Taxa não discriminada. Fonte: IMG-20261015-WA0013.jpg."
     }
   ]
 }
