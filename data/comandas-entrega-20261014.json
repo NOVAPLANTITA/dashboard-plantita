@@ -1,0 +1,122 @@
+{
+  "atualizadoEm": "14/10/2026 — 9 comandas distintas; 10 fotos, uma duplicada; leituras incertas sinalizadas.",
+  "comandas": [
+    {
+      "data": "14/10/2026",
+      "cliente": "Dona Norma (Marilu; grafia a conferir)",
+      "telefone": "",
+      "endereco": "R. Itamarita, 45",
+      "descricao": "5 sachês Golden gato frango — R$ 16,25; 5 sachês Golden gato carne — R$ 16,25; 3 kg Golden frango não castrado — R$ 60,00; 1 Sanol 30 unidades — R$ 97,00",
+      "valorProduto": 189.5,
+      "taxaEntrega": 0,
+      "total": 189.5,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Duas fotos da mesma comanda: contabilizada uma única vez. Conferir grafia do nome e apresentação Sanol. Fonte: IMG-20261014-WA0002 / WA0005.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "Lilian",
+      "telefone": "",
+      "endereco": "R. da Banda, 97",
+      "descricao": "2 Pipicat Class — R$ 84,00; 2 Dreamies vermelho — R$ 14,00",
+      "valorProduto": 98,
+      "taxaEntrega": 0,
+      "total": 98,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir grafia do endereço e variante dos produtos. Fonte: IMG-20261014-WA0006.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "Cliente não informado (Santiago 28)",
+      "telefone": "",
+      "endereco": "Santiago, 28",
+      "descricao": "Bio Natural — R$ 170,00",
+      "valorProduto": 170,
+      "taxaEntrega": 0,
+      "total": 170,
+      "pagamento": "Pago (forma não informada)",
+      "prazo": "",
+      "conferencia": "Comanda indica PAGO. Quantidade e apresentação não informadas; grafia do endereço a conferir. Fonte: IMG-20261014-WA0007.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "Hildo (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 Premier Lhasa 7,5 kg — R$ 452,00",
+      "valorProduto": 452,
+      "taxaEntrega": 0,
+      "total": 452,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Nome, variante e valor manuscrito com foto desfocada: conferir leitura de R$ 452,00. Fonte: IMG-20261014-WA0008.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "Marco Antônio",
+      "telefone": "",
+      "endereco": "Sítio M&M, Mombaça, 409 (grafia a conferir)",
+      "descricao": "1 engorda 25 kg — R$ 96,00; 1 postura 25 kg — R$ 96,00; 1 milho 50 kg — R$ 87,00; 1 Origens Class — R$ 120,00",
+      "valorProduto": 399,
+      "taxaEntrega": 0,
+      "total": 399,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total dos itens confere. Conferir grafia do endereço e apresentação Origens. Fonte: IMG-20261014-WA0009.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "Maria Gasparino (grafia a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Magnus Todo Dia 20 kg — R$ 146,00; Thuya — R$ 12,00",
+      "valorProduto": 158,
+      "taxaEntrega": 0,
+      "total": 158,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Total anterior R$ 146,00 riscado; usado total corrigido R$ 158,00. Thuya é produto, não taxa. Conferir nome. Fonte: IMG-20261014-WA0010.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "Ester",
+      "telefone": "",
+      "endereco": "R. Mirandópolis, 20B, Campestre (grafia a conferir)",
+      "descricao": "1 Origens Class 20 kg — R$ 165,00",
+      "valorProduto": 165,
+      "taxaEntrega": 6,
+      "total": 171,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total R$ 171,00 inclui taxa de R$ 6,00. Conferir nome e endereço. Fonte: IMG-20261014-WA0014.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "Zilda",
+      "telefone": "",
+      "endereco": "R. Veneza, 435, portão 132 (números a conferir)",
+      "descricao": "5 kg Magnus castrado carne — R$ 70,00",
+      "valorProduto": 70,
+      "taxaEntrega": 5,
+      "total": 75,
+      "pagamento": "Dinheiro — troco para R$ 100,00",
+      "prazo": "",
+      "conferencia": "Total R$ 75,00. Valor de R$ 5,00 sem descrição interpretado como entrega; conferir. Troco previsto R$ 25,00. Fonte: IMG-20261014-WA0016.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "Cliente com nome a conferir (WA0019)",
+      "telefone": "",
+      "endereco": "R. Ubatatuba, 263 (grafia a conferir)",
+      "descricao": "3 kg Fórmula Natural adulto (variante a conferir) — R$ 60,00",
+      "valorProduto": 60,
+      "taxaEntrega": 5,
+      "total": 65,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Nome e telefone parcialmente ilegíveis; não transcritos por segurança de leitura. Total R$ 65,00 inclui entrega R$ 5,00. Fonte: IMG-20261014-WA0019.jpg."
+    }
+  ]
+}
