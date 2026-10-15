@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "14/10/2026 — 9 comandas distintas; 10 fotos, uma duplicada; leituras incertas sinalizadas.",
+  "atualizadoEm": "15/10/2026 — 13 comandas de 14/10; acrescentadas 4 comandas, sem duplicação; leituras incertas sinalizadas.",
   "comandas": [
     {
       "data": "14/10/2026",
@@ -117,6 +117,58 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Nome e telefone parcialmente ilegíveis; não transcritos por segurança de leitura. Total R$ 65,00 inclui entrega R$ 5,00. Fonte: IMG-20261014-WA0019.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "Noêmia (grafia a conferir)",
+      "telefone": "",
+      "endereco": "Av. Tesouro, 30 (grafia a conferir)",
+      "descricao": "1 milho 25 kg — R$ 60,00; 2 kg crescimento — R$ 10,00; 1 kg mistura para pássaros (leitura parcial) — R$ 20,00",
+      "valorProduto": 90,
+      "taxaEntrega": 5,
+      "total": 95,
+      "pagamento": "Dinheiro — troco para R$ 100,00",
+      "prazo": "",
+      "conferencia": "Troco previsto R$ 5,00; conferir nome, endereço e descrição do terceiro item. Fonte: IMG-20261014-WA0020.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "Paulo (complemento do nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Special Dog 15 kg — R$ 100,00",
+      "valorProduto": 100,
+      "taxaEntrega": 10,
+      "total": 110,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Fonte: IMG-20261014-WA0022.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "Rose",
+      "telefone": "",
+      "endereco": "Gervásio Gaspar, 118 (grafia a conferir)",
+      "descricao": "Golden — R$ 178,00",
+      "valorProduto": 178,
+      "taxaEntrega": 5,
+      "total": 183,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Conferir endereço; apresentação e quantidade não legíveis. Fonte: IMG-20261014-WA0028.jpg."
+    },
+    {
+      "data": "14/10/2026",
+      "cliente": "João (grafia a conferir)",
+      "telefone": "",
+      "endereco": "Paquerê (grafia a conferir)",
+      "descricao": "4 sachês — R$ 10,00; Cat Chow — R$ 36,00",
+      "valorProduto": 46,
+      "taxaEntrega": 5,
+      "total": 51,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Conferir nome, endereço e apresentação Cat Chow. Fonte: IMG-20261014-WA0029.jpg."
     }
   ]
 }
