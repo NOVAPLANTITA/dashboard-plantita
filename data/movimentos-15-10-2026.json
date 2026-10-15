@@ -1,0 +1,94 @@
+{
+  "atualizadoEm": "15/10/2026",
+  "dataComanda": "15/10/2026",
+  "totalInformadoComanda": 8015,
+  "totalLancamentos": 8027.99,
+  "diferencaConferencia": -12.99,
+  "observacao": "Leitura da foto 1000342639.jpg. Soma provisória R$ 8.027,99 versus total manuscrito R$ 8.015,00; diferença de R$ 12,99 pendente de conferência. Conferir especialmente centavos de Heloisa e valor de MG. Café e bomba mantidos em Outros conforme histórico; natureza a confirmar, não tratar como vendas conciliadas.",
+  "movimentos": [
+    {
+      "data": "15/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1000,
+      "conferencia": "Leitura visual; fechamento pendente de conferência"
+    },
+    {
+      "data": "15/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1381.93,
+      "conferencia": "Leitura visual; fechamento pendente de conferência"
+    },
+    {
+      "data": "15/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1587.7,
+      "conferencia": "Leitura visual; fechamento pendente de conferência"
+    },
+    {
+      "data": "15/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 775.6,
+      "conferencia": "Leitura visual; fechamento pendente de conferência"
+    },
+    {
+      "data": "15/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 2362.8,
+      "conferencia": "Leitura visual; fechamento pendente de conferência"
+    },
+    {
+      "data": "15/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 24.9,
+      "conferencia": "Natureza a confirmar; mantido em Outros conforme histórico"
+    },
+    {
+      "data": "15/10/2026",
+      "tipo": "PIX",
+      "descricao": "MÁRCIA REGINA",
+      "valor": 250,
+      "conferencia": "Leitura visual; fechamento pendente de conferência"
+    },
+    {
+      "data": "15/10/2026",
+      "tipo": "PIX",
+      "descricao": "HELOISA",
+      "valor": 89.06,
+      "conferencia": "Leitura provisória; valor e grafia a conferir na comanda"
+    },
+    {
+      "data": "15/10/2026",
+      "tipo": "PIX",
+      "descricao": "ALINE",
+      "valor": 110,
+      "conferencia": "Leitura visual; fechamento pendente de conferência"
+    },
+    {
+      "data": "15/10/2026",
+      "tipo": "PIX",
+      "descricao": "FERNANDA",
+      "valor": 69,
+      "conferencia": "Leitura visual; fechamento pendente de conferência"
+    },
+    {
+      "data": "15/10/2026",
+      "tipo": "PIX",
+      "descricao": "MG",
+      "valor": 105,
+      "conferencia": "Leitura provisória; valor e grafia a conferir na comanda"
+    },
+    {
+      "data": "15/10/2026",
+      "tipo": "Outros",
+      "descricao": "BOMBA",
+      "valor": 272,
+      "conferencia": "Natureza a confirmar; mantido em Outros conforme histórico"
+    }
+  ]
+}
