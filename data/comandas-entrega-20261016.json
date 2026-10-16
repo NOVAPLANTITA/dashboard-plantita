@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "16/10/2026 — 10 comandas; leituras incertas sinalizadas.",
+  "atualizadoEm": "16/10/2026 — 13 comandas de 16/10/2026; leituras incertas sinalizadas.",
   "comandas": [
     {
       "data": "16/10/2026",
@@ -130,6 +130,45 @@
       "pagamento": "Pix",
       "prazo": "",
       "conferencia": "Conferir nome, endereço e marca manuscrita. Taxa não discriminada. Fonte: 1000342870.jpg."
+    },
+    {
+      "data": "16/10/2026",
+      "cliente": "Mineiro",
+      "telefone": "",
+      "endereco": "R. Barreto (leitura a conferir)",
+      "descricao": "1 ração peixe engorda — R$ 110,00; 1 ração peixe crescimento — R$ 120,00",
+      "valorProduto": 230,
+      "taxaEntrega": 0,
+      "total": 230,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Conferir endereço e apresentações dos produtos. Taxa não discriminada. Fonte: 1000342868.jpg."
+    },
+    {
+      "data": "16/10/2026",
+      "cliente": "Dona Neide",
+      "telefone": "",
+      "endereco": "R. Mario Machete, 42 (grafia a conferir)",
+      "descricao": "1 Golden sênior R/G — R$ 192,00; 1 postura 5 kg — R$ 25,00",
+      "valorProduto": 217,
+      "taxaEntrega": 0,
+      "total": 217,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Conferir grafia do endereço e apresentação Golden. Taxa não discriminada. Fonte: 1000342869.jpg."
+    },
+    {
+      "data": "16/10/2026",
+      "cliente": "Ivo",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Magnus 20 kg — R$ 145,00",
+      "valorProduto": 145,
+      "taxaEntrega": 0,
+      "total": 145,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Variante da ração não discriminada. Taxa não discriminada. Fonte: 1000342866.jpg."
     }
   ]
 }
