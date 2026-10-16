@@ -1,0 +1,80 @@
+{
+  "atualizadoEm": "16/10/2026",
+  "dataComanda": "16/10/2026",
+  "totalInformadoComanda": 8115,
+  "totalLancamentos": 8150.7,
+  "diferencaConferencia": -35.7,
+  "observacao": "Fonte: 1000342951.jpg. Soma dos valores diverge do total manuscrito de R$ 8.115,00. Conferir fechamento. Café mantido em Outros conforme histórico; natureza a confirmar.",
+  "movimentos": [
+    {
+      "data": "16/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1200,
+      "conferencia": "Transcrito da foto 1000342951.jpg; fechamento pendente de conferência."
+    },
+    {
+      "data": "16/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 2268,
+      "conferencia": "Transcrito da foto 1000342951.jpg; fechamento pendente de conferência."
+    },
+    {
+      "data": "16/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1217,
+      "conferencia": "Transcrito da foto 1000342951.jpg; fechamento pendente de conferência."
+    },
+    {
+      "data": "16/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 472.9,
+      "conferencia": "Transcrito da foto 1000342951.jpg; fechamento pendente de conferência."
+    },
+    {
+      "data": "16/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 2495.9,
+      "conferencia": "Transcrito da foto 1000342951.jpg; fechamento pendente de conferência."
+    },
+    {
+      "data": "16/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 33.9,
+      "conferencia": "Natureza a confirmar; mantido em Outros conforme histórico."
+    },
+    {
+      "data": "16/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARINA TEIXEIRA (grafia a conferir)",
+      "valor": 148,
+      "conferencia": "Transcrito da foto 1000342951.jpg; fechamento pendente de conferência."
+    },
+    {
+      "data": "16/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARIA EDUARDA (grafia a conferir)",
+      "valor": 26,
+      "conferencia": "Transcrito da foto 1000342951.jpg; fechamento pendente de conferência."
+    },
+    {
+      "data": "16/10/2026",
+      "tipo": "PIX",
+      "descricao": "JEFFERSON",
+      "valor": 189,
+      "conferencia": "Transcrito da foto 1000342951.jpg; fechamento pendente de conferência."
+    },
+    {
+      "data": "16/10/2026",
+      "tipo": "PIX",
+      "descricao": "JÚLIA SANTOS",
+      "valor": 100,
+      "conferencia": "Transcrito da foto 1000342951.jpg; fechamento pendente de conferência."
+    }
+  ]
+}
