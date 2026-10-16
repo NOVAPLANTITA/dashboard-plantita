@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "15/10/2026 — 9 comandas; leituras incertas sinalizadas.",
+  "atualizadoEm": "16/10/2026 — 11 comandas de 15/10/2026; leituras incertas sinalizadas.",
   "comandas": [
     {
       "data": "15/10/2026",
@@ -117,6 +117,32 @@
       "total": 33,
       "pagamento": "Dinheiro",
       "conferencia": "Troco para R$ 50,00: R$ 17,00. Anotação: Oficial. Conferir endereço. Taxa não discriminada. Fonte: IMG-20261015-WA0013.jpg."
+    },
+    {
+      "data": "15/10/2026",
+      "cliente": "Gisele",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 Classic 4 kg — R$ 28,00; 2 kg Bio Natural frango (leitura parcial) — R$ 36,00",
+      "valorProduto": 64,
+      "taxaEntrega": 0,
+      "total": 64,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Conferir descrição e complemento manuscrito da ração. Data da comanda: 15/10/2026. Taxa não discriminada. Fonte: 1000342867.jpg."
+    },
+    {
+      "data": "15/10/2026",
+      "cliente": "Dona Silvana (Gabriela)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "5 patês recuperação Organnact (marca a conferir) — R$ 130,00; 2 patês recuperação A/D — R$ 80,00",
+      "valorProduto": 210,
+      "taxaEntrega": 0,
+      "total": 210,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Avisar antes de ir. Conferir marca/apresentações. Gabriela anotado no campo endereço. Data da comanda: 15/10/2026. Taxa não discriminada. Fonte: 1000342865.jpg."
     }
   ]
 }
