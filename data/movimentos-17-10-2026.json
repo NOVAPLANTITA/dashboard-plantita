@@ -1,0 +1,150 @@
+{
+  "atualizadoEm": "17/10/2026",
+  "dataComanda": "17/10/2026",
+  "totalInformadoComanda": 13597,
+  "totalLancamentos": 13604.15,
+  "diferencaConferencia": 7.15,
+  "observacao": "Fonte: 1000343327.jpg. Soma dos lançamentos provisória difere do total manuscrito; não ajustar lançamentos para forçar fechamento. Conferir especialmente Neide dos Santos (120,00), Marina (318,00) e centavos de papel higiênico (20,05). Café e papel higiênico mantidos em Outros conforme histórico, natureza a confirmar.",
+  "movimentos": [
+    {
+      "data": "17/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1300,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 2560.94,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 2414.5,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1071,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 4590.66,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 25.9,
+      "conferencia": "Natureza a confirmar; mantido em Outros conforme histórico."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "CECÍLIA SANTOS (grafia a conferir)",
+      "valor": 110,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "PAULO DA COSTA",
+      "valor": 110,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "ERIC (complemento a conferir)",
+      "valor": 64,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "CAROLINA SANTOS",
+      "valor": 84.3,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "JOSÉ PEREIRA",
+      "valor": 77,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "BRUNA CAVECAS (grafia a conferir)",
+      "valor": 31.8,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "NEIDE DOS SANTOS",
+      "valor": 120,
+      "conferencia": "Leitura provisória: R$ 120,00; primeiro algarismo pouco nítido, conferir na comanda."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARINA (sobrenome a conferir)",
+      "valor": 318,
+      "conferencia": "Leitura provisória: R$ 318,00; valor e grafia a conferir."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "ELIANE (grafia a conferir)",
+      "valor": 210,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "THAYNA",
+      "valor": 150,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "MUSTAFA",
+      "valor": 40,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "WELLINGTON",
+      "valor": 72,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "Outros",
+      "descricao": "PAPEL HIGIÊNICO",
+      "valor": 20.05,
+      "conferencia": "Leitura provisória dos centavos: R$ 20,05. Natureza a confirmar; mantido em Outros conforme histórico."
+    },
+    {
+      "data": "17/10/2026",
+      "tipo": "PIX",
+      "descricao": "MERCADO PAGO",
+      "valor": 234,
+      "conferencia": "Transcrito da foto 1000343327.jpg; total diário pendente de conferência."
+    }
+  ]
+}
