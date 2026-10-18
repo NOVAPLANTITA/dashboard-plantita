@@ -1,0 +1,59 @@
+{
+  "atualizadoEm": "18/10/2026",
+  "dataComanda": "18/10/2026",
+  "totalInformadoComanda": 4512.46,
+  "totalLancamentos": 4512.46,
+  "diferencaConferencia": 0,
+  "observacao": "Fonte: 1000343525.jpg. Soma dos sete lançamentos confere com o total manuscrito. Grafia do primeiro nome PIX a conferir.",
+  "movimentos": [
+    {
+      "data": "18/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 800,
+      "conferencia": "Transcrito da foto 1000343525.jpg; soma confere com o total da comanda."
+    },
+    {
+      "data": "18/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 620.5,
+      "conferencia": "Transcrito da foto 1000343525.jpg; soma confere com o total da comanda."
+    },
+    {
+      "data": "18/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 643,
+      "conferencia": "Transcrito da foto 1000343525.jpg; soma confere com o total da comanda."
+    },
+    {
+      "data": "18/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 927.06,
+      "conferencia": "Transcrito da foto 1000343525.jpg; soma confere com o total da comanda."
+    },
+    {
+      "data": "18/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 1395.9,
+      "conferencia": "Transcrito da foto 1000343525.jpg; soma confere com o total da comanda."
+    },
+    {
+      "data": "18/10/2026",
+      "tipo": "PIX",
+      "descricao": "CLENICE PRADO (grafia a conferir)",
+      "valor": 67,
+      "conferencia": "Transcrito da foto 1000343525.jpg; soma confere com o total da comanda."
+    },
+    {
+      "data": "18/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARIA",
+      "valor": 59,
+      "conferencia": "Transcrito da foto 1000343525.jpg; soma confere com o total da comanda."
+    }
+  ]
+}
