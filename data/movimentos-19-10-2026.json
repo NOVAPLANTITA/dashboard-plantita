@@ -1,0 +1,115 @@
+{
+  "atualizadoEm": "19/10/2026",
+  "dataComanda": "19/10/2026",
+  "totalInformadoComanda": 12006,
+  "totalLancamentos": 12064.2,
+  "diferencaConferencia": 58.2,
+  "observacao": "Fonte: 1000344008.jpg. Total manuscrito R$ 12.006,00; soma transcrita R$ 12.064,20. Não ajustar valores para forçar fechamento. Conferir especialmente Vale dos Reis, centavos de Mercado Pago e classificação de Café e Diária Gustavo. Outros é provisório e participa das entradas no painel; não representa classificação financeira confirmada. Não somar novamente as comandas de entrega aos recebimentos.",
+  "movimentos": [
+    {
+      "data": "19/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 2000,
+      "conferencia": "Fonte: 1000344008.jpg.  Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1317.15,
+      "conferencia": "Fonte: 1000344008.jpg.  Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 235,
+      "conferencia": "Fonte: 1000344008.jpg.  Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1051.3,
+      "conferencia": "Fonte: 1000344008.jpg.  Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 2778.65,
+      "conferencia": "Fonte: 1000344008.jpg. Conferir centavos manuscritos. Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 48.1,
+      "conferencia": "Fonte: 1000344008.jpg. Natureza a confirmar; mantido em Outros conforme histórico, sem confirmação de entrada ou despesa. Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "PIX",
+      "descricao": "IVANILDE MARIA (grafia a conferir)",
+      "valor": 245,
+      "conferencia": "Fonte: 1000344008.jpg.  Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "PIX",
+      "descricao": "VALE DOS REIS",
+      "valor": 3375,
+      "conferencia": "Fonte: 1000344008.jpg. Conferir valor manuscrito R$ 3.375,00. Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARIA CLEUZA (grafia a conferir)",
+      "valor": 105,
+      "conferencia": "Fonte: 1000344008.jpg.  Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "PIX",
+      "descricao": "DAVI COSTA ALVES (grafia a conferir)",
+      "valor": 107,
+      "conferencia": "Fonte: 1000344008.jpg.  Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "PIX",
+      "descricao": "CAIO OCTAVIO",
+      "valor": 165,
+      "conferencia": "Fonte: 1000344008.jpg. Lançamento separado do PIX de R$ 11,00. Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "PIX",
+      "descricao": "CAIO OCTAVIO",
+      "valor": 11,
+      "conferencia": "Fonte: 1000344008.jpg. Lançamento separado do PIX de R$ 165,00. Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "PIX",
+      "descricao": "PVD GESTÃO GUARDA (grafia a conferir)",
+      "valor": 390,
+      "conferencia": "Fonte: 1000344008.jpg.  Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "PIX",
+      "descricao": "ARIOVALDO HENRIQUE (grafia a conferir)",
+      "valor": 106,
+      "conferencia": "Fonte: 1000344008.jpg.  Total diário pendente de conferência."
+    },
+    {
+      "data": "19/10/2026",
+      "tipo": "Outros",
+      "descricao": "DIÁRIA GUSTAVO",
+      "valor": 130,
+      "conferencia": "Fonte: 1000344008.jpg. Natureza a confirmar: possível despesa/retirada. Mantido provisoriamente em Outros para transcrição, sem confirmação de classificação. Total diário pendente de conferência."
+    }
+  ]
+}
