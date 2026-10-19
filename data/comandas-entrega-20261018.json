@@ -1,0 +1,57 @@
+{
+  "comandas": [
+    {
+      "data": "18/10/2026",
+      "cliente": "Janaína",
+      "telefone": "991452219",
+      "endereco": "V. Laudelina Dias Vieira, 22 (grafia a conferir)",
+      "descricao": "1 tapete Genial 7 un. — R$ 25,00; 3 kg Magnus filhote — R$ 33,00",
+      "valorProduto": 58,
+      "taxaEntrega": 5,
+      "total": 63,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir grafia do endereço e marca do tapete. Fonte: 1000343991.jpg."
+    },
+    {
+      "data": "18/10/2026",
+      "cliente": "Ana",
+      "telefone": "",
+      "endereco": "Est. dos Martins (leitura a conferir)",
+      "descricao": "1 Special Dog 15 kg — R$ 100,00; 4 kg milho — R$ 11,20; 1 Mellis Vet 3 mg (nome a conferir) — R$ 35,00",
+      "valorProduto": 146.2,
+      "taxaEntrega": 0,
+      "total": 146.2,
+      "pagamento": "A pagar na loja",
+      "prazo": "A receber",
+      "conferencia": "Anotação: irá passar na loja pagar. Conferir medicamento e endereço. Taxa não discriminada. Fonte: 1000343992.jpg."
+    },
+    {
+      "data": "18/10/2026",
+      "cliente": "Márcia (nome a conferir)",
+      "telefone": "",
+      "endereco": "R. Silvio Ferreira (restante a conferir)",
+      "descricao": "3 kg Magnus filhote gato — R$ 42,00; 4 sachês Whiskas carne — R$ 12,00",
+      "valorProduto": 54,
+      "taxaEntrega": 5,
+      "total": 59,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Foto desfocada: conferir nome, telefone e endereço. Fonte: 1000343994.jpg."
+    },
+    {
+      "data": "18/10/2026",
+      "cliente": "Cida",
+      "telefone": "",
+      "endereco": "Favelinha",
+      "descricao": "1 Golden R/G frango 15 kg — R$ 178,00",
+      "valorProduto": 178,
+      "taxaEntrega": 0,
+      "total": 178,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir apresentação da ração. Taxa não discriminada. Fonte: 1000343995.jpg."
+    }
+  ],
+  "atualizadoEm": "19/10/2026 — 4 comandas de 18/10/2026; leituras incertas sinalizadas."
+}
