@@ -1,0 +1,447 @@
+{
+  "atualizadoEm": "18/10/2026",
+  "fonte": "Plantita_Sacos_Abertos_Conferencia_18-10-2026.xlsx",
+  "criterio": "Custo unitário por saco. Quantidades vêm da base central. Correspondência por nome normalizado, sem aproximação.",
+  "produtos": [
+    {
+      "produto": "Gatan",
+      "custoPorSaco": 102.75,
+      "pagina": 1
+    },
+    {
+      "produto": "Lester cães adultos",
+      "custoPorSaco": 76.04,
+      "pagina": 1
+    },
+    {
+      "produto": "Magnus pastel castrado frango",
+      "custoPorSaco": 175.93,
+      "pagina": 1
+    },
+    {
+      "produto": "Magnus todo dia adulto sabor carne",
+      "custoPorSaco": 99.6,
+      "pagina": 2
+    },
+    {
+      "produto": "Premier porte pequeno frango mandioca",
+      "custoPorSaco": 250,
+      "pagina": 2
+    },
+    {
+      "produto": "Golden castrado carne",
+      "custoPorSaco": 116,
+      "pagina": 2
+    },
+    {
+      "produto": "Golden frango gato",
+      "custoPorSaco": 109,
+      "pagina": 2
+    },
+    {
+      "produto": "Golden gato carne",
+      "custoPorSaco": 109,
+      "pagina": 2
+    },
+    {
+      "produto": "Magnus castrado carne",
+      "custoPorSaco": 177.78,
+      "pagina": 2
+    },
+    {
+      "produto": "Magnus filhote gato carne frango",
+      "custoPorSaco": 178.48,
+      "pagina": 2
+    },
+    {
+      "produto": "Origens cães sênior mini pequeno frango cereais",
+      "custoPorSaco": 88.9,
+      "pagina": 2
+    },
+    {
+      "produto": "Origens gato filhotes frango",
+      "custoPorSaco": 110,
+      "pagina": 2
+    },
+    {
+      "produto": "Bionatural adulto raças pequena frango",
+      "custoPorSaco": 171,
+      "pagina": 3
+    },
+    {
+      "produto": "Bionatural gato castrado frango maracujá",
+      "custoPorSaco": 265.81,
+      "pagina": 3
+    },
+    {
+      "produto": "Fórmula Natural Life cães adultos porte mini pequeno",
+      "custoPorSaco": 164.83,
+      "pagina": 3
+    },
+    {
+      "produto": "Fórmula Natural Life castrado frango",
+      "custoPorSaco": 191.62,
+      "pagina": 3
+    },
+    {
+      "produto": "Golden castrado frango",
+      "custoPorSaco": 122,
+      "pagina": 3
+    },
+    {
+      "produto": "Golden castrado salmão",
+      "custoPorSaco": 122,
+      "pagina": 3
+    },
+    {
+      "produto": "Golden raças grandes adulto frango",
+      "custoPorSaco": 156.9,
+      "pagina": 3
+    },
+    {
+      "produto": "Golden raças pequenas frango arroz",
+      "custoPorSaco": 122.56,
+      "pagina": 3
+    },
+    {
+      "produto": "Golden raças pequenas carne e arroz",
+      "custoPorSaco": 122.56,
+      "pagina": 3
+    },
+    {
+      "produto": "Magnus castrado salmão",
+      "custoPorSaco": 177.78,
+      "pagina": 3
+    },
+    {
+      "produto": "Magnus todo dia filhote carne",
+      "custoPorSaco": 119.08,
+      "pagina": 4
+    },
+    {
+      "produto": "Misty",
+      "custoPorSaco": 113.78,
+      "pagina": 4
+    },
+    {
+      "produto": "Origens castrado carne",
+      "custoPorSaco": 111.82,
+      "pagina": 4
+    },
+    {
+      "produto": "Origens castrado sabor frango",
+      "custoPorSaco": 111.82,
+      "pagina": 4
+    },
+    {
+      "produto": "Pedigree cães pequenos carne e vegetais",
+      "custoPorSaco": 116.9,
+      "pagina": 4
+    },
+    {
+      "produto": "Pedigree raças grande sabor carne frango cereais",
+      "custoPorSaco": 116.9,
+      "pagina": 4
+    },
+    {
+      "produto": "Premier porte pequeno filhote mandioca",
+      "custoPorSaco": 244.82,
+      "pagina": 4
+    },
+    {
+      "produto": "Quatree Hotcat sabor carne peixes vegetais",
+      "custoPorSaco": 129.11,
+      "pagina": 4
+    },
+    {
+      "produto": "Special Cat castrado frango",
+      "custoPorSaco": 197.24,
+      "pagina": 4
+    },
+    {
+      "produto": "Special Cat castrado salmão",
+      "custoPorSaco": 197.24,
+      "pagina": 4
+    },
+    {
+      "produto": "Special Cat gatos peixes",
+      "custoPorSaco": 197.24,
+      "pagina": 4
+    },
+    {
+      "produto": "Special Dog Ultra Life sênior raças pequenas sabor frango",
+      "custoPorSaco": 129.65,
+      "pagina": 5
+    },
+    {
+      "produto": "Alcanes sênior sabor frango carne arroz raças pequena",
+      "custoPorSaco": 176.4,
+      "pagina": 5
+    },
+    {
+      "produto": "Alcaniques adultos raça pequena sabor frango carne arroz",
+      "custoPorSaco": 135.45,
+      "pagina": 5
+    },
+    {
+      "produto": "Bionatural júnior frango coco",
+      "custoPorSaco": 168.96,
+      "pagina": 5
+    },
+    {
+      "produto": "Bionatural cães adulto raça pequena frango coco",
+      "custoPorSaco": 171.03,
+      "pagina": 5
+    },
+    {
+      "produto": "Bionatural cães adultos raça média grande frango coco",
+      "custoPorSaco": 171.03,
+      "pagina": 5
+    },
+    {
+      "produto": "Bionatural cães média e grande júnior frango coco",
+      "custoPorSaco": 171.03,
+      "pagina": 5
+    },
+    {
+      "produto": "Bionatural cães raças médias e grandes frango coco",
+      "custoPorSaco": 219.31,
+      "pagina": 5
+    },
+    {
+      "produto": "Bionatural castrado frango",
+      "custoPorSaco": 265.51,
+      "pagina": 5
+    },
+    {
+      "produto": "Bomguy frango raça grande",
+      "custoPorSaco": 119.71,
+      "pagina": 5
+    },
+    {
+      "produto": "Fórmula Natural Life cães sênior frango linhaça",
+      "custoPorSaco": 192.25,
+      "pagina": 5
+    },
+    {
+      "produto": "Fórmula Natural Life castrado sabor salmão",
+      "custoPorSaco": 216.65,
+      "pagina": 6
+    },
+    {
+      "produto": "Fórmula Natural Life filhote porte mini pequeno",
+      "custoPorSaco": 192.25,
+      "pagina": 6
+    },
+    {
+      "produto": "Golden filhote raças grandes frango arroz",
+      "custoPorSaco": 161.97,
+      "pagina": 6
+    },
+    {
+      "produto": "Golden filhotes raças pequenas arroz e vegetais",
+      "custoPorSaco": 96.36,
+      "pagina": 6
+    },
+    {
+      "produto": "Golden filhote frango",
+      "custoPorSaco": 96.36,
+      "pagina": 6
+    },
+    {
+      "produto": "Golden raça pequena adulto sabor salmão",
+      "custoPorSaco": 132.37,
+      "pagina": 6
+    },
+    {
+      "produto": "Golden raças grandes sabor carne arroz",
+      "custoPorSaco": 122.56,
+      "pagina": 6
+    },
+    {
+      "produto": "Golden salmão gato",
+      "custoPorSaco": 129.57,
+      "pagina": 6
+    },
+    {
+      "produto": "Katchow gato sabor peixe",
+      "custoPorSaco": 124.13,
+      "pagina": 6
+    },
+    {
+      "produto": "Magnus chips adultos",
+      "custoPorSaco": 105.47,
+      "pagina": 6
+    },
+    {
+      "produto": "Magnus gato carne",
+      "custoPorSaco": 169.32,
+      "pagina": 6
+    },
+    {
+      "produto": "Magnus todo dia adultos porte pequeno frango",
+      "custoPorSaco": 101.71,
+      "pagina": 7
+    },
+    {
+      "produto": "Origens cães adultos mini pequeno carne cereais",
+      "custoPorSaco": 112.45,
+      "pagina": 7
+    },
+    {
+      "produto": "Origens gato castrado sabor salmão",
+      "custoPorSaco": 93.12,
+      "pagina": 7
+    },
+    {
+      "produto": "Origens gatos frango",
+      "custoPorSaco": 93.12,
+      "pagina": 7
+    },
+    {
+      "produto": "Origens raças cães adultos carne frango",
+      "custoPorSaco": 125.67,
+      "pagina": 7
+    },
+    {
+      "produto": "Premier buldog inglês adulto frango",
+      "custoPorSaco": 176.69,
+      "pagina": 7
+    },
+    {
+      "produto": "Premier castrado 6 meses a 6 anos salmão",
+      "custoPorSaco": 155.86,
+      "pagina": 7
+    },
+    {
+      "produto": "Premier Natu castrado frango brócolis",
+      "custoPorSaco": 164.78,
+      "pagina": 7
+    },
+    {
+      "produto": "Premier Natu castrado frango mandioca",
+      "custoPorSaco": 164.78,
+      "pagina": 7
+    },
+    {
+      "produto": "Premier porte pequeno adulto carne batata doce",
+      "custoPorSaco": 172.41,
+      "pagina": 7
+    },
+    {
+      "produto": "Premier porte pequeno Dermacil salmão",
+      "custoPorSaco": 183.36,
+      "pagina": 7
+    },
+    {
+      "produto": "Premier porte pequeno filhote frango salmão",
+      "custoPorSaco": 177.46,
+      "pagina": 8
+    },
+    {
+      "produto": "Quatree castrado delícias do mar",
+      "custoPorSaco": null,
+      "pagina": 8
+    },
+    {
+      "produto": "Quatree gatos carne",
+      "custoPorSaco": null,
+      "pagina": 8
+    },
+    {
+      "produto": "Quatree gatos peixes",
+      "custoPorSaco": null,
+      "pagina": 8
+    },
+    {
+      "produto": "Quatree Life cães adultos raça pequeno",
+      "custoPorSaco": null,
+      "pagina": 8
+    },
+    {
+      "produto": "Quatree Life cães adultos raças médias e grande frango e arroz",
+      "custoPorSaco": null,
+      "pagina": 8
+    },
+    {
+      "produto": "Quatree Select cães adultos raças pequenos frango batata doce",
+      "custoPorSaco": null,
+      "pagina": 8
+    },
+    {
+      "produto": "Quatree Select cães adultos raça média adultos frango",
+      "custoPorSaco": null,
+      "pagina": 8
+    },
+    {
+      "produto": "Quatree Select cães filhotes carne leite",
+      "custoPorSaco": null,
+      "pagina": 8
+    },
+    {
+      "produto": "Special Cat adulto peixes",
+      "custoPorSaco": 201.4,
+      "pagina": 8
+    },
+    {
+      "produto": "Special Cat gatos carne",
+      "custoPorSaco": 201.4,
+      "pagina": 8
+    },
+    {
+      "produto": "Special Dog cães adultos porte pequeno sabor carne",
+      "custoPorSaco": 120.98,
+      "pagina": 9
+    },
+    {
+      "produto": "Special Dog Gold Life",
+      "custoPorSaco": 128.14,
+      "pagina": 9
+    },
+    {
+      "produto": "Special Dog Gold Life sabor carne e frango médias",
+      "custoPorSaco": 178.76,
+      "pagina": 9
+    },
+    {
+      "produto": "Special Dog Premium cães júnior sabor carne",
+      "custoPorSaco": 158.45,
+      "pagina": 9
+    },
+    {
+      "produto": "Special Grook Kat castrado sabor frango",
+      "custoPorSaco": 185,
+      "pagina": 9
+    },
+    {
+      "produto": "Specialdog Premium adultos",
+      "custoPorSaco": 98.59,
+      "pagina": 9
+    },
+    {
+      "produto": "Whiskas castrado carne",
+      "custoPorSaco": 133.8,
+      "pagina": 9
+    },
+    {
+      "produto": "Whiskas castrado peixes",
+      "custoPorSaco": 133.8,
+      "pagina": 9
+    },
+    {
+      "produto": "Whiskas gato carne",
+      "custoPorSaco": 133.8,
+      "pagina": 9
+    },
+    {
+      "produto": "Whiskas gato salmão",
+      "custoPorSaco": 147.88,
+      "pagina": 9
+    },
+    {
+      "produto": "Whiskas gato frango",
+      "custoPorSaco": 133.8,
+      "pagina": 9
+    }
+  ]
+}
