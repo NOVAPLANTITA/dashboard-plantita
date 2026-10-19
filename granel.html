@@ -35,7 +35,7 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
     <span class="role">SUPERVISOR</span>
     <button class="sync" id="refresh">↻ ATUALIZAR</button>
     <button class="config" id="config">⚙ CONECTAR GOOGLE</button>
-    <a href="dashboard-v13.html?v=20261008-granel-produtos1">← DASHBOARD</a>
+    <a href="dashboard-v13.html?v=20261018-custos1">← DASHBOARD</a>
     <a class="logout" href="#" onclick="PlantitaAuth.logout();return false">SAIR</a>
   </div>
 </header>
@@ -87,11 +87,12 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
     </article>
   </section>
 
+  <section class="card" style="margin-top:14px"><h2>Custo dos sacos registrados no mês</h2><div class="big" id="bagsCost">—</div><div class="status" id="costCoverage">—</div><div class="sub" id="costNotice">Aguardando custos e quantidades da base central.</div></section>
   <div class="section-title"><h2>Sacos abertos por produto • mês atual</h2></div>
   <section class="card" style="padding:0">
     <div class="product-search"><label for="productFilter">Quantidade de sacos abertos de cada produto</label><input type="search" id="productFilter" placeholder="Pesquisar produto..." aria-label="Pesquisar produto"></div>
     <div class="tablewrap">
-      <table><thead><tr><th id="rankingColTitle">Produto</th><th class="right">Sacos abertos</th><th class="right">Kg repostos</th></tr></thead><tbody id="ranking"></tbody></table>
+      <table><thead><tr><th id="rankingColTitle">Produto</th><th class="right">Sacos abertos</th><th class="right">Kg repostos</th><th class="right">Custo por saco</th><th class="right">Custo total</th></tr></thead><tbody id="ranking"></tbody></table>
       <div id="rankingNotice" class="empty" style="display:none"></div><div id="rankingEmpty" class="empty">Aguardando dados por produto da base central.</div>
     </div>
   </section>
@@ -129,6 +130,45 @@ function jsonp(url){
     document.head.appendChild(s);
   })
 }
+
+let custosPorProduto=new Map(),custosEstado='pendente';
+function chaveProduto(nome){return String(nome||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim().replace(/\s+/g,' ')}
+function custoProduto(x,temProdutos){
+ if(!temProdutos||custosEstado!=='ok')return null;
+ const v=custosPorProduto.get(chaveProduto(x.produto||x.marca));
+ return typeof v==='number'&&Number.isFinite(v)&&v>=0?v:null;
+}
+async function carregarCustos(){
+ custosEstado='carregando';
+ try{
+  const r=await fetch('data/granel-custos.json?v=20261018-custos1&ts='+Date.now(),{cache:'no-store'});
+  if(!r.ok)throw new Error('HTTP '+r.status);
+  const d=await r.json();
+  if(!Array.isArray(d.produtos))throw new Error('Cadastro inválido');
+  const mapa=new Map();
+  for(const p of d.produtos){
+   const k=chaveProduto(p.produto);
+   if(!k||mapa.has(k))throw new Error('Produto duplicado ou inválido');
+   if(p.custoPorSaco!==null&&(typeof p.custoPorSaco!=='number'||!Number.isFinite(p.custoPorSaco)||p.custoPorSaco<0))throw new Error('Custo inválido');
+   mapa.set(k,p.custoPorSaco);
+  }
+  custosPorProduto=mapa;custosEstado='ok';
+ }catch(e){custosEstado='erro';custosPorProduto=new Map();console.warn('Custos não carregados',e)}
+ if(ultimoResumo)renderRanking(ultimoResumo.month||{});
+ else $('costNotice').textContent=custosEstado==='ok'?'Custos cadastrados. Aguardando as quantidades da base central.':'Não foi possível carregar os custos. Toque em ATUALIZAR para tentar novamente.';
+}
+function renderCustos(m,rank,temProdutos){
+ let centavos=0,cobertos=0,pendentes=0,linhasComCusto=0;
+ for(const x of rank){const q=Number(x.sacos||0),c=custoProduto(x,temProdutos);if(c===null){pendentes+=q}else{centavos+=Math.round(q*c*100);cobertos+=q;linhasComCusto++}}
+ $('bagsCost').textContent=custosEstado==='ok'&&temProdutos&&rank.length&&linhasComCusto?money(centavos/100):'—';
+ $('costCoverage').textContent=custosEstado==='ok'&&temProdutos?num(cobertos)+' com custo / '+num(pendentes)+' pendentes':'—';
+ if(custosEstado!=='ok'){$('costNotice').textContent=custosEstado==='erro'?'Falha ao carregar os custos. Toque em ATUALIZAR.':'Carregando custos…';return}
+ if(!temProdutos){$('costNotice').textContent='Custo indisponível: a base precisa enviar a contagem por produto.';return}
+ if(!rank.length){$('costNotice').textContent='Aguardando sacos por produto para calcular os custos.';return}
+ const diferenca=Number(m.sacos||0)-cobertos-pendentes;
+ $('costNotice').textContent='Custo estimado pelas quantidades do mês e preços por saco da planilha de 18/10/2026. '+(pendentes?'Total parcial: há sacos sem preço ou sem correspondência de nome. ':'')+(diferenca?'A soma do ranking difere da contagem mensal em '+num(diferenca)+' saco(s). ':'')+'Inclui os registros iniciais da base, sem abatimento dos 80 sacos. Não representa custo da mercadoria já vendida.';
+}
+
 function renderRanking(m){
   const temProdutos=Array.isArray(m.rankingProdutos);
   const rank=temProdutos?m.rankingProdutos:(Array.isArray(m.rankingMarcas)?m.rankingMarcas:[]);
@@ -138,7 +178,8 @@ function renderRanking(m){
   $('rankingNotice').style.display=temProdutos?'none':'block';
   $('rankingNotice').textContent='Aguardando atualização da ponte do Google para a contagem automática por produto. Até lá, este quadro mantém o ranking anterior por marca. A contagem por produto já está pronta na aba Ranking_Produtos da Base Central.';
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  $('ranking').innerHTML=filtrados.map(x=>'<tr><td>'+esc(x.produto||x.marca||'Não identificado')+'</td><td class="right">'+Number(x.sacos||0).toLocaleString('pt-BR')+'</td><td class="right">'+num(x.kg)+' kg</td></tr>').join('');
+  $('ranking').innerHTML=filtrados.map(x=>{const c=custoProduto(x,temProdutos);return '<tr><td>'+esc(x.produto||x.marca||'Não identificado')+'</td><td class="right">'+Number(x.sacos||0).toLocaleString('pt-BR')+'</td><td class="right">'+num(x.kg)+' kg</td><td class="right">'+(c===null?'Pendente':money(c))+'</td><td class="right">'+(c===null?'—':money(Math.round(Number(x.sacos||0)*c*100)/100))+'</td></tr>'}).join('');
+  renderCustos(m,rank,temProdutos);
   $('rankingEmpty').style.display=filtrados.length?'none':'block';
   $('rankingEmpty').textContent=rank.length?'Nenhum resultado encontrado nesta busca.':'Nenhum dado disponível nesta consulta.';
 }
@@ -172,9 +213,9 @@ async function carregar(){
   }catch(e){console.warn(e);setStatus('Falha ao consultar o Google neste celular: '+(e.message||'erro desconhecido')+'. Confira a URL /exec e a implantação do Apps Script.','bad')}
   finally{carregando=false}
 }
-$('config').onclick=configurar;$('refresh').onclick=carregar;
+$('config').onclick=configurar;$('refresh').onclick=()=>{carregarCustos();carregar()};
 $('productFilter').addEventListener('input',()=>{if(ultimoResumo)renderRanking(ultimoResumo.month||{})});
-carregar();setInterval(()=>{if(!document.hidden)carregar()},60000);
+carregarCustos();carregar();setInterval(()=>{if(!document.hidden)carregar()},60000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)carregar()});
 window.addEventListener('pageshow',e=>{if(e.persisted)carregar()});
 </script>
