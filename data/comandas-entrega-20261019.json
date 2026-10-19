@@ -1,0 +1,44 @@
+{
+  "comandas": [
+    {
+      "data": "19/10/2026",
+      "cliente": "Maria",
+      "telefone": "",
+      "endereco": "R. Varginha, 2, Potuverá (grafia a conferir)",
+      "descricao": "1 Magnus Chips 20 kg — R$ 150,00",
+      "valorProduto": 150,
+      "taxaEntrega": 10,
+      "total": 160,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Comanda indica Pago. Conferir grafia do endereço. Fonte: 1000343996.jpg."
+    },
+    {
+      "data": "19/10/2026",
+      "cliente": "Joyce Pátio",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Premier adulto 15 kg — R$ 250,00; 1 Special Dog 20 kg — R$ 140,00",
+      "valorProduto": 390,
+      "taxaEntrega": 0,
+      "total": 390,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Conferir complemento do nome. Taxa não discriminada. Fonte: 1000343997.jpg."
+    },
+    {
+      "data": "19/10/2026",
+      "cliente": "Silvana",
+      "telefone": "",
+      "endereco": "Mombaça (leitura a conferir)",
+      "descricao": "Bicrok (descrição a conferir) — R$ 150,00; Magnus — R$ 35,00; Golden salmão — R$ 60,00",
+      "valorProduto": 245,
+      "taxaEntrega": 0,
+      "total": 245,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Quantidades e apresentações não legíveis; conferir primeiro produto e referência do endereço. Taxa não discriminada. Fonte: 1000343998.jpg."
+    }
+  ],
+  "atualizadoEm": "19/10/2026 — 3 comandas de 19/10/2026; leituras incertas sinalizadas."
+}
