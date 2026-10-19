@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "19/10/2026 — 20 comandas agrupadas em 17/10/2026; Marina e Ivete sem data na imagem, agrupamento provisório pelo lote. Leituras incertas sinalizadas.",
+  "atualizadoEm": "19/10/2026 — 23 comandas de 17/10/2026; leituras incertas sinalizadas. Marina e Ivete continuam com data provisória pelo lote.",
   "comandas": [
     {
       "data": "17/10/2026",
@@ -260,6 +260,45 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Conferir nome da cliente, endereço e nome do produto. Fonte: 1000343988.jpg."
+    },
+    {
+      "data": "17/10/2026",
+      "cliente": "Pedro",
+      "telefone": "",
+      "endereco": "Jardim Renata, travessa 10 (leitura a conferir)",
+      "descricao": "1 Magnus 15 kg — R$ 100,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Pago — forma não informada",
+      "prazo": "Entrega prevista para 18/10/2026",
+      "conferencia": "Comanda de 17/10; anotação Entregar amanhã 18/10/26. Conferir endereço. Fonte: 1000343989.jpg."
+    },
+    {
+      "data": "17/10/2026",
+      "cliente": "Sindy (nome a conferir)",
+      "telefone": "",
+      "endereco": "R. Felipe Calieira, 86 (grafia a conferir)",
+      "descricao": "1 Silmox 150 (nome a conferir) — R$ 80,00; 1 Vet Life Urinary 400 g — R$ 49,00",
+      "valorProduto": 129,
+      "taxaEntrega": 0,
+      "total": 129,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Endereço anterior riscado; utilizado endereço do topo. Conferir nome e medicamento. Taxa não discriminada. Fonte: 1000343990.jpg."
+    },
+    {
+      "data": "17/10/2026",
+      "cliente": "Vanessa",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Classic 20 kg — R$ 64,00",
+      "valorProduto": 64,
+      "taxaEntrega": 0,
+      "total": 64,
+      "pagamento": "Marcado",
+      "prazo": "A receber",
+      "conferencia": "Taxa não discriminada. Fonte: 1000343993.jpg."
     }
   ]
 }
