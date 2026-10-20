@@ -1,0 +1,101 @@
+{
+  "atualizadoEm": "20/10/2026",
+  "dataComanda": "20/10/2026",
+  "totalInformadoComanda": 8414,
+  "totalLancamentos": 8415.4,
+  "diferencaConferencia": 1.4,
+  "observacao": "Fonte: 1000344508.jpg. Comanda de 20/10/2026. Total manuscrito R$ 8.414,00; soma dos 13 lançamentos R$ 8.415,40; diferença positiva de R$ 1,40 a conferir, sem alterar os valores lidos para forçar fechamento. CAFÉ mantido provisoriamente em Outros seguindo o histórico; natureza de entrada/saída a confirmar. CRÉDITO MERCADO PAGO classificado como Mercado Pago seguindo o histórico. Não somar novamente comandas de entrega aos recebimentos.",
+  "movimentos": [
+    {
+      "data": "20/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1250,
+      "conferencia": "Fonte: 1000344508.jpg. Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1151.25,
+      "conferencia": "Fonte: 1000344508.jpg. Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1516,
+      "conferencia": "Fonte: 1000344508.jpg. Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1014.25,
+      "conferencia": "Fonte: 1000344508.jpg. Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 1298,
+      "conferencia": "Fonte: 1000344508.jpg. Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 29.9,
+      "conferencia": "Fonte: 1000344508.jpg. Natureza a confirmar (mantido provisoriamente em Outros). Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "PIX",
+      "descricao": "ADILSON (grafia a conferir)",
+      "valor": 100,
+      "conferencia": "Fonte: 1000344508.jpg. Grafia manuscrita a conferir. Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "PIX",
+      "descricao": "NA MONTANHA (grafia a conferir)",
+      "valor": 1677,
+      "conferencia": "Fonte: 1000344508.jpg. Grafia manuscrita a conferir. Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "PIX",
+      "descricao": "CAIO OCTAVIO",
+      "valor": 33,
+      "conferencia": "Fonte: 1000344508.jpg. Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "PIX",
+      "descricao": "ROSÁLIA",
+      "valor": 95,
+      "conferencia": "Fonte: 1000344508.jpg. Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "PIX",
+      "descricao": "ADRIANA",
+      "valor": 125,
+      "conferencia": "Fonte: 1000344508.jpg. Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "PIX",
+      "descricao": "EDUARDO",
+      "valor": 26,
+      "conferencia": "Fonte: 1000344508.jpg. Total diário pendente de conferência por divergência de R$ 1,40."
+    },
+    {
+      "data": "20/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "CRÉDITO MERCADO PAGO",
+      "valor": 100,
+      "conferencia": "Fonte: 1000344508.jpg. Classificação conforme histórico. Total diário pendente de conferência por divergência de R$ 1,40."
+    }
+  ]
+}
