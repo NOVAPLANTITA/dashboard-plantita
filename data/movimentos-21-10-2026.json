@@ -1,0 +1,106 @@
+{
+  "atualizadoEm": "21/10/2026",
+  "dataComanda": "21/10/2026",
+  "totalInformadoComanda": 9736,
+  "totalLancamentos": 9938.6,
+  "diferencaConferencia": 202.6,
+  "observacao": "Fonte: 1000344887.jpg. Total manuscrito R$ 9.736,00, soma de 13 linhas R$ 9.938,60, diferença positiva R$ 202,60. Não forçar fechamento alterando valores. Café R$ 29,80 em Outros (natureza financeira a confirmar); Saco de compras R$ 68,00 e compra galinhas R$ 250,00 classificados provisoriamente como Retiradas, pois parecem compras/despesas, não vendas. Nomes PIX e valores manuscritos de Getnet 2 e Mercado Pago a conferir. Não duplicar comandas de entrega ao somar receitas.",
+  "resumoProvisorio": {
+    "entradas": 9620.6,
+    "retiradas": 318,
+    "saldo": 9302.6
+  },
+  "movimentos": [
+    {
+      "data": "21/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1100,
+      "conferencia": "Fonte 1000344887.jpg. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1157.7,
+      "conferencia": "Fonte 1000344887.jpg. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 641,
+      "conferencia": "Fonte 1000344887.jpg. Valor manuscrito a conferir. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1242.5,
+      "conferencia": "Fonte 1000344887.jpg. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 4188.6,
+      "conferencia": "Fonte 1000344887.jpg. Valor manuscrito a conferir. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 29.8,
+      "conferencia": "Fonte 1000344887.jpg. Natureza do movimento a confirmar; mantido provisoriamente em Outros seguindo o histórico. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "PIX",
+      "descricao": "ALINE DA SILVA",
+      "valor": 91,
+      "conferencia": "Fonte 1000344887.jpg. Grafia manuscrita a conferir. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "PIX",
+      "descricao": "HELOÍSA HELENA",
+      "valor": 89,
+      "conferencia": "Fonte 1000344887.jpg. Grafia manuscrita a conferir. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "PIX",
+      "descricao": "GABRIELLY",
+      "valor": 528,
+      "conferencia": "Fonte 1000344887.jpg. Grafia manuscrita a conferir. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "PIX",
+      "descricao": "ELISABETH",
+      "valor": 488,
+      "conferencia": "Fonte 1000344887.jpg. Grafia manuscrita a conferir. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "PIX",
+      "descricao": "EME MOREIRA",
+      "valor": 65,
+      "conferencia": "Fonte 1000344887.jpg. Descrição e grafia manuscritas a conferir. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "Retiradas",
+      "descricao": "SACO DE COMPRAS",
+      "valor": 68,
+      "conferencia": "Fonte 1000344887.jpg. Provisoriamente classificado como despesa de embalagens, e não venda; conferir. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    },
+    {
+      "data": "21/10/2026",
+      "tipo": "Retiradas",
+      "descricao": "COMPRA GALINHAS",
+      "valor": 250,
+      "conferencia": "Fonte 1000344887.jpg. Compra de mercadoria: retirada/despesa, não deve inflar vendas. Comanda total manuscrito R$ 9.736,00 diverge em R$ 202,60; verificar antes de fechar."
+    }
+  ]
+}
