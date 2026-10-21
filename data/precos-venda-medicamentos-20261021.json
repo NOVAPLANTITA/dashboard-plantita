@@ -2687,6 +2687,17 @@
       "fontePreco": "Etiqueta da embalagem fotografada pelo usuário em 21/10/2026",
       "codigoDanfe": null,
       "observacao": "EAN da embalagem confirmado visualmente; código interno da DANFE não encontrado na planilha recuperada"
+    },
+    {
+      "produto": "Drontal Plus Mais Sabor 10 kg - 4 comprimidos",
+      "precoVenda": 75,
+      "pagina": null,
+      "status": "etiqueta_foto_conferir",
+      "codigoBarras": "5420036960843",
+      "codigoDanfe": "960843",
+      "fontePreco": "Etiqueta da embalagem fotografada em 21/10/2026",
+      "fonteCodigoDanfe": "DANFE fotografada, impressa em 16/10/2026",
+      "observacao": "4 comprimidos, não confundir com 2 comprimidos (código 960836)."
     }
   ]
 }
