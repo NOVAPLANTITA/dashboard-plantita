@@ -48,7 +48,7 @@
     <div class="btnline" style="margin-top:12px"><button class="ghost" id="exportSales" type="button">↓ Exportar CSV dos testes</button></div>
   </section>
   <section class="card"><div class="headcard"><h3>Medicamentos cadastrados</h3><span class="chip">Preços das fotos • teste local</span></div><input id="catalogFilter" type="search" placeholder="Pesquisar medicamento..." style="width:100%;margin-bottom:9px;padding:11px;background:#062228;color:white;border:1px solid #285b62;border-radius:10px"><div class="catalog" id="catalog"></div>
-    <div class="divider"></div><div class="btnline"><button id="newMed" class="secondary" type="button">＋ Cadastrar medicamento</button><button id="importCsv" class="ghost" type="button">↑ Importar CSV</button><button id="exampleCsv" class="ghost" type="button">↓ Modelo CSV</button></div><input id="csvFile" type="file" accept=".csv,text/csv" hidden><p class="fine">Este cadastro inclui 384 itens das fotos e etiquetas, dos quais 337 têm preço informado e 47 aguardam conferência. Pesquise pela descrição e use <b>Vincular EAN</b> para associar o código da embalagem ao medicamento correto. Outros medicamentos também podem ser importados por CSV. Para ampliar a lista, importe CSV com <code>codigo;descricao;preco;estoque</code> (código interno da DANFE) e, opcionalmente, <code>ean</code>. Preço da foto: conferir antes de cobrar; o estoque informado não é físico.</p>
+    <div class="divider"></div><div class="btnline"><button id="newMed" class="secondary" type="button">＋ Cadastrar medicamento</button><button id="importCsv" class="ghost" type="button">↑ Importar CSV</button><button id="exampleCsv" class="ghost" type="button">↓ Modelo CSV</button></div><input id="csvFile" type="file" accept=".csv,text/csv" hidden><p class="fine">Este cadastro inclui 384 itens das fotos e etiquetas, dos quais 337 têm preço informado e 47 aguardam conferência. Pesquise pela descrição e use <b>Vincular EAN</b> para associar o código da embalagem ao medicamento correto. Outros medicamentos também podem ser importados por CSV. Para ampliar a lista, importe CSV com <code>codigo;descricao</code> (campos CÓDIGO e DESCRIÇÃO da DANFE). Preço, estoque e EAN são opcionais e, opcionalmente, <code>ean</code>. Preço da foto: conferir antes de cobrar; o estoque informado não é físico.</p>
   </section>
  </aside>
 </main>
@@ -226,37 +226,54 @@ $('medForm').onsubmit=e=>{e.preventDefault();const code=$('medCode').value.trim(
 for(const modal of ['modalMed'])$(modal).onclick=e=>{if(e.target===$(modal))$(modal).classList.remove('show')};document.addEventListener('keydown',e=>{if(e.key==='Escape'){for(const m of ['modalMed'])$(m).classList.remove('show')} });
 function download(name,content){let blob=new Blob(['\ufeff'+content],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500)}
 function csvCell(x){let s=String(x??'');return /[;"\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s}
-$('exampleCsv').onclick=()=>download('modelo_medicamentos_plantita.csv','codigo;descricao;preco;estoque;ean\r\n978916;Credeli Gatos 48 mg - 1 comprimido;80,00;6;5420036978916\r\n');
+$('exampleCsv').onclick=()=>download('modelo_medicamentos_plantita.csv','codigo;descricao;preco;estoque;ean\r\n978916;Credeli Gatos 48 mg - 1 comprimido;80,00;;5420036978916\r\n960843;Drontal Plus Mais Sabor 10 kg - 4 comprimidos;75,00;;5420036960843\r\n');
 $('exportSales').onclick=()=>{let rows=[['id_registro','data','horario','tipo','codigo','descricao','quantidade','valor_unitario','subtotal','total_registro']];for(const s of sales)for(const x of s.items)rows.push([s.id,s.day,s.time,x.type==='med'?'medicamento':'granel',x.code,x.name,x.qty,(x.price/100).toFixed(2).replace('.',','),(x.price*x.qty/100).toFixed(2).replace('.',','),((s.med+s.granel)/100).toFixed(2).replace('.',',')]);download('pdv_plantita_testes.csv',rows.map(row=>row.map(csvCell).join(';')).join('\r\n'));message('CSV dos registros de teste exportado.')};
 $('importCsv').onclick=()=>$('csvFile').click();
 function parseCSV(text){let rows=[],row=[],cur='',quote=false;for(let i=0;i<text.length;i++){let ch=text[i];if(ch==='"'){if(quote&&text[i+1]==='"'){cur+='"';i++}else quote=!quote}else if(ch===';'&&!quote){row.push(cur);cur=''}else if((ch==='\n'||ch==='\r')&&!quote){if(ch==='\r'&&text[i+1]==='\n')i++;row.push(cur);if(row.some(x=>x.trim()))rows.push(row);row=[];cur=''}else cur+=ch}if(quote)throw new Error('Aspas não fechadas.');row.push(cur);if(row.some(x=>x.trim()))rows.push(row);return rows}
 function norm(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()}
 $('csvFile').onchange=async e=>{
- let file=e.target.files[0];if(!file)return;
+ const file=e.target.files[0];if(!file)return;
  try{
-  let rows=parseCSV((await file.text()).replace(/^\ufeff/,''));if(rows.length<2)throw Error('Arquivo sem itens.');
-  let head=rows.shift().map(norm),fields=['codigo','descricao','preco','estoque'].map(k=>head.indexOf(k)),eanIndex=head.indexOf('ean');
-  if(fields.some(n=>n<0))throw Error('Colunas necessárias: codigo;descricao;preco;estoque');
-  let incoming=[];
-  for(const [i,r] of rows.entries()){
-   let [code,name,priceStr,stockStr]=fields.map(n=>(r[n]||'').trim());
-   const price=valueCents(priceStr),stock=Number(stockStr),ean=eanIndex<0?'':(r[eanIndex]||'').trim();
-   if(!/^\d{3,14}$/.test(code)||!name||!Number.isInteger(price)||!Number.isInteger(stock)||stock<0||(ean&&!checkEAN(ean)))throw Error('Dados inválidos na linha '+(i+2));
-   if(incoming.some(x=>x.code===code))throw Error('Código da DANFE repetido: '+code);
-   incoming.push({code,name,price,stock,ean:ean?[ean]:[]});
+  const rows=parseCSV((await file.text()).replace(/^\ufeff/,''));if(rows.length<2)throw Error('Arquivo CSV sem itens.');
+  const head=rows.shift().map(norm);
+  const codeIndex=head.indexOf('codigo')>=0?head.indexOf('codigo'):head.indexOf('codigo danfe');
+  const descIndex=head.indexOf('descricao');
+  const priceIndex=head.indexOf('preco'),stockIndex=head.indexOf('estoque'),eanIndex=head.indexOf('ean');
+  if(codeIndex<0||descIndex<0)throw Error('Informe codigo;descricao. Preco;estoque;ean são opcionais.');
+  const incoming=[],seen=new Set();
+  for(const [i,row] of rows.entries()){
+   const code=String(row[codeIndex]||'').trim(),name=String(row[descIndex]||'').trim();
+   const priceText=priceIndex<0?'':String(row[priceIndex]||'').trim();
+   const price=priceText?valueCents(priceText):null;
+   const stockText=stockIndex<0?'':String(row[stockIndex]||'').trim();
+   const stock=stockText?Number(stockText):null;
+   const ean=eanIndex<0?'':String(row[eanIndex]||'').trim();
+   if(!/^\d{3,14}$/.test(code)||!name||(priceText&&!Number.isInteger(price))||(stockText&&(!Number.isInteger(stock)||stock<0))||(ean&&!checkEAN(ean)))
+    throw Error('Confira a linha '+(i+2)+' — código DANFE, descrição e valores.');
+   if(seen.has(code))throw Error('Código DANFE duplicado no CSV: '+code);
+   seen.add(code);incoming.push({code,name,price,stock,ean:ean?[ean]:[]});
   }
-  if(!incoming.length)throw Error('Nenhum medicamento válido.');
-  if(!confirm('Importar '+incoming.length+' itens para a BASE LOCAL DE TESTE? Nomes e dados informados no CSV serão usados apenas neste arquivo.'))return;
+  if(!incoming.length)throw Error('Nenhuma linha válida encontrada.');
+  const chave=s=>norm(s).replace(/\s+/g,' ');
   for(const p of incoming){
-   const chave=s=>norm(s).replace(/\s+/g,' ');
-   const porNome=catalog.find(x=>chave(x.name)===chave(p.name));
-   const porCodigo=catalog.find(x=>String(x.codigoDanfe||'')===p.code);
-   if(porNome&&porCodigo&&porNome!==porCodigo)throw Error('DANFE com código já pertencente a outra descrição: '+p.code);
-   const old=porNome||porCodigo||catalog.find(x=>x.code===p.code);
-   if(old){old.codigoDanfe=p.code;old.ean=[...new Set([...(old.ean||[]),...(p.ean||[])])];old.fonteCodigoDanfe='CSV DANFE conferido pelo usuário';if(!Number.isInteger(old.price)||old.price<=0)old.price=p.price}
-   else catalog.push({...p,code:'DANFE-CSV-'+p.code,codigoDanfe:p.code,fonteCodigoDanfe:'CSV DANFE conferido pelo usuário'});
+   const byCode=catalog.find(x=>String(x.codigoDanfe||'')===p.code);
+   const byName=catalog.find(x=>chave(x.name)===chave(p.name));
+   if(byCode&&byName&&byCode!==byName)throw Error('Código '+p.code+' já pertence a '+byCode.name+'. Corrija o CSV.');
+   if(byCode&&chave(byCode.name)!==chave(p.name)&&!byName)throw Error('Código '+p.code+' conflita com '+byCode.name+'.');
   }
-  store(KEYS.catalog,catalog);render();message('✓ '+incoming.length+' itens importados para teste, busca por final da DANFE habilitada.');
+  if(!confirm('Importar '+incoming.length+' itens DANFE neste navegador? A leitura buscará os últimos dígitos do EAN. Preços vazios continuam pendentes, e o estoque real não será alterado.'))return;
+  for(const p of incoming){
+   const old=catalog.find(x=>String(x.codigoDanfe||'')===p.code)||catalog.find(x=>chave(x.name)===chave(p.name))||catalog.find(x=>x.code===p.code);
+   if(old){
+    old.codigoDanfe=p.code;
+    old.ean=[...new Set([...(old.ean||[]),...(p.ean||[])])];
+    old.fonteCodigoDanfe='CSV DANFE importado e conferido';
+    if(p.price!==null&&(!Number.isInteger(old.price)||old.price<=0))old.price=p.price;
+    if(p.stock!==null)old.stock=p.stock;
+   }else catalog.push({code:'DANFE-CSV-'+p.code,name:p.name,price:p.price,stock:p.stock===null?99999:p.stock,ean:p.ean,codigoDanfe:p.code,fonteCodigoDanfe:'CSV DANFE importado e conferido'});
+  }
+  store(KEYS.catalog,catalog);render();
+  message('✓ '+incoming.length+' códigos de DANFE importados; quando houver preço ele será exibido.');
  }catch(err){message('Erro no CSV: '+err.message,'err')}finally{e.target.value=''}
 };
 $('catalogFilter').addEventListener('input',render);$('assocSearch').addEventListener('input',renderAssociationCandidates);const fotosCarregadas=loadPhotoPrices(),baseDanfe=aplicarCodigosDaDanfe();$('statusBaseDanfe').textContent='Fonte DANFE: '+baseDanfe.total+' produtos; '+baseDanfe.integrados+' registros de medicamentos/histórico; '+baseDanfe.codigos+' códigos DANFE cadastrados e '+baseDanfe.eans+' EANs completos. O PDV reconhece automaticamente o final do EAN quando coincidir com um único Código na DANFE. Quando faltar código na nota importada, será necessária conferência.';$('dateLabel').textContent=new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(new Date());render();message('✓ '+fotosCarregadas+' preços das fotos; '+baseDanfe.codigos+' códigos de DANFE prontos para bipagem por sufixo.');focusScan();
