@@ -2446,6 +2446,237 @@
       "pagina": 9,
       "status": "transcrito_conferir",
       "codigoBarras": null
+    },
+    {
+      "produto": "Monovin 20 ml",
+      "precoVenda": 45,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Mosca Zum 25 g",
+      "precoVenda": 6,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Natu Verm 25x",
+      "precoVenda": 25,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Natu Verm suspensão",
+      "precoVenda": 25,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Rodilon 25 g",
+      "precoVenda": 4,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Talfon 250",
+      "precoVenda": 16,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Vermivet dog",
+      "precoVenda": null,
+      "pagina": 7,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Glifosato 1 litro",
+      "precoVenda": 40,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Melus Vet 2",
+      "precoVenda": 30,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Natu Verm 2x",
+      "precoVenda": null,
+      "pagina": 7,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Farinha de cálcio",
+      "precoVenda": null,
+      "pagina": 7,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Mata Pulgas 10 g",
+      "precoVenda": null,
+      "pagina": 7,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Cal Virgem",
+      "precoVenda": 7,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "DDVP 500 (20 ml)",
+      "precoVenda": 20,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Poderoso 30 ml",
+      "precoVenda": 57,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Dental 2 10K",
+      "precoVenda": null,
+      "pagina": 7,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Barragem 20 ml",
+      "precoVenda": 8,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "K-Othrine 30 ml",
+      "precoVenda": 35,
+      "pagina": 7,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "CREDELI PLUS - 1 COMPRIMIDO (ROSA)",
+      "precoVenda": 80,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "ADVOCATE GATO (P - ATÉ 4KG) - 3 BISNAGAS",
+      "precoVenda": 76,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "DRONTAL PLUS SABOR CARNE 10KG - 2 COMPRIMIDOS",
+      "precoVenda": 49,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "CREDELI - 3 COMPRIMIDOS (LARANJA)",
+      "precoVenda": 75,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "CREDELI PLUS - 1 COMPRIMIDO (VERDE)",
+      "precoVenda": 96,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "DRONTAL GATOS - 4 COMPRIMIDOS",
+      "precoVenda": 62,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "CREDELI - 3 COMPRIMIDOS (VERDE)",
+      "precoVenda": 90,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "CREDELI - 3 COMPRIMIDOS (ROSA)",
+      "precoVenda": 60,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "CREDELI - 3 COMPRIMIDOS (AMARELO)",
+      "precoVenda": 56,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "DRONTAL PLUS SABOR CARNE 35KG - 2 COMPRIMIDOS",
+      "precoVenda": 154,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "CREDELI PLUS - 1 COMPRIMIDO (LARANJA)",
+      "precoVenda": 86,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic 10 mg - 3 comprimidos (2,6-5 kg)",
+      "precoVenda": 100,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic 20 mg - 3 comprimidos (5,1-10 kg)",
+      "precoVenda": 120,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic 5 mg - 3 comprimidos (1,3-2,5 kg)",
+      "precoVenda": 90,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic 80 mg - 3 comprimidos (20,1-40 kg)",
+      "precoVenda": 145,
+      "pagina": 8,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
     }
   ]
 }
