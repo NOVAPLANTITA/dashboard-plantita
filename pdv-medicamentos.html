@@ -26,7 +26,7 @@
  <div class="stack">
   <section class="card" aria-label="Bipagem"><div class="headcard"><h3>▥ Leitura do código de barras</h3><span class="chip">1 leitor • 2 tipos de produto</span></div>
     <form id="scanForm" class="scanner"><input class="scanfield" id="barcode" type="text" placeholder="Bipe aqui ou digite um código e Enter" autocomplete="off" spellcheck="false" aria-label="Código de barras" autofocus><button class="primary" type="submit">ADICIONAR</button></form>
-    <div class="scanner-desc"><small>Sem trocar de modo: etiquetas da balança começando com 2 são lidas pelo mesmo padrão do leitor atual; medicamentos são identificados pelo EAN e pela base DANFE. Etiquetas inválidas ou remédios ausentes da base são sinalizados.</small></div>
+    <div class="scanner-desc"><small>Sem trocar de modo: etiquetas da balança começando com 2 são lidas pelo mesmo padrão do leitor atual; medicamentos são identificados pelo EAN e pela base DANFE. Quando um medicamento ainda não tiver EAN vinculado, abre a janela para identificar e associar o código à apresentação correta.</small></div>
     <div class="shortcuts"><button class="demo" id="testMed" type="button">Testar Credeli 48 mg: <b>5420036978916</b></button><button class="demo" id="testDrontal" type="button">Testar Drontal 20 ml: <b>4007221055259</b></button><button class="demo" id="testGranel" type="button">Testar balança: <b>2000000000961</b> (R$ 0,96)</button></div>
     <div role="status" aria-live="polite" id="message" class="message">Pronto para iniciar um registro.</div><p class="fine">Etiqueta da balança: <code>2000000000961 → R$ 0,96</code>. Medicamentos confirmados: Credeli 48 mg <code>5420036978916 → 978916</code> e Drontal Puppy <code>4007221055259 → 55259</code>. Outras correspondências são provisórias e bloqueadas quando ambíguas. Códigos de DANFE com menos de 5 dígitos exigem um EAN completo conferido.</p>
   </section>
@@ -55,6 +55,13 @@
 <p class="footer">PLANTITA • PREÇOS DAS FOTOS — Ambiente de teste, sem baixa física ou sincronização de vendas.</p>
 </div>
 <div id="modalMed" class="modalback" role="dialog" aria-modal="true" aria-label="Cadastrar medicamento"><div class="dialog"><h3>✚ Cadastro de medicamento (teste)</h3><p>Cadastro excepcional: use somente se o medicamento não constar nas DANFEs. Na leitura normal, NÃO é necessário cadastrar produto por produto.</p><form id="medForm"><div class="field"><label for="medCode">Código da DANFE (ou código completo)</label><input id="medCode" required placeholder="Ex.: 978916"></div><div class="field"><label for="medName">Descrição</label><input id="medName" required placeholder="Nome do medicamento"></div><div class="field"><label for="medPrice">Preço de venda (R$)</label><input id="medPrice" required inputmode="decimal" placeholder="Ex.: 24,90"></div><div class="field"><label for="medStock">Quantidade em estoque (teste)</label><input id="medStock" type="number" min="0" step="1" required value="1"></div><div class="modalactions"><button type="button" class="secondary" data-close="modalMed">Cancelar</button><button class="primary">Salvar no teste</button></div></form></div></div>
+<div id="modalAssociate" class="modalback" role="dialog" aria-modal="true" aria-label="Vincular código de barras ao medicamento"><div class="dialog" style="max-width:700px">
+<h3>🔎 Código ainda não associado</h3><p>O leitor funcionou e registrou <b id="unknownCode"></b>. Escolha o medicamento da lista para vincular esse código à embalagem.</p>
+<div class="field"><label for="assocSearch">Pesquisar nome, apresentação ou dosagem</label><input id="assocSearch" type="search" autocomplete="off" placeholder="Ex.: Doxifin 100 mg"></div>
+<div id="assocResults" style="max-height:340px;overflow:auto;display:grid;gap:7px"></div>
+<p class="fine">Confira a embalagem e o preço transcrito antes de confirmar. O vínculo será salvo <b>somente neste computador/navegador</b>, não em outros aparelhos. Nenhum estoque físico será alterado.</p>
+<div class="modalactions"><button type="button" class="secondary" data-close="modalAssociate">Cancelar</button></div>
+</div></div>
 <script>
 (()=>{
 'use strict';
@@ -64,6 +71,7 @@ function store(key,val){try{localStorage.setItem(key,JSON.stringify(val))}catch(
 function restore(key,fallback){try{let x=JSON.parse(localStorage.getItem(key));return x===null?fallback:x}catch(e){return fallback}}
 const demoCatalog=[{"code":"1094","name":"Seringa Medix 3 ml c/ agulha 25 x 0,7","price":58,"stock":40,"cost":0.36675,"danfe":"14.463","vendor":"Lar Pet","ean":[]},{"code":"935","name":"Vacina Raiva 1 dose LEMA","price":1603,"stock":40,"cost":10.12325,"danfe":"14.463","vendor":"Lar Pet","ean":[]},{"code":"978916","name":"Credeli Gatos 48 mg - 1 comprimido","price":6889,"stock":6,"cost":43.496667,"danfe":"733.628","vendor":"Ollea","ean":["5420036978916"]},{"code":"982258","name":"Zenerella 48 mg - 30 comprimidos","price":25002,"stock":1,"cost":157.86,"danfe":"733.628","vendor":"Ollea","ean":[]},{"code":"975830","name":"Seresto coleira grande","price":24655,"stock":1,"cost":155.67,"danfe":"733.628","vendor":"Ollea","ean":[]},{"code":"55259","name":"Drontal Puppy 20 ml","price":7368,"stock":8,"cost":46.5225,"danfe":"733.628","vendor":"Ollea","ean":["4007221055259"]},{"code":"978923","name":"Credeli Gatos 12 mg - 1 comprimido","price":6128,"stock":2,"cost":38.695,"danfe":"733.628","vendor":"Ollea","ean":[]},{"code":"940388","name":"Credeli - 3 comprimidos (azul)","price":27974,"stock":1,"cost":176.63,"danfe":"733.628","vendor":"Ollea","ean":[]}];
 let catalog=restore(KEYS.catalog,demoCatalog),cart=restore(KEYS.cart,[]),sales=restore(KEYS.sales,[]);
+let unmatchedEAN='';
 if(!Array.isArray(catalog))catalog=demoCatalog;if(!Array.isArray(cart))cart=[];if(!Array.isArray(sales))sales=[];
 function message(m,kind=''){let el=$('message');el.textContent=m;el.className='message '+kind}
 function valueCents(input){let s=String(input||'').trim().replace(/\s|R\$/gi,''); if(!s) return NaN; if(s.includes(',')){s=s.replace(/\./g,'').replace(',','.')} else if(/^\d{1,3}(\.\d{3})+(\.\d{2})?$/.test(s)){s=s.replace(/\./g,'')} let n=Number(s);return Number.isFinite(n)&&n>0?Math.round(n*100):NaN}
@@ -114,6 +122,28 @@ function matchCode(raw){
  if(hits.length>1)return {status:'ambiguous',matches:hits};
  return {status:'unrecognized'};
 }
+function openAssociation(code){
+ if(!checkEAN(code)||/^2\d{12}$/.test(code)){message('Código inválido ou reservado para balança; não pode ser associado como medicamento.','err');return}
+ unmatchedEAN=code;$('unknownCode').textContent=code;$('assocSearch').value='';$('modalAssociate').classList.add('show');
+ renderAssociationCandidates();setTimeout(()=>$('assocSearch').focus(),50);
+ message('Código lido. Escolha o medicamento na janela para vincular este EAN.','warn');
+}
+function renderAssociationCandidates(){
+ const q=norm($('assocSearch').value).replace(/\s+/g,' ');
+ const found=catalog.filter(p=>norm(p.name).includes(q)).slice(0,30);
+ $('assocResults').innerHTML=found.map(p=>'<button type="button" data-assoc-product="'+escapeHtml(p.code)+'" style="display:flex;align-items:center;justify-content:space-between;gap:13px;text-align:left;width:100%;color:white;background:#0b2b30;border:1px solid #31656b;border-radius:11px;padding:12px"><span><b>'+escapeHtml(p.name)+'</b><br><small>'+escapeHtml(p.code)+' • '+(Number.isInteger(p.price)&&p.price>0?'Preço da foto: '+fmt(p.price):'PREÇO PENDENTE — não pode cobrar')+'</small></span><span style="color:#8bf2c1;font-weight:bold">ESCOLHER</span></button>').join('')||'<p class="fine">Nenhum nome correspondente. Confira a descrição ou cadastre o medicamento.</p>';
+}
+function saveAssociation(id){
+ const p=catalog.find(x=>x.code===id),code=unmatchedEAN;if(!p||!code){message('Produto ou código não identificado.','err');return}
+ const other=catalog.find(x=>x!==p&&(x.code===code||(x.ean||[]).includes(code)));
+ if(other){message('EAN já associado a '+other.name+'. Não foi alterado.','err');return}
+ if(!confirm('Confirme na embalagem:\n\nEAN: '+code+'\nProduto: '+p.name+'\nValor transcrito: '+(Number.isInteger(p.price)&&p.price>0?fmt(p.price):'PENDENTE')+'\n\nVincular esse código a esse produto?'))return;
+ if(!Array.isArray(p.ean))p.ean=[];if(!p.ean.includes(code))p.ean.push(code);
+ store(KEYS.catalog,catalog);unmatchedEAN='';$('modalAssociate').classList.remove('show');render();
+ if(Number.isInteger(p.price)&&p.price>0)addMed(p.code);
+ else message('Código vinculado a '+p.name+', porém preço pendente. Não entrou no caixa de teste.','warn');
+ focusScan();
+}
 function readCode(raw){
  const code=String(raw||'').trim();if(!code){message('Bipe ou digite um código.','warn');return}
  const scale=readScaleEAN(code);
@@ -129,8 +159,8 @@ function readCode(raw){
   addMed(med.code);return;
  }
  if(result.status==='ambiguous'){message('⚠ Código ambíguo, sem lançamento: '+result.matches.map(x=>x.name+' ('+x.code+')').join(' / ')+'. Conferir antes de vincular.','err');return}
- if(result.status==='invalid'){message('Código de barras inválido ou não cadastrado: '+code+'. Nenhum item lançado.','err');return}
- message('Medicamento sem EAN associado neste PDV de teste: '+code+'. Pesquise o nome do medicamento no catálogo e use Vincular EAN.','err');
+ if(result.status==='invalid'){message('O código '+code+' não é EAN/GTIN válido. Confira a leitura e os dígitos; nenhum item lançado.','err');return}
+ openAssociation(code);
 }
 function loadPhotoPrices(){const itens=JSON.parse(document.getElementById('plantita-fotos').textContent).itens;const key=s=>norm(s).replace(/\s+/g,' ').replace('zenerelia','zenerella');for(const p of catalog)if(demoCatalog.some(d=>d.code===p.code)){p.price=null;p.stock=99999;}for(const [i,x] of itens.entries()){const price=typeof x.precoVenda==='number'?Math.round(x.precoVenda*100):null;let p=catalog.find(m=>key(m.name)===key(x.produto));if(p){if(price!==null){p.price=price;p.fonte='foto'}else if(p.fonte!=='foto')p.price=null;p.pagina=x.pagina;}else catalog.push({code:'FOTO'+String(i+1).padStart(4,'0'),name:x.produto,price,stock:99999,ean:[],fonte:price===null?'pendente':'foto',pagina:x.pagina});}store(KEYS.catalog,catalog);return itens.length;}
 function save(){store(KEYS.cart,cart);render()}
@@ -150,9 +180,9 @@ const draft=isPending?'<div class="hrow"><div><b>● Registro em andamento</b><b
 const history=todays.slice(-5).reverse().map(s=>'<div class="hrow"><div><b>Registro '+escapeHtml(s.id.slice(-5).toUpperCase())+'</b><br><small>'+escapeHtml(s.time)+' • '+s.items.reduce((n,x)=>n+x.qty,0)+' item(ns)</small></div><b>'+fmt(s.med+s.granel)+'</b></div>').join('');
 $('history').innerHTML=draft+history||'<span class="fine">Nenhum registro concluído hoje.</span>';
 }
-function focusScan(){if(window.matchMedia('(min-width:750px)').matches)$('barcode').focus()}
+function focusScan(){if(!document.querySelector('.modalback.show')&&window.matchMedia('(min-width:750px)').matches)$('barcode').focus()}
 $('scanForm').addEventListener('submit',e=>{e.preventDefault();const v=$('barcode').value;$('barcode').value='';readCode(v);focusScan()});$('testMed').onclick=()=>{readCode('5420036978916');focusScan()};$('testDrontal').onclick=()=>{readCode('4007221055259');focusScan()};$('testGranel').onclick=()=>{readCode('2000000000961');focusScan()};
-document.addEventListener('click',e=>{let rm=e.target.closest('[data-remove]');if(rm){const i=cart.findIndex(x=>x.id===rm.dataset.remove);if(i>=0){const x=cart[i];if(x.type==='med'&&x.qty>1)x.qty--;else cart.splice(i,1);save();message('Item retirado do registro.')}focusScan()}let add=e.target.closest('[data-med]');if(add){addMed(add.dataset.med);focusScan()}let bind=e.target.closest('[data-bind]');if(bind){const p=catalog.find(x=>x.code===bind.dataset.bind);if(p){const raw=prompt('Bipe ou digite o EAN de '+p.name+':');if(raw!==null){const code=raw.trim(),other=catalog.find(x=>x!==p&&((x.ean||[]).includes(code)||x.code===code));if(!checkEAN(code)||/^2\d{12}$/.test(code)||other)message(other?'EAN já associado a outro produto.':'EAN inválido.','err');else{p.ean=p.ean||[];if(!p.ean.includes(code))p.ean.push(code);store(KEYS.catalog,catalog);render();message('EAN vinculado a '+p.name);}}}}let close=e.target.closest('[data-close]');if(close){document.getElementById(close.dataset.close).classList.remove('show');focusScan()}});
+document.addEventListener('click',e=>{let rm=e.target.closest('[data-remove]');if(rm){const i=cart.findIndex(x=>x.id===rm.dataset.remove);if(i>=0){const x=cart[i];if(x.type==='med'&&x.qty>1)x.qty--;else cart.splice(i,1);save();message('Item retirado do registro.')}focusScan()}let add=e.target.closest('[data-med]');if(add){addMed(add.dataset.med);focusScan()}let bind=e.target.closest('[data-bind]');if(bind){const p=catalog.find(x=>x.code===bind.dataset.bind);if(p){const raw=prompt('Bipe ou digite o EAN de '+p.name+':');if(raw!==null){const code=raw.trim(),other=catalog.find(x=>x!==p&&((x.ean||[]).includes(code)||x.code===code));if(!checkEAN(code)||/^2\d{12}$/.test(code)||other)message(other?'EAN já associado a outro produto.':'EAN inválido.','err');else{p.ean=p.ean||[];if(!p.ean.includes(code))p.ean.push(code);store(KEYS.catalog,catalog);render();message('EAN vinculado a '+p.name);}}}}let choose=e.target.closest('[data-assoc-product]');if(choose){saveAssociation(choose.dataset.assocProduct)}let close=e.target.closest('[data-close]');if(close){document.getElementById(close.dataset.close).classList.remove('show');focusScan()}});
 $('clearCart').onclick=()=>{if(confirm('Cancelar o registro atual? Nenhuma baixa de estoque será feita.')){cart=[];save();message('Registro cancelado. Estoque de teste preservado.','warn');focusScan()}};
 $('finish').onclick=()=>{if(!cart.length)return;for(let x of cart.filter(x=>x.type==='med')){let p=catalog.find(c=>c.code===x.code);if(!p||p.stock<x.qty){message('Saldo insuficiente para '+x.name+'. Revise o cadastro de teste.','err');return}}const c=calc();if(!confirm('Finalizar registro de '+fmt(c.total)+'?\nMedicamentos: '+fmt(c.med)+'\nGranel: '+fmt(c.granel)+'\n\nO registro será feito apenas no navegador; não haverá baixa de estoque real.'))return;const date=new Date();let record={id:uid(),day:localDay(date),time:date.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}),timestamp:date.toISOString(),med:c.med,granel:c.granel,items:cart.map(x=>({...x}))};for(const x of cart.filter(x=>x.type==='med')){const p=catalog.find(c=>c.code===x.code);p.stock-=x.qty}sales.push(record);cart=[];store(KEYS.cart,cart);store(KEYS.catalog,catalog);store(KEYS.sales,sales);render();message('✓ Registro concluído no teste: '+fmt(c.total)+'. Nenhuma baixa de estoque físico foi feita.');focusScan()};
 function openModal(id,focus){$(id).classList.add('show');setTimeout(()=>$(focus).focus(),60)}$('newMed').onclick=()=>openModal('modalMed','medCode');
@@ -185,7 +215,7 @@ $('csvFile').onchange=async e=>{
   store(KEYS.catalog,catalog);render();message('✓ '+incoming.length+' itens importados para teste, busca por final da DANFE habilitada.');
  }catch(err){message('Erro no CSV: '+err.message,'err')}finally{e.target.value=''}
 };
-$('catalogFilter').addEventListener('input',render);const fotosCarregadas=loadPhotoPrices();$('dateLabel').textContent=new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(new Date());render();message('✓ '+fotosCarregadas+' registros da tabela fotográfica carregados.');focusScan();
+$('catalogFilter').addEventListener('input',render);$('assocSearch').addEventListener('input',renderAssociationCandidates);const fotosCarregadas=loadPhotoPrices();$('dateLabel').textContent=new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(new Date());render();message('✓ '+fotosCarregadas+' registros da tabela fotográfica carregados.');focusScan();
 })();
 </script>
 </body>
