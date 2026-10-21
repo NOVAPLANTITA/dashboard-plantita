@@ -1,0 +1,1065 @@
+{
+  "atualizadoEm": "2026-10-21",
+  "origem": "Fotos de tabela de venda manuscrita enviadas pelo responsável; valores sujeitos à conferência",
+  "moeda": "BRL",
+  "aviso": "Preços são de VENDA; não representam o custo de DANFE. Não cobrar itens pendentes. Códigos de barras precisam ser vinculados à variante exata.",
+  "itens": [
+    {
+      "produto": "Seringa Medix 3 ml c/ agulha 25 x 0,7",
+      "precoVenda": 1,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Vacina Raiva 1 dose LEMA",
+      "precoVenda": 40,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Credeli Gatos 48 mg - 1 comprimido",
+      "precoVenda": 80,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Zenerelia 48 mg - 30 comprimidos",
+      "precoVenda": null,
+      "pagina": 1,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Seresto coleira grande",
+      "precoVenda": 230,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Drontal Puppy 20 ml",
+      "precoVenda": 70,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Credeli Gatos 12 mg - 1 comprimido",
+      "precoVenda": 68,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Credeli - 3 comprimidos (azul)",
+      "precoVenda": 70,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Agemoxi injetável",
+      "precoVenda": 55,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Alunivet Clean",
+      "precoVenda": null,
+      "pagina": 1,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Apoquel (sem especificação)",
+      "precoVenda": 200,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Aurivet Gel",
+      "precoVenda": 70,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Bio Canis Caixa 32",
+      "precoVenda": 50,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Busofur injetável",
+      "precoVenda": 80,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Condroton 1000",
+      "precoVenda": 165,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Condroton 500",
+      "precoVenda": 106,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Cromidon 40 mg",
+      "precoVenda": 140,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Danni 7,5",
+      "precoVenda": 55,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "DM-Gel",
+      "precoVenda": 148,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Doxiciclina 25",
+      "precoVenda": 30,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Doxifin 200 mg",
+      "precoVenda": 85,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Doxitrat 80 mg",
+      "precoVenda": 50,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Ducoton Pet",
+      "precoVenda": 80,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Emedron 5 mg",
+      "precoVenda": 80,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Enterex 14 sachê",
+      "precoVenda": 25,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Flumax 50 ml",
+      "precoVenda": 68,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Furanil Pomada",
+      "precoVenda": 60,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Furanil Spray",
+      "precoVenda": 117,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Gaviz 5 mg",
+      "precoVenda": 20,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Glicopan Gold 30,5 mL",
+      "precoVenda": 50,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Glicopan Pet 30 mL",
+      "precoVenda": 50,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Hemolitan 30 mL",
+      "precoVenda": 50,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Hemolitan 60 mL",
+      "precoVenda": 50,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Hemolitan Gold 30 mL",
+      "precoVenda": 76,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Hemolitan Gold 60 mL",
+      "precoVenda": 76,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Hep Vet 60 mL",
+      "precoVenda": 145,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Hidrovit 50 mL",
+      "precoVenda": 40,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Labtar 11K",
+      "precoVenda": null,
+      "pagina": 1,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Limp Hidrat",
+      "precoVenda": null,
+      "pagina": 1,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Micromucil Xarope",
+      "precoVenda": 85,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Optivet colírio",
+      "precoVenda": 188,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Organew Pet 500 g",
+      "precoVenda": 140,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Pet Milk 100 mg",
+      "precoVenda": null,
+      "pagina": 1,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Shampoo Pelo & Derme",
+      "precoVenda": 100,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Terramicina 50 ml",
+      "precoVenda": 56,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Vetaglós",
+      "precoVenda": 50,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Vetmax suspensão",
+      "precoVenda": 75,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Vita C Vet 30 mL",
+      "precoVenda": 78,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Zelotril injetável",
+      "precoVenda": 30,
+      "pagina": 1,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Neosulmetina",
+      "precoVenda": 30,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Nutri Full Cat",
+      "precoVenda": 76,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Nutri Full Dog",
+      "precoVenda": 76,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Ocitocina 10 ml",
+      "precoVenda": 20,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Otosana",
+      "precoVenda": 90,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Otovet",
+      "precoVenda": 60,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Oxcell 500",
+      "precoVenda": 105,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Pelo & Derme 1500 comprimido",
+      "precoVenda": 116,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Pelo & Derme Gold 30 comprimidos",
+      "precoVenda": 80,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Penfort 50 ml",
+      "precoVenda": 55,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Periovet Spray",
+      "precoVenda": 60,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Polivamin pó",
+      "precoVenda": 30,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Prediderm 5 mg Caixa",
+      "precoVenda": 24,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Revolution 12% 2-5",
+      "precoVenda": 85,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Revolution 6% 2-5",
+      "precoVenda": 85,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Salminan 30 ml",
+      "precoVenda": null,
+      "pagina": 2,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Sanagogo 20 ml",
+      "precoVenda": 25,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Sara Logo",
+      "precoVenda": 30,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Sec Lac 2 mg",
+      "precoVenda": 185,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Seresto",
+      "precoVenda": 275,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic 5-10 caixa",
+      "precoVenda": 110,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Thuya 90 ml",
+      "precoVenda": 24.5,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Tossicanis",
+      "precoVenda": 66,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Trissulfin 400 mg",
+      "precoVenda": 70,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Vetmax comprimido",
+      "precoVenda": 86,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Vita Gold 50 ml",
+      "precoVenda": 30,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Zelotril 50 ml",
+      "precoVenda": 50,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Óleo Dimex 100 ml",
+      "precoVenda": null,
+      "pagina": 2,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Advocat 8",
+      "precoVenda": 85,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Ai V 50 ml",
+      "precoVenda": 42,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Azicox-2 50 mg",
+      "precoVenda": 100,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Baytril 50 mg",
+      "precoVenda": 50,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Bovacort 50 ml",
+      "precoVenda": null,
+      "pagina": 2,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Cal-D Comprimido",
+      "precoVenda": 67,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Calmavet",
+      "precoVenda": 43,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Canto Lindo",
+      "precoVenda": 20,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Chemital Cat",
+      "precoVenda": 20,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Colírio Simões",
+      "precoVenda": 36,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Condrix 600",
+      "precoVenda": 106,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Condroplex comprimido 500",
+      "precoVenda": 86,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Condroplex cápsulas 500",
+      "precoVenda": 72,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Credeli 1,2",
+      "precoVenda": 56,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Credeli 2,5",
+      "precoVenda": 60,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Credeli Gato 2",
+      "precoVenda": null,
+      "pagina": 2,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Dectomax 50 ml",
+      "precoVenda": 45,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Dermotrat Spray",
+      "precoVenda": 143,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Dexacort 10 ml",
+      "precoVenda": 20,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Dexium 50 ml",
+      "precoVenda": 62,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Doxitrat 50 mg",
+      "precoVenda": 45,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Entero Cat Pasta",
+      "precoVenda": 112,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Equalan Gold",
+      "precoVenda": 50,
+      "pagina": 2,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Maxicam 20 mg",
+      "precoVenda": 50,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Milk 100 mg",
+      "precoVenda": 70,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Milk 60 g",
+      "precoVenda": null,
+      "pagina": 3,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Neo Pet Cat",
+      "precoVenda": 39,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Ocitocina 50 ml",
+      "precoVenda": 20,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Organew 9 kg",
+      "precoVenda": 170,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Otocan",
+      "precoVenda": 115,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Otocana solução",
+      "precoVenda": 67,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Otoguard",
+      "precoVenda": 130,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Otoplisio",
+      "precoVenda": 95,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Panzinol 100 ml",
+      "precoVenda": 26,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Pelo & Derme 750 30 comprimidos",
+      "precoVenda": 95,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Periovet Gel",
+      "precoVenda": 72,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Prediderm 20 mg Caixa",
+      "precoVenda": 60,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Pregoutot",
+      "precoVenda": null,
+      "pagina": 3,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Pro Cart 1000",
+      "precoVenda": 154,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Pro Cart 2100",
+      "precoVenda": 277,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Probiótico Caixa c/ 12",
+      "precoVenda": 65,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Promater",
+      "precoVenda": 114,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Puni? 100 ml",
+      "precoVenda": null,
+      "pagina": 3,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Refor",
+      "precoVenda": null,
+      "pagina": 3,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Revolution 12% 10-20",
+      "precoVenda": 129,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Revolution 12% 20-40",
+      "precoVenda": null,
+      "pagina": 3,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Revolution 12% 5-10",
+      "precoVenda": 96,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Revolution Plus 2-6",
+      "precoVenda": 100,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Revolution Plus 5-7",
+      "precoVenda": 115,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Sanap Dog",
+      "precoVenda": null,
+      "pagina": 3,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Sebotrat O",
+      "precoVenda": 129,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Sebotrat S",
+      "precoVenda": 129,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Sec Lac 5 mg",
+      "precoVenda": 110,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Seniox",
+      "precoVenda": 165,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic 10-20 caixa",
+      "precoVenda": 135,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic 3-2-3 caixa",
+      "precoVenda": 79,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic 40-60 caixa",
+      "precoVenda": 173,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic T10 10-20",
+      "precoVenda": 135,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic T10 2-5",
+      "precoVenda": 105,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic T10 20-40",
+      "precoVenda": 165,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic T10 3-2-3",
+      "precoVenda": 100,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic T10 40-60",
+      "precoVenda": 186,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Simparic T10 5-10",
+      "precoVenda": 115,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Soro antiofídico",
+      "precoVenda": 35,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Top Line",
+      "precoVenda": 277,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Tossedex",
+      "precoVenda": 66,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Trissulfin 1600 mg",
+      "precoVenda": 275,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Trissulfin 50 ml",
+      "precoVenda": 32,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Tylan 200 100 ml",
+      "precoVenda": 30,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Tylotrat",
+      "precoVenda": null,
+      "pagina": 3,
+      "status": "pendente",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Up Flora",
+      "precoVenda": 65,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Ômega 3 Cat",
+      "precoVenda": 80,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Ômega 3 Dog",
+      "precoVenda": 75,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    },
+    {
+      "produto": "Ômega Top 1000",
+      "precoVenda": 155,
+      "pagina": 3,
+      "status": "transcrito_conferir",
+      "codigoBarras": null
+    }
+  ]
+}
