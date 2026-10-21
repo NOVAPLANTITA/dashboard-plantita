@@ -2677,6 +2677,16 @@
       "pagina": 8,
       "status": "transcrito_conferir",
       "codigoBarras": null
+    },
+    {
+      "produto": "Top Dog Ourofino 2,5 kg - caixa com 4 comprimidos",
+      "precoVenda": 36,
+      "pagina": null,
+      "status": "etiqueta_foto_conferir",
+      "codigoBarras": "7898019866631",
+      "fontePreco": "Etiqueta da embalagem fotografada pelo usuário em 21/10/2026",
+      "codigoDanfe": null,
+      "observacao": "EAN da embalagem confirmado visualmente; código interno da DANFE não encontrado na planilha recuperada"
     }
   ]
 }
