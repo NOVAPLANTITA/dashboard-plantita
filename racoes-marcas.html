@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#031214">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>Plantita • Rações vendidas e Sacos Abertos</title>
+<script src="auth.js?v=20261022-racoes1"></script><script>PlantitaAuth.require('supervisor');</script>
+<style>
+:root{--bg:#031214;--card:#09252a;--card2:#0d3033;--border:#20535b;--txt:#eaf9f7;--muted:#a2c0bf;--green:#26e5a2;--blue:#68c6fa;--amber:#ffd18b;--red:#ff9f9e}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 8% -12%,#125448,transparent 44%),var(--bg);font:14px/1.45 Arial,Helvetica,sans-serif;color:var(--txt)}
+header{position:sticky;top:0;z-index:5;background:#061c21ec;border-bottom:1px solid var(--border);padding:12px clamp(12px,3vw,28px);display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;backdrop-filter:blur(8px)}
+header h1{margin:0;font-size:19px}header p{margin:3px 0 0;font-size:11px;color:var(--muted)}header nav{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+a,button{font:inherit}header a,header button,.btn{display:inline-flex;align-items:center;text-decoration:none;justify-content:center;background:#113d41;color:white;border:1px solid #307177;padding:10px 12px;border-radius:11px;font-size:12px;font-weight:800;cursor:pointer}
+button:hover,a:hover{filter:brightness(1.15)}button:disabled{opacity:.45;cursor:not-allowed}
+main{max-width:1450px;padding:18px clamp(12px,3vw,24px) 46px;margin:auto}
+p{margin:7px 0 12px}h2{font-size:18px;margin:0 0 9px}h3{font-size:15px;margin:0 0 5px}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:12px}.card{background:linear-gradient(155deg,#0c2d32,#071c20);border:1px solid var(--border);border-radius:16px;padding:16px;min-width:0}
+.sub{color:var(--muted);font-size:12px}.tip{border-left:3px solid var(--amber);padding:10px 12px;background:#40331f6e;color:#ffe7be;border-radius:9px;font-size:12px}
+.toolbar{display:flex;gap:11px;flex-wrap:wrap;align-items:end;margin:15px 0}.field{display:grid;gap:5px;min-width:170px}.field label{font-weight:700;color:var(--muted);font-size:11px}
+select,input{background:#071c22;color:var(--txt);border:1px solid #37757b;border-radius:10px;padding:11px 12px;font:inherit;min-height:43px;width:100%}
+.kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px;margin:14px 0}
+.kpi{border:1px solid var(--border);background:#0b2a30;border-radius:15px;padding:14px;min-width:0}.kpi span{display:block;color:var(--muted);font-size:11px}.kpi b{display:block;font-size:clamp(19px,2.4vw,27px);margin:6px 0;font-variant-numeric:tabular-nums;line-height:1.2}.kpi small{font-size:10px;color:#a4c7c2}
+.flex{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.tag{border:1px solid #396969;color:var(--muted);padding:5px 9px;border-radius:99px;font-size:10px}
+.status{padding:8px 12px;font-size:12px;color:var(--muted);border-radius:10px;background:#103138;margin:12px 0}
+.ok{color:var(--green)}.warn{color:var(--amber)}.err{color:var(--red)}
+.tablewrap{overflow:auto;border:1px solid var(--border);border-radius:13px;margin-top:11px}
+table{border-collapse:collapse;width:100%;min-width:860px}th,td{text-align:left;padding:11px;border-bottom:1px solid #235057;font-size:12px;vertical-align:top}
+th{background:#10363c;color:#b4d2cc;font-size:11px;position:sticky;top:0;white-space:nowrap}td b{color:#eefcf9}td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tbody tr:hover{background:#10373a}tr.selectable{cursor:pointer}tr.active{background:#12483f}
+strong.green{color:var(--green)}.blue{color:var(--blue)}.amber{color:var(--amber)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:14px}
+.chartRow{display:grid;grid-template-columns:155px 1fr;align-items:center;gap:9px;margin:12px 0;font-size:12px}.barpair{display:grid;gap:4px}.track{width:100%;height:12px;background:#163a3e;border-radius:7px;overflow:hidden}.bar{height:100%;background:var(--green);min-width:0}.bar.alt{background:var(--blue)}.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--muted)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px;background:var(--green)}.dot.alt{background:var(--blue)}
+.empty{color:var(--muted);padding:15px;font-size:12px}.scroll{max-height:460px;overflow:auto}
+details{margin-top:12px}summary{cursor:pointer;color:var(--green);font-weight:700}
+footer{margin-top:20px;color:#83aaa9;font-size:11px}
+@media(max-width:980px){.hero,.two{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){header h1{font-size:16px}.kpis{grid-template-columns:1fr 1fr}.toolbar{align-items:stretch}.toolbar .field{flex:1;min-width:135px}.card{padding:12px}.kpi b{font-size:20px}.chartRow{grid-template-columns:110px 1fr}.sub{font-size:11px}}
+</style>
+</head>
+<body>
+<header><div><h1>🌾 Rações • Entregas e Sacos Abertos</h1><p>Plantita • Ranking por marca e produto</p></div><nav><a href="dashboard-v13.html?v=20261022-racoes1">← Dashboard</a><a href="entregas-v3.html">🚚 Entregas</a><a href="granel.html">⚖️ Granel</a><button id="refresh" type="button">↻ Atualizar</button></nav></header>
+<main>
+<section class="hero">
+ <article class="card"><h2>Raio X das rações por marca</h2><p class="sub">As entregas são lidas das comandas registradas na dashboard. O granel mostra os <strong>sacos abertos</strong> da base Google, que representam reposição e NÃO vendas concluídas.</p><p class="tip">Uma entrega de <b>2 Special Dog 15 kg</b> soma 2 embalagens (30 kg em embalagens); <b>6 kg Magnus</b> soma 6 kg avulsos. Os três tipos são apresentados separadamente, sem somar grandezas incompatíveis.</p></article>
+ <article class="card"><h2>Conexão com os sacos abertos</h2><p class="sub">A tela consulta o mesmo Google Apps Script do controle de granel. Se estiver usando outro computador ou celular, conecte a URL <b>/exec</b> neste aparelho.</p><div id="grainStatus" class="status">Aguardando consulta…</div><button type="button" class="btn" id="connect">⚙ Conectar Google</button><p id="grainDate" class="sub"></p></article>
+</section>
+<div class="toolbar">
+ <div class="field"><label for="period">Período das entregas</label><select id="period"><option value="this">Mês atual</option><option value="all">Todas as datas cadastradas</option></select></div>
+ <div class="field"><label for="brandFilter">Marca</label><select id="brandFilter"><option value="">Todas as marcas</option></select></div>
+ <div class="field" style="flex:1"><label for="search">Buscar marca ou produto</label><input id="search" type="search" placeholder="Ex.: Magnus, Golden, Premier"></div>
+ <button type="button" class="btn" id="exportCsv">↓ Exportar resumo CSV</button>
+</div>
+<div id="dataStatus" class="status">Carregando comandas registradas…</div>
+<section class="kpis">
+ <article class="kpi"><span>Embalagens vendidas • entregas</span><b id="kBags">—</b><small>Somente quantidade explícita</small></article>
+ <article class="kpi"><span>Kg vendidos em embalagens</span><b id="kPackKg">—</b><small>Somente pesos informados</small></article>
+ <article class="kpi"><span>Kg avulsos • entregas</span><b id="kLoose">—</b><small>Não confundir com sacos abertos</small></article>
+ <article class="kpi"><span>Sacos abertos • granel</span><b id="kOpened">—</b><small id="kOpenedNote">Aguardando Google</small></article>
+ <article class="kpi"><span>Kg abertos • granel</span><b id="kOpenedKg">—</b><small id="kOpenedKgNote">Aguardando Google</small></article>
+</section>
+<section class="card">
+ <div class="flex"><div><h2>Ranking de rações por marca</h2><p class="sub" id="rankHelp">Escolha uma marca para ver as comandas e os produtos associados.</p></div><span id="totalBrands" class="tag">—</span></div>
+ <div class="tablewrap"><table><thead><tr><th>Marca</th><th class="num">Embalagens<br>nas entregas</th><th class="num">Kg em<br>embalagens</th><th class="num">Kg avulsos<br>nas entregas</th><th class="num">Sacos<br>abertos</th><th class="num">Kg<br>abertos</th><th class="num">Itens sem<br>quantidade</th></tr></thead><tbody id="ranking"></tbody></table></div>
+ <p class="sub" id="periodNotice"></p>
+</section>
+<section class="two">
+ <article class="card"><h2>Comparação por marca</h2><div class="legend"><span><i class="dot"></i>Embalagens vendidas em entregas</span><span><i class="dot alt"></i>Sacos abertos no granel</span></div><div id="chart" style="margin-top:12px"></div><p class="sub">Comparação em quantidade de sacos, não em faturamento. Abertura de saco não prova venda do conteúdo.</p></article>
+ <article class="card"><h2>Produtos da marca selecionada</h2><p class="sub">Totais extraídos das descrições das comandas e do ranking de sacos abertos. Linhas incompletas permanecem em conferência.</p><div class="tablewrap scroll"><table><thead><tr><th>Produto / apresentação</th><th>Fonte</th><th class="num">Qtd.</th><th class="num">Kg</th></tr></thead><tbody id="products"></tbody></table></div></article>
+</section>
+<section class="card" style="margin-top:14px">
+ <div class="flex"><div><h2>Conferência das entregas</h2><p class="sub">Pedidos com quantidade ou peso não discriminados ficam visíveis aqui. Valores e taxas da entrega não são transformados em quantidade de ração.</p></div><span class="tag" id="reviewCount">—</span></div>
+ <div class="tablewrap scroll"><table><thead><tr><th>Data</th><th>Marca</th><th>Descrição da comanda</th><th>Leitura</th></tr></thead><tbody id="reviewRows"></tbody></table></div>
+</section>
+<footer>Fontes: comandas de entrega registradas no repositório Plantita + resumo da base central do granel. O ranking de sacos abertos é mensal e depende da conexão com o Google no aparelho. Não há baixa de estoque nem alteração das comandas.</footer>
+</main>
+<script>
+'use strict';
+const SOURCES=["data/comandas-entrega.json","data/comandas-entrega-20260909.json","data/comandas-entrega-20260910.json","data/comandas-entrega-20260911.json","data/comandas-entrega-20260911-extra.json","data/comandas-entrega-20260911-extra2.json","data/comandas-entrega-20260912.json","data/comandas-entrega-20260913.json","data/comandas-entrega-20260914.json","data/comandas-entrega-20260915.json","data/comandas-entrega-20260916.json","data/comandas-entrega-20260917.json","data/comandas-entrega-20260918.json","data/comandas-entrega-20260919.json","data/comandas-entrega-20260920.json","data/comandas-entrega-20260921.json","data/comandas-entrega-20260922.json","data/comandas-entrega-20260923.json","data/comandas-entrega-20260924.json","data/comandas-entrega-20260925.json","data/comandas-entrega-20260926.json","data/comandas-entrega-20260928.json","data/comandas-entrega-20260929.json","data/comandas-entrega-20260930.json","data/comandas-entrega-20261001.json","data/comandas-entrega-20261002.json","data/comandas-entrega-20261003.json","data/comandas-entrega-20261005.json","data/comandas-entrega-20261006.json","data/comandas-entrega-20261007.json","data/comandas-entrega-20261008.json","data/comandas-entrega-20261009.json","data/comandas-entrega-20261010.json","data/comandas-entrega-20261011.json","data/comandas-entrega-20261012.json","data/comandas-entrega-20261013.json","data/comandas-entrega-20261014.json","data/comandas-entrega-20261015.json","data/comandas-entrega-20261016.json","data/comandas-entrega-20261017.json","data/comandas-entrega-20261019.json","data/comandas-entrega-20261018.json","data/comandas-entrega-20261020.json","data/comandas-entrega-20261021.json"];
+const ENDPOINT_KEY='plantita_granel_dashboard_endpoint_v1',LEGACY_KEY='plantita_granel_sync_endpoint_v1';
+const $=id=>document.getElementById(id),fmt=n=>new Intl.NumberFormat('pt-BR',{maximumFractionDigits:2}).format(Number(n)||0),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const normal=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ').trim();
+const num=s=>Number(String(s||'').replace(',','.'));
+const dateKey=s=>{const m=String(s||'').match(/^(\d{2})\/(\d{2})\/(\d{4})/);return m?m[3]+'-'+m[2]:''};
+const currentPeriod=()=>new Date().getFullYear()+'-'+String(new Date().getMonth()+1).padStart(2,'0');
+let deliveryRows=[],grain=null,grainPeriod='',selectedBrand='',failedSources=0,grainError='';
+function brandOf(name){
+ const s=normal(name);
+ const tests=[
+ [/special\s*(?:dog|cao|caes)|especial\s*dog|specialdog|special\s*gold/i,'Special Dog'],
+ [/special\s*(?:cat|gato|gatos)|specialcat|special\s*grook/i,'Special Cat'],
+ [/\bpremier\b|\bpremie\b/,'Premier'],
+ [/\bgolden\b/,'Golden'],
+ [/\bmagnus\b/,'Magnus'],
+ [/\borigens?\b|\borigen\b/,'Origens'],
+ [/\bquatree\b/,'Quatree'],
+ [/\bbionatural\b|\bbio\s*natural\b/,'Bionatural'],
+ [/\bformula\s*natural\b/,'Fórmula Natural'],
+ [/\bpedigree\b/,'Pedigree'],
+ [/\bwhiskas\b/,'Whiskas'],
+ [/\bkatchow\b|\bcat\s*chow\b/,'Cat Chow'],
+ [/\bgran\s*plus\b|\bgranplus\b/,'GranPlus'],
+ [/\blester\b/,'Lester'],[/\bmisty\b/,'Misty'],
+ [/\bgatan\b/,'Gatan'],[/\bbomguy\b/,'Bomguy'],
+ [/\ballcanis\b|\balcanes\b|\balcaniques\b|\balcanis\b/,'Allcanis'],
+ [/\bspecial\b|\bespecial\b/,'Special (conferir linha)'],
+ [/\bmilho\b|\bquirera\b|\bmistura\s+(?:para|de)\s+(?:papagaio|periquito|aves)\b/,'Grãos / sem marca'],
+ [/\bengorda\b|\bcrescimento\b|\bracao\b|\bclassi(?:c)?\b/,'Marca não informada']
+ ];
+ for(const [re,label] of tests)if(re.test(s))return label;
+ return '';
+}
+function itemLines(desc){
+ return String(desc||'').replace(/\r/g,'\n').split(/\s*(?:;|\+|\n)\s*/).map(x=>x.trim()).filter(Boolean);
+}
+function parseDeliveryLine(raw){
+ const text=String(raw||''),s=normal(text);
+ if(!s||/^\s*(?:taxa de entrega|entrega|frete)\b/.test(s))return null;
+ if(/\b(?:saches?|pat[eê]s?|petiscos?|biscoitos?|ossinhos?|tiras de|snacks?)\b/i.test(s))return null;
+ const brand=brandOf(text);
+ if(!brand)return null;
+ const clean=s.replace(/(?:r\$|\bvalor\b)\s*[\d.,]+.*$/,'').replace(/\s*[—–-]\s*[\d.,]+\s*$/,'').trim();
+ let packages=0,packKg=0,looseKg=0,weightKnown=false,quantityKnown=false,kind='Quantidade não informada';
+ const loose=clean.match(/^(\d+(?:[.,]\d+)?)\s*(?:kg|quilos?|kilos?)\b/);
+ if(loose){looseKg=num(loose[1]);quantityKnown=true;kind='Avulso: '+fmt(looseKg)+' kg';}
+ else {
+  const prefix=clean.match(/^(\d+)\s*(?:x\s*|sacos?\s+(?:de\s+)?|pacotes?\s+(?:de\s+)?|fardos?\s+(?:de\s+)?|unidades?\s+(?:de\s+)?)?(.+)$/);
+  if(prefix){
+   packages=Number(prefix[1]);quantityKnown=true;
+   const weight=prefix[2].match(/(\d+(?:[.,]\d+)?)\s*(?:kg|quilos?|kilos?)\b/);
+   if(weight){packKg=packages*num(weight[1]);weightKnown=true;}
+   kind=fmt(packages)+' embalagem(ns)'+(weightKnown?' • '+fmt(packKg)+' kg':' • peso não informado');
+  }
+ }
+ return {brand,text,packages,packKg,looseKg,quantityKnown,weightKnown,kind};
+}
+function rowKey(x){return [x.data||'',x.cliente||'',x.telefone||'',x.endereco||'',Number(x.total||0).toFixed(2)].join('|').toLowerCase()}
+async function loadDeliveries(){
+ $('dataStatus').textContent='Lendo '+SOURCES.length+' arquivos de comandas…';
+ const collected=[],bad=[];let next=0;
+ async function worker(){while(next<SOURCES.length){const ix=next++,path=SOURCES[ix];try{const res=await fetch(path+'?v=20261022-racoes1',{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);const json=await res.json();if(!Array.isArray(json.comandas))throw Error('Sem lista de comandas');for(const c of json.comandas)collected.push(c)}catch(e){bad.push(path);console.warn('Comandas não carregadas:',path,e)}}}
+ await Promise.all(Array.from({length:Math.min(8,SOURCES.length)},()=>worker()));
+ failedSources=bad.length;
+ const unique=new Map();for(const c of collected)unique.set(rowKey(c),c);
+ deliveryRows=[];
+ for(const c of unique.values())for(const raw of itemLines(c.descricao)){
+  const p=parseDeliveryLine(raw);
+  if(p)deliveryRows.push({...p,data:c.data||'',month:dateKey(c.data),conferencia:c.conferencia||''});
+ }
+ const periods=[...new Set(deliveryRows.map(x=>x.month).filter(Boolean))].sort().reverse();
+ $('period').innerHTML='<option value="this">Mês atual</option>'+periods.map(x=>'<option value="'+esc(x)+'">'+esc(x.slice(5)+'/'+x.slice(0,4))+'</option>').join('')+'<option value="all">Todas as datas cadastradas</option>';
+ $('period').value=periods.includes(currentPeriod())?'this':(periods[0]||'all');
+ $('dataStatus').className='status '+(bad.length?'warn':'ok');
+ $('dataStatus').textContent=fmt(unique.size)+' comandas únicas consultadas em '+fmt(SOURCES.length-bad.length)+' de '+fmt(SOURCES.length)+' arquivos. '+fmt(deliveryRows.length)+' linhas de ração/grãos reconhecidas.'+(bad.length?' ATENÇÃO: '+bad.length+' fonte(s) indisponível(is); os totais são parciais.':'');
+ refreshBrandFilter();render();
+}
+function getEndpoint(){try{return (localStorage.getItem(ENDPOINT_KEY)||localStorage.getItem(LEGACY_KEY)||'').trim()}catch(e){return ''}}
+function configGoogle(){
+ const url=prompt('Cole a URL /exec do Google Apps Script usada no controle de granel:',getEndpoint());
+ if(url===null)return;
+ const v=url.trim();
+ if(!v){localStorage.removeItem(ENDPOINT_KEY);grain=null;grainPeriod='';grainError='Sem conexão Google configurada neste aparelho.';render();return}
+ if(!/^https:\/\/script\.google\.com\/macros\/s\//i.test(v)&&!/^https:\/\/script\.googleusercontent\.com\//i.test(v)){alert('A URL não parece ser um endereço /exec do Apps Script.');return}
+ localStorage.setItem(ENDPOINT_KEY,v);loadGrain();
+}
+function jsonp(url){
+ return new Promise((resolve,reject)=>{
+  const cb='PlantitaRacoes_'+Date.now()+'_'+Math.floor(Math.random()*100000);
+  const script=document.createElement('script');
+  const timer=setTimeout(()=>finish(new Error('Tempo limite excedido.')),20000);
+  function finish(err,data){clearTimeout(timer);try{delete window[cb]}catch(e){}script.remove();err?reject(err):resolve(data)}
+  window[cb]=d=>finish(null,d);
+  script.onerror=()=>finish(new Error('Falha de acesso ao Apps Script.'));
+  script.src=url+(url.includes('?')?'&':'?')+'callback='+encodeURIComponent(cb)+'&_='+Date.now();
+  document.head.appendChild(script);
+ });
+}
+async function loadGrain(){
+ const url=getEndpoint();
+ if(!url){grain=null;grainPeriod='';grainError='Sem conexão: clique em Conectar Google para ver os sacos abertos.';render();return}
+ $('grainStatus').textContent='Consultando sacos abertos da base central…';
+ try{
+  const data=await jsonp(url);
+  if(!data||data.ok!==true||!data.month)throw Error(data&&data.error||'Resumo mensal indisponível.');
+  grain=data.month;
+  const generated=data.generatedAt?new Date(data.generatedAt):new Date();
+  const valid=!Number.isNaN(generated.getTime());
+  grainPeriod=(valid?generated:new Date()).getFullYear()+'-'+String((valid?generated:new Date()).getMonth()+1).padStart(2,'0');
+  grainError='';
+ }catch(e){grain=null;grainPeriod='';grainError='Não foi possível consultar os sacos abertos: '+(e.message||e);console.warn(e)}
+ refreshBrandFilter();render();
+}
+function grainProducts(){
+ if(!grain)return [];
+ if(Array.isArray(grain.rankingProdutos))return grain.rankingProdutos.map(x=>({brand:brandOf(x.produto||'' )||'Marca não informada',product:String(x.produto||'Não identificado'),sacks:Math.max(0,Number(x.sacos)||0),kg:Math.max(0,Number(x.kg)||0),type:'produto'}));
+ if(Array.isArray(grain.rankingMarcas))return grain.rankingMarcas.map(x=>({brand:brandOf(x.marca||'')||String(x.marca||'Marca não informada'),product:'Produtos não detalhados',sacks:Math.max(0,Number(x.sacos)||0),kg:Math.max(0,Number(x.kg)||0),type:'marca'}));
+ return [];
+}
+function selectedPeriod(){return $('period').value==='this'?currentPeriod():$('period').value}
+function filteredDeliveries(){
+ const period=selectedPeriod();
+ return deliveryRows.filter(x=>period==='all'||x.month===period);
+}
+function selectedGrain(){
+ // A ponte existente fornece somente o mês corrente, não histórico por intervalo.
+ // Para outros meses ou "todas as datas", não juntar números de períodos incompatíveis.
+ const period=selectedPeriod();
+ return grain&&grainPeriod===period?grainProducts():[];
+}
+function refreshBrandFilter(){
+ const previous=$('brandFilter').value;
+ const brands=[...new Set([...deliveryRows.map(x=>x.brand),...grainProducts().map(x=>x.brand)])].filter(Boolean).sort((a,b)=>a.localeCompare(b,'pt-BR'));
+ $('brandFilter').innerHTML='<option value="">Todas as marcas</option>'+brands.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join('');
+ $('brandFilter').value=brands.includes(previous)?previous:'';
+}
+function combine(){
+ const deliveries=filteredDeliveries(),gp=selectedGrain(),map=new Map();
+ const get=b=>{if(!map.has(b))map.set(b,{brand:b,packages:0,packKg:0,looseKg:0,opened:0,openedKg:0,pendencias:0,deliveryLines:0,products:[]});return map.get(b)};
+ for(const x of deliveries){const a=get(x.brand);a.packages+=x.packages;a.packKg+=x.packKg;a.looseKg+=x.looseKg;a.deliveryLines++;if(!x.quantityKnown)a.pendencias++;a.products.push({text:x.text,source:'Entrega • '+x.data,qty:x.quantityKnown?(x.packages?fmt(x.packages)+' emb.':fmt(x.looseKg)+' kg avulsos'):'Pendente',kg:x.packKg+x.looseKg,needsReview:!x.quantityKnown,record:x})}
+ for(const x of gp){const a=get(x.brand);a.opened+=x.sacks;a.openedKg+=x.kg;a.products.push({text:x.product,source:'Sacos abertos • '+grainPeriod,qty:fmt(x.sacks)+' sacos',kg:x.kg,needsReview:false})}
+ const q=normal($('search').value),choice=$('brandFilter').value;
+ let result=[...map.values()].filter(x=>(!choice||choice===x.brand)&&(!q||normal(x.brand).includes(q)||x.products.some(p=>normal(p.text).includes(q))));
+ result.sort((a,b)=>b.packages-a.packages||b.opened-a.opened||a.brand.localeCompare(b.brand,'pt-BR'));
+ return result;
+}
+function render(){
+ const period=selectedPeriod(),aligned=grain&&period===grainPeriod,haveGrain=!!grain;
+ $('grainStatus').className='status '+(haveGrain?'ok':'warn');
+ $('grainStatus').textContent=haveGrain?'Google conectado • '+(grain.rankingProdutos?'ranking por produto':grain.rankingMarcas?'ranking por marca (sem detalhamento de produtos)':'sem ranking de sacos'):'⚠ '+(grainError||'Aguardando conexão com o Google.');
+ $('grainDate').textContent=haveGrain?'Resumo granel disponível para '+grainPeriod.slice(5)+'/'+grainPeriod.slice(0,4)+'. O histórico de meses anteriores não está incluído nesta consulta.':'';
+ $('periodNotice').textContent=aligned?'Períodos alinhados: entregas e sacos abertos no mesmo mês. São movimentações diferentes e não devem ser somadas como vendas.':haveGrain?'Sacos abertos disponíveis somente para '+grainPeriod.slice(5)+'/'+grainPeriod.slice(0,4)+'. Para não misturar períodos, a coluna do granel fica sem valor na seleção atual.':'Sacos abertos ainda indisponíveis neste aparelho; a falta de conexão não significa zero saco aberto.';
+ const rows=combine(),deliveries=filteredDeliveries(),grank=selectedGrain(),q=normal($('search').value);
+ const packages=rows.reduce((s,x)=>s+x.packages,0),packedKg=rows.reduce((s,x)=>s+x.packKg,0),looseKg=rows.reduce((s,x)=>s+x.looseKg,0);
+ const opened=aligned?grank.reduce((s,x)=>s+x.sacks,0):null,openedKg=aligned?grank.reduce((s,x)=>s+x.kg,0):null;
+ $('kBags').textContent=fmt(packages);
+ $('kPackKg').textContent=fmt(packedKg)+' kg';
+ $('kLoose').textContent=fmt(looseKg)+' kg';
+ $('kOpened').textContent=opened===null?'—':fmt(opened);
+ $('kOpenedKg').textContent=openedKg===null?'—':fmt(openedKg)+' kg';
+ $('kOpenedNote').textContent=opened===null?'Mês não disponível / Google desconectado':'Sacos registrados no mês';
+ $('kOpenedKgNote').textContent=openedKg===null?'Mês não disponível / Google desconectado':'Reposição, não venda';
+ $('totalBrands').textContent=fmt(rows.length)+' marcas exibidas';
+ $('rankHelp').textContent=fmt(deliveries.length)+' linhas de rações/grãos identificadas em entregas selecionadas. Clique numa marca para detalhar.';
+ $('ranking').innerHTML=rows.map(x=>'<tr class="selectable '+(selectedBrand===x.brand?'active':'')+'" data-brand="'+esc(x.brand)+'"><td><b>'+esc(x.brand)+'</b></td><td class="num">'+fmt(x.packages)+'</td><td class="num">'+fmt(x.packKg)+'</td><td class="num">'+fmt(x.looseKg)+'</td><td class="num">'+(aligned?fmt(x.opened):'—')+'</td><td class="num">'+(aligned?fmt(x.openedKg):'—')+'</td><td class="num '+(x.pendencias?'amber':'')+'">'+fmt(x.pendencias)+'</td></tr>').join('')||'<tr><td colspan="7" class="empty">Nenhuma ração encontrada para estes filtros ou período.</td></tr>';
+ if(!rows.some(x=>x.brand===selectedBrand))selectedBrand=rows.length?rows[0].brand:'';
+ const max=Math.max(1,...rows.map(x=>Math.max(x.packages,aligned?x.opened:0)));
+ $('chart').innerHTML=rows.slice(0,12).map(x=>'<div class="chartRow"><span>'+esc(x.brand)+'</span><div class="barpair"><div class="track" title="Entregas: '+fmt(x.packages)+'"><div class="bar" style="width:'+Math.min(100,x.packages/max*100)+'%"></div></div><div class="track" title="Granel: '+(aligned?fmt(x.opened):'sem dados')+'"><div class="bar alt" style="width:'+(aligned?Math.min(100,x.opened/max*100):0)+'%"></div></div></div></div>').join('')||'<div class="empty">Sem dados para o gráfico.</div>';
+ const chosen=rows.find(x=>x.brand===selectedBrand),prods=chosen?chosen.products:[];
+ $('products').innerHTML=prods.map(x=>'<tr><td>'+esc(x.text)+'</td><td>'+esc(x.source)+'</td><td class="num '+(x.needsReview?'amber':'')+'">'+esc(x.qty)+'</td><td class="num">'+(x.kg?fmt(x.kg):'—')+'</td></tr>').join('')||'<tr><td colspan="4" class="empty">Selecione uma marca no ranking.</td></tr>';
+ const review=deliveries.filter(x=>!x.quantityKnown).filter(x=>(!$('brandFilter').value||x.brand===$('brandFilter').value)&&(!q||normal(x.brand+' '+x.text).includes(q))).sort((a,b)=>b.month.localeCompare(a.month));
+ $('reviewCount').textContent=fmt(review.length)+' linha(s) pendentes';
+ $('reviewRows').innerHTML=review.slice(0,220).map(x=>'<tr><td>'+esc(x.data)+'</td><td>'+esc(x.brand)+'</td><td>'+esc(x.text)+'</td><td class="amber">Quantidade não informada / conferir embalagem</td></tr>').join('')||'<tr><td colspan="4" class="empty">Nenhuma linha pendente entre as identificadas neste filtro.</td></tr>';
+}
+function exportCSV(){
+ const rows=[['Marca','Embalagens entregas','Kg em embalagens','Kg avulsos nas entregas','Sacos abertos no granel (mes igual)','Kg abertos no granel','Itens sem quantidade']];
+ for(const x of combine())rows.push([x.brand,x.packages,x.packKg,x.looseKg,grain&&selectedPeriod()===grainPeriod?x.opened:'',grain&&selectedPeriod()===grainPeriod?x.openedKg:'',x.pendencias]);
+ const cell=x=>'"'+String(x??'').replace(/"/g,'""')+'"';
+ const csv='\ufeff'+rows.map(r=>r.map(cell).join(';')).join('\r\n'),u=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');
+ a.href=u;a.download='Plantita_Racoes_por_Marca_'+selectedPeriod()+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1200);
+}
+$('connect').onclick=configGoogle;
+$('refresh').onclick=()=>{loadDeliveries();loadGrain()};
+$('exportCsv').onclick=exportCSV;
+$('period').addEventListener('change',()=>{selectedBrand='';render()});
+$('brandFilter').addEventListener('change',()=>{selectedBrand=$('brandFilter').value;render()});
+$('search').addEventListener('input',()=>{selectedBrand='';render()});
+$('ranking').addEventListener('click',e=>{const el=e.target.closest('[data-brand]');if(el){selectedBrand=el.dataset.brand;render()}});
+loadDeliveries();loadGrain();
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&getEndpoint())loadGrain()});
+</script>
+</body></html>
