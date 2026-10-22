@@ -1,0 +1,120 @@
+{
+  "atualizadoEm": "22/10/2026",
+  "dataComanda": "22/10/2026",
+  "totalInformadoComanda": 7615,
+  "totalLancamentos": 8183.65,
+  "diferencaConferencia": 568.65,
+  "observacao": "Fonte: 1000345495.jpg. Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. CAFÉ provisório em Outros. Os dois débitos Mercado Pago foram mantidos separados. Entradas são classificações provisórias, e não lucro nem venda conferida. Não somar novamente comandas de entrega aos recebimentos.",
+  "resumoProvisorio": {
+    "entradas": 8183.65,
+    "retiradas": 0,
+    "saldo": 8183.65
+  },
+  "movimentos": [
+    {
+      "data": "22/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO (valor corrigido de anotação riscada)",
+      "valor": 2450,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Valor R$ 2.450,00 anotado na coluna Unitário; valor anterior riscado na coluna Total."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1181.2,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Valor da primeira linha Getnet; centavos a conferir na imagem manuscrita."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 768.36,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1233.5,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 1751.89,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 23.9,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Classificação provisória em Outros seguindo o histórico; conferir se é entrada ou despesa."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "PIX",
+      "descricao": "DANIELA",
+      "valor": 70,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "PIX",
+      "descricao": "KÁTIA OLIVEIRA",
+      "valor": 122,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Grafia do nome manuscrito a conferir."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "PIX",
+      "descricao": "LILIANE",
+      "valor": 133,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "PIX",
+      "descricao": "JOELMA",
+      "valor": 105,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "PIX",
+      "descricao": "BLB SERVIÇOS",
+      "valor": 86,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Descrição manuscrita a conferir."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "PIX",
+      "descricao": "ANDREA APARECIDA",
+      "valor": 57.8,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Grafia do nome manuscrito a conferir."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "PIX",
+      "descricao": "EDINEIA",
+      "valor": 70,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Grafia do nome manuscrito a conferir."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO 1",
+      "valor": 73,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Movimento de débito mantido separadamente da linha Mercado Pago principal."
+    },
+    {
+      "data": "22/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO 2",
+      "valor": 58,
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Movimento de débito mantido separadamente da linha Mercado Pago principal."
+    }
+  ]
+}
