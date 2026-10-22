@@ -236,7 +236,8 @@ function render(){
  $('periodNotice').textContent=aligned?'Períodos alinhados: entregas e sacos abertos no mesmo mês. São movimentações diferentes e não devem ser somadas como vendas.':haveGrain?'Sacos abertos disponíveis somente para '+grainPeriod.slice(5)+'/'+grainPeriod.slice(0,4)+'. Para não misturar períodos, a coluna do granel fica sem valor na seleção atual.':'Sacos abertos ainda indisponíveis neste aparelho; a falta de conexão não significa zero saco aberto.';
  const rows=combine(),deliveries=filteredDeliveries(),grank=selectedGrain(),q=normal($('search').value);
  const packages=rows.reduce((s,x)=>s+x.packages,0),packedKg=rows.reduce((s,x)=>s+x.packKg,0),looseKg=rows.reduce((s,x)=>s+x.looseKg,0);
- const opened=aligned?grank.reduce((s,x)=>s+x.sacks,0):null,openedKg=aligned?grank.reduce((s,x)=>s+x.kg,0):null;
+ const opened=aligned?(grank.length?grank.reduce((s,x)=>s+x.sacks,0):(Number.isFinite(Number(grain.sacos))?Number(grain.sacos):null)):null,openedKg=aligned?(grank.length?grank.reduce((s,x)=>s+x.kg,0):(Number.isFinite(Number(grain.kg))?Number(grain.kg):null)):null;
+ const hasGrainRanking=grank.length>0;
  $('kBags').textContent=fmt(packages);
  $('kPackKg').textContent=fmt(packedKg)+' kg';
  $('kLoose').textContent=fmt(looseKg)+' kg';
@@ -246,7 +247,7 @@ function render(){
  $('kOpenedKgNote').textContent=openedKg===null?'Mês não disponível / Google desconectado':'Reposição, não venda';
  $('totalBrands').textContent=fmt(rows.length)+' marcas exibidas';
  $('rankHelp').textContent=fmt(deliveries.length)+' linhas de rações/grãos identificadas em entregas selecionadas. Clique numa marca para detalhar.';
- $('ranking').innerHTML=rows.map(x=>'<tr class="selectable '+(selectedBrand===x.brand?'active':'')+'" data-brand="'+esc(x.brand)+'"><td><b>'+esc(x.brand)+'</b></td><td class="num">'+fmt(x.packages)+'</td><td class="num">'+fmt(x.packKg)+'</td><td class="num">'+fmt(x.looseKg)+'</td><td class="num">'+(aligned?fmt(x.opened):'—')+'</td><td class="num">'+(aligned?fmt(x.openedKg):'—')+'</td><td class="num '+(x.pendencias?'amber':'')+'">'+fmt(x.pendencias)+'</td></tr>').join('')||'<tr><td colspan="7" class="empty">Nenhuma ração encontrada para estes filtros ou período.</td></tr>';
+ $('ranking').innerHTML=rows.map(x=>'<tr class="selectable '+(selectedBrand===x.brand?'active':'')+'" data-brand="'+esc(x.brand)+'"><td><b>'+esc(x.brand)+'</b></td><td class="num">'+fmt(x.packages)+'</td><td class="num">'+fmt(x.packKg)+'</td><td class="num">'+fmt(x.looseKg)+'</td><td class="num">'+(aligned&&hasGrainRanking?fmt(x.opened):'—')+'</td><td class="num">'+(aligned&&hasGrainRanking?fmt(x.openedKg):'—')+'</td><td class="num '+(x.pendencias?'amber':'')+'">'+fmt(x.pendencias)+'</td></tr>').join('')||'<tr><td colspan="7" class="empty">Nenhuma ração encontrada para estes filtros ou período.</td></tr>';
  if(!rows.some(x=>x.brand===selectedBrand))selectedBrand=rows.length?rows[0].brand:'';
  const max=Math.max(1,...rows.map(x=>Math.max(x.packages,aligned?x.opened:0)));
  $('chart').innerHTML=rows.slice(0,12).map(x=>'<div class="chartRow"><span>'+esc(x.brand)+'</span><div class="barpair"><div class="track" title="Entregas: '+fmt(x.packages)+'"><div class="bar" style="width:'+Math.min(100,x.packages/max*100)+'%"></div></div><div class="track" title="Granel: '+(aligned?fmt(x.opened):'sem dados')+'"><div class="bar alt" style="width:'+(aligned?Math.min(100,x.opened/max*100):0)+'%"></div></div></div></div>').join('')||'<div class="empty">Sem dados para o gráfico.</div>';
