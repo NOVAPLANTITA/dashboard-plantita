@@ -14,7 +14,7 @@ const latestDay=isOct2026?Number(dtParts.day):new Date(Number(year),Number(month
 async function loadMonth(mm,yy,lastDay){
  const files=Array.from({length:lastDay},(_,i)=>'data/movimentos-'+String(i+1).padStart(2,'0')+'-'+mm+'-'+yy+'.json');
  const results=await Promise.allSettled(files.map(async url=>{
-  const res=await fetch(url+'?v=20261021-diario21a&ts='+Date.now(),{cache:'no-store'});
+  const res=await fetch(url+'?v=20261022-diario22a&ts='+Date.now(),{cache:'no-store'});
   if(!res.ok)throw new Error(String(res.status));
   const j=await res.json();
   if(!j||!Array.isArray(j.movimentos))throw new Error('Formato inválido');
