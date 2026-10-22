@@ -28,7 +28,7 @@
     <form id="scanForm" class="scanner"><input class="scanfield" id="barcode" type="text" placeholder="Bipe aqui ou digite um código e Enter" autocomplete="off" spellcheck="false" aria-label="Código de barras" autofocus><button class="primary" type="submit">ADICIONAR</button></form>
     <div class="scanner-desc"><small>Sem trocar de modo: etiquetas da balança começando com 2 são lidas pelo mesmo padrão do leitor atual; medicamentos são buscados pelo EAN completo e pelos últimos dígitos da coluna Código da DANFE (identificação única). Quando um medicamento ainda não tiver EAN vinculado, abre a janela para identificar e associar o código à apresentação correta.</small></div>
     <div class="shortcuts"><button class="demo" id="testMed" type="button">Testar Credeli 48 mg: <b>5420036978916</b></button><button class="demo" id="testTopDog" type="button">Testar Top Dog Ourofino 2,5 kg: <b>7898019866631</b> (R$ 36,00)</button><button class="demo" id="testDrontal" type="button">Testar Drontal 20 ml: <b>4007221055259</b></button><button class="demo" id="testGranel" type="button">Testar balança: <b>2000000000961</b> (R$ 0,96)</button></div>
-    <div role="status" aria-live="polite" id="message" class="message">Pronto para iniciar um registro.</div><p class="fine" id="scanDiagnosis" aria-live="polite">Última bipagem: nenhuma. A busca usa diretamente a coluna CÓDIGO das DANFEs.</p><p class="fine" id="statusBaseDanfe"></p><p class="fine">Versão <b>22/10/2026 • identificação de EAN e DANFE</b>. Se abrir uma tela anterior, acesse novamente pelo link com <code>?v=20261022-fenzol-danfe</code>. Os vínculos antigos são conferidos contra os códigos conhecidos das DANFEs.</p><p class="fine">Etiqueta da balança: <code>2000000000961 → R$ 0,96</code>. Medicamentos confirmados: Credeli 48 mg <code>5420036978916 → 978916</code> e Drontal Puppy <code>4007221055259 → 55259</code>. Outras correspondências são provisórias e bloqueadas quando ambíguas. Códigos de DANFE com menos de 5 dígitos exigem um EAN completo conferido.</p>
+    <div role="status" aria-live="polite" id="message" class="message">Pronto para iniciar um registro.</div><p class="fine" id="scanDiagnosis" aria-live="polite">Última bipagem: nenhuma. A busca usa diretamente a coluna CÓDIGO das DANFEs.</p><p class="fine" id="statusBaseDanfe"></p><p class="fine">Versão <b>22/10/2026 • BASE ÚNICA: preço + CÓDIGO DANFE</b>. Atualização <code>?v=20261022-base-unica</code>. Os vínculos antigos são conferidos contra os códigos conhecidos das DANFEs.</p><p class="fine">Etiqueta da balança: <code>2000000000961 → R$ 0,96</code>. Medicamentos confirmados: Credeli 48 mg <code>5420036978916 → 978916</code> e Drontal Puppy <code>4007221055259 → 55259</code>. Outras correspondências são provisórias e bloqueadas quando ambíguas. Códigos de DANFE com menos de 5 dígitos exigem um EAN completo conferido.</p>
   </section>
   <section class="card"><div class="headcard"><h3>Itens do registro atual</h3><span class="chip" id="countItems">0 itens</span></div>
      <div class="tablewrap"><table><thead><tr><th>Tipo</th><th>Produto / etiqueta</th><th class="tright">Qtd.</th><th class="tright">Valor</th><th class="tright">Remover</th></tr></thead><tbody id="items"></tbody></table></div><div id="emptyCart" class="empty">Nenhum item bipado ainda.<br>Use o leitor, digite um código ou toque em um teste.</div>
@@ -48,7 +48,7 @@
     <div class="btnline" style="margin-top:12px"><button class="ghost" id="exportSales" type="button">↓ Exportar CSV dos testes</button></div>
   </section>
   <section class="card"><div class="headcard"><h3>Medicamentos cadastrados</h3><span class="chip">Preços das fotos • teste local</span></div><input id="catalogFilter" type="search" placeholder="Pesquisar medicamento..." style="width:100%;margin-bottom:9px;padding:11px;background:#062228;color:white;border:1px solid #285b62;border-radius:10px"><div class="catalog" id="catalog"></div>
-    <div class="divider"></div><div class="btnline"><button id="newMed" class="secondary" type="button">＋ Cadastrar medicamento</button><button id="importCsv" class="ghost" type="button">↑ Importar CSV</button><button id="exampleCsv" class="ghost" type="button">↓ Modelo CSV</button></div><input id="csvFile" type="file" accept=".csv,text/csv" hidden><p class="fine">Este cadastro inclui 384 itens das fotos e etiquetas, dos quais 337 têm preço informado e 47 aguardam conferência. Pesquise pela descrição e use <b>Vincular EAN</b> para associar o código da embalagem ao medicamento correto. Outros medicamentos também podem ser importados por CSV. Para ampliar a lista, importe CSV com <code>codigo;descricao</code> (campos CÓDIGO e DESCRIÇÃO da DANFE). Preço, estoque e EAN são opcionais e, opcionalmente, <code>ean</code>. Preço da foto: conferir antes de cobrar; o estoque informado não é físico.</p>
+    <div class="divider"></div><div class="btnline"><button id="newMed" class="secondary" type="button">＋ Cadastrar medicamento</button><button id="importCsv" class="ghost" type="button">↑ Importar CSV</button><button id="exampleCsv" class="ghost" type="button">↓ Modelo CSV</button></div><input id="csvFile" type="file" accept=".csv,text/csv" hidden><p class="fine">Este cadastro usa uma base única de 504 linhas com 337 preços de venda informados e 23 códigos da DANFE encontrados nas fontes disponíveis. Pesquise pela descrição e use <b>Vincular EAN</b> para associar o código da embalagem ao medicamento correto. Outros medicamentos também podem ser importados por CSV. Para ampliar a lista, importe CSV com <code>codigo;descricao</code> (campos CÓDIGO e DESCRIÇÃO da DANFE). Preço, estoque e EAN são opcionais e, opcionalmente, <code>ean</code>. Preço da foto: conferir antes de cobrar; o estoque informado não é físico.</p>
   </section>
  </aside>
 </main>
@@ -63,7 +63,7 @@
 <div class="modalactions"><button type="button" class="secondary" data-close="modalAssociate">Cancelar</button></div>
 </div></div>
 <script>
-(()=>{
+(async()=>{
 'use strict';
 const $=id=>document.getElementById(id), fmt=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format((Number(n)||0)/100), uid=()=>(''+Date.now()+Math.random().toString(16).slice(2)), escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const KEYS={catalog:'plantita_pdv_danfe_catalog_v2',cart:'plantita_pdv_danfe_cart_v2',sales:'plantita_pdv_danfe_sales_v2'};
@@ -231,6 +231,42 @@ function aplicarReferenciasEanExternas(){
  store(KEYS.catalog,catalog);
  return {adicionados,total:referenciasEanExternas.length};
 }
+// Carrega SOMENTE o cadastro consolidado: preço e campo CÓDIGO da DANFE estão no MESMO registro.
+async function carregarBaseUnica(){
+ const response=await fetch('data/pdv-medicamentos-base-unica-20261022.json?v=20261022-unica',{cache:'no-store'});
+ if(!response.ok)throw new Error('Base unificada indisponível: HTTP '+response.status);
+ const base=await response.json();
+ if(!Array.isArray(base.itens)||base.itens.length<476)throw new Error('Base unificada incompleta');
+ const anteriores=Array.isArray(catalog)?catalog:[];
+ const chave=s=>norm(s).replace(/\s+/g,' ').replace('zenerelia','zenerella');
+ const anteriorPorNome=new Map(anteriores.map(p=>[chave(p.name),p]));
+ catalog=base.itens.map((item,i)=>{
+  const codigo=String(item.codigoDanfe||'').trim(),ean=String(item.eanConfirmado||'').trim();
+  const antigo=anteriorPorNome.get(chave(item.produto));
+  const linksAntigos=antigo&&(!codigo||!antigo.codigoDanfe||String(antigo.codigoDanfe)===codigo)?(antigo.ean||[]):[];
+  const links=[...new Set([ean,...linksAntigos].filter(x=>checkEAN(x)&&!/^2\\d{12}$/.test(x)))];
+  return {code:String(item.id||('UNI-'+i)),name:item.produto,price:typeof item.precoVenda==='number'&&item.precoVenda>0?Math.round(item.precoVenda*100):null,stock:99999,
+   ean:links,codigoDanfe:codigo,fonte:'Base unificada de preços e DANFE 22/10/2026',fonteCodigoDanfe:item.origemCodigo||'',categoria:item.categoria||'',pagina:item.precoOrigem||'DANFE'};
+ });
+ // EANs herdados em conflito não podem apontar para duas apresentações.
+ const donos=new Map(),confli=new Set();
+ for(const item of catalog)for(const ean of item.ean){
+  if(donos.has(ean)&&donos.get(ean)!==item)confli.add(ean);else donos.set(ean,item);
+ }
+ if(confli.size)for(const item of catalog)item.ean=item.ean.filter(ean=>!confli.has(ean));
+ indiceDanfeCodigo=new Map();
+ let codigos=0,eans=0;
+ for(const p of catalog){
+  if(p.codigoDanfe){
+   codigos++;
+   const grupo=indiceDanfeCodigo.get(p.codigoDanfe)||[];
+   grupo.push(p);indiceDanfeCodigo.set(p.codigoDanfe,grupo);
+  }
+  eans+=p.ean.length;
+ }
+ store(KEYS.catalog,catalog);
+ return {total:catalog.length,integrados:base.itens.length,codigos,eans,fonte:'única',totais:base.totais||{}};
+}
 function aplicarCodigosDaDanfe(){
  indiceDanfeCodigo=new Map();
  const itens=JSON.parse(document.getElementById('plantita-codigos-danfe').textContent);
@@ -351,11 +387,11 @@ $('csvFile').onchange=async e=>{
   message('✓ '+incoming.length+' códigos de DANFE importados; quando houver preço ele será exibido.');
  }catch(err){message('Erro no CSV: '+err.message,'err')}finally{e.target.value=''}
 };
-$('catalogFilter').addEventListener('input',render);$('assocSearch').addEventListener('input',renderAssociationCandidates);const fotosCarregadas=loadPhotoPrices(),baseDanfe=aplicarCodigosDaDanfe(),referenciasExternas=aplicarReferenciasEanExternas();const scanaveis=catalog.filter(p=>/^\d{5,}$/.test(String(p.codigoDanfe||'')));
+$('catalogFilter').addEventListener('input',render);$('assocSearch').addEventListener('input',renderAssociationCandidates);let baseDanfe,fotosCarregadas=0;try{baseDanfe=await carregarBaseUnica()}catch(e){fotosCarregadas=loadPhotoPrices();baseDanfe=aplicarCodigosDaDanfe();baseDanfe.fonte='reserva';console.error('Base unificada indisponível',e)}const referenciasExternas=aplicarReferenciasEanExternas();const scanaveis=catalog.filter(p=>/^\d{5,}$/.test(String(p.codigoDanfe||'')));
 const comPreco=scanaveis.filter(p=>Number.isInteger(p.price)&&p.price>0);
 const provas=[['5420036978916','978916'],['4007221055259','55259'],['5420036960843','960843'],['7898019866631',null]];
 const testes=provas.map(([ean,danfe])=>{const r=matchCode(ean);return r.status==='found'&&(!danfe||String(r.product.codigoDanfe||'')===danfe)});
-$('statusBaseDanfe').textContent='Base DANFE: '+baseDanfe.total+' produtos; '+baseDanfe.integrados+' registros veterinários/históricos; '+baseDanfe.codigos+' com campo CÓDIGO, '+scanaveis.length+' com sufixo de ao menos 5 dígitos e '+comPreco.length+' com preço na lista. Autoteste: '+testes.filter(Boolean).length+'/'+testes.length+' EANs conferidos.'+(testes.every(Boolean)?'':' ATENÇÃO: verifique a base antes de bipar!')+' Quando a DANFE não traz um código reconhecível, o produto precisa de conferência, sem lançamento automático. Referências de EAN confirmadas fora da DANFE: '+referenciasExternas.total+'; exigem código da DANFE e preço da loja antes de vender.';$('dateLabel').textContent=new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(new Date());render();message('✓ '+fotosCarregadas+' preços das fotos; '+baseDanfe.codigos+' códigos de DANFE prontos para bipagem por sufixo.');focusScan();
+$('statusBaseDanfe').textContent='Base '+(baseDanfe.fonte==='única'?'ÚNICA':'RESERVA (verifique conexão)')+': '+baseDanfe.total+' produtos; '+baseDanfe.integrados+' registros; '+baseDanfe.codigos+' com campo CÓDIGO, '+scanaveis.length+' com sufixo de ao menos 5 dígitos e '+comPreco.length+' com preço na lista. Autoteste: '+testes.filter(Boolean).length+'/'+testes.length+' EANs conferidos.'+(testes.every(Boolean)?'':' ATENÇÃO: verifique a base antes de bipar!')+' Quando a DANFE não traz um código reconhecível, o produto precisa de conferência, sem lançamento automático. Referências de EAN confirmadas fora da DANFE: '+referenciasExternas.total+'; exigem código da DANFE e preço da loja antes de vender.';$('dateLabel').textContent=new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(new Date());render();message('✓ Base '+(baseDanfe.fonte==='única'?'ÚNICA carregada':'de RESERVA carregada')+' — '+comPreco.length+' produtos com código DANFE e preço para testes.');focusScan();
 })();
 </script>
 </body>
