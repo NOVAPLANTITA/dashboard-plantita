@@ -193,7 +193,7 @@ function aplicarCodigosDaDanfe(){
   let p=null;
   if(codigo&&mapaApresentacao[codigo])p=catalog.find(x=>chave(x.name)===chave(mapaApresentacao[codigo]));
   if(!p)p=catalog.find(x=>chave(x.name)===chave(item.produto));
-  if(!p&&codigo)p=catalog.find(x=>String(x.codigoDanfe||'')===codigo);
+  if(!p&&codigo)p=catalog.find(x=>String(x.codigoDanfe||'')===codigo&&(chave(x.name)===chave(item.produto)||(mapaApresentacao[codigo]&&chave(x.name)===chave(mapaApresentacao[codigo]))));
   if(!p){p={code:'DANFE-'+(i+1),name:item.produto,price:null,stock:99999,ean:[],fonte:'danfe',pagina:'DANFE'};catalog.push(p)}
   if(codigo){
   // O campo confirmado da DANFE prevalece sobre vínculos duplicados de versões antigas.
