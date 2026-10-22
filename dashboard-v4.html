@@ -14,7 +14,7 @@ const latestDay=isOct2026?Number(dtParts.day):new Date(Number(year),Number(month
 async function loadMonth(mm,yy,lastDay){
  const files=Array.from({length:lastDay},(_,i)=>'data/movimentos-'+String(i+1).padStart(2,'0')+'-'+mm+'-'+yy+'.json');
  const results=await Promise.allSettled(files.map(async url=>{
-  const res=await fetch(url+'?v=20261022-diario22a&ts='+Date.now(),{cache:'no-store'});
+  const res=await fetch(url+'?v=20261022-total-confirmado1&ts='+Date.now(),{cache:'no-store'});
   if(!res.ok)throw new Error(String(res.status));
   const j=await res.json();
   if(!j||!Array.isArray(j.movimentos))throw new Error('Formato inválido');
@@ -23,7 +23,12 @@ async function loadMonth(mm,yy,lastDay){
  const bases=results.filter(x=>x.status==='fulfilled').map(x=>x.value);
  const records=bases.flatMap(x=>x.movimentos).filter(x=>x&&x.data&&x.data.slice(3)===mm+'/'+yy&&x.tipo!=='Retiradas'&&Number.isFinite(Number(x.valor)));
  const days=[...new Set(records.map(x=>x.data))];
- const total=records.reduce((s,x)=>s+Number(x.valor),0);
+ const somaLancamentos=records.reduce((s,x)=>s+Number(x.valor),0);
+ const ajusteConfirmado=bases.filter(b=>Number.isFinite(b.totalConfirmadoComanda)&&String(b.dataComanda||'').slice(3)===mm+'/'+yy).reduce((sum,b)=>{
+  const itens=(b.movimentos||[]).filter(x=>x.tipo!=='Retiradas'&&x.data===b.dataComanda).reduce((t,x)=>t+Number(x.valor||0),0);
+  return sum+Number(b.totalConfirmadoComanda)-itens;
+ },0);
+ const total=somaLancamentos+ajusteConfirmado;
  return {mm,yy,total,days,bases:bases.length,latest:days.sort((a,b)=>a.split('/').reverse().join('').localeCompare(b.split('/').reverse().join(''))).at(-1)};
 }
 (async()=>{
