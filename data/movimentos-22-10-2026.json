@@ -1,14 +1,17 @@
 {
-  "atualizadoEm": "22/10/2026",
+  "atualizadoEm": "22/10/2026 — total de R$ 7.615,00 confirmado pelo responsável",
   "dataComanda": "22/10/2026",
   "totalInformadoComanda": 7615,
   "totalLancamentos": 8183.65,
   "diferencaConferencia": 568.65,
-  "observacao": "Fonte: 1000345495.jpg. Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. CAFÉ provisório em Outros. Os dois débitos Mercado Pago foram mantidos separados. Entradas são classificações provisórias, e não lucro nem venda conferida. Não somar novamente comandas de entrega aos recebimentos.",
+  "observacao": "Total OFICIAL do movimento de 22/10/2026 confirmado pelo responsável: R$ 7.615,00. A transcrição dos 15 valores individuais, mantidos para auditoria, soma R$ 8.183,65 e diverge em R$ 568,65. Os totais diário e mensal devem usar totalConfirmadoComanda; os subtotais por meio de pagamento são provisórios até conciliação. Nenhuma linha fictícia de ajuste foi criada. Fonte: 1000345495.jpg.",
   "resumoProvisorio": {
     "entradas": 8183.65,
     "retiradas": 0,
-    "saldo": 8183.65
+    "saldo": 8183.65,
+    "entradasConfirmadas": 7615,
+    "saldoConfirmado": 7615,
+    "detalhamentoPendente": true
   },
   "movimentos": [
     {
@@ -16,105 +19,107 @@
       "tipo": "Dinheiro",
       "descricao": "DINHEIRO (valor corrigido de anotação riscada)",
       "valor": 2450,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Valor R$ 2.450,00 anotado na coluna Unitário; valor anterior riscado na coluna Total."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total. Valor R$ 2.450,00 anotado na coluna Unitário; valor anterior riscado na coluna Total."
     },
     {
       "data": "22/10/2026",
       "tipo": "Getnet",
       "descricao": "GETNET 1",
       "valor": 1181.2,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Valor da primeira linha Getnet; centavos a conferir na imagem manuscrita."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total. Valor da primeira linha Getnet; centavos a conferir na imagem manuscrita."
     },
     {
       "data": "22/10/2026",
       "tipo": "Getnet",
       "descricao": "GETNET 2",
       "valor": 768.36,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total."
     },
     {
       "data": "22/10/2026",
       "tipo": "Cielo",
       "descricao": "CIELO",
       "valor": 1233.5,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total."
     },
     {
       "data": "22/10/2026",
       "tipo": "Mercado Pago",
       "descricao": "MERCADO PAGO",
       "valor": 1751.89,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total."
     },
     {
       "data": "22/10/2026",
       "tipo": "Outros",
       "descricao": "CAFÉ",
       "valor": 23.9,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Classificação provisória em Outros seguindo o histórico; conferir se é entrada ou despesa."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total. Classificação provisória em Outros seguindo o histórico; conferir se é entrada ou despesa."
     },
     {
       "data": "22/10/2026",
       "tipo": "PIX",
       "descricao": "DANIELA",
       "valor": 70,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total."
     },
     {
       "data": "22/10/2026",
       "tipo": "PIX",
       "descricao": "KÁTIA OLIVEIRA",
       "valor": 122,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Grafia do nome manuscrito a conferir."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total. Grafia do nome manuscrito a conferir."
     },
     {
       "data": "22/10/2026",
       "tipo": "PIX",
       "descricao": "LILIANE",
       "valor": 133,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total."
     },
     {
       "data": "22/10/2026",
       "tipo": "PIX",
       "descricao": "JOELMA",
       "valor": 105,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total."
     },
     {
       "data": "22/10/2026",
       "tipo": "PIX",
       "descricao": "BLB SERVIÇOS",
       "valor": 86,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Descrição manuscrita a conferir."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total. Descrição manuscrita a conferir."
     },
     {
       "data": "22/10/2026",
       "tipo": "PIX",
       "descricao": "ANDREA APARECIDA",
       "valor": 57.8,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Grafia do nome manuscrito a conferir."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total. Grafia do nome manuscrito a conferir."
     },
     {
       "data": "22/10/2026",
       "tipo": "PIX",
       "descricao": "EDINEIA",
       "valor": 70,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Grafia do nome manuscrito a conferir."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total. Grafia do nome manuscrito a conferir."
     },
     {
       "data": "22/10/2026",
       "tipo": "Mercado Pago",
       "descricao": "DÉBITO MERCADO PAGO 1",
       "valor": 73,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Movimento de débito mantido separadamente da linha Mercado Pago principal."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total. Movimento de débito mantido separadamente da linha Mercado Pago principal."
     },
     {
       "data": "22/10/2026",
       "tipo": "Mercado Pago",
       "descricao": "DÉBITO MERCADO PAGO 2",
       "valor": 58,
-      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Fechamento pendente de conferência; não ajustar valores para forçar o total. Movimento de débito mantido separadamente da linha Mercado Pago principal."
+      "conferencia": "Foto 1000345495.jpg. Total manuscrito R$ 7.615,00; soma dos 15 valores transcritos R$ 8.183,65. Diferença positiva R$ 568,65. Total diário confirmado em R$ 7.615,00; detalhamento por meio de pagamento pendente de conciliação; não ajustar valores para forçar o total. Movimento de débito mantido separadamente da linha Mercado Pago principal."
     }
-  ]
+  ],
+  "totalConfirmadoComanda": 7615,
+  "statusFechamento": "Total do dia confirmado pelo responsável; detalhamento dos meios de pagamento pendente de conciliação"
 }
