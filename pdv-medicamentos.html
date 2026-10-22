@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#031214">
-<title>Plantita • PDV • correção da bipagem 22/10/2026</title><script src="auth.js?v=20261021-pdv"></script><script>if(location.protocol==='https:'&&window.PlantitaAuth)PlantitaAuth.require(['supervisor','colaborador']);</script>
+<title>Plantita • PDV • DANFEs consolidadas lote 8</title><script src="auth.js?v=20261021-pdv"></script><script>if(location.protocol==='https:'&&window.PlantitaAuth)PlantitaAuth.require(['supervisor','colaborador']);</script>
 <style>
 :root{color-scheme:dark;--bg:#031214;--panel:#082126;--panel2:#0b2b30;--line:#24515a;--ink:#eff9f7;--mute:#a6bfc0;--green:#20e492;--mint:#8bf2c1;--amber:#ffca76;--red:#ff9196;--blue:#8ccfff}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 5% -18%,#11604a,transparent 42%),#031214;color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif;font-size:14px}button,input,select{font:inherit}button{cursor:pointer;border:0}button:disabled{opacity:.4;cursor:not-allowed}a{color:var(--mint)}
@@ -154,7 +154,7 @@ function matchCode(raw){
  }
  // 3. Fallback: EAN completo confirmado na foto/associado anteriormente.
  // O EAN memorizado só entra depois da busca direta na DANFE.
- const exatosEAN=catalog.filter(p=>Array.isArray(p.ean)&&p.ean.includes(code));
+ const exatosEAN=catalog.filter(p=>p.bipagemPermitida!==false&&Array.isArray(p.ean)&&p.ean.includes(code));
  if(exatosEAN.length===1)return {status:'found',product:exatosEAN[0],kind:exatosEAN[0].codigoDanfe?'EAN completo confirmado':'EAN confirmado; código DANFE da Plantita ainda ausente',codigoDanfe:exatosEAN[0].codigoDanfe||''};
  if(exatosEAN.length>1)return {status:'ambiguous',matches:exatosEAN};
  if(!valido)return {status:'invalid'};
@@ -233,7 +233,7 @@ function aplicarReferenciasEanExternas(){
 }
 // Carrega SOMENTE o cadastro consolidado: preço e campo CÓDIGO da DANFE estão no MESMO registro.
 async function carregarBaseUnica(){
- const response=await fetch('data/pdv-medicamentos-base-unica-20261022.json?v=20261022-unica',{cache:'no-store'});
+ const response=await fetch('data/pdv-medicamentos-base-unica-20261022.json?v=20261022-lote8',{cache:'no-store'});
  if(!response.ok)throw new Error('Base unificada indisponível: HTTP '+response.status);
  const base=await response.json();
  if(!Array.isArray(base.itens)||base.itens.length<476)throw new Error('Base unificada incompleta');
@@ -246,7 +246,7 @@ async function carregarBaseUnica(){
   const linksAntigos=antigo&&(!codigo||!antigo.codigoDanfe||String(antigo.codigoDanfe)===codigo)?(antigo.ean||[]):[];
   const links=[...new Set([ean,...linksAntigos].filter(x=>checkEAN(x)&&!/^2\\d{12}$/.test(x)))];
   return {code:String(item.id||('UNI-'+i)),name:item.produto,price:typeof item.precoVenda==='number'&&item.precoVenda>0?Math.round(item.precoVenda*100):null,stock:99999,
-   ean:links,codigoDanfe:codigo,fonte:'Base unificada de preços e DANFE 22/10/2026',fonteCodigoDanfe:item.origemCodigo||'',categoria:item.categoria||'',pagina:item.precoOrigem||'DANFE'};
+   ean:links,codigoDanfe:codigo,fonte:'Base unificada de preços e DANFE 22/10/2026',fonteCodigoDanfe:item.origemCodigo||'',categoria:item.categoria||'',pagina:item.precoOrigem||'DANFE',situacao:item.situacao||'',bipagemPermitida:(item.categoria==='Medicamentos veterinários'||item.categoria==='Cadastro histórico / conferir')&&!/BLOQUEADO|CONFERIR APRESENTA|CONFLITO/i.test(String(item.situacao||''))};
  });
  // EANs herdados em conflito não podem apontar para duas apresentações.
  const donos=new Map(),confli=new Set();
@@ -257,8 +257,8 @@ async function carregarBaseUnica(){
  indiceDanfeCodigo=new Map();
  let codigos=0,eans=0;
  for(const p of catalog){
-  if(p.codigoDanfe){
-   codigos++;
+  if(p.codigoDanfe)codigos++;
+  if(p.codigoDanfe&&p.bipagemPermitida){
    const grupo=indiceDanfeCodigo.get(p.codigoDanfe)||[];
    grupo.push(p);indiceDanfeCodigo.set(p.codigoDanfe,grupo);
   }
@@ -387,7 +387,7 @@ $('csvFile').onchange=async e=>{
   message('✓ '+incoming.length+' códigos de DANFE importados; quando houver preço ele será exibido.');
  }catch(err){message('Erro no CSV: '+err.message,'err')}finally{e.target.value=''}
 };
-$('catalogFilter').addEventListener('input',render);$('assocSearch').addEventListener('input',renderAssociationCandidates);let baseDanfe,fotosCarregadas=0;try{baseDanfe=await carregarBaseUnica()}catch(e){fotosCarregadas=loadPhotoPrices();baseDanfe=aplicarCodigosDaDanfe();baseDanfe.fonte='reserva';console.error('Base unificada indisponível',e)}const referenciasExternas=aplicarReferenciasEanExternas();const scanaveis=catalog.filter(p=>/^\d{5,}$/.test(String(p.codigoDanfe||'')));
+$('catalogFilter').addEventListener('input',render);$('assocSearch').addEventListener('input',renderAssociationCandidates);let baseDanfe,fotosCarregadas=0;try{baseDanfe=await carregarBaseUnica()}catch(e){fotosCarregadas=loadPhotoPrices();baseDanfe=aplicarCodigosDaDanfe();baseDanfe.fonte='reserva';console.error('Base unificada indisponível',e)}const referenciasExternas=aplicarReferenciasEanExternas();const scanaveis=catalog.filter(p=>p.bipagemPermitida!==false&&/^\d{5,}$/.test(String(p.codigoDanfe||'')));
 const comPreco=scanaveis.filter(p=>Number.isInteger(p.price)&&p.price>0);
 const provas=[['5420036978916','978916'],['4007221055259','55259'],['5420036960843','960843'],['7898019866631',null]];
 const testes=provas.map(([ean,danfe])=>{const r=matchCode(ean);return r.status==='found'&&(!danfe||String(r.product.codigoDanfe||'')===danfe)});
