@@ -14,7 +14,7 @@ const latestDay=isOct2026?Number(dtParts.day):new Date(Number(year),Number(month
 async function loadMonth(mm,yy,lastDay){
  const files=Array.from({length:lastDay},(_,i)=>'data/movimentos-'+String(i+1).padStart(2,'0')+'-'+mm+'-'+yy+'.json');
  const results=await Promise.allSettled(files.map(async url=>{
-  const res=await fetch(url+'?v=20261022-total-confirmado1&ts='+Date.now(),{cache:'no-store'});
+  const res=await fetch(url+'?v=20261022-total-oficial2&ts='+Date.now(),{cache:'no-store'});
   if(!res.ok)throw new Error(String(res.status));
   const j=await res.json();
   if(!j||!Array.isArray(j.movimentos))throw new Error('Formato inválido');
@@ -29,7 +29,8 @@ async function loadMonth(mm,yy,lastDay){
   return sum+Number(b.totalConfirmadoComanda)-itens;
  },0);
  const total=somaLancamentos+ajusteConfirmado;
- return {mm,yy,total,days,bases:bases.length,latest:days.sort((a,b)=>a.split('/').reverse().join('').localeCompare(b.split('/').reverse().join(''))).at(-1)};
+ const oficiais=bases.filter(b=>Number.isFinite(b.totalConfirmadoComanda)).map(b=>({data:b.dataComanda,valor:b.totalConfirmadoComanda}));
+ return {mm,yy,total,days,oficiais,bases:bases.length,latest:days.sort((a,b)=>a.split('/').reverse().join('').localeCompare(b.split('/').reverse().join(''))).at(-1)};
 }
 (async()=>{
  try{
@@ -39,7 +40,8 @@ async function loadMonth(mm,yy,lastDay){
   const name=({ '01':'Janeiro','02':'Fevereiro','03':'Março','04':'Abril','05':'Maio','06':'Junho','07':'Julho','08':'Agosto','09':'Setembro','10':'Outubro','11':'Novembro','12':'Dezembro'})[x.mm]||'Mês';
   label.textContent='Vendas '+name+' ('+(x.mm==='10'&&x.yy==='2026'?'parcial':'registros disponíveis')+')';
   value.textContent=fmt(x.total);
-  detail.textContent='Última comanda: '+(x.latest||'—')+' • Média diária: '+fmt(x.days.length?x.total/x.days.length:0)+' • '+x.days.length+' dias';
+  const ultimoOficial=x.oficiais.find(b=>b.data===x.latest);
+  detail.textContent='Última comanda: '+(x.latest||'—')+(ultimoOficial?' • Total OFICIAL do dia: '+fmt(ultimoOficial.valor):'')+' • Média diária: '+fmt(x.days.length?x.total/x.days.length:0)+' • '+x.days.length+' dias';
   detail.title='Soma dos lançamentos de entrada do Controle Diário, inclusive Outros quando assim classificados. Não é lucro. Alguns fechamentos aguardam conferência.';
  }catch(e){value.textContent='Indisponível';detail.textContent='Falha ao consultar as comandas. Abra o Controle Diário.';}
 })();
