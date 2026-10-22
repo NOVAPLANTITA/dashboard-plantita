@@ -63,7 +63,7 @@ footer{margin-top:20px;color:#83aaa9;font-size:11px}
 </section>
 <section class="card">
  <div class="flex"><div><h2>Ranking de rações por marca</h2><p class="sub" id="rankHelp">Escolha uma marca para ver as comandas e os produtos associados.</p></div><span id="totalBrands" class="tag">—</span></div>
- <div class="tablewrap"><table><thead><tr><th>Marca</th><th class="num">Embalagens<br>nas entregas</th><th class="num">Kg em<br>embalagens</th><th class="num">Kg avulsos<br>nas entregas</th><th class="num">Sacos<br>abertos</th><th class="num">Kg<br>abertos</th><th class="num">Itens sem<br>quantidade</th></tr></thead><tbody id="ranking"></tbody></table></div>
+ <div class="tablewrap"><table><thead><tr><th>Marca</th><th class="num">Embalagens<br>nas entregas</th><th class="num">Kg em<br>embalagens</th><th class="num">Kg avulsos<br>nas entregas</th><th class="num">Sacos<br>abertos</th><th class="num">Kg<br>abertos</th><th class="num">Itens para<br>conferir</th></tr></thead><tbody id="ranking"></tbody></table></div>
  <p class="sub" id="periodNotice"></p>
 </section>
 <section class="two">
@@ -102,14 +102,16 @@ function brandOf(name){
  [/\bwhiskas\b/,'Whiskas'],
  [/\bkatchow\b|\bcat\s*chow\b/,'Cat Chow'],
  [/\bgran\s*plus\b|\bgranplus\b/,'GranPlus'],
- [/\blester\b/,'Lester'],[/\bmisty\b/,'Misty'],
+ [/\blester\b/,'Lester'],[/\bmisty\b/,'Misty'],[/\bbicrok\b|\bbicrock\b/,'Bicrok (conferir)'],[/\bclassic\b|\bclassi\b/,'Classic (conferir)'],[/\blife\b/,'Life (conferir marca)'],
  [/\bgatan\b/,'Gatan'],[/\bbomguy\b/,'Bomguy'],
  [/\ballcanis\b|\balcanes\b|\balcaniques\b|\balcanis\b/,'Allcanis'],
  [/\bspecial\b|\bespecial\b/,'Special (conferir linha)'],
  [/\bmilho\b|\bquirera\b|\bmistura\s+(?:para|de)\s+(?:papagaio|periquito|aves)\b/,'Grãos / sem marca'],
- [/\bengorda\b|\bcrescimento\b|\bracao\b|\bclassi(?:c)?\b/,'Marca não informada']
+ [/\bengorda\b|\bcrescimento\b|\bracao\b/,'Marca não informada']
  ];
  for(const [re,label] of tests)if(re.test(s))return label;
+ // Apresentações em kg sem marca conhecida entram para CONFERÊNCIA, não são omitidas do relatório.
+ if(/\b\d+(?:[.,]\d+)?\s*kg\b/.test(s)&&!/\b(?:areia|cimento|argamassa|adubo|fertilizante|terra|carvao|calcario|substrato|tapete)\b/.test(s))return 'Marca não informada';
  return '';
 }
 function itemLines(desc){
@@ -134,7 +136,8 @@ function parseDeliveryLine(raw){
    kind=fmt(packages)+' embalagem(ns)'+(weightKnown?' • '+fmt(packKg)+' kg':' • peso não informado');
   }
  }
- return {brand,text,packages,packKg,looseKg,quantityKnown,weightKnown,kind};
+ const needsReview=!quantityKnown||/conferir|não informada/i.test(brand);
+ return {brand,text,packages,packKg,looseKg,quantityKnown,weightKnown,kind,needsReview};
 }
 function rowKey(x){return [x.data||'',x.cliente||'',x.telefone||'',x.endereco||'',Number(x.total||0).toFixed(2)].join('|').toLowerCase()}
 async function loadDeliveries(){
@@ -218,7 +221,7 @@ function refreshBrandFilter(){
 function combine(){
  const deliveries=filteredDeliveries(),gp=selectedGrain(),map=new Map();
  const get=b=>{if(!map.has(b))map.set(b,{brand:b,packages:0,packKg:0,looseKg:0,opened:0,openedKg:0,pendencias:0,deliveryLines:0,products:[]});return map.get(b)};
- for(const x of deliveries){const a=get(x.brand);a.packages+=x.packages;a.packKg+=x.packKg;a.looseKg+=x.looseKg;a.deliveryLines++;if(!x.quantityKnown)a.pendencias++;a.products.push({text:x.text,source:'Entrega • '+x.data,qty:x.quantityKnown?(x.packages?fmt(x.packages)+' emb.':fmt(x.looseKg)+' kg avulsos'):'Pendente',kg:x.packKg+x.looseKg,needsReview:!x.quantityKnown,record:x})}
+ for(const x of deliveries){const a=get(x.brand);a.packages+=x.packages;a.packKg+=x.packKg;a.looseKg+=x.looseKg;a.deliveryLines++;if(x.needsReview)a.pendencias++;a.products.push({text:x.text,source:'Entrega • '+x.data,qty:x.quantityKnown?(x.packages?fmt(x.packages)+' emb.':fmt(x.looseKg)+' kg avulsos'):'Pendente',kg:x.packKg+x.looseKg,needsReview:x.needsReview,record:x})}
  for(const x of gp){const a=get(x.brand);a.opened+=x.sacks;a.openedKg+=x.kg;a.products.push({text:x.product,source:'Sacos abertos • '+grainPeriod,qty:fmt(x.sacks)+' sacos',kg:x.kg,needsReview:false})}
  const q=normal($('search').value),choice=$('brandFilter').value;
  let result=[...map.values()].filter(x=>(!choice||choice===x.brand)&&(!q||normal(x.brand).includes(q)||x.products.some(p=>normal(p.text).includes(q))));
@@ -249,12 +252,12 @@ function render(){
  $('chart').innerHTML=rows.slice(0,12).map(x=>'<div class="chartRow"><span>'+esc(x.brand)+'</span><div class="barpair"><div class="track" title="Entregas: '+fmt(x.packages)+'"><div class="bar" style="width:'+Math.min(100,x.packages/max*100)+'%"></div></div><div class="track" title="Granel: '+(aligned?fmt(x.opened):'sem dados')+'"><div class="bar alt" style="width:'+(aligned?Math.min(100,x.opened/max*100):0)+'%"></div></div></div></div>').join('')||'<div class="empty">Sem dados para o gráfico.</div>';
  const chosen=rows.find(x=>x.brand===selectedBrand),prods=chosen?chosen.products:[];
  $('products').innerHTML=prods.map(x=>'<tr><td>'+esc(x.text)+'</td><td>'+esc(x.source)+'</td><td class="num '+(x.needsReview?'amber':'')+'">'+esc(x.qty)+'</td><td class="num">'+(x.kg?fmt(x.kg):'—')+'</td></tr>').join('')||'<tr><td colspan="4" class="empty">Selecione uma marca no ranking.</td></tr>';
- const review=deliveries.filter(x=>!x.quantityKnown).filter(x=>(!$('brandFilter').value||x.brand===$('brandFilter').value)&&(!q||normal(x.brand+' '+x.text).includes(q))).sort((a,b)=>b.month.localeCompare(a.month));
+ const review=deliveries.filter(x=>x.needsReview).filter(x=>(!$('brandFilter').value||x.brand===$('brandFilter').value)&&(!q||normal(x.brand+' '+x.text).includes(q))).sort((a,b)=>b.month.localeCompare(a.month));
  $('reviewCount').textContent=fmt(review.length)+' linha(s) pendentes';
- $('reviewRows').innerHTML=review.slice(0,220).map(x=>'<tr><td>'+esc(x.data)+'</td><td>'+esc(x.brand)+'</td><td>'+esc(x.text)+'</td><td class="amber">Quantidade não informada / conferir embalagem</td></tr>').join('')||'<tr><td colspan="4" class="empty">Nenhuma linha pendente entre as identificadas neste filtro.</td></tr>';
+ $('reviewRows').innerHTML=review.slice(0,220).map(x=>'<tr><td>'+esc(x.data)+'</td><td>'+esc(x.brand)+'</td><td>'+esc(x.text)+'</td><td class="amber">Marca, quantidade ou apresentação a conferir</td></tr>').join('')||'<tr><td colspan="4" class="empty">Nenhuma linha pendente entre as identificadas neste filtro.</td></tr>';
 }
 function exportCSV(){
- const rows=[['Marca','Embalagens entregas','Kg em embalagens','Kg avulsos nas entregas','Sacos abertos no granel (mes igual)','Kg abertos no granel','Itens sem quantidade']];
+ const rows=[['Marca','Embalagens entregas','Kg em embalagens','Kg avulsos nas entregas','Sacos abertos no granel (mes igual)','Kg abertos no granel','Itens para conferir']];
  for(const x of combine())rows.push([x.brand,x.packages,x.packKg,x.looseKg,grain&&selectedPeriod()===grainPeriod?x.opened:'',grain&&selectedPeriod()===grainPeriod?x.openedKg:'',x.pendencias]);
  const cell=x=>'"'+String(x??'').replace(/"/g,'""')+'"';
  const csv='\ufeff'+rows.map(r=>r.map(cell).join(';')).join('\r\n'),u=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');
