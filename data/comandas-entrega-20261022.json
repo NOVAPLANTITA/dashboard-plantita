@@ -1,0 +1,44 @@
+{
+  "atualizadoEm": "23/10/2026 — 3 comandas de 22/10/2026; produtos R$ 378,00; taxas discriminadas R$ 5,00; total R$ 383,00. Marcados/a receber não são recebimentos. Juliana de 23/10: R$ 208,00 provisório, conferir rasura e saldo. Não somar ao Controle Diário como receita adicional.",
+  "comandas": [
+    {
+      "data": "22/10/2026",
+      "cliente": "D. Norma (nome a conferir)",
+      "telefone": "",
+      "endereco": "Marilu (referência a conferir)",
+      "descricao": "5 sachês Whiskas salmão — R$ 15,00; 3 kg Golden gato frango — R$ 60,00",
+      "valorProduto": 75,
+      "taxaEntrega": 0,
+      "total": 75,
+      "pagamento": "Marcado / a receber",
+      "prazo": "A receber — anotação 'marcado'",
+      "conferencia": "Nome/endereço a conferir; pagamento marcado, não tratar como recebimento. Fonte: 1000345673.jpg."
+    },
+    {
+      "data": "22/10/2026",
+      "cliente": "Liliane",
+      "telefone": "",
+      "endereco": "R. ... Jordan, 940 (nome da rua a conferir)",
+      "descricao": "1 Magnus Todo Dia — R$ 100,00; 2 kg Magnus gato castrado carne — R$ 28,00",
+      "valorProduto": 128,
+      "taxaEntrega": 5,
+      "total": 133,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Conferir a grafia do endereço e a variedade exata do Magnus. Fonte: 1000345674.jpg."
+    },
+    {
+      "data": "22/10/2026",
+      "cliente": "Paolo (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 produto com descrição não legível ('UR...') — R$ 100,00; granulado — R$ 75,00",
+      "valorProduto": 175,
+      "taxaEntrega": 0,
+      "total": 175,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Primeiro produto e nome do cliente manuscritos a conferir; total R$ 175,00 legível. Fonte: 1000345676.jpg."
+    }
+  ]
+}
