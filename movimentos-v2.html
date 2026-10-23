@@ -16,7 +16,7 @@
 const $=s=>document.querySelector(s);
 const fmt=v=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(Number(v)||0);
 const escapeHtml=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
-const fontes=['data/movimentos-diarios.json','data/movimentos-07-09-2026.json','data/movimentos-09-09-2026.json','data/movimentos-10-09-2026.json','data/movimentos-11-09-2026.json','data/movimentos-12-09-2026.json','data/movimentos-13-09-2026.json','data/movimentos-14-09-2026.json','data/movimentos-15-09-2026.json','data/movimentos-16-09-2026.json','data/movimentos-17-09-2026.json','data/movimentos-18-09-2026.json','data/movimentos-19-09-2026.json','data/movimentos-20-09-2026.json','data/movimentos-21-09-2026.json','data/movimentos-22-09-2026.json','data/movimentos-23-09-2026.json','data/movimentos-24-09-2026.json','data/movimentos-25-09-2026.json','data/movimentos-26-09-2026.json','data/movimentos-27-09-2026.json','data/movimentos-28-09-2026.json','data/movimentos-29-09-2026.json','data/movimentos-30-09-2026.json','data/movimentos-01-10-2026.json','data/movimentos-02-10-2026.json','data/movimentos-03-10-2026.json','data/movimentos-04-10-2026.json','data/movimentos-05-10-2026.json','data/movimentos-06-10-2026.json','data/movimentos-07-10-2026.json','data/movimentos-08-10-2026.json','data/movimentos-09-10-2026.json','data/movimentos-10-10-2026.json','data/movimentos-11-10-2026.json','data/movimentos-12-10-2026.json','data/movimentos-13-10-2026.json','data/movimentos-14-10-2026.json','data/movimentos-15-10-2026.json','data/movimentos-16-10-2026.json','data/movimentos-17-10-2026.json','data/movimentos-18-10-2026.json','data/movimentos-19-10-2026.json','data/movimentos-20-10-2026.json','data/movimentos-21-10-2026.json','data/movimentos-22-10-2026.json'];
+const fontes=['data/movimentos-diarios.json','data/movimentos-07-09-2026.json','data/movimentos-09-09-2026.json','data/movimentos-10-09-2026.json','data/movimentos-11-09-2026.json','data/movimentos-12-09-2026.json','data/movimentos-13-09-2026.json','data/movimentos-14-09-2026.json','data/movimentos-15-09-2026.json','data/movimentos-16-09-2026.json','data/movimentos-17-09-2026.json','data/movimentos-18-09-2026.json','data/movimentos-19-09-2026.json','data/movimentos-20-09-2026.json','data/movimentos-21-09-2026.json','data/movimentos-22-09-2026.json','data/movimentos-23-09-2026.json','data/movimentos-24-09-2026.json','data/movimentos-25-09-2026.json','data/movimentos-26-09-2026.json','data/movimentos-27-09-2026.json','data/movimentos-28-09-2026.json','data/movimentos-29-09-2026.json','data/movimentos-30-09-2026.json','data/movimentos-01-10-2026.json','data/movimentos-02-10-2026.json','data/movimentos-03-10-2026.json','data/movimentos-04-10-2026.json','data/movimentos-05-10-2026.json','data/movimentos-06-10-2026.json','data/movimentos-07-10-2026.json','data/movimentos-08-10-2026.json','data/movimentos-09-10-2026.json','data/movimentos-10-10-2026.json','data/movimentos-11-10-2026.json','data/movimentos-12-10-2026.json','data/movimentos-13-10-2026.json','data/movimentos-14-10-2026.json','data/movimentos-15-10-2026.json','data/movimentos-16-10-2026.json','data/movimentos-17-10-2026.json','data/movimentos-18-10-2026.json','data/movimentos-19-10-2026.json','data/movimentos-20-10-2026.json','data/movimentos-21-10-2026.json','data/movimentos-22-10-2026.json','data/movimentos-23-10-2026.json'];
 const order=['PIX','Getnet','Cielo','Mercado Pago','Dinheiro','Outros'];
 let data=[],bases=[],falhas=[];
 function showWarning(messages){const warning=$('#warning');warning.style.display=messages.length?'block':'none';warning.textContent=messages.join(' ')}
@@ -27,16 +27,18 @@ function render(){
  const rows=data.filter(x=>x.data===day);
  const somaItensDia=rows.filter(x=>x.tipo!=='Retiradas').reduce((s,x)=>s+Number(x.valor||0),0);
  const baseConfirmada=bases.find(b=>b.dataComanda===day&&Number.isFinite(b.totalConfirmadoComanda));
- const incoming=baseConfirmada?baseConfirmada.totalConfirmadoComanda:somaItensDia;
- $('#inLabel').textContent=baseConfirmada?'Total OFICIAL do dia':'Entradas registradas';
+ const baseProvisoria=bases.find(b=>b.dataComanda===day&&Number.isFinite(b.totalProvisorioComanda));
+ const incoming=baseConfirmada?baseConfirmada.totalConfirmadoComanda:(baseProvisoria?baseProvisoria.totalProvisorioComanda:somaItensDia);
+ $('#inLabel').textContent=baseConfirmada?'Total OFICIAL do dia':(baseProvisoria?'Total da comanda (a conferir)':'Entradas registradas');
  const outgoing=rows.filter(x=>x.tipo==='Retiradas').reduce((s,x)=>s+Number(x.valor||0),0);
  const parts=day.split('/');const monthKey=parts.length===3?parts[1]+'/'+parts[2]:'';
  const monthSales=data.filter(x=>x.tipo!=='Retiradas'&&x.data&&x.data.slice(3)===monthKey);
- const ajustesConfirmados=bases.filter(b=>Number.isFinite(b.totalConfirmadoComanda)&&String(b.dataComanda||'').slice(3)===monthKey).reduce((s,b)=>{
+ const ajustesComanda=bases.filter(b=>(Number.isFinite(b.totalConfirmadoComanda)||Number.isFinite(b.totalProvisorioComanda))&&String(b.dataComanda||'').slice(3)===monthKey).reduce((s,b)=>{
   const bruto=(b.movimentos||[]).filter(x=>x.tipo!=='Retiradas'&&x.data===b.dataComanda).reduce((t,x)=>t+Number(x.valor||0),0);
-  return s+Number(b.totalConfirmadoComanda)-bruto;
+  const totalBase=Number.isFinite(b.totalConfirmadoComanda)?b.totalConfirmadoComanda:b.totalProvisorioComanda;
+  return s+Number(totalBase)-bruto;
  },0);
- const monthTotal=monthSales.reduce((s,x)=>s+Number(x.valor||0),0)+ajustesConfirmados;
+ const monthTotal=monthSales.reduce((s,x)=>s+Number(x.valor||0),0)+ajustesComanda;
  const salesDays=[...new Set(monthSales.map(x=>x.data))];const dailyAvg=salesDays.length?monthTotal/salesDays.length:0;
  $('#in').textContent=fmt(incoming);$('#out').textContent=fmt(outgoing);$('#net').textContent=fmt(incoming-outgoing);$('#monthTotal').textContent=fmt(monthTotal);$('#dailyAvg').textContent=fmt(dailyAvg);
  $('#types').innerHTML=order.map(t=>`<div class="type"><span>${t}</span><b>${fmt(rows.filter(x=>x.tipo===t).reduce((s,x)=>s+Number(x.valor||0),0))}</b></div>`).join('');
@@ -44,13 +46,13 @@ function render(){
  const conferencia=bases.find(b=>Array.isArray(b.movimentos)&&b.movimentos.some(x=>x.data===day)&&typeof b.diferencaConferencia==='number'&&b.diferencaConferencia!==0);
  const warnings=[];
  if(falhas.length)warnings.push('⚠ Carregamento parcial: '+falhas.length+' arquivo(s) não carregado(s) ('+falhas.join(', ')+'). Os totais podem estar incompletos.');
- if(conferencia){const confirmado=Number.isFinite(conferencia.totalConfirmadoComanda);warnings.push(confirmado?'✓ OFICIAL — Fechamento de '+day+': '+fmt(conferencia.totalConfirmadoComanda)+'. Este é o valor utilizado no total diário e no acumulado mensal. Os lançamentos por meio de pagamento ainda exigem conciliação: soma das linhas '+fmt(conferencia.totalLancamentos)+'; diferença '+fmt(Math.abs(conferencia.diferencaConferencia))+'.':'⚠ Conferência pendente: total escrito na comanda '+fmt(conferencia.totalInformadoComanda)+'; soma dos lançamentos '+fmt(conferencia.totalLancamentos)+'; diferença '+fmt(Math.abs(conferencia.diferencaConferencia))+'. Verifique os valores antes do fechamento.');}
+ if(conferencia){const confirmado=Number.isFinite(conferencia.totalConfirmadoComanda);const provisorio=Number.isFinite(conferencia.totalProvisorioComanda);warnings.push(confirmado?'✓ OFICIAL — Fechamento de '+day+': '+fmt(conferencia.totalConfirmadoComanda)+'. Este é o valor utilizado no total diário e no acumulado mensal. Os lançamentos por meio de pagamento ainda exigem conciliação: soma das linhas '+fmt(conferencia.totalLancamentos)+'; diferença '+fmt(Math.abs(conferencia.diferencaConferencia))+'.':provisorio?'⚠ PROVISÓRIO — Total escrito na comanda de '+day+': '+fmt(conferencia.totalProvisorioComanda)+'. Exibido no diário e no acumulado mensal, sujeito a conferência. Soma das possíveis entradas '+fmt(conferencia.totalLancamentos)+'; diferença '+fmt(Math.abs(conferencia.diferencaConferencia))+'. Despesas e meios de pagamento ainda precisam de conciliação.':'⚠ Conferência pendente: total escrito na comanda '+fmt(conferencia.totalInformadoComanda)+'; soma dos lançamentos '+fmt(conferencia.totalLancamentos)+'; diferença '+fmt(Math.abs(conferencia.diferencaConferencia))+'. Verifique os valores antes do fechamento.');}
  showWarning(warnings);$('#empty').style.display=rows.length?'none':'block';$('#empty').textContent='Nenhum movimento encontrado para esta data.';
 }
 async function carregar(){
  $('#reload').disabled=true;$('#date').disabled=true;$('#updated').textContent='Carregando os registros...';$('#empty').style.display='block';$('#empty').textContent='Carregando movimentos...';showWarning([]);
  const anterior=$('#date').value;
- const resultados=await Promise.allSettled(fontes.map(async u=>{const r=await fetch(u+'?v=20261022-total-oficial2&ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const j=await r.json();if(!j||!Array.isArray(j.movimentos))throw new Error('formato inválido');return j}));
+ const resultados=await Promise.allSettled(fontes.map(async u=>{const r=await fetch(u+'?v=20261023-diario23a&ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const j=await r.json();if(!j||!Array.isArray(j.movimentos))throw new Error('formato inválido');return j}));
  bases=[];falhas=[];
  resultados.forEach((r,i)=>{if(r.status==='fulfilled')bases.push(r.value);else falhas.push(fontes[i]+' ('+(r.reason?.message||'falha')+')')});
  data=bases.flatMap(b=>b.movimentos).filter(x=>x&&typeof x.data==='string'&&typeof x.tipo==='string'&&Number.isFinite(Number(x.valor)));
