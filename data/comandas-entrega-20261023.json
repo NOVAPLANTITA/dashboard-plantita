@@ -1,0 +1,44 @@
+{
+  "atualizadoEm": "23/10/2026 — 3 comandas de 23/10/2026; produtos R$ 541,00; taxas discriminadas R$ 10,00; total R$ 551,00. Marcados/a receber não são recebimentos. Juliana de 23/10: R$ 208,00 provisório, conferir rasura e saldo. Não somar ao Controle Diário como receita adicional.",
+  "comandas": [
+    {
+      "data": "23/10/2026",
+      "cliente": "Márcia",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Golden (apresentação a conferir) — R$ 178,00; produto com descrição manuscrita não identificada — R$ 55,00",
+      "valorProduto": 233,
+      "taxaEntrega": 5,
+      "total": 238,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Segundo produto ilegível; verificar antes de classificar por marca. Fonte: 1000345677.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Valdeci",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Magnus Todo Dia — R$ 100,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Marcado / a receber",
+      "prazo": "A receber — anotação 'marcado'",
+      "conferencia": "Telefone manuscrito incompleto; não tratar como pagamento recebido. Fonte: 1000345678.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Juliana",
+      "telefone": "",
+      "endereco": "R. ... Jordan, 126 (nome da rua a conferir)",
+      "descricao": "Golden R/P frango — R$ 50,00; Golden R/P frango — R$ 15,00; 3 sachês Pedigree — R$ 9,00; Cikadol (grafia a conferir) — R$ 50,00; clorexidina — R$ 30,00; 2 comprimidos (sem preço legível); taxa (sem preço legível)",
+      "valorProduto": 208,
+      "taxaEntrega": 0,
+      "total": 208,
+      "pagamento": "Cartão (anotado); parcial a conferir",
+      "prazo": "Anotado R$ 24 pago e R$ 135 a pagar; conciliar",
+      "conferencia": "CONFERÊNCIA PENDENTE: R$ 208,00 anotado à direita, mas total geral está rasurado. Linhas com preço legível somam R$ 154,00; anotação de pagamento R$ 24 + R$ 135 = R$ 159,00, diferença R$ 49,00 em relação a R$ 208. Preço de 2 comprimidos e taxa não informado. R$ 208 provisório, não oficializar antes de conferir. Fonte: 1000345679.jpg."
+    }
+  ]
+}
