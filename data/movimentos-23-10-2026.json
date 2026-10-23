@@ -1,0 +1,153 @@
+{
+  "atualizadoEm": "23/10/2026 — registro da comanda com total manuscrito pendente de conciliação",
+  "dataComanda": "23/10/2026",
+  "totalInformadoComanda": 8317,
+  "totalProvisorioComanda": 8317,
+  "totalLancamentos": 8470.66,
+  "totalTodasAnotacoes": 8836.93,
+  "diferencaConferencia": 153.66,
+  "observacao": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente. Compras de sacola e alinhamento do carro provisoriamente em Retiradas; CAFÉ em Outros conforme histórico (natureza financeira a conferir). Transferência/recebimento PIX de clientes não comprovados individualmente. Não somar entregas novamente.",
+  "resumoProvisorio": {
+    "entradas": 8470.66,
+    "retiradas": 366.27,
+    "saldo": 8104.39,
+    "totalAnotadoComanda": 8317,
+    "detalhamentoPendente": true
+  },
+  "movimentos": [
+    {
+      "data": "23/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1000,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 971,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 671,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1356.5,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 2580.36,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 29.8,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente. Natureza e classificação provisórias a confirmar."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "PIX",
+      "descricao": "MÁRCIA (grafia a conferir)",
+      "valor": 250,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "PIX",
+      "descricao": "VALDECI DIAS (grafia a conferir)",
+      "valor": 266,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "PIX",
+      "descricao": "JULIANE BORGES",
+      "valor": 29,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "PIX",
+      "descricao": "LUIZA DE SOUSA",
+      "valor": 69,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "PIX",
+      "descricao": "JOÃO",
+      "valor": 360,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "PIX",
+      "descricao": "BRUNA",
+      "valor": 220,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "PIX",
+      "descricao": "LETÍCIA",
+      "valor": 143,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "PIX",
+      "descricao": "JO SILEI (grafia a conferir)",
+      "valor": 50,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "Retiradas",
+      "descricao": "COMPRA SACOLA",
+      "valor": 216.27,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente. Natureza e classificação provisórias a confirmar."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "PIX",
+      "descricao": "CLUBE DE TIRO 007",
+      "valor": 200,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "Retiradas",
+      "descricao": "ALINHAMENTO DO CARRO",
+      "valor": 150,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente. Natureza e classificação provisórias a confirmar."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "PIX",
+      "descricao": "SAMUEL",
+      "valor": 100,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    },
+    {
+      "data": "23/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "CRÉDITO MERCADO PAGO",
+      "valor": 175,
+      "conferencia": "Transcrição da comanda de 23/10/2026 (foto 1000345863.jpg). Total manuscrito R$ 8.317,00; soma das possíveis entradas R$ 8.470,66; diferença R$ 153,66. Entradas, despesas e formas de pagamento devem ser conciliadas; não alterar valores para fechar artificialmente."
+    }
+  ],
+  "statusFechamento": "Provisório: total manuscrito exibido na dashboard; sem confirmação explícita de fechamento, meios de pagamento a conciliar"
+}
