@@ -1,0 +1,97 @@
+{
+  "atualizadoEm": "24/10/2026 — comanda manuscrita registrada; total provisório aguardando conciliação",
+  "dataComanda": "24/10/2026",
+  "totalInformadoComanda": 8183.46,
+  "totalProvisorioComanda": 8183.46,
+  "totalLancamentos": 8195.06,
+  "totalTodasAnotacoes": 8195.06,
+  "diferencaConferencia": 11.6,
+  "observacao": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade. Café classificado provisoriamente como Outros (confirmar se receita/despesa).",
+  "resumoProvisorio": {
+    "entradas": 8195.06,
+    "retiradas": 0,
+    "saldo": 8195.06,
+    "totalAnotadoComanda": 8183.46,
+    "detalhamentoPendente": true
+  },
+  "movimentos": [
+    {
+      "data": "24/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 2000,
+      "conferencia": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade."
+    },
+    {
+      "data": "24/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 954.35,
+      "conferencia": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade."
+    },
+    {
+      "data": "24/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 916.6,
+      "conferencia": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade."
+    },
+    {
+      "data": "24/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1665.9,
+      "conferencia": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade."
+    },
+    {
+      "data": "24/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 2171.5,
+      "conferencia": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade."
+    },
+    {
+      "data": "24/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ",
+      "valor": 29.71,
+      "conferencia": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade. Natureza financeira do café pendente de confirmação."
+    },
+    {
+      "data": "24/10/2026",
+      "tipo": "PIX",
+      "descricao": "JEFRI (grafia a conferir)",
+      "valor": 75,
+      "conferencia": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade."
+    },
+    {
+      "data": "24/10/2026",
+      "tipo": "PIX",
+      "descricao": "SUSANA",
+      "valor": 75,
+      "conferencia": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade."
+    },
+    {
+      "data": "24/10/2026",
+      "tipo": "PIX",
+      "descricao": "ANGÉLICA",
+      "valor": 100,
+      "conferencia": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade."
+    },
+    {
+      "data": "24/10/2026",
+      "tipo": "PIX",
+      "descricao": "SMILEY APARECIDA (grafia a conferir)",
+      "valor": 57,
+      "conferencia": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade."
+    },
+    {
+      "data": "24/10/2026",
+      "tipo": "PIX",
+      "descricao": "THAÍS",
+      "valor": 150,
+      "conferencia": "Transcrição da comanda de 24/10/2026 (foto 1000346222.jpg). Total manuscrito R$ 8.183,46; soma das linhas transcritas R$ 8195,06; diferença de R$ 11,60 a conciliar. Total manuscrito é provisório, não confirmado como fechamento oficial. Valores e nomes manuscritos a conferir. Não alterar valores para forçar igualdade. Não somar comandas de entrega em duplicidade."
+    }
+  ],
+  "statusFechamento": "Provisório: total manuscrito considerado no dia e no acumulado mensal, sem confirmação de fechamento; conciliação dos meios de pagamento pendente"
+}
