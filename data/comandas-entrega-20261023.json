@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "23/10/2026 — 3 comandas de 23/10/2026; produtos R$ 541,00; taxas discriminadas R$ 10,00; total R$ 551,00. Marcados/a receber não são recebimentos. Juliana de 23/10: R$ 208,00 provisório, conferir rasura e saldo. Não somar ao Controle Diário como receita adicional.",
+  "atualizadoEm": "25/10/2026 — 11 comandas de 23/10/2026; produtos descritos R$ 1707,00; taxas discriminadas R$ 32,00; total manuscrito das comandas R$ 1729,00. IMPORTANTE: totais divergentes nos comprovantes 1000346302.jpg (−R$ 10,00) e 1000346303.jpg (+R$ 50,00), valores provisórios. Juliana de 23/10 segue pendente. A prazo não é receita recebida; não somar novamente ao Controle Diário.",
   "comandas": [
     {
       "data": "23/10/2026",
@@ -39,6 +39,110 @@
       "pagamento": "Cartão (anotado); parcial a conferir",
       "prazo": "Anotado R$ 24 pago e R$ 135 a pagar; conciliar",
       "conferencia": "CONFERÊNCIA PENDENTE: R$ 208,00 anotado à direita, mas total geral está rasurado. Linhas com preço legível somam R$ 154,00; anotação de pagamento R$ 24 + R$ 135 = R$ 159,00, diferença R$ 49,00 em relação a R$ 208. Preço de 2 comprimidos e taxa não informado. R$ 208 provisório, não oficializar antes de conferir. Fonte: 1000345679.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Clube Tino (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Golden Special 20 kg — R$ 210,00 (valor manuscrito da linha)",
+      "valorProduto": 210,
+      "taxaEntrega": 0,
+      "total": 200,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "DIVERGÊNCIA: item R$ 210,00, mas Total Geral R$ 200,00. Diferença de R$ 10,00 sem explicação; lançado total manuscrito provisório de R$ 200,00. Confirmar se houve desconto ou erro. Fonte: 1000346302.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Neide",
+      "telefone": "",
+      "endereco": "Av. Nove de Julho, 1257 (a conferir)",
+      "descricao": "2 Classic 20 kg — R$ 130,00; 8 sachês (marca a conferir) — R$ 24,00",
+      "valorProduto": 154,
+      "taxaEntrega": 0,
+      "total": 154,
+      "pagamento": "Pago (meio a conferir)",
+      "prazo": "",
+      "conferencia": "Anotação 'PG'; modalidade não informada. Conferir nome/apresentação dos sachês. Fonte: 1000346301.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Joseline (nome a conferir)",
+      "telefone": "",
+      "endereco": "R. Jorge Paulo, 1030 (grafia a conferir)",
+      "descricao": "1 Special Dog 15 kg — R$ 90,00",
+      "valorProduto": 90,
+      "taxaEntrega": 5,
+      "total": 95,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Conferir nome, endereço e variedade da ração. Fonte: 1000346300.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Leidiane",
+      "telefone": "",
+      "endereco": "R. Boa Vista, 52",
+      "descricao": "1 Magnus 20 kg castrados carne (descrição a conferir) — R$ 262,00; 1 kg mistura para calopsita — R$ 10,00",
+      "valorProduto": 272,
+      "taxaEntrega": 7,
+      "total": 279,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir se a apresentação da Magnus é 20 kg e o nome exato da mistura. Fonte: 1000346299.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Letícia",
+      "telefone": "",
+      "endereco": "R. Boa Vista, 38",
+      "descricao": "1 Golden Special castrados carne (apresentação a conferir) — R$ 165,00",
+      "valorProduto": 165,
+      "taxaEntrega": 0,
+      "total": 165,
+      "pagamento": "Prazo / a receber",
+      "prazo": "Anotado 'Prazo'; não considerar pagamento recebido",
+      "conferencia": "Confirmar apresentação e vencimento do prazo. Fonte: 1000346298.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Sebastião",
+      "telefone": "",
+      "endereco": "Av. Austrália, 334 (grafia a conferir)",
+      "descricao": "1 Special Dog 15 kg — R$ 90,00",
+      "valorProduto": 90,
+      "taxaEntrega": 5,
+      "total": 95,
+      "pagamento": "Pago (meio a conferir)",
+      "prazo": "Entrega às 17h30 (anotado)",
+      "conferencia": "Anotação 'PG' e horário de entrega; meio de pagamento não informado. Fonte: 1000346297.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Zezé (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Quirela — R$ 25,00; 2 produtos para papagaio (descrição a conferir) — R$ 40,00; 2 produtos para calopsita (descrição a conferir) — R$ 20,00",
+      "valorProduto": 85,
+      "taxaEntrega": 0,
+      "total": 85,
+      "pagamento": "Cartão (a conferir)",
+      "prazo": "",
+      "conferencia": "Descrições pouco legíveis; confirmar produto e quantidades. Fonte: 1000346296.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Davi (nome a conferir)",
+      "telefone": "",
+      "endereco": "R. ... 238 (ilegível)",
+      "descricao": "1 Magnus 15 kg (variedade a conferir) — R$ 100,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Nome/endereço manuscritos a conferir. Fonte: 1000346295.jpg."
     }
   ]
 }
