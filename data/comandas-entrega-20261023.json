@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "25/10/2026 — 11 comandas de 23/10/2026; produtos descritos R$ 1707,00; taxas discriminadas R$ 32,00; total manuscrito das comandas R$ 1729,00. IMPORTANTE: totais divergentes nos comprovantes 1000346302.jpg (−R$ 10,00) e 1000346303.jpg (+R$ 50,00), valores provisórios. Juliana de 23/10 segue pendente. A prazo não é receita recebida; não somar novamente ao Controle Diário.",
+  "atualizadoEm": "25/10/2026 — 14 comandas de 23/10/2026; soma dos totais manuscritos R$ 2060,00, valores de produtos discriminados R$ 2033,00 e taxas discriminadas R$ 37,00. Existe diferença de R$ 10,00 entre soma de produtos+taxas e total das comandas, devido à divergência do comprovante 1000346302.jpg: produto R$ 210,00 e total R$ 200,00. A comanda de Juliana também permanece provisória/pendente. Valores marcados a prazo não são recebimentos. Não adicionar estas entregas ao Controle Diário como nova receita.",
   "comandas": [
     {
       "data": "23/10/2026",
@@ -143,6 +143,45 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Nome/endereço manuscritos a conferir. Fonte: 1000346295.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Lulu Moura (nome a conferir)",
+      "telefone": "",
+      "endereco": "Av. Constantino P..., 888 (nome da via a conferir)",
+      "descricao": "1 Quatree Supreme — R$ 22,00; 1 Pipicat Classic — R$ 14,00; 1 shampoo Sanol antipulgas — R$ 28,00",
+      "valorProduto": 64,
+      "taxaEntrega": 5,
+      "total": 69,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Comanda totaliza R$ 69,00 (22+14+28+5). Conferir nome do cliente, endereço e descrição da linha Quatree Supreme. Fonte: 1000346291.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Caio",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 unguento 200 g (marca a conferir) — R$ 36,00",
+      "valorProduto": 36,
+      "taxaEntrega": 0,
+      "total": 36,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Conferir grafia e marca do produto manuscrito como 'unguento 200 g'. Fonte: 1000346292.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Vera Lúcia",
+      "telefone": "",
+      "endereco": "R. Irlanda, 70 (a conferir)",
+      "descricao": "1 ração Shih Tzu 7,5 kg (marca a conferir) — R$ 226,00",
+      "valorProduto": 226,
+      "taxaEntrega": 0,
+      "total": 226,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir marca/apresentação da ração e grafia do endereço. Fonte: 1000346294.jpg."
     }
   ]
 }
