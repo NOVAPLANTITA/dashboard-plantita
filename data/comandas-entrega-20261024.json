@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "25/10/2026 — 10 comandas referentes a 24/10/2026; produtos R$ 1.055,00; taxas discriminadas R$ 21,00; total das comandas R$ 1.076,00. Parte marcada a prazo/não informada; não confundir pedidos com recebimentos nem somar como receita adicional ao Controle Diário.",
+  "atualizadoEm": "25/10/2026 — 12 comandas de 24/10/2026; produtos descritos R$ 1225,00; taxas discriminadas R$ 26,00; total manuscrito das comandas R$ 1301,00. IMPORTANTE: totais divergentes nos comprovantes 1000346302.jpg (−R$ 10,00) e 1000346303.jpg (+R$ 50,00), valores provisórios. Juliana de 23/10 segue pendente. A prazo não é receita recebida; não somar novamente ao Controle Diário.",
   "comandas": [
     {
       "data": "24/10/2026",
@@ -130,6 +130,32 @@
       "pagamento": "Pix",
       "prazo": "",
       "conferencia": "Nome do cliente e descrição exata do produto não totalmente legíveis. Fonte: 1000346305.jpg."
+    },
+    {
+      "data": "24/10/2026",
+      "cliente": "Jessy",
+      "telefone": "",
+      "endereco": "Estr. João Rodrigues de Moraes, 221 (a conferir)",
+      "descricao": "3 Pi Di Cat (marca/grafia a conferir) — R$ 42,00; 2 kg Magnus castrados carne — R$ 28,00",
+      "valorProduto": 70,
+      "taxaEntrega": 5,
+      "total": 75,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "",
+      "conferencia": "Anotação 'Pago'; conferir grafia do primeiro item e endereço. Fonte: 1000346304.jpg."
+    },
+    {
+      "data": "24/10/2026",
+      "cliente": "Valdete",
+      "telefone": "",
+      "endereco": "Copérativa Jardim Paraíso (grafia a conferir)",
+      "descricao": "1 Magnus Todo Dia — R$ 100,00",
+      "valorProduto": 100,
+      "taxaEntrega": 0,
+      "total": 150,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "DIVERGÊNCIA: item de R$ 100,00, mas Total Geral parece R$ 150,00. Diferença de R$ 50,00 sem taxa discriminada. Valor de total R$ 150,00 provisório: confirmar antes de oficializar. Fonte: 1000346303.jpg."
     }
   ]
 }
