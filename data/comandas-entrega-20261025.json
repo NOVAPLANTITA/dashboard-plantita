@@ -1,0 +1,18 @@
+{
+  "atualizadoEm": "26/10/2026 — 1 comanda de 25/10/2026 recebida posteriormente, R$ 145,00 em produtos sem taxa. Não somar ao Controle Diário novamente.",
+  "comandas": [
+    {
+      "data": "25/10/2026",
+      "cliente": "Jéssica",
+      "telefone": "",
+      "endereco": "R. América do Sul, 297 (a conferir)",
+      "descricao": "1 Magnus Dona (nome/variedade do produto a conferir) — R$ 145,00",
+      "valorProduto": 145,
+      "taxaEntrega": 0,
+      "total": 145,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Verificar variedade exata da Magnus e grafia do endereço. Fonte: 1000346820.jpg."
+    }
+  ]
+}
