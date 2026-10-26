@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "25/10/2026 — 12 comandas de 24/10/2026; produtos descritos R$ 1225,00; taxas discriminadas R$ 26,00; total manuscrito das comandas R$ 1301,00. IMPORTANTE: totais divergentes nos comprovantes 1000346302.jpg (−R$ 10,00) e 1000346303.jpg (+R$ 50,00), valores provisórios. Juliana de 23/10 segue pendente. A prazo não é receita recebida; não somar novamente ao Controle Diário.",
+  "atualizadoEm": "26/10/2026 — 13 comandas de 24/10, R$ 1416,00 nos totais manuscritos; inclui Vanessa R$ 115,00 após correção de R$ 120,00 riscado. Divergências anteriores permanecem (Valdete R$ 50,00 e outras); valores provisórios. Pagamentos a prazo não significam recebidos.",
   "comandas": [
     {
       "data": "24/10/2026",
@@ -156,6 +156,19 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "DIVERGÊNCIA: item de R$ 100,00, mas Total Geral parece R$ 150,00. Diferença de R$ 50,00 sem taxa discriminada. Valor de total R$ 150,00 provisório: confirmar antes de oficializar. Fonte: 1000346303.jpg."
+    },
+    {
+      "data": "24/10/2026",
+      "cliente": "Vanessa",
+      "telefone": "",
+      "endereco": "Av. Quinze de Novembro, 385",
+      "descricao": "1 Premier Gatos Castrados Filhotes (apresentação a conferir) — R$ 115,00",
+      "valorProduto": 115,
+      "taxaEntrega": 0,
+      "total": 115,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "CORREÇÃO MANUSCRITA: total R$ 120,00 riscado, novo total R$ 115,00. Taxa de R$ 5,00 riscada, não cobrar separadamente. Conferir apresentação. Fonte: 1000346821.jpg."
     }
   ]
 }
