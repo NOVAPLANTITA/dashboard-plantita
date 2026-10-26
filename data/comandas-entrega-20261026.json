@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "26/10/2026 — 10 comandas recebidas; produtos R$ 1133,00; taxas R$ 35,00; total R$ 1168,00. ATENÇÃO: duas comandas de Heloísa (R$ 92 e R$ 87) podem ser duplicadas; ambas preservadas até conferência. Ana R$ 207,00 é marcado/a receber; não somar entregas novamente ao Controle Diário.",
+  "atualizadoEm": "26/10/2026 — 15 comandas; R$ 1675,00 de totais informados (10 anteriores R$ 1168,00 + 5 novas R$ 507,00). Produtos identificados R$ 1612,00; taxas identificadas R$ 60,00; diferença de R$ 3,00 não identificada na comanda da Marisa, total provisório R$ 75,00. POSSÍVEL DUPLICIDADE: duas comandas Heloísa R$ 92 e R$ 87. À prazo: Ana R$ 207,00 e Marisa R$ 75,00. Não somar novamente no Controle Diário.",
   "comandas": [
     {
       "data": "26/10/2026",
@@ -130,6 +130,71 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Conferir variedades e endereço. Fonte: 1000346827.jpg."
+    },
+    {
+      "data": "26/10/2026",
+      "cliente": "Dona Gon... (nome a conferir)",
+      "telefone": "",
+      "endereco": "R. Vantas (grafia a conferir)",
+      "descricao": "Golden Salmão (quantidade/apresentação a conferir) — R$ 40,00; 4 Maxicat (a conferir) — R$ 24,00; produto de descrição incerta — R$ 16,00; Golden Carne R/P — R$ 15,00; meio kg de produto não identificado — R$ 10,00",
+      "valorProduto": 105,
+      "taxaEntrega": 5,
+      "total": 110,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Nome, endereço e três itens precisam de leitura/validação. Linhas 40+24+16+15+10+5 = R$ 110,00. Fonte: 1000346826.jpg."
+    },
+    {
+      "data": "26/10/2026",
+      "cliente": "Nana (nome a conferir)",
+      "telefone": "",
+      "endereco": "R. Silvino Machado, 84 (a conferir)",
+      "descricao": "1 Golden Special 15 kg (variedade a conferir) — R$ 162,00",
+      "valorProduto": 162,
+      "taxaEntrega": 5,
+      "total": 167,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir nome do cliente, peso e variedade da Golden. Fonte: 1000346825.jpg."
+    },
+    {
+      "data": "26/10/2026",
+      "cliente": "Cristina",
+      "telefone": "",
+      "endereco": "Estr. dos Guimarães, 112 (grafia a conferir)",
+      "descricao": "1 farelo de trigo (quantidade a conferir) — R$ 70,00",
+      "valorProduto": 70,
+      "taxaEntrega": 10,
+      "total": 80,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Conferir endereço e apresentação de farelo de trigo. Fonte: 1000346824.jpg."
+    },
+    {
+      "data": "26/10/2026",
+      "cliente": "Marisa (nome a conferir)",
+      "telefone": "",
+      "endereco": "Estr. dos Martins (número não identificado)",
+      "descricao": "6 unidades de produto com descrição parcialmente ilegível (parece 'meia gato ...') — R$ 72,00; lançamento adicional rasurado, valor não verificável",
+      "valorProduto": 72,
+      "taxaEntrega": 0,
+      "total": 75,
+      "pagamento": "Prazo / a receber",
+      "prazo": "Prazo, valor provisório de R$ 75,00",
+      "conferencia": "CONFERÊNCIA PENDENTE: R$ 72,00 legíveis; anotação inferior R$ 75,00 perto de 'prazo', total geral riscado. Diferença R$ 3,00 sem origem confirmada, NÃO classificar como taxa. Data inferida do lote de 26/10, não preenchida na comanda. Fonte: 1000346823.jpg."
+    },
+    {
+      "data": "26/10/2026",
+      "cliente": "Ana",
+      "telefone": "",
+      "endereco": "R. ... Célio, 726 (grafia a conferir)",
+      "descricao": "1 milho 25 kg — R$ 60,00; 2 kg crescimento (produto a conferir) — R$ 10,00",
+      "valorProduto": 70,
+      "taxaEntrega": 5,
+      "total": 75,
+      "pagamento": "Dinheiro (troco para R$ 100,00)",
+      "prazo": "",
+      "conferencia": "Conferir endereço e descrição do item 'crescimento'. Nome Ana também aparece em outra comanda de 26/10, pedido distinto pela descrição/endereço. Fonte: 1000346822.jpg."
     }
   ]
 }
