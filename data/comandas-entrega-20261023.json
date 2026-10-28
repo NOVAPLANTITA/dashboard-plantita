@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "25/10/2026 — 14 comandas de 23/10/2026; soma dos totais manuscritos R$ 2060,00, valores de produtos discriminados R$ 2033,00 e taxas discriminadas R$ 37,00. Existe diferença de R$ 10,00 entre soma de produtos+taxas e total das comandas, devido à divergência do comprovante 1000346302.jpg: produto R$ 210,00 e total R$ 200,00. A comanda de Juliana também permanece provisória/pendente. Valores marcados a prazo não são recebimentos. Não adicionar estas entregas ao Controle Diário como nova receita.",
+  "atualizadoEm": "28/10/2026 — 15 comandas de 23/10/2026; total dos totais manuscritos R$ 2083,00, incluindo 1 comanda de R$ 23,00 recebida posteriormente. As divergências históricas permanecem: produtos e taxas não conciliam em todos os recibos, em especial total R$ 200,00 versus produto R$ 210,00 no comprovante 1000346302.jpg e comanda Juliana provisória. Pagamentos a prazo não são recebimentos; não somar novamente no Controle Diário.",
   "comandas": [
     {
       "data": "23/10/2026",
@@ -182,6 +182,19 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Conferir marca/apresentação da ração e grafia do endereço. Fonte: 1000346294.jpg."
+    },
+    {
+      "data": "23/10/2026",
+      "cliente": "Cliente com nome pouco legível",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Milho (quantidade/apresentação a conferir) — R$ 23,00",
+      "valorProduto": 23,
+      "taxaEntrega": 0,
+      "total": 23,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Comanda datada de 23/10/2026; nome e descrição pouco legíveis. Não confundir com lote de 28/10. Fonte: 1000347621.jpg."
     }
   ]
 }
