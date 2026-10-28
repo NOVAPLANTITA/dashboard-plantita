@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "28/10/2026 — 7 comandas distintas, total R$ 1605,00; produtos R$ 1585,00, taxas expressas R$ 20,00. 2 fotos repetidas do pedido DN Novinha removidas. Pedidos a prazo não devem ser tratados como recebidos; nomes e produtos pouco legíveis necessitam conferência. Não adicionar estes valores ao Controle Diário como nova receita.",
+  "atualizadoEm": "28/10/2026 — 15 comandas distintas, total R$ 2884,00 (produtos R$ 2836,00 e taxas expressas R$ 48,00). Novo lote acrescenta 8 comandas, R$ 1279,00; a foto 1000347616.jpg é repetição da comanda de R$ 200,00 já lançada em 1000347617.jpg. Comanda Luiza com R$ 257,00 PROVISÓRIOS calculados pelas linhas (total geral em branco). Comanda Pernambuco R$ 135,00 marcado/a receber, total rasurado mas soma legível. Outros registros com nomes, apresentações ou endereços a conferir. Não duplicar receitas no Controle Diário.",
   "comandas": [
     {
       "data": "28/10/2026",
@@ -91,6 +91,110 @@
       "pagamento": "Pix",
       "prazo": "",
       "conferencia": "Somatório 90+60+50 = R$ 200,00. Descrições e quantidades parcialmente ilegíveis; data inferida do lote de 28/10 pois data não nítida na foto. Fonte: 1000347617.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Vera",
+      "telefone": "",
+      "endereco": "Rua Austrália, 938 (grafia a conferir)",
+      "descricao": "1 Magnus 15 kg — R$ 100,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir nome/endereço e variedade Magnus. Fonte: 1000347615.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Dona Vera",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "4 unidades de produto com descrição parecida com 'Denta Stix' — R$ 100,00; 8 unidades de linguicinha — R$ 64,00; 1 produto de nome parcialmente ilegível — R$ 25,00",
+      "valorProduto": 189,
+      "taxaEntrega": 0,
+      "total": 189,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Nome e apresentações dos 3 produtos a conferir. Soma 100+64+25 = R$ 189,00. Venda distinta da comanda Vera R$ 105,00. Fonte: 1000347614.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Eunice (nome a conferir)",
+      "telefone": "",
+      "endereco": "Rua Ipê, 366 (a conferir)",
+      "descricao": "2 unidades de produto com descrição manuscrita semelhante a 'S. Crocid' (nome exato a conferir) — R$ 220,00",
+      "valorProduto": 220,
+      "taxaEntrega": 0,
+      "total": 220,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Produto e grafia do nome/endereço precisam de conferência, total geral R$ 220,00 legível. Fonte: 1000347612.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Luiza (nome a conferir)",
+      "telefone": "",
+      "endereco": "Novalino de Moraes (número a conferir)",
+      "descricao": "1 saco de ração Magnus (variedade a conferir); ração 20 kg (descrição parcialmente legível) — R$ 160,00; 5 kg ração postura — R$ 25,00; 5 kg ração inicial — R$ 25,00; Magnus filhote gatos (quantidade a conferir) — R$ 25,00; 2 latas Pedigree — R$ 22,00",
+      "valorProduto": 257,
+      "taxaEntrega": 0,
+      "total": 257,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "",
+      "conferencia": "TOTAL PROVISÓRIO calculado dos valores de linha (160+25+25+25+22 = R$ 257,00); Total Geral está em branco. Data inferida do lote; pedido e grafias precisam ser confirmados. Telefone parcial não lançado. Fonte: 1000347613.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Sir (nome a conferir)",
+      "telefone": "",
+      "endereco": "Rua dos Funes, 200 (grafia a conferir)",
+      "descricao": "Medicamento (nome manuscrito pouco legível) — R$ 67,00; coleira — R$ 13,00",
+      "valorProduto": 80,
+      "taxaEntrega": 8,
+      "total": 88,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Conferir nome do cliente, medicamento e endereço; linha de taxa R$ 8,00. Fonte: 1000347611.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Vanessa",
+      "telefone": "",
+      "endereco": "Bento (endereço incompleto)",
+      "descricao": "1 Golden Frango 10 kg (variedade a conferir) — R$ 165,00",
+      "valorProduto": 165,
+      "taxaEntrega": 10,
+      "total": 175,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir endereço completo e apresentação Golden. Fonte: 1000347610.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Margarete (nome a conferir)",
+      "telefone": "",
+      "endereco": "Benedito Pereira Nogueira, 499 (grafia a conferir)",
+      "descricao": "1 Magnus Chips 15 kg (nome/apresentação a conferir) — R$ 105,00",
+      "valorProduto": 105,
+      "taxaEntrega": 5,
+      "total": 110,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Endereço, produto e nome a conferir. Fonte: 1000347609.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Pernambuco (nome/apelido a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 ração Engorda 25 kg — R$ 95,00; 1 kg Golden Cat salmão (a conferir) — R$ 20,00; 1 kg mistura papagaio — R$ 20,00",
+      "valorProduto": 135,
+      "taxaEntrega": 0,
+      "total": 135,
+      "pagamento": "Marcado / a receber",
+      "prazo": "Marcado — não considerar pago",
+      "conferencia": "Total geral manuscrito rasurado, mas 'R$ 135,00' circulado no corpo, confirmado por soma 95+20+20. Conferir produto e nome; pagamento marcado. Fonte: 1000347608.jpg."
     }
   ]
 }
