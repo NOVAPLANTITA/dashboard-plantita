@@ -1,0 +1,104 @@
+{
+  "atualizadoEm": "28/10/2026 — comanda de R$ 8.040,00 acrescida de comprovantes Mercado Pago R$ 335,00 e PIX Getnet R$ 18,00. Novo total provisório R$ 8.393,00. Divergência de R$ 0,46 para soma das linhas.",
+  "dataComanda": "28/10/2026",
+  "totalInformadoComanda": 8040,
+  "totalProvisorioComanda": 8393,
+  "totalLancamentos": 8393.46,
+  "totalTodasAnotacoes": 8393.46,
+  "diferencaConferencia": 0.46,
+  "observacao": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído.",
+  "resumoProvisorio": {
+    "entradas": 8393.46,
+    "retiradas": 0,
+    "saldo": 8393.46,
+    "totalAnotadoComanda": 8393,
+    "detalhamentoPendente": true
+  },
+  "movimentos": [
+    {
+      "data": "28/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1250,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    },
+    {
+      "data": "28/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1958,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    },
+    {
+      "data": "28/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 658,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    },
+    {
+      "data": "28/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 591.42,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    },
+    {
+      "data": "28/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO — resumo manuscrito",
+      "valor": 2001.04,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    },
+    {
+      "data": "28/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ (classificação financeira a conferir)",
+      "valor": 44,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    },
+    {
+      "data": "28/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARGARETE COSTA (grafia a conferir)",
+      "valor": 110,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    },
+    {
+      "data": "28/10/2026",
+      "tipo": "PIX",
+      "descricao": "GISLEINE (sobrenome ilegível)",
+      "valor": 88,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    },
+    {
+      "data": "28/10/2026",
+      "tipo": "PIX",
+      "descricao": "CLOWWALK (grafia a conferir)",
+      "valor": 220,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    },
+    {
+      "data": "28/10/2026",
+      "tipo": "PIX",
+      "descricao": "CONGREGAÇÃO (nome a conferir)",
+      "valor": 1120,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    },
+    {
+      "data": "28/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "COMPROVANTE CRÉDITO MERCADO PAGO — 2x, 28/10 às 18:02",
+      "valor": 335,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    },
+    {
+      "data": "28/10/2026",
+      "tipo": "PIX",
+      "descricao": "COMPROVANTE PIX GETNET — 28/10 às 18:01",
+      "valor": 18,
+      "conferencia": "Foto da comanda 1000347627.jpg. Total manuscrito R$ 8.040,00; somados os comprovantes 1000347634.jpg (Mercado Pago R$ 335,00, aprovado às 18:02) e 1000347635.jpg (PIX/Getnet R$ 18,00, às 18:01). Total provisório ajustado R$ 8.393,00. A soma das linhas, com recibos, é R$ 8.393,46; diferença de R$ 0,46 sem resolução. Não oficializar nem duplicar entregas; café como Outros, natureza a conferir. Registro PIX Marcus sem valor não incluído."
+    }
+  ],
+  "statusFechamento": "Provisório: soma do total manuscrito com dois comprovantes adicionais; pendente diferença de R$ 0,46, validação de café e nomes. Não somar entregas novamente."
+}
