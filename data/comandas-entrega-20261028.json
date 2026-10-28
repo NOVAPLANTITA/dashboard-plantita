@@ -1,0 +1,96 @@
+{
+  "atualizadoEm": "28/10/2026 — 7 comandas distintas, total R$ 1605,00; produtos R$ 1585,00, taxas expressas R$ 20,00. 2 fotos repetidas do pedido DN Novinha removidas. Pedidos a prazo não devem ser tratados como recebidos; nomes e produtos pouco legíveis necessitam conferência. Não adicionar estes valores ao Controle Diário como nova receita.",
+  "comandas": [
+    {
+      "data": "28/10/2026",
+      "cliente": "Paulo (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 milho 25 kg — R$ 60,00",
+      "valorProduto": 60,
+      "taxaEntrega": 10,
+      "total": 70,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Conferir nome e apresentação do milho. Taxa de R$ 10,00 discriminada. Fonte: 1000347625.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Paula (nome a conferir)",
+      "telefone": "",
+      "endereco": "Viela Nadir Lopes, próximo à R. Mirangola (a conferir)",
+      "descricao": "1 Magnus Todo Dia 15 kg — R$ 100,00; 1 ração 'Glatam' 10 kg (marca a conferir) — R$ 86,00",
+      "valorProduto": 186,
+      "taxaEntrega": 5,
+      "total": 191,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Confirmar segunda marca/ração e endereço; telefone parcial '731' não registrado. Fonte: 1000347626.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Leila (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "3 Magnus 15 kg (variedade a conferir) — R$ 305,00 no total manuscrito",
+      "valorProduto": 305,
+      "taxaEntrega": 0,
+      "total": 305,
+      "pagamento": "Dinheiro (PG)",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 305,00; não há taxa discriminada. Conferir grafia do nome, variedade e eventual taxa embutida. Fonte: 1000347624.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Stefan (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 Golden Special 20 kg — R$ 420,00",
+      "valorProduto": 420,
+      "taxaEntrega": 0,
+      "total": 420,
+      "pagamento": "Marcado / a receber",
+      "prazo": "Anotado 'mandar outra pessoa que chegar depois'; não considerar recebido",
+      "conferencia": "Comanda anotada 'marcado'. Confirmar grafia do cliente, descrição e entrega. Fonte: 1000347623.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Elaine",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Special (apresentação a conferir) — R$ 263,00; item manuscrito ilegível — R$ 12,00; item manuscrito pouco legível — R$ 79,00",
+      "valorProduto": 354,
+      "taxaEntrega": 5,
+      "total": 359,
+      "pagamento": "A conferir (anotação de cartão rasurada)",
+      "prazo": "",
+      "conferencia": "Valores 263+12+79+5 = R$ 359,00. Conferir os dois itens pouco legíveis e pagamento riscado. Fonte: 1000347622.jpg."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "DN Novinha (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "3 kg Golden Frango (variedade a conferir) — R$ 60,00",
+      "valorProduto": 60,
+      "taxaEntrega": 0,
+      "total": 60,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Conferir nome abreviado 'DN Novinha' e descrição exata da ração; total R$ 60,00. Fontes: 1000347620.jpg, 1000347619.jpg, 1000347618.jpg (mesma foto, lançada uma vez)."
+    },
+    {
+      "data": "28/10/2026",
+      "cliente": "Lúcia (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 ração 15 kg (parece Special Dog) — R$ 90,00; 4 kg de ração (marca a conferir) — R$ 60,00; 2 unidades de produto 'milho 25' (descrição/peso a conferir) — R$ 50,00",
+      "valorProduto": 200,
+      "taxaEntrega": 0,
+      "total": 200,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Somatório 90+60+50 = R$ 200,00. Descrições e quantidades parcialmente ilegíveis; data inferida do lote de 28/10 pois data não nítida na foto. Fonte: 1000347617.jpg."
+    }
+  ]
+}
