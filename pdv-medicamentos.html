@@ -18,16 +18,16 @@
 <div class="wrap">
 <header class="top">
  <div class="brand"><div class="logo">✦</div><div><h1>Plantita <span style="color:#a0cfc4;font-weight:400">/ PDV</span></h1><p>Registro unificado de medicamentos e granel</p></div></div>
- <div class="right-head"><span class="flag">⚠ TESTE • PREÇOS DA LOJA</span><a class="navlink" href="https://novaplantita.github.io/dashboard-plantita/dashboard-v13.html">← Dashboard atual</a></div>
+ <div class="right-head"><span class="flag" id="pdvModeLabel">PREPARAÇÃO • NÃO FINALIZAR</span><a class="navlink" href="https://novaplantita.github.io/dashboard-plantita/dashboard-v13.html">← Dashboard atual</a></div>
 </header>
 <div class="heading"><div><h2>Uma tela para todas as bipagens</h2><div class="sub">Bipagem automática: balança + medicamentos • <span id="dateLabel"></span></div></div><span class="chip">● Leitor pronto para Enter</span></div>
-<div class="notice"><b>Ambiente de demonstração.</b> A tela reúne os medicamentos da lista de fotos enviada em 21/10/2026, com os valores de venda manuscritos <b>transcritos para conferência</b>. Os itens de preço duvidoso ficam bloqueados, e os códigos EAN novos precisam ser vinculados à embalagem correta. <b>O estoque mostrado é apenas de teste.</b> Este protótipo recebe códigos de leitores USB e não envia vendas à dashboard nem altera o estoque físico. As associações de medicamentos podem ser sincronizadas com Google Sheets <b>após a implantação da ponte dedicada</b>. Os registros de teste continuam neste navegador.</div>
+<div class="notice" id="pdvNotice"><b>Pré-operação:</b> a leitura e o cadastro já funcionam, mas a finalização ficará bloqueada até a ponte de vendas ser implantada e confirmada pelo Google. Os registros antigos de teste não serão migrados. O estoque físico e o Controle Diário NÃO são alterados automaticamente.</div>
 <main class="layout">
  <div class="stack">
   <section class="card" aria-label="Bipagem"><div class="headcard"><h3>▥ Leitura do código de barras</h3><span class="chip">1 leitor • 2 tipos de produto</span></div>
     <form id="scanForm" class="scanner"><input class="scanfield" id="barcode" type="text" placeholder="Bipe aqui ou digite um código e Enter" autocomplete="off" spellcheck="false" aria-label="Código de barras" autofocus><button class="primary" type="submit">ADICIONAR</button></form>
     <div class="scanner-desc"><small>Sem trocar de modo: etiquetas da balança começando com 2 são lidas pelo mesmo padrão do leitor atual; medicamentos são buscados pelo EAN completo e pelos últimos dígitos da coluna Código da DANFE (identificação única). Quando um medicamento ainda não tiver EAN vinculado, abre a janela para identificar e associar o código à apresentação correta.</small></div>
-    <div class="shortcuts"><button type="button" class="secondary" id="resolveUnknown">🔎 Localizar / cadastrar código não encontrado</button><button class="demo" id="testMed" type="button">Testar Credeli 48 mg: <b>5420036978916</b></button><button class="demo" id="testTopDog" type="button">Testar Top Dog Ourofino 2,5 kg: <b>7898019866631</b> (R$ 36,00)</button><button class="demo" id="testDrontal" type="button">Testar Drontal 20 ml: <b>4007221055259</b></button><button class="demo" id="testGranel" type="button">Testar balança: <b>2000000000961</b> (R$ 0,96)</button></div>
+    <div class="shortcuts"><button type="button" class="secondary" id="resolveUnknown">🔎 Localizar / cadastrar código não encontrado</button><button class="demo" id="testMed" type="button" hidden style="display:none">Testar Credeli 48 mg: <b>5420036978916</b></button><button class="demo" id="testTopDog" type="button" hidden style="display:none">Testar Top Dog Ourofino 2,5 kg: <b>7898019866631</b> (R$ 36,00)</button><button class="demo" id="testDrontal" type="button" hidden style="display:none">Testar Drontal 20 ml: <b>4007221055259</b></button><button class="demo" id="testGranel" type="button" hidden style="display:none">Testar balança: <b>2000000000961</b> (R$ 0,96)</button></div>
 
     <div class="statusp" style="margin-top:12px;background:#052d30;border:1px solid #286e64;border-radius:12px;padding:11px">
       <b>☁ Base Central • Códigos de medicamentos</b>
@@ -36,7 +36,7 @@
         <button class="ghost" type="button" id="medSyncReload">↻ Atualizar códigos</button>
       </div>
       <span id="medSyncStatus" role="status" aria-live="polite">Google não configurado: vínculos salvos somente neste computador.</span><div id="medSyncDetails" class="fine" style="margin-top:9px;display:none;line-height:1.7" aria-live="polite"></div>
-      <p class="fine">Compartilha EAN, medicamento e preço de venda em reais. Vendas e estoque continuam no teste local. Só confirma sincronização após verificar os dados na planilha.</p>
+      <p class="fine">EAN e preços compartilham a base central. Após ativação, cada venda será gravada na aba PDV_Vendas com confirmação do servidor. Estoque físico e Controle Diário continuam sem integração automática.</p><p class="fine" id="pdvOperationalStatus">Aguardando verificação da integração de vendas…</p>
     </div>
     <div role="status" aria-live="polite" id="message" class="message">Pronto para iniciar um registro.</div><p class="fine" id="scanDiagnosis" aria-live="polite">Última bipagem: nenhuma. A busca usa diretamente a coluna CÓDIGO das DANFEs.</p><p class="fine" id="statusBaseDanfe"></p><p class="fine">Versão <b>29/10/2026 • CÓDIGO + PREÇO SINCRONIZADOS • BUSCA PELOS 6 DÍGITOS FINAIS</b>. Atualização <code>?v=20261022-cadastro-v5</code>. Os vínculos antigos são conferidos contra os códigos conhecidos das DANFEs.</p><p class="fine">Etiqueta da balança: <code>2000000000961 → R$ 0,96</code>. Medicamentos confirmados: Credeli 48 mg <code>5420036978916 → 978916</code> e Drontal Puppy <code>4007221055259 → 55259</code>. Outras correspondências são provisórias e bloqueadas quando ambíguas. Códigos de DANFE com menos de 5 dígitos exigem um EAN completo conferido.</p>
   </section>
@@ -45,24 +45,24 @@
   </section>
   <section class="card"><div class="headcard"><h3>Totais do registro</h3><span class="chip">Separação automática</span></div>
     <div class="sums"><div class="sum"><span>⚖ Vendas da balança</span><b id="totalGranel">R$ 0,00</b></div><div class="sum"><span>✚ Medicamentos</span><b id="totalMed">R$ 0,00</b></div><div class="sum"><span>✓ TOTAL GERAL</span><b id="totalAll">R$ 0,00</b></div></div>
-    <div class="actions"><button type="button" class="secondary danger" id="clearCart">Cancelar registro</button><button type="button" class="primary" id="finish" disabled>✓ FINALIZAR REGISTRO</button></div>
-    <div class="statusp">Finalizar reduz apenas o <b>saldo de teste</b>, iniciado a partir das quantidades da DANFE. Não atualiza estoque físico, Controle Diário nem a balança real. Os preços vêm da tabela manuscrita da loja, <b>sujeitos a conferência antes da cobrança</b>.</div>
+    <div class="actions"><button type="button" class="secondary danger" id="clearCart">Cancelar registro</button><button type="button" class="primary" id="finish" disabled>✓ REGISTRAR VENDA NO GOOGLE</button></div>
+    <div class="statusp">A venda só é confirmada após leitura do recibo na aba <b>PDV_Vendas</b>. Sem conexão: a venda não é concluída. Nenhuma baixa física é executada. <b>Não somar novamente as vendas de granel no Controle Diário sem conciliação.</b></div>
   </section>
  </div>
  <aside class="stack">
-  <section class="card"><div class="headcard"><h3>Resumo dos testes de hoje</h3><span class="chip" id="salesToday">0 registros</span></div>
-    <div class="kpi-grid"><div class="kpi"><span>⚖ Granel • hoje</span><b id="todayGranel">R$ 0,00</b></div><div class="kpi"><span>✚ Medicamentos • hoje</span><b id="todayMed">R$ 0,00</b></div><div class="kpi total" style="grid-column:1/-1"><span>Total das bipagens de hoje neste navegador</span><b id="todayAll">R$ 0,00</b></div></div>
+  <section class="card"><div class="headcard"><h3>Registros desta estação</h3><span class="chip" id="salesToday">0 registros</span></div>
+    <div class="kpi-grid"><div class="kpi"><span>⚖ Granel • hoje</span><b id="todayGranel">R$ 0,00</b></div><div class="kpi"><span>✚ Medicamentos • hoje</span><b id="todayMed">R$ 0,00</b></div><div class="kpi total" style="grid-column:1/-1"><span>Total desta estação (inclui registro em andamento)</span><b id="todayAll">R$ 0,00</b></div></div>
     <p class="fine" id="todayBreakdown" aria-live="polite">Concluídos: R$ 0,00 • Em andamento: R$ 0,00</p>
     <p class="fine" style="margin-top:-6px">O resumo é atualizado a cada bipagem, inclusive antes de finalizar. Apenas registros finalizados entram no histórico e no CSV. Cancelar retira os itens em andamento.</p>
     <div class="divider"></div><h3 class="mini-title">Registros recentes</h3><div class="hlist" id="history"></div>
-    <div class="btnline" style="margin-top:12px"><button class="ghost" id="exportSales" type="button">↓ Exportar CSV dos testes</button></div>
+    <div class="btnline" style="margin-top:12px"><button class="ghost" id="exportSales" type="button">↓ Exportar CSV desta estação</button></div>
   </section>
-  <section class="card"><div class="headcard"><h3>Medicamentos cadastrados</h3><span class="chip">Preços das fotos • teste local</span></div><input id="catalogFilter" type="search" placeholder="Pesquisar medicamento..." style="width:100%;margin-bottom:9px;padding:11px;background:#062228;color:white;border:1px solid #285b62;border-radius:10px"><div class="catalog" id="catalog"></div>
+  <section class="card"><div class="headcard"><h3>Medicamentos cadastrados</h3><span class="chip">Preços centrais • conferir</span></div><input id="catalogFilter" type="search" placeholder="Pesquisar medicamento..." style="width:100%;margin-bottom:9px;padding:11px;background:#062228;color:white;border:1px solid #285b62;border-radius:10px"><div class="catalog" id="catalog"></div>
     <div class="divider"></div><div class="btnline"><button id="newMed" class="secondary" type="button">＋ Cadastrar medicamento</button><button id="importCsv" class="ghost" type="button">↑ Importar CSV</button><button id="exampleCsv" class="ghost" type="button">↓ Modelo CSV</button></div><input id="csvFile" type="file" accept=".csv,text/csv" hidden><p class="fine">O cadastro usa uma base unificada das DANFEs. Os totais atuais de produtos, códigos e preços aparecem junto ao campo de bipagem, depois que a base carregar. Pesquise pela descrição e use <b>Vincular EAN</b> para pesquisar e confirmar o código da embalagem (sem registrar venda). Outros medicamentos também podem ser importados por CSV. Para ampliar a lista, importe CSV com <code>codigo;descricao</code> (campos CÓDIGO e DESCRIÇÃO da DANFE). Preço, estoque e EAN são opcionais e, opcionalmente, <code>ean</code>. Preço da foto: conferir antes de cobrar; o estoque informado não é físico.</p>
   </section>
  </aside>
 </main>
-<p class="footer">PLANTITA • PREÇOS DAS FOTOS — Ambiente de teste, sem baixa física ou sincronização de vendas.</p>
+<p class="footer">PLANTITA • PDV • Registro confirmado somente na base central PDV_Vendas. Estoque físico e Controle Diário não são atualizados automaticamente.</p>
 </div>
 <div id="modalMed" class="modalback" role="dialog" aria-modal="true" aria-label="Cadastrar medicamento"><div class="dialog"><h3>✚ Cadastro de medicamento (teste)</h3><p>Cadastro excepcional: use somente se o medicamento não constar nas DANFEs. Com EAN válido, nome, código e preço de VENDA serão sincronizados com o Google; vendas e estoque permanecem locais. Na leitura normal, NÃO é necessário cadastrar produto por produto.</p><form id="medForm"><div class="field"><label for="medCode">Número lido (EAN) ou Código DANFE — conferir embalagem</label><input id="medCode" required placeholder="Ex.: 978916"></div><div class="field"><label for="medName">Descrição</label><input id="medName" required placeholder="Nome do medicamento"></div><div class="field"><label for="medPrice">Preço de venda (R$) — deixe vazio se ainda não sabe</label><input id="medPrice" inputmode="decimal" placeholder="Ex.: 24,90"></div><div class="field"><label for="medStock">Quantidade em estoque (teste)</label><input id="medStock" type="number" min="0" step="1" required value="1"></div><div class="modalactions"><button type="button" class="secondary" data-close="modalMed">Cancelar</button><button class="primary">Salvar no teste</button></div></form></div></div>
 
@@ -89,12 +89,29 @@
 (async()=>{
 'use strict';
 const $=id=>document.getElementById(id), fmt=n=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format((Number(n)||0)/100), uid=()=>(''+Date.now()+Math.random().toString(16).slice(2)), escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const KEYS={catalog:'plantita_pdv_danfe_catalog_v2',cart:'plantita_pdv_danfe_cart_v2',sales:'plantita_pdv_danfe_sales_v2'};
+const KEYS={catalog:'plantita_pdv_danfe_catalog_v2',cart:'plantita_pdv_danfe_cart_v2',sales:'plantita_pdv_danfe_sales_v2',liveCart:'plantita_pdv_operacional_cart_v1',liveSales:'plantita_pdv_operacional_sales_v1'};
 function store(key,val){try{localStorage.setItem(key,JSON.stringify(val))}catch(e){message('Não foi possível salvar neste navegador.','warn')}}
 function restore(key,fallback){try{let x=JSON.parse(localStorage.getItem(key));return x===null?fallback:x}catch(e){return fallback}}
 const demoCatalog=[{"code":"1094","name":"Seringa Medix 3 ml c/ agulha 25 x 0,7","price":58,"stock":40,"cost":0.36675,"danfe":"14.463","vendor":"Lar Pet","ean":[]},{"code":"935","name":"Vacina Raiva 1 dose LEMA","price":1603,"stock":40,"cost":10.12325,"danfe":"14.463","vendor":"Lar Pet","ean":[]},{"code":"978916","name":"Credeli Gatos 48 mg - 1 comprimido","price":6889,"stock":6,"cost":43.496667,"danfe":"733.628","vendor":"Ollea","ean":["5420036978916"]},{"code":"982258","name":"Zenerella 48 mg - 30 comprimidos","price":25002,"stock":1,"cost":157.86,"danfe":"733.628","vendor":"Ollea","ean":[]},{"code":"975830","name":"Seresto coleira grande","price":24655,"stock":1,"cost":155.67,"danfe":"733.628","vendor":"Ollea","ean":[]},{"code":"55259","name":"Drontal Puppy 20 ml","price":7368,"stock":8,"cost":46.5225,"danfe":"733.628","vendor":"Ollea","ean":["4007221055259"]},{"code":"978923","name":"Credeli Gatos 12 mg - 1 comprimido","price":6128,"stock":2,"cost":38.695,"danfe":"733.628","vendor":"Ollea","ean":[]},{"code":"940388","name":"Credeli - 3 comprimidos (azul)","price":27974,"stock":1,"cost":176.63,"danfe":"733.628","vendor":"Ollea","ean":[]}];
 let catalog=restore(KEYS.catalog,demoCatalog),cart=restore(KEYS.cart,[]),sales=restore(KEYS.sales,[]);
 let unmatchedEAN='',lastScannedCode='';
+let pdvReady=false,pdvSubmitting=false,pdvLiveLoaded=false;
+const PDV_PENDING_SALE_KEY='plantita_pdv_operacional_pendente_v1';
+function pdvPendingSale(){return restore(PDV_PENDING_SALE_KEY,null)}
+function pdvSavePendingSale(x){store(PDV_PENDING_SALE_KEY,x)}
+function pdvSwapLive(){
+ if(pdvLiveLoaded)return;
+ cart=restore(KEYS.liveCart,[]);
+ sales=restore(KEYS.liveSales,[]);
+ pdvLiveLoaded=true;
+}
+function pdvGate(){
+ if(pdvPendingSale()){
+  message('Há uma venda com confirmação pendente do Google. Use Finalizar registro para consultar o mesmo ID. Não repita a cobrança.','warn');
+  return false;
+ }
+ return true;
+}
 
 const MED_URL_KEY='plantita_medicamentos_sync_endpoint_v1';
 const MED_ACCESS_KEY='plantita_medicamentos_sync_access_v1';
@@ -374,16 +391,22 @@ function valueCents(input){let s=String(input||'').trim().replace(/\s|R\$/gi,'')
 function calc(){let med=0,granel=0,n=0;for(let item of cart){const subtotal=item.price*item.qty;n+=item.qty;if(item.type==='med')med+=subtotal;else granel+=subtotal}return{med,granel,total:med+granel,n}}
 function localDay(date=new Date()){const pad=n=>String(n).padStart(2,'0');return date.getFullYear()+'-'+pad(date.getMonth()+1)+'-'+pad(date.getDate())}
 function pending(code){return cart.filter(x=>x.type==='med'&&x.code===code).reduce((n,x)=>n+x.qty,0)}
-function addMed(code,formaIdentificacao='Cadastro de medicamentos'){
+function addMed(code,formaIdentificacao='Cadastro de medicamentos',bipado=''){
+ if(!pdvGate())return;
  let med=catalog.find(x=>x.code===code);
- if(!med){message('O produto ainda não consta na base de teste.','err');return}if(med.origemCadastro==='manual-pdv'&&med.bipagemPermitida===false){message('Cadastro manual ainda sem EAN válido: confira e vincule a embalagem antes de testar a venda.','warn');return}if(!Number.isInteger(med.price)||med.price<=0){message('✓ PRODUTO IDENTIFICADO: '+med.name+' • via '+formaIdentificacao+'. Falta o preço de venda da Plantita: não foi lançado nem cobrado.','warn');return}
- const available=Math.max(0,Number(med.stock)-pending(code));
- if(available<1){message('Saldo de TESTE esgotado para '+med.name+'. Não é o estoque real.','err');return}
- let row=cart.find(x=>x.type==='med'&&x.code===code);
- if(row)row.qty++;else cart.push({id:uid(),type:'med',code:med.code,name:med.name,qty:1,price:med.price});
+ if(!med){message('O medicamento não consta na base central.','err');return}if(med.origemCadastro==='manual-pdv'&&med.bipagemPermitida===false){message('Cadastro manual ainda sem EAN válido: confira e vincule a embalagem antes de testar a venda.','warn');return}if(!Number.isInteger(med.price)||med.price<=0){message('✓ PRODUTO IDENTIFICADO: '+med.name+' • via '+formaIdentificacao+'. Falta o preço de venda da Plantita: não foi lançado nem cobrado.','warn');return}
+ const scanned=normalizarCodigoLeitor(bipado);
+ const ean=checkEAN(scanned)&&(med.ean||[]).includes(scanned)?scanned:
+  ((med.ean||[]).length===1?med.ean[0]:'');
+ if(!ean){
+  message('Medicamento sem EAN completo confirmado. Vincule a embalagem antes de registrar venda.','warn');return
+ }
+ let row=cart.find(x=>x.type==='med'&&x.code===code&&x.ean===ean&&x.price===med.price);
+ if(row)row.qty++;else cart.push({id:uid(),type:'med',code:med.code,ean,name:med.name,qty:1,price:med.price});
  save();message('✓ ENCONTRADO: '+med.name+' • via '+formaIdentificacao+' • Código DANFE '+(med.codigoDanfe||'não preenchido')+' • Preço da lista '+fmt(med.price)+'.');
 }
 function addGranel(cents,code,interno){
+ if(!pdvGate())return;
  if(!Number.isInteger(cents)||cents<=0){message('Valor da balança inválido. Nenhum item foi lançado.','err');return}
  const name='Granel — venda da balança';
  cart.push({id:uid(),type:'granel',code,name,qty:1,price:cents});
@@ -562,7 +585,7 @@ function readCode(raw){
   const med=result.product;
   $('scanDiagnosis').textContent='Bipado: '+code+' → DANFE CÓDIGO: '+(result.codigoDanfe||med.codigoDanfe||'AINDA NÃO CADASTRADO (EAN confirmado externamente)')+' → PRODUTO: '+med.name+' → '+result.kind;
   // Não transformar uma coincidência dos 6 dígitos finais em EAN confirmado sem conferência física.
-  addMed(med.code,result.kind);return;
+  addMed(med.code,result.kind,code);return;
  }
  if(result.status==='candidate'){$('scanDiagnosis').textContent='Bipado: '+code+' → possível CÓDIGO DANFE '+(result.product.codigoDanfe||'?')+' → '+result.product.name+' (PENDENTE DE CONFERÊNCIA).';openAssociation(code,result.product);return}
   if(result.status==='ambiguous'){openAssociation(code);$('assocSearch').value='';renderAssociationCandidates();message('⚠ Mais de um produto corresponde ao código '+code+'. Nenhum foi lançado; confira a embalagem e escolha a apresentação correta.','warn');return}
@@ -682,8 +705,9 @@ function aplicarCodigosDaDanfe(){
  return {total:itens.length,integrados,codigos,eans};
 }
  function loadPhotoPrices(){const itens=JSON.parse(document.getElementById('plantita-fotos').textContent).itens;const key=s=>norm(s).replace(/\s+/g,' ').replace('zenerelia','zenerella');for(const p of catalog)if(demoCatalog.some(d=>d.code===p.code)){p.price=null;p.stock=99999;}for(const [i,x] of itens.entries()){const price=typeof x.precoVenda==='number'?Math.round(x.precoVenda*100):null;let p=catalog.find(m=>key(m.name)===key(x.produto));if(p){if(price!==null){p.price=price;p.fonte='foto'}else if(p.fonte!=='foto')p.price=null;p.pagina=x.pagina;}else{p={code:'FOTO'+String(i+1).padStart(4,'0'),name:x.produto,price,stock:99999,ean:[],fonte:price===null?'pendente':'foto',pagina:x.pagina};catalog.push(p)}const codigoBarra=String(x.codigoBarras||'').trim();if(codigoBarra&&checkEAN(codigoBarra)){p.ean=Array.isArray(p.ean)?p.ean:[];if(!p.ean.includes(codigoBarra))p.ean.push(codigoBarra);p.origemCodigo='EAN conferido na foto da embalagem'}}store(KEYS.catalog,catalog);return itens.length;}
-function save(){store(KEYS.cart,cart);render()}
-function render(){const c=calc();$('countItems').textContent=c.n+' '+(c.n===1?'item':'itens');$('totalMed').textContent=fmt(c.med);$('totalGranel').textContent=fmt(c.granel);$('totalAll').textContent=fmt(c.total);$('finish').disabled=!cart.length;$('clearCart').disabled=!cart.length;$('emptyCart').style.display=cart.length?'none':'block';$('items').innerHTML=cart.map(x=>'<tr><td><span class="type '+(x.type==='med'?'med':'gra')+'">'+(x.type==='med'?'REMÉDIO':'GRANEL')+'</span></td><td><span class="name">'+escapeHtml(x.name)+'</span><span class="code">'+escapeHtml(x.code)+'</span></td><td class="tright">'+x.qty+'</td><td class="tright"><b>'+fmt(x.price*x.qty)+'</b></td><td class="tright"><button class="remove" data-remove="'+escapeHtml(x.id)+'" aria-label="Remover item">×</button></td></tr>').join('');
+function save(){store(pdvLiveLoaded?KEYS.liveCart:KEYS.cart,cart);render()}
+function render(){const c=calc();$('countItems').textContent=c.n+' '+(c.n===1?'item':'itens');$('totalMed').textContent=fmt(c.med);$('totalGranel').textContent=fmt(c.granel);$('totalAll').textContent=fmt(c.total);$('finish').disabled=!pdvReady||pdvSubmitting||!cart.length;
+ $('clearCart').disabled=!cart.length||pdvSubmitting||!!pdvPendingSale();$('emptyCart').style.display=cart.length?'none':'block';$('items').innerHTML=cart.map(x=>'<tr><td><span class="type '+(x.type==='med'?'med':'gra')+'">'+(x.type==='med'?'REMÉDIO':'GRANEL')+'</span></td><td><span class="name">'+escapeHtml(x.name)+'</span><span class="code">'+escapeHtml(x.code)+'</span></td><td class="tright">'+x.qty+'</td><td class="tright"><b>'+fmt(x.price*x.qty)+'</b></td><td class="tright"><button class="remove" data-remove="'+escapeHtml(x.id)+'" aria-label="Remover item">×</button></td></tr>').join('');
 const busca=norm($('catalogFilter').value);const visiveis=busca?catalog.filter(p=>norm(p.name).includes(busca)||norm(p.codigoDanfe||'').includes(busca)):([ ...catalog.filter(p=>p.origemCadastro==='manual-pdv'), ...catalog.filter(p=>p.origemCadastro!=='manual-pdv') ]).slice(0,60);$('catalog').innerHTML=visiveis.map(p=>'<div class="product"><div><div class="product-name">'+escapeHtml(p.name)+'</div><small>Foto '+escapeHtml(p.pagina||'—')+' • '+(p.price!==null&&p.price>0?'VENDA '+fmt(p.price):'PREÇO PENDENTE')+' • Código DANFE: '+escapeHtml(p.codigoDanfe||'não informado')+' • '+((p.ean||[]).length?'EAN '+escapeHtml(p.ean.join(', ')):'EAN pendente')+'</small></div><div style="display:grid;gap:5px"><button type="button" class="plus" data-bind="'+escapeHtml(p.code)+'">Vincular EAN</button><button type="button" class="plus" data-price="'+escapeHtml(p.code)+'">✎ Preço</button><button type="button" class="plus" data-med="'+escapeHtml(p.code)+'" '+(p.price===null||(p.origemCadastro==='manual-pdv'&&p.bipagemPermitida===false)?'disabled':'')+'>+ Testar</button></div></div>').join('')||'<div class="fine">Nenhum produto encontrado.</div>';
 
 // Atualiza o resumo já na bipagem. Os itens ainda não finalizados não são vendas concluídas.
@@ -700,7 +724,7 @@ const history=todays.slice(-5).reverse().map(s=>'<div class="hrow"><div><b>Regis
 $('history').innerHTML=draft+history||'<span class="fine">Nenhum registro concluído hoje.</span>';
 }
 function focusScan(){if(!document.querySelector('.modalback.show')&&window.matchMedia('(min-width:750px)').matches)$('barcode').focus()}
-$('scanForm').addEventListener('submit',e=>{e.preventDefault();const v=$('barcode').value;$('barcode').value='';readCode(v);focusScan()});
+$('scanForm').addEventListener('submit',e=>{e.preventDefault();if(!pdvGate())return;const v=$('barcode').value;$('barcode').value='';readCode(v);focusScan()});
 
 $('medSyncConfigure').onclick=()=>{
  const cfg=medConf();$('medSyncUrl').value=cfg.url;$('medSyncKey').value=cfg.secret;
@@ -732,9 +756,46 @@ $('assocNewMed').onclick=()=>{
  message('Cadastro local de teste: confira a embalagem. Preço desconhecido pode ficar pendente.','warn');
 };
 $('testMed').onclick=()=>{readCode('5420036978916');focusScan()};$('testDrontal').onclick=()=>{readCode('4007221055259');focusScan()};$('testTopDog').onclick=()=>{readCode('7898019866631');focusScan()};$('testGranel').onclick=()=>{readCode('2000000000961');focusScan()};
-document.addEventListener('click',e=>{let rm=e.target.closest('[data-remove]');if(rm){const i=cart.findIndex(x=>x.id===rm.dataset.remove);if(i>=0){const x=cart[i];if(x.type==='med'&&x.qty>1)x.qty--;else cart.splice(i,1);save();message('Item retirado do registro.')}focusScan()}let add=e.target.closest('[data-med]');if(add){addMed(add.dataset.med);focusScan()}let bind=e.target.closest('[data-bind]');if(bind){const p=catalog.find(x=>x.code===bind.dataset.bind);if(p){const raw=prompt('Bipe ou digite o EAN de '+p.name+':');if(raw!==null){const code=raw.trim(),other=catalog.find(x=>x!==p&&((x.ean||[]).includes(code)||x.code===code));if(!checkEAN(code)||/^2\d{12}$/.test(code)||other)message(other?'EAN já associado a outro produto.':'EAN inválido.','err');else openAssociation(code,p);}}}let priceEdit=e.target.closest('[data-price]');if(priceEdit)editMedPrice(priceEdit.dataset.price);let choose=e.target.closest('[data-assoc-product]');if(choose){saveAssociation(choose.dataset.assocProduct)}let close=e.target.closest('[data-close]');if(close){document.getElementById(close.dataset.close).classList.remove('show');focusScan()}});
-$('clearCart').onclick=()=>{if(confirm('Cancelar o registro atual? Nenhuma baixa de estoque será feita.')){cart=[];save();message('Registro cancelado. Estoque de teste preservado.','warn');focusScan()}};
-$('finish').onclick=()=>{if(!cart.length)return;for(let x of cart.filter(x=>x.type==='med')){let p=catalog.find(c=>c.code===x.code);if(!p||p.stock<x.qty){message('Saldo insuficiente para '+x.name+'. Revise o cadastro de teste.','err');return}}const c=calc();if(!confirm('Finalizar registro de '+fmt(c.total)+'?\nMedicamentos: '+fmt(c.med)+'\nGranel: '+fmt(c.granel)+'\n\nO registro será feito apenas no navegador; não haverá baixa de estoque real.'))return;const date=new Date();let record={id:uid(),day:localDay(date),time:date.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}),timestamp:date.toISOString(),med:c.med,granel:c.granel,items:cart.map(x=>({...x}))};for(const x of cart.filter(x=>x.type==='med')){const p=catalog.find(c=>c.code===x.code);p.stock-=x.qty}sales.push(record);cart=[];store(KEYS.cart,cart);store(KEYS.catalog,catalog);store(KEYS.sales,sales);render();message('✓ Registro concluído no teste: '+fmt(c.total)+'. Nenhuma baixa de estoque físico foi feita.');focusScan()};
+document.addEventListener('click',e=>{let rm=e.target.closest('[data-remove]');if(rm&&!pdvGate())return;if(rm){const i=cart.findIndex(x=>x.id===rm.dataset.remove);if(i>=0){const x=cart[i];if(x.type==='med'&&x.qty>1)x.qty--;else cart.splice(i,1);save();message('Item retirado do registro.')}focusScan()}let add=e.target.closest('[data-med]');if(add){addMed(add.dataset.med);focusScan()}let bind=e.target.closest('[data-bind]');if(bind){const p=catalog.find(x=>x.code===bind.dataset.bind);if(p){const raw=prompt('Bipe ou digite o EAN de '+p.name+':');if(raw!==null){const code=raw.trim(),other=catalog.find(x=>x!==p&&((x.ean||[]).includes(code)||x.code===code));if(!checkEAN(code)||/^2\d{12}$/.test(code)||other)message(other?'EAN já associado a outro produto.':'EAN inválido.','err');else openAssociation(code,p);}}}let priceEdit=e.target.closest('[data-price]');if(priceEdit)editMedPrice(priceEdit.dataset.price);let choose=e.target.closest('[data-assoc-product]');if(choose){saveAssociation(choose.dataset.assocProduct)}let close=e.target.closest('[data-close]');if(close){document.getElementById(close.dataset.close).classList.remove('show');focusScan()}});
+$('clearCart').onclick=()=>{if(!pdvGate())return;if(confirm('Cancelar itens ainda não registrados?')){cart=[];save();message('Registro em andamento cancelado. Nenhuma venda foi enviada.','warn');focusScan()}};
+$('finish').onclick=async()=>{
+ if(!pdvReady||!cart.length||pdvSubmitting){message('Registro central indisponível ou carrinho vazio.','warn');return}
+ const current=cart.map(x=>({type:x.type,code:x.code,ean:x.ean||'',
+  name:x.name,qty:x.qty,price:x.price}));
+ let pendingSale=pdvPendingSale();
+ if(pendingSale && JSON.stringify(pendingSale.items)!==JSON.stringify(current)){
+  message('Há uma venda com confirmação indefinida. Não altere o carrinho; confira o ID '+pendingSale.saleId+' no Google.','err');return;
+ }
+ const totals=calc();
+ if(!pendingSale){
+  if(!confirm('REGISTRAR VENDA REAL NA BASE CENTRAL?\n\nMedicamentos: '+fmt(totals.med)+
+    '\nGranel: '+fmt(totals.granel)+'\nTOTAL: '+fmt(totals.total)+
+    '\n\nA venda ficará na aba PDV_Vendas. Não haverá baixa física nem envio ao Controle Diário.'))return;
+  pendingSale={saleId:'PDV_'+Date.now()+'_'+Math.random().toString(36).slice(2,11),
+   items:current,createdAt:new Date().toISOString()};
+  pdvSavePendingSale(pendingSale);
+ }
+ pdvSubmitting=true;render();
+ try{
+  const receipt=await pdvRegisterSale(pendingSale);
+  if(!receipt||receipt.status!=='Registrado'||receipt.saleId!==pendingSale.saleId||
+    receipt.totalCentavos!==totals.total)
+   throw Error('Recibo do Google não corresponde ao carrinho.');
+  const dt=new Date();
+  const record={id:pendingSale.saleId,day:receipt.date||localDay(dt),
+    time:dt.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}),
+    timestamp:receipt.timestamp||dt.toISOString(),
+    med:totals.med,granel:totals.granel,items:current.map(x=>({...x}))};
+  if(!sales.some(x=>x.id===record.id))sales.push(record);
+  cart=[];store(KEYS.liveCart,cart);store(KEYS.liveSales,sales);
+  localStorage.removeItem(PDV_PENDING_SALE_KEY);
+  message('✓ VENDA REGISTRADA NA BASE CENTRAL: '+fmt(totals.total)+
+    ' • recibo '+receipt.saleId+'. Estoque físico não alterado.');
+ }catch(e){
+  message('⚠ Venda sem confirmação central: '+String(e?.message||e)+
+   '. Não repita a cobrança. Clique em Registrar venda para consultar/reutilizar o MESMO ID.','err');
+ }finally{pdvSubmitting=false;render();focusScan()}
+};
 function openModal(id,focus){$(id).classList.add('show');setTimeout(()=>$(focus).focus(),60)}$('newMed').onclick=()=>openModal('modalMed','medCode');
 $('medForm').onsubmit=e=>{
  e.preventDefault();
