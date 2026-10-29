@@ -1,0 +1,62 @@
+{
+  "atualizadoEm": "29/10/2026 — comanda de 25/10/2026 registrada como provisória, divergência de R$ 0,94",
+  "dataComanda": "25/10/2026",
+  "totalInformadoComanda": 6246,
+  "totalProvisorioComanda": 6246,
+  "totalLancamentos": 6246.94,
+  "totalTodasAnotacoes": 6246.94,
+  "diferencaConferencia": 0.94,
+  "observacao": "Foto da comanda 1000347880.jpg, datada de 25/10/2026. Total manuscrito R$ 6.246,00; soma das seis entradas monetárias R$ 6.246,94; diferença de R$ 0,94 pendente de conciliação. Total manuscrito utilizado provisoriamente no diário e no acumulado mensal, sem oficialização. CAFÉ está sem valor e não foi somado. Não duplicar valores das entregas.",
+  "resumoProvisorio": {
+    "entradas": 6246.94,
+    "retiradas": 0,
+    "saldo": 6246.94,
+    "totalAnotadoComanda": 6246,
+    "detalhamentoPendente": true
+  },
+  "movimentos": [
+    {
+      "data": "25/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1450,
+      "conferencia": "Foto da comanda 1000347880.jpg, datada de 25/10/2026. Total manuscrito R$ 6.246,00; soma das seis entradas monetárias R$ 6.246,94; diferença de R$ 0,94 pendente de conciliação. Total manuscrito utilizado provisoriamente no diário e no acumulado mensal, sem oficialização. CAFÉ está sem valor e não foi somado. Não duplicar valores das entregas."
+    },
+    {
+      "data": "25/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 625,
+      "conferencia": "Foto da comanda 1000347880.jpg, datada de 25/10/2026. Total manuscrito R$ 6.246,00; soma das seis entradas monetárias R$ 6.246,94; diferença de R$ 0,94 pendente de conciliação. Total manuscrito utilizado provisoriamente no diário e no acumulado mensal, sem oficialização. CAFÉ está sem valor e não foi somado. Não duplicar valores das entregas."
+    },
+    {
+      "data": "25/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 740,
+      "conferencia": "Foto da comanda 1000347880.jpg, datada de 25/10/2026. Total manuscrito R$ 6.246,00; soma das seis entradas monetárias R$ 6.246,94; diferença de R$ 0,94 pendente de conciliação. Total manuscrito utilizado provisoriamente no diário e no acumulado mensal, sem oficialização. CAFÉ está sem valor e não foi somado. Não duplicar valores das entregas."
+    },
+    {
+      "data": "25/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1744,
+      "conferencia": "Foto da comanda 1000347880.jpg, datada de 25/10/2026. Total manuscrito R$ 6.246,00; soma das seis entradas monetárias R$ 6.246,94; diferença de R$ 0,94 pendente de conciliação. Total manuscrito utilizado provisoriamente no diário e no acumulado mensal, sem oficialização. CAFÉ está sem valor e não foi somado. Não duplicar valores das entregas."
+    },
+    {
+      "data": "25/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 1653.44,
+      "conferencia": "Foto da comanda 1000347880.jpg, datada de 25/10/2026. Total manuscrito R$ 6.246,00; soma das seis entradas monetárias R$ 6.246,94; diferença de R$ 0,94 pendente de conciliação. Total manuscrito utilizado provisoriamente no diário e no acumulado mensal, sem oficialização. CAFÉ está sem valor e não foi somado. Não duplicar valores das entregas."
+    },
+    {
+      "data": "25/10/2026",
+      "tipo": "PIX",
+      "descricao": "CIANE",
+      "valor": 34.5,
+      "conferencia": "Foto da comanda 1000347880.jpg, datada de 25/10/2026. Total manuscrito R$ 6.246,00; soma das seis entradas monetárias R$ 6.246,94; diferença de R$ 0,94 pendente de conciliação. Total manuscrito utilizado provisoriamente no diário e no acumulado mensal, sem oficialização. CAFÉ está sem valor e não foi somado. Não duplicar valores das entregas."
+    }
+  ],
+  "statusFechamento": "Provisório: total manuscrito R$ 6.246,00 mantido no dia e no mês; soma de lançamentos R$ 6.246,94; diferença R$ 0,94 a conciliar"
+}
