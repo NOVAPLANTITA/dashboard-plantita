@@ -283,7 +283,21 @@ async function medSyncRefresh(){
   const priceBackfill=medStagePrices(links);
   for(const item of medPending()){
    if(medVerified(item,links))continue;
-   if(links.some(x=>String(x.ean)===String(item.ean))){reviewed++;continue}
+   const match=links.find(x=>String(x.ean)===String(item.ean));
+   if(match){
+    const sameName=norm(match.produto)===norm(item.produto);
+    const sameId=String(match.produtoId)===String(item.produtoId);
+    const sameDanfe=!match.codigoDanfe||!item.codigoDanfe||
+      String(match.codigoDanfe)===String(item.codigoDanfe);
+    if(match.situacao!=='Confirmado'||!sameName||!sameId||!sameDanfe){reviewed++;continue}
+    const existingPrice=Number.isSafeInteger(match.precoCentavos)?match.precoCentavos:null;
+    const desiredPrice=Number.isSafeInteger(item.precoCentavos)?item.precoCentavos:null;
+    if(desiredPrice===null){reviewed++;continue}
+    if(item.action==='set_price'){
+     if(!Object.prototype.hasOwnProperty.call(item,'precoEsperadoCentavos')){reviewed++;continue}
+     if(existingPrice!==item.precoEsperadoCentavos){reviewed++;continue}
+    }else if(existingPrice!==null&&existingPrice!==desiredPrice){reviewed++;continue}
+   }else if(item.action==='set_price'){reviewed++;continue}
    await medPostOne(item);
    await new Promise(resolve=>setTimeout(resolve,900));
    links=await medLookupRemote();
