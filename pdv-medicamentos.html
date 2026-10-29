@@ -131,6 +131,78 @@ function medValidUrl(url){
 }
 function medPending(){const x=restore(MED_PENDING_KEY,[]);return Array.isArray(x)?x:[]}
 function medStatus(message){$('medSyncStatus').textContent=message}
+
+function pdvSetMode(ready,explanation=''){
+ pdvReady=!!ready;
+ const flag=$('pdvModeLabel'),notice=$('pdvNotice'),status=$('pdvOperationalStatus');
+ if(pdvReady){
+  pdvSwapLive();
+  flag.textContent='REGISTRO CENTRAL • ATIVO';
+  flag.style.background='#0d593e';flag.style.color='#e0ffed';
+  notice.innerHTML='<b>Registro operacional na base central.</b> Cada finalização precisa de recibo da aba PDV_Vendas. '+
+   'O histórico anterior de testes permanece separado. Estoque físico e Controle Diário não recebem baixa automática. '+
+   'Preços pendentes ou divergentes impedem a finalização.';
+  status.textContent='✓ Integração central de vendas confirmada. Nenhuma baixa física automática.';
+ }else{
+  flag.textContent='PRÉ-OPERAÇÃO • FINALIZAÇÃO BLOQUEADA';
+  status.textContent='Registro de vendas não ativado: '+explanation+
+   '. Atualize a implantação do Apps Script para a versão 3.';
+ }
+ render();
+}
+function pdvRemoteGet(action,params={}){
+ const cfg=medConf();
+ if(!medValidUrl(cfg.url)||cfg.secret.length<20)
+  return Promise.reject(Error('Configure a ponte do Google no PDV.'));
+ return new Promise((resolve,reject)=>{
+  const callback='_plantitaSaleCb_'+Date.now()+'_'+Math.random().toString(36).slice(2);
+  const script=document.createElement('script');
+  let complete=false;
+  const timer=setTimeout(()=>done(Error('Google não respondeu à consulta de vendas.')),15000);
+  function done(err,result){
+   if(complete)return;complete=true;clearTimeout(timer);script.remove();delete window[callback];
+   if(err)reject(err);else resolve(result);
+  }
+  window[callback]=data=>done(null,data);
+  script.onerror=()=>done(Error('Falha ao consultar a ponte de vendas.'));
+  const url=new URL(cfg.url);
+  url.searchParams.set('action',action);url.searchParams.set('key',cfg.secret);
+  url.searchParams.set('callback',callback);url.searchParams.set('_',String(Date.now()));
+  for(const [key,val] of Object.entries(params))url.searchParams.set(key,String(val));
+  script.src=url.toString();document.head.appendChild(script);
+ }).then(result=>{
+  if(!result||result.ok!==true)throw Error(result?.error||'Resposta inválida.');
+  return result;
+ });
+}
+async function pdvCheckReady(){
+ try{
+  const status=await pdvRemoteGet('health');
+  if(status.schema!==3||status.saleWriteEnabled!==true)
+   throw Error('a ponte não oferece confirmação central de vendas');
+  pdvSetMode(true);
+ }catch(e){
+  pdvSetMode(false,String(e?.message||e));
+ }
+}
+async function pdvRegisterSale(pendingSale){
+ const first=await pdvRemoteGet('sale_status',{saleId:pendingSale.saleId});
+ if(first.found)return first.receipt;
+ const cfg=medConf();
+ // POST é opaco (no-cors): NUNCA assumir que a gravação teve êxito.
+ // Usar sempre o MESMO saleId em repetição, com verificação de recibo.
+ await fetch(cfg.url,{method:'POST',mode:'no-cors',cache:'no-store',
+  headers:{'Content-Type':'text/plain;charset=UTF-8'},
+  body:JSON.stringify({action:'register_sale',key:cfg.secret,
+   saleId:pendingSale.saleId,items:pendingSale.items})});
+ for(let attempt=0;attempt<6;attempt++){
+  await new Promise(resolve=>setTimeout(resolve,attempt===0?1100:1600));
+  const response=await pdvRemoteGet('sale_status',{saleId:pendingSale.saleId});
+  if(response.found)return response.receipt;
+ }
+ throw Error('Registro ainda não foi confirmado pelo Google');
+}
+
 function medLookupRemote(){
  const conf=medConf();
  if(!medValidUrl(conf.url)||conf.secret.length<20)return Promise.reject(Error('Ponte não configurada'));
@@ -721,7 +793,7 @@ $('todayAll').textContent=fmt(doneTotal+c.total);
 $('todayBreakdown').textContent='Concluídos: '+fmt(doneTotal)+' • Em andamento: '+fmt(c.total);
 const draft=isPending?'<div class="hrow"><div><b>● Registro em andamento</b><br><small>'+c.n+' item(ns) • ainda não finalizado</small></div><b>'+fmt(c.total)+'</b></div>':'';
 const history=todays.slice(-5).reverse().map(s=>'<div class="hrow"><div><b>Registro '+escapeHtml(s.id.slice(-5).toUpperCase())+'</b><br><small>'+escapeHtml(s.time)+' • '+s.items.reduce((n,x)=>n+x.qty,0)+' item(ns)</small></div><b>'+fmt(s.med+s.granel)+'</b></div>').join('');
-$('history').innerHTML=draft+history||'<span class="fine">Nenhum registro concluído hoje.</span>';
+$('history').innerHTML=draft+history||'<span class="fine">Nenhum registro nesta estação hoje.</span>';
 }
 function focusScan(){if(!document.querySelector('.modalback.show')&&window.matchMedia('(min-width:750px)').matches)$('barcode').focus()}
 $('scanForm').addEventListener('submit',e=>{e.preventDefault();if(!pdvGate())return;const v=$('barcode').value;$('barcode').value='';readCode(v);focusScan()});
@@ -730,7 +802,7 @@ $('medSyncConfigure').onclick=()=>{
  const cfg=medConf();$('medSyncUrl').value=cfg.url;$('medSyncKey').value=cfg.secret;
  openModal('modalMedSync','medSyncUrl');
 };
-$('medSyncReload').onclick=()=>medSyncRefresh();
+$('medSyncReload').onclick=()=>{medSyncRefresh();pdvCheckReady()};
 $('medSyncForm').onsubmit=e=>{
  e.preventDefault();
  const url=$('medSyncUrl').value.trim(),secret=$('medSyncKey').value.trim();
@@ -739,7 +811,7 @@ $('medSyncForm').onsubmit=e=>{
  localStorage.setItem(MED_ACCESS_KEY,secret);
  $('modalMedSync').classList.remove('show');
  medStatus('Configuração salva neste navegador. Testando...');
- medSyncRefresh();focusScan();
+ medSyncRefresh();pdvCheckReady();focusScan();
 };
 $('resolveUnknown').onclick=()=>{
  const codigo=normalizarCodigoLeitor($('barcode').value)||lastScannedCode;
@@ -839,7 +911,7 @@ for(const modal of ['modalMed','modalAssociate','modalMedSync'])$(modal).onclick
 function download(name,content){let blob=new Blob(['\ufeff'+content],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500)}
 function csvCell(x){let s=String(x??'');return /[;"\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s}
 $('exampleCsv').onclick=()=>download('modelo_medicamentos_plantita.csv','codigo;descricao;preco;estoque;ean\r\n978916;Credeli Gatos 48 mg - 1 comprimido;80,00;;5420036978916\r\n960843;Drontal Plus Mais Sabor 10 kg - 4 comprimidos;75,00;;5420036960843\r\n');
-$('exportSales').onclick=()=>{let rows=[['id_registro','data','horario','tipo','codigo','descricao','quantidade','valor_unitario','subtotal','total_registro']];for(const s of sales)for(const x of s.items)rows.push([s.id,s.day,s.time,x.type==='med'?'medicamento':'granel',x.code,x.name,x.qty,(x.price/100).toFixed(2).replace('.',','),(x.price*x.qty/100).toFixed(2).replace('.',','),((s.med+s.granel)/100).toFixed(2).replace('.',',')]);download('pdv_plantita_testes.csv',rows.map(row=>row.map(csvCell).join(';')).join('\r\n'));message('CSV dos registros de teste exportado.')};
+$('exportSales').onclick=()=>{let rows=[['id_registro','data','horario','tipo','codigo','descricao','quantidade','valor_unitario','subtotal','total_registro']];for(const s of sales)for(const x of s.items)rows.push([s.id,s.day,s.time,x.type==='med'?'medicamento':'granel',x.code,x.name,x.qty,(x.price/100).toFixed(2).replace('.',','),(x.price*x.qty/100).toFixed(2).replace('.',','),((s.med+s.granel)/100).toFixed(2).replace('.',',')]);download('pdv_plantita_registros_estacao.csv',rows.map(row=>row.map(csvCell).join(';')).join('\r\n'));message('CSV dos registros confirmados nesta estação exportado.')};
 $('importCsv').onclick=()=>$('csvFile').click();
 function parseCSV(text){let rows=[],row=[],cur='',quote=false;for(let i=0;i<text.length;i++){let ch=text[i];if(ch==='"'){if(quote&&text[i+1]==='"'){cur+='"';i++}else quote=!quote}else if(ch===';'&&!quote){row.push(cur);cur=''}else if((ch==='\n'||ch==='\r')&&!quote){if(ch==='\r'&&text[i+1]==='\n')i++;row.push(cur);if(row.some(x=>x.trim()))rows.push(row);row=[];cur=''}else cur+=ch}if(quote)throw new Error('Aspas não fechadas.');row.push(cur);if(row.some(x=>x.trim()))rows.push(row);return rows}
 function norm(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()}
@@ -892,7 +964,7 @@ $('catalogFilter').addEventListener('input',render);$('assocSearch').addEventLis
 const comPreco=scanaveis.filter(p=>Number.isInteger(p.price)&&p.price>0);
 const provas=[['5420036978916','978916'],['4007221055259','55259'],['5420036960843','960843'],['7898019866631',null]];
 const testes=provas.map(([ean,danfe])=>{const r=matchCode(ean);return r.status==='found'&&(!danfe||String(r.product.codigoDanfe||'')===danfe)});
-$('statusBaseDanfe').textContent='Base '+(baseDanfe.fonte==='única'?'ÚNICA':'RESERVA (verifique conexão)')+': '+baseDanfe.total+' produtos; '+baseDanfe.integrados+' registros; '+baseDanfe.codigos+' com campo CÓDIGO, '+scanaveis.length+' com sufixo de ao menos 5 dígitos e '+comPreco.length+' com preço na lista. Autoteste: '+testes.filter(Boolean).length+'/'+testes.length+' EANs conferidos.'+(testes.every(Boolean)?'':' ATENÇÃO: verifique a base antes de bipar!')+' Quando a DANFE não traz um código reconhecível, o produto precisa de conferência, sem lançamento automático. Referências de EAN confirmadas fora da DANFE: '+referenciasExternas.total+'; exigem código da DANFE e preço da loja antes de vender.';$('dateLabel').textContent=new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(new Date());render();medSyncRefresh();message('✓ Base '+(baseDanfe.fonte==='única'?'ÚNICA carregada':'de RESERVA carregada')+' — '+comPreco.length+' produtos com código DANFE e preço para testes.');focusScan();
+$('statusBaseDanfe').textContent='Base '+(baseDanfe.fonte==='única'?'ÚNICA':'RESERVA (verifique conexão)')+': '+baseDanfe.total+' produtos; '+baseDanfe.integrados+' registros; '+baseDanfe.codigos+' com campo CÓDIGO, '+scanaveis.length+' com sufixo de ao menos 5 dígitos e '+comPreco.length+' com preço na lista. Autoteste: '+testes.filter(Boolean).length+'/'+testes.length+' EANs conferidos.'+(testes.every(Boolean)?'':' ATENÇÃO: verifique a base antes de bipar!')+' Quando a DANFE não traz um código reconhecível, o produto precisa de conferência, sem lançamento automático. Referências de EAN confirmadas fora da DANFE: '+referenciasExternas.total+'; exigem código da DANFE e preço da loja antes de vender.';$('dateLabel').textContent=new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(new Date());render();medSyncRefresh();pdvCheckReady();message('✓ Base '+(baseDanfe.fonte==='única'?'ÚNICA carregada':'de RESERVA carregada')+' — '+comPreco.length+' produtos com código DANFE e preço para testes.');focusScan();
 })();
 </script>
 </body>
