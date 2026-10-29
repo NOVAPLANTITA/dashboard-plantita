@@ -57,7 +57,7 @@
 <div id="modalMed" class="modalback" role="dialog" aria-modal="true" aria-label="Cadastrar medicamento"><div class="dialog"><h3>✚ Cadastro de medicamento (teste)</h3><p>Cadastro excepcional: use somente se o medicamento não constar nas DANFEs. Na leitura normal, NÃO é necessário cadastrar produto por produto.</p><form id="medForm"><div class="field"><label for="medCode">Número lido (EAN) ou Código DANFE — conferir embalagem</label><input id="medCode" required placeholder="Ex.: 978916"></div><div class="field"><label for="medName">Descrição</label><input id="medName" required placeholder="Nome do medicamento"></div><div class="field"><label for="medPrice">Preço de venda (R$) — deixe vazio se ainda não sabe</label><input id="medPrice" inputmode="decimal" placeholder="Ex.: 24,90"></div><div class="field"><label for="medStock">Quantidade em estoque (teste)</label><input id="medStock" type="number" min="0" step="1" required value="1"></div><div class="modalactions"><button type="button" class="secondary" data-close="modalMed">Cancelar</button><button class="primary">Salvar no teste</button></div></form></div></div>
 <div id="modalAssociate" class="modalback" role="dialog" aria-modal="true" aria-label="Vincular código de barras ao medicamento"><div class="dialog" style="max-width:700px">
 <h3>🔎 Código ainda não associado</h3><p>O leitor funcionou e registrou <b id="unknownCode"></b>. Escolha o medicamento da lista para vincular esse código à embalagem.</p>
-<div class="field"><label for="assocSearch">Pesquisar nome, apresentação ou dosagem</label><input id="assocSearch" type="search" autocomplete="off" placeholder="Ex.: Doxifin 100 mg"></div>
+<div class="field"><label for="assocSearch">Pesquisar nome, apresentação ou dosagem</label><input id="assocSearch" type="search" autocomplete="off" placeholder="Ex.: credeli 48, drontal 10 ou parte do nome"></div>
 <p class="fine" id="assocStatus" role="status" aria-live="polite"></p><div id="assocResults" style="max-height:340px;overflow:auto;display:grid;gap:7px"></div>
 <p class="fine">Confira a embalagem e o preço transcrito antes de confirmar. O vínculo será salvo <b>somente neste computador/navegador</b>, não em outros aparelhos. Nenhum estoque físico será alterado.</p>
 <div class="modalactions"><button type="button" class="secondary" id="assocNewMed">✚ Cadastrar medicamento ausente</button><button type="button" class="secondary" data-close="modalAssociate">Fechar</button></div>
@@ -206,11 +206,20 @@ function openAssociation(raw,sugestao){
  setTimeout(()=>$('assocSearch').focus(),50);
  message('Código '+code+' não associado. Janela de identificação aberta; nenhum valor foi lançado.','warn');
 }
+// A pesquisa é flexível: aceita partes do nome da DANFE, em qualquer ordem,
+ // com ou sem acento, e apresentações como "48mg" ou "48 mg".
+ // O nome oficial é SEMPRE o do produto selecionado, nunca o texto digitado.
+function buscaMedicamentoFlexivel(produto, pesquisa){
+ const q=norm(pesquisa).replace(/[^a-z0-9]+/g,' ').trim();
+ if(!q)return true;
+ const detalhes=[produto.name,produto.codigoDanfe||'',...(produto.ean||[])].join(' ');
+ const base=norm(detalhes).replace(/[^a-z0-9]+/g,' ').trim();
+ const compacta=base.replace(/\s+/g,'');
+ return q.split(/\s+/).every(termo=>base.includes(termo)||compacta.includes(termo));
+}
 function renderAssociationCandidates(){
- const q=norm($('assocSearch').value).replace(/\s+/g,' ');
- const found=catalog.filter(p=>
-  norm(p.name).includes(q)||norm(p.codigoDanfe||'').includes(q)||
-  (Array.isArray(p.ean)&&p.ean.some(e=>e.includes(q)))).slice(0,35);
+ const q=$('assocSearch').value;
+ const found=catalog.filter(p=>buscaMedicamentoFlexivel(p,q)).slice(0,35);
  $('assocResults').innerHTML=found.map(p=>'<button type="button" data-assoc-product="'+escapeHtml(p.code)+'" style="display:flex;align-items:center;justify-content:space-between;gap:13px;text-align:left;width:100%;color:white;background:#0b2b30;border:1px solid #31656b;border-radius:11px;padding:12px"><span><b>'+escapeHtml(p.name)+'</b><br><small>Código DANFE: '+escapeHtml(p.codigoDanfe||'não informado')+' • '+(Number.isInteger(p.price)&&p.price>0?'Preço de venda: '+fmt(p.price):'PREÇO PENDENTE — não pode cobrar')+'</small></span><span style="color:#8bf2c1;font-weight:bold">VINCULAR</span></button>').join('')||'<p class="fine">Produto não localizado. Confira a descrição ou use “Cadastrar medicamento ausente” abaixo.</p>';
 }
 function saveAssociation(id){
