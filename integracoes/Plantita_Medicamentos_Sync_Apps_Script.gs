@@ -21,9 +21,7 @@ function doGet(e) {
     const n = Math.max(0,last-1);
     const display = n ? sh.getRange(2,1,n,MED_COLUMNS).getDisplayValues() : [];
     const rawPrices = n ? sh.getRange(2,10,n,1).getValues() : [];
-    const links = display.filter(r => r[0]).map(r => {
-      // Os índices do preço são os mesmos da leitura integral, mesmo com outras linhas vazias.
-      const idx = display.indexOf(r);
+    const links = display.map((r,idx) => {
       const cents = precoDaCelulaMed_(rawPrices[idx][0]);
       return {
         ean:String(r[0]),ultimos6:String(r[1]),codigoDanfe:String(r[2]),
@@ -31,7 +29,7 @@ function doGet(e) {
         confirmadoEm:String(r[6]),precoCentavos:cents,
         precoAtualizadoEm:String(r[10]||''),origemPreco:String(r[11]||'')
       };
-    });
+    }).filter(x => x.ean);
     return saidaMed_({ok:true,action:'links',links:links,
       generatedAt:new Date().toISOString(),schema:2},callback);
   } catch(err) {
