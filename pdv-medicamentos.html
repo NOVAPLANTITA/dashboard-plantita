@@ -100,6 +100,7 @@ const MED_URL_KEY='plantita_medicamentos_sync_endpoint_v1';
 const MED_ACCESS_KEY='plantita_medicamentos_sync_access_v1';
 const MED_PENDING_KEY='plantita_medicamentos_sync_queue_v1';
 let medSyncBusy=false;
+let medSyncRequested=false;
 let medKnownLinks=[];
 function medConf(){return {
   url:(localStorage.getItem(MED_URL_KEY)||'').trim(),
@@ -270,7 +271,7 @@ async function medSyncRefresh(){
   medStatus('Sem Google configurado: novos códigos ficam neste PC. Clique em “Conectar Google”.');
   return;
  }
- if(medSyncBusy)return;
+ if(medSyncBusy){medSyncRequested=true;return}
  medSyncBusy=true;
  try{
   medStatus('Consultando a base de medicamentos no Google...');
@@ -302,7 +303,10 @@ async function medSyncRefresh(){
  }catch(e){
   medStatus('Sem confirmação do Google ('+String(e?.message||e)+'). '+
    medPending().length+' vínculo(s) continuam pendentes neste PC.');
- }finally{medSyncBusy=false}
+ }finally{
+   medSyncBusy=false;
+   if(medSyncRequested){medSyncRequested=false;setTimeout(()=>medSyncRefresh(),0)}
+ }
 }
 
 // Índice alimentado DIRETAMENTE pelas linhas com CÓDIGO da DANFE, sem depender do cadastro antigo do navegador.
@@ -548,7 +552,10 @@ async function carregarBaseUnica(){
   const antigo=anteriorPorNome.get(chave(item.produto));
   const linksAntigos=antigo&&(!codigo||!antigo.codigoDanfe||String(antigo.codigoDanfe)===codigo)?(antigo.ean||[]):[];
   const links=[...new Set([ean,...linksAntigos].filter(x=>checkEAN(x)&&!/^2\\d{12}$/.test(x)))];
-  return {code:String(item.id||('UNI-'+i)),name:item.produto,price:typeof item.precoVenda==='number'&&item.precoVenda>0?Math.round(item.precoVenda*100):null,stock:99999,
+  const pendente=medPending().find(q=>q.produtoId===String(item.id)&&
+    Number.isSafeInteger(q.precoCentavos)&&q.precoCentavos>0);
+  const precoBase=typeof item.precoVenda==='number'&&item.precoVenda>0?Math.round(item.precoVenda*100):null;
+  return {code:String(item.id||('UNI-'+i)),name:item.produto,price:pendente?pendente.precoCentavos:precoBase,stock:99999,
    ean:links,codigoDanfe:codigo,fonte:'Base unificada de preços e DANFE 22/10/2026',fonteCodigoDanfe:item.origemCodigo||'',categoria:item.categoria||'',pagina:item.precoOrigem||'DANFE',situacao:item.situacao||'',bipagemPermitida:((item.categoria==='Medicamentos veterinários'||item.categoria==='Cadastro histórico / conferir')||(ean&&checkEAN(ean)))&&!/CONFERIR APRESENTA|CONFLITO/i.test(String(item.situacao||''))};
  });
  // Preserva produtos cadastrados manualmente neste navegador após atualizar a base oficial.
