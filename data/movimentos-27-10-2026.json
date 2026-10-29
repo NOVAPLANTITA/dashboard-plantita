@@ -1,0 +1,111 @@
+{
+  "atualizadoEm": "29/10/2026 — comanda de 27/10/2026 registrada como provisória; diferença de R$ 3,20 na conferência",
+  "dataComanda": "27/10/2026",
+  "totalInformadoComanda": 7231,
+  "totalProvisorioComanda": 7231,
+  "totalLancamentos": 7234.2,
+  "totalTodasAnotacoes": 7234.2,
+  "diferencaConferencia": 3.2,
+  "observacao": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência.",
+  "resumoProvisorio": {
+    "entradas": 7234.2,
+    "retiradas": 0,
+    "saldo": 7234.2,
+    "totalAnotadoComanda": 7231,
+    "detalhamentoPendente": true
+  },
+  "movimentos": [
+    {
+      "data": "27/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1350,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1177.6,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 817.5,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 2052.6,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 901.7,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ (natureza financeira a conferir)",
+      "valor": 29.8,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — pessoa com sobrenome ROSA (grafia a conferir)",
+      "valor": 138,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "PIX",
+      "descricao": "ROSALICE (grafia a conferir)",
+      "valor": 182,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "Outros",
+      "descricao": "BOMBA (venda/despesa a conferir)",
+      "valor": 250,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "PIX",
+      "descricao": "LUANA SANTOS (grafia a conferir)",
+      "valor": 120,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "PIX",
+      "descricao": "ALESSANDRA",
+      "valor": 90,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "PIX",
+      "descricao": "SÍLVIA RAMOS (grafia a conferir)",
+      "valor": 90,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    },
+    {
+      "data": "27/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO",
+      "valor": 35,
+      "conferencia": "Comanda de 27/10/2026 (foto 1000347881.jpg). Total manuscrito R$ 7.231,00, soma de 13 valores R$ 7.234,20, diferença de R$ 3,20 pendente de conciliação. Total manuscrito usado provisoriamente no controle diário e no acumulado mensal. Itens CAFÉ e BOMBA mantidos provisoriamente em Outros, pois natureza financeira ainda não confirmada. Comprovantes ao fundo não incluídos separadamente. Não duplicar comandas de entrega nem ajustar valores artificialmente. Nomes manuscritos e alguns centavos sujeitos a conferência."
+    }
+  ],
+  "statusFechamento": "PROVISÓRIO: total manuscrito R$ 7.231,00 utilizado no diário e no mês. Soma dos lançamentos R$ 7.234,20; divergência de R$ 3,20 e natureza de CAFÉ/BOMBA a conciliar."
+}
