@@ -1,0 +1,97 @@
+{
+  "atualizadoEm": "29/10/2026 — comanda 26/10/2026, total R$ 8.001,00 provisório; despesas e lançamentos a conciliar",
+  "dataComanda": "26/10/2026",
+  "totalInformadoComanda": 8001,
+  "totalProvisorioComanda": 8001,
+  "totalLancamentos": 7873.59,
+  "totalTodasAnotacoes": 8003.59,
+  "diferencaConferencia": 127.41,
+  "observacao": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega.",
+  "resumoProvisorio": {
+    "entradas": 7873.59,
+    "retiradas": 130,
+    "saldo": 7743.59,
+    "totalAnotadoComanda": 8001,
+    "detalhamentoPendente": true
+  },
+  "movimentos": [
+    {
+      "data": "26/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1300,
+      "conferencia": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega."
+    },
+    {
+      "data": "26/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1125,
+      "conferencia": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega."
+    },
+    {
+      "data": "26/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1915.79,
+      "conferencia": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega."
+    },
+    {
+      "data": "26/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 2248,
+      "conferencia": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega."
+    },
+    {
+      "data": "26/10/2026",
+      "tipo": "PIX",
+      "descricao": "JOSÉ EDUARDO",
+      "valor": 125,
+      "conferencia": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega."
+    },
+    {
+      "data": "26/10/2026",
+      "tipo": "PIX",
+      "descricao": "LEIDA CAROLINA (grafia a conferir)",
+      "valor": 60,
+      "conferencia": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega."
+    },
+    {
+      "data": "26/10/2026",
+      "tipo": "PIX",
+      "descricao": "HELENA (grafia a conferir)",
+      "valor": 93.2,
+      "conferencia": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega."
+    },
+    {
+      "data": "26/10/2026",
+      "tipo": "PIX",
+      "descricao": "EDINARA RIBEIRO (grafia a conferir)",
+      "valor": 26,
+      "conferencia": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega."
+    },
+    {
+      "data": "26/10/2026",
+      "tipo": "PIX",
+      "descricao": "JULICENE DIAS (grafia a conferir)",
+      "valor": 150,
+      "conferencia": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega."
+    },
+    {
+      "data": "26/10/2026",
+      "tipo": "PIX",
+      "descricao": "TUTIO (grafia a conferir)",
+      "valor": 830.6,
+      "conferencia": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega."
+    },
+    {
+      "data": "26/10/2026",
+      "tipo": "Retiradas",
+      "descricao": "DIÁRIA GUSTAVO (despesa; classificação provisória)",
+      "valor": 130,
+      "conferencia": "Comanda manuscrita de 26/10/2026 (foto 1000347883.jpg). Total escrito R$ 8.001,00. Soma de TODOS os 11 valores anotados: R$ 8.003,59 (diferença de R$ 2,59). A linha DIÁRIA GUSTAVO R$ 130,00 aparenta despesa e foi classificada provisoriamente como Retiradas, não como venda. Assim, a soma das 10 possíveis entradas é R$ 7.873,59, diferença de R$ 127,41 em relação ao total manuscrito. Fechamento de R$ 8.001,00 é apenas provisório, sem confirmar o valor oficial nem ajustar centavos para forçar igualdade. MERCADO PAGO e CAFÉ sem valores: não somados. Nomes PIX parcialmente ilegíveis a conferir. Não duplicar lançamentos de entrega."
+    }
+  ],
+  "statusFechamento": "PROVISÓRIO: R$ 8.001,00 é total manuscrito. Entradas identificadas R$ 7.873,59; DIÁRIA GUSTAVO R$ 130,00 tratada provisoriamente como retirada. R$ 8.003,59 é a soma de todas as anotações, incluindo a retirada. Conciliação pendente."
+}
