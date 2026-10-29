@@ -35,7 +35,7 @@
         <button class="secondary" type="button" id="medSyncConfigure">⚙ Conectar Google</button>
         <button class="ghost" type="button" id="medSyncReload">↻ Atualizar códigos</button>
       </div>
-      <span id="medSyncStatus" role="status" aria-live="polite">Google não configurado: vínculos salvos somente neste computador.</span>
+      <span id="medSyncStatus" role="status" aria-live="polite">Google não configurado: vínculos salvos somente neste computador.</span><div id="medSyncDetails" class="fine" style="margin-top:9px;display:none;line-height:1.7" aria-live="polite"></div>
       <p class="fine">Compartilha EAN, medicamento e preço de venda em reais. Vendas e estoque continuam no teste local. Só confirma sincronização após verificar os dados na planilha.</p>
     </div>
     <div role="status" aria-live="polite" id="message" class="message">Pronto para iniciar um registro.</div><p class="fine" id="scanDiagnosis" aria-live="polite">Última bipagem: nenhuma. A busca usa diretamente a coluna CÓDIGO das DANFEs.</p><p class="fine" id="statusBaseDanfe"></p><p class="fine">Versão <b>29/10/2026 • CÓDIGO + PREÇO SINCRONIZADOS • BUSCA PELOS 6 DÍGITOS FINAIS</b>. Atualização <code>?v=20261022-cadastro-v5</code>. Os vínculos antigos são conferidos contra os códigos conhecidos das DANFEs.</p><p class="fine">Etiqueta da balança: <code>2000000000961 → R$ 0,96</code>. Medicamentos confirmados: Credeli 48 mg <code>5420036978916 → 978916</code> e Drontal Puppy <code>4007221055259 → 55259</code>. Outras correspondências são provisórias e bloqueadas quando ambíguas. Códigos de DANFE com menos de 5 dígitos exigem um EAN completo conferido.</p>
@@ -258,6 +258,41 @@ function medStagePrices(links){
  if(count)store(MED_PENDING_KEY,arr);
  return count;
 }
+function medSyncExplainPending(links){
+ const target=$('medSyncDetails');
+ const pending=medPending();
+ if(!pending.length){target.style.display='none';target.textContent='';return}
+ const info=pending.map(item=>{
+  const cloud=links.find(x=>String(x.ean)===String(item.ean));
+  const localPrice=Number.isSafeInteger(item.precoCentavos)&&item.precoCentavos>0?
+    fmt(item.precoCentavos):'não informado';
+  const cloudPrice=cloud&&Number.isSafeInteger(cloud.precoCentavos)&&cloud.precoCentavos>0?
+    fmt(cloud.precoCentavos):'não informado';
+  let reason='Código ainda não aparece na planilha central';
+  if(cloud){
+   if(cloud.situacao!=='Confirmado')reason='Código está em revisão/inativo na planilha';
+   else if(String(cloud.produtoId)!==String(item.produtoId)||
+    norm(cloud.produto)!==norm(item.produto)){
+    reason='Produto ou ID diferente no Google — não sobrescrever';
+   }else if(Number.isSafeInteger(item.precoCentavos)&&item.precoCentavos>0){
+    if(Number.isSafeInteger(cloud.precoCentavos)&&cloud.precoCentavos>0&&
+       cloud.precoCentavos!==item.precoCentavos)
+     reason='Preço diferente do Google — confira antes de substituir';
+    else if(!Number.isSafeInteger(cloud.precoCentavos)||cloud.precoCentavos<=0)
+     reason='Preço ainda não foi confirmado no Google; verificar se a gravação foi executada';
+    else reason='Aguardando nova conferência da sincronização';
+   }else reason='EAN cadastrado, porém o preço local ainda não foi informado';
+  }
+  return '<div style="padding:7px 0;border-top:1px solid #37666a"><b>'+
+   escapeHtml(String(item.produto||'Medicamento'))+'</b> • EAN '+escapeHtml(String(item.ean))+
+   '<div>Preço neste PC: <b>'+escapeHtml(localPrice)+
+   '</b> | Google: <b>'+escapeHtml(cloudPrice)+'</b></div><div>'+
+   escapeHtml(reason)+'</div></div>';
+ });
+ target.innerHTML='<b>Diagnóstico dos '+pending.length+' registro(s) pendente(s):</b>'+
+  info.join('')+'<div style="margin-top:6px">Não cadastre novamente. Preço faltando: use o botão ✎ Preço no medicamento. Se o preço já estiver no PC, confira as execuções do Apps Script.</div>';
+ target.style.display='block';
+}
 async function medPostOne(item){
  const cfg=medConf();
  // Resposta opaca de no-cors NÃO confirma gravação: sempre ler a planilha após POST.
@@ -307,6 +342,7 @@ async function medSyncRefresh(){
   }
   const outstanding=medPending().filter(item=>!medVerified(item,links));
   store(MED_PENDING_KEY,outstanding);
+  medSyncExplainPending(links);
   medStatus('Base consultada: '+links.length+' EAN(s). '+outstanding.length+
    ' pendente(s).'+(created?' '+created+' cadastro(s) recuperado(s) do Google.':'')+
    (prices?' '+prices+' preço(s) atualizado(s).':'')+
@@ -315,6 +351,7 @@ async function medSyncRefresh(){
    (reviewed?' '+reviewed+' para revisar.':'')+
    ' Atualizado às '+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})+'.');
  }catch(e){
+  medSyncExplainPending(medKnownLinks);
   medStatus('Sem confirmação do Google ('+String(e?.message||e)+'). '+
    medPending().length+' vínculo(s) continuam pendentes neste PC.');
  }finally{
