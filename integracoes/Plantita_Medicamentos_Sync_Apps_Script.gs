@@ -15,6 +15,17 @@ function doGet(e) {
   const callback = String(p.callback || '');
   try {
     autenticarMed_(p.key);
+    if(p.action==='health') {
+      folhaMed_(); folhaVendasMed_();
+      return saidaMed_({ok:true,action:'health',schema:3,
+        saleWriteEnabled:true,inventoryIntegrated:false,dashboardIntegrated:false},callback);
+    }
+    if(p.action==='sale_status'){
+      const saleId=String(p.saleId||'');
+      const found=localizarVendaMed_(folhaVendasMed_(),saleId);
+      return saidaMed_({ok:true,action:'sale_status',
+        found:!!found,receipt:found?reciboVendaMed_(found):null},callback);
+    }
     if (p.action !== 'links') throw new Error('Ação desconhecida.');
     const sh = folhaMed_();
     const last = Math.min(sh.getLastRow(), MED_MAX_ROWS_READ + 1);
@@ -44,6 +55,7 @@ function doPost(e) {
     const body=JSON.parse((e && e.postData && e.postData.contents)||'{}');
     autenticarMed_(body.key);
     const action=String(body.action||'');
+    if(action==='register_sale')return registrarVendaMed_(body);
     if (action!=='upsert' && action!=='set_price') throw new Error('Ação desconhecida.');
     const ean=String(body.ean||'').trim();
     const produto=limparMed_(body.produto,220);
@@ -158,4 +170,94 @@ function saidaMed_(obj,callback) {
 function jsonMed_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+
+/* =============================================
+ * REGISTRO CENTRAL DE VENDAS — sem baixa física.
+ * A aba PDV_Vendas é um LIVRO PRÓPRIO; NÃO somar automaticamente
+ * em Vendas_Balanca, Controle Diário ou dashboard sem conciliação.
+ * A venda só é considerada confirmada após leitura da linha gravada.
+ * ============================================= */
+const MED_SALES_TAB='PDV_Vendas';
+function folhaVendasMed_(){
+ const sh=SpreadsheetApp.openById(MED_SHEET_ID).getSheetByName(MED_SALES_TAB);
+ if(!sh)throw new Error('Aba PDV_Vendas ausente: finalize apenas após configuração.');
+ return sh;
+}
+function localizarVendaMed_(sh,id){
+ if(!/^[A-Za-z0-9_-]{12,90}$/.test(id))
+  throw new Error('ID de registro inválido.');
+ const last=sh.getLastRow();
+ if(last<2)return null;
+ const ids=sh.getRange(2,1,last-1,1).getDisplayValues();
+ const idx=ids.findIndex(r=>r[0]===id);
+ return idx<0?null:sh.getRange(idx+2,1,1,12).getValues()[0];
+}
+function reciboVendaMed_(row){
+ const number=n=>Math.round(Number(n)*100);
+ return {saleId:String(row[0]),timestamp:String(row[1]),date:String(row[2]),
+   medCentavos:number(row[4]),granelCentavos:number(row[5]),
+   totalCentavos:number(row[6]),status:String(row[8]),
+   itemCount:Number(row[7])};
+}
+function registrarVendaMed_(body){
+ const id=String(body.saleId||'').trim();
+ const sh=folhaVendasMed_();
+ const prior=localizarVendaMed_(sh,id);
+ if(prior)return jsonMed_({ok:true,status:'already_registered',receipt:reciboVendaMed_(prior)});
+ const items=body.items;
+ if(!Array.isArray(items)||items.length<1||items.length>60)
+   throw new Error('Registro precisa de 1 a 60 linhas.');
+ let med=0,granel=0,n=0,clean=[];
+ const meds=folhaMed_(),last=meds.getLastRow();
+ const catalog=last>=2?meds.getRange(2,1,last-1,10).getValues():[];
+ const lookup=new Map(catalog.filter(x=>x[0]).map(x=>[String(x[0]),x]));
+ for(const item of items){
+   const type=String(item.type||''),code=String(item.code||'');
+   const qty=Number(item.qty),price=Number(item.price);
+   const name=limparMed_(item.name,220);
+   if(!['med','granel'].includes(type)||!Number.isSafeInteger(qty)||
+     qty<1||qty>100||!Number.isSafeInteger(price)||price<1||price>100000000||
+     !name)throw new Error('Linha da venda inválida.');
+   if(type==='med'){
+     const ean=String(item.ean||'');
+     const rec=lookup.get(ean);
+     if(!validarEanMed_(ean)||!rec||String(rec[5])!=='Confirmado')
+       throw new Error('Medicamento sem EAN confirmado no Google.');
+     if(String(rec[4])!==code||normMed_(rec[3])!==normMed_(name))
+       throw new Error('Medicamento ou apresentação diferente do cadastro central.');
+     const official=precoDaCelulaMed_(rec[9]);
+     if(official===null||official!==price)
+       throw new Error('Preço divergente do Google: atualize a base antes de finalizar.');
+     med+=qty*price;
+     clean.push({type:'med',code,ean,name,qty,price,subtotal:qty*price});
+   }else{
+     if(qty!==1||!/^2\d{12}$/.test(code)||!validarEanMed_(code)||
+        Number(code.slice(7,12))!==price)
+       throw new Error('Etiqueta da balança inválida ou valor divergente.');
+     granel+=price;
+     clean.push({type:'granel',code,name,qty,price,subtotal:price});
+   }
+   n+=qty;
+ }
+ const total=med+granel;
+ if(total>100000000||!Number.isSafeInteger(total))throw new Error('Valor fora do limite.');
+ const date=new Date();
+ const dateTime=Utilities.formatDate(date,'America/Sao_Paulo','yyyy-MM-dd HH:mm:ss');
+ const day=Utilities.formatDate(date,'America/Sao_Paulo','yyyy-MM-dd');
+ const hour=Utilities.formatDate(date,'America/Sao_Paulo','HH:mm:ss');
+ if(sh.getLastRow()>=sh.getMaxRows())sh.insertRowsAfter(sh.getMaxRows(),500);
+ // A venda é uma ÚNICA linha. Idempotência por ID sob LockService global.
+ // Nenhum item/granel será lançado em outra planilha automaticamente.
+ const row=[id,dateTime,day,hour,med/100,granel/100,total/100,n,
+   'Registrado','PDV Plantita • central',JSON.stringify(clean),
+   'Sem baixa automática de estoque; conciliar com granel e Controle Diário'];
+ const next=sh.getLastRow()+1;
+ sh.getRange(next,1,1,12).setValues([row]);
+ sh.getRange(next,5,1,3).setNumberFormat('"R$" #,##0.00');
+ sh.getRange(next,1).setNumberFormat('@');
+ const saved=localizarVendaMed_(sh,id);
+ if(!saved)throw new Error('Falha ao confirmar o registro no Google.');
+ return jsonMed_({ok:true,status:'registered',receipt:reciboVendaMed_(saved)});
 }
