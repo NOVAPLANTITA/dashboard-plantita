@@ -98,7 +98,13 @@ let unmatchedEAN='',lastScannedCode='';
 let pdvReady=false,pdvSubmitting=false,pdvLiveLoaded=false;
 const PDV_PENDING_SALE_KEY='plantita_pdv_operacional_pendente_v1';
 function pdvPendingSale(){return restore(PDV_PENDING_SALE_KEY,null)}
-function pdvSavePendingSale(x){store(PDV_PENDING_SALE_KEY,x)}
+function pdvSavePendingSale(x){
+ try{
+  const value=JSON.stringify(x);
+  localStorage.setItem(PDV_PENDING_SALE_KEY,value);
+  return localStorage.getItem(PDV_PENDING_SALE_KEY)===value;
+ }catch(e){return false}
+}
 function pdvSwapLive(){
  if(pdvLiveLoaded)return;
  cart=restore(KEYS.liveCart,[]);
@@ -845,7 +851,10 @@ $('finish').onclick=async()=>{
     '\n\nA venda ficará na aba PDV_Vendas. Não haverá baixa física nem envio ao Controle Diário.'))return;
   pendingSale={saleId:'PDV_'+Date.now()+'_'+Math.random().toString(36).slice(2,11),
    items:current,createdAt:new Date().toISOString()};
-  pdvSavePendingSale(pendingSale);
+  if(!pdvSavePendingSale(pendingSale)){
+   message('Não foi possível guardar o ID da venda neste navegador. Nenhuma venda foi enviada. Libere o armazenamento antes de tentar.','err');
+   return;
+  }
  }
  pdvSubmitting=true;render();
  try{
@@ -858,9 +867,17 @@ $('finish').onclick=async()=>{
     time:dt.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}),
     timestamp:receipt.timestamp||dt.toISOString(),
     med:totals.med,granel:totals.granel,items:current.map(x=>({...x}))};
-  if(!sales.some(x=>x.id===record.id))sales.push(record);
-  cart=[];store(KEYS.liveCart,cart);store(KEYS.liveSales,sales);
-  localStorage.removeItem(PDV_PENDING_SALE_KEY);
+  const updatedSales=sales.some(x=>x.id===record.id)?sales:[...sales,record];
+  // Não apagar o recibo pendente antes de preservar o carrinho e o histórico locais.
+  try{
+   localStorage.setItem(KEYS.liveSales,JSON.stringify(updatedSales));
+   localStorage.setItem(KEYS.liveCart,'[]');
+   localStorage.removeItem(PDV_PENDING_SALE_KEY);
+  }catch(storageError){
+   throw Error('Venda CONFIRMADA no Google (ID '+pendingSale.saleId+
+    '), mas o navegador não conseguiu salvar o fechamento. Não repita a cobrança.');
+  }
+  sales=updatedSales;cart=[];
   message('✓ VENDA REGISTRADA NA BASE CENTRAL: '+fmt(totals.total)+
     ' • recibo '+receipt.saleId+'. Estoque físico não alterado.');
  }catch(e){
