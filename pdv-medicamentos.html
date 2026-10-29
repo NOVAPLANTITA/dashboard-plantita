@@ -38,7 +38,7 @@
       <span id="medSyncStatus" role="status" aria-live="polite">Google não configurado: vínculos salvos somente neste computador.</span>
       <p class="fine">Compartilha apenas códigos EAN associados a medicamentos. Vendas e estoque continuam no teste local. Só confirma sincronização após verificar os dados na planilha.</p>
     </div>
-    <div role="status" aria-live="polite" id="message" class="message">Pronto para iniciar um registro.</div><p class="fine" id="scanDiagnosis" aria-live="polite">Última bipagem: nenhuma. A busca usa diretamente a coluna CÓDIGO das DANFEs.</p><p class="fine" id="statusBaseDanfe"></p><p class="fine">Versão <b>29/10/2026 • VINCULAÇÃO ASSISTIDA • BUSCA PELOS 6 DÍGITOS FINAIS</b>. Atualização <code>?v=20261022-cadastro-v5</code>. Os vínculos antigos são conferidos contra os códigos conhecidos das DANFEs.</p><p class="fine">Etiqueta da balança: <code>2000000000961 → R$ 0,96</code>. Medicamentos confirmados: Credeli 48 mg <code>5420036978916 → 978916</code> e Drontal Puppy <code>4007221055259 → 55259</code>. Outras correspondências são provisórias e bloqueadas quando ambíguas. Códigos de DANFE com menos de 5 dígitos exigem um EAN completo conferido.</p>
+    <div role="status" aria-live="polite" id="message" class="message">Pronto para iniciar um registro.</div><p class="fine" id="scanDiagnosis" aria-live="polite">Última bipagem: nenhuma. A busca usa diretamente a coluna CÓDIGO das DANFEs.</p><p class="fine" id="statusBaseDanfe"></p><p class="fine">Versão <b>29/10/2026 • CADASTRO MANUAL SINCRONIZADO • BUSCA PELOS 6 DÍGITOS FINAIS</b>. Atualização <code>?v=20261022-cadastro-v5</code>. Os vínculos antigos são conferidos contra os códigos conhecidos das DANFEs.</p><p class="fine">Etiqueta da balança: <code>2000000000961 → R$ 0,96</code>. Medicamentos confirmados: Credeli 48 mg <code>5420036978916 → 978916</code> e Drontal Puppy <code>4007221055259 → 55259</code>. Outras correspondências são provisórias e bloqueadas quando ambíguas. Códigos de DANFE com menos de 5 dígitos exigem um EAN completo conferido.</p>
   </section>
   <section class="card"><div class="headcard"><h3>Itens do registro atual</h3><span class="chip" id="countItems">0 itens</span></div>
      <div class="tablewrap"><table><thead><tr><th>Tipo</th><th>Produto / etiqueta</th><th class="tright">Qtd.</th><th class="tright">Valor</th><th class="tright">Remover</th></tr></thead><tbody id="items"></tbody></table></div><div id="emptyCart" class="empty">Nenhum item bipado ainda.<br>Use o leitor, digite um código ou toque em um teste.</div>
@@ -64,7 +64,7 @@
 </main>
 <p class="footer">PLANTITA • PREÇOS DAS FOTOS — Ambiente de teste, sem baixa física ou sincronização de vendas.</p>
 </div>
-<div id="modalMed" class="modalback" role="dialog" aria-modal="true" aria-label="Cadastrar medicamento"><div class="dialog"><h3>✚ Cadastro de medicamento (teste)</h3><p>Cadastro excepcional: use somente se o medicamento não constar nas DANFEs. Na leitura normal, NÃO é necessário cadastrar produto por produto.</p><form id="medForm"><div class="field"><label for="medCode">Número lido (EAN) ou Código DANFE — conferir embalagem</label><input id="medCode" required placeholder="Ex.: 978916"></div><div class="field"><label for="medName">Descrição</label><input id="medName" required placeholder="Nome do medicamento"></div><div class="field"><label for="medPrice">Preço de venda (R$) — deixe vazio se ainda não sabe</label><input id="medPrice" inputmode="decimal" placeholder="Ex.: 24,90"></div><div class="field"><label for="medStock">Quantidade em estoque (teste)</label><input id="medStock" type="number" min="0" step="1" required value="1"></div><div class="modalactions"><button type="button" class="secondary" data-close="modalMed">Cancelar</button><button class="primary">Salvar no teste</button></div></form></div></div>
+<div id="modalMed" class="modalback" role="dialog" aria-modal="true" aria-label="Cadastrar medicamento"><div class="dialog"><h3>✚ Cadastro de medicamento (teste)</h3><p>Cadastro excepcional: use somente se o medicamento não constar nas DANFEs. Com EAN válido, o código e o nome serão sincronizados com o Google; preços e vendas permanecem locais. Na leitura normal, NÃO é necessário cadastrar produto por produto.</p><form id="medForm"><div class="field"><label for="medCode">Número lido (EAN) ou Código DANFE — conferir embalagem</label><input id="medCode" required placeholder="Ex.: 978916"></div><div class="field"><label for="medName">Descrição</label><input id="medName" required placeholder="Nome do medicamento"></div><div class="field"><label for="medPrice">Preço de venda (R$) — deixe vazio se ainda não sabe</label><input id="medPrice" inputmode="decimal" placeholder="Ex.: 24,90"></div><div class="field"><label for="medStock">Quantidade em estoque (teste)</label><input id="medStock" type="number" min="0" step="1" required value="1"></div><div class="modalactions"><button type="button" class="secondary" data-close="modalMed">Cancelar</button><button class="primary">Salvar no teste</button></div></form></div></div>
 
 <div id="modalMedSync" class="modalback" role="dialog" aria-modal="true" aria-label="Conectar sincronização de medicamentos">
   <div class="dialog">
@@ -147,18 +147,32 @@ function medRemoteProduct(link){
  return list.length===1?list[0]:null;
 }
 function medApplyRemote(links){
- let imported=0,conflicts=0;
+ let imported=0,conflicts=0,created=0;
  for(const item of links){
   if(item.situacao!=='Confirmado')continue;
-  const ean=String(item.ean||''),p=medRemoteProduct(item);
-  if(!p||!checkEAN(ean)||/^2\d{12}$/.test(ean)){conflicts++;continue}
+  const ean=String(item.ean||''),id=String(item.produtoId||''),name=String(item.produto||'').trim();
+  if(!checkEAN(ean)||/^2\d{12}$/.test(ean)){conflicts++;continue}
+  let p=medRemoteProduct(item);
+  // Produtos manuais não estão nas DANFEs: recuperar do Google o nome e o EAN em outros PCs.
+  // Não inventar preço ou estoque físico: preço novo permanece pendente em outro navegador.
+  if(!p && /^LOCAL-[a-z0-9]+$/i.test(id) && name && name.length<=220 &&
+     !catalog.some(x=>String(x.code)===id) &&
+     !catalog.some(x=>(x.ean||[]).includes(ean))){
+   p={code:id,name,price:null,stock:99999,ean:[],
+      codigoDanfe:String(item.codigoDanfe||''),origemCadastro:'sincronizado-google',
+      situacao:'EAN CONFIRMADO NO GOOGLE; PREÇO PENDENTE',
+      categoria:'Medicamentos veterinários',bipagemPermitida:true,
+      fonte:'Base central de medicamentos',pagina:'Google Sheets'};
+   catalog.push(p);created++;
+  }
+  if(!p){conflicts++;continue}
   if(catalog.some(other=>other!==p&&(other.ean||[]).includes(ean))){conflicts++;continue}
   p.ean=Array.isArray(p.ean)?p.ean:[];
   if(!p.ean.includes(ean)){p.ean.push(ean);imported++}
   p.bipagemPermitida=true;
  }
- if(imported){store(KEYS.catalog,catalog);render()}
- return {imported,conflicts};
+ if(imported||created){store(KEYS.catalog,catalog);render()}
+ return {imported,conflicts,created};
 }
 function medVerified(item,links){
  return links.some(x=>String(x.ean)===String(item.ean) &&
@@ -174,6 +188,25 @@ function medQueue(p,ean){
  medStatus('Vínculo salvo neste PC. '+arr.length+' aguardando confirmação do Google.');
  const cfg=medConf();
  if(cfg.url&&cfg.secret)medSyncRefresh();
+}
+// Recupera também cadastros manuais feitos antes desta atualização.
+// Não reenvia códigos que já constam no Google, nem cria vínculo duplicado.
+function medStageManualCatalog(links){
+ const queue=medPending(),seen=new Set(queue.map(x=>String(x.ean)));
+ const remote=new Set(links.map(x=>String(x.ean)));
+ let staged=0;
+ for(const p of catalog){
+  if(p.origemCadastro!=='manual-pdv'||!/^LOCAL-[a-z0-9]+$/i.test(String(p.code||'')))continue;
+  for(const ean of (Array.isArray(p.ean)?p.ean:[])){
+   if(!checkEAN(ean)||/^2\d{12}$/.test(ean)||seen.has(ean)||remote.has(ean))continue;
+   if(catalog.some(other=>other!==p&&(other.ean||[]).includes(ean)))continue;
+   queue.push({ean,produto:p.name,produtoId:String(p.code),
+    codigoDanfe:String(p.codigoDanfe||'')});
+   seen.add(ean);staged++;
+  }
+ }
+ if(staged)store(MED_PENDING_KEY,queue);
+ return staged;
 }
 async function medPostOne(item){
  const cfg=medConf();
@@ -193,19 +226,24 @@ async function medSyncRefresh(){
  try{
   medStatus('Consultando a base de medicamentos no Google...');
   let links=await medLookupRemote();
-  let reviewed=medApplyRemote(links).conflicts;
+  const first=medApplyRemote(links);
+  let reviewed=first.conflicts,created=first.created;
+  const recovered=medStageManualCatalog(links);
   for(const item of medPending()){
    if(medVerified(item,links))continue;
    if(links.some(x=>String(x.ean)===String(item.ean))){reviewed++;continue}
    await medPostOne(item);
    await new Promise(resolve=>setTimeout(resolve,900));
    links=await medLookupRemote();
-   reviewed+=medApplyRemote(links).conflicts;
+   const applied=medApplyRemote(links);
+   reviewed+=applied.conflicts;created+=applied.created;
   }
   const outstanding=medPending().filter(item=>!medVerified(item,links));
   store(MED_PENDING_KEY,outstanding);
   medStatus('Base consultada: '+links.length+' EAN(s). '+outstanding.length+
-   ' pendente(s).'+(reviewed?' '+reviewed+' para revisar.':'')+
+   ' pendente(s).'+(created?' '+created+' cadastro(s) recuperado(s) do Google; confira preços.':'')+
+   (recovered?' '+recovered+' cadastro(s) antigo(s) enviado(s) para conferência.':'')+
+   (reviewed?' '+reviewed+' para revisar.':'')+
    ' Atualizado às '+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})+'.');
  }catch(e){
   medStatus('Sem confirmação do Google ('+String(e?.message||e)+'). '+
@@ -588,7 +626,7 @@ $('medForm').onsubmit=e=>{
  }
  const isEan=checkEAN(codigo)&&!/^2\d{12}$/.test(codigo),
   isDanfe=/^\d{3,6}$/.test(codigo);
- if(!confirm('Cadastrar '+nome+' somente NESTE navegador, como produto de teste?\n\nCódigo recebido: '+codigo+'\nIdentificação: '+(isEan?'EAN válido':isDanfe?'Código curto a conferir':'CÓDIGO NÃO VALIDADO')+'\nPreço: '+(price===null?'PENDENTE':fmt(price))+'\n\nO cadastro não atualiza a planilha nem o estoque físico.'))return;
+ if(!confirm('Cadastrar '+nome+' no PDV de teste?\n\nCódigo recebido: '+codigo+'\nIdentificação: '+(isEan?'EAN válido':isDanfe?'Código curto a conferir':'CÓDIGO NÃO VALIDADO')+'\nPreço: '+(price===null?'PENDENTE':fmt(price))+'\n\n'+(isEan?'O nome e o EAN serão enviados à base central do Google.':'Sem EAN válido, o cadastro ficará somente neste navegador.')+'\nPreço, vendas e estoque físico não serão sincronizados.'))return;
  const p={code:'LOCAL-'+uid(),name:nome,price,stock,ean:isEan?[codigo]:[],
   codigoDanfe:isDanfe?codigo:'',codigoRecebido:codigo,categoria:'Medicamentos veterinários',
   situacao:'CADASTRO LOCAL — CONFERIR',origemCadastro:'manual-pdv',
@@ -596,7 +634,12 @@ $('medForm').onsubmit=e=>{
  catalog.push(p);
  if(isDanfe){const grupo=indiceDanfeCodigo.get(codigo)||[];grupo.push(p);indiceDanfeCodigo.set(codigo,grupo);}
  store(KEYS.catalog,catalog);$('catalogFilter').value=nome;render();$('medForm').reset();$('modalMed').classList.remove('show');
- message('✓ '+nome+' cadastrado neste navegador.'+(price===null?' Preço pendente: não pode entrar na venda.':'')+(isEan?' EAN disponível para novo teste.':' Confira o código de barras antes da bipagem.'),'warn');
+ // Antes, o cadastro manual não chamava a fila de sincronização.
+ // Registrar apenas EAN íntegro e confirmado pelo usuário; nunca um código curto/ilegível.
+ if(isEan)medQueue(p,codigo);
+ message('✓ '+nome+' cadastrado neste navegador.'+(price===null?' Preço pendente: não pode entrar na venda.':'')+
+  (isEan?' EAN enviado para conferência na base Google; verifique o status da sincronização.':
+  ' Sem EAN válido, cadastro somente local.'),'warn');
  focusScan();
 };
 for(const modal of ['modalMed','modalAssociate','modalMedSync'])$(modal).onclick=e=>{if(e.target===$(modal))$(modal).classList.remove('show')};document.addEventListener('keydown',e=>{if(e.key==='Escape'){for(const m of ['modalMed','modalAssociate','modalMedSync'])$(m).classList.remove('show')} });
