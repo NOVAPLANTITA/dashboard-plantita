@@ -1,0 +1,118 @@
+{
+  "atualizadoEm": "30/10/2026 — comanda de 29/10/2026 registrada com total provisório e diferença de R$ 1,24",
+  "dataComanda": "29/10/2026",
+  "totalInformadoComanda": 7044,
+  "totalProvisorioComanda": 7044,
+  "totalLancamentos": 7045.24,
+  "totalTodasAnotacoes": 7045.24,
+  "diferencaConferencia": 1.24,
+  "observacao": "Foto da comanda 1000348299.jpg, atribuída a 29/10/2026 (data ao rodapé pouco nítida). Total manuscrito R$ 7.044,00; soma dos 14 lançamentos R$ 7.045,24; diferença de R$ 1,24 pendente. Total manuscrito usado provisoriamente no Controle Diário e no acumulado mensal; não ajustar lançamentos artificialmente. CAFÉ classificado em Outros até confirmar natureza financeira; grafias de alguns PIX precisam de conferência. Não duplicar as vendas da aba Entregas.",
+  "resumoProvisorio": {
+    "entradas": 7045.24,
+    "retiradas": 0,
+    "saldo": 7045.24,
+    "totalAnotadoComanda": 7044,
+    "detalhamentoPendente": true
+  },
+  "movimentos": [
+    {
+      "data": "29/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 1550,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 921.5,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1380,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 470.04,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 1748.6,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ (natureza financeira a conferir)",
+      "valor": 39.9,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "PIX",
+      "descricao": "FABIANO (grafia a conferir)",
+      "valor": 176.6,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "PIX",
+      "descricao": "SANDRA (grafia a conferir)",
+      "valor": 57.6,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "PIX",
+      "descricao": "STEFANIE JARDIM (grafia a conferir)",
+      "valor": 90,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "PIX",
+      "descricao": "ADRIANA",
+      "valor": 109,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "PIX",
+      "descricao": "NATACHA",
+      "valor": 247,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "PIX",
+      "descricao": "LARISSA",
+      "valor": 175,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "PIX",
+      "descricao": "PAULO DA COSTA",
+      "valor": 70,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    },
+    {
+      "data": "29/10/2026",
+      "tipo": "PIX",
+      "descricao": "LETÍCIA MARTINS",
+      "valor": 10,
+      "conferencia": "Leitura da comanda 1000348299.jpg. Total manuscrito R$ 7.044,00 provisório; soma das linhas R$ 7.045,24, diferença R$ 1,24 a conferir."
+    }
+  ],
+  "statusFechamento": "PROVISÓRIO: total manuscrito R$ 7.044,00 no diário/mês. Soma dos lançamentos R$ 7.045,24; divergência de R$ 1,24 e classificação de CAFÉ a conferir."
+}
