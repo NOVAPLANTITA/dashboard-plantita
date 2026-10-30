@@ -1,0 +1,146 @@
+{
+  "atualizadoEm": "30/10/2026 — comanda do dia registrada com fechamento provisório de R$ 9.672,00 e divergência de R$ 165,34 em possíveis entradas",
+  "dataComanda": "30/10/2026",
+  "totalInformadoComanda": 9672,
+  "totalProvisorioComanda": 9672,
+  "totalLancamentos": 9837.34,
+  "totalTodasAnotacoes": 10275.34,
+  "diferencaConferencia": 165.34,
+  "observacao": "Foto 1000348402.jpg, comanda datada de 30/10/2026. Total manuscrito R$ 9.672,00 (provisório); soma das possíveis entradas R$ 9.837,34 (diferença de R$ 165,34 acima do manuscrito); retiradas e gastos anotados R$ 438,00 separados das vendas, sendo R$ 200,00 transferência de caixa para depósito. Soma de TODOS os 18 valores R$ 10.275,34 (inclui retiradas; não é faturamento). Café (R$ 31,90) mantido como Outros provisoriamente, por padrão dos dias anteriores. Saco PE 2kg (R$ 68,00) classificado provisoriamente como retirada. Nomes de alguns PIX e centavos devem ser conferidos. Não duplicar comandas de entrega nem ajustar itens para forçar fechamento.",
+  "resumoProvisorio": {
+    "entradas": 9837.34,
+    "retiradas": 438,
+    "saldo": 9399.34,
+    "totalAnotadoComanda": 9672,
+    "detalhamentoPendente": true
+  },
+  "movimentos": [
+    {
+      "data": "30/10/2026",
+      "tipo": "Dinheiro",
+      "descricao": "DINHEIRO",
+      "valor": 850,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 1",
+      "valor": 1229,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "Getnet",
+      "descricao": "GETNET 2",
+      "valor": 1400.8,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "Cielo",
+      "descricao": "CIELO",
+      "valor": 1520.25,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "MERCADO PAGO",
+      "valor": 3119.89,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "Outros",
+      "descricao": "CAFÉ (natureza financeira a conferir)",
+      "valor": 31.9,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "PIX",
+      "descricao": "MÁRCIO REGINA (nome a conferir)",
+      "valor": 295,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "PIX",
+      "descricao": "NOME PIX POUCO LEGÍVEL (parece Ivonil)",
+      "valor": 105,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "PIX",
+      "descricao": "MARIA LAINE (nome a conferir)",
+      "valor": 145,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "PIX",
+      "descricao": "ALEX GONÇALVES — registro 1",
+      "valor": 156,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "PIX",
+      "descricao": "ALEX GONÇALVES — registro 2",
+      "valor": 30,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "PIX",
+      "descricao": "NOME PIX POUCO LEGÍVEL — SOUZA",
+      "valor": 67,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "PIX",
+      "descricao": "NOME PIX POUCO LEGÍVEL — COELHO",
+      "valor": 40,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "PIX",
+      "descricao": "SILVANA",
+      "valor": 778.5,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "DÉBITO MERCADO PAGO",
+      "valor": 69,
+      "conferencia": "Leitura da comanda 1000348402.jpg; Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "Retiradas",
+      "descricao": "COMPRA RODA P/ CARRINHO (despesa; classificação provisória)",
+      "valor": 170,
+      "conferencia": "Leitura da comanda 1000348402.jpg; saída não somada ao faturamento. Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "Retiradas",
+      "descricao": "RETIRADA CAIXA P/ DEPÓSITO (transferência de caixa)",
+      "valor": 200,
+      "conferencia": "Leitura da comanda 1000348402.jpg; saída não somada ao faturamento. Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    },
+    {
+      "data": "30/10/2026",
+      "tipo": "Retiradas",
+      "descricao": "SACO PE 2 KG (compra/despesa a confirmar)",
+      "valor": 68,
+      "conferencia": "Leitura da comanda 1000348402.jpg; saída não somada ao faturamento. Conciliação pendente: total manuscrito R$ 9.672,00 e entradas identificadas R$ 9.837,34."
+    }
+  ],
+  "statusFechamento": "PROVISÓRIO: R$ 9.672,00 no Controle Diário e no acumulado do mês; possíveis entradas R$ 9.837,34, diferença R$ 165,34 a conferir. Retiradas R$ 438,00 (R$ 200,00 transferência para depósito). CAFÉ e SACO PE 2kg sujeitos à classificação definitiva."
+}
