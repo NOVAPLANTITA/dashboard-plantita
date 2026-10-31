@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "31/10/2026 — 11 comandas distintas; R$ 1.417,00 de totais (produtos R$ 1.376,00; taxas R$ 41,00). Lote de 4 novas comandas acrescentado sem duplicação por fonte (1000348690.jpg, 1000348689.jpg, 1000348688.jpg, 1000348687.jpg). Eliete R$ 190,00 marcado/a receber; os demais pagamentos conforme indicação. Algumas descrições/nomes/endereços requerem conferência. Não somar as comandas novamente no Controle Diário.",
+  "atualizadoEm": "31/10/2026 — 12 comandas distintas; R$ 1.672,00 de totais (produtos R$ 1.626,00; taxas R$ 46,00). Nova comanda Premier R/P 15 kg, R$ 255,00 no cartão, fonte 1000348694.jpg, incluída sem duplicação. Eliete R$ 190,00 marcado/a receber; os demais pagamentos conforme indicação. Algumas descrições/nomes/endereços requerem conferência. Não somar as comandas novamente no Controle Diário.",
   "comandas": [
     {
       "data": "31/10/2026",
@@ -143,6 +143,19 @@
       "pagamento": "Não informado",
       "prazo": "",
       "conferencia": "Conferir nome, endereço, variedade e apresentação Whiskas; total R$ 71,00, sem taxa expressa. Fonte: 1000348687.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Fabiane (nome a conferir)",
+      "telefone": "",
+      "endereco": "R. Catende, 112, Jardim (bairro manuscrito a conferir)",
+      "descricao": "1 saco Premier R/P 15 kg — R$ 250,00",
+      "valorProduto": 250,
+      "taxaEntrega": 5,
+      "total": 255,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir grafia do nome e bairro, e a apresentação exata Premier R/P. Valor produto R$ 250,00 + taxa R$ 5,00. Fonte: 1000348694.jpg."
     }
   ]
 }
