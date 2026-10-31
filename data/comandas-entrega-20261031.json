@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "31/10/2026 — 12 comandas distintas; R$ 1.672,00 de totais (produtos R$ 1.626,00; taxas R$ 46,00). Nova comanda Premier R/P 15 kg, R$ 255,00 no cartão, fonte 1000348694.jpg, incluída sem duplicação. Eliete R$ 190,00 marcado/a receber; os demais pagamentos conforme indicação. Algumas descrições/nomes/endereços requerem conferência. Não somar as comandas novamente no Controle Diário.",
+  "atualizadoEm": "31/10/2026 — 13 comandas distintas; R$ 1.737,00 de totais (produtos R$ 1.686,00; taxas R$ 51,00). Nova comanda Lana (nome a conferir), Golden Frango R/P + Golden Adulto Salmão, R$ 65,00 cartão, fonte 1000348719.jpg, incluída sem duplicação. Eliete R$ 190,00 marcado/a receber; os demais pagamentos conforme indicação. Algumas descrições/nomes/endereços requerem conferência. Não somar as comandas novamente no Controle Diário.",
   "comandas": [
     {
       "data": "31/10/2026",
@@ -156,6 +156,19 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Conferir grafia do nome e bairro, e a apresentação exata Premier R/P. Valor produto R$ 250,00 + taxa R$ 5,00. Fonte: 1000348694.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Lana (nome a conferir)",
+      "telefone": "",
+      "endereco": "R. Alcino Antônio de Moraes, 266, casa 2 (a conferir)",
+      "descricao": "Golden Frango R/P — R$ 40,00; Golden Adulto Salmão — R$ 20,00 (quantidades/apresentações a conferir)",
+      "valorProduto": 60,
+      "taxaEntrega": 5,
+      "total": 65,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 65,00; itens R$ 40,00 + R$ 20,00 e taxa R$ 5,00. Conferir nome Lana, endereço (266, casa 2), quantidades e apresentações das rações. Fonte: 1000348719.jpg."
     }
   ]
 }
