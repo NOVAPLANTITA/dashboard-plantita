@@ -1,0 +1,96 @@
+{
+  "atualizadoEm": "31/10/2026 — 7 comandas distintas; R$ 1.044,00 de totais (produtos R$ 1.013,00; taxas R$ 31,00). Eliete R$ 190,00 marcado/a receber; os demais pagamentos conforme indicação. Algumas descrições/nomes/endereços requerem conferência. Não somar as comandas novamente no Controle Diário.",
+  "comandas": [
+    {
+      "data": "31/10/2026",
+      "cliente": "Roberta",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "4 kg Golden Gato Carne (variedade a conferir) — R$ 80,00; 3 kg Pedigree R/P (variedade a conferir) — R$ 42,00; 2 kg Misty Calopsita — R$ 20,00; 2 sachês Whiskas — R$ 6,00; 2 sachês Pedigree — R$ 6,00",
+      "valorProduto": 154,
+      "taxaEntrega": 5,
+      "total": 159,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Conferir apresentações da Golden Gato e Pedigree. Taxa R$ 5,00. Fonte: 1000348624.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Matheus",
+      "telefone": "",
+      "endereco": "Rua Constantinopla, 1025 (a conferir)",
+      "descricao": "1 kg Golden Cat Salmão — R$ 20,00; 1 kg Golden Cat Frango — R$ 20,00; 1 kg Golden Cat Carne — R$ 20,00; 1 kg Flash (tipo a conferir) — R$ 65,00; 1 Credeli Gatos (indicação 2,8 kg) — R$ 80,00",
+      "valorProduto": 205,
+      "taxaEntrega": 5,
+      "total": 210,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir produto anotado 'Flash' e endereço. Valor 20+20+20+65+80+5=210. Fonte: 1000348623.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Ana",
+      "telefone": "",
+      "endereco": "Rua João Rodrigues de Camargo (número a conferir)",
+      "descricao": "1 saco Origens Sênior Médio 15 kg — R$ 180,00",
+      "valorProduto": 180,
+      "taxaEntrega": 6,
+      "total": 186,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir rua e número; taxa de R$ 6,00 na comanda. Fonte: 1000348622.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Loriane (nome a conferir)",
+      "telefone": "",
+      "endereco": "Rua Bélgica, 165 (complemento a conferir)",
+      "descricao": "1 Misty (variedade/apresentação a conferir) — R$ 78,00; 4 sachês Origens — R$ 10,00",
+      "valorProduto": 88,
+      "taxaEntrega": 5,
+      "total": 93,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "",
+      "conferencia": "Anotado 'PG!' (pago); conferir grafia do nome, variedade Misty e complemento do endereço. Fonte: 1000348621.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Ana",
+      "telefone": "",
+      "endereco": "Rua Antônio Pedro, 45, casa 2 (a conferir)",
+      "descricao": "2 kg Golden Cat Frango — R$ 40,00; 1 Classic (apresentação a conferir) — R$ 14,00; 3 sachês Whiskas Peixe — R$ 9,00",
+      "valorProduto": 63,
+      "taxaEntrega": 5,
+      "total": 68,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "",
+      "conferencia": "Anotado 'PG!'; confirmar apresentação Classic. Fonte: 1000348620.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Eliete",
+      "telefone": "",
+      "endereco": "Jo Poncasso (leitura incerta)",
+      "descricao": "1 Special (apresentação a conferir) — R$ 170,00; 1 item anotado 'sachê' (quantidade/apresentação a conferir) — R$ 20,00",
+      "valorProduto": 190,
+      "taxaEntrega": 0,
+      "total": 190,
+      "pagamento": "Marcado / a receber",
+      "prazo": "Marcado — não considerar recebido",
+      "conferencia": "Não há taxa de entrega informada; verificar cliente, endereço e os itens. Fonte: 1000348619.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Adriana",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Cão Mix (quantidade/apresentação a conferir) — R$ 65,00; Misty (quantidade/apresentação a conferir) — R$ 50,00; Coelho (quantidade/apresentação a conferir) — R$ 18,00",
+      "valorProduto": 133,
+      "taxaEntrega": 5,
+      "total": 138,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir apresentações/quantidades dos três produtos. Fonte: 1000348618.jpg."
+    }
+  ]
+}
