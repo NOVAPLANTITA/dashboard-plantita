@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "31/10/2026 — 7 comandas distintas; R$ 1.044,00 de totais (produtos R$ 1.013,00; taxas R$ 31,00). Eliete R$ 190,00 marcado/a receber; os demais pagamentos conforme indicação. Algumas descrições/nomes/endereços requerem conferência. Não somar as comandas novamente no Controle Diário.",
+  "atualizadoEm": "31/10/2026 — 11 comandas distintas; R$ 1.417,00 de totais (produtos R$ 1.376,00; taxas R$ 41,00). Lote de 4 novas comandas acrescentado sem duplicação por fonte (1000348690.jpg, 1000348689.jpg, 1000348688.jpg, 1000348687.jpg). Eliete R$ 190,00 marcado/a receber; os demais pagamentos conforme indicação. Algumas descrições/nomes/endereços requerem conferência. Não somar as comandas novamente no Controle Diário.",
   "comandas": [
     {
       "data": "31/10/2026",
@@ -91,6 +91,58 @@
       "pagamento": "Cartão",
       "prazo": "",
       "conferencia": "Conferir apresentações/quantidades dos três produtos. Fonte: 1000348618.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Vanda (nome a conferir)",
+      "telefone": "",
+      "endereco": "Av. Argentina, 713",
+      "descricao": "1 Cão Mil (apresentação/quantidade a conferir) — R$ 65,00",
+      "valorProduto": 65,
+      "taxaEntrega": 5,
+      "total": 70,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "",
+      "conferencia": "Nome e apresentação do produto a conferir. Anotação 'PG' na comanda; taxa expressa R$ 5,00. Fonte: 1000348690.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Luciene",
+      "telefone": "",
+      "endereco": "Itamar, 65 (endereço a conferir)",
+      "descricao": "Golden Seleção 20 kg — R$ 160,00",
+      "valorProduto": 160,
+      "taxaEntrega": 5,
+      "total": 165,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Conferir nome da rua e apresentação da Golden Seleção. Pagamento anotado cartão; taxa R$ 5,00. Fonte: 1000348689.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Jai (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 ração Frango 1 kg (marca manuscrita semelhante a 'Fresk'/'Frosk', a conferir) — R$ 67,00",
+      "valorProduto": 67,
+      "taxaEntrega": 0,
+      "total": 67,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Nome do cliente e marca precisam de conferência; valor total R$ 67,00, sem taxa informada. Fonte: 1000348688.jpg."
+    },
+    {
+      "data": "31/10/2026",
+      "cliente": "Dona Norma (nome a conferir)",
+      "telefone": "",
+      "endereco": "Endereço manuscrito pouco legível (a conferir)",
+      "descricao": "3 kg Golden Frango para Castrados — R$ 60,00; 1 Whiskas (apresentação a conferir) — R$ 11,00",
+      "valorProduto": 71,
+      "taxaEntrega": 0,
+      "total": 71,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Conferir nome, endereço, variedade e apresentação Whiskas; total R$ 71,00, sem taxa expressa. Fonte: 1000348687.jpg."
     }
   ]
 }
