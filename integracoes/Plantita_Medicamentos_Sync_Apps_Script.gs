@@ -9,6 +9,7 @@ const MED_SHEET_ID = '1Y-CNO7lo5CHZEHZ3-AHX1Se4ubdTQCCtQS3jOQPS6fU';
 const MED_TAB = 'Codigos_Medicamentos';
 const MED_COLUMNS = 12;
 const MED_MAX_ROWS_READ = 5000;
+const MED_MAX_SALE_LINES = 300; // Até 300 linhas por venda (mantém ID único e recibo)
 
 function doGet(e) {
   const p = (e && e.parameter) || {};
@@ -18,7 +19,7 @@ function doGet(e) {
     if(p.action==='health') {
       folhaMed_(); folhaVendasMed_();
       return saidaMed_({ok:true,action:'health',schema:3,
-        saleWriteEnabled:true,inventoryIntegrated:false,dashboardIntegrated:false},callback);
+        saleWriteEnabled:true,maxSaleLines:MED_MAX_SALE_LINES,inventoryIntegrated:false,dashboardIntegrated:false},callback);
     }
     if(p.action==='sale_status'){
       const saleId=String(p.saleId||'');
@@ -207,8 +208,8 @@ function registrarVendaMed_(body){
  const prior=localizarVendaMed_(sh,id);
  if(prior)return jsonMed_({ok:true,status:'already_registered',receipt:reciboVendaMed_(prior)});
  const items=body.items;
- if(!Array.isArray(items)||items.length<1||items.length>60)
-   throw new Error('Registro precisa de 1 a 60 linhas.');
+ if(!Array.isArray(items)||items.length<1||items.length>MED_MAX_SALE_LINES)
+   throw new Error('Registro precisa de 1 a '+MED_MAX_SALE_LINES+' linhas.');
  let med=0,granel=0,n=0,clean=[];
  const meds=folhaMed_(),last=meds.getLastRow();
  const catalog=last>=2?meds.getRange(2,1,last-1,10).getValues():[];
