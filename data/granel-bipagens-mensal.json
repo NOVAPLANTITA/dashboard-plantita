@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "origem": "Base Central Granel Plantita • aba Vendas_Balanca",
+  "consultadoEm": "2026-11-03",
+  "observacao": "Fechamento histórico das bipagens de outubro, com os registros disponíveis na planilha no momento da conferência. Não atualiza automaticamente se houver lançamentos retroativos.",
+  "meses": [
+    {
+      "mes": "2026-10",
+      "rotulo": "Outubro de 2026",
+      "bipagens": 1337,
+      "valor": 29715.79,
+      "primeiraData": "2026-10-06",
+      "ultimaData": "2026-10-31",
+      "dias": [
+        {
+          "data": "2026-10-06",
+          "bipagens": 58,
+          "valor": 1356.14
+        },
+        {
+          "data": "2026-10-07",
+          "bipagens": 59,
+          "valor": 1237.42
+        },
+        {
+          "data": "2026-10-08",
+          "bipagens": 46,
+          "valor": 1157.09
+        },
+        {
+          "data": "2026-10-09",
+          "bipagens": 56,
+          "valor": 1226.54
+        },
+        {
+          "data": "2026-10-10",
+          "bipagens": 104,
+          "valor": 2497.16
+        },
+        {
+          "data": "2026-10-13",
+          "bipagens": 54,
+          "valor": 1064.62
+        },
+        {
+          "data": "2026-10-14",
+          "bipagens": 55,
+          "valor": 1299.06
+        },
+        {
+          "data": "2026-10-15",
+          "bipagens": 70,
+          "valor": 1781.83
+        },
+        {
+          "data": "2026-10-16",
+          "bipagens": 31,
+          "valor": 596.25
+        },
+        {
+          "data": "2026-10-17",
+          "bipagens": 67,
+          "valor": 1369.27
+        },
+        {
+          "data": "2026-10-18",
+          "bipagens": 60,
+          "valor": 1228.89
+        },
+        {
+          "data": "2026-10-19",
+          "bipagens": 34,
+          "valor": 660.33
+        },
+        {
+          "data": "2026-10-20",
+          "bipagens": 71,
+          "valor": 1495.99
+        },
+        {
+          "data": "2026-10-21",
+          "bipagens": 67,
+          "valor": 1579.11
+        },
+        {
+          "data": "2026-10-22",
+          "bipagens": 60,
+          "valor": 1279.73
+        },
+        {
+          "data": "2026-10-23",
+          "bipagens": 48,
+          "valor": 996.41
+        },
+        {
+          "data": "2026-10-24",
+          "bipagens": 108,
+          "valor": 2231.03
+        },
+        {
+          "data": "2026-10-26",
+          "bipagens": 54,
+          "valor": 1118.32
+        },
+        {
+          "data": "2026-10-27",
+          "bipagens": 78,
+          "valor": 1885.66
+        },
+        {
+          "data": "2026-10-28",
+          "bipagens": 28,
+          "valor": 576.24
+        },
+        {
+          "data": "2026-10-29",
+          "bipagens": 113,
+          "valor": 2662.53
+        },
+        {
+          "data": "2026-10-30",
+          "bipagens": 3,
+          "valor": 85.22
+        },
+        {
+          "data": "2026-10-31",
+          "bipagens": 13,
+          "valor": 330.95
+        }
+      ]
+    }
+  ]
+}
