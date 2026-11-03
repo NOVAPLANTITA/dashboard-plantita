@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "03/11/2026 — 10 comandas fotografadas de 29/10/2026; valores totais manuscritos; produtos e taxas conferidos quando legíveis. Algumas descrições/nomes/endereço precisam de conferência. Uma comanda está MARCADA / a receber. Não duplicar receita no Controle Diário.",
+  "atualizadoEm": "03/11/2026 — 15 comandas distintas de 29/10/2026, total R$ 2.156,50; produtos R$ 2.104,50 e taxas expressamente discriminadas R$ 52,00. Dois lotes de fotos: 10 + 5. Valores totais manuscritos prevalecem; anotações ilegíveis sinalizadas para conferência. Há pelo menos uma comanda MARCADA / a receber, que não deve ser contabilizada como caixa recebido. Não duplicar receitas no Controle Diário.",
   "comandas": [
     {
       "data": "29/10/2026",
@@ -130,6 +130,71 @@
       "pagamento": "Pix",
       "prazo": "",
       "conferencia": "Itens anotados como rações a granel, tipos a conferir. Comanda distinta da de R$ 296,00. Fonte: 1000349374.jpg."
+    },
+    {
+      "data": "29/10/2026",
+      "cliente": "Vera (nome a conferir)",
+      "telefone": "",
+      "endereco": "Endereço parcialmente ilegível",
+      "descricao": "1 Special Dog (apresentação/variedade a conferir) — R$ 100,00; 1 mistura natural (produto a conferir) — R$ 20,00",
+      "valorProduto": 120,
+      "taxaEntrega": 0,
+      "total": 120,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 120,00; soma de linhas R$ 100,00 + R$ 20,00. Conferir segundo produto e endereço. Taxa não discriminada. Fonte: 1000349373.jpg."
+    },
+    {
+      "data": "29/10/2026",
+      "cliente": "Vera (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Special Dog 15 kg — R$ 90,00; 1 kg Fórmula Life (nome a conferir) — R$ 20,00",
+      "valorProduto": 110,
+      "taxaEntrega": 0,
+      "total": 110,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 110,00; itens R$ 90,00 + R$ 20,00. Confirmar segundo produto. Comanda distinta da de R$ 120,00. Fonte: 1000349372.jpg."
+    },
+    {
+      "data": "29/10/2026",
+      "cliente": "Fabiano",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Golden Gatos Frango (apresentação a conferir) — R$ 178,00",
+      "valorProduto": 178,
+      "taxaEntrega": 0,
+      "total": 178,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 178,00; peso e variedade exatos a conferir. Fonte: 1000349371.jpg."
+    },
+    {
+      "data": "29/10/2026",
+      "cliente": "Cliente (nome a conferir; foto 1000349370)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Origens (variedade e peso a conferir) — R$ 120,00",
+      "valorProduto": 120,
+      "taxaEntrega": 0,
+      "total": 120,
+      "pagamento": "Pago (meio não informado)",
+      "prazo": "",
+      "conferencia": "Anotado PAGO; total manuscrito R$ 120,00. Nome pouco legível e produto sem apresentação. Fonte: 1000349370.jpg."
+    },
+    {
+      "data": "29/10/2026",
+      "cliente": "Cliente (nome a conferir; foto 1000349369)",
+      "telefone": "",
+      "endereco": "Rua [ilegível] Lopes, 200 (a conferir)",
+      "descricao": "1 Premier (variedade e apresentação a conferir) — R$ 330,00",
+      "valorProduto": 330,
+      "taxaEntrega": 0,
+      "total": 330,
+      "pagamento": "Dinheiro (anotação a conferir)",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 330,00. Conferir nome, endereço, modelo exato da ração e meio de pagamento. Fonte: 1000349369.jpg."
     }
   ]
 }
