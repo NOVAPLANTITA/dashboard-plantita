@@ -99,7 +99,7 @@ function restore(key,fallback){try{let x=JSON.parse(localStorage.getItem(key));r
 const demoCatalog=[{"code":"1094","name":"Seringa Medix 3 ml c/ agulha 25 x 0,7","price":58,"stock":40,"cost":0.36675,"danfe":"14.463","vendor":"Lar Pet","ean":[]},{"code":"935","name":"Vacina Raiva 1 dose LEMA","price":1603,"stock":40,"cost":10.12325,"danfe":"14.463","vendor":"Lar Pet","ean":[]},{"code":"978916","name":"Credeli Gatos 48 mg - 1 comprimido","price":6889,"stock":6,"cost":43.496667,"danfe":"733.628","vendor":"Ollea","ean":["5420036978916"]},{"code":"982258","name":"Zenerella 48 mg - 30 comprimidos","price":25002,"stock":1,"cost":157.86,"danfe":"733.628","vendor":"Ollea","ean":[]},{"code":"975830","name":"Seresto coleira grande","price":24655,"stock":1,"cost":155.67,"danfe":"733.628","vendor":"Ollea","ean":[]},{"code":"55259","name":"Drontal Puppy 20 ml","price":7368,"stock":8,"cost":46.5225,"danfe":"733.628","vendor":"Ollea","ean":["4007221055259"]},{"code":"978923","name":"Credeli Gatos 12 mg - 1 comprimido","price":6128,"stock":2,"cost":38.695,"danfe":"733.628","vendor":"Ollea","ean":[]},{"code":"940388","name":"Credeli - 3 comprimidos (azul)","price":27974,"stock":1,"cost":176.63,"danfe":"733.628","vendor":"Ollea","ean":[]}];
 let catalog=restore(KEYS.catalog,demoCatalog),cart=restore(KEYS.cart,[]),sales=restore(KEYS.sales,[]);
 let unmatchedEAN='',lastScannedCode='';
-let pdvReady=false,pdvSubmitting=false,pdvLiveLoaded=false;
+let pdvReady=false,pdvSubmitting=false,pdvLiveLoaded=false,pdvMaxSaleLines=60;
 const PDV_PENDING_SALE_KEY='plantita_pdv_operacional_pendente_v1';
 function pdvPendingSale(){return restore(PDV_PENDING_SALE_KEY,null)}
 function pdvSavePendingSale(x){
@@ -152,7 +152,7 @@ function pdvSetMode(ready,explanation=''){
   notice.innerHTML='<b>Registro operacional na base central.</b> Cada finalização precisa de recibo da aba PDV_Vendas. '+
    'O histórico anterior de testes permanece separado. Estoque físico e Controle Diário não recebem baixa automática. '+
    'Preços pendentes ou divergentes impedem a finalização.';
-  status.textContent='✓ Integração central de vendas confirmada. Nenhuma baixa física automática.';
+  status.textContent='✓ Integração central de vendas confirmada. Limite informado pela ponte: '+pdvMaxSaleLines+' linhas por registro. Nenhuma baixa física automática.';
  }else{
   flag.textContent='PRÉ-OPERAÇÃO • FINALIZAÇÃO BLOQUEADA';
   status.textContent='Registro de vendas não ativado: '+explanation+
@@ -190,6 +190,9 @@ async function pdvCheckReady(){
   const status=await pdvRemoteGet('health');
   if(status.schema!==3||status.saleWriteEnabled!==true)
    throw Error('a ponte não oferece confirmação central de vendas');
+  // Pontes antigas não anunciam o limite e aceitam apenas 60 linhas.
+  const remoteLimit=Number(status.maxSaleLines);
+  pdvMaxSaleLines=Number.isSafeInteger(remoteLimit)&&remoteLimit>=1&&remoteLimit<=500?remoteLimit:60;
   pdvSetMode(true);
  }catch(e){
   pdvSetMode(false,String(e?.message||e));
@@ -788,11 +791,11 @@ function aplicarCodigosDaDanfe(){
 }
  function loadPhotoPrices(){const itens=JSON.parse(document.getElementById('plantita-fotos').textContent).itens;const key=s=>norm(s).replace(/\s+/g,' ').replace('zenerelia','zenerella');for(const p of catalog)if(demoCatalog.some(d=>d.code===p.code)){p.price=null;p.stock=99999;}for(const [i,x] of itens.entries()){const price=typeof x.precoVenda==='number'?Math.round(x.precoVenda*100):null;let p=catalog.find(m=>key(m.name)===key(x.produto));if(p){if(price!==null){p.price=price;p.fonte='foto'}else if(p.fonte!=='foto')p.price=null;p.pagina=x.pagina;}else{p={code:'FOTO'+String(i+1).padStart(4,'0'),name:x.produto,price,stock:99999,ean:[],fonte:price===null?'pendente':'foto',pagina:x.pagina};catalog.push(p)}const codigoBarra=String(x.codigoBarras||'').trim();if(codigoBarra&&checkEAN(codigoBarra)){p.ean=Array.isArray(p.ean)?p.ean:[];if(!p.ean.includes(codigoBarra))p.ean.push(codigoBarra);p.origemCodigo='EAN conferido na foto da embalagem'}}store(KEYS.catalog,catalog);return itens.length;}
 function save(){store(pdvLiveLoaded?KEYS.liveCart:KEYS.cart,cart);render()}
-function render(){const c=calc();$('countItems').textContent=c.n+' '+(c.n===1?'item':'itens');$('totalMed').textContent=fmt(c.med);$('totalGranel').textContent=fmt(c.granel);$('totalAll').textContent=fmt(c.total);$('finish').disabled=!pdvReady||pdvSubmitting||!cart.length;
+function render(){const c=calc();$('countItems').textContent=c.n+' '+(c.n===1?'item':'itens');$('totalMed').textContent=fmt(c.med);$('totalGranel').textContent=fmt(c.granel);$('totalAll').textContent=fmt(c.total);$('finish').disabled=!pdvReady||pdvSubmitting||!cart.length||cart.length>pdvMaxSaleLines;
 $('finishQuick').disabled=$('finish').disabled;
 $('saleSyncBanner').style.display=c.n?'flex':'none';
 $('saleSyncBannerTitle').textContent=pdvReady?'⚠ '+c.n+' item(ns) ainda NÃO registrados no Google':'⚠ Registro ainda não enviado: integração indisponível';
-$('saleSyncBannerDetail').textContent=pdvSubmitting?'Consultando confirmação do Google; não repita o envio.':(pdvReady?'Valor pendente: '+fmt(c.total)+'. Ao terminar esta venda, clique no botão para enviar e receber o recibo.':'Aguarde a conexão com Google ser confirmada antes de concluir a venda.');
+$('saleSyncBannerDetail').textContent=pdvSubmitting?'Consultando confirmação do Google; não repita o envio.':(cart.length>pdvMaxSaleLines?'Este registro tem '+cart.length+' linhas, mas a ponte atual aceita '+pdvMaxSaleLines+'. É preciso publicar a NOVA VERSÃO do Apps Script antes de finalizar. Os itens continuam salvos neste computador.':(pdvReady?'Valor pendente: '+fmt(c.total)+' • '+cart.length+' linha(s). Ao terminar esta venda, clique no botão para enviar e receber o recibo.':'Aguarde a conexão com Google ser confirmada antes de concluir a venda.'));
  $('clearCart').disabled=!cart.length||pdvSubmitting||!!pdvPendingSale();$('emptyCart').style.display=cart.length?'none':'block';$('items').innerHTML=cart.map(x=>'<tr><td><span class="type '+(x.type==='med'?'med':'gra')+'">'+(x.type==='med'?'REMÉDIO':'GRANEL')+'</span></td><td><span class="name">'+escapeHtml(x.name)+'</span><span class="code">'+escapeHtml(x.code)+'</span></td><td class="tright">'+x.qty+'</td><td class="tright"><b>'+fmt(x.price*x.qty)+'</b></td><td class="tright"><button class="remove" data-remove="'+escapeHtml(x.id)+'" aria-label="Remover item">×</button></td></tr>').join('');
 const busca=norm($('catalogFilter').value);const visiveis=busca?catalog.filter(p=>norm(p.name).includes(busca)||norm(p.codigoDanfe||'').includes(busca)):([ ...catalog.filter(p=>p.origemCadastro==='manual-pdv'), ...catalog.filter(p=>p.origemCadastro!=='manual-pdv') ]).slice(0,60);$('catalog').innerHTML=visiveis.map(p=>'<div class="product"><div><div class="product-name">'+escapeHtml(p.name)+'</div><small>Foto '+escapeHtml(p.pagina||'—')+' • '+(p.price!==null&&p.price>0?'VENDA '+fmt(p.price):'PREÇO PENDENTE')+' • Código DANFE: '+escapeHtml(p.codigoDanfe||'não informado')+' • '+((p.ean||[]).length?'EAN '+escapeHtml(p.ean.join(', ')):'EAN pendente')+'</small></div><div style="display:grid;gap:5px"><button type="button" class="plus" data-bind="'+escapeHtml(p.code)+'">Vincular EAN</button><button type="button" class="plus" data-price="'+escapeHtml(p.code)+'">✎ Preço</button><button type="button" class="plus" data-med="'+escapeHtml(p.code)+'" '+(p.price===null||(p.origemCadastro==='manual-pdv'&&p.bipagemPermitida===false)?'disabled':'')+'>+ Testar</button></div></div>').join('')||'<div class="fine">Nenhum produto encontrado.</div>';
 
@@ -847,6 +850,7 @@ $('clearCart').onclick=()=>{if(!pdvGate())return;if(confirm('Cancelar itens aind
 $('finishQuick').onclick=()=>$('finish').click();
 $('finish').onclick=async()=>{
  if(!pdvReady||!cart.length||pdvSubmitting){message('Registro central indisponível ou carrinho vazio.','warn');return}
+ if(cart.length>pdvMaxSaleLines){message('A ponte do Google aceita '+pdvMaxSaleLines+' linhas e o registro contém '+cart.length+'. Atualize a implantação do Apps Script. Não apague os itens.','err');return}
  const current=cart.map(x=>({type:x.type,code:x.code,ean:x.ean||'',
   name:x.name,qty:x.qty,price:x.price}));
  let pendingSale=pdvPendingSale();
