@@ -25,6 +25,7 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
 .section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:18px 0 9px}.section-title h2{margin:0;font-size:17px}.pill{background:#0d2a2e;border:1px solid #285b62;padding:7px 10px;border-radius:999px;font-size:10px;color:#b9d5d4}
 .modules{display:grid;grid-template-columns:1fr 1fr;gap:14px}.module{background:linear-gradient(180deg,#0a252a,#071b1f);border:1px solid var(--line);border-radius:18px;padding:17px}.module .icon{font-size:30px}.module h3{margin:7px 0 5px}.module p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}.big{font-size:28px;font-weight:900;margin-top:13px}.smallgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}.mini{background:#0b2529;border:1px solid #17474c;border-radius:12px;padding:10px}.mini span{display:block;color:#7fa6a8;font-size:10px}.mini b{display:block;margin-top:4px;font-size:16px}
 .product-search{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:12px 14px}.product-search label{color:var(--muted);font-size:12px}.product-search input{width:min(100%,350px);padding:11px;border-radius:10px;border:1px solid var(--line);background:var(--panel2);color:var(--txt);font-size:14px}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:15px}.tablewrap table{width:100%;border-collapse:collapse;min-width:560px;background:#081a1c}th,td{padding:10px;border-bottom:1px solid #163a3e;text-align:left;font-size:12px}th{background:#0d292c;color:#b9d4d1}.right{text-align:right}.empty{padding:16px;color:var(--muted);font-size:12px}
+.history-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.history-toolbar label{color:var(--muted);font-size:13px;font-weight:700}.history-toolbar select{padding:10px 12px;border-radius:10px;color:var(--txt);border:1px solid #2a6065;background:var(--panel2);font-size:14px}.history-kpis{grid-template-columns:repeat(2,1fr);margin:12px 0 0}.history-kpis b{color:#92f4c8}.history-kpis .kpi:nth-child(2) b{color:#f6d77a}#historicoDetalhes{margin-top:12px}#historicoDetalhes summary{color:#b2e0e2;cursor:pointer;font-size:12px;font-weight:800;padding:8px 0}#historicoDetalhes .tablewrap{margin-top:5px}#historicoDetalhes table{min-width:0}#historicoStatus{line-height:1.5}
 @media(max-width:820px){.hero,.modules{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.wrap{padding:10px}.top{align-items:flex-start}.top h1{font-size:15px}.top a,.top button,.role{font-size:9px;padding:8px}.kpi b{font-size:18px}}
 </style>
 </head>
@@ -61,6 +62,18 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
     <div class="kpi"><span>Valor vendido na balança</span><b id="todaySales">—</b></div>
     <div class="kpi"><span>Sacos abertos</span><b id="todayBags">—</b></div>
     <div class="kpi"><span>Kg adicionados ao granel</span><b id="todayKg">—</b></div>
+  </section>
+
+
+  <div class="section-title"><h2>📅 Histórico mensal de bipagens</h2><span class="pill">Meses anteriores</span></div>
+  <section class="card" id="historicoGranel">
+    <div class="history-toolbar"><label for="historicoMes">Consultar mês:</label><select id="historicoMes" aria-label="Mês para consultar bipagens" disabled><option>Carregando...</option></select></div>
+    <div class="kpis history-kpis">
+      <div class="kpi"><span>Bipagens do mês selecionado</span><b id="historicoBipagens">—</b></div>
+      <div class="kpi"><span>Valor vendido nas bipagens</span><b id="historicoValor">—</b></div>
+    </div>
+    <div id="historicoStatus" class="status" role="status">Consultando histórico de vendas da balança...</div>
+    <details id="historicoDetalhes"><summary>Ver valores e bipagens por dia</summary><div class="tablewrap"><table><thead><tr><th>Data</th><th class="right">Bipagens</th><th class="right">Valor vendido</th></tr></thead><tbody id="historicoDias"></tbody></table></div></details>
   </section>
 
   <div class="section-title"><h2>Mês atual</h2><span class="pill" id="monthLabel">—</span></div>
@@ -214,9 +227,35 @@ async function carregar(){
   }catch(e){console.warn(e);setStatus('Falha ao consultar o Google neste celular: '+(e.message||'erro desconhecido')+'. Confira a URL /exec e a implantação do Apps Script.','bad')}
   finally{carregando=false}
 }
-$('config').onclick=configurar;$('refresh').onclick=()=>{carregarCustos();carregar()};
+
+let historicoMeses=[];
+const dataBR=iso=>{const p=String(iso||'').split('-');return p.length===3?p.reverse().join('/'):iso};
+const escHistorico=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function mostrarHistorico(){
+ const m=historicoMeses.find(x=>x.mes===$('historicoMes').value);
+ if(!m)return;
+ $('historicoBipagens').textContent=num(m.bipagens);
+ $('historicoValor').textContent=money(m.valor);
+ $('historicoStatus').textContent='Registros disponíveis de '+dataBR(m.primeiraData)+' a '+dataBR(m.ultimaData)+'. Fonte: Base Central Granel Plantita (Vendas_Balanca), conferida em 03/11/2026. Este fechamento histórico é uma cópia e não inclui lançamentos retroativos após a conferência.';
+ $('historicoDias').innerHTML=(m.dias||[]).map(x=>'<tr><td>'+escHistorico(dataBR(x.data))+'</td><td class="right">'+num(x.bipagens)+'</td><td class="right">'+money(x.valor)+'</td></tr>').join('');
+}
+async function carregarHistorico(){
+ try{
+  const response=await fetch('data/granel-bipagens-mensal.json?v=20261103-outubro1&ts='+Date.now(),{cache:'no-store'});
+  if(!response.ok)throw Error('HTTP '+response.status);
+  const d=await response.json();
+  if(!Array.isArray(d.meses)||!d.meses.length)throw Error('Não há meses no histórico');
+  historicoMeses=d.meses;
+  $('historicoMes').innerHTML=historicoMeses.map(m=>'<option value="'+escHistorico(m.mes)+'">'+escHistorico(m.rotulo)+'</option>').join('');
+  $('historicoMes').disabled=false;
+  $('historicoMes').onchange=mostrarHistorico;
+  mostrarHistorico();
+ }catch(err){console.warn('Histórico do granel indisponível',err);$('historicoStatus').textContent='Não foi possível carregar o histórico de meses. Toque em ATUALIZAR para tentar novamente.'}
+}
+
+$('config').onclick=configurar;$('refresh').onclick=()=>{carregarCustos();carregar();carregarHistorico()};
 $('productFilter').addEventListener('input',()=>{if(ultimoResumo)renderRanking(ultimoResumo.month||{})});
-carregarCustos();carregar();setInterval(()=>{if(!document.hidden)carregar()},60000);
+carregarCustos();carregar();carregarHistorico();setInterval(()=>{if(!document.hidden)carregar()},60000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)carregar()});
 window.addEventListener('pageshow',e=>{if(e.persisted)carregar()});
 </script>
