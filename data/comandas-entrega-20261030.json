@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "03/11/2026 — 10 comandas fotografadas de 30/10/2026. Total manuscrito do lote R$ 1.882,50, produtos R$ 1.872,50 e taxas de entrega discriminadas R$ 10,00. Há R$ 632,00 MARCADOS/a receber (não caixa). Valores manuscritos de cada comanda preservados e trechos pouco legíveis em conferência. Não duplicar entradas do Controle Diário.",
+  "atualizadoEm": "03/11/2026 — 14 comandas distintas de 30/10/2026. Total R$ 3.408,50 (produtos R$ 3.393,50; taxas discriminadas R$ 15,00). Dois lotes de fotos: 10 registros + 4 pedidos únicos em 5 fotos, com as imagens 1000349417.jpg e 1000349418.jpg duplicando a mesma comanda. Há R$ 632,00 MARCADOS/a receber. Comanda de R$ 1.005,00 provisória devido à leitura tênue; comanda de R$ 136,00 tem linhas contraditórias e precisa de conferência. Não duplicar receita no Controle Diário.",
   "comandas": [
     {
       "data": "30/10/2026",
@@ -130,6 +130,58 @@
       "pagamento": "Pago (meio não informado)",
       "prazo": "",
       "conferencia": "Total 130+37=167; anotação Pago. Fonte: 1000349420.jpg."
+    },
+    {
+      "data": "30/10/2026",
+      "cliente": "Márcia (nome a conferir)",
+      "telefone": "",
+      "endereco": "Rua [ilegível], 1017 (a conferir)",
+      "descricao": "1 item 'Chobi' (descrição a conferir) — R$ 44,00; 1 Golden sabor carne (apresentação a conferir) — R$ 178,00; 1 Golden filhotes gato (a conferir) — R$ 30,00; 1 Pedigree (variedade a conferir) — R$ 14,00; 1 Premier (variedade a conferir) — R$ 24,00",
+      "valorProduto": 290,
+      "taxaEntrega": 5,
+      "total": 295,
+      "pagamento": "Pago (anotação a conferir)",
+      "prazo": "",
+      "conferencia": "Total R$ 295,00 confirmado pela soma das linhas 44+178+30+14+24+5. Fotos 1000349418.jpg e 1000349417.jpg são da MESMA comanda; registrada apenas uma vez. Nomes, endereço, rações e apresentações a conferir."
+    },
+    {
+      "data": "30/10/2026",
+      "cliente": "Cliente (nome a conferir — foto 1000349419)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 unidades de ração premium (marca/apresentação a conferir) — R$ 790,00; 1 ração para gato (descrição a conferir) — R$ 160,00; 5 kg quirera grossa (a conferir) — R$ 25,00; 2 unidades de produto 'rastelo' (a conferir) — R$ 30,00",
+      "valorProduto": 1005,
+      "taxaEntrega": 0,
+      "total": 1005,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "VALOR PROVISÓRIO: total manuscrito parece R$ 1.005,00, consistente com as linhas interpretadas como 790+160+25+30=1005. Escrita tênue; conferir total e preço da primeira linha antes de considerar fechamento definitivo. Fonte: 1000349419.jpg."
+    },
+    {
+      "data": "30/10/2026",
+      "cliente": "Cléo (nome a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Lester Especial (produto/apresentação a conferir) — R$ 126,00; anotação adicional 'especial' com R$ 100,00 (possível referência, conferir)",
+      "valorProduto": 126,
+      "taxaEntrega": 10,
+      "total": 136,
+      "pagamento": "Cartão (anotação rasurada, conferir)",
+      "prazo": "",
+      "conferencia": "TOTAL MANUSCRITO R$ 136,00. Há valores manuscritos de 126, 100 e 10 que NÃO conciliam se todos forem cobrados. Registrado provisoriamente 126 de produto + 10 como taxa conforme total geral; confirmar se R$ 100,00 é preço adicional, riscado ou nota. Fonte: 1000349416.jpg."
+    },
+    {
+      "data": "30/10/2026",
+      "cliente": "Geralda (grafia a conferir)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "5 kg de mistura (tipo a conferir) — R$ 45,00; 5 kg de mistura (outro tipo, a conferir) — R$ 40,00",
+      "valorProduto": 85,
+      "taxaEntrega": 5,
+      "total": 90,
+      "pagamento": "Cartão (a conferir)",
+      "prazo": "",
+      "conferencia": "Total manuscrito R$ 90,00, soma R$ 45,00 + R$ 40,00 + taxa R$ 5,00. Produtos e pagamento a conferir. Fonte: 1000349415.jpg."
     }
   ]
 }
