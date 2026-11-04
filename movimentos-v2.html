@@ -63,7 +63,7 @@ async function carregar(){
  // Correção de YVNA informada por Eric. Também protege contra arquivo antigo em cache.
  data.forEach(x=>{if(x.data==='01/09/2026'&&String(x.tipo).trim().toUpperCase()==='PIX'&&String(x.descricao||'').trim().toUpperCase()==='YVNA'){x.valor=105;x.conferencia='Corrigido por Eric em 21/09/2026: de R$ 405,00 para R$ 105,00';}});
  const dates=[...new Set([...data.map(x=>x.data),...datasNovembroPendentes])].sort((a,b)=>b.split('/').reverse().join('').localeCompare(a.split('/').reverse().join('')));
- $('#date').innerHTML=dates.length?dates.map(x=>`<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join(''):'<option value="">Sem datas</option>';
+ $('#date').innerHTML=dates.length?dates.map(x=>`<option value="${escapeHtml(x)}">${escapeHtml(x)}${datasNovembroPendentes.includes(x)&&!data.some(m=>m.data===x)?' — PENDENTE':''}</option>`).join(''):'<option value="">Sem datas</option>';
  if(dates.length)$('#date').value=dates.includes(anterior)?anterior:dates[0];$('#date').disabled=!dates.length;
  const registro=data.find(x=>x.data==='01/09/2026'&&x.tipo==='PIX'&&String(x.descricao||'').trim().toUpperCase()==='YVNA');
  $('#updated').textContent=(dates.length?'Última data com movimento: '+dates[0]+' • ':'')+'Arquivos carregados: '+bases.length+'/'+fontes.length+' • Base principal histórica '+(bases[0]?.atualizadoEm||'sem data')+' • PIX YVNA 01/09: '+(registro?fmt(registro.valor):'não localizado');
