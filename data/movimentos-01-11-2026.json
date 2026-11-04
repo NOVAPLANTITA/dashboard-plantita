@@ -2,7 +2,6 @@
   "atualizadoEm": "04/11/2026 — valor de 01/11 confirmado pelo responsável",
   "dataComanda": "01/11/2026",
   "totalInformadoComanda": 7575.49,
-  "totalOficialComanda": 7575.49,
   "detalhamentoPendente": true,
   "totalLancamentos": 7575.49,
   "diferencaConferencia": 0,
@@ -15,5 +14,6 @@
       "valor": 7575.49,
       "conferencia": "Valor R$ 7.575,49 confirmado pelo responsável. Não somar novamente vendas individuais do PDV ou entregas."
     }
-  ]
+  ],
+  "totalConfirmadoComanda": 7575.49
 }
