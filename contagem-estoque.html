@@ -263,10 +263,8 @@ const response=await countJsonp('latest');
 if(!response.found||!response.snapshot){countMessage('Ainda não existe nenhuma contagem salva no Google.','bad');return}
 const snapshot=response.snapshot,receipt=snapshot.receipt;
 if(!receipt||!Array.isArray(snapshot.items))throw Error('Registro incompleto no Google');
-if(receipt.saveId===state.remoteLastSaveId&&!state.pendingSave){
-countMessage('Esta contagem já é a última salva no Google. As alterações feitas neste navegador permanecem aqui.','ok');return
-}
-const anyLocal=countBuild().length>0;
+// Mesmo que o recibo seja conhecido, permitir recarregar o rascunho após uma limpeza local.
+const anyLocal=countBuild().length>0 || !!state.pendingSave;
 if(anyLocal){
 const proceed=confirm('Retomar a última contagem do Google ('+receipt.bags+' sacos)? Isso substitui o rascunho deste navegador. A contagem local será exportada para CSV antes. Deseja continuar?');
 if(!proceed){countMessage('Retomada cancelada: nenhum dado local foi alterado.');return}
@@ -276,7 +274,7 @@ const counts={},prices={},links={},customProducts=[];
 for(const item of snapshot.items){
 if(item.qty!==null&&item.qty>0)counts[item.id]=item.qty;
 if(item.priceCentavos!==null)prices[item.id]=item.priceCentavos/100;
-if(item.cadastro==='local')customProducts.push({id:item.id,row:item.row,marca:item.marca,produto:item.produto,peso:item.peso,cadastro:'local'});
+if(item.cadastro==='local'||!catalog.some(p=>p.id===item.id))customProducts.push({id:item.id,row:item.row,marca:item.marca,produto:item.produto,peso:item.peso,cadastro:'local'});
 for(const code of item.codes||[])links[code]=item.id
 }
 state.counts=counts;state.prices=prices;state.links=links;state.customProducts=customProducts;state.started=receipt.startedAt||new Date().toISOString();
@@ -308,8 +306,7 @@ $('csv').onchange=e=>{importCSV(e.target.files[0]).catch(err=>status('Falha ao l
 $('saveCount').onclick=countSave;$('loadCount').onclick=countLoadLatest;
 $('configCount').onclick=()=>{$('countConfigPanel').style.display=$('countConfigPanel').style.display==='none'?'block':'none';$('countSyncUrl').value=countConfig().url;$('countSyncKey').value=countConfig().key};
 $('testCountGoogle').onclick=countTestGoogle;
-$('new').onclick=()=>{if(savingCloud)return;const unsaved=state.pendingSave||state.remoteLastSaveId&&state.lastGoogleAt&&countFingerprint()!==state.lastGoogleFingerprint;
-if(!confirm('ATENÇÃO: Nova contagem ZERA as quantidades e os preços propostos deste navegador. Um CSV será exportado antes de limpar. Isso NÃO finaliza o inventário nem atualiza o Google. Iniciar outra contagem?'))return;
+$('new').onclick=()=>{if(savingCloud)return; if(!confirm('ATENÇÃO: Nova contagem ZERA as quantidades e os preços propostos deste navegador. Um CSV será exportado antes de limpar. Isso NÃO finaliza o inventário nem atualiza o Google. Iniciar outra contagem?'))return;
 if(Object.keys(state.counts).length||Object.keys(state.prices||{}).length)download();
 state.counts={};state.prices={};state.last=null;state.pendingSave=null;state.sessionId=countUid('inv_');state.started=new Date().toISOString();save();render();status('Nova contagem iniciada. Os vínculos dos códigos e a referência importada permanecem.','ok');$('scan').focus()};
 (async function init(){load();if(!state.sessionId){state.sessionId=countUid('inv_');save()}if(state.lastGoogleAt)countMessage('Último salvamento registrado no Google: '+new Date(state.lastGoogleAt).toLocaleString('pt-BR')+'. Novas alterações locais exigem outro salvamento.','ok');try{
