@@ -142,12 +142,12 @@ scan.addEventListener('submit',e=>{
 $('closedBagToggle').onclick=()=>{
  if(!active){
   if(localStorage.getItem('plantita_pdv_sacos_abertura_pendente_v1')){
-   active=true;controls();report('Finalize primeiro a abertura de saco pendente.',true);return;
+   alert('Finalize primeiro a abertura de saco pendente antes de registrar venda de saco fechado.');return;
   }
   if($('bagModePanel')&&$('bagModePanel').style.display==='block')$('bagModeToggle').click();
  }
  active=!active;controls();
- if(active){if(pending)showPending();else check();if(window.matchMedia('(min-width:750px)').matches)barcode.focus()}
+ if(active){if(pending)showPending();check().then(()=>{if(pending)showPending()});if(window.matchMedia('(min-width:750px)').matches)barcode.focus()}
 };
 if($('bagModeToggle'))$('bagModeToggle').addEventListener('click',()=>{if(active){active=false;controls()}},true);
 $('closedBagCheck').onclick=check;
@@ -186,5 +186,5 @@ $('closedBagForm').onsubmit=async e=>{
  }catch(err){report('⚠ Venda sem confirmação: '+String(err?.message||err)+'. Não bipa nem cobre novamente; consulte o mesmo registro.',true)}
  finally{busy=false;controls()}
 };
-if(pending)showPending();else controls();
+if(pending){showPending();check().then(()=>showPending())}else controls();
 })();
