@@ -79,6 +79,23 @@ strong.product{display:block;font-size:13px}.muted{font-size:11px;color:#a4c2c5}
 <div><span id="base" class="small">Sem estoque oficial importado.</span></div></div>
 <p class="small">A coluna “Preço de venda” é importada para comparação. Ao digitar um preço novo na tabela, ele fica como proposta até a confirmação final na integração futura.</p>
 </section>
+<section class="panel" id="savePanel">
+<h2>💾 Salvar / continuar contagem</h2>
+<div class="notice">Salve o que já foi bipado sem zerar a contagem. O salvamento no Google é um <strong>rascunho em abas separadas</strong>: não altera DANFEs, preços oficiais, saldos nem registros do PDV.</div>
+<div class="row" style="margin-top:12px">
+<button id="saveCount" type="button">💾 SALVAR CONTAGEM</button>
+<button id="loadCount" type="button" class="alt">↧ Retomar do Google</button>
+<button id="configCount" type="button" class="alt">⚙ Configurar Google</button>
+</div>
+<div id="saveState" class="status" role="status" aria-live="polite">Os registros já bipados permanecem no navegador. Para gravar no Google, configure a integração.</div>
+<div id="countConfigPanel" style="display:none;margin-top:12px;border-top:1px solid #225258;padding-top:12px">
+<p class="small">Esta integração usa um Apps Script próprio para o estoque. O endereço e a chave ficam guardados <strong>somente neste navegador</strong>, nunca no GitHub. É preciso implantar o <a href="https://github.com/NOVAPLANTITA/dashboard-plantita/blob/main/integracoes/Plantita_Contagem_Estoque_Apps_Script.gs" target="_blank" rel="noopener">código do Apps Script de contagem</a> antes de conectar.</p>
+<div class="field"><label for="countSyncUrl">Endereço /exec do Apps Script da contagem</label><input type="url" id="countSyncUrl" autocomplete="off" placeholder="https://script.google.com/macros/s/.../exec"></div>
+<div class="field" style="margin-top:9px"><label for="countSyncKey">Chave de acesso da contagem (COUNT_SYNC_TOKEN)</label><input type="password" id="countSyncKey" autocomplete="off" placeholder="Chave configurada nas propriedades do Apps Script"></div>
+<div class="row" style="margin-top:9px"><button id="testCountGoogle" type="button">Salvar conexão e testar</button></div>
+</div>
+<p class="small">Se o Google ainda não estiver conectado, “Salvar contagem” confirma o rascunho local; para ter outra cópia, use também “Exportar conferência CSV”. <strong>“Nova contagem” continua sendo a ação de zerar.</strong></p>
+</section>
 <section class="panel">
 <h2>Itens bipados nesta contagem</h2>
 <div class="row" style="margin-bottom:12px"><div class="field"><label for="filter">Filtrar o que já foi contado</label><input id="filter" placeholder="Nome, marca ou código"></div><button id="export" type="button">↓ Exportar conferência CSV</button><button id="new" class="warn" type="button">Nova contagem</button></div>
@@ -90,7 +107,7 @@ strong.product{display:block;font-size:13px}.muted{font-size:11px;color:#a4c2c5}
 'use strict';
 const $=id=>document.getElementById(id);
 const STORAGE='plantita_contagem_estoque_teste_v1';
-let catalog=[], state={counts:{},links:{},base:{},customProducts:[],last:null,started:new Date().toISOString()}, pending='';
+let catalog=[], state={counts:{},links:{},base:{},customProducts:[],last:null,started:new Date().toISOString()}, pending='';const COUNT_URL_KEY='plantita_contagem_sync_endpoint_v1',COUNT_TOKEN_KEY='plantita_contagem_sync_access_v1';let savingCloud=false;
 function status(msg,klass){$('status').textContent=msg;$('status').className='status '+(klass||'')}
 function esc(x){return String(x==null?'':x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function normalize(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'')}
@@ -98,7 +115,7 @@ function brl(n){return n==null?'—':new Intl.NumberFormat('pt-BR',{style:'curre
 function parsePrice(s){let x=String(s||'').replace(/[^\d,.-]/g,'').trim();if(!x)return null;if(x.includes(','))x=x.replace(/\./g,'').replace(',','.');else if((x.match(/\./g)||[]).length>1)x=x.replace(/\./g,'');const v=Number(x);return Number.isFinite(v)&&v>=0&&v<10000000?Math.round(v*100)/100:null}
 function parseQty(s){if(String(s==null?'':s).trim()==='')return null;const v=Number(String(s).replace(/\./g,'').replace(',','.'));return Number.isSafeInteger(v)&&v>=0?v:null}
 function save(){try{localStorage.setItem(STORAGE,JSON.stringify(state));return true}catch(e){status('Armazenamento indisponível: exporte o CSV para não perder a contagem.','bad');return false}}
-function load(){try{const v=JSON.parse(localStorage.getItem(STORAGE)||'null');if(v&&v.counts&&v.links&&v.base)state=v;if(!Array.isArray(state.customProducts))state.customProducts=[]}catch(e){console.warn(e)}}
+function load(){try{const v=JSON.parse(localStorage.getItem(STORAGE)||'null');if(v&&v.counts&&v.links&&v.base)state=v;if(!Array.isArray(state.customProducts))state.customProducts=[];if(!state.prices)state.prices={};if(!state.sessionId)state.sessionId=countUid('inv_');if(!state.remoteLastSaveId)state.remoteLastSaveId=''}catch(e){console.warn(e);state.sessionId=countUid('inv_')}}
 function product(id){return catalog.find(x=>x.id===id)}
 function codesFor(id){return Object.entries(state.links).filter(kv=>kv[1]===id).map(kv=>kv[0])}
 function add(id,code){if(!product(id)){status('Produto não encontrado na base.','bad');return}const prev=Number(state.counts[id]||0);state.counts[id]=prev+1;state.last={id,prev,code};save();pending='';$('associate').style.display='none';$('scan').value='';status('✓ '+product(id).produto+' • '+product(id).peso+' — total desta ração: '+state.counts[id]+' saco(s).','ok');render();$('scan').focus()}
@@ -135,6 +152,152 @@ $('items').innerHTML=rows.length?rows.map(id=>{const p=product(id),qty=Number(st
 function csvParse(text){const s=String(text).replace(/^\uFEFF/,'');const first=s.split(/\r?\n/,1)[0];const d=[';',',','\t'].sort((a,b)=>first.split(b).length-first.split(a).length)[0];const a=[],row=[];let field='',quoted=false;for(let i=0;i<s.length;i++){const c=s[i];if(c==='"'){if(quoted&&s[i+1]==='"'){field+='"';i++}else quoted=!quoted}else if(!quoted&&c===d){row.push(field);field=''}else if(!quoted&&(c==='\n'||c==='\r')){if(c==='\r'&&s[i+1]==='\n')i++;row.push(field);if(row.some(x=>x!==''))a.push(row.slice());row.length=0;field=''}else field+=c}row.push(field);if(row.some(x=>x!==''))a.push(row);return a}
 async function importCSV(file){if(!file)return;const rows=csvParse(await file.text());if(rows.length<2){status('Arquivo vazio ou inválido.','bad');return}const head=rows[0].map(normalize),ix=name=>head.indexOf(normalize(name));const ci=ix('Produto / Descrição'),mi=ix('Marca / Grupo'),wi=ix('Peso'),qi=ix('Quantidade'),pi=ix('Preço de venda');if(ci<0||qi<0){status('Importe o CSV da aba Estoque Consolidado com as colunas Produto / Descrição e Quantidade.','bad');return}
 const map=new Map();catalog.forEach(p=>map.set(normalize(p.marca)+'|'+normalize(p.produto)+'|'+normalize(p.peso),p.id));let matched=0;const base={};rows.slice(1).forEach(row=>{const id=map.get(normalize(row[mi]||'')+'|'+normalize(row[ci]||'')+'|'+normalize(row[wi]||''));if(!id)return;const q=parseQty(row[qi]);const price=pi<0?null:parsePrice(row[pi]);base[id]={qty:q,price};matched++});if(matched===0){status('Nenhum item da planilha correspondeu ao catálogo. Confira a aba exportada.','bad');return}state.base=base;state.baseAt=new Date().toISOString();save();$('base').textContent=matched+' rações importadas em '+new Date().toLocaleString('pt-BR');status('Estoque e preços importados apenas neste navegador: '+matched+' rações.','ok');render()}
+
+function countUid(prefix){
+let id='';try{if(crypto&&typeof crypto.randomUUID==='function')id=crypto.randomUUID().replace(/-/g,'')}catch(_){}
+if(!id)id=Date.now().toString(36)+Math.random().toString(36).slice(2)+Math.random().toString(36).slice(2);
+return prefix+id
+}
+function countConfig(){return {url:(localStorage.getItem(COUNT_URL_KEY)||'').trim(),key:(localStorage.getItem(COUNT_TOKEN_KEY)||'').trim()}}
+function countValidUrl(url){
+try{const x=new URL(url);return x.protocol==='https:'&&(
+(x.hostname==='script.google.com'&&/^\/macros\/s\/[^/]+\/exec\/?$/.test(x.pathname))||
+(x.hostname==='script.googleusercontent.com'&&x.pathname.length>1))}
+catch(_){return false}
+}
+function countMessage(msg,klass){$('saveState').textContent=msg;$('saveState').className='status '+(klass||'')}
+function countJsonp(action,params={}){
+const conf=countConfig();if(!countValidUrl(conf.url)||conf.key.length<24)throw Error('Conexão com o Google não configurada. Abra “Configurar Google”.');
+return new Promise((resolve,reject)=>{
+const cb='_plCount_'+Date.now()+'_'+Math.random().toString(36).slice(2);
+const node=document.createElement('script');let done=false;
+const timer=setTimeout(()=>finish(Error('O Google não respondeu em 18 segundos.')),18000);
+function finish(error,data){if(done)return;done=true;clearTimeout(timer);node.remove();delete window[cb];if(error)reject(error);else resolve(data)}
+window[cb]=data=>finish(null,data);
+node.onerror=()=>finish(Error('Não foi possível conectar ao Apps Script.'));
+const url=new URL(conf.url);url.searchParams.set('action',action);url.searchParams.set('key',conf.key);url.searchParams.set('callback',cb);
+for(const [key,value] of Object.entries(params))url.searchParams.set(key,String(value));
+url.searchParams.set('_',String(Date.now()));node.src=url.toString();document.head.appendChild(node)
+}).then(data=>{if(!data||data.ok!==true)throw Error(data?.error||'Resposta inválida do Google.');return data})
+}
+function countFingerprint(){return JSON.stringify({counts:state.counts,prices:state.prices||{},links:state.links,customProducts:state.customProducts||[]})}
+function countBuild(){
+const ids=new Set([...Object.keys(state.counts||{}),...Object.keys(state.prices||{}),...Object.values(state.links||{}),...(state.customProducts||[]).map(p=>p.id)]);
+const result=[];
+for(const id of ids){
+const p=product(id);if(!p)throw Error('Produto '+id+' não localizado: não é seguro salvar uma contagem incompleta.');
+const codes=codesFor(id),old=state.base[id]||{};
+const qty=state.counts[id]==null?null:Number(state.counts[id]);
+const price=(state.prices||{})[id]==null?null:Math.round(Number(state.prices[id])*100);
+const oldPrice=old.price==null?null:Math.round(Number(old.price)*100);
+result.push({id:p.id,marca:p.marca,produto:p.produto,peso:p.peso,
+row:p.row??'',codes,qty,priceCentavos:price,oldPriceCentavos:oldPrice,
+oldQty:old.qty??null,origem:p.origem||'',cadastro:p.cadastro||''})
+}
+return result
+}
+function countSetBusy(busy){
+savingCloud=busy;$('saveCount').disabled=busy;$('loadCount').disabled=busy;$('new').disabled=busy;
+$('testCountGoogle').disabled=busy
+}
+async function countGetReceipt(saveId){
+const status=await countJsonp('save_status',{saveId});
+return status.found?status.receipt:null
+}
+async function countSendPending(){
+const pendingSave=state.pendingSave;
+if(!pendingSave)throw Error('Não existe salvamento pendente');
+const existing=await countGetReceipt(pendingSave.saveId);
+if(existing)return existing;
+const cfg=countConfig();
+await fetch(cfg.url,{method:'POST',mode:'no-cors',cache:'no-store',
+headers:{'Content-Type':'text/plain;charset=UTF-8'},
+body:JSON.stringify({...pendingSave.body,key:cfg.key})});
+for(let attempt=0;attempt<7;attempt++){
+await new Promise(resolve=>setTimeout(resolve,attempt===0?1100:1800));
+const result=await countGetReceipt(pendingSave.saveId);
+if(result)return result
+}
+throw Error('O Google ainda não confirmou o salvamento. Não inicie outra contagem: tente “Salvar contagem” novamente para conferir o mesmo registro.')
+}
+async function countSave(){
+if(savingCloud)return;
+save();
+const cfg=countConfig();
+if(!countValidUrl(cfg.url)||cfg.key.length<24){
+state.manualSavedAt=new Date().toISOString();save();
+countMessage('✓ Contagem preservada neste navegador, sem zerar. Ainda NÃO foi salva no Google. Configure a conexão ou exporte o CSV para ter uma cópia.','bad');
+return
+}
+countSetBusy(true);countMessage('Conferindo o salvamento com o Google...');
+try{
+await countJsonp('health');
+if(!state.pendingSave){
+const items=countBuild();
+if(!items.length)throw Error('Ainda não há sacos, preços ou vínculos para salvar.');
+const saveId=countUid('save_');
+state.pendingSave={saveId,fingerprint:countFingerprint(),
+body:{action:'save_count',saveId,sessionId:state.sessionId||countUid('inv_'),
+expectedSaveId:state.remoteLastSaveId||'',startedAt:state.started||new Date().toISOString(),items}};
+state.sessionId=state.pendingSave.body.sessionId;save()
+}
+const wanted=state.pendingSave.saveId;
+const receipt=await countSendPending();
+if(receipt.saveId!==wanted)throw Error('Resposta do Google não corresponde ao salvamento enviado');
+const frozen=state.pendingSave.fingerprint;
+state.remoteLastSaveId=wanted;state.lastGoogleAt=receipt.savedAt;
+state.pendingSave=null;save();
+const changed=frozen!==countFingerprint();
+countMessage('✓ Confirmado no Google: '+receipt.bags+' saco(s), '+receipt.skus+' tipo(s), '+receipt.changedPrices+' preço(s) proposto(s). '+(changed?'Houve novas alterações locais durante o envio. Clique em Salvar contagem novamente.':'Você pode continuar bipando e salvar novamente depois.'),'ok');
+}catch(err){
+countMessage('⚠ Não há confirmação de salvamento no Google: '+String(err.message||err)+' O rascunho continua neste navegador.','bad')
+}finally{countSetBusy(false)}
+}
+async function countLoadLatest(){
+if(savingCloud)return;
+const cfg=countConfig();
+if(!countValidUrl(cfg.url)||cfg.key.length<24){countMessage('Configure a conexão com o Google antes de tentar retomar.','bad');$('countConfigPanel').style.display='block';return}
+countSetBusy(true);countMessage('Consultando a última contagem salva no Google...');
+try{
+const response=await countJsonp('latest');
+if(!response.found||!response.snapshot){countMessage('Ainda não existe nenhuma contagem salva no Google.','bad');return}
+const snapshot=response.snapshot,receipt=snapshot.receipt;
+if(!receipt||!Array.isArray(snapshot.items))throw Error('Registro incompleto no Google');
+if(receipt.saveId===state.remoteLastSaveId&&!state.pendingSave){
+countMessage('Esta contagem já é a última salva no Google. As alterações feitas neste navegador permanecem aqui.','ok');return
+}
+const anyLocal=countBuild().length>0;
+if(anyLocal){
+const proceed=confirm('Retomar a última contagem do Google ('+receipt.bags+' sacos)? Isso substitui o rascunho deste navegador. A contagem local será exportada para CSV antes. Deseja continuar?');
+if(!proceed){countMessage('Retomada cancelada: nenhum dado local foi alterado.');return}
+download()
+}
+const counts={},prices={},links={},customProducts=[];
+for(const item of snapshot.items){
+if(item.qty!==null&&item.qty>0)counts[item.id]=item.qty;
+if(item.priceCentavos!==null)prices[item.id]=item.priceCentavos/100;
+if(item.cadastro==='local')customProducts.push({id:item.id,row:item.row,marca:item.marca,produto:item.produto,peso:item.peso,cadastro:'local'});
+for(const code of item.codes||[])links[code]=item.id
+}
+state.counts=counts;state.prices=prices;state.links=links;state.customProducts=customProducts;state.started=receipt.startedAt||new Date().toISOString();
+state.last=null;state.sessionId=receipt.sessionId;state.remoteLastSaveId=receipt.saveId;state.lastGoogleAt=receipt.savedAt;state.pendingSave=null;
+catalog=catalog.filter(p=>p.cadastro!=='local').concat(customProducts);save();render();
+countMessage('✓ Contagem retomada do Google: '+receipt.bags+' sacos e '+receipt.skus+' rações. Continue de onde parou.','ok');
+}catch(err){countMessage('Não foi possível retomar: '+String(err.message||err)+'. O rascunho atual foi preservado.','bad')}
+finally{countSetBusy(false)}
+}
+async function countTestGoogle(){
+const url=$('countSyncUrl').value.trim(),key=$('countSyncKey').value.trim();
+if(!countValidUrl(url)||key.length<24){countMessage('Endereço /exec inválido ou chave com menos de 24 caracteres.','bad');return}
+localStorage.setItem(COUNT_URL_KEY,url);localStorage.setItem(COUNT_TOKEN_KEY,key);
+countMessage('Testando a conexão do Apps Script de contagem...');
+try{const res=await countJsonp('health');
+if(res.schema!==1||res.safeDraftOnly!==true)throw Error('Versão do Apps Script incompatível');
+countMessage('✓ Conexão de contagem funcionando. Os próximos cliques em “Salvar contagem” poderão gravar o rascunho no Google, com confirmação.','ok');
+$('countConfigPanel').style.display='none'
+}catch(err){countMessage('Conexão ainda não pronta: '+String(err.message||err)+'. Confira a implantação do Apps Script.','bad')}
+}
+
 function download(){const ids=new Set([...Object.keys(state.counts),...Object.keys(state.prices||{})]);if(!ids.size){status('Nenhuma contagem ou alteração de preço para exportar.','bad');return}const headers=['Data contagem','ID linha planilha','Marca','Produto','Peso','Códigos de barras vinculados','Qtd planilha importada','Qtd física contada','Diferença','Preço de venda atual','Novo preço proposto','Observação'];const lines=[headers];for(const id of ids){const p=product(id);if(!p)continue;const o=state.base[id]||{},n=state.counts[id]==null?'':state.counts[id],d=o.qty==null||n===''?'':n-o.qty,v=(state.prices||{})[id];lines.push([new Date().toLocaleDateString('pt-BR'),p.row,p.marca,p.produto,p.peso,codesFor(id).join(' / '),o.qty==null?'':o.qty,n,d,o.price==null?'':o.price.toFixed(2).replace('.',','),v==null?'':v.toFixed(2).replace('.',','),(p.cadastro==='local'?'NOVO PRODUTO: cadastrar na planilha antes de integrar. ':p.origem?'REFERÊNCIA DE COMPRA: confirmar unidade, peso, EAN e saldo antes de integrar. ':'')+'Rascunho local; NÃO importado no Google'])}
 const csv='\uFEFF'+lines.map(row=>row.map(x=>'"'+String(x==null?'':x).replace(/"/g,'""')+'"').join(';')).join('\r\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Plantita_Conferencia_Estoque_'+new Date().toISOString().slice(0,10)+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status('Relatório CSV exportado. Nenhum registro foi enviado ao Google.','ok')}
 $('scan').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();scan()}});$('scanButton').onclick=scan;
@@ -142,8 +305,14 @@ $('undo').onclick=undo;$('lookup').addEventListener('input',choices);$('register
 $('searchResults').onclick=e=>{const button=e.target.closest('button[data-bind]');if(!button||!pending)return;const id=button.dataset.bind;if(Object.entries(state.links).some(([code,pid])=>code===pending&&pid!==id)){status('Código já vinculado a outro produto. Não foi alterado.','bad');return}state.links[pending]=id;add(id,pending)};
 $('filter').addEventListener('input',render);$('items').addEventListener('change',e=>{if(e.target.matches('input[data-price]'))setNewPrice(e.target.dataset.price,e.target.value)});$('items').addEventListener('click',e=>{const b=e.target.closest('button[data-minus]');if(!b)return;const id=b.dataset.minus;if(state.counts[id]>1)state.counts[id]--;else delete state.counts[id];state.last=null;save();render();status('Uma unidade removida da contagem.','ok')});
 $('csv').onchange=e=>{importCSV(e.target.files[0]).catch(err=>status('Falha ao ler CSV: '+err.message,'bad'))};$('export').onclick=download;
-$('new').onclick=()=>{if(!confirm('Iniciar nova contagem? O rascunho de quantidades e preços será apagado neste navegador. Exporte o CSV antes, se necessário.'))return;state.counts={};state.prices={};state.last=null;state.started=new Date().toISOString();save();render();status('Nova contagem iniciada. Os vínculos de códigos e a última referência de estoque foram preservados.','ok');$('scan').focus()};
-(async function init(){load();try{
+$('saveCount').onclick=countSave;$('loadCount').onclick=countLoadLatest;
+$('configCount').onclick=()=>{$('countConfigPanel').style.display=$('countConfigPanel').style.display==='none'?'block':'none';$('countSyncUrl').value=countConfig().url;$('countSyncKey').value=countConfig().key};
+$('testCountGoogle').onclick=countTestGoogle;
+$('new').onclick=()=>{if(savingCloud)return;const unsaved=state.pendingSave||state.remoteLastSaveId&&state.lastGoogleAt&&countFingerprint()!==state.lastGoogleFingerprint;
+if(!confirm('ATENÇÃO: Nova contagem ZERA as quantidades e os preços propostos deste navegador. Um CSV será exportado antes de limpar. Isso NÃO finaliza o inventário nem atualiza o Google. Iniciar outra contagem?'))return;
+if(Object.keys(state.counts).length||Object.keys(state.prices||{}).length)download();
+state.counts={};state.prices={};state.last=null;state.pendingSave=null;state.sessionId=countUid('inv_');state.started=new Date().toISOString();save();render();status('Nova contagem iniciada. Os vínculos dos códigos e a referência importada permanecem.','ok');$('scan').focus()};
+(async function init(){load();if(!state.sessionId){state.sessionId=countUid('inv_');save()}if(state.lastGoogleAt)countMessage('Último salvamento registrado no Google: '+new Date(state.lastGoogleAt).toLocaleString('pt-BR')+'. Novas alterações locais exigem outro salvamento.','ok');try{
 const [principal,referencias]=await Promise.all([
 fetch('data/contagem-estoque-catalogo.json?v=20261104',{cache:'no-store'}),
 fetch('data/contagem-referencias-compras.json?v=20261104-referencias2',{cache:'no-store'})
