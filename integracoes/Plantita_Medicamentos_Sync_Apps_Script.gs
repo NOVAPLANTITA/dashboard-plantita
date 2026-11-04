@@ -19,13 +19,26 @@ function doGet(e) {
     if(p.action==='health') {
       folhaMed_(); folhaVendasMed_();
       return saidaMed_({ok:true,action:'health',schema:3,
-        saleWriteEnabled:true,maxSaleLines:MED_MAX_SALE_LINES,inventoryIntegrated:false,dashboardIntegrated:false},callback);
+        saleWriteEnabled:true,maxSaleLines:MED_MAX_SALE_LINES,bagWriteEnabled:true,inventoryIntegrated:false,dashboardIntegrated:false},callback);
     }
     if(p.action==='sale_status'){
       const saleId=String(p.saleId||'');
       const found=localizarVendaMed_(folhaVendasMed_(),saleId);
       return saidaMed_({ok:true,action:'sale_status',
         found:!!found,receipt:found?reciboVendaMed_(found):null},callback);
+    }
+    if(p.action==='bag_product'){
+      const code=String(p.code||'').trim();
+      validarCodigoSacoMed_(code);
+      const match=buscarProdutoSacoMed_(code);
+      return saidaMed_({ok:true,action:'bag_product',found:!!match,product:match},callback);
+    }
+    if(p.action==='bag_status'){
+      const id=String(p.bagId||'').trim();
+      validarIdSacoMed_(id);
+      const found=localizarSacoMed_(folhaSacosMed_(),id);
+      return saidaMed_({ok:true,action:'bag_status',found:!!found,
+        receipt:found?reciboSacoMed_(found):null},callback);
     }
     if (p.action !== 'links') throw new Error('Ação desconhecida.');
     const sh = folhaMed_();
@@ -57,6 +70,7 @@ function doPost(e) {
     autenticarMed_(body.key);
     const action=String(body.action||'');
     if(action==='register_sale')return registrarVendaMed_(body);
+    if(action==='open_bag')return registrarAberturaSacoMed_(body);
     if (action!=='upsert' && action!=='set_price') throw new Error('Ação desconhecida.');
     const ean=String(body.ean||'').trim();
     const produto=limparMed_(body.produto,220);
@@ -261,4 +275,117 @@ function registrarVendaMed_(body){
  const saved=localizarVendaMed_(sh,id);
  if(!saved)throw new Error('Falha ao confirmar o registro no Google.');
  return jsonMed_({ok:true,status:'registered',receipt:reciboVendaMed_(saved)});
+}
+
+/* ==========================================================
+ * ABERTURA DE SACOS — registro separado das vendas do PDV.
+ * Reaproveita a chave da ponte de medicamentos, SEM lançar
+ * vendas, SEM débito físico e SEM alterar a tela da balança.
+ * 1 saco por operação; confirma pelo ID único no Google.
+ * ========================================================== */
+const MED_BAGS_TAB='Sacos_Abertos';
+const MED_BAG_PRODUCTS_TAB='Produtos_Granel';
+
+function folhaSacosMed_(){
+  const sh=SpreadsheetApp.openById(MED_SHEET_ID).getSheetByName(MED_BAGS_TAB);
+  if(!sh)throw new Error('Aba Sacos_Abertos não encontrada.');
+  return sh;
+}
+function folhaProdutosSacoMed_(){
+  const sh=SpreadsheetApp.openById(MED_SHEET_ID).getSheetByName(MED_BAG_PRODUCTS_TAB);
+  if(!sh)throw new Error('Aba Produtos_Granel não encontrada.');
+  return sh;
+}
+function validarCodigoSacoMed_(code){
+  if(!validarEanMed_(code)||/^2\d{12}$/.test(code))
+    throw new Error('Bipe o EAN da EMBALAGEM, não a etiqueta de preço da balança.');
+}
+function validarIdSacoMed_(id){
+  if(!/^SACO_[A-Za-z0-9_-]{12,85}$/.test(id))
+    throw new Error('ID de abertura inválido.');
+}
+function pesoSacoMed_(raw){
+  if(raw===undefined||raw===null||raw==='')return null;
+  const value=typeof raw==='number'?raw:Number(String(raw).replace(/\s*kg\s*$/i,'').replace(/\./g,'').replace(',','.').trim());
+  if(!Number.isFinite(value)||value<=0||value>60)return null;
+  return Math.round(value*1000)/1000;
+}
+function marcaSacoMed_(raw){
+  const s=String(raw||'').trim();
+  return /^\d{8,14}$/.test(s)?'':s;
+}
+function buscarProdutoSacoMed_(code){
+  const sh=folhaProdutosSacoMed_();
+  const last=sh.getLastRow();
+  if(last<2)return null;
+  const display=sh.getRange(2,1,last-1,5).getDisplayValues();
+  const matches=[];
+  display.forEach((r,i)=>{
+    if(String(r[0]||'').trim()===code)matches.push({row:i+2,
+      code:code,produto:String(r[1]||'').trim(),pesoKg:pesoSacoMed_(r[2]),
+      marca:marcaSacoMed_(r[4])});
+  });
+  if(matches.length>1)throw new Error('EAN duplicado em Produtos_Granel: corrija o cadastro antes de registrar abertura.');
+  return matches.length?matches[0]:null;
+}
+function localizarSacoMed_(sh,id){
+  const last=sh.getLastRow();
+  if(last<2)return null;
+  const ids=sh.getRange(2,1,last-1,1).getDisplayValues();
+  const index=ids.findIndex(r=>String(r[0]||'')===id);
+  return index<0?null:sh.getRange(index+2,1,1,9).getDisplayValues()[0];
+}
+function reciboSacoMed_(row){
+  return {bagId:String(row[0]),date:String(row[1]),time:String(row[2]),
+    code:String(row[4]),produto:String(row[5]),pesoKg:pesoSacoMed_(row[6]),
+    origem:String(row[7]),marca:String(row[8])};
+}
+function registrarAberturaSacoMed_(body){
+  const id=String(body.bagId||'').trim(),code=String(body.code||'').trim();
+  validarIdSacoMed_(id);
+  const sh=folhaSacosMed_();
+  const old=localizarSacoMed_(sh,id);
+  if(old)return jsonMed_({ok:true,status:'already_registered',receipt:reciboSacoMed_(old)});
+  validarCodigoSacoMed_(code);
+  const produto=limparMed_(body.produto,220);
+  const marca=limparMed_(body.marca,90);
+  const kg=pesoSacoMed_(body.pesoKg);
+  if(!produto||!marca||kg===null)throw new Error('Informe e confirme produto, marca e peso do saco (até 60 kg).');
+  const matched=buscarProdutoSacoMed_(code);
+  if(matched&&matched.produto&&normMed_(matched.produto)!==normMed_(produto))
+    throw new Error('EAN pertence a outro produto no cadastro. Confira antes de abrir.');
+  if(matched&&matched.marca&&normMed_(matched.marca)!==normMed_(marca))
+    throw new Error('Marca difere do cadastro deste EAN. Confira a embalagem.');
+  const now=new Date();
+  const date=Utilities.formatDate(now,'America/Sao_Paulo','dd/MM/yyyy');
+  const time=Utilities.formatDate(now,'America/Sao_Paulo','HH:mm:ss');
+  const stamp=now.toISOString();
+  // Somente os campos ausentes/corrompidos do produto são preenchidos
+  // ou o peso corrigido após confirmação explícita do operador.
+  const prodSheet=folhaProdutosSacoMed_();
+  const updated=Utilities.formatDate(now,'America/Sao_Paulo','dd/MM/yyyy HH:mm:ss');
+  if(matched){
+    const actualName=matched.produto||produto;
+    if(matched.pesoKg!==kg||!matched.marca||!matched.produto){
+      prodSheet.getRange(matched.row,2,1,4).setValues([[actualName,kg,updated,marca]]);
+      prodSheet.getRange(matched.row,3).setNumberFormat('0.000 "kg"');
+    }
+  }else{
+    if(prodSheet.getLastRow()>=prodSheet.getMaxRows())prodSheet.insertRowsAfter(prodSheet.getMaxRows(),200);
+    const next=prodSheet.getLastRow()+1;
+    prodSheet.getRange(next,1).setNumberFormat('@');
+    prodSheet.getRange(next,1,1,5).setValues([[code,produto,kg,updated,marca]]);
+    prodSheet.getRange(next,3).setNumberFormat('0.000 "kg"');
+  }
+  if(sh.getLastRow()>=sh.getMaxRows())sh.insertRowsAfter(sh.getMaxRows(),200);
+  const next=sh.getLastRow()+1;
+  sh.getRange(next,1).setNumberFormat('@');
+  sh.getRange(next,5).setNumberFormat('@');
+  sh.getRange(next,1,1,9).setValues([[
+    id,date,time,stamp,code,matched&&matched.produto?matched.produto:produto,kg,'PDV-SACOS',marca
+  ]]);
+  sh.getRange(next,7).setNumberFormat('0.000 "kg"');
+  const saved=localizarSacoMed_(sh,id);
+  if(!saved)throw new Error('Abertura não confirmada na planilha.');
+  return jsonMed_({ok:true,status:'registered',receipt:reciboSacoMed_(saved)});
 }
