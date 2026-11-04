@@ -37,10 +37,10 @@ strong.product{display:block;font-size:13px}.muted{font-size:11px;color:#a4c2c5}
 </style>
 </head>
 <body>
-<header><div><h1>📦 Contagem de Estoque • Plantita</h1><span class="tag">VERSÃO DE TESTE — SEM GRAVAÇÃO NO GOOGLE</span></div><a href="dashboard-v13.html">← Dashboard</a></header>
+<header><div><h1>📦 Contagem de Estoque • Plantita</h1><span class="tag">RASCUNHO DE INVENTÁRIO — ESTOQUE OFICIAL PRESERVADO</span></div><a href="dashboard-v13.html">← Dashboard</a></header>
 <main class="wrap">
 <section class="panel notice">
-<strong>Somente sacos fechados.</strong> Bipe os sacos da loja e do depósito; os abertos para granel ficam fora desta contagem. A página salva o rascunho neste navegador. <strong>Não altera o estoque nem os preços no Google.</strong> Para comparar com as quantidades atuais, importe um CSV exportado da aba <strong>Estoque Consolidado</strong> da planilha de estoque. Os preços e saldos importados ficam só neste navegador.
+<strong>Somente sacos fechados.</strong> Bipe os sacos da loja e do depósito; os abertos para granel ficam fora desta contagem. A página salva automaticamente o rascunho neste navegador e, após configurar o Google, permite gravar uma cópia em abas próprias. <strong>Nenhum salvamento desta tela altera saldos ou preços oficiais.</strong> Para comparar com as quantidades atuais, importe um CSV exportado da aba <strong>Estoque Consolidado</strong> da planilha de estoque. Os preços e saldos importados servem apenas como referência local.
 </section>
 <section class="kpis">
 <div class="kpi"><small>Sacos fechados contados</small><b id="bags">0</b></div>
@@ -64,7 +64,7 @@ strong.product{display:block;font-size:13px}.muted{font-size:11px;color:#a4c2c5}
 <div id="searchResults"></div>
 <details id="newProductForm" style="margin-top:13px;border-top:1px solid #786540;padding-top:12px">
 <summary style="cursor:pointer;color:#ffe4a9;font-weight:700">Minha ração não aparece: cadastrar produto novo</summary>
-<p class="small">Confira exatamente a marca, a variedade e o peso na embalagem. Este cadastro e o vínculo do código ficam apenas neste navegador durante o teste.</p>
+<p class="small">Confira exatamente a marca, a variedade e o peso na embalagem. Este cadastro e o vínculo do código ficam neste navegador e poderão compor o rascunho enviado ao Google.</p>
 <div class="row">
 <div class="field"><label for="novoMarca">Marca</label><input id="novoMarca" placeholder="Ex.: Fórmula Natural" autocomplete="off"></div>
 <div class="field"><label for="novoProduto">Nome completo / variedade</label><input id="novoProduto" placeholder="Ex.: Fórmula Natural Adultos..." autocomplete="off"></div>
@@ -297,7 +297,7 @@ $('countConfigPanel').style.display='none'
 }catch(err){countMessage('Conexão ainda não pronta: '+String(err.message||err)+'. Confira a implantação do Apps Script.','bad')}
 }
 
-function download(){const ids=new Set([...Object.keys(state.counts),...Object.keys(state.prices||{})]);if(!ids.size){status('Nenhuma contagem ou alteração de preço para exportar.','bad');return}const headers=['Data contagem','ID linha planilha','Marca','Produto','Peso','Códigos de barras vinculados','Qtd planilha importada','Qtd física contada','Diferença','Preço de venda atual','Novo preço proposto','Observação'];const lines=[headers];for(const id of ids){const p=product(id);if(!p)continue;const o=state.base[id]||{},n=state.counts[id]==null?'':state.counts[id],d=o.qty==null||n===''?'':n-o.qty,v=(state.prices||{})[id];lines.push([new Date().toLocaleDateString('pt-BR'),p.row,p.marca,p.produto,p.peso,codesFor(id).join(' / '),o.qty==null?'':o.qty,n,d,o.price==null?'':o.price.toFixed(2).replace('.',','),v==null?'':v.toFixed(2).replace('.',','),(p.cadastro==='local'?'NOVO PRODUTO: cadastrar na planilha antes de integrar. ':p.origem?'REFERÊNCIA DE COMPRA: confirmar unidade, peso, EAN e saldo antes de integrar. ':'')+'Rascunho local; NÃO importado no Google'])}
+function download(){const ids=new Set([...Object.keys(state.counts),...Object.keys(state.prices||{})]);if(!ids.size){status('Nenhuma contagem ou alteração de preço para exportar.','bad');return}const headers=['Data contagem','ID linha planilha','Marca','Produto','Peso','Códigos de barras vinculados','Qtd planilha importada','Qtd física contada','Diferença','Preço de venda atual','Novo preço proposto','Observação'];const lines=[headers];for(const id of ids){const p=product(id);if(!p)continue;const o=state.base[id]||{},n=state.counts[id]==null?'':state.counts[id],d=o.qty==null||n===''?'':n-o.qty,v=(state.prices||{})[id];lines.push([new Date().toLocaleDateString('pt-BR'),p.row,p.marca,p.produto,p.peso,codesFor(id).join(' / '),o.qty==null?'':o.qty,n,d,o.price==null?'':o.price.toFixed(2).replace('.',','),v==null?'':v.toFixed(2).replace('.',','),(p.cadastro==='local'?'NOVO PRODUTO: cadastrar na planilha antes de integrar. ':p.origem?'REFERÊNCIA DE COMPRA: confirmar unidade, peso, EAN e saldo antes de integrar. ':'')+'Exportação de conferência; consulte o recibo do painel para confirmar sincronização com o Google'])}
 const csv='\uFEFF'+lines.map(row=>row.map(x=>'"'+String(x==null?'':x).replace(/"/g,'""')+'"').join(';')).join('\r\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Plantita_Conferencia_Estoque_'+new Date().toISOString().slice(0,10)+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status('Relatório CSV exportado. Nenhum registro foi enviado ao Google.','ok')}
 $('scan').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();scan()}});$('scanButton').onclick=scan;
 $('undo').onclick=undo;$('lookup').addEventListener('input',choices);$('registerProduct').onclick=registerNew;$('cancelLink').onclick=()=>{pending='';$('associate').style.display='none';$('scan').focus()};
