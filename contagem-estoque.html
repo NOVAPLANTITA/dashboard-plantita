@@ -222,10 +222,11 @@ throw Error('O Google ainda não confirmou o salvamento. Não inicie outra conta
 }
 async function countSave(){
 if(savingCloud)return;
-save();
+if(!save()){countMessage('Não foi possível armazenar a contagem neste navegador. Exporte o CSV antes de continuar.','bad');return}
 const cfg=countConfig();
 if(!countValidUrl(cfg.url)||cfg.key.length<24){
-state.manualSavedAt=new Date().toISOString();save();
+state.manualSavedAt=new Date().toISOString();
+if(!save()){countMessage('Falha ao guardar o rascunho neste navegador. Exporte o CSV antes de sair.','bad');return}
 countMessage('✓ Contagem preservada neste navegador, sem zerar. Ainda NÃO foi salva no Google. Configure a conexão ou exporte o CSV para ter uma cópia.','bad');
 return
 }
