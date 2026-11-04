@@ -19,7 +19,7 @@ function doGet(e) {
     if(p.action==='health') {
       folhaMed_(); folhaVendasMed_();
       return saidaMed_({ok:true,action:'health',schema:3,
-        saleWriteEnabled:true,maxSaleLines:MED_MAX_SALE_LINES,bagWriteEnabled:true,inventoryIntegrated:false,dashboardIntegrated:false},callback);
+        saleWriteEnabled:true,maxSaleLines:MED_MAX_SALE_LINES,bagWriteEnabled:true,closedBagWriteEnabled:true,inventoryIntegrated:false,dashboardIntegrated:false},callback);
     }
     if(p.action==='sale_status'){
       const saleId=String(p.saleId||'');
@@ -32,6 +32,14 @@ function doGet(e) {
       validarCodigoSacoMed_(code);
       const match=buscarProdutoSacoMed_(code);
       return saidaMed_({ok:true,action:'bag_product',found:!!match,product:match},callback);
+    }
+    if(p.action==='closed_bag_status'){
+      const id=String(p.saleBagId||'').trim();
+      validarIdSacoVendidoMed_(id);
+      const sh=folhaSacosVendidosMed_(false);
+      const found=sh?localizarSacoVendidoMed_(sh,id):null;
+      return saidaMed_({ok:true,action:'closed_bag_status',found:!!found,
+        receipt:found?reciboSacoVendidoMed_(found):null},callback);
     }
     if(p.action==='bag_status'){
       const id=String(p.bagId||'').trim();
@@ -71,6 +79,7 @@ function doPost(e) {
     const action=String(body.action||'');
     if(action==='register_sale')return registrarVendaMed_(body);
     if(action==='open_bag')return registrarAberturaSacoMed_(body);
+    if(action==='sell_closed_bag')return registrarSacoVendidoMed_(body);
     if (action!=='upsert' && action!=='set_price') throw new Error('Ação desconhecida.');
     const ean=String(body.ean||'').trim();
     const produto=limparMed_(body.produto,220);
@@ -388,4 +397,73 @@ function registrarAberturaSacoMed_(body){
   const saved=localizarSacoMed_(sh,id);
   if(!saved)throw new Error('Abertura não confirmada na planilha.');
   return jsonMed_({ok:true,status:'registered',receipt:reciboSacoMed_(saved)});
+}
+
+
+/* ==========================================================
+ * VENDA DE SACOS FECHADOS — LIVRO SEPARADO DOS SACOS ABERTOS.
+ * 1 bipagem = 1 unidade; preços são valores de venda, não custo.
+ * Registra saída lógica para futura conciliação de DANFEs,
+ * SEM modificar estoque consolidado ou Controle Diário.
+ * ========================================================== */
+const MED_CLOSED_BAGS_TAB='Sacos_Vendidos';
+function folhaSacosVendidosMed_(create){
+ const ss=SpreadsheetApp.openById(MED_SHEET_ID);
+ let sh=ss.getSheetByName(MED_CLOSED_BAGS_TAB);
+ if(!sh&&create){
+   sh=ss.insertSheet(MED_CLOSED_BAGS_TAB);
+   sh.getRange(1,1,1,12).setValues([['ID Registro','Data','Hora','Timestamp ISO','Código de barras','Produto','Marca','Peso do saco (kg)','Preço de venda (R$)','Quantidade','Origem','Observação']]);
+   sh.setFrozenRows(1);
+ }
+ return sh;
+}
+function validarIdSacoVendidoMed_(id){
+ if(!/^SACOV_[A-Za-z0-9_-]{12,85}$/.test(id))throw new Error('ID de venda de saco inválido.');
+}
+function localizarSacoVendidoMed_(sh,id){
+ const last=sh.getLastRow();
+ if(last<2)return null;
+ const rows=sh.getRange(2,1,last-1,1).getDisplayValues();
+ const index=rows.findIndex(r=>String(r[0]||'')===id);
+ return index<0?null:sh.getRange(index+2,1,1,12).getValues()[0];
+}
+function reciboSacoVendidoMed_(row){
+ return {saleBagId:String(row[0]),date:String(row[1]),time:String(row[2]),
+  code:String(row[4]),produto:String(row[5]),marca:String(row[6]),
+  pesoKg:pesoSacoMed_(row[7]),precoCentavos:Math.round(Number(row[8])*100),
+  quantidade:Number(row[9]),origem:String(row[10])};
+}
+function registrarSacoVendidoMed_(body){
+ const id=String(body.saleBagId||'').trim(),code=String(body.code||'').trim();
+ validarIdSacoVendidoMed_(id);
+ validarCodigoSacoMed_(code);
+ const sh=folhaSacosVendidosMed_(true);
+ const prior=localizarSacoVendidoMed_(sh,id);
+ if(prior)return jsonMed_({ok:true,status:'already_registered',receipt:reciboSacoVendidoMed_(prior)});
+ const produto=limparMed_(body.produto,220),marca=limparMed_(body.marca,90);
+ const kg=pesoSacoMed_(body.pesoKg);
+ const centavos=Number(body.precoCentavos);
+ if(!produto||!marca||kg===null||!Number.isSafeInteger(centavos)||centavos<1||centavos>100000000)
+   throw new Error('Confirme produto, marca, peso e preço de venda válido.');
+ const matched=buscarProdutoSacoMed_(code);
+ if(matched&&matched.produto&&normMed_(matched.produto)!==normMed_(produto))
+   throw new Error('EAN corresponde a outro produto. Confira a embalagem.');
+ if(matched&&matched.marca&&normMed_(matched.marca)!==normMed_(marca))
+   throw new Error('Marca do EAN difere do cadastro central.');
+ if(matched&&matched.pesoKg!==null&&Math.abs(matched.pesoKg-kg)>0.001)
+   throw new Error('Peso difere do cadastro deste EAN.');
+ const now=new Date();
+ const date=Utilities.formatDate(now,'America/Sao_Paulo','dd/MM/yyyy');
+ const time=Utilities.formatDate(now,'America/Sao_Paulo','HH:mm:ss');
+ if(sh.getLastRow()>=sh.getMaxRows())sh.insertRowsAfter(sh.getMaxRows(),200);
+ const next=sh.getLastRow()+1;
+ sh.getRange(next,1).setNumberFormat('@');
+ sh.getRange(next,5).setNumberFormat('@');
+ sh.getRange(next,1,1,12).setValues([[id,date,time,now.toISOString(),code,produto,marca,kg,
+  centavos/100,1,'PDV-SACOS-FECHADOS','Saída de 1 saco fechado; conciliar DANFEs e estoque inicial']]);
+ sh.getRange(next,8).setNumberFormat('0.000 "kg"');
+ sh.getRange(next,9).setNumberFormat('"R$" #,##0.00');
+ const saved=localizarSacoVendidoMed_(sh,id);
+ if(!saved)throw new Error('Venda de saco não confirmada na planilha.');
+ return jsonMed_({ok:true,status:'registered',receipt:reciboSacoVendidoMed_(saved)});
 }
