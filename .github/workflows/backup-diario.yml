@@ -1,0 +1,33 @@
+name: Backup diário da dashboard Plantita
+on:
+  schedule:
+    - cron: '20 3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: plantita-backup
+  cancel-in-progress: false
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório completo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Criar tag de backup imutável do código e arquivos versionados
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "plantita-backup[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE="$(date -u +%Y-%m-%d)"
+          TAG="backup-plantita-${DATE}-${GITHUB_RUN_ID}"
+          git tag -a "$TAG" -m "Backup automático Plantita ${DATE} (UTC)"
+          git push origin "refs/tags/$TAG"
+          echo "Backup versionado criado: $TAG" >> "$GITHUB_STEP_SUMMARY"
+          echo "Inclui somente arquivos presentes neste repositório GitHub." >> "$GITHUB_STEP_SUMMARY"
