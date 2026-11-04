@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#031214">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>Plantita • Contagem de Estoque (Teste)</title>
+<script src="auth.js?v=20261020-entregas20a"></script>
+<script>PlantitaAuth.require('supervisor');</script>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#031214;color:#eafff6;font:14px Arial,sans-serif}
+header{background:#071c21;border-bottom:1px solid #22545a;position:sticky;top:0;z-index:2;padding:13px max(16px,calc((100vw - 1100px)/2));display:flex;justify-content:space-between;gap:12px;align-items:center}
+h1{font-size:21px;margin:0}h2{font-size:17px;margin:0 0 12px}a{color:#a7f2d0;text-decoration:none}.wrap{max-width:1100px;margin:auto;padding:18px}
+.tag{font-size:11px;padding:5px 9px;border:1px solid #8b7435;border-radius:40px;color:#ffe4a9;background:#352d17;display:inline-block;margin:6px 0}
+.panel{border:1px solid #225258;background:#0b242a;border-radius:15px;padding:17px;margin-bottom:14px}
+.notice{color:#c9d8d9;line-height:1.55}.notice strong{color:#fff}
+.row{display:flex;flex-wrap:wrap;align-items:end;gap:9px}.field{flex:1;min-width:220px}
+label{display:block;color:#a9c5c7;font-size:12px;margin:0 0 6px;font-weight:700}
+input,select,button{font:inherit;border-radius:9px;padding:12px;border:1px solid #32646b;background:#092126;color:#fff}
+input{width:100%}input:focus{outline:2px solid #29c990;outline-offset:1px}
+input[type=file]{width:auto;max-width:100%;font-size:12px}
+button{cursor:pointer;background:#0d463f;border-color:#358b70;font-weight:700}button:hover{filter:brightness(1.1)}
+button.alt{background:#153239;border-color:#32646b}button.warn{background:#533229;border-color:#ab6657}button:disabled{opacity:.55;cursor:not-allowed}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}.kpi{background:#0b2529;border:1px solid #205157;border-radius:13px;padding:13px}.kpi small{color:#a1bdc0;display:block;margin-bottom:7px}.kpi b{font-size:22px}
+.small{font-size:12px;color:#a9c8c4}.status{padding:10px 12px;margin-top:11px;border-radius:9px;border:1px solid #2d575d;background:#0a2024;line-height:1.45}
+.status.ok{border-color:#28825d}.status.bad{border-color:#a15d49;color:#ffd7cf}
+.tablescroll{overflow:auto;border-radius:10px;border:1px solid #29545b}table{width:100%;border-collapse:collapse;min-width:840px}
+th{text-align:left;font-size:12px;color:#bad2d3;background:#0a3337;padding:11px}
+td{padding:10px;border-top:1px solid #19444a;font-size:12px;vertical-align:middle}td input{width:124px;padding:8px}
+.num{text-align:right;font-variant-numeric:tabular-nums}.diffNeg{color:#ffaaa3}.diffPos{color:#90efc7}
+#associate{display:none;border-color:#d09d53;background:#27271f}
+#searchResults{max-height:250px;overflow:auto;margin-top:9px}
+.choice{width:100%;display:block;text-align:left;background:#122e33;margin:4px 0}
+strong.product{display:block;font-size:13px}.muted{font-size:11px;color:#a4c2c5}
+@media(max-width:800px){.kpis{grid-template-columns:repeat(2,1fr)}h1{font-size:17px}header{padding:12px}td{padding:8px}}
+</style>
+</head>
+<body>
+<header><div><h1>📦 Contagem de Estoque • Plantita</h1><span class="tag">VERSÃO DE TESTE — SEM GRAVAÇÃO NO GOOGLE</span></div><a href="dashboard-v13.html">← Dashboard</a></header>
+<main class="wrap">
+<section class="panel notice">
+<strong>Somente sacos fechados.</strong> Bipe os sacos da loja e do depósito; os abertos para granel ficam fora desta contagem. A página salva o rascunho neste navegador. <strong>Não altera o estoque nem os preços no Google.</strong> Para comparar com as quantidades atuais, importe um CSV exportado da aba <strong>Estoque Consolidado</strong> da planilha de estoque. Os preços e saldos importados ficam só neste navegador.
+</section>
+<section class="kpis">
+<div class="kpi"><small>Sacos fechados contados</small><b id="bags">0</b></div>
+<div class="kpi"><small>Tipos de ração contados</small><b id="skus">0</b></div>
+<div class="kpi"><small>Diferenças nos itens conferidos</small><b id="diffs">—</b></div>
+<div class="kpi"><small>Novos preços propostos</small><b id="prices">0</b></div>
+</section>
+<section class="panel">
+<h2>Leitor de código de barras</h2>
+<div class="row">
+<div class="field"><label for="scan">Bipe o saco e pressione Enter (a maioria dos leitores envia Enter automaticamente)</label><input id="scan" placeholder="Aguardando código de barras..." autocomplete="off" inputmode="numeric" autofocus></div>
+<button id="scanButton" type="button">Registrar bipagem</button>
+<button id="undo" class="alt" type="button">↶ Desfazer última</button>
+</div>
+<div id="status" class="status" role="status">Carregando o catálogo...</div>
+</section>
+<section id="associate" class="panel" aria-live="polite">
+<h2>Código ainda não vinculado</h2>
+<div class="notice">Código: <strong id="pending"></strong>. Procure o nome e a embalagem exata antes de associar. A associação ficará salva somente neste navegador.</div>
+<div class="row" style="margin-top:12px"><div class="field"><label for="lookup">Pesquisar produto na lista de rações</label><input id="lookup" placeholder="Digite a marca ou o nome da ração"></div><button id="cancelLink" type="button" class="alt">Cancelar</button></div>
+<div id="searchResults"></div>
+</section>
+<section class="panel">
+<h2>Estoque oficial para conferência e preços</h2>
+<div class="row"><div class="field"><label for="csv">Importar CSV da aba “Estoque Consolidado” (opcional para testar bipagens)</label><input type="file" id="csv" accept=".csv,text/csv"></div>
+<div><span id="base" class="small">Sem estoque oficial importado.</span></div></div>
+<p class="small">A coluna “Preço de venda” é importada para comparação. Ao digitar um preço novo na tabela, ele fica como proposta até a confirmação final na integração futura.</p>
+</section>
+<section class="panel">
+<h2>Itens bipados nesta contagem</h2>
+<div class="row" style="margin-bottom:12px"><div class="field"><label for="filter">Filtrar o que já foi contado</label><input id="filter" placeholder="Nome, marca ou código"></div><button id="export" type="button">↓ Exportar conferência CSV</button><button id="new" class="warn" type="button">Nova contagem</button></div>
+<div class="tablescroll"><table><thead><tr><th>Produto / marca</th><th>Peso</th><th>Código</th><th class="num">Planilha</th><th class="num">Contado</th><th class="num">Diferença</th><th>Preço atual</th><th>Novo preço (R$)</th><th>Ação</th></tr></thead><tbody id="items"><tr><td colspan="9">Nenhum saco bipado.</td></tr></tbody></table></div>
+<p class="small">A diferença só é mostrada nos produtos efetivamente conferidos. A contagem incompleta não zera produtos não bipados.</p>
+</section>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const STORAGE='plantita_contagem_estoque_teste_v1';
+let catalog=[], state={counts:{},links:{},base:{},last:null,started:new Date().toISOString()}, pending='';
+function status(msg,klass){$('status').textContent=msg;$('status').className='status '+(klass||'')}
+function esc(x){return String(x==null?'':x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function normalize(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'')}
+function brl(n){return n==null?'—':new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(n)}
+function parsePrice(s){let x=String(s||'').replace(/[^\d,.-]/g,'').trim();if(!x)return null;if(x.includes(','))x=x.replace(/\./g,'').replace(',','.');else if((x.match(/\./g)||[]).length>1)x=x.replace(/\./g,'');const v=Number(x);return Number.isFinite(v)&&v>=0&&v<10000000?Math.round(v*100)/100:null}
+function parseQty(s){const v=Number(String(s||'').replace(/\./g,'').replace(',','.'));return Number.isSafeInteger(v)&&v>=0?v:null}
+function save(){try{localStorage.setItem(STORAGE,JSON.stringify(state));return true}catch(e){status('Armazenamento indisponível: exporte o CSV para não perder a contagem.','bad');return false}}
+function load(){try{const v=JSON.parse(localStorage.getItem(STORAGE)||'null');if(v&&v.counts&&v.links&&v.base)state=v}catch(e){console.warn(e)}}
+function product(id){return catalog.find(x=>x.id===id)}
+function codesFor(id){return Object.entries(state.links).filter(kv=>kv[1]===id).map(kv=>kv[0])}
+function add(id,code){if(!product(id)){status('Produto não encontrado na base.','bad');return}const prev=Number(state.counts[id]||0);state.counts[id]=prev+1;state.last={id,prev,code};save();pending='';$('associate').style.display='none';$('scan').value='';status('✓ '+product(id).produto+' • '+product(id).peso+' — total desta ração: '+state.counts[id]+' saco(s).','ok');render();$('scan').focus()}
+function scan(){const code=$('scan').value.replace(/\s/g,'');if(!/^[0-9]{6,18}$/.test(code)){status('Código inválido. Confira a leitura (somente números, 6 a 18 dígitos).','bad');$('scan').focus();return}const id=state.links[code];if(id&&product(id)){add(id,code);return}pending=code;$('pending').textContent=code;$('associate').style.display='block';$('lookup').value='';choices();status('Código '+code+' não cadastrado. Selecione o produto exato, conferindo também o peso.','bad');$('lookup').focus()}
+function choices(){if(!pending)return;const q=normalize($('lookup').value);const a=catalog.filter(p=>normalize(p.marca+' '+p.produto+' '+p.peso).includes(q)).slice(0,40);
+$('searchResults').innerHTML=a.length?a.map(p=>'<button type="button" class="choice" data-bind="'+esc(p.id)+'"><strong class="product">'+esc(p.produto)+'</strong><span class="muted">'+esc(p.marca)+' • '+esc(p.peso)+'</span></button>').join(''):'Nenhum produto encontrado nesta lista. Não registre um produto diferente.'}
+function undo(){const last=state.last;if(!last){status('Não há bipagem recente para desfazer.');return}if(last.prev===0)delete state.counts[last.id];else state.counts[last.id]=last.prev;state.last=null;save();render();status('Última bipagem desfeita.','ok');$('scan').focus()}
+function setNewPrice(id,text){if(!product(id))return;const v=parsePrice(text);if(String(text).trim()!==''&&v===null){status('Preço inválido. Informe, por exemplo, 139,90.','bad');render();return}if(v===null)delete (state.prices||{})[id];else{if(!state.prices)state.prices={};state.prices[id]=v}save();render();status('Preço proposto salvo neste aparelho. O Google ainda não foi alterado.','ok')}
+function render(){
+const ids=Object.keys(state.counts).filter(id=>product(id)&&state.counts[id]>0);
+const all=new Set([...ids,...Object.keys(state.prices||{})]);let withDiff=0;for(const id of ids)if(state.base[id]&&state.base[id].qty!==null&&state.base[id].qty!==state.counts[id])withDiff++;
+$('bags').textContent=ids.reduce((sum,id)=>sum+state.counts[id],0).toLocaleString('pt-BR');
+$('skus').textContent=ids.length.toLocaleString('pt-BR');$('diffs').textContent=Object.keys(state.base).length?String(withDiff):'—';$('prices').textContent=Object.keys(state.prices||{}).length;
+const filter=normalize($('filter').value),rows=[...all].filter(id=>{const p=product(id);return p&&normalize(p.marca+' '+p.produto+' '+codesFor(id).join('')).includes(filter)}).sort((a,b)=>product(a).produto.localeCompare(product(b).produto,'pt-BR'));
+$('items').innerHTML=rows.length?rows.map(id=>{const p=product(id),qty=Number(state.counts[id]||0),old=state.base[id]||{},difference=old.qty==null?null:qty-old.qty,prices=state.prices||{};return '<tr><td><strong class="product">'+esc(p.produto)+'</strong><span class="muted">'+esc(p.marca)+'</span></td><td>'+esc(p.peso)+'</td><td>'+esc(codesFor(id).join(', ')||'Apenas preço')+'</td><td class="num">'+(old.qty==null?'—':old.qty)+'</td><td class="num"><strong>'+qty+'</strong></td><td class="num '+(difference===null?'':difference<0?'diffNeg':difference>0?'diffPos':'')+'">'+(difference===null?'—':difference>0?'+'+difference:difference)+'</td><td>'+brl(old.price)+'</td><td><input data-price="'+esc(id)+'" aria-label="Novo preço '+esc(p.produto)+'" placeholder="Sem alteração" value="'+(prices[id]==null?'':String(prices[id]).replace('.',','))+'"></td><td><button type="button" class="alt" data-minus="'+esc(id)+'">− 1</button></td></tr>'}).join(''):'<tr><td colspan="9">Nenhum item contado ou com preço proposto.</td></tr>';
+}
+function csvParse(text){const s=String(text).replace(/^\uFEFF/,'');const first=s.split(/\r?\n/,1)[0];const d=[';',',','\t'].sort((a,b)=>first.split(b).length-first.split(a).length)[0];const a=[],row=[];let field='',quoted=false;for(let i=0;i<s.length;i++){const c=s[i];if(c==='"'){if(quoted&&s[i+1]==='"'){field+='"';i++}else quoted=!quoted}else if(!quoted&&c===d){row.push(field);field=''}else if(!quoted&&(c==='\n'||c==='\r')){if(c==='\r'&&s[i+1]==='\n')i++;row.push(field);if(row.some(x=>x!==''))a.push(row.slice());row.length=0;field=''}else field+=c}row.push(field);if(row.some(x=>x!==''))a.push(row);return a}
+async function importCSV(file){if(!file)return;const rows=csvParse(await file.text());if(rows.length<2){status('Arquivo vazio ou inválido.','bad');return}const head=rows[0].map(normalize),ix=name=>head.indexOf(normalize(name));const ci=ix('Produto / Descrição'),mi=ix('Marca / Grupo'),wi=ix('Peso'),qi=ix('Quantidade'),pi=ix('Preço de venda');if(ci<0||qi<0){status('Importe o CSV da aba Estoque Consolidado com as colunas Produto / Descrição e Quantidade.','bad');return}
+const map=new Map();catalog.forEach(p=>map.set(normalize(p.marca)+'|'+normalize(p.produto)+'|'+normalize(p.peso),p.id));let matched=0;const base={};rows.slice(1).forEach(row=>{const id=map.get(normalize(row[mi]||'')+'|'+normalize(row[ci]||'')+'|'+normalize(row[wi]||''));if(!id)return;const q=parseQty(row[qi]);const price=pi<0?null:parsePrice(row[pi]);base[id]={qty:q,price};matched++});if(matched===0){status('Nenhum item da planilha correspondeu ao catálogo. Confira a aba exportada.','bad');return}state.base=base;state.baseAt=new Date().toISOString();save();$('base').textContent=matched+' rações importadas em '+new Date().toLocaleString('pt-BR');status('Estoque e preços importados apenas neste navegador: '+matched+' rações.','ok');render()}
+function download(){const ids=new Set([...Object.keys(state.counts),...Object.keys(state.prices||{})]);if(!ids.size){status('Nenhuma contagem ou alteração de preço para exportar.','bad');return}const headers=['Data contagem','ID linha planilha','Marca','Produto','Peso','Códigos de barras vinculados','Qtd planilha importada','Qtd física contada','Diferença','Preço de venda atual','Novo preço proposto','Observação'];const lines=[headers];for(const id of ids){const p=product(id);if(!p)continue;const o=state.base[id]||{},n=state.counts[id]==null?'':state.counts[id],d=o.qty==null||n===''?'':n-o.qty,v=(state.prices||{})[id];lines.push([new Date().toLocaleDateString('pt-BR'),p.row,p.marca,p.produto,p.peso,codesFor(id).join(' / '),o.qty==null?'':o.qty,n,d,o.price==null?'':o.price.toFixed(2).replace('.',','),v==null?'':v.toFixed(2).replace('.',','),'Rascunho local; NÃO importado no Google'])}
+const csv='\uFEFF'+lines.map(row=>row.map(x=>'"'+String(x==null?'':x).replace(/"/g,'""')+'"').join(';')).join('\r\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Plantita_Conferencia_Estoque_'+new Date().toISOString().slice(0,10)+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status('Relatório CSV exportado. Nenhum registro foi enviado ao Google.','ok')}
+$('scan').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();scan()}});$('scanButton').onclick=scan;
+$('undo').onclick=undo;$('lookup').addEventListener('input',choices);$('cancelLink').onclick=()=>{pending='';$('associate').style.display='none';$('scan').focus()};
+$('searchResults').onclick=e=>{const button=e.target.closest('button[data-bind]');if(!button||!pending)return;const id=button.dataset.bind;if(Object.entries(state.links).some(([code,pid])=>code===pending&&pid!==id)){status('Código já vinculado a outro produto. Não foi alterado.','bad');return}state.links[pending]=id;add(id,pending)};
+$('filter').addEventListener('input',render);$('items').addEventListener('change',e=>{if(e.target.matches('input[data-price]'))setNewPrice(e.target.dataset.price,e.target.value)});$('items').addEventListener('click',e=>{const b=e.target.closest('button[data-minus]');if(!b)return;const id=b.dataset.minus;if(state.counts[id]>1)state.counts[id]--;else delete state.counts[id];state.last=null;save();render();status('Uma unidade removida da contagem.','ok')});
+$('csv').onchange=e=>{importCSV(e.target.files[0]).catch(err=>status('Falha ao ler CSV: '+err.message,'bad'))};$('export').onclick=download;
+$('new').onclick=()=>{if(!confirm('Iniciar nova contagem? O rascunho de quantidades e preços será apagado neste navegador. Exporte o CSV antes, se necessário.'))return;state.counts={};state.prices={};state.last=null;state.started=new Date().toISOString();save();render();status('Nova contagem iniciada. Os vínculos de códigos e a última referência de estoque foram preservados.','ok');$('scan').focus()};
+(async function init(){load();try{const res=await fetch('data/contagem-estoque-catalogo.json?v=20261104',{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);const j=await res.json();if(!Array.isArray(j.produtos))throw Error('formato do catálogo');catalog=j.produtos;render();status('Catálogo carregado: '+catalog.length+' tipos de ração. Aguardando bipagem.','ok');if(state.baseAt)$('base').textContent=Object.keys(state.base).length+' rações importadas (referência salva em '+new Date(state.baseAt).toLocaleString('pt-BR')+').';$('scan').focus()}catch(e){status('Não foi possível carregar o catálogo: '+e.message+'. Recarregue esta página.','bad')}})();
+</script></body></html>
