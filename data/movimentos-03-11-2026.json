@@ -1,0 +1,19 @@
+{
+  "atualizadoEm": "04/11/2026 — reconstrução a partir de foto; total manuscrito pendente de confirmação",
+  "dataComanda": "03/11/2026",
+  "totalInformadoComanda": 16102,
+  "totalProvisorioComanda": 16102,
+  "detalhamentoPendente": true,
+  "totalLancamentos": 16102,
+  "diferencaConferencia": 0,
+  "observacao": "Comanda original enviada em foto 1000349867.jpg. Total manuscrito interpretado como R$ 16.102,00; AGUARDA confirmação do responsável. Lançamento consolidado para preservar o histórico sem inventar detalhes ou duplicar vendas de entregas/PDV.",
+  "movimentos": [
+    {
+      "data": "03/11/2026",
+      "tipo": "Comanda",
+      "descricao": "TOTAL DA COMANDA — PROVISÓRIO, CONFERIR FOTO",
+      "valor": 16102,
+      "conferencia": "Comanda 1000349867.jpg. Total provisório, aguarda confirmação. Não duplicar granel, PDV ou entregas."
+    }
+  ]
+}
