@@ -997,5 +997,6 @@ const testes=provas.map(([ean,danfe])=>{const r=matchCode(ean);return r.status==
 $('statusBaseDanfe').textContent='Base '+(baseDanfe.fonte==='única'?'ÚNICA':'RESERVA (verifique conexão)')+': '+baseDanfe.total+' produtos; '+baseDanfe.integrados+' registros; '+baseDanfe.codigos+' com campo CÓDIGO, '+scanaveis.length+' com sufixo de ao menos 5 dígitos e '+comPreco.length+' com preço na lista. Autoteste: '+testes.filter(Boolean).length+'/'+testes.length+' EANs conferidos.'+(testes.every(Boolean)?'':' ATENÇÃO: verifique a base antes de bipar!')+' Quando a DANFE não traz um código reconhecível, o produto precisa de conferência, sem lançamento automático. Referências de EAN confirmadas fora da DANFE: '+referenciasExternas.total+'; exigem código da DANFE e preço da loja antes de vender.';$('dateLabel').textContent=new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'}).format(new Date());render();medSyncRefresh();pdvCheckReady();message('✓ Base '+(baseDanfe.fonte==='única'?'ÚNICA carregada':'de RESERVA carregada')+' — '+comPreco.length+' produtos com código DANFE e preço para testes.');focusScan();
 })();
 </script>
+<script src="pdv-abertura-sacos.js?v=20261104-sacos1"></script>
 </body>
 </html>
