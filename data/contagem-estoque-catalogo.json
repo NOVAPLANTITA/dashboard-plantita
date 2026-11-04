@@ -1,0 +1,1603 @@
+{
+  "fonte": "ESTOQUE PLANTITA - BASE PRINCIPAL / Estoque Consolidado",
+  "geradoEm": "2026-11-04",
+  "nota": "Apenas catálogo de identificação. Quantidades e preços NÃO incluídos; requerem importação privada ou sincronização autenticada. Códigos de barras só devem ser associados após conferência.",
+  "produtos": [
+    {
+      "id": "estoque-11",
+      "row": 11,
+      "marca": "Bio Natural",
+      "produto": "Bio Natural Júnior R/G Cordeiro",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-12",
+      "row": 12,
+      "marca": "Bio Natural",
+      "produto": "Bio Natural Júnior R/M",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-13",
+      "row": 13,
+      "marca": "Bio Natural",
+      "produto": "Bio Natural R/G Cordeiro",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-14",
+      "row": 14,
+      "marca": "Bio Natural",
+      "produto": "Bio Natural R/M Frango",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-15",
+      "row": 15,
+      "marca": "Bio Natural",
+      "produto": "Bio Natural R/P Cordeiro",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-16",
+      "row": 16,
+      "marca": "Bio Natural",
+      "produto": "Bio Natural R/P Frango",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-17",
+      "row": 17,
+      "marca": "Bio Natural",
+      "produto": "Bio Natural Sensitive R/P",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-18",
+      "row": 18,
+      "marca": "Bio Natural",
+      "produto": "Bio Natural Sensitive R/P",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-19",
+      "row": 19,
+      "marca": "Bio Natural",
+      "produto": "Bio Natural Sênior R/M",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-20",
+      "row": 20,
+      "marca": "Bio Natural",
+      "produto": "Bio Natural Sênior R/P",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-30",
+      "row": 30,
+      "marca": "Dog Chow",
+      "produto": "Dog Chow Adulto R/P",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-31",
+      "row": 31,
+      "marca": "Dog Chow",
+      "produto": "Dog Chow Filhote R/M",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-32",
+      "row": 32,
+      "marca": "Dog Chow",
+      "produto": "Dog Chow Filhote R/P",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-33",
+      "row": 33,
+      "marca": "Dog Chow",
+      "produto": "Dog Chow Raças Específicas Adulto",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-34",
+      "row": 34,
+      "marca": "Dog Chow",
+      "produto": "Dog Chow Raças Específicas Filhote",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-35",
+      "row": 35,
+      "marca": "Golden",
+      "produto": "Golden Adulto Carne",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-36",
+      "row": 36,
+      "marca": "Golden",
+      "produto": "Golden Adulto Frango",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-37",
+      "row": 37,
+      "marca": "Golden",
+      "produto": "Golden Adulto Salmão",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-38",
+      "row": 38,
+      "marca": "Golden",
+      "produto": "Golden Carne R/P",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-39",
+      "row": 39,
+      "marca": "Golden",
+      "produto": "Golden Carne R/P",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-40",
+      "row": 40,
+      "marca": "Golden",
+      "produto": "Golden Castrado Carne",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-41",
+      "row": 41,
+      "marca": "Golden",
+      "produto": "Golden Castrado Carne",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-42",
+      "row": 42,
+      "marca": "Golden",
+      "produto": "Golden Castrado Frango",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-43",
+      "row": 43,
+      "marca": "Golden",
+      "produto": "Golden Castrado Frango",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-44",
+      "row": 44,
+      "marca": "Golden",
+      "produto": "Golden Castrado Salmão",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-45",
+      "row": 45,
+      "marca": "Golden",
+      "produto": "Golden Castrado Salmão",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-46",
+      "row": 46,
+      "marca": "Golden",
+      "produto": "Golden Especial",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-47",
+      "row": 47,
+      "marca": "Golden",
+      "produto": "Golden Especial Castrado",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-48",
+      "row": 48,
+      "marca": "Golden",
+      "produto": "Golden Filhote Carne",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-49",
+      "row": 49,
+      "marca": "Golden",
+      "produto": "Golden Filhote Carne R/P",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-50",
+      "row": 50,
+      "marca": "Golden",
+      "produto": "Golden Filhote Frango",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-51",
+      "row": 51,
+      "marca": "Golden",
+      "produto": "Golden Filhote Frango R/P",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-52",
+      "row": 52,
+      "marca": "Golden",
+      "produto": "Golden Frango R/P",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-53",
+      "row": 53,
+      "marca": "Golden",
+      "produto": "Golden Frango R/P",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-54",
+      "row": 54,
+      "marca": "Golden",
+      "produto": "Golden Gato Adulto Carne",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-55",
+      "row": 55,
+      "marca": "Golden",
+      "produto": "Golden Gato Adulto Carne",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-56",
+      "row": 56,
+      "marca": "Golden",
+      "produto": "Golden Gato Adulto Frango",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-57",
+      "row": 57,
+      "marca": "Golden",
+      "produto": "Golden Gato Adulto Frango",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-58",
+      "row": 58,
+      "marca": "Golden",
+      "produto": "Golden Gato Adulto Salmão",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-59",
+      "row": 59,
+      "marca": "Golden",
+      "produto": "Golden Gato Adulto Salmão",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-60",
+      "row": 60,
+      "marca": "Golden",
+      "produto": "Golden Gato Sênior",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-61",
+      "row": 61,
+      "marca": "Golden",
+      "produto": "Golden Gatos Castrado Carne",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-62",
+      "row": 62,
+      "marca": "Golden",
+      "produto": "Golden Gatos Castrado Frango",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-63",
+      "row": 63,
+      "marca": "Golden",
+      "produto": "Golden Gatos Castrado Salmão",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-64",
+      "row": 64,
+      "marca": "Golden",
+      "produto": "Golden Gatos Filhotes",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-65",
+      "row": 65,
+      "marca": "Golden",
+      "produto": "Golden Gatos Filhotes",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-66",
+      "row": 66,
+      "marca": "Golden",
+      "produto": "Golden Gatos Filhotes",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-67",
+      "row": 67,
+      "marca": "Golden",
+      "produto": "Golden Gatos Peixe",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-68",
+      "row": 68,
+      "marca": "Golden",
+      "produto": "Golden Gatos Peixe",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-69",
+      "row": 69,
+      "marca": "Golden",
+      "produto": "Golden Light",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-70",
+      "row": 70,
+      "marca": "Golden",
+      "produto": "Golden Light",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-71",
+      "row": 71,
+      "marca": "Golden",
+      "produto": "Golden Light R/P",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-72",
+      "row": 72,
+      "marca": "Golden",
+      "produto": "Golden Mega Adulto",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-73",
+      "row": 73,
+      "marca": "Golden",
+      "produto": "Golden Peru e Arroz",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-74",
+      "row": 74,
+      "marca": "Golden",
+      "produto": "Golden Peru e Arroz",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-75",
+      "row": 75,
+      "marca": "Golden",
+      "produto": "Golden Power Training",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-76",
+      "row": 76,
+      "marca": "Golden",
+      "produto": "Golden Power Training Filhote",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-77",
+      "row": 77,
+      "marca": "Golden",
+      "produto": "Golden R/G Branco",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-78",
+      "row": 78,
+      "marca": "Golden",
+      "produto": "Golden R/G Branco",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-79",
+      "row": 79,
+      "marca": "Golden",
+      "produto": "Golden R/G Carne",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-80",
+      "row": 80,
+      "marca": "Golden",
+      "produto": "Golden R/G Filhote Branco",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-81",
+      "row": 81,
+      "marca": "Golden",
+      "produto": "Golden R/G Filhote Branco",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-82",
+      "row": 82,
+      "marca": "Golden",
+      "produto": "Golden R/G Filhote Carne",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-83",
+      "row": 83,
+      "marca": "Golden",
+      "produto": "Golden R/P Carne",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-84",
+      "row": 84,
+      "marca": "Golden",
+      "produto": "Golden R/P Carne",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-85",
+      "row": 85,
+      "marca": "Golden",
+      "produto": "Golden R/P Carne Filhote",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-86",
+      "row": 86,
+      "marca": "Golden",
+      "produto": "Golden R/P Frango",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-87",
+      "row": 87,
+      "marca": "Golden",
+      "produto": "Golden R/P Frango",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-88",
+      "row": 88,
+      "marca": "Golden",
+      "produto": "Golden R/P Frango Filhote",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-89",
+      "row": 89,
+      "marca": "Golden",
+      "produto": "Golden R/P Salmão",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-90",
+      "row": 90,
+      "marca": "Golden",
+      "produto": "Golden R/P Salmão",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-91",
+      "row": 91,
+      "marca": "Golden",
+      "produto": "Golden R/P Salmão",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-92",
+      "row": 92,
+      "marca": "Golden",
+      "produto": "Golden R/P Salmão",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-93",
+      "row": 93,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Adulto R/G",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-94",
+      "row": 94,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Adulto R/P",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-95",
+      "row": 95,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Adulto R/P",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-96",
+      "row": 96,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Castrado Frango",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-97",
+      "row": 97,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Filhote R/P",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-98",
+      "row": 98,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Filhote R/P",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-99",
+      "row": 99,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Filhote R/P",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-100",
+      "row": 100,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Frango Adulto",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-101",
+      "row": 101,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Frango Adulto",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-102",
+      "row": 102,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Frango Alecrim Castrado",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-103",
+      "row": 103,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Frango Alecrim Castrado",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-104",
+      "row": 104,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Frango Batata Doce",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-105",
+      "row": 105,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Frango Batata Doce",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-106",
+      "row": 106,
+      "marca": "Golden",
+      "produto": "Golden Seleção Natural Gato Adulto Frango",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-107",
+      "row": 107,
+      "marca": "Golden",
+      "produto": "Golden Special R/G",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-108",
+      "row": 108,
+      "marca": "Golden",
+      "produto": "Golden Special R/G",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-109",
+      "row": 109,
+      "marca": "Golden",
+      "produto": "Golden Sênior",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-110",
+      "row": 110,
+      "marca": "Golden",
+      "produto": "Golden Sênior",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-111",
+      "row": 111,
+      "marca": "Golden",
+      "produto": "Golden Sênior",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-112",
+      "row": 112,
+      "marca": "Golden",
+      "produto": "Golden Sênior Carne",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-113",
+      "row": 113,
+      "marca": "Golden",
+      "produto": "Golden Sênior Gato",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-114",
+      "row": 114,
+      "marca": "Guabi Natural",
+      "produto": "Guabi Natural Adulto R/P Frango",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-115",
+      "row": 115,
+      "marca": "Guabi Natural",
+      "produto": "Guabi Natural Adulto R/P Salmão",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-497",
+      "row": 497,
+      "marca": "Nutrição Clínica",
+      "produto": "Diabetes R/P",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-498",
+      "row": 498,
+      "marca": "Nutrição Clínica",
+      "produto": "Diabetes R/P",
+      "peso": "2 kg"
+    },
+    {
+      "id": "estoque-499",
+      "row": 499,
+      "marca": "Nutrição Clínica",
+      "produto": "Gastrointestinal R/P",
+      "peso": "2 kg"
+    },
+    {
+      "id": "estoque-500",
+      "row": 500,
+      "marca": "Nutrição Clínica",
+      "produto": "Hipoalergênica Cordeiro R/P",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-501",
+      "row": 501,
+      "marca": "Nutrição Clínica",
+      "produto": "Hipoalergênica Cordeiro R/P",
+      "peso": "2 kg"
+    },
+    {
+      "id": "estoque-502",
+      "row": 502,
+      "marca": "Nutrição Clínica",
+      "produto": "Hipoalergênica Proteína Hidrolisada R/P",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-503",
+      "row": 503,
+      "marca": "Nutrição Clínica",
+      "produto": "Hipoalergênica Proteína Hidrolisada R/P",
+      "peso": "2 kg"
+    },
+    {
+      "id": "estoque-504",
+      "row": 504,
+      "marca": "Nutrição Clínica",
+      "produto": "Obesidade",
+      "peso": "1,5 kg"
+    },
+    {
+      "id": "estoque-505",
+      "row": 505,
+      "marca": "Nutrição Clínica",
+      "produto": "Obesidade R/G",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-506",
+      "row": 506,
+      "marca": "Nutrição Clínica",
+      "produto": "Obesidade R/P",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-507",
+      "row": 507,
+      "marca": "Nutrição Clínica",
+      "produto": "Obesidade R/P",
+      "peso": "2 kg"
+    },
+    {
+      "id": "estoque-508",
+      "row": 508,
+      "marca": "Nutrição Clínica",
+      "produto": "Renal",
+      "peso": "1,5 kg"
+    },
+    {
+      "id": "estoque-509",
+      "row": 509,
+      "marca": "Nutrição Clínica",
+      "produto": "Renal",
+      "peso": "500 g"
+    },
+    {
+      "id": "estoque-510",
+      "row": 510,
+      "marca": "Nutrição Clínica",
+      "produto": "Renal Pro Cat",
+      "peso": ""
+    },
+    {
+      "id": "estoque-511",
+      "row": 511,
+      "marca": "Nutrição Clínica",
+      "produto": "Renal Pro Dog",
+      "peso": ""
+    },
+    {
+      "id": "estoque-512",
+      "row": 512,
+      "marca": "Nutrição Clínica",
+      "produto": "Renal R/P",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-513",
+      "row": 513,
+      "marca": "Nutrição Clínica",
+      "produto": "Renal R/P",
+      "peso": "2 kg"
+    },
+    {
+      "id": "estoque-514",
+      "row": 514,
+      "marca": "Nutrição Clínica",
+      "produto": "Urinário",
+      "peso": "1,5 kg"
+    },
+    {
+      "id": "estoque-515",
+      "row": 515,
+      "marca": "Nutrição Clínica",
+      "produto": "Urinário",
+      "peso": "500 g"
+    },
+    {
+      "id": "estoque-531",
+      "row": 531,
+      "marca": "Optimum",
+      "produto": "Optimum Adulto R/P Frango",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-532",
+      "row": 532,
+      "marca": "Optimum",
+      "produto": "Optimum Cat Carne",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-533",
+      "row": 533,
+      "marca": "Optimum",
+      "produto": "Optimum Cat Frango",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-534",
+      "row": 534,
+      "marca": "Optimum",
+      "produto": "Optimum Filhote Frango",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-535",
+      "row": 535,
+      "marca": "Optimum",
+      "produto": "Optimum Gato Adulto Frango",
+      "peso": "3 kg"
+    },
+    {
+      "id": "estoque-536",
+      "row": 536,
+      "marca": "Pedigree",
+      "produto": "Pedigree Adulto R/P",
+      "peso": "2,7 kg"
+    },
+    {
+      "id": "estoque-540",
+      "row": 540,
+      "marca": "Premier",
+      "produto": "Premier Amb. Interno",
+      "peso": "12 kg"
+    },
+    {
+      "id": "estoque-541",
+      "row": 541,
+      "marca": "Premier",
+      "produto": "Premier Amb. Interno Filhote",
+      "peso": "12 kg"
+    },
+    {
+      "id": "estoque-542",
+      "row": 542,
+      "marca": "Premier",
+      "produto": "Premier Bulldog Francês",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-543",
+      "row": 543,
+      "marca": "Premier",
+      "produto": "Premier Bulldog Francês",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-544",
+      "row": 544,
+      "marca": "Premier",
+      "produto": "Premier Bulldog Francês",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-545",
+      "row": 545,
+      "marca": "Premier",
+      "produto": "Premier Bulldog Inglês",
+      "peso": "12 kg"
+    },
+    {
+      "id": "estoque-546",
+      "row": 546,
+      "marca": "Premier",
+      "produto": "Premier Castrado",
+      "peso": "12 kg"
+    },
+    {
+      "id": "estoque-547",
+      "row": 547,
+      "marca": "Premier",
+      "produto": "Premier Castrado 6 meses a 6 anos Frango",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-548",
+      "row": 548,
+      "marca": "Premier",
+      "produto": "Premier Castrado 6 meses a 6 anos Salmão",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-549",
+      "row": 549,
+      "marca": "Premier",
+      "produto": "Premier Castrado 7 a 11 anos Frango",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-550",
+      "row": 550,
+      "marca": "Premier",
+      "produto": "Premier Dermacare",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-551",
+      "row": 551,
+      "marca": "Premier",
+      "produto": "Premier Dermacare",
+      "peso": "12 kg"
+    },
+    {
+      "id": "estoque-552",
+      "row": 552,
+      "marca": "Premier",
+      "produto": "Premier Dermacare",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-553",
+      "row": 553,
+      "marca": "Premier",
+      "produto": "Premier Filhote R/G Branco",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-554",
+      "row": 554,
+      "marca": "Premier",
+      "produto": "Premier Filhote R/M Branco",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-555",
+      "row": 555,
+      "marca": "Premier",
+      "produto": "Premier Filhote R/P",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-556",
+      "row": 556,
+      "marca": "Premier",
+      "produto": "Premier Gatos Adultos Frango",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-557",
+      "row": 557,
+      "marca": "Premier",
+      "produto": "Premier Gatos Adultos Pelos Longos Frango",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-558",
+      "row": 558,
+      "marca": "Premier",
+      "produto": "Premier Gatos Adultos Pelos Longos Salmão",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-559",
+      "row": 559,
+      "marca": "Premier",
+      "produto": "Premier Gatos Adultos Salmão",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-560",
+      "row": 560,
+      "marca": "Premier",
+      "produto": "Premier Lhasa Apso Filhote",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-561",
+      "row": 561,
+      "marca": "Premier",
+      "produto": "Premier Lhasa Apso Filhote",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-562",
+      "row": 562,
+      "marca": "Premier",
+      "produto": "Premier Lhasa-Apso",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-563",
+      "row": 563,
+      "marca": "Premier",
+      "produto": "Premier Maltês Adulto",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-564",
+      "row": 564,
+      "marca": "Premier",
+      "produto": "Premier Maltês Adulto",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-565",
+      "row": 565,
+      "marca": "Premier",
+      "produto": "Premier Nattu Frango, Abóbora Adulto",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-566",
+      "row": 566,
+      "marca": "Premier",
+      "produto": "Premier Nattu Frango, Abóbora Adulto",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-567",
+      "row": 567,
+      "marca": "Premier",
+      "produto": "Premier Nattu Frango, Mandioca e Beterraba",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-568",
+      "row": 568,
+      "marca": "Premier",
+      "produto": "Premier Nattu Frango, Mandioca e Beterraba Adulto",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-569",
+      "row": 569,
+      "marca": "Premier",
+      "produto": "Premier Nattu Frango, Mandioca e Beterraba Adulto",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-570",
+      "row": 570,
+      "marca": "Premier",
+      "produto": "Premier Nattu Frango, Mandioca e Beterraba Filhote",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-571",
+      "row": 571,
+      "marca": "Premier",
+      "produto": "Premier Nattu Frango, Mandioca e Beterraba Filhote",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-572",
+      "row": 572,
+      "marca": "Premier",
+      "produto": "Premier Nattu Frango, Mandioca e Quinoa",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-573",
+      "row": 573,
+      "marca": "Premier",
+      "produto": "Premier Nattu Frango, Mandioca e Quinoa Adulto",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-574",
+      "row": 574,
+      "marca": "Premier",
+      "produto": "Premier Nattu Frango, Mandioca e Quinoa Adulto",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-575",
+      "row": 575,
+      "marca": "Premier",
+      "produto": "Premier R/G Adulto",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-576",
+      "row": 576,
+      "marca": "Premier",
+      "produto": "Premier R/G Adulto",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-577",
+      "row": 577,
+      "marca": "Premier",
+      "produto": "Premier R/G Branco",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-578",
+      "row": 578,
+      "marca": "Premier",
+      "produto": "Premier R/G Branco",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-579",
+      "row": 579,
+      "marca": "Premier",
+      "produto": "Premier R/G Branco",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-580",
+      "row": 580,
+      "marca": "Premier",
+      "produto": "Premier R/G Filhote",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-581",
+      "row": 581,
+      "marca": "Premier",
+      "produto": "Premier R/G Filhotes",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-582",
+      "row": 582,
+      "marca": "Premier",
+      "produto": "Premier R/G Sênior Cordeiro",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-583",
+      "row": 583,
+      "marca": "Premier",
+      "produto": "Premier R/M Branco",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-584",
+      "row": 584,
+      "marca": "Premier",
+      "produto": "Premier R/M Branco",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-585",
+      "row": 585,
+      "marca": "Premier",
+      "produto": "Premier R/P Branco",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-586",
+      "row": 586,
+      "marca": "Premier",
+      "produto": "Premier R/P Branco",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-587",
+      "row": 587,
+      "marca": "Premier",
+      "produto": "Premier R/P Carne",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-588",
+      "row": 588,
+      "marca": "Premier",
+      "produto": "Premier Shih Tzu Frango",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-589",
+      "row": 589,
+      "marca": "Premier",
+      "produto": "Premier Spitz Alemão",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-590",
+      "row": 590,
+      "marca": "Premier",
+      "produto": "Premier Sênior",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-591",
+      "row": 591,
+      "marca": "Premier",
+      "produto": "Premier Sênior",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-592",
+      "row": 592,
+      "marca": "Premier",
+      "produto": "Premier Sênior R/G",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-593",
+      "row": 593,
+      "marca": "Premier",
+      "produto": "Premier Yorkshire",
+      "peso": "7,5 kg"
+    },
+    {
+      "id": "estoque-594",
+      "row": 594,
+      "marca": "Purina",
+      "produto": "Purina Pro Plan Adulto R/P",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-595",
+      "row": 595,
+      "marca": "Purina",
+      "produto": "Purina Pro Plan Adulto R/P",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-596",
+      "row": 596,
+      "marca": "Purina",
+      "produto": "Purina Pro Plan Mente Ativa",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-597",
+      "row": 597,
+      "marca": "Purina",
+      "produto": "Purina Pro Plan Puppy Filhote",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-598",
+      "row": 598,
+      "marca": "Purina",
+      "produto": "Purina Pro Plan Puppy Filhote",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-599",
+      "row": 599,
+      "marca": "Quatree",
+      "produto": "Quatree Supreme Adulto R/P",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-600",
+      "row": 600,
+      "marca": "Quatree",
+      "produto": "Quatree Supreme Dermato",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-601",
+      "row": 601,
+      "marca": "Quatree",
+      "produto": "Quatree Supreme Filhote",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-602",
+      "row": 602,
+      "marca": "Quatree",
+      "produto": "Quatree Supreme Gato Filhote",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-603",
+      "row": 603,
+      "marca": "Quatree",
+      "produto": "Quatree Supreme Gato Frango",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-604",
+      "row": 604,
+      "marca": "Quatree",
+      "produto": "Quatree Supreme Gato Frango",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-605",
+      "row": 605,
+      "marca": "Quatree",
+      "produto": "Quatree Supreme Gato Salmão",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-606",
+      "row": 606,
+      "marca": "Quatree",
+      "produto": "Quatree Supreme Gato Salmão",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-607",
+      "row": 607,
+      "marca": "Quatree",
+      "produto": "Quatree Supreme Sênior",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-608",
+      "row": 608,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Adult Mini",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-609",
+      "row": 609,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Adult Mini",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-610",
+      "row": 610,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Castrado",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-611",
+      "row": 611,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Castrado",
+      "peso": "400 g"
+    },
+    {
+      "id": "estoque-612",
+      "row": 612,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Derma Renal",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-613",
+      "row": 613,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Exigent",
+      "peso": "400 g"
+    },
+    {
+      "id": "estoque-614",
+      "row": 614,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Filhote Mini",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-615",
+      "row": 615,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Fit",
+      "peso": "400 g"
+    },
+    {
+      "id": "estoque-616",
+      "row": 616,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Gastrointestinal",
+      "peso": "2 kg"
+    },
+    {
+      "id": "estoque-617",
+      "row": 617,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Hipoalergênica",
+      "peso": "1,5 kg"
+    },
+    {
+      "id": "estoque-618",
+      "row": 618,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Hipoalergênica",
+      "peso": "2 kg"
+    },
+    {
+      "id": "estoque-619",
+      "row": 619,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Indoor +12",
+      "peso": "400 g"
+    },
+    {
+      "id": "estoque-620",
+      "row": 620,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Mini +8",
+      "peso": "1 kg"
+    },
+    {
+      "id": "estoque-621",
+      "row": 621,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Mini Indoor",
+      "peso": "2,5 kg"
+    },
+    {
+      "id": "estoque-622",
+      "row": 622,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Persian Adult",
+      "peso": "1,5 kg"
+    },
+    {
+      "id": "estoque-623",
+      "row": 623,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Persian Adult",
+      "peso": "400 g"
+    },
+    {
+      "id": "estoque-624",
+      "row": 624,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Persian Filhote",
+      "peso": "1,5 kg"
+    },
+    {
+      "id": "estoque-625",
+      "row": 625,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Satiety",
+      "peso": "400 g"
+    },
+    {
+      "id": "estoque-626",
+      "row": 626,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Urinary",
+      "peso": "400 g"
+    },
+    {
+      "id": "estoque-627",
+      "row": 627,
+      "marca": "Royal Canin",
+      "produto": "Royal Canin Urinária",
+      "peso": "2 kg"
+    },
+    {
+      "id": "estoque-628",
+      "row": 628,
+      "marca": "Special Dog",
+      "produto": "Special Dog Carne",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-629",
+      "row": 629,
+      "marca": "Special Dog",
+      "produto": "Special Dog Carne",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-630",
+      "row": 630,
+      "marca": "Special Dog",
+      "produto": "Special Dog Carne",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-631",
+      "row": 631,
+      "marca": "Special Dog",
+      "produto": "Special Dog Carne R/P",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-632",
+      "row": 632,
+      "marca": "Special Dog",
+      "produto": "Special Dog Júnior",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-633",
+      "row": 633,
+      "marca": "Special Dog",
+      "produto": "Special Dog Júnior",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-634",
+      "row": 634,
+      "marca": "Special Dog",
+      "produto": "Special Dog Performance",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-635",
+      "row": 635,
+      "marca": "Special Dog",
+      "produto": "Special Dog Ultralife Cordeiro",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-636",
+      "row": 636,
+      "marca": "Special Dog",
+      "produto": "Special Dog Ultralife Cordeiro",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-637",
+      "row": 637,
+      "marca": "Special Dog",
+      "produto": "Special Dog Ultralife Cordeiro",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-638",
+      "row": 638,
+      "marca": "Special Dog",
+      "produto": "Special Dog Ultralife Frango",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-639",
+      "row": 639,
+      "marca": "Special Dog",
+      "produto": "Special Dog Ultralife Frango",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-640",
+      "row": 640,
+      "marca": "Special Dog",
+      "produto": "Special Dog Ultralife Frango",
+      "peso": "20 kg"
+    },
+    {
+      "id": "estoque-641",
+      "row": 641,
+      "marca": "Special Dog",
+      "produto": "Special Dog Ultralife Sênior",
+      "peso": "10 kg"
+    },
+    {
+      "id": "estoque-642",
+      "row": 642,
+      "marca": "Special Dog",
+      "produto": "Special Dog Ultralife Sênior",
+      "peso": "15 kg"
+    },
+    {
+      "id": "estoque-643",
+      "row": 643,
+      "marca": "Vet Life",
+      "produto": "Vet Life Urinary Struvite",
+      "peso": "2 kg"
+    },
+    {
+      "id": "estoque-644",
+      "row": 644,
+      "marca": "Vet Life",
+      "produto": "Vet Life Urinary Struvite",
+      "peso": "400 g"
+    },
+    {
+      "id": "estoque-645",
+      "row": 645,
+      "marca": "Whiskas",
+      "produto": "Whiskas Carne",
+      "peso": "500 g"
+    },
+    {
+      "id": "estoque-646",
+      "row": 646,
+      "marca": "Whiskas",
+      "produto": "Whiskas Salmão Linhaça",
+      "peso": "900 g"
+    }
+  ]
+}
