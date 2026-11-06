@@ -1,0 +1,19 @@
+{
+  "atualizadoEm": "06/11/2026 — comanda manuscrita recebida; total provisório",
+  "dataComanda": "06/11/2026",
+  "totalInformadoComanda": 18201,
+  "totalProvisorioComanda": 18201,
+  "detalhamentoPendente": true,
+  "totalLancamentos": 18201,
+  "diferencaConferencia": 0,
+  "observacao": "Total manuscrito interpretado como R$ 18.201,00 na comanda 1000350592.jpg, datada de 06/11/2026. Meios de pagamento e lançamentos individuais pendentes de conferência; algumas anotações estão pouco nítidas. Registro único consolidado do Controle Diário, sem duplicar entregas ou PDV.",
+  "movimentos": [
+    {
+      "data": "06/11/2026",
+      "tipo": "Comanda",
+      "descricao": "TOTAL DA COMANDA — PROVISÓRIO, CONFERIR DETALHAMENTO",
+      "valor": 18201,
+      "conferencia": "Leitura visual da comanda 1000350592.jpg. Total provisório da comanda; lançamento consolidado para não duplicar PDV ou entregas."
+    }
+  ]
+}
