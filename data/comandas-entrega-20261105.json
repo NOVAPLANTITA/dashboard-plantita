@@ -1,0 +1,19 @@
+{
+  "atualizadoEm": "09/11/2026 — transcrição de fotos recebidas; totais e campos assinalados como provisórios sujeitos a conferência; não repetir valores no Controle Diário",
+  "comandas": [
+    {
+      "data": "05/11/2026",
+      "cliente": "Marcos (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Golden R/P Carne 15 kg (leitura aproximada)",
+      "valorProduto": 128,
+      "taxaEntrega": 5,
+      "total": 133,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total R$ 133,00 provisório; confirmar valor na foto. Imagem contém comandas sobrepostas; somente a da frente está legível, outras não foram lançadas",
+      "origemFoto": "1000351269.jpg"
+    }
+  ]
+}
