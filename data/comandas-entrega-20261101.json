@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "09/11/2026 — transcrição das fotos recebidas; totais manuscritos sujeitos a conferência quando indicado; não duplicar no Controle Diário.",
+  "atualizadoEm": "09/11/2026 — atualização por fotos de comandas, valores manuscritos e descrições duvidosas marcados para conferência; não duplicar no Controle Diário.",
   "comandas": [
     {
       "data": "01/11/2026",
@@ -28,6 +28,34 @@
       "prazo": "",
       "conferencia": "Total R$ 75,00 legível; nome do produto e pagamento precisam de conferência.",
       "origemFoto": "1000351245.jpg"
+    },
+    {
+      "data": "01/11/2026",
+      "cliente": "Marlene (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Postura R$ 145,00; aveia média R$ 15,00; taxa de entrega R$ 5,00",
+      "valorProduto": 160,
+      "taxaEntrega": 5,
+      "total": 165,
+      "pagamento": "Cartão (anotação aproximada)",
+      "prazo": "",
+      "conferencia": "Total geral R$ 165,00 confere (145+15+5); confirmar nome da cliente e denominação dos produtos.",
+      "origemFoto": "1000351239.jpg"
+    },
+    {
+      "data": "01/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000351238)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Itens de R$ 96,00, R$ 12,00 e R$ 20,00 (escrita pouco nítida; há menção a serragem e produto para gato); taxa R$ 5,00",
+      "valorProduto": 128,
+      "taxaEntrega": 5,
+      "total": 133,
+      "pagamento": "Cartão (anotação aproximada)",
+      "prazo": "",
+      "conferencia": "Total geral R$ 133,00 interpretado pela soma 96+12+20+5; conferir primeiro produto, nome do cliente e valor escrito na comanda.",
+      "origemFoto": "1000351238.jpg"
     }
   ]
 }
