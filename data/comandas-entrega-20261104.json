@@ -1,0 +1,19 @@
+{
+  "atualizadoEm": "09/11/2026 — transcrição de fotos recebidas; totais e campos assinalados como provisórios sujeitos a conferência; não repetir valores no Controle Diário",
+  "comandas": [
+    {
+      "data": "04/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000351270)",
+      "telefone": "",
+      "endereco": "Estrada (endereço parcial)",
+      "descricao": "3 milho 50 kg R$ 270,00 + 2 Oxibens Clos (leitura aproximada) R$ 240,00",
+      "valorProduto": 510,
+      "taxaEntrega": 10,
+      "total": 520,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total R$ 520,00; verificar nome exato do cliente e do segundo produto",
+      "origemFoto": "1000351270.jpg"
+    }
+  ]
+}
