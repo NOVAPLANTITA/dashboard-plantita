@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "09/11/2026 — 18 comandas de 03/11/2026, após segundo lote de 10 fotos; totais manuscritos transcritos, com campos pouco legíveis sinalizados como provisórios; não duplicar no Controle Diário.",
+  "atualizadoEm": "09/11/2026 — 22 comandas de 03/11, incluindo fotos 1000351250 a 1000351247; valores provisórios sinalizados; não duplicar no Controle Diário.",
   "comandas": [
     {
       "data": "03/11/2026",
@@ -252,6 +252,62 @@
       "prazo": "",
       "conferencia": "PROVISÓRIO: total lido como R$ 341,00, mas foto está desfocada e não permite confirmar valores, nem separar eventual taxa de entrega; conferir na via física",
       "origemFoto": "1000351251.jpg"
+    },
+    {
+      "data": "03/11/2026",
+      "cliente": "Thaina (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "3 unidades de item anotado como 'Clips 4K' R$ 41,40; 1 produto adicional (nome a confirmar) R$ 24,00; taxa R$ 5,00",
+      "valorProduto": 65.4,
+      "taxaEntrega": 5,
+      "total": 70.4,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Total R$ 70,40 confere (41,40+24+5). Nome dos itens precisa ser confirmado.",
+      "origemFoto": "1000351250.jpg"
+    },
+    {
+      "data": "03/11/2026",
+      "cliente": "Eloisa (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Golden ração carne R$ 89,00; Golden Gato Salmão R$ 34,00; biscoitos banana e maçã, produto Jo-Jo e outro item (itens e valores menores a conferir)",
+      "valorProduto": 170,
+      "taxaEntrega": 0,
+      "total": 170,
+      "pagamento": "Cartão (leitura aproximada)",
+      "prazo": "",
+      "conferencia": "PROVISÓRIO: total final parece R$ 170,00, com valor anterior riscado; conferir o total e a soma das seis linhas, especialmente os itens pequenos.",
+      "origemFoto": "1000351249.jpg"
+    },
+    {
+      "data": "03/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000351248)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Golden sabor carne R$ 30,00; Golden sabor frango R$ 30,00 (nomes aproximados); observação de troco para R$ 100,00",
+      "valorProduto": 60,
+      "taxaEntrega": 0,
+      "total": 60,
+      "pagamento": "Dinheiro",
+      "prazo": "Troco para R$ 100,00 (leitura aproximada)",
+      "conferencia": "Total R$ 60,00 legível; confirmar nomes dos produtos e pedido de troco.",
+      "origemFoto": "1000351248.jpg"
+    },
+    {
+      "data": "03/11/2026",
+      "cliente": "Maria Rosa (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "5 unidades de produto 'memória jovem' (nome pouco legível) R$ 145,00; taxa de entrega R$ 5,00",
+      "valorProduto": 145,
+      "taxaEntrega": 5,
+      "total": 150,
+      "pagamento": "Dinheiro (leitura aproximada)",
+      "prazo": "",
+      "conferencia": "Total R$ 150,00 legível e confere (145+5). Conferir descrição do produto.",
+      "origemFoto": "1000351247.jpg"
     }
   ]
 }
