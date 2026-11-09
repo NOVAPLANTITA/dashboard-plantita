@@ -1,0 +1,19 @@
+{
+  "atualizadoEm": "09/11/2026 — comanda manuscrita recebida; total provisório",
+  "dataComanda": "09/11/2026",
+  "totalInformadoComanda": 10036,
+  "totalProvisorioComanda": 10036,
+  "detalhamentoPendente": true,
+  "totalLancamentos": 10036,
+  "diferencaConferencia": 0,
+  "observacao": "Total manuscrito lido como R$ 10.036,00 na comanda 1000351292.jpg, datada de 09/11/2026. Valores individuais de Dinheiro, Getnet, Cielo, Mercado Pago, PIX e outros meios ainda pendentes de conciliação. totalLancamentos reflete apenas o registro consolidado, não uma soma conferida dos meios de pagamento. Registro único de Controle Diário, sem duplicar entregas, PDV ou granel.",
+  "movimentos": [
+    {
+      "data": "09/11/2026",
+      "tipo": "Comanda",
+      "descricao": "TOTAL DA COMANDA — PROVISÓRIO, CONFERIR DETALHAMENTO",
+      "valor": 10036,
+      "conferencia": "Leitura visual da comanda 1000351292.jpg: total manuscrito R$ 10.036,00. Lançamento único provisório, não duplicar com entregas, granel ou PDV."
+    }
+  ]
+}
