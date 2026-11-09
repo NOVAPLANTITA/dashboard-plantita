@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "09/11/2026 — transcrição das fotos recebidas; totais manuscritos sujeitos a conferência quando indicado; não duplicar no Controle Diário.",
+  "atualizadoEm": "09/11/2026 — atualização por fotos de comandas, valores manuscritos e descrições duvidosas marcados para conferência; não duplicar no Controle Diário.",
   "comandas": [
     {
       "data": "02/11/2026",
@@ -56,6 +56,20 @@
       "prazo": "",
       "conferencia": "Total R$ 139,00 legível, soma 30+16+20+8+60+5; conferir descrições dos produtos.",
       "origemFoto": "1000351241.jpg"
+    },
+    {
+      "data": "02/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000351240)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "3 unidades de produto (possivelmente pipoca) R$ 42,00; outro produto ('Cock Chow' ou semelhante, conferir) R$ 36,00; taxa de entrega R$ 5,00",
+      "valorProduto": 78,
+      "taxaEntrega": 5,
+      "total": 83,
+      "pagamento": "Dinheiro (há anotação de troco para R$ 100,00)",
+      "prazo": "Troco para R$ 100,00 (leitura aproximada)",
+      "conferencia": "Total geral R$ 83,00 confere (42+36+5); nomes dos produtos, cliente e troco precisam de conferência.",
+      "origemFoto": "1000351240.jpg"
     }
   ]
 }
