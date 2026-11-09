@@ -1,0 +1,33 @@
+{
+  "atualizadoEm": "09/11/2026 — transcrição das fotos recebidas; totais manuscritos sujeitos a conferência quando indicado; não duplicar no Controle Diário.",
+  "comandas": [
+    {
+      "data": "01/11/2026",
+      "cliente": "Ana Paula (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Golden Gato (sabor a conferir) R$ 20,00; 1 Golden Gato Filhote R$ 20,00; 1 Nutricional Cat 30 ml (nome a conferir) R$ 76,00; 1 Classic (descrição a conferir) R$ 14,00",
+      "valorProduto": 130,
+      "taxaEntrega": 5,
+      "total": 135,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total R$ 135,00 confere com valores transcritos (20+20+76+14+5). Conferir nomes exatos dos produtos.",
+      "origemFoto": "1000351246.jpg"
+    },
+    {
+      "data": "01/11/2026",
+      "cliente": "Luna (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 produto para gatos sabor salmão (marca a conferir) R$ 70,00; taxa de entrega R$ 5,00",
+      "valorProduto": 70,
+      "taxaEntrega": 5,
+      "total": 75,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Total R$ 75,00 legível; nome do produto e pagamento precisam de conferência.",
+      "origemFoto": "1000351245.jpg"
+    }
+  ]
+}
