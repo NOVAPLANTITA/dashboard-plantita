@@ -1,0 +1,61 @@
+{
+  "atualizadoEm": "09/11/2026 — transcrição das fotos recebidas; totais manuscritos sujeitos a conferência quando indicado; não duplicar no Controle Diário.",
+  "comandas": [
+    {
+      "data": "02/11/2026",
+      "cliente": "Débora (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "4 itens diversos anotados como R$ 30,00, R$ 20,00, R$ 10,00 e R$ 5,00 (o último parece ser taxa de entrega); produtos a conferir",
+      "valorProduto": 60,
+      "taxaEntrega": 5,
+      "total": 65,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "Total R$ 65,00 legível; foto pouco nítida, confirmar descrição e se os R$ 5,00 correspondem à entrega.",
+      "origemFoto": "1000351244.jpg"
+    },
+    {
+      "data": "02/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000351243)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 produtos/rações manuscritos (aparentam R$ 175,00 e R$ 110,00), mais entrega R$ 10,00; conferir marcas e valores",
+      "valorProduto": 285,
+      "taxaEntrega": 10,
+      "total": 295,
+      "pagamento": "Cartão (leitura aproximada)",
+      "prazo": "",
+      "conferencia": "Total geral R$ 295,00 legível, mas primeira linha parece R$ 176,00; revisar valores dos itens para evitar divergência de R$ 1,00.",
+      "origemFoto": "1000351243.jpg"
+    },
+    {
+      "data": "02/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000351242)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 produto/ração sabor carne (descrição pouco legível) R$ 165,00; biscoito R$ 30,00; taxa de entrega R$ 5,00",
+      "valorProduto": 195,
+      "taxaEntrega": 5,
+      "total": 200,
+      "pagamento": "Cartão (leitura aproximada)",
+      "prazo": "",
+      "conferencia": "Total R$ 200,00 legível e confere pela composição 165+30+5; conferir marca e nome.",
+      "origemFoto": "1000351242.jpg"
+    },
+    {
+      "data": "02/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000351241)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "2 kg de Golden (leitura aproximada) R$ 30,00; outros produtos de R$ 16,00, R$ 20,00 e R$ 8,00; produto adicional R$ 60,00; taxa R$ 5,00",
+      "valorProduto": 134,
+      "taxaEntrega": 5,
+      "total": 139,
+      "pagamento": "Dinheiro (leitura aproximada)",
+      "prazo": "",
+      "conferencia": "Total R$ 139,00 legível, soma 30+16+20+8+60+5; conferir descrições dos produtos.",
+      "origemFoto": "1000351241.jpg"
+    }
+  ]
+}
