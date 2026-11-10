@@ -1,19 +1,133 @@
 {
-  "atualizadoEm": "06/11/2026 — comanda manuscrita recebida; total provisório",
+  "atualizadoEm": "10/11/2026 — detalhamento recuperado da comanda original.",
   "dataComanda": "06/11/2026",
   "totalInformadoComanda": 18201,
   "totalProvisorioComanda": 18201,
-  "detalhamentoPendente": true,
-  "totalLancamentos": 18201,
-  "diferencaConferencia": 0,
-  "observacao": "Total manuscrito interpretado como R$ 18.201,00 na comanda 1000350592.jpg, datada de 06/11/2026. Meios de pagamento e lançamentos individuais pendentes de conferência; algumas anotações estão pouco nítidas. Registro único consolidado do Controle Diário, sem duplicar entregas ou PDV.",
+  "detalhamentoPendente": false,
+  "totalLancamentos": 17929,
+  "diferencaConferencia": -272,
+  "observacao": "Foto 1000350592. Lançamentos transcritos da comanda original. Total de fechamento preservado. Valores ou classificações incertas sinalizados para conferência. Uma linha riscada foi desconsiderada.",
   "movimentos": [
     {
       "data": "06/11/2026",
-      "tipo": "Comanda",
-      "descricao": "TOTAL DA COMANDA — PROVISÓRIO, CONFERIR DETALHAMENTO",
-      "valor": 18201,
-      "conferencia": "Leitura visual da comanda 1000350592.jpg. Total provisório da comanda; lançamento consolidado para não duplicar PDV ou entregas."
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 2700,
+      "conferencia": "Foto 1000350592. Uma linha riscada foi desconsiderada."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 2516,
+      "conferencia": "Foto 1000350592."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 906.3,
+      "conferencia": "Foto 1000350592."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 1226.1,
+      "conferencia": "Foto 1000350592."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 6324.7,
+      "conferencia": "Foto 1000350592. Valor com leitura aproximada."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 39.9,
+      "conferencia": "Foto 1000350592. Classificação provisória."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 1 — Mário Francisco",
+      "valor": 2383,
+      "conferencia": "Foto 1000350592. Valor com leitura aproximada."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 2 — Nome a conferir",
+      "valor": 525,
+      "conferencia": "Foto 1000350592."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 3 — Valéria Alves (a conferir)",
+      "valor": 91,
+      "conferencia": "Foto 1000350592."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 4 — Nome a conferir",
+      "valor": 200,
+      "conferencia": "Foto 1000350592."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 5 — Jefferson Rodrigues (a conferir)",
+      "valor": 253,
+      "conferencia": "Foto 1000350592. Valor com leitura aproximada."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 6 — Nome a conferir",
+      "valor": 200,
+      "conferencia": "Foto 1000350592. Valor com leitura aproximada."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "Retiradas",
+      "descricao": "Compra de gancho",
+      "valor": 150,
+      "conferencia": "Foto 1000350592. Classificação como despesa a conferir."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "Outros",
+      "descricao": "Matheus — complemento",
+      "valor": 320,
+      "conferencia": "Foto 1000350592. Natureza financeira a conferir."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "Outros",
+      "descricao": "João — complemento",
+      "valor": 80,
+      "conferencia": "Foto 1000350592. Natureza financeira a conferir."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "Outros",
+      "descricao": "Bomba",
+      "valor": 140,
+      "conferencia": "Foto 1000350592. Natureza financeira a conferir."
+    },
+    {
+      "data": "06/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Débito Mercado Pago",
+      "valor": 24,
+      "conferencia": "Foto 1000350592."
     }
-  ]
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 18079
 }
