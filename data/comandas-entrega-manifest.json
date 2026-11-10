@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "10/11/2026 — incluídas sete comandas de entrega de 10/11.",
+  "atualizadoEm": "10/11/2026 — incluídas cinco comandas de 09/11 e duas novas de 10/11, sem duplicar as sete já lançadas no dia 10.",
   "descricao": "Índice único para dashboard, comandas e rações por marca. Acrescentar novas fontes aqui junto dos novos registros; páginas não precisam de alteração mensal.",
   "fontes": [
     "data/comandas-entrega.json",
@@ -61,6 +61,7 @@
     "data/comandas-entrega-20261104.json",
     "data/comandas-entrega-20261105.json",
     "data/comandas-entrega-20261106.json",
+    "data/comandas-entrega-20261109.json",
     "data/comandas-entrega-20261110.json"
   ]
 }
