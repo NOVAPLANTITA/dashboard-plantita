@@ -1,0 +1,103 @@
+{
+  "atualizadoEm": "10/11/2026 — sete comandas de 10/11 conferidas pelos totais das fotos.",
+  "comandas": [
+    {
+      "data": "10/11/2026",
+      "cliente": "Paulo",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Special Dog 15 kg (R$ 100,00)",
+      "valorProduto": 100,
+      "taxaEntrega": 10,
+      "total": 110,
+      "pagamento": "",
+      "prazo": "",
+      "conferencia": "",
+      "origemFoto": "WhatsApp Image 2026-11-10 at 08.12.49.jpeg"
+    },
+    {
+      "data": "10/11/2026",
+      "cliente": "Luciana",
+      "telefone": "",
+      "endereco": "Ótica",
+      "descricao": "Pipicat (R$ 28,00); Golden (R$ 15,00); Golden (R$ 20,00); sachê (R$ 10,00)",
+      "valorProduto": 73,
+      "taxaEntrega": 5,
+      "total": 78,
+      "pagamento": "Marcado",
+      "prazo": "",
+      "conferencia": "Quantidades cortadas na foto.",
+      "origemFoto": "WhatsApp Image 2026-11-10 at 09.30.45.jpeg"
+    },
+    {
+      "data": "10/11/2026",
+      "cliente": "Dona Elza",
+      "telefone": "",
+      "endereco": "Tabaca (leitura aproximada)",
+      "descricao": "1 Magnus Chips 15 kg (R$ 105,00)",
+      "valorProduto": 105,
+      "taxaEntrega": 8,
+      "total": 113,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Nome e local com leitura aproximada.",
+      "origemFoto": "WhatsApp Image 2026-11-10 at 10.21.18.jpeg"
+    },
+    {
+      "data": "10/11/2026",
+      "cliente": "Andressa",
+      "telefone": "",
+      "endereco": "R. Álvaro Almeida Leme, 420",
+      "descricao": "1 Premier R/G 15 kg (R$ 250,00); 1 Premier Gato Adulto Frango (R$ 85,00)",
+      "valorProduto": 335,
+      "taxaEntrega": 0,
+      "total": 335,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Nome com leitura aproximada. Taxa não discriminada.",
+      "origemFoto": "WhatsApp Image 2026-11-10 at 12.40.25.jpeg"
+    },
+    {
+      "data": "10/11/2026",
+      "cliente": "Dona Maria",
+      "telefone": "",
+      "endereco": "Estrada Borba Gato",
+      "descricao": "1 Crescimento 25 kg (R$ 100,00); 1 Magnus Raças Pequenas 10 kg (R$ 85,00); 10 kg de milho quebrado (R$ 50,00)",
+      "valorProduto": 235,
+      "taxaEntrega": 10,
+      "total": 245,
+      "pagamento": "",
+      "prazo": "",
+      "conferencia": "",
+      "origemFoto": "WhatsApp Image 2026-11-10 at 12.40.53.jpeg"
+    },
+    {
+      "data": "10/11/2026",
+      "cliente": "Ednaldo",
+      "telefone": "",
+      "endereco": "Banca",
+      "descricao": "2 Special Dog 15 kg (R$ 200,00); 1 kg de ração para papagaio (R$ 20,00)",
+      "valorProduto": 220,
+      "taxaEntrega": 0,
+      "total": 220,
+      "pagamento": "Dinheiro, sem troco",
+      "prazo": "",
+      "conferencia": "Nome com leitura aproximada. Taxa não discriminada.",
+      "origemFoto": "WhatsApp Image 2026-11-10 at 13.06.20.jpeg"
+    },
+    {
+      "data": "10/11/2026",
+      "cliente": "Juliana",
+      "telefone": "",
+      "endereco": "R. Nha Jorda, 126 (leitura aproximada)",
+      "descricao": "Golden R/P Carne (R$ 60,00); Whiskas castrados carne (R$ 40,00); 3 sachês Pedigree idoso (R$ 9,00); 1 sachê Whiskas carne (R$ 3,00); 1 sachê Whiskas peixe (R$ 3,00)",
+      "valorProduto": 115,
+      "taxaEntrega": 5,
+      "total": 120,
+      "pagamento": "Pagamento na loja (leitura aproximada)",
+      "prazo": "Amanhã (11/11)",
+      "conferencia": "Endereço, variantes dos produtos e observação manuscrita com leitura aproximada.",
+      "origemFoto": "WhatsApp Image 2026-11-10 at 13.11.31.jpeg"
+    }
+  ]
+}
