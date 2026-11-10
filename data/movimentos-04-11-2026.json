@@ -1,19 +1,84 @@
 {
-  "atualizadoEm": "04/11/2026 — comanda manuscrita recebida; total provisório",
+  "atualizadoEm": "10/11/2026 — detalhamento recuperado da comanda original.",
   "dataComanda": "04/11/2026",
   "totalInformadoComanda": 10138,
   "totalProvisorioComanda": 10138,
-  "detalhamentoPendente": true,
-  "totalLancamentos": 10138,
-  "diferencaConferencia": 0,
-  "observacao": "Total manuscrito interpretado como R$ 10.138,00 na comanda 1000349856.jpg, datada de 04/11/2026. Conferir meios de pagamento antes do fechamento oficial. Registro consolidado para não inventar valores individuais e evitar duplicidade com entregas e PDV.",
+  "detalhamentoPendente": false,
+  "totalLancamentos": 10085.75,
+  "diferencaConferencia": -52.25,
+  "observacao": "Foto 1000349856. Lançamentos transcritos da comanda original. Total de fechamento preservado. Valores ou classificações incertas sinalizados para conferência.",
   "movimentos": [
     {
       "data": "04/11/2026",
-      "tipo": "Comanda",
-      "descricao": "TOTAL DA COMANDA — meios de pagamento pendentes de conferência",
-      "valor": 10138,
-      "conferencia": "Leitura da comanda 1000349856.jpg. TOTAL PROVISÓRIO; lançamento único de controle diário, não duplicar com vendas de entrega ou PDV."
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 1000,
+      "conferencia": "Foto 1000349856."
+    },
+    {
+      "data": "04/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 2848,
+      "conferencia": "Foto 1000349856. Valor com leitura aproximada."
+    },
+    {
+      "data": "04/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 695.5,
+      "conferencia": "Foto 1000349856. Valor com leitura aproximada."
+    },
+    {
+      "data": "04/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 633.2,
+      "conferencia": "Foto 1000349856."
+    },
+    {
+      "data": "04/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 4485.35,
+      "conferencia": "Foto 1000349856."
+    },
+    {
+      "data": "04/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 23.5,
+      "conferencia": "Foto 1000349856. Classificação provisória."
+    },
+    {
+      "data": "04/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 1 — Gabriel (a conferir)",
+      "valor": 65,
+      "conferencia": "Foto 1000349856."
+    },
+    {
+      "data": "04/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 2 — Heloísa (a conferir)",
+      "valor": 99.2,
+      "conferencia": "Foto 1000349856. Valor com leitura aproximada."
+    },
+    {
+      "data": "04/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 3 — Nome a conferir",
+      "valor": 160,
+      "conferencia": "Foto 1000349856."
+    },
+    {
+      "data": "04/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 4 — Nome a conferir",
+      "valor": 76,
+      "conferencia": "Foto 1000349856."
     }
-  ]
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 10085.75
 }
