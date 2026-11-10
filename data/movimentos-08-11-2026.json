@@ -1,19 +1,84 @@
 {
-  "atualizadoEm": "08/11/2026 — comanda manuscrita recebida; total provisório",
+  "atualizadoEm": "10/11/2026 — detalhamento recuperado da comanda original.",
   "dataComanda": "08/11/2026",
   "totalInformadoComanda": 6209.44,
   "totalProvisorioComanda": 6209.44,
-  "detalhamentoPendente": true,
-  "totalLancamentos": 6209.44,
-  "diferencaConferencia": 0,
-  "observacao": "Total manuscrito interpretado como R$ 6.209,44 na comanda 1000351301.jpg, datada de 08/11/2026. Valor provisório pela leitura visual: verificar centavos e discriminação dos meios de pagamento, que estão pouco nítidos. totalLancamentos reflete somente lançamento consolidado, não soma conferida dos meios de pagamento. Registro único do Controle Diário; não duplicar entregas, PDV ou granel.",
+  "detalhamentoPendente": false,
+  "totalLancamentos": 6048.84,
+  "diferencaConferencia": -160.6,
+  "observacao": "Foto 1000351301. Lançamentos transcritos da comanda original. Total de fechamento preservado. Valores ou classificações incertas sinalizados para conferência.",
   "movimentos": [
     {
       "data": "08/11/2026",
-      "tipo": "Comanda",
-      "descricao": "TOTAL DA COMANDA — PROVISÓRIO, CONFERIR DETALHAMENTO",
-      "valor": 6209.44,
-      "conferencia": "Leitura visual da comanda 1000351301.jpg; total interpretado como R$ 6.209,44. Conferir detalhe de meios de pagamento e centavos. Não duplicar com entregas, PDV ou granel."
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 350,
+      "conferencia": "Foto 1000351301."
+    },
+    {
+      "data": "08/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 626.2,
+      "conferencia": "Foto 1000351301. Valor com leitura aproximada."
+    },
+    {
+      "data": "08/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 1134,
+      "conferencia": "Foto 1000351301. Valor com leitura aproximada."
+    },
+    {
+      "data": "08/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 920.8,
+      "conferencia": "Foto 1000351301."
+    },
+    {
+      "data": "08/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 2634.4,
+      "conferencia": "Foto 1000351301. Valor com leitura aproximada."
+    },
+    {
+      "data": "08/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 35.44,
+      "conferencia": "Foto 1000351301. Valor com leitura aproximada. Classificação provisória."
+    },
+    {
+      "data": "08/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 1 — Joel Júnior (a conferir)",
+      "valor": 88,
+      "conferencia": "Foto 1000351301. Valor com leitura aproximada."
+    },
+    {
+      "data": "08/11/2026",
+      "tipo": "Outros",
+      "descricao": "João (nome a conferir)",
+      "valor": 130,
+      "conferencia": "Foto 1000351301. Natureza financeira a conferir."
+    },
+    {
+      "data": "08/11/2026",
+      "tipo": "Outros",
+      "descricao": "Matheus",
+      "valor": 130,
+      "conferencia": "Foto 1000351301. Natureza financeira a conferir."
+    },
+    {
+      "data": "08/11/2026",
+      "tipo": "Retiradas",
+      "descricao": "Sacolas",
+      "valor": 162,
+      "conferencia": "Foto 1000351301. Classificação como despesa a conferir."
     }
-  ]
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 6210.84
 }
