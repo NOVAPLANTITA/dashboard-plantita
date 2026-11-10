@@ -1,19 +1,112 @@
 {
-  "atualizadoEm": "07/11/2026 — comanda manuscrita recebida; total provisório",
+  "atualizadoEm": "10/11/2026 — detalhamento recuperado da comanda original.",
   "dataComanda": "07/11/2026",
   "totalInformadoComanda": 12048,
   "totalProvisorioComanda": 12048,
-  "detalhamentoPendente": true,
-  "totalLancamentos": 12048,
-  "diferencaConferencia": 0,
-  "observacao": "Total manuscrito lido como R$ 12.048,00 na comanda 1000350974.jpg, datada de 07/11/2026. Valores individuais de Dinheiro, Getnet, Cielo, Mercado Pago, Pix e outros meios ainda pendentes de conciliação. totalLancamentos reflete apenas o registro consolidado, não uma soma conferida dos meios de pagamento. Registro único de Controle Diário, sem duplicar entregas, PDV ou granel.",
+  "detalhamentoPendente": false,
+  "totalLancamentos": 11999.55,
+  "diferencaConferencia": -48.45,
+  "observacao": "Foto 1000350974. Lançamentos transcritos da comanda original. Total de fechamento preservado. Valores ou classificações incertas sinalizados para conferência.",
   "movimentos": [
     {
       "data": "07/11/2026",
-      "tipo": "Comanda",
-      "descricao": "TOTAL DA COMANDA — PROVISÓRIO, CONFERIR DETALHAMENTO",
-      "valor": 12048,
-      "conferencia": "Leitura visual da comanda 1000350974.jpg: total manuscrito R$ 12.048,00. Lançamento único provisório, não duplicar com entregas, granel ou PDV."
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 3050,
+      "conferencia": "Foto 1000350974. Valor com leitura aproximada."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1187,
+      "conferencia": "Foto 1000350974. Valor com leitura aproximada."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 1346.75,
+      "conferencia": "Foto 1000350974. Valor com leitura aproximada."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 484,
+      "conferencia": "Foto 1000350974."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 4711.7,
+      "conferencia": "Foto 1000350974."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 29,
+      "conferencia": "Foto 1000350974. Classificação provisória."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 1 — Angélica Rodrigues",
+      "valor": 133,
+      "conferencia": "Foto 1000350974."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 2 — Valdei Dias (a conferir)",
+      "valor": 239,
+      "conferencia": "Foto 1000350974. Valor com leitura aproximada."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 3 — Alexsandro (a conferir)",
+      "valor": 120.1,
+      "conferencia": "Foto 1000350974. Valor com leitura aproximada."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 4 — Nome a conferir",
+      "valor": 65,
+      "conferencia": "Foto 1000350974. Valor com leitura aproximada."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 5 — Nome a conferir",
+      "valor": 265,
+      "conferencia": "Foto 1000350974."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 6 — Nome a conferir",
+      "valor": 109,
+      "conferencia": "Foto 1000350974."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 7 — Eliana",
+      "valor": 110,
+      "conferencia": "Foto 1000350974."
+    },
+    {
+      "data": "07/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Crédito Mercado Pago",
+      "valor": 150,
+      "conferencia": "Foto 1000350974."
     }
-  ]
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 11999.55
 }
