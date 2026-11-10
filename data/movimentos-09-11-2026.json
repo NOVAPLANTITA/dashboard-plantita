@@ -1,19 +1,91 @@
 {
-  "atualizadoEm": "09/11/2026 — comanda manuscrita recebida; total provisório",
+  "atualizadoEm": "10/11/2026 — detalhamento recuperado da comanda original.",
   "dataComanda": "09/11/2026",
   "totalInformadoComanda": 10036,
   "totalProvisorioComanda": 10036,
-  "detalhamentoPendente": true,
-  "totalLancamentos": 10036,
-  "diferencaConferencia": 0,
-  "observacao": "Total manuscrito lido como R$ 10.036,00 na comanda 1000351292.jpg, datada de 09/11/2026. Valores individuais de Dinheiro, Getnet, Cielo, Mercado Pago, PIX e outros meios ainda pendentes de conciliação. totalLancamentos reflete apenas o registro consolidado, não uma soma conferida dos meios de pagamento. Registro único de Controle Diário, sem duplicar entregas, PDV ou granel.",
+  "detalhamentoPendente": false,
+  "totalLancamentos": 10183.3,
+  "diferencaConferencia": 147.3,
+  "observacao": "Foto 1000351292. Lançamentos transcritos da comanda original. Total de fechamento preservado. Valores ou classificações incertas sinalizados para conferência.",
   "movimentos": [
     {
       "data": "09/11/2026",
-      "tipo": "Comanda",
-      "descricao": "TOTAL DA COMANDA — PROVISÓRIO, CONFERIR DETALHAMENTO",
-      "valor": 10036,
-      "conferencia": "Leitura visual da comanda 1000351292.jpg: total manuscrito R$ 10.036,00. Lançamento único provisório, não duplicar com entregas, granel ou PDV."
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 2450,
+      "conferencia": "Foto 1000351292. Valor com leitura aproximada."
+    },
+    {
+      "data": "09/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 979.3,
+      "conferencia": "Foto 1000351292."
+    },
+    {
+      "data": "09/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 878,
+      "conferencia": "Foto 1000351292. Valor com leitura aproximada."
+    },
+    {
+      "data": "09/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 2161.5,
+      "conferencia": "Foto 1000351292."
+    },
+    {
+      "data": "09/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 2894.6,
+      "conferencia": "Foto 1000351292. Valor com leitura aproximada."
+    },
+    {
+      "data": "09/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 23.9,
+      "conferencia": "Foto 1000351292. Classificação provisória."
+    },
+    {
+      "data": "09/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 1 — Michele",
+      "valor": 145,
+      "conferencia": "Foto 1000351292."
+    },
+    {
+      "data": "09/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 2 — Thiago",
+      "valor": 300,
+      "conferencia": "Foto 1000351292."
+    },
+    {
+      "data": "09/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 3 — Clotildes (a conferir)",
+      "valor": 283,
+      "conferencia": "Foto 1000351292. Valor com leitura aproximada."
+    },
+    {
+      "data": "09/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 4 — Wilson",
+      "valor": 33,
+      "conferencia": "Foto 1000351292."
+    },
+    {
+      "data": "09/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Débito Cielo",
+      "valor": 35,
+      "conferencia": "Foto 1000351292."
     }
-  ]
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 10183.3
 }
