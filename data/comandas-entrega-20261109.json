@@ -1,0 +1,75 @@
+{
+  "atualizadoEm": "10/11/2026 — cinco comandas de 09/11 transcritas das fotos 1000352396 a 1000352392, totais conferidos.",
+  "comandas": [
+    {
+      "data": "09/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000352396)",
+      "telefone": "",
+      "endereco": "Rua anotada parcialmente; referência '1ª direita' (conferir)",
+      "descricao": "1 Magnus Chips 15 kg R$ 105,00; item para coelho R$ 6,00; milho triturado (leitura aproximada) R$ 10,00; taxa de entrega R$ 7,00",
+      "valorProduto": 121,
+      "taxaEntrega": 7,
+      "total": 128,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Cliente, endereço e nomes dos itens adicionais de R$ 6 e R$ 10 com leitura parcial; total geral R$ 128,00 confirmado.",
+      "origemFoto": "1000352396.jpg"
+    },
+    {
+      "data": "09/11/2026",
+      "cliente": "Marcelo (leitura aproximada)",
+      "telefone": "",
+      "endereco": "Rua Domingos, 136 (leitura aproximada)",
+      "descricao": "1 Golden (variante/peso a confirmar) R$ 162,00; taxa de entrega R$ 5,00",
+      "valorProduto": 162,
+      "taxaEntrega": 5,
+      "total": 167,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Produto e endereço parcialmente legíveis; total R$ 167,00 confere.",
+      "origemFoto": "1000352395.jpg"
+    },
+    {
+      "data": "09/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000352394)",
+      "telefone": "",
+      "endereco": "Rua/numeração terminada em 15 (leitura parcial)",
+      "descricao": "1 ração/produto (nome pouco legível) R$ 67,00; taxa de entrega R$ 5,00",
+      "valorProduto": 67,
+      "taxaEntrega": 5,
+      "total": 72,
+      "pagamento": "Dinheiro",
+      "prazo": "",
+      "conferencia": "Total R$ 72,00 confirmado; cliente, produto e endereço precisam de conferência.",
+      "origemFoto": "1000352394.jpg"
+    },
+    {
+      "data": "09/11/2026",
+      "cliente": "Rosana (leitura aproximada)",
+      "telefone": "",
+      "endereco": "Estrada dos Moreiras (leitura aproximada)",
+      "descricao": "2 un. de areia/ração (descrição parcial) R$ 130,00; 1 saco Golden Gatos Não Castrados R$ 165,00; taxa de entrega R$ 5,00",
+      "valorProduto": 295,
+      "taxaEntrega": 5,
+      "total": 300,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Total R$ 300,00 confirmado; nome/descrição dos itens e endereço devem ser conferidos.",
+      "origemFoto": "1000352393.jpg"
+    },
+    {
+      "data": "09/11/2026",
+      "cliente": "Michele",
+      "telefone": "",
+      "endereco": "R. Primavera, 308 — em frente ao campo",
+      "descricao": "1 Golden Raças Pequenas frango/carne 10 kg (variante a confirmar), R$ 145,00",
+      "valorProduto": 145,
+      "taxaEntrega": 0,
+      "total": 145,
+      "pagamento": "Pix (pago)",
+      "prazo": "",
+      "conferencia": "Total R$ 145,00 confirmado; variante de ração a conferir.",
+      "origemFoto": "1000352392.jpg"
+    }
+  ]
+}
