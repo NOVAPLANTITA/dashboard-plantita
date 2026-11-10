@@ -1,19 +1,98 @@
 {
-  "atualizadoEm": "04/11/2026 — valor de 01/11 confirmado pelo responsável",
+  "atualizadoEm": "10/11/2026 — detalhamento recuperado da comanda original.",
   "dataComanda": "01/11/2026",
   "totalInformadoComanda": 7575.49,
-  "detalhamentoPendente": true,
-  "totalLancamentos": 7575.49,
-  "diferencaConferencia": 0,
-  "observacao": "Total oficial R$ 7.575,49 confirmado explicitamente pelo responsável após envio da foto da comanda de 01/11/2026. Lançamento único consolidado; categorias/meios de pagamento não transcritos, para evitar erro e duplicidade.",
+  "detalhamentoPendente": false,
+  "totalLancamentos": 6863.7,
+  "diferencaConferencia": -711.79,
+  "observacao": "Foto 1000349864. Lançamentos transcritos da comanda original. Total de fechamento preservado. Valores ou classificações incertas sinalizados para conferência.",
   "movimentos": [
     {
       "data": "01/11/2026",
-      "tipo": "Comanda",
-      "descricao": "TOTAL OFICIAL DA COMANDA — 01/11/2026",
-      "valor": 7575.49,
-      "conferencia": "Valor R$ 7.575,49 confirmado pelo responsável. Não somar novamente vendas individuais do PDV ou entregas."
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 330,
+      "conferencia": "Foto 1000349864. Valor com leitura aproximada."
+    },
+    {
+      "data": "01/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 721.55,
+      "conferencia": "Foto 1000349864. Valor com leitura aproximada."
+    },
+    {
+      "data": "01/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 1504.16,
+      "conferencia": "Foto 1000349864. Valor com leitura aproximada."
+    },
+    {
+      "data": "01/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 1137.5,
+      "conferencia": "Foto 1000349864. Valor com leitura aproximada."
+    },
+    {
+      "data": "01/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 2544.49,
+      "conferencia": "Foto 1000349864. Valor com leitura aproximada."
+    },
+    {
+      "data": "01/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 1 — Nome a conferir",
+      "valor": 130,
+      "conferencia": "Foto 1000349864."
+    },
+    {
+      "data": "01/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 2 — Yhae (a conferir)",
+      "valor": 20,
+      "conferencia": "Foto 1000349864."
+    },
+    {
+      "data": "01/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 3 — Angélica Rodrigues",
+      "valor": 267,
+      "conferencia": "Foto 1000349864."
+    },
+    {
+      "data": "01/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 4 — Edmar da Silva (a conferir)",
+      "valor": 47,
+      "conferencia": "Foto 1000349864."
+    },
+    {
+      "data": "01/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 5 — Adeildo (a conferir)",
+      "valor": 32,
+      "conferencia": "Foto 1000349864."
+    },
+    {
+      "data": "01/11/2026",
+      "tipo": "Retiradas",
+      "descricao": "Sacolas",
+      "valor": 271,
+      "conferencia": "Foto 1000349864. Classificação como despesa a conferir."
+    },
+    {
+      "data": "01/11/2026",
+      "tipo": "Outros",
+      "descricao": "Matheus",
+      "valor": 130,
+      "conferencia": "Foto 1000349864."
     }
   ],
-  "totalConfirmadoComanda": 7575.49
+  "totalConfirmadoComanda": 7575.49,
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 7134.7
 }
