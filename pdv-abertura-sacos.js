@@ -172,7 +172,10 @@
   if(active){
    if(pending)showPending();
    else checkConnection();
-   if(window.matchMedia('(min-width:750px)').matches)barcode.focus();
+   if(window.matchMedia('(min-width:750px)').matches)barcode.focus({preventScroll:true});
+  }else if(window.matchMedia('(min-width:750px)').matches){
+   // Voltar ao campo de bipagem ao sair do modo de abertura de sacos.
+   barcode.focus({preventScroll:true});
   }
  };
  $('bagCheckConnection').onclick=checkConnection;
