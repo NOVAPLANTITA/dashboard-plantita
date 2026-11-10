@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "10/11/2026 — transcrição de nove comandas de 06/11; totais provisórios onde indicado; não duplicar no Controle Diário.",
+  "atualizadoEm": "10/11/2026 — inclusão de uma comanda adicional de 06/11 e transcrição das fotos com ressalvas; não duplicar no Controle Diário.",
   "comandas": [
     {
       "data": "06/11/2026",
@@ -126,6 +126,20 @@
       "prazo": "Dinheiro, sem troco",
       "conferencia": "Total geral lido como R$ 147,00, que confere com 90+10+27+5+5+10; confirmar marca e dois itens pequenos.",
       "origemFoto": "1000352224.jpg"
+    },
+    {
+      "data": "06/11/2026",
+      "cliente": "Valne (leitura aproximada)",
+      "telefone": "",
+      "endereco": "R. América, 103 (leitura aproximada)",
+      "descricao": "1 Magnus 20 kg (sabor a confirmar) R$ 155,00; taxa de entrega R$ 7,00",
+      "valorProduto": 155,
+      "taxaEntrega": 7,
+      "total": 162,
+      "pagamento": "Dinheiro, sem troco (anotação manuscrita)",
+      "prazo": "",
+      "conferencia": "Total R$ 162,00 confere 155+7; conferir cliente, ração e endereço.",
+      "origemFoto": "1000352222.jpg"
     }
   ]
 }
