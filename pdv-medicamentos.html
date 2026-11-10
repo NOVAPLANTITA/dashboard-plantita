@@ -812,8 +812,40 @@ const draft=isPending?'<div class="hrow"><div><b>● Registro em andamento</b><b
 const history=todays.slice(-5).reverse().map(s=>'<div class="hrow"><div><b>Registro '+escapeHtml(s.id.slice(-5).toUpperCase())+'</b><br><small>'+escapeHtml(s.time)+' • '+s.items.reduce((n,x)=>n+x.qty,0)+' item(ns)</small></div><b>'+fmt(s.med+s.granel)+'</b></div>').join('');
 $('history').innerHTML=draft+history||'<span class="fine">Nenhum registro nesta estação hoje.</span>';
 }
-function focusScan(){if(!document.querySelector('.modalback.show')&&window.matchMedia('(min-width:750px)').matches)$('barcode').focus()}
-$('scanForm').addEventListener('submit',e=>{e.preventDefault();if(!pdvGate())return;const v=$('barcode').value;$('barcode').value='';readCode(v);focusScan()});
+// Leitor USB age como teclado: recuperar foco depois de clicar em botoes do PDV.
+let scanIdleTimer=null;
+function focusScan(){
+ if(!document.querySelector('.modalback.show')&&window.matchMedia('(min-width:750px)').matches)
+  $('barcode').focus({preventScroll:true});
+}
+function submitScan(){
+ clearTimeout(scanIdleTimer);
+ const input=$('barcode'),v=input.value;
+ if(!normalizarCodigoLeitor(v))return; // Enter atrasado apos leitura automatica.
+ input.value='';
+ if(!pdvGate())return;
+ readCode(v);focusScan();
+}
+$('scanForm').addEventListener('submit',e=>{e.preventDefault();submitScan()});
+// Algumas balancas/leitores nao enviam Enter (ou enviam Tab): aceitar a etiqueta
+// EAN-13 de preco apos uma curta pausa, mantendo a mesma validacao de checksum.
+$('barcode').addEventListener('input',()=>{
+ clearTimeout(scanIdleTimer);
+ const code=normalizarCodigoLeitor($('barcode').value);
+ if(/^2\d{12}$/.test(code))
+  scanIdleTimer=setTimeout(()=>{if($('barcode').value)$('scanForm').requestSubmit()},220);
+});
+// Se o ultimo clique deixou o foco num botao, a primeira tecla numerica
+// do leitor deve ir ao campo de bipagem, nunca se perder no botao.
+document.addEventListener('keydown',e=>{
+ if(e.ctrlKey||e.altKey||e.metaKey||!/^\d$/.test(e.key)||document.querySelector('.modalback.show'))return;
+ const a=document.activeElement,input=$('barcode');
+ if(a===input||a&&((/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName))||a.isContentEditable))return;
+ input.focus({preventScroll:true});
+ input.value+=e.key;
+ input.dispatchEvent(new Event('input',{bubbles:true}));
+ e.preventDefault();
+},true);
 
 $('medSyncConfigure').onclick=()=>{
  const cfg=medConf();$('medSyncUrl').value=cfg.url;$('medSyncKey').value=cfg.secret;
