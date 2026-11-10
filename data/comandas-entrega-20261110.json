@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "10/11/2026 — sete comandas de 10/11 conferidas pelos totais das fotos.",
+  "atualizadoEm": "10/11/2026 — nove comandas de 10/11 (sete anteriores + duas novas das fotos 1000352391 e 1000352390).",
   "comandas": [
     {
       "data": "10/11/2026",
@@ -98,6 +98,34 @@
       "prazo": "Amanhã (11/11)",
       "conferencia": "Endereço, variantes dos produtos e observação manuscrita com leitura aproximada.",
       "origemFoto": "WhatsApp Image 2026-11-10 at 13.11.31.jpeg"
+    },
+    {
+      "data": "10/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000352391)",
+      "telefone": "",
+      "endereco": "Horta (referência anotada)",
+      "descricao": "1 Premier 2,5 kg (produto/variante a conferir), R$ 80,00",
+      "valorProduto": 80,
+      "taxaEntrega": 0,
+      "total": 80,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total R$ 80,00 confirmado; cliente e produto com leitura parcial.",
+      "origemFoto": "1000352391.jpg"
+    },
+    {
+      "data": "10/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000352390)",
+      "telefone": "",
+      "endereco": "Rua Álvaro ... nº 30 (leitura parcial)",
+      "descricao": "1 item/ração/terra (descrição manuscrita pouco legível) R$ 70,00; taxa de entrega R$ 5,00",
+      "valorProduto": 70,
+      "taxaEntrega": 5,
+      "total": 75,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Total R$ 75,00 confirmado; nome do produto, cliente e rua precisam de revisão.",
+      "origemFoto": "1000352390.jpg"
     }
   ]
 }
