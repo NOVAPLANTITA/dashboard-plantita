@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "09/11/2026 — comandas registradas de 01, 02, 03, 04 e 05 de novembro; valores de fotos sujeitos a conferência.",
+  "atualizadoEm": "10/11/2026 — novembro inclui comandas de 01 a 06/11; valores manuscritos sujeitos a conferência.",
   "descricao": "Índice único para dashboard, comandas e rações por marca. Acrescentar novas fontes aqui junto dos novos registros; páginas não precisam de alteração mensal.",
   "fontes": [
     "data/comandas-entrega.json",
@@ -59,6 +59,7 @@
     "data/comandas-entrega-20261102.json",
     "data/comandas-entrega-20261103.json",
     "data/comandas-entrega-20261104.json",
-    "data/comandas-entrega-20261105.json"
+    "data/comandas-entrega-20261105.json",
+    "data/comandas-entrega-20261106.json"
   ]
 }
