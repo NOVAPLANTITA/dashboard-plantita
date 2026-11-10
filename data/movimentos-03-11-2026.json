@@ -1,19 +1,112 @@
 {
-  "atualizadoEm": "04/11/2026 — reconstrução a partir de foto; total manuscrito pendente de confirmação",
+  "atualizadoEm": "10/11/2026 — detalhamento recuperado da comanda original.",
   "dataComanda": "03/11/2026",
   "totalInformadoComanda": 16102,
   "totalProvisorioComanda": 16102,
-  "detalhamentoPendente": true,
-  "totalLancamentos": 16102,
-  "diferencaConferencia": 0,
-  "observacao": "Comanda original enviada em foto 1000349867.jpg. Total manuscrito interpretado como R$ 16.102,00; AGUARDA confirmação do responsável. Lançamento consolidado para preservar o histórico sem inventar detalhes ou duplicar vendas de entregas/PDV.",
+  "detalhamentoPendente": false,
+  "totalLancamentos": 16203.9,
+  "diferencaConferencia": 101.9,
+  "observacao": "Foto 1000349867. Lançamentos transcritos da comanda original. Total de fechamento preservado. Valores ou classificações incertas sinalizados para conferência.",
   "movimentos": [
     {
       "data": "03/11/2026",
-      "tipo": "Comanda",
-      "descricao": "TOTAL DA COMANDA — PROVISÓRIO, CONFERIR FOTO",
-      "valor": 16102,
-      "conferencia": "Comanda 1000349867.jpg. Total provisório, aguarda confirmação. Não duplicar granel, PDV ou entregas."
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 2000,
+      "conferencia": "Foto 1000349867."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 4376,
+      "conferencia": "Foto 1000349867."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 2156.1,
+      "conferencia": "Foto 1000349867. Valor com leitura aproximada."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 1928.9,
+      "conferencia": "Foto 1000349867."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 4328,
+      "conferencia": "Foto 1000349867. Valor com leitura aproximada."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 33.9,
+      "conferencia": "Foto 1000349867. Classificação provisória."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 1 — Ana (sobrenome a conferir)",
+      "valor": 122,
+      "conferencia": "Foto 1000349867."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 2 — Getúlio",
+      "valor": 266,
+      "conferencia": "Foto 1000349867."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 3 — Adriana",
+      "valor": 75,
+      "conferencia": "Foto 1000349867."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 4 — João (a conferir)",
+      "valor": 544,
+      "conferencia": "Foto 1000349867."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 5 — Nome a conferir",
+      "valor": 47,
+      "conferencia": "Foto 1000349867."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 6 — Nome a conferir",
+      "valor": 105,
+      "conferencia": "Foto 1000349867. Valor com leitura aproximada."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 7 — Tino 007 (a conferir)",
+      "valor": 100,
+      "conferencia": "Foto 1000349867."
+    },
+    {
+      "data": "03/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 8 — Igor",
+      "valor": 122,
+      "conferencia": "Foto 1000349867."
     }
-  ]
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 16203.9
 }
