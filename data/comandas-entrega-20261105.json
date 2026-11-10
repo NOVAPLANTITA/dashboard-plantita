@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "10/11/2026 — acréscimo da comanda 1000352225 de 05/11; textos incertos marcados; não duplicar no Controle Diário.",
+  "atualizadoEm": "10/11/2026 — inclusão de cinco novas comandas das fotos 1000352223, 2221, 2220, 2219 e 2218; valores incertos sinalizados para conferência e não duplicar no Controle Diário.",
   "comandas": [
     {
       "data": "05/11/2026",
@@ -28,6 +28,76 @@
       "prazo": "",
       "conferencia": "Total geral R$ 95,00 confere com R$ 90,00 + R$ 5,00; confirmar produto, endereço e forma de pagamento; comanda datada 05/11/2026.",
       "origemFoto": "1000352225.jpg"
+    },
+    {
+      "data": "05/11/2026",
+      "cliente": "Valmila (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 produto/ração anotado como '... Vet 1600' R$ 70,00 (nome pouco legível); taxa de entrega R$ 10,00",
+      "valorProduto": 70,
+      "taxaEntrega": 10,
+      "total": 80,
+      "pagamento": "PG (anotação manuscrita; conferir)",
+      "prazo": "",
+      "conferencia": "Total geral R$ 80,00 = R$ 70,00 + R$ 10,00; conferir nome do produto e da cliente.",
+      "origemFoto": "1000352223.jpg"
+    },
+    {
+      "data": "05/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000352221)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 Classic (leitura aproximada) R$ 44,00; 3 un. Fórmula (descrição parcial) R$ 84,00; taxa de entrega R$ 5,00",
+      "valorProduto": 128,
+      "taxaEntrega": 5,
+      "total": 133,
+      "pagamento": "Cartão (anotação manuscrita)",
+      "prazo": "",
+      "conferencia": "Total geral R$ 133,00 legível; soma 44+84+5. Conferir cliente, produtos e quantidades.",
+      "origemFoto": "1000352221.jpg"
+    },
+    {
+      "data": "05/11/2026",
+      "cliente": "Letícia (leitura aproximada)",
+      "telefone": "",
+      "endereco": "Est. ... 293 (leitura parcial)",
+      "descricao": "1 Special Cat carne 10 kg (leitura aproximada) R$ 143,00; 1 Bomguy 15 kg (leitura aproximada) R$ 97,00",
+      "valorProduto": 240,
+      "taxaEntrega": 0,
+      "total": 240,
+      "pagamento": "PG (anotação manuscrita; confirmar)",
+      "prazo": "",
+      "conferencia": "R$ 240,00 = R$ 143,00 + R$ 97,00; marca, descrição e endereço precisam de conferência.",
+      "origemFoto": "1000352220.jpg"
+    },
+    {
+      "data": "05/11/2026",
+      "cliente": "Cliente pouco legível (foto 1000352219)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 produto/ração com nome e apresentação pouco legíveis (possivelmente item de milho/ração); valor manuscrito lido provisoriamente como R$ 35,00",
+      "valorProduto": 35,
+      "taxaEntrega": 0,
+      "total": 35,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "PROVISÓRIO — fotografia com reflexo e baixa resolução. Total parece R$ 35,00, mas não permite confirmar com segurança; revisar foto/via física antes de fechar o mês. Cliente, produto e data também pouco legíveis.",
+      "origemFoto": "1000352219.jpg"
+    },
+    {
+      "data": "05/11/2026",
+      "cliente": "Cliente a confirmar (foto 1000352218)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 item anotado 'papagaio' (leitura aproximada) R$ 80,00",
+      "valorProduto": 80,
+      "taxaEntrega": 0,
+      "total": 80,
+      "pagamento": "Cartão (anotação riscada; confirmar)",
+      "prazo": "",
+      "conferencia": "Total geral R$ 80,00 legível; conferir cliente, produto e forma de pagamento.",
+      "origemFoto": "1000352218.jpg"
     }
   ]
 }
