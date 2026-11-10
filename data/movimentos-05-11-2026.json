@@ -1,19 +1,91 @@
 {
-  "atualizadoEm": "06/11/2026 — comanda de 05/11 recebida; total provisório",
+  "atualizadoEm": "10/11/2026 — detalhamento recuperado da comanda original.",
   "dataComanda": "05/11/2026",
   "totalInformadoComanda": 9155,
   "totalProvisorioComanda": 9155,
-  "detalhamentoPendente": true,
-  "totalLancamentos": 9155,
-  "diferencaConferencia": 0,
-  "observacao": "Total manuscrito interpretado como R$ 9.155,00 na comanda 1000350173.jpg, datada de 05/11/2026. Meios de pagamento e lançamentos individuais pendentes de conferência. Registro consolidado do Controle Diário, sem duplicar entregas ou PDV. A igualdade entre totalLancamentos e totalProvisorio representa somente o registro único, não uma conciliação individual de pagamentos.",
+  "detalhamentoPendente": false,
+  "totalLancamentos": 4169.4,
+  "diferencaConferencia": -4985.6,
+  "observacao": "Foto 1000350173. Lançamentos transcritos da comanda original. Total de fechamento preservado. Valores ou classificações incertas sinalizados para conferência. Valores de Getnet 1, Getnet 2 e Mercado Pago cortados na borda da foto.",
   "movimentos": [
     {
       "data": "05/11/2026",
-      "tipo": "Comanda",
-      "descricao": "TOTAL DA COMANDA — PROVISÓRIO, CONFERIR DETALHAMENTO",
-      "valor": 9155,
-      "conferencia": "Leitura visual da comanda 1000350173.jpg. Total manuscrito R$ 9.155,00; lançamento único consolidado para não duplicar PDV ou entregas."
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 1500,
+      "conferencia": "Foto 1000350173. Valores de Getnet 1, Getnet 2 e Mercado Pago cortados na borda da foto."
+    },
+    {
+      "data": "05/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 679.5,
+      "conferencia": "Foto 1000350173."
+    },
+    {
+      "data": "05/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 39.9,
+      "conferencia": "Foto 1000350173. Classificação provisória."
+    },
+    {
+      "data": "05/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 1 — Nome a conferir",
+      "valor": 1284,
+      "conferencia": "Foto 1000350173. Valor com leitura aproximada."
+    },
+    {
+      "data": "05/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 2 — Sheila (sobrenome a conferir)",
+      "valor": 205,
+      "conferencia": "Foto 1000350173."
+    },
+    {
+      "data": "05/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 3 — Gabriel Barbosa",
+      "valor": 30,
+      "conferencia": "Foto 1000350173."
+    },
+    {
+      "data": "05/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 4 — João Soares (a conferir)",
+      "valor": 183,
+      "conferencia": "Foto 1000350173."
+    },
+    {
+      "data": "05/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 5 — Edvanda Ribeiro (a conferir)",
+      "valor": 26,
+      "conferencia": "Foto 1000350173."
+    },
+    {
+      "data": "05/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Crédito Cielo — 1",
+      "valor": 44,
+      "conferencia": "Foto 1000350173."
+    },
+    {
+      "data": "05/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Crédito Cielo — 2",
+      "valor": 28,
+      "conferencia": "Foto 1000350173."
+    },
+    {
+      "data": "05/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix Getnet",
+      "valor": 150,
+      "conferencia": "Foto 1000350173."
     }
-  ]
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 4169.4
 }
