@@ -1,0 +1,77 @@
+{
+  "atualizadoEm": "10/11/2026 — total de fechamento corrigido por Eric para R$ 7.902,00; detalhamento inicial extraído da foto, sujeito a conferência.",
+  "dataComanda": "10/11/2026",
+  "totalInformadoComanda": 7902,
+  "totalProvisorioComanda": 7902,
+  "detalhamentoPendente": false,
+  "totalLancamentos": 7749.14,
+  "diferencaConferencia": -152.86,
+  "observacao": "Foto 1000352442. O usuário confirmou expressamente o fechamento escrito de R$ 7.902,00, corrigindo leitura anterior. Total prevalece sobre a soma do detalhamento. Itens manuscritos pouco legíveis sinalizados para conferência; não duplicar PDV ou entregas.",
+  "movimentos": [
+    {
+      "data": "10/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 1500,
+      "conferencia": "Leitura visual da comanda de 10/11/2026."
+    },
+    {
+      "data": "10/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1377.5,
+      "conferencia": "Leitura visual da comanda; conferir centavos."
+    },
+    {
+      "data": "10/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 440,
+      "conferencia": "Leitura visual da comanda; conferir valor."
+    },
+    {
+      "data": "10/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 1078.8,
+      "conferencia": "Leitura visual da comanda; conferir centavos."
+    },
+    {
+      "data": "10/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 3192.84,
+      "conferencia": "Leitura aproximada da comanda; conferir valor e centavos."
+    },
+    {
+      "data": "10/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 23,
+      "conferencia": "Leitura visual; natureza de entrada/despesa a conferir."
+    },
+    {
+      "data": "10/11/2026",
+      "tipo": "PIX",
+      "descricao": "Anotação manuscrita 1 — nome a conferir",
+      "valor": 50,
+      "conferencia": "Nome ilegível; valor e meio de pagamento a conferir."
+    },
+    {
+      "data": "10/11/2026",
+      "tipo": "PIX",
+      "descricao": "Anotação manuscrita 2 — nome a conferir",
+      "valor": 14,
+      "conferencia": "Nome ilegível; valor e meio de pagamento a conferir."
+    },
+    {
+      "data": "10/11/2026",
+      "tipo": "PIX",
+      "descricao": "Anotação manuscrita 3 — nome a conferir",
+      "valor": 73,
+      "conferencia": "Nome ilegível; valor e meio de pagamento a conferir."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 7749.14
+}
