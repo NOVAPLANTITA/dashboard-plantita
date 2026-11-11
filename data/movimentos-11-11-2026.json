@@ -1,0 +1,112 @@
+{
+  "atualizadoEm": "11/11/2026 — comanda transcrita da foto, fechamento manuscrito preservado; detalhamento sujeito a conciliação.",
+  "dataComanda": "11/11/2026",
+  "totalInformadoComanda": 10038,
+  "totalProvisorioComanda": 10038,
+  "detalhamentoPendente": false,
+  "totalLancamentos": 10075.35,
+  "diferencaConferencia": 37.35,
+  "observacao": "Foto 1000352706 de 11/11/2026. Total manuscrito R$ 10.038,00 prevalece no controle diário e acumulado mensal; itens transcritos de forma provisória. Meio de pagamento, valores pouco nítidos e possível sobreposição de lançamentos Mercado Pago ainda precisam de conferência. Não duplicar registros de PDV nem entregas.",
+  "movimentos": [
+    {
+      "data": "11/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 1650,
+      "conferencia": "Foto 1000352706. Leitura visual da foto."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1236.75,
+      "conferencia": "Foto 1000352706. Valor manuscrito pouco nítido: leitura provisória, conferir."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 1003,
+      "conferencia": "Foto 1000352706. Leitura visual da foto."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 2065.3,
+      "conferencia": "Foto 1000352706. Valor manuscrito pouco nítido: leitura provisória, conferir."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 3218.4,
+      "conferencia": "Foto 1000352706. Valor com leitura aproximada, conferir centavos."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 23.9,
+      "conferencia": "Foto 1000352706. Leitura visual. Natureza da entrada a conferir."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 1 — nome a conferir",
+      "valor": 60,
+      "conferencia": "Foto 1000352706. Nome manuscrito pouco legível."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 2 — Angélica Rodrigues",
+      "valor": 140,
+      "conferencia": "Foto 1000352706. Leitura visual; valor a conferir."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 3 — Davi (a conferir)",
+      "valor": 169,
+      "conferencia": "Foto 1000352706. Leitura aproximada; valor e nome a conferir."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 4 — nome a conferir",
+      "valor": 50,
+      "conferencia": "Foto 1000352706. Nome manuscrito pouco legível; forma de pagamento a conferir."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "Outros",
+      "descricao": "Leitura da máquina (anotação)",
+      "valor": 165,
+      "conferencia": "Foto 1000352706. Descrição manuscrita aproximada; verificar se é entrada separada ou se já integra os totais de cartão."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Débito Mercado Pago",
+      "valor": 34,
+      "conferencia": "Foto 1000352706. Verificar se este valor já integra o total Mercado Pago, para evitar dupla contagem."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Crédito Mercado Pago 1",
+      "valor": 234,
+      "conferencia": "Foto 1000352706. Verificar se este valor já integra o total Mercado Pago, para evitar dupla contagem."
+    },
+    {
+      "data": "11/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Crédito Mercado Pago 2",
+      "valor": 26,
+      "conferencia": "Foto 1000352706. Verificar se este valor já integra o total Mercado Pago, para evitar dupla contagem."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 10075.35
+}
