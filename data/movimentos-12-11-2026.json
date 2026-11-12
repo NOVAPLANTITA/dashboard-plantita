@@ -1,0 +1,112 @@
+{
+  "atualizadoEm": "12/11/2026 — transcrição da comanda enviada, lançamento único por data; total manuscrito preservado e valores individuais sujeitos a conciliação.",
+  "dataComanda": "12/11/2026",
+  "totalInformadoComanda": 8046,
+  "totalProvisorioComanda": 8046,
+  "detalhamentoPendente": false,
+  "totalLancamentos": 7150.7,
+  "diferencaConferencia": -895.3,
+  "observacao": "Foto 1000353122 de 12/11/2026. Total manuscrito R$ 8.046,00 usado no Controle Diário e acumulado mensal; a soma das linhas digitadas NÃO substitui esse valor. Alguns lançamentos manuscritos (principalmente o PIX de nome pouco legível com R$ 160,00 provisórios) precisam ser conferidos; podem conter milhar omitido, despesa ou duplicação. Todos os itens foram preservados de forma provisória. Não somar novamente valores de PDV nem do Controle de Entregas.",
+  "movimentos": [
+    {
+      "data": "12/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 800,
+      "conferencia": "Foto 1000353122. Valor legível na foto."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1861,
+      "conferencia": "Foto 1000353122. Valor manuscrito lido como R$ 1.861,00; conferir centavos."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 629,
+      "conferencia": "Foto 1000353122. Leitura visual da comanda."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café 1",
+      "valor": 7.5,
+      "conferencia": "Foto 1000353122. A anotação 'café' pode representar despesa: natureza a conferir."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 2679.6,
+      "conferencia": "Foto 1000353122. Leitura provisória do valor manuscrito, conferir dígitos/centavos."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café 2",
+      "valor": 25,
+      "conferencia": "Foto 1000353122. A anotação 'café' pode representar despesa: natureza a conferir."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "PIX",
+      "descricao": "Galo (nome a conferir)",
+      "valor": 75,
+      "conferencia": "Foto 1000353122. Meio de pagamento inferido de marcação na margem; conferir."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "PIX",
+      "descricao": "Nome manuscrito pouco nítido (possível José Cardoso)",
+      "valor": 160,
+      "conferencia": "Foto 1000353122. Leitura do valor especialmente incerta: pode haver algarismo de milhar; não usar o detalhamento como fechamento."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "PIX",
+      "descricao": "Fátima (nome a conferir)",
+      "valor": 135,
+      "conferencia": "Foto 1000353122. Nome e forma de pagamento a conferir."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "PIX",
+      "descricao": "Tati (nome a conferir)",
+      "valor": 82.6,
+      "conferencia": "Foto 1000353122. Valor manuscrito pouco nítido; conferir centavos."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix de compra",
+      "valor": 244,
+      "conferencia": "Foto 1000353122. Natureza da operação e valor a conferir; pode ser saída."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "PIX",
+      "descricao": "Anotação manuscrita 1 — nome a conferir",
+      "valor": 370,
+      "conferencia": "Foto 1000353122. Nome e valor manuscritos pouco nítidos; confirmar."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "PIX",
+      "descricao": "Cliente (anotação pouco legível)",
+      "valor": 25,
+      "conferencia": "Foto 1000353122. Nome e natureza da operação a conferir."
+    },
+    {
+      "data": "12/11/2026",
+      "tipo": "Outros",
+      "descricao": "Compra spray",
+      "valor": 57,
+      "conferencia": "Foto 1000353122. Possível despesa de compra; não está classificada como retirada até conferência."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 7150.7
+}
