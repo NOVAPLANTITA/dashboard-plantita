@@ -1,0 +1,105 @@
+{
+  "atualizadoEm": "13/11/2026 — comanda manuscrita; total de fechamento preservado e detalhamento provisório.",
+  "dataComanda": "13/11/2026",
+  "totalInformadoComanda": 9680,
+  "totalProvisorioComanda": 9680,
+  "detalhamentoPendente": true,
+  "totalLancamentos": 9552.65,
+  "diferencaConferencia": -127.35,
+  "observacao": "Foto 1000353362 enviada em 13/11/2026. Fechamento manuscrito interpretado como R$ 9.680,00. Lançamentos de meios de pagamento são transcrição provisória: valores e nomes pouco nítidos, e a soma NÃO confere com o fechamento. Utilizar total manuscrito no diário e média/acumulado do mês sem duplicar PDV ou entregas. Natureza do café e outras anotações pendente de conferência.",
+  "movimentos": [
+    {
+      "data": "13/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 800,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Valor aparenta R$ 800,00."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1744.8,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Leitura visual provisória, conferir centavos."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 1448.5,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Leitura visual provisória, conferir centavos."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 951.5,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Leitura visual provisória, conferir centavos."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 3991.85,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Leitura visual provisória, conferir dígitos finais."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 27,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Anotação 'Café'; verificar se é despesa ou entrada."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 1 — Paulo Costa (nome a conferir)",
+      "valor": 110,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Nome do pagador e natureza da operação sujeitos a conferência."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 2 — nome a conferir",
+      "valor": 49,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Nome manuscrito pouco legível; conferir se o valor é 49,00."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 3 — Fernanda Alves (nome a conferir)",
+      "valor": 70,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Nome manuscrito e valor sujeitos a conferência."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 4 — Shirley Aparecida (nome a conferir)",
+      "valor": 230,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Nome manuscrito sujeito a conferência."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "Outros",
+      "descricao": "Anotação manuscrita — nome a conferir",
+      "valor": 26,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Anotação pouca legível; verificar meio de pagamento e natureza."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "Outros",
+      "descricao": "Anotação manuscrita — natureza a conferir",
+      "valor": 29,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Anotação pouca legível; verificar meio de pagamento e natureza."
+    },
+    {
+      "data": "13/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pix 5 — Celine Auto Peças (nome a conferir)",
+      "valor": 75,
+      "conferencia": "Foto 1000353362 de 13/11/2026. Nome manuscrito pouco legível; conferir valor e natureza."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 9552.65
+}
