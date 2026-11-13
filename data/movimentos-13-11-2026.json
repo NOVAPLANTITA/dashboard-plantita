@@ -1,12 +1,12 @@
 {
-  "atualizadoEm": "13/11/2026 — comanda manuscrita; total de fechamento preservado e detalhamento provisório.",
+  "atualizadoEm": "13/11/2026 — fechamento corrigido conforme confirmação do usuário: R$ 9.688,00; detalhamento provisório.",
   "dataComanda": "13/11/2026",
-  "totalInformadoComanda": 9680,
-  "totalProvisorioComanda": 9680,
+  "totalInformadoComanda": 9688,
+  "totalProvisorioComanda": 9688,
   "detalhamentoPendente": true,
   "totalLancamentos": 9552.65,
-  "diferencaConferencia": -127.35,
-  "observacao": "Foto 1000353362 enviada em 13/11/2026. Fechamento manuscrito interpretado como R$ 9.680,00. Lançamentos de meios de pagamento são transcrição provisória: valores e nomes pouco nítidos, e a soma NÃO confere com o fechamento. Utilizar total manuscrito no diário e média/acumulado do mês sem duplicar PDV ou entregas. Natureza do café e outras anotações pendente de conferência.",
+  "diferencaConferencia": -135.35,
+  "observacao": "Foto 1000353362 enviada em 13/11/2026. Fechamento manuscrito interpretado como R$ 9.688,00. Lançamentos de meios de pagamento são transcrição provisória: valores e nomes pouco nítidos, e a soma NÃO confere com o fechamento. Utilizar total manuscrito no diário e média/acumulado do mês sem duplicar PDV ou entregas. Natureza do café e outras anotações pendente de conferência. Correção do fechamento de R$ 9.680,00 para R$ 9.688,00 confirmada em 13/11/2026.",
   "movimentos": [
     {
       "data": "13/11/2026",
