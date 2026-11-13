@@ -9,7 +9,7 @@
 </head>
 <body><header class="top"><h1>↗ Movimento Diário</h1><a href="dashboard-v13.html?v=20261022-total-oficial2">← Dashboard</a></header>
 <main class="wrap"><div class="tools"><select id="date" aria-label="Selecionar data" disabled><option>Carregando...</option></select><button id="reload" type="button">↻ Atualizar</button><span id="updated" class="updated" role="status">Carregando os registros...</span></div>
-<section class="kpis"><div class="kpi"><span id="inLabel">Entradas registradas</span><b id="in">—</b></div><div class="kpi neg"><span>Retiradas</span><b id="out">—</b></div><div class="kpi net"><span>Saldo líquido</span><b id="net">—</b></div><div class="kpi month"><span>Total vendido no mês</span><b id="monthTotal">—</b></div><div class="kpi avg"><span>Média diária de vendas no mês</span><b id="dailyAvg">—</b></div></section>
+<section class="kpis"><div class="kpi"><span id="inLabel">Entradas registradas</span><b id="in">—</b></div><div class="kpi neg"><span>Retiradas</span><b id="out">—</b></div><div class="kpi net"><span>Saldo líquido</span><b id="net">—</b></div><div class="kpi month"><span>Vendas no mês até a data</span><b id="monthTotal">—</b></div><div class="kpi avg"><span>Média diária até a data</span><b id="dailyAvg">—</b></div></section>
 <div class="warning" id="warning" role="status"></div><section class="types" id="types"></section><div class="tablewrap"><table><thead><tr><th>Tipo</th><th>Descrição</th><th>Conferência</th><th style="text-align:right">Valor</th></tr></thead><tbody id="body"></tbody></table><div id="empty" class="empty">Carregando movimentos...</div></div></main>
 <script>
 'use strict';
@@ -34,14 +34,19 @@ function render(){
  $('#inLabel').textContent=registroSemFonte?'Registro não localizado':(baseConfirmada?'Total OFICIAL do dia':(baseProvisoria?'Total da comanda (a conferir)':'Entradas registradas'));
  const outgoing=rows.filter(x=>x.tipo==='Retiradas').reduce((s,x)=>s+Number(x.valor||0),0);
  const parts=day.split('/');const monthKey=parts.length===3?parts[1]+'/'+parts[2]:'';
- const monthSales=data.filter(x=>x.tipo!=='Retiradas'&&x.data&&x.data.slice(3)===monthKey);
- const ajustesComanda=bases.filter(b=>(Number.isFinite(b.totalConfirmadoComanda)||Number.isFinite(b.totalProvisorioComanda))&&String(b.dataComanda||'').slice(3)===monthKey).reduce((s,b)=>{
+ const selectedDay=Number(parts[0]);
+ // Acumulado e média são calculados até a data escolhida, nunca com vendas futuras do mês.
+ const isInPeriod=d=>typeof d==='string'&&d.slice(3)===monthKey&&Number(d.slice(0,2))<=selectedDay;
+ const monthSales=data.filter(x=>x.tipo!=='Retiradas'&&isInPeriod(x.data));
+ const monthBases=bases.filter(b=>(Number.isFinite(b.totalConfirmadoComanda)||Number.isFinite(b.totalProvisorioComanda))&&isInPeriod(b.dataComanda));
+ const ajustesComanda=monthBases.reduce((s,b)=>{
   const bruto=(b.movimentos||[]).filter(x=>x.tipo!=='Retiradas'&&x.data===b.dataComanda).reduce((t,x)=>t+Number(x.valor||0),0);
   const totalBase=Number.isFinite(b.totalConfirmadoComanda)?b.totalConfirmadoComanda:b.totalProvisorioComanda;
   return s+Number(totalBase)-bruto;
  },0);
  const monthTotal=monthSales.reduce((s,x)=>s+Number(x.valor||0),0)+ajustesComanda;
- const salesDays=[...new Set(monthSales.map(x=>x.data))];const dailyAvg=salesDays.length?monthTotal/salesDays.length:0;
+ const salesDays=[...new Set([...monthSales.map(x=>x.data),...monthBases.map(b=>b.dataComanda)])];
+ const dailyAvg=salesDays.length?monthTotal/salesDays.length:0;
  $('#in').textContent=registroSemFonte?'—':fmt(incoming);$('#out').textContent=registroSemFonte?'—':fmt(outgoing);$('#net').textContent=registroSemFonte?'—':fmt(incoming-outgoing);$('#monthTotal').textContent=fmt(monthTotal);$('#dailyAvg').textContent=fmt(dailyAvg);
  $('#types').innerHTML=registroSemFonte?'':order.map(t=>`<div class="type"><span>${t}</span><b>${fmt(rows.filter(x=>x.tipo===t).reduce((s,x)=>s+Number(x.valor||0),0))}</b></div>`).join('');
  $('#body').innerHTML=rows.map(x=>`<tr><td><span class="badge">${escapeHtml(x.tipo)}</span></td><td>${escapeHtml(x.descricao||'—')}</td><td>${escapeHtml(x.conferencia||'—')}</td><td class="money">${x.tipo==='Retiradas'?'- ':''}${fmt(x.valor)}</td></tr>`).join('');
