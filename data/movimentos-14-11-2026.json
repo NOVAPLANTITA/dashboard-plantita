@@ -1,0 +1,133 @@
+{
+  "atualizadoEm": "15/11/2026 — inclusão da comanda fotografada; fechamento manuscrito e meios de pagamento provisórios.",
+  "dataComanda": "14/11/2026",
+  "totalInformadoComanda": 10884.1,
+  "totalProvisorioComanda": 10884.1,
+  "detalhamentoPendente": true,
+  "totalLancamentos": 9166.75,
+  "diferencaConferencia": null,
+  "observacao": "Foto 1000353953.jpg recebida em 15/11/2026. Total manuscrito interpretado como R$ 10.884,10 e registrado PROVISORIAMENTE para o Controle Diário e média/acumulado de novembro. Todos os itens visíveis foram preservados com descrição; lançamentos cujo valor não é confiavelmente legível ficam com valor null (a conferir). A soma das linhas numéricas é INCOMPLETA e NÃO deve substituir o total manuscrito nem indicar diferença de caixa. Não duplicar PDV ou entregas. Conferir detalhamento antes de considerar conciliação concluída.",
+  "movimentos": [
+    {
+      "data": "14/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 1100,
+      "conferencia": "Leitura provisória da foto de 14/11; verificar se é R$ 1.100,00."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1405,
+      "conferencia": "Leitura provisória; conferir centavos."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": null,
+      "conferencia": "Anotação parece iniciar por 1.25..., porém algarismos finais ilegíveis; lançamento identificado sem atribuir valor."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 449.05,
+      "conferencia": "Leitura provisória; conferir os centavos."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 4776.3,
+      "conferencia": "Leitura provisória da foto; parece R$ 4.776,30, mas requer confirmação."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café (primeira anotação)",
+      "valor": null,
+      "conferencia": "Valor pouco legível e natureza de entrada/despesa não confirmada."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "PIX",
+      "descricao": "Julieta (nome a conferir)",
+      "valor": 475,
+      "conferencia": "Valor legível, nome provisório."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "PIX",
+      "descricao": "Silvana",
+      "valor": 50,
+      "conferencia": "Valor legível na foto."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "PIX",
+      "descricao": "Robson de Paula (nome a conferir)",
+      "valor": 100,
+      "conferencia": "Valor legível; conferir nome."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "PIX",
+      "descricao": "Douglas Augusto",
+      "valor": 110,
+      "conferencia": "Valor legível; conferir nome."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "PIX",
+      "descricao": "Luciane Bueno (nome a conferir)",
+      "valor": 115,
+      "conferencia": "Valor legível; conferir nome."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "PIX",
+      "descricao": "Andreia (sobrenome a conferir)",
+      "valor": 225,
+      "conferencia": "Valor legível; sobrenome incerto."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "PIX",
+      "descricao": "Tayama Goes (nome a conferir)",
+      "valor": 220,
+      "conferencia": "Valor legível; nome incerto."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "PIX",
+      "descricao": "Priscila (nome a conferir)",
+      "valor": null,
+      "conferencia": "Valor manuscrito pouco legível, parece próximo de R$ 168,00; não adotar sem confirmar."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "PIX",
+      "descricao": "Dido (nome a conferir)",
+      "valor": null,
+      "conferencia": "Valor manuscrito pouco legível, parece próximo de R$ 164,00; não adotar sem confirmar."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "PIX",
+      "descricao": "Manana (nome a conferir)",
+      "valor": 80,
+      "conferencia": "Valor legível; nome incerto."
+    },
+    {
+      "data": "14/11/2026",
+      "tipo": "Outros",
+      "descricao": "Copo / Café (anotação final a conferir)",
+      "valor": 61.4,
+      "conferencia": "Valor aparenta R$ 61,40; confirmar se é receita ou despesa."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": null
+}
