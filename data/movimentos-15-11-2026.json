@@ -1,0 +1,126 @@
+{
+  "atualizadoEm": "15/11/2026 — inclusão da comanda fotografada; fechamento manuscrito e meios de pagamento provisórios.",
+  "dataComanda": "15/11/2026",
+  "totalInformadoComanda": 7791.8,
+  "totalProvisorioComanda": 7791.8,
+  "detalhamentoPendente": true,
+  "totalLancamentos": 2035,
+  "diferencaConferencia": null,
+  "observacao": "Foto 1000353952.jpg recebida em 15/11/2026. Total manuscrito interpretado como R$ 7.791,80 e registrado PROVISORIAMENTE para o Controle Diário e média/acumulado de novembro. Todos os itens visíveis foram preservados com descrição; lançamentos cujo valor não é confiavelmente legível ficam com valor null (a conferir). A soma das linhas numéricas é INCOMPLETA e NÃO deve substituir o total manuscrito nem indicar diferença de caixa. Não duplicar PDV ou entregas. Conferir detalhamento antes de considerar conciliação concluída.",
+  "movimentos": [
+    {
+      "data": "15/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": null,
+      "conferencia": "Aparece 'Dinheiro' no início da comanda; montante não legível de forma confiável."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": null,
+      "conferencia": "Valor pouco legível, possivelmente R$ 994,...; não atribuído."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": null,
+      "conferencia": "Valor pouco legível, possivelmente R$ 323,...; não atribuído."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": null,
+      "conferencia": "Valor pouco legível, possivelmente R$ 716,...; não atribuído."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": null,
+      "conferencia": "Valor pouco legível, possivelmente R$ 2.803,...; não atribuído."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "Outros",
+      "descricao": "Comanda balcão (descrição a conferir)",
+      "valor": 350,
+      "conferencia": "Parece R$ 350,00; verificar natureza."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "PIX",
+      "descricao": "Regina (sobrenome a conferir)",
+      "valor": 250,
+      "conferencia": "Valor aparente R$ 250,00; confirmar nome."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pagador 2 — nome a conferir",
+      "valor": 32,
+      "conferencia": "Valor aparente R$ 32,00."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pagador 3 — nome a conferir",
+      "valor": 225,
+      "conferencia": "Valor aparente R$ 225,00."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pagador 4 — nome a conferir",
+      "valor": 95,
+      "conferencia": "Valor aparente R$ 95,00."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "Outros",
+      "descricao": "Anotação 1 — tipo a conferir",
+      "valor": 30,
+      "conferencia": "Valor aparente R$ 30,00; não identificada natureza."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "Outros",
+      "descricao": "Anotação 2 — tipo a conferir",
+      "valor": 35,
+      "conferencia": "Valor aparente R$ 35,00; não identificada natureza."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "Outros",
+      "descricao": "Anotação 3 — tipo a conferir",
+      "valor": 158,
+      "conferencia": "Valor aparente R$ 158,00; não identificada natureza."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "Outros",
+      "descricao": "Gustavo / anotação longa (a conferir)",
+      "valor": null,
+      "conferencia": "Nome e valor ilegíveis/ausentes; anotação preservada."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "PIX",
+      "descricao": "João (nome a conferir)",
+      "valor": 730,
+      "conferencia": "Valor aparente R$ 730,00; conferir."
+    },
+    {
+      "data": "15/11/2026",
+      "tipo": "PIX",
+      "descricao": "Téo (nome a conferir)",
+      "valor": 130,
+      "conferencia": "Valor aparente R$ 130,00; conferir."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": null
+}
