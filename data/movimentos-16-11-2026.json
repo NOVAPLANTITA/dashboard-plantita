@@ -1,0 +1,113 @@
+{
+  "atualizadoEm": "16/11/2026 — comanda fotografada e acréscimo de R$ 191,00 confirmado pelo usuário",
+  "dataComanda": "16/11/2026",
+  "totalInformadoComanda": 8014,
+  "acrescimoInformado": 191,
+  "totalConfirmadoComanda": 8205,
+  "detalhamentoPendente": true,
+  "totalLancamentos": null,
+  "diferencaConferencia": null,
+  "observacao": "Comanda da foto 1000354397.jpg: fechamento manuscrito R$ 8.014,00. Usuário determinou somar R$ 191,00, resultando no fechamento oficial do Controle Diário de R$ 8.205,00. Lançamentos detalhados são transcrição visual parcial; valores duvidosos ficam null e não devem ser tratados como zero. Total oficial prevalece no diário, acumulado e média de novembro. Acréscimo de R$ 191,00 já está incluído no total de R$ 8.205,00 e NÃO deve ser somado novamente como movimento isolado. Não duplicar PDV nem entregas.",
+  "movimentos": [
+    {
+      "data": "16/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 1550,
+      "conferencia": "Leitura da fotografia 1000354397.jpg; conferir na conciliação final."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1689,
+      "conferencia": "Valor transcrito visualmente; conferir dígitos."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 1430.5,
+      "conferencia": "Valor transcrito visualmente; conferir centavos."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 985,
+      "conferencia": "Valor transcrito visualmente; conferir."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 1624.5,
+      "conferencia": "Valor transcrito visualmente; conferir centavos."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 23.9,
+      "conferencia": "Natureza da anotação (entrada/despesa) a conferir; já contemplada no total oficial informado."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — anotação 1 (nome a conferir)",
+      "valor": null,
+      "conferencia": "Nome e valor pouco nítidos na foto; verificar original."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — anotação 2 (nome a conferir)",
+      "valor": null,
+      "conferencia": "Nome e valor pouco nítidos na foto; verificar original."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — anotação 3 (nome a conferir)",
+      "valor": null,
+      "conferencia": "Nome e valor pouco nítidos na foto; verificar original."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — anotação 4 (nome a conferir)",
+      "valor": null,
+      "conferencia": "Nome e valor pouco nítidos na foto; verificar original."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — anotação 5 (nome a conferir)",
+      "valor": null,
+      "conferencia": "Nome e valor pouco nítidos na foto; verificar original."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "Outros",
+      "descricao": "Anotação manuscrita — descrição a conferir",
+      "valor": null,
+      "conferencia": "Item do fim da comanda; descrição e valor a conferir."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "Outros",
+      "descricao": "Anotação manuscrita — Diana/Gustavo (nome a conferir)",
+      "valor": null,
+      "conferencia": "Item do fim da comanda; valor a conferir."
+    },
+    {
+      "data": "16/11/2026",
+      "tipo": "Outros",
+      "descricao": "Anotação manuscrita — Gustavo (nome a conferir)",
+      "valor": null,
+      "conferencia": "Item do fim da comanda; valor a conferir."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": null
+}
