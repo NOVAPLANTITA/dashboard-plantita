@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "17/11/2026 — incluídas 10 comandas do dia 07/11 (R$ 1.640,00), preservando os registros anteriores de novembro.",
+  "atualizadoEm": "17/11/2026 — 17 comandas de 07/11 no arquivo do dia, total provisório R$ 2.657,00 (7 novas comandas adicionadas às 10 anteriores); divergência e foto desfocada sinalizadas.",
   "descricao": "Índice único para dashboard, comandas e rações por marca. Acrescentar novas fontes aqui junto dos novos registros; páginas não precisam de alteração mensal.",
   "fontes": [
     "data/comandas-entrega.json",
