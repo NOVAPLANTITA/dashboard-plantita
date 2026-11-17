@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "17/11/2026 — inclusão de 10 comandas fotografadas de 07/11/2026, total R$ 1.640,00; leituras ambíguas sinalizadas para conferência. Não duplicar no Controle Diário.",
+  "atualizadoEm": "17/11/2026 — 17 comandas de 07/11/2026, total provisório conforme valores gerais escritos R$ 2.657,00. Acrescentadas sete fotos 1000354594 a 1000354588, sem duplicar as 10 anteriores. Divergência R$ 100,00 na comanda Eduardo (1000354588) e leitura incerta R$ 114,00 em Eliana (1000354594). Não somar novamente ao Controle Diário.",
   "comandas": [
     {
       "data": "07/11/2026",
@@ -140,6 +140,104 @@
       "prazo": "16h15 (anotação manuscrita)",
       "conferencia": "Total geral R$ 105,00 = 70+30+5. Conferir cliente, nomes dos produtos e horário.",
       "origemFoto": "1000354595.jpg"
+    },
+    {
+      "data": "07/11/2026",
+      "telefone": "",
+      "cliente": "Eliana (leitura aproximada)",
+      "endereco": "Vargas (anotação parcial)",
+      "descricao": "1 Magnus ... 15 kg (variante pouco legível); valor manuscrito lido como R$ 114,00",
+      "valorProduto": 114,
+      "taxaEntrega": 0,
+      "total": 114,
+      "pagamento": "Pix (anotação manuscrita)",
+      "prazo": "",
+      "conferencia": "PROVISÓRIO: fotografia desfocada; valor geral parece R$ 114,00, conferir no original. Produto e endereço incompletos.",
+      "origemFoto": "1000354594.jpg"
+    },
+    {
+      "data": "07/11/2026",
+      "telefone": "",
+      "cliente": "Valdete (leitura aproximada)",
+      "endereco": "",
+      "descricao": "2 Magnus (R$ 100,00 cada, R$ 200,00); 1 kg ração para gato Magnus (leitura aproximada) R$ 14,00",
+      "valorProduto": 214,
+      "taxaEntrega": 0,
+      "total": 214,
+      "pagamento": "PG (anotação manuscrita; confirmar)",
+      "prazo": "",
+      "conferencia": "Total geral R$ 214,00 = 200+14. Confirmar nome/linha de ambos os produtos e nome da cliente.",
+      "origemFoto": "1000354593.jpg"
+    },
+    {
+      "data": "07/11/2026",
+      "telefone": "",
+      "cliente": "Sérgio",
+      "endereco": "",
+      "descricao": "1 Magnus (apresentação não indicada) R$ 105,00",
+      "valorProduto": 105,
+      "taxaEntrega": 0,
+      "total": 105,
+      "pagamento": "Cartão (anotação parece riscada; conferir)",
+      "prazo": "",
+      "conferencia": "Total geral R$ 105,00; confirmar linha, peso e pagamento.",
+      "origemFoto": "1000354592.jpg"
+    },
+    {
+      "data": "07/11/2026",
+      "telefone": "",
+      "cliente": "Cliente a confirmar (nome parece '... corina')",
+      "endereco": "",
+      "descricao": "1 Origens Sênior (leitura aproximada) R$ 140,00; 3 kg Golden carne R$ 60,00; sachê R$ 14,00",
+      "valorProduto": 214,
+      "taxaEntrega": 0,
+      "total": 214,
+      "pagamento": "PG (anotação manuscrita; confirmar)",
+      "prazo": "",
+      "conferencia": "Total geral R$ 214,00 = 140+60+14. Conferir nome da cliente, quantidade/linha dos produtos.",
+      "origemFoto": "1000354591.jpg"
+    },
+    {
+      "data": "07/11/2026",
+      "telefone": "",
+      "cliente": "Adriana",
+      "endereco": "",
+      "descricao": "Milho R$ 60,00; taxa de entrega R$ 5,00",
+      "valorProduto": 60,
+      "taxaEntrega": 5,
+      "total": 65,
+      "pagamento": "Cartão (anotação riscada; conferir)",
+      "prazo": "",
+      "conferencia": "Total geral R$ 65,00 = 60+5. Confirmar peso do milho e pagamento.",
+      "origemFoto": "1000354590.jpg"
+    },
+    {
+      "data": "07/11/2026",
+      "telefone": "",
+      "cliente": "Teti (leitura aproximada)",
+      "endereco": "... 12 (endereço parcial)",
+      "descricao": "1 Special (marca ou linha não totalmente legível) R$ 100,00; taxa de entrega R$ 5,00",
+      "valorProduto": 100,
+      "taxaEntrega": 5,
+      "total": 105,
+      "pagamento": "Cartão (anotação riscada; conferir)",
+      "prazo": "",
+      "conferencia": "Total geral R$ 105,00 = 100+5. Confirmar endereço, nome do produto, cliente e pagamento.",
+      "origemFoto": "1000354589.jpg"
+    },
+    {
+      "data": "07/11/2026",
+      "telefone": "",
+      "cliente": "Eduardo",
+      "endereco": "Avenida ... (endereço parcial)",
+      "descricao": "1 Magnus Chips 20 kg R$ 250,00; Origens filhote gato R$ 50,00. Itens escritos somam R$ 300,00, porém total geral manuscrito parece R$ 200,00.",
+      "valorProduto": 200,
+      "taxaEntrega": 0,
+      "total": 200,
+      "pagamento": "Não informado",
+      "prazo": "",
+      "conferencia": "PROVISÓRIO — DIVERGÊNCIA DE R$ 100,00: soma dos itens R$ 300,00 (250+50), mas total geral manuscrito lido como R$ 200,00. Registrar total da comanda sem correção automática; conferir antes de fechamento financeiro.",
+      "origemFoto": "1000354588.jpg"
     }
   ]
 }
