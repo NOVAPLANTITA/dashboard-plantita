@@ -1,0 +1,126 @@
+{
+  "atualizadoEm": "18/11/2026 — comanda fotografada; total manuscrito cadastrado provisoriamente",
+  "dataComanda": "18/11/2026",
+  "totalInformadoComanda": 10733,
+  "totalProvisorioComanda": 10733,
+  "detalhamentoPendente": true,
+  "totalLancamentos": 10636.05,
+  "diferencaConferencia": 96.95,
+  "observacao": "Foto 1000355045.jpg recebida em 18/11/2026. Fechamento manuscrito lido como R$ 10.733,00, usado provisoriamente no Controle Diário, acumulado e média de novembro. Transcrição de 16 linhas sujeita a conferência; soma visual R$ 10636,05 difere do total manuscrito em R$ 96,95. Possível natureza de despesa da Diária João e nomes PIX ainda requerem conciliação. O fechamento manuscrito prevalece para o total do dia e não deve ser somado como movimento adicional. Não duplicar dados do PDV, granel ou Controle de Entregas. Não tratar ausência de comprovantes em outras datas como zero.",
+  "movimentos": [
+    {
+      "data": "18/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 1200,
+      "conferencia": "Valor manuscrito legível."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1548,
+      "conferencia": "Valor manuscrito legível."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 663.8,
+      "conferencia": "Valor manuscrito legível."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 2842.7,
+      "conferencia": "Centavos lidos na fotografia; conferir."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 2965.15,
+      "conferencia": "Valor manuscrito legível."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 29,
+      "conferencia": "Natureza do valor a conferir; não classificado como retirada automaticamente."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "PIX",
+      "descricao": "Márcia Regina",
+      "valor": 291,
+      "conferencia": "Valor manuscrito em azul; conferir."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "PIX",
+      "descricao": "Bruna",
+      "valor": 90.6,
+      "conferencia": "Valor manuscrito; conferir."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — nome a conferir (parece Sine)",
+      "valor": 56.8,
+      "conferencia": "Nome e valor precisam de conferência no original."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "PIX",
+      "descricao": "Flávio",
+      "valor": 106,
+      "conferencia": "Nome lido visualmente; conferir."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "PIX",
+      "descricao": "Pedro Alexandrino",
+      "valor": 100,
+      "conferencia": "Nome a conferir."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "PIX",
+      "descricao": "M.G. Transportes (1)",
+      "valor": 135,
+      "conferencia": "Valor lido visualmente."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "PIX",
+      "descricao": "M.G. Transportes (2)",
+      "valor": 355,
+      "conferencia": "Valor lido visualmente."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "PIX",
+      "descricao": "Jefferson Leandro",
+      "valor": 67,
+      "conferencia": "Nome a conferir."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "PIX",
+      "descricao": "Associação Marumbi (nome a conferir)",
+      "valor": 56,
+      "conferencia": "Descrição manuscrita pouco nítida; conferir."
+    },
+    {
+      "data": "18/11/2026",
+      "tipo": "Outros",
+      "descricao": "Diária João",
+      "valor": 130,
+      "conferencia": "Verificar se é pagamento/retirada; mantido em Outros até conciliação, sem dedução automática."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 10636.05
+}
