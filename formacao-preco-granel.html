@@ -57,6 +57,18 @@ td small{display:block;color:var(--muted);font-size:10px;line-height:1.35;margin
 button.simulate{padding:7px 9px;background:#15443e;color:#c7ffeb;border-color:#2d7562;font-size:11px;margin-bottom:4px}
 @media(max-width:900px){.simgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.simresults{grid-template-columns:repeat(2,minmax(0,1fr))}.simgrid button{min-height:43px}}
 @media(max-width:480px){.simgrid{grid-template-columns:1fr 1fr}.simgrid .field:first-child{grid-column:1/-1}.simgrid button{font-size:11px}.simresults{grid-template-columns:1fr 1fr}.simresult b{font-size:18px}}
+
+/* Modos do simulador: por produto ou valores livres */
+.sim-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:13px 0 16px}
+.sim-tabs button{border-radius:12px;padding:12px 16px;background:#103138;color:#d4eeeb}
+.sim-tabs button.active{background:var(--green);color:#002a1c;border-color:var(--green)}
+.sim-tabs button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.sim-free-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:end}
+.sim-free-fields .field select,.sim-free-fields .field input{width:100%;min-height:43px;background:#06191d;border:1px solid #3c6970;color:white;padding:11px;border-radius:9px;font-size:14px}
+.free-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+[hidden]{display:none!important}
+@media(max-width:900px){.sim-free-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.sim-free-fields{grid-template-columns:1fr}.sim-tabs button{flex:1;font-size:11px;padding:11px 8px}}
 </style>
 </head>
 <body>
@@ -82,6 +94,11 @@ button.simulate{padding:7px 9px;background:#15443e;color:#c7ffeb;border-color:#2
   </div>
   <section class="card" id="simulador">
     <div class="toolbar"><h2>🧮 Simulador de preços do granel</h2><span class="tag warn">SIMULAÇÃO • NÃO ALTERA O PREÇO CADASTRADO</span></div>
+    <div class="sim-tabs" aria-label="Modo de simulação">
+      <button id="modeProduct" class="active" type="button" aria-pressed="true">📦 Produto cadastrado</button>
+      <button id="modeFree" type="button" aria-pressed="false">✏️ Valores livres (sem produto)</button>
+    </div>
+    <div id="simProductMode">
     <p class="simexplain">Escolha uma ração, digite um possível preço de venda por kg e confira na hora o lucro projetado para o saco inteiro, a porcentagem sobre o custo e a diferença para o preço atual.</p>
     <div class="simgrid">
       <div class="field"><label for="simProduct">Produto para simular</label><select id="simProduct" aria-label="Produto para simular"></select></div>
@@ -99,6 +116,32 @@ button.simulate{padding:7px 9px;background:#15443e;color:#c7ffeb;border-color:#2
     <div id="simStatus" class="simstatus warn" role="status" aria-live="polite">Selecione um produto para começar.</div>
     <p class="simexplain" id="simDetails"></p>
     <p class="foot">O simulador usa o peso e o custo exibidos na tabela abaixo. O preço testado é temporário e <b>não é salvo</b>, nem enviado ao PDV, à dashboard de vendas ou ao Google Sheets.</p>
+    </div>
+    <div id="simFreeMode" hidden>
+      <p class="simexplain">Digite o <b>custo</b> e o <b>valor de venda</b> de qualquer ração, mesmo que ela não esteja cadastrada. Se a venda for por quilo, informe também o peso do saco. Não há necessidade de selecionar produto.</p>
+      <div class="sim-free-fields">
+        <div class="field"><label for="freeCost">Custo total do saco (R$)</label><input id="freeCost" inputmode="decimal" autocomplete="off" placeholder="Ex.: 200,00"></div>
+        <div class="field"><label for="freeSaleMode">Como informar a venda?</label>
+          <select id="freeSaleMode"><option value="total">Valor total de venda (R$)</option><option value="kg">Preço de venda por kg (R$)</option></select>
+        </div>
+        <div class="field"><label for="freeSale" id="freeSaleLabel">Valor total de venda (R$)</label><input id="freeSale" inputmode="decimal" autocomplete="off" placeholder="Ex.: 250,00"></div>
+        <div class="field"><label for="freeWeight">Peso do saco (kg) <span id="weightRequirement">— opcional</span></label><input id="freeWeight" inputmode="decimal" autocomplete="off" placeholder="Ex.: 20"></div>
+      </div>
+      <div class="free-actions">
+        <button type="button" class="primary" id="freeMinimum">Simular mínimo de 15%</button>
+        <button type="button" id="freeClear">Limpar simulação</button>
+      </div>
+      <div class="simresults" aria-live="polite">
+        <div class="simresult"><span>Valor total da venda</span><b id="freeTotal">—</b></div>
+        <div class="simresult"><span>Lucro / prejuízo (R$)</span><b id="freeProfit">—</b></div>
+        <div class="simresult"><span>Lucro sobre custo (%)</span><b id="freeMarkup">—</b></div>
+        <div class="simresult"><span>Margem sobre a venda (%)</span><b id="freeMargin">—</b></div>
+        <div class="simresult"><span>Preço mínimo para 15%</span><b id="freeMin">—</b></div>
+      </div>
+      <div id="freeStatus" class="simstatus warn" role="status" aria-live="polite">Digite custo e venda para calcular.</div>
+      <p class="simexplain" id="freeDetails"></p>
+      <p class="foot">Simulação livre: os valores digitados <b>não são salvos</b> e não alteram a tabela de produtos, o PDV, o estoque ou os valores oficiais.</p>
+    </div>
   </section>
   <section class="card">
     <div class="toolbar"><h2>Tabela de formação e conferência</h2><div><button id="reset" type="button">Restaurar valores da imagem</button><button class="secondary" id="export" type="button">Baixar CSV</button></div></div>
@@ -191,6 +234,74 @@ function render(){
  fillSimulatorOptions();
 }
 
+
+/* Simulação livre não usa nem altera os dados da tabela. */
+function setSimulationMode(free){
+ $('simProductMode').hidden=free;
+ $('simFreeMode').hidden=!free;
+ $('modeProduct').classList.toggle('active',!free);
+ $('modeFree').classList.toggle('active',free);
+ $('modeProduct').setAttribute('aria-pressed',String(!free));
+ $('modeFree').setAttribute('aria-pressed',String(free));
+ if(free)updateFreeSimulation();
+}
+function formatMinimum(n){
+ // Uso de centavos arredondados para cima para preservar a meta.
+ return Math.ceil(n*100-1e-9)/100;
+}
+function updateFreeSimulation(){
+ var c=parseNumber($('freeCost').value),saleInput=parseNumber($('freeSale').value),
+     weightText=$('freeWeight').value.trim(),w=weightText?parseNumber(weightText):NaN,
+     kgMode=$('freeSaleMode').value==='kg';
+ $('freeSaleLabel').textContent=kgMode?'Preço de venda por kg (R$)':'Valor total de venda (R$)';
+ $('freeSale').placeholder=kgMode?'Ex.: 14,50':'Ex.: 250,00';
+ $('weightRequirement').textContent=kgMode?'— obrigatório':'— opcional';
+ var status=$('freeStatus'),details=$('freeDetails');
+ function clear(message){
+  ['freeTotal','freeProfit','freeMarkup','freeMargin','freeMin'].forEach(function(id){$(id).textContent='—'});
+  status.className='simstatus warn';status.textContent=message;details.textContent='';
+ }
+ if(!Number.isFinite(c)||c<=0){clear('Digite um custo maior que zero para calcular.');return}
+ var minTotal=formatMinimum(c*1.15);
+ var hasWeight=weightText!==''&&Number.isFinite(w)&&w>0;
+ var minKg=hasWeight?formatMinimum(c*1.15/w):NaN;
+ $('freeMin').textContent=money(minTotal)+' total'+(hasWeight?' • '+money(minKg)+'/kg':'');
+ if(!Number.isFinite(saleInput)||saleInput<0){clear('Informe um valor de venda válido (zero ou maior).');$('freeMin').textContent=money(minTotal)+' total'+(hasWeight?' • '+money(minKg)+'/kg':'');return}
+ if(kgMode&&!hasWeight){clear('Para simular uma venda por kg, informe o peso do saco maior que zero.');$('freeMin').textContent=money(minTotal)+' total';return}
+ if(weightText!==''&&!hasWeight){clear('Informe um peso válido maior que zero, ou deixe o campo em branco.');$('freeMin').textContent=money(minTotal)+' total';return}
+ var total=kgMode?saleInput*w:saleInput,profit=total-c,markup=profit/c*100,
+     margin=total>0?profit/total*100:NaN,approved=profit+1e-8>=c*0.15;
+ $('freeTotal').textContent=money(total);
+ $('freeProfit').textContent=money(profit);
+ $('freeProfit').style.color=profit<0?'var(--red)':'var(--green)';
+ $('freeMarkup').textContent=percent(markup);
+ $('freeMarkup').style.color=approved?'var(--green)':'var(--red)';
+ $('freeMargin').textContent=Number.isFinite(margin)?percent(margin):'—';
+ status.className='simstatus '+(approved?'good':'bad');
+ status.textContent=approved?'✓ PREÇO APROVADO — lucro de '+percent(markup)+' sobre o custo.':
+    profit<0?'✕ PREJUÍZO — o valor de venda está abaixo do custo.':
+    '✕ ABAIXO DA META DE 15% — lucro de '+percent(markup)+' sobre o custo.';
+ details.textContent='Custo informado: '+money(c)+'. Venda simulada: '+money(total)+
+     '. Valor mínimo para alcançar 15%: '+money(minTotal)+
+     (hasWeight?' no saco, ou '+money(minKg)+'/kg.':' no total.')+
+     ' Diferença para o mínimo: '+(total-minTotal>=0?'+':'')+money(total-minTotal)+'.';
+}
+$('modeProduct').addEventListener('click',function(){setSimulationMode(false)});
+$('modeFree').addEventListener('click',function(){setSimulationMode(true)});
+['freeCost','freeSale','freeWeight'].forEach(function(id){$(id).addEventListener('input',updateFreeSimulation)});
+$('freeSaleMode').addEventListener('change',function(){$('freeSale').value='';updateFreeSimulation()});
+$('freeMinimum').addEventListener('click',function(){
+ var cost=parseNumber($('freeCost').value),mode=$('freeSaleMode').value,w=parseNumber($('freeWeight').value);
+ if(!(cost>0)){updateFreeSimulation();return}
+ if(mode==='kg'&&!(w>0)){$('freeStatus').className='simstatus warn';$('freeStatus').textContent='Informe o peso do saco para calcular o mínimo por kg.';return}
+ var suggested=mode==='kg'?formatMinimum(cost*1.15/w):formatMinimum(cost*1.15);
+ $('freeSale').value=decimal(suggested);updateFreeSimulation();
+});
+$('freeClear').addEventListener('click',function(){
+ ['freeCost','freeSale','freeWeight'].forEach(function(id){$(id).value=''});
+ $('freeSaleMode').value='total';updateFreeSimulation();$('freeCost').focus();
+});
+
 var simIndex=0;
 function fillSimulatorOptions(){
  var select=$('simProduct'),previous=simIndex;
@@ -259,7 +370,7 @@ $('tbody').addEventListener('change',function(e){
 });
 $('tbody').addEventListener('click',function(e){
  var s=e.target.closest('button[data-simulate]');
- if(s){simIndex=Number(s.dataset.simulate);$('simProduct').value=String(simIndex);resetSimulationToCurrent();$('simulador').scrollIntoView({behavior:'smooth',block:'start'});return}
+ if(s){setSimulationMode(false);simIndex=Number(s.dataset.simulate);$('simProduct').value=String(simIndex);resetSimulationToCurrent();$('simulador').scrollIntoView({behavior:'smooth',block:'start'});return}
  var b=e.target.closest('button[data-remove]');if(!b)return;
  var i=Number(b.dataset.remove);
  if(!rows[i])return;
@@ -284,6 +395,7 @@ $('export').addEventListener('click',function(){
 });
 render();
 resetSimulationToCurrent();
+updateFreeSimulation();
 })();
 </script>
 </body>
