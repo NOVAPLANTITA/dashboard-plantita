@@ -40,6 +40,23 @@ td small{display:block;color:var(--muted);font-size:10px;line-height:1.35;margin
 #message{min-height:18px;color:#abeccf;font-size:12px;margin-top:10px}
 @media(max-width:800px){.hero{grid-template-columns:1fr}.target strong{font-size:42px}.kpis{grid-template-columns:repeat(2,1fr)}.add{grid-template-columns:repeat(2,minmax(0,1fr))}.add .field:first-child{grid-column:1/-1}.add button{grid-column:1/-1}h1{font-size:18px}}
 @media(max-width:420px){.kpi b{font-size:20px}header{padding:11px}nav a{font-size:11px;padding:8px}}
+
+/* Simulador independente: nenhum valor de teste altera a tabela */
+.simgrid{display:grid;grid-template-columns:1.35fr 1fr auto auto;align-items:end;gap:12px}
+.simgrid .field select,.simgrid .field input{width:100%;min-height:43px;background:#06191d;border:1px solid #3c6970;color:white;padding:11px;border-radius:9px;font:14px Arial,sans-serif}
+.simgrid .field input:focus,.simgrid .field select:focus{outline:2px solid var(--green);outline-offset:1px}
+.simresults{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:14px}
+.simresult{background:#0b272b;border:1px solid #29575c;border-radius:13px;padding:13px;min-width:0}
+.simresult span{display:block;font-size:11px;color:var(--muted);line-height:1.4}
+.simresult b{display:block;font-size:20px;margin-top:8px;overflow-wrap:anywhere}
+.simstatus{margin-top:13px;padding:13px;border:1px solid #34565c;border-radius:12px;font-weight:800}
+.simstatus.good{color:#8bffc1;border-color:#2c865b;background:#123b2c}
+.simstatus.bad{color:#ffd0d3;border-color:#925059;background:#3b2027}
+.simstatus.warn{color:#ffe39b;border-color:#866e32;background:#3b311d}
+.simexplain{font-size:12px;color:#b8d1ce;line-height:1.6;margin:9px 0 0}
+button.simulate{padding:7px 9px;background:#15443e;color:#c7ffeb;border-color:#2d7562;font-size:11px;margin-bottom:4px}
+@media(max-width:900px){.simgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.simresults{grid-template-columns:repeat(2,minmax(0,1fr))}.simgrid button{min-height:43px}}
+@media(max-width:480px){.simgrid{grid-template-columns:1fr 1fr}.simgrid .field:first-child{grid-column:1/-1}.simgrid button{font-size:11px}.simresults{grid-template-columns:1fr 1fr}.simresult b{font-size:18px}}
 </style>
 </head>
 <body>
@@ -63,6 +80,26 @@ td small{display:block;color:var(--muted);font-size:10px;line-height:1.35;margin
     <div class="kpi bad"><span>Abaixo da meta / inválidos</span><b id="review">—</b></div>
     <div class="kpi"><span>Meta por saco</span><b>15%</b></div>
   </div>
+  <section class="card" id="simulador">
+    <div class="toolbar"><h2>🧮 Simulador de preços do granel</h2><span class="tag warn">SIMULAÇÃO • NÃO ALTERA O PREÇO CADASTRADO</span></div>
+    <p class="simexplain">Escolha uma ração, digite um possível preço de venda por kg e confira na hora o lucro projetado para o saco inteiro, a porcentagem sobre o custo e a diferença para o preço atual.</p>
+    <div class="simgrid">
+      <div class="field"><label for="simProduct">Produto para simular</label><select id="simProduct" aria-label="Produto para simular"></select></div>
+      <div class="field"><label for="simPrice">Novo preço por kg (R$)</label><input id="simPrice" inputmode="decimal" aria-label="Novo preço simulado por quilo" placeholder="Ex.: 17,50"></div>
+      <button type="button" id="simCurrent">Usar preço atual</button>
+      <button type="button" class="primary" id="simMinimum">Simular mínimo de 15%</button>
+    </div>
+    <div class="simresults" aria-live="polite">
+      <div class="simresult"><span>Preço atual / kg</span><b id="simActual">—</b></div>
+      <div class="simresult"><span>Venda total simulada</span><b id="simTotal">—</b></div>
+      <div class="simresult"><span>Lucro simulado por saco</span><b id="simProfit">—</b></div>
+      <div class="simresult"><span>Lucro sobre custo</span><b id="simMarkup">—</b></div>
+      <div class="simresult"><span>Diferença para venda atual / saco</span><b id="simDifference">—</b></div>
+    </div>
+    <div id="simStatus" class="simstatus warn" role="status" aria-live="polite">Selecione um produto para começar.</div>
+    <p class="simexplain" id="simDetails"></p>
+    <p class="foot">O simulador usa o peso e o custo exibidos na tabela abaixo. O preço testado é temporário e <b>não é salvo</b>, nem enviado ao PDV, à dashboard de vendas ou ao Google Sheets.</p>
+  </section>
   <section class="card">
     <div class="toolbar"><h2>Tabela de formação e conferência</h2><div><button id="reset" type="button">Restaurar valores da imagem</button><button class="secondary" id="export" type="button">Baixar CSV</button></div></div>
     <div class="scroller">
@@ -144,14 +181,75 @@ function render(){
    '<td class="right money">'+(v?money(v.total):'—')+'</td><td class="right money '+(v&&v.profit<0?'negative':'')+'">'+(v?money(v.profit):'—')+'</td>'+
    '<td class="right '+(v&&!v.ok?'negative':'')+'">'+(v?percent(v.markup):'—')+'</td><td class="right suggested">'+(v?money(v.minimum):'—')+'</td>'+
    '<td>'+status+(v&&!v.ok?'<small>Faltam '+money(Math.max(0,v.minimum-Number(r.price)))+'/kg para chegar à meta</small>':'')+'</td>'+
-   '<td><button class="remove" type="button" data-remove="'+i+'" aria-label="Excluir '+esc(r.name)+'">Excluir</button></td></tr>';
+   '<td><button class="simulate" type="button" data-simulate="'+i+'" aria-label="Simular preço de '+esc(r.name)+'">Simular</button> <button class="remove" type="button" data-remove="'+i+'" aria-label="Excluir '+esc(r.name)+'">Excluir</button></td></tr>';
  });
  if(!rows.length)html='<tr><td colspan="10">Nenhum produto cadastrado. Use o formulário abaixo para adicionar.</td></tr>';
  $('tbody').innerHTML=html;
  $('count').textContent=String(rows.length);
  $('approved').textContent=String(passed);
  $('review').textContent=String(rows.length-passed);
+ fillSimulatorOptions();
 }
+
+var simIndex=0;
+function fillSimulatorOptions(){
+ var select=$('simProduct'),previous=simIndex;
+ select.innerHTML=rows.map(function(r,i){return '<option value="'+i+'">'+esc(r.name||'Produto sem nome')+'</option>'}).join('');
+ if(!rows.length){
+  simIndex=0; $('simPrice').value=''; select.disabled=true; $('simPrice').disabled=true;
+  $('simCurrent').disabled=true; $('simMinimum').disabled=true;
+ }else{
+  simIndex=Math.min(Math.max(0,previous),rows.length-1);
+  select.disabled=false; $('simPrice').disabled=false;
+  $('simCurrent').disabled=false; $('simMinimum').disabled=false; select.value=String(simIndex);
+ }
+ updateSimulation();
+}
+function resetSimulationToCurrent(){
+ var row=rows[simIndex];
+ $('simPrice').value=row&&Number.isFinite(Number(row.price))?decimal(Number(row.price)):'';
+ updateSimulation();
+}
+function updateSimulation(){
+ var row=rows[simIndex],status=$('simStatus'),price=parseNumber($('simPrice').value);
+ if(!row){
+  ['simActual','simTotal','simProfit','simMarkup','simDifference'].forEach(function(id){$(id).textContent='—'});
+  status.className='simstatus warn';status.textContent='Adicione um produto para simular.';$('simDetails').textContent='';return;
+ }
+ $('simActual').textContent=Number.isFinite(Number(row.price))?money(Number(row.price)):'—';
+ var v=calc({weight:row.weight,cost:row.cost,price:price}),current=calc(row);
+ if(!v){
+  ['simTotal','simProfit','simMarkup','simDifference'].forEach(function(id){$(id).textContent='—'});
+  status.className='simstatus warn';status.textContent='Informe um preço por kg válido (zero ou maior).';
+  $('simDetails').textContent='';return;
+ }
+ $('simTotal').textContent=money(v.total);
+ $('simProfit').textContent=money(v.profit);
+ $('simProfit').style.color=v.profit<0?'var(--red)':'var(--green)';
+ $('simMarkup').textContent=percent(v.markup);
+ $('simMarkup').style.color=v.ok?'var(--green)':'var(--red)';
+ var change=current?v.total-current.total:NaN;
+ $('simDifference').textContent=Number.isFinite(change)?(change>0?'+':'')+money(change):'—';
+ $('simDifference').style.color=change<0?'var(--red)':change>0?'var(--green)':'var(--txt)';
+ status.className='simstatus '+(v.ok?'good':'bad');
+ status.textContent=v.ok?'✓ PREÇO SIMULADO APROVADO — lucro de '+percent(v.markup)+' sobre o custo.':
+   v.profit<0?'✕ SIMULAÇÃO COM PREJUÍZO — falta aumentar o preço por kg.':
+   '✕ ABAIXO DA META DE 15% — lucro simulado de '+percent(v.markup)+'.';
+ $('simDetails').textContent='Custo do saco: '+money(Number(row.cost))+
+  ' • Peso: '+decimal(Number(row.weight))+' kg • Preço mínimo para 15%: '+money(v.minimum)+'/kg'+
+  ' • Diferença do preço simulado para o mínimo: '+(price-v.minimum>=0?'+':'')+money(price-v.minimum)+'/kg.';
+}
+$('simProduct').addEventListener('change',function(){
+ simIndex=Number(this.value)||0;resetSimulationToCurrent();
+});
+$('simPrice').addEventListener('input',updateSimulation);
+$('simCurrent').addEventListener('click',resetSimulationToCurrent);
+$('simMinimum').addEventListener('click',function(){
+ var row=rows[simIndex],v=row&&calc(row);
+ if(!v){$('simStatus').className='simstatus warn';$('simStatus').textContent='Preencha custo, peso e preço válidos na tabela.';return}
+ $('simPrice').value=decimal(v.minimum);updateSimulation();
+});
+
 $('tbody').addEventListener('change',function(e){
  var t=e.target;if(!t.matches('input[data-k]'))return;
  var i=Number(t.dataset.i),k=t.dataset.k;if(!rows[i])return;
@@ -160,10 +258,12 @@ $('tbody').addEventListener('change',function(e){
  save();render();
 });
 $('tbody').addEventListener('click',function(e){
+ var s=e.target.closest('button[data-simulate]');
+ if(s){simIndex=Number(s.dataset.simulate);$('simProduct').value=String(simIndex);resetSimulationToCurrent();$('simulador').scrollIntoView({behavior:'smooth',block:'start'});return}
  var b=e.target.closest('button[data-remove]');if(!b)return;
  var i=Number(b.dataset.remove);
  if(!rows[i])return;
- if(confirm('Excluir '+rows[i].name+' desta calculadora?')){rows.splice(i,1);save();render()}
+ if(confirm('Excluir '+rows[i].name+' desta calculadora?')){rows.splice(i,1);if(simIndex>i)simIndex--;save();render();resetSimulationToCurrent()}
 });
 $('addForm').addEventListener('submit',function(e){
  e.preventDefault();
@@ -171,7 +271,7 @@ $('addForm').addEventListener('submit',function(e){
  if(!r.name||!(r.weight>0)||!(r.cost>0)||!(r.price>=0)||!Number.isFinite(r.price)){$('message').textContent='Informe nome, peso e custo maiores que zero e um preço por kg válido.';return}
  rows.push(r);save();render();e.target.reset();
 });
-$('reset').addEventListener('click',function(){if(confirm('Restaurar os 6 produtos e os valores da imagem? As alterações feitas neste navegador serão substituídas.')){rows=cloneStart();save();render()}});
+$('reset').addEventListener('click',function(){if(confirm('Restaurar os 6 produtos e os valores da imagem? As alterações feitas neste navegador serão substituídas.')){rows=cloneStart();simIndex=0;save();render();resetSimulationToCurrent()}});
 $('export').addEventListener('click',function(){
  var lines=[['Produto','Peso (kg)','Custo saco (R$)','Preco atual/kg (R$)','Venda calculada (R$)','Lucro saco (R$)','Lucro sobre custo (%)','Preco minimo/kg (R$)','Situacao']];
  rows.forEach(function(r){
@@ -183,6 +283,7 @@ $('export').addEventListener('click',function(){
  var blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Formacao_Preco_Granel_Plantita_15pct.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},1200);
 });
 render();
+resetSimulationToCurrent();
 })();
 </script>
 </body>
