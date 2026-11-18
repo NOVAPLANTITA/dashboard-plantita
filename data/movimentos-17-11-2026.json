@@ -1,0 +1,112 @@
+{
+  "atualizadoEm": "18/11/2026 — inclusão da comanda fotografada de 17/11/2026",
+  "dataComanda": "17/11/2026",
+  "totalInformadoComanda": 5580,
+  "totalProvisorioComanda": 5580,
+  "detalhamentoPendente": true,
+  "totalLancamentos": 5594.3,
+  "diferencaConferencia": -14.3,
+  "observacao": "Comanda na foto 1000355048.jpg recebida em 18/11/2026, datada de 17/11/2026. Fechamento manuscrito R$ 5.580,00. Registrado como total PROVISÓRIO do Controle Diário do dia 17/11, para acumulado e média mensal. Soma das linhas interpretadas como R$ 5.594,30: diferença de R$ -14,30 em relação ao valor manuscrito. Não corrigir valores por ajuste implícito; confirmar itens de PIX e natureza do Café. O total manuscrito é a referência provisória de faturamento, NÃO deve ser somado como linha adicional. Não duplicar vendas do PDV nem entregas.",
+  "movimentos": [
+    {
+      "data": "17/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 1000,
+      "conferencia": "Valor manuscrito lido na imagem."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 331.5,
+      "conferencia": "Valor manuscrito lido na imagem."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 495,
+      "conferencia": "Valor manuscrito lido na imagem."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 279.7,
+      "conferencia": "Valor manuscrito lido na imagem."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 1967.2,
+      "conferencia": "Valor manuscrito lido na imagem."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 23.9,
+      "conferencia": "Natureza da anotação a conferir; preservada no detalhamento, sem classificar como retirada automaticamente."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "PIX",
+      "descricao": "Júlia",
+      "valor": 25,
+      "conferencia": "Valor lido visualmente; conferir."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "PIX",
+      "descricao": "Heloísa Helena",
+      "valor": 82,
+      "conferencia": "Nome da pagadora a conferir no original."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "PIX",
+      "descricao": "Ivone Cássia",
+      "valor": 170,
+      "conferencia": "Nome da pagadora a conferir no original."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "PIX",
+      "descricao": "Nemon Tania (Bradesco) — nome a conferir",
+      "valor": 738,
+      "conferencia": "Descrição de difícil leitura; possivelmente contém referência a Bradesco. Confirmar nome."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — nome a conferir (parece Abner)",
+      "valor": 14,
+      "conferencia": "Nome incerto e valor visualmente lido como R$ 14,00; conferir."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "PIX",
+      "descricao": "Sílvia",
+      "valor": 100,
+      "conferencia": "Nome e valor lidos visualmente; conferir."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "PIX",
+      "descricao": "Lailane",
+      "valor": 283,
+      "conferencia": "Grafia do nome a conferir."
+    },
+    {
+      "data": "17/11/2026",
+      "tipo": "PIX",
+      "descricao": "Luís João",
+      "valor": 85,
+      "conferencia": "Nome a conferir."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 5594.3
+}
