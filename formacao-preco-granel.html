@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#031214">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>Plantita • Formação de Preço do Granel</title>
+<script src="auth.js?v=20261118-preco-granel15"></script>
+<script>PlantitaAuth.require('supervisor');</script>
+<style>
+*{box-sizing:border-box}
+:root{--bg:#031214;--panel:#0b2529;--line:#245057;--txt:#effafa;--muted:#aac2c3;--green:#20e492;--red:#ff858b;--yellow:#ffd27a}
+body{margin:0;background:radial-gradient(circle at 50% -20%,#0b483a,#061e21 38%,#031214 80%);color:var(--txt);font:14px Arial,sans-serif;min-height:100vh}
+header{position:sticky;top:0;z-index:10;padding:12px 18px;background:#061b1eea;border-bottom:1px solid #22545a;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;backdrop-filter:blur(8px)}
+h1{font-size:21px;margin:0}h2{font-size:17px;margin:0 0 10px}
+.eyebrow{color:var(--green);font-size:11px;letter-spacing:.12em;font-weight:900;margin-bottom:5px}
+a,button{display:inline-flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;border:1px solid #2e6269;background:#103138;color:#f6fcfb;border-radius:11px;padding:10px 12px;font:800 12px Arial;cursor:pointer}
+a:hover,button:hover{border-color:var(--green)}button.primary{background:var(--green);border-color:var(--green);color:#002a1c}button.secondary{background:#15443e}button.remove{padding:6px 9px;color:#ffbfc3;border-color:#6d363e;background:#41242a}
+nav{display:flex;gap:7px;flex-wrap:wrap}
+main{max-width:1280px;margin:0 auto;padding:18px 14px 35px}
+.card{background:linear-gradient(150deg,#0a282d,#071c20);border:1px solid var(--line);border-radius:17px;padding:18px;margin-bottom:14px}
+.hero{display:grid;grid-template-columns:1.7fr .7fr;gap:14px}.hero p{font-size:13px;color:#b8d1ce;line-height:1.6;margin:7px 0}
+.formula{padding:11px 13px;background:#113337;border:1px solid #27585d;border-radius:11px;margin-top:10px;font-weight:800;color:#bdf4d6}
+.target{display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.target strong{font-size:52px;color:var(--green);line-height:1}.target span{font-size:13px;color:var(--muted);margin-top:8px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-bottom:14px}
+.kpi{padding:15px;background:#0b282c;border:1px solid var(--line);border-radius:14px}.kpi span{display:block;color:var(--muted);font-size:11px;margin-bottom:7px}.kpi b{font-size:24px}.kpi.good b{color:#77f0b0}.kpi.bad b{color:#ffaaa9}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.toolbar h2{margin:0}.toolbar div{display:flex;gap:7px;flex-wrap:wrap}
+.scroller{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+table{width:100%;min-width:1120px;border-collapse:collapse}th,td{text-align:left;padding:10px 9px;border-bottom:1px solid #1c4046;font-size:12px;vertical-align:middle}
+th{background:#13363c;font-size:11px;color:#d3e7e6}tbody tr:nth-child(even){background:#0a2429}tbody tr:hover{background:#103337}
+td.right{text-align:right;white-space:nowrap}td input{min-width:80px;max-width:105px;width:100%;background:#06191d;border:1px solid #3c6970;color:white;padding:9px;border-radius:9px;font:13px Arial,sans-serif}
+td input.name{min-width:125px;max-width:170px}input:focus{outline:2px solid var(--green);outline-offset:1px}
+.suggested{font-weight:900;color:#82f7ba;font-size:14px}.money{font-weight:800}.negative{color:var(--red)}.tag{font-size:11px;font-weight:900;border-radius:9px;padding:7px 8px;display:inline-block}
+.tag.good{background:#154b37;color:#91fac4}.tag.bad{background:#54292f;color:#ffb9bf}.tag.warn{background:#53421c;color:#ffe39b}
+td small{display:block;color:var(--muted);font-size:10px;line-height:1.35;margin-top:5px}.caution{color:var(--yellow)}.foot{font-size:12px;color:var(--muted);line-height:1.6;margin:12px 0 0}
+.add{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:12px;align-items:end}
+.field{display:grid;gap:7px}.field label{font-size:12px;color:#bdd2d1;font-weight:800}.field input{width:100%;padding:11px;background:#06191d;color:white;border:1px solid #3c6970;border-radius:9px;font-size:14px}
+#message{min-height:18px;color:#abeccf;font-size:12px;margin-top:10px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.target strong{font-size:42px}.kpis{grid-template-columns:repeat(2,1fr)}.add{grid-template-columns:repeat(2,minmax(0,1fr))}.add .field:first-child{grid-column:1/-1}.add button{grid-column:1/-1}h1{font-size:18px}}
+@media(max-width:420px){.kpi b{font-size:20px}header{padding:11px}nav a{font-size:11px;padding:8px}}
+</style>
+</head>
+<body>
+<header>
+  <div><div class="eyebrow">COMERCIAL NOVA PLANTITA</div><h1>🌾 Formação de Preço • Granel</h1></div>
+  <nav><a href="granel.html">Controle de Granel</a><a href="dashboard-v13.html">← Dashboard</a><a href="#" onclick="PlantitaAuth.logout();return false">Sair</a></nav>
+</header>
+<main>
+  <div class="hero">
+    <section class="card">
+      <h2>Validação do preço de venda</h2>
+      <p>Informe o custo do saco, o peso em kg e o preço atualmente cobrado por quilo. O sistema calcula o preço mínimo e indica se a venda atende ao lucro mínimo definido.</p>
+      <div class="formula">Preço mínimo por kg = (custo do saco × 1,15) ÷ peso do saco</div>
+      <p>O lucro de 15% é calculado <b>sobre o custo</b>, como na planilha enviada (markup). Não é a margem sobre a receita de venda.</p>
+    </section>
+    <section class="card target"><span>Lucro mínimo desejado</span><strong>15%</strong><span>sobre o custo do saco • valor fixo</span></section>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><span>Produtos na análise</span><b id="count">—</b></div>
+    <div class="kpi good"><span>Atingem 15% de lucro</span><b id="approved">—</b></div>
+    <div class="kpi bad"><span>Abaixo da meta / inválidos</span><b id="review">—</b></div>
+    <div class="kpi"><span>Meta por saco</span><b>15%</b></div>
+  </div>
+  <section class="card">
+    <div class="toolbar"><h2>Tabela de formação e conferência</h2><div><button id="reset" type="button">Restaurar valores da imagem</button><button class="secondary" id="export" type="button">Baixar CSV</button></div></div>
+    <div class="scroller">
+      <table aria-label="Formação de preço do granel">
+        <thead><tr>
+          <th>Produto</th><th>Peso (kg)</th><th>Custo do saco (R$)</th><th>Preço atual/kg (R$)</th><th>Venda total calculada</th><th>Lucro do saco</th><th>Lucro sobre custo (%)</th><th>Preço mínimo/kg (15%)</th><th>Validação</th><th>Ação</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <p class="foot">O preço mínimo por kg é arredondado <b>para cima ao centavo</b> para garantir pelo menos 15% de lucro. Preços, pesos e custos podem ser editados na tabela: a validação é recalculada ao sair do campo.</p>
+    <p class="foot caution">⚠ Divergência na imagem original: o Gatoh aparece com 25 kg, R$ 9,00/kg e total de R$ 180,00. Multiplicando 25 × R$ 9,00, o total correto seria R$ 225,00. Nesta calculadora a venda total é sempre calculada pelo preço por kg informado, para evitar resultados inconsistentes.</p>
+    <p class="foot">Os valores são uma base inicial transcrita da imagem de 17/11/2026. Alterações feitas aqui ficam salvas <b>somente neste navegador</b>; não mudam os preços oficiais, o PDV ou o estoque.</p>
+    <div id="message" role="status" aria-live="polite"></div>
+  </section>
+  <section class="card">
+    <h2>Adicionar outro produto</h2>
+    <form class="add" id="addForm">
+      <div class="field"><label for="name">Produto</label><input id="name" required placeholder="Nome da ração" maxlength="100"></div>
+      <div class="field"><label for="weight">Peso do saco (kg)</label><input id="weight" required inputmode="decimal" placeholder="20"></div>
+      <div class="field"><label for="cost">Custo do saco (R$)</label><input id="cost" required inputmode="decimal" placeholder="200,00"></div>
+      <div class="field"><label for="price">Preço atual/kg (R$)</label><input id="price" required inputmode="decimal" placeholder="12,00"></div>
+      <button class="primary" type="submit">+ ADICIONAR PRODUTO</button>
+    </form>
+  </section>
+</main>
+<script>
+(function(){
+'use strict';
+var KEY='plantita_granel_formacao_15_20261118';
+var START=[
+ {name:'Magnus',weight:20,cost:262,price:14},
+ {name:'Origens',weight:10,cost:170,price:18},
+ {name:'Bionatural',weight:20,cost:385,price:18},
+ {name:'Fórmula',weight:10,cost:270,price:28},
+ {name:'Misty',weight:25,cost:175,price:8},
+ {name:'Gatoh',weight:25,cost:156,price:9}
+];
+var $=function(id){return document.getElementById(id)};
+var money=function(n){return new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format(n)};
+var decimal=function(n){return new Intl.NumberFormat('pt-BR',{minimumFractionDigits:0,maximumFractionDigits:2}).format(n)};
+var percent=function(n){return new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}).format(n)+'%'};
+function parseNumber(v){
+ var s=String(v==null?'':v).trim().replace(/\s/g,'').replace(/R\$/ig,'');
+ if(!s)return NaN;
+ if(s.indexOf(',')!==-1&&s.indexOf('.')!==-1)s=s.replace(/\./g,'').replace(',','.');
+ else if(s.indexOf(',')!==-1)s=s.replace(',','.');
+ var n=Number(s);return Number.isFinite(n)?n:NaN;
+}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function cloneStart(){return START.map(function(r){return Object.assign({},r)})}
+function load(){
+ try{
+   var data=JSON.parse(localStorage.getItem(KEY)||'null');
+   if(Array.isArray(data)&&data.length<500&&data.every(function(r){return r&&typeof r.name==='string'}))return data;
+ }catch(e){console.warn('Leitura local indisponível',e)}
+ return cloneStart();
+}
+var rows=load();
+function save(){
+ try{localStorage.setItem(KEY,JSON.stringify(rows));$('message').textContent='✓ Alterações salvas neste navegador.'}
+ catch(e){$('message').textContent='Não foi possível salvar neste navegador; os cálculos ainda funcionam.'}
+}
+function calc(r){
+ var w=Number(r.weight),c=Number(r.cost),p=Number(r.price);
+ if(!(w>0)||!(c>0)||!(p>=0)||!Number.isFinite(w)||!Number.isFinite(c)||!Number.isFinite(p))return null;
+ var total=w*p,profit=total-c,markup=profit/c*100;
+ // Arredondar o mínimo para cima garante a meta mesmo com preço por kg em centavos.
+ var minimum=Math.ceil((c*1.15/w)*100-0.000000001)/100;
+ return {total:total,profit:profit,markup:markup,minimum:minimum,ok:profit+0.0000001>=c*0.15};
+}
+function field(i,k,r){var val=k==='name'?esc(r[k]):Number.isFinite(Number(r[k]))?decimal(Number(r[k])):'';return '<input aria-label="'+(k==='name'?'Produto':k==='weight'?'Peso':k==='cost'?'Custo':'Preço por quilo')+'" class="'+(k==='name'?'name':'')+'" data-i="'+i+'" data-k="'+k+'" value="'+val+'" '+(k==='name'?'maxlength="100"':'inputmode="decimal"')+'>'}
+function render(){
+ var html='',passed=0;
+ rows.forEach(function(r,i){
+  var v=calc(r);if(v&&v.ok)passed++;
+  var status=!v?'<span class="tag warn">CONFERIR DADOS</span>':v.ok?'<span class="tag good">✓ APROVADO</span>':'<span class="tag bad">'+(v.profit<0?'PREJUÍZO':'ABAIXO DE 15%')+'</span>';
+  html+='<tr><td>'+field(i,'name',r)+'</td><td>'+field(i,'weight',r)+'</td><td>'+field(i,'cost',r)+'</td><td>'+field(i,'price',r)+'</td>'+
+   '<td class="right money">'+(v?money(v.total):'—')+'</td><td class="right money '+(v&&v.profit<0?'negative':'')+'">'+(v?money(v.profit):'—')+'</td>'+
+   '<td class="right '+(v&&!v.ok?'negative':'')+'">'+(v?percent(v.markup):'—')+'</td><td class="right suggested">'+(v?money(v.minimum):'—')+'</td>'+
+   '<td>'+status+(v&&!v.ok?'<small>Faltam '+money(Math.max(0,v.minimum-Number(r.price)))+'/kg para chegar à meta</small>':'')+'</td>'+
+   '<td><button class="remove" type="button" data-remove="'+i+'" aria-label="Excluir '+esc(r.name)+'">Excluir</button></td></tr>';
+ });
+ if(!rows.length)html='<tr><td colspan="10">Nenhum produto cadastrado. Use o formulário abaixo para adicionar.</td></tr>';
+ $('tbody').innerHTML=html;
+ $('count').textContent=String(rows.length);
+ $('approved').textContent=String(passed);
+ $('review').textContent=String(rows.length-passed);
+}
+$('tbody').addEventListener('change',function(e){
+ var t=e.target;if(!t.matches('input[data-k]'))return;
+ var i=Number(t.dataset.i),k=t.dataset.k;if(!rows[i])return;
+ if(k==='name')rows[i].name=t.value.trim().slice(0,100);
+ else rows[i][k]=parseNumber(t.value);
+ save();render();
+});
+$('tbody').addEventListener('click',function(e){
+ var b=e.target.closest('button[data-remove]');if(!b)return;
+ var i=Number(b.dataset.remove);
+ if(!rows[i])return;
+ if(confirm('Excluir '+rows[i].name+' desta calculadora?')){rows.splice(i,1);save();render()}
+});
+$('addForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ var r={name:$('name').value.trim().slice(0,100),weight:parseNumber($('weight').value),cost:parseNumber($('cost').value),price:parseNumber($('price').value)};
+ if(!r.name||!(r.weight>0)||!(r.cost>0)||!(r.price>=0)||!Number.isFinite(r.price)){$('message').textContent='Informe nome, peso e custo maiores que zero e um preço por kg válido.';return}
+ rows.push(r);save();render();e.target.reset();
+});
+$('reset').addEventListener('click',function(){if(confirm('Restaurar os 6 produtos e os valores da imagem? As alterações feitas neste navegador serão substituídas.')){rows=cloneStart();save();render()}});
+$('export').addEventListener('click',function(){
+ var lines=[['Produto','Peso (kg)','Custo saco (R$)','Preco atual/kg (R$)','Venda calculada (R$)','Lucro saco (R$)','Lucro sobre custo (%)','Preco minimo/kg (R$)','Situacao']];
+ rows.forEach(function(r){
+ var v=calc(r);
+ lines.push([r.name,r.weight,r.cost,r.price,v?v.total:'',v?v.profit:'',v?v.markup:'',v?v.minimum:'',v?(v.ok?'APROVADO':'REVISAR'):'INVALIDO']);
+ });
+ var format=function(x){if(typeof x==='number'&&Number.isFinite(x))return String(x).replace('.',',');return String(x==null?'':x).replace(/"/g,'""')};
+ var csv='\uFEFF'+lines.map(function(a){return a.map(function(x){return '"'+format(x)+'"'}).join(';')}).join('\r\n');
+ var blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Formacao_Preco_Granel_Plantita_15pct.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},1200);
+});
+render();
+})();
+</script>
+</body>
+</html>
