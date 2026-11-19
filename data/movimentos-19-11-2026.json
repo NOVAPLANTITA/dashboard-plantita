@@ -1,0 +1,98 @@
+{
+  "atualizadoEm": "19/11/2026 — comanda fotografada; fechamento manuscrito lançado provisoriamente",
+  "dataComanda": "19/11/2026",
+  "totalInformadoComanda": 9439,
+  "totalProvisorioComanda": 9439,
+  "detalhamentoPendente": true,
+  "totalLancamentos": 9441.35,
+  "diferencaConferencia": -2.35,
+  "observacao": "Comanda fotografada em 19/11/2026, arquivo 1000355365.jpg, total manuscrito R$ 9.439,00. Utilizar esse fechamento PROVISÓRIO para o total do dia, acumulado e média de novembro. Soma de 12 anotações legíveis R$ 9.441,35, diferença de R$ -2,35 em relação ao fechamento; conferir centavos e nomes dos PIX. Linha riscada excluída. Não criar ajuste artificial, não somar o fechamento como movimento, não duplicar PDV, granel nem entregas. Não tratar ausência de comprovantes em outras datas como zero.",
+  "movimentos": [
+    {
+      "data": "19/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 1000,
+      "conferencia": "Legível."
+    },
+    {
+      "data": "19/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1149.6,
+      "conferencia": "Legível."
+    },
+    {
+      "data": "19/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 144,
+      "conferencia": "Legível."
+    },
+    {
+      "data": "19/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 1828.05,
+      "conferencia": "Valor lido na imagem; conferir os centavos."
+    },
+    {
+      "data": "19/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 4215.8,
+      "conferencia": "Valor lido na imagem; conferir os centavos."
+    },
+    {
+      "data": "19/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 27.9,
+      "conferencia": "Natureza de entrada/despesa a conferir; não deduzido automaticamente."
+    },
+    {
+      "data": "19/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — nome manuscrito a conferir (1)",
+      "valor": 68,
+      "conferencia": "Nome de difícil leitura na foto."
+    },
+    {
+      "data": "19/11/2026",
+      "tipo": "PIX",
+      "descricao": "Maria",
+      "valor": 110,
+      "conferencia": "Nome lido visualmente; conferir."
+    },
+    {
+      "data": "19/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — nome manuscrito a conferir (2)",
+      "valor": 358,
+      "conferencia": "Nome e dígitos manuscritos sujeitos a conferência."
+    },
+    {
+      "data": "19/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — nome manuscrito a conferir (3)",
+      "valor": 70,
+      "conferencia": "Nome manuscrito sujeito a conferência."
+    },
+    {
+      "data": "19/11/2026",
+      "tipo": "Outros",
+      "descricao": "Porquinho-da-índia",
+      "valor": 105,
+      "conferencia": "Anotação manuscrita; tipo de recebimento a conferir."
+    },
+    {
+      "data": "19/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — sobrenome Ferreira (a conferir)",
+      "valor": 365,
+      "conferencia": "Nome manuscrito sujeito a conferência."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 9441.35
+}
