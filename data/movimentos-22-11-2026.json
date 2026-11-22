@@ -1,0 +1,49 @@
+{
+  "atualizadoEm": "22/11/2026 — fechamento transcrito da comanda fotografada",
+  "dataComanda": "22/11/2026",
+  "totalInformadoComanda": 5494.6,
+  "totalProvisorioComanda": 5494.6,
+  "totalLancamentos": 5494.6,
+  "diferencaConferencia": 0,
+  "detalhamentoPendente": false,
+  "observacao": "Comanda da Comercial Nova Plantita fotografada em 22/11/2026 (1000355879.jpg). Valor manuscrito do fechamento R$ 5.494,60. Os cinco lançamentos por meio de recebimento somam exatamente R$ 5.494,60. Registrar como fechamento da comanda, sem duplicar vendas do PDV, do granel ou das entregas. Valor sujeito à conferência bancária habitual. Preservar datas anteriores.",
+  "movimentos": [
+    {
+      "data": "22/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 900,
+      "conferencia": "Valor lido na comanda fotografada."
+    },
+    {
+      "data": "22/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 162,
+      "conferencia": "Valor lido na comanda fotografada."
+    },
+    {
+      "data": "22/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 836.8,
+      "conferencia": "Valor lido na comanda fotografada."
+    },
+    {
+      "data": "22/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 923.75,
+      "conferencia": "Valor lido na comanda fotografada."
+    },
+    {
+      "data": "22/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 2672.05,
+      "conferencia": "Valor lido na comanda fotografada."
+    }
+  ],
+  "conciliacaoPendente": false,
+  "totalTodasAnotacoes": 5494.6
+}
