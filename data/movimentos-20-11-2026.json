@@ -1,0 +1,119 @@
+{
+  "atualizadoEm": "22/11/2026 — comanda de 20/11/2026 fotografada; fechamento manuscrito lançado provisoriamente",
+  "dataComanda": "20/11/2026",
+  "totalInformadoComanda": 5613.24,
+  "totalProvisorioComanda": 5613.24,
+  "detalhamentoPendente": true,
+  "totalLancamentos": 5623.24,
+  "diferencaConferencia": -10,
+  "observacao": "Comanda fotografada (1000355845.jpg), com data manuscrita 20/11/2026. Fechamento manuscrito lido como R$ 5.613,24; soma preliminar de 15 anotações visuais R$ 5.623,24, diferença de R$ -10,00. Conferir valores Cielo e Mercado Pago, nomes dos PIX, e a natureza de Café e das quatro Diárias. Total manuscrito PREVALECE PROVISORIAMENTE no diário, acumulado e média; não fazer ajuste artificial; não somar o total como movimento adicional e não duplicar PDV, granel nem entregas. Não interpretar ausência de documentos em outros dias como zero.",
+  "movimentos": [
+    {
+      "data": "20/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 450,
+      "conferencia": "Valor manuscrito lido na fotografia."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 885.5,
+      "conferencia": "Centavos manuscritos; conferir com relatório da adquirente."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 722,
+      "conferencia": "Valor manuscrito lido na fotografia."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 586.46,
+      "conferencia": "Valor lido visualmente como 586,46; conferir."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 2196.28,
+      "conferencia": "Valor lido visualmente como 2.196,28; conferir centavos."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 25,
+      "conferencia": "Natureza (entrada/despesa) a conferir; não classificado automaticamente como retirada."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — nome manuscrito a conferir (1)",
+      "valor": 70,
+      "conferencia": "Nome da anotação de difícil leitura."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "PIX",
+      "descricao": "Caio (nome a conferir)",
+      "valor": 60,
+      "conferencia": "Nome manuscrito sujeito a conferência."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "PIX",
+      "descricao": "Gabriel (nome a conferir)",
+      "valor": 20,
+      "conferencia": "Nome manuscrito sujeito a conferência."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "PIX",
+      "descricao": "Joyce Fernandes (nome a conferir)",
+      "valor": 60,
+      "conferencia": "Nome manuscrito sujeito a conferência."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "PIX",
+      "descricao": "Shirley (nome a conferir)",
+      "valor": 28,
+      "conferencia": "Nome manuscrito sujeito a conferência."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "Outros",
+      "descricao": "Diária João",
+      "valor": 130,
+      "conferencia": "Parece despesa; natureza a conciliar, sem dedução automática."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "Outros",
+      "descricao": "Diária Théo",
+      "valor": 130,
+      "conferencia": "Parece despesa; natureza a conciliar, sem dedução automática."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "Outros",
+      "descricao": "Diária Matheus",
+      "valor": 130,
+      "conferencia": "Parece despesa; natureza a conciliar, sem dedução automática."
+    },
+    {
+      "data": "20/11/2026",
+      "tipo": "Outros",
+      "descricao": "Diária Gustavo",
+      "valor": 130,
+      "conferencia": "Parece despesa; natureza a conciliar, sem dedução automática."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 5623.24
+}
