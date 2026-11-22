@@ -1,0 +1,112 @@
+{
+  "atualizadoEm": "22/11/2026 — comanda fotografada referente a 21/11/2026; fechamento manuscrito lançado provisoriamente",
+  "dataComanda": "21/11/2026",
+  "totalInformadoComanda": 15340.27,
+  "totalProvisorioComanda": 15340.27,
+  "detalhamentoPendente": true,
+  "totalLancamentos": 15330.27,
+  "diferencaConferencia": 10,
+  "observacao": "Comanda fotografada (1000355775.jpg), data manuscrita 21/11/2026 informada e confirmada pelo usuário. Total manuscrito R$ 15.340,27. Soma provisória das 14 linhas visualmente transcritas R$ 15.330,27; diferença de R$ 10,00 sem ajuste artificial. Usar total manuscrito provisório no fechamento, acumulado e média, e sinalizar conciliação de valores, nomes PIX e natureza das anotações Café e Bombas. Não duplicar PDV, granel ou entregas. Não lançar 22/11/2026 a partir desta foto, nem tratar datas ausentes como zero.",
+  "movimentos": [
+    {
+      "data": "21/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 2450,
+      "conferencia": "Valor lido na comanda; conferir."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1630.4,
+      "conferencia": "Valor lido na comanda; conferir."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 2119.6,
+      "conferencia": "Valor lido na comanda; conferir."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 1702,
+      "conferencia": "Leitura visual do valor; conferir."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 6301.67,
+      "conferencia": "Centavos da anotação sujeitos a conferência."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 58.6,
+      "conferencia": "Natureza da anotação a conferir; não classificar como retirada automaticamente."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX — nome manuscrito a conferir (1)",
+      "valor": 136,
+      "conferencia": "PIX identificado na margem; nome difícil de ler."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "PIX",
+      "descricao": "Andréica (nome a conferir)",
+      "valor": 118,
+      "conferencia": "Nome lido visualmente, sujeito a conferência."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "PIX",
+      "descricao": "Lourdes (nome a conferir)",
+      "valor": 105,
+      "conferencia": "Nome lido visualmente, sujeito a conferência."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "PIX",
+      "descricao": "Juliana",
+      "valor": 45,
+      "conferencia": "Nome e valor legíveis."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "Outros",
+      "descricao": "Anotação — Bombas (nome a conferir)",
+      "valor": 180,
+      "conferencia": "Meio de pagamento não assinalado; descrição manuscrita sujeita a conferência."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "PIX",
+      "descricao": "Roger Ramos (nome a conferir)",
+      "valor": 160,
+      "conferencia": "Nome lido visualmente, sujeito a conferência."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "PIX",
+      "descricao": "Maria Aparecida",
+      "valor": 258,
+      "conferencia": "Nome lido visualmente, sujeito a conferência."
+    },
+    {
+      "data": "21/11/2026",
+      "tipo": "PIX",
+      "descricao": "Gisleide (nome a conferir)",
+      "valor": 66,
+      "conferencia": "Nome lido visualmente, sujeito a conferência."
+    }
+  ],
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 15330.27
+}
