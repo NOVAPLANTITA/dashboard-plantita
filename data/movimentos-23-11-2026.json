@@ -1,0 +1,112 @@
+{
+  "atualizadoEm": "24/11/2026 — comanda fotografada referente a 23/11/2026",
+  "dataComanda": "23/11/2026",
+  "totalInformadoComanda": 6007,
+  "totalProvisorioComanda": 6007,
+  "totalLancamentos": 6009.5,
+  "diferencaConferencia": -2.5,
+  "detalhamentoPendente": false,
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 6009.5,
+  "observacao": "Comanda fotografada 1000356573.jpg. Fechamento manuscrito de R$ 6.007,00 utilizado provisoriamente no diário e acumulado. Conferir PIX Vanessa e natureza de café, compra de lâmpada e diária Gustavo. Não duplicar PDV, granel ou entregas; preservar demais datas.",
+  "movimentos": [
+    {
+      "data": "23/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 800,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1048,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 311.6,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 1036.3,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 2092.2,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 29.9,
+      "conferencia": "Natureza da anotação a conciliar."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "PIX",
+      "descricao": "Gabriel",
+      "valor": 20.5,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "PIX",
+      "descricao": "Alessandra",
+      "valor": 91,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "PIX",
+      "descricao": "Jane Lima",
+      "valor": 60,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "PIX",
+      "descricao": "Vanessa",
+      "valor": 175,
+      "conferencia": "Valor manuscrito lido como 175,00; conferir."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "PIX",
+      "descricao": "Rosalia (nome a conferir)",
+      "valor": 105,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "PIX",
+      "descricao": "Ilda",
+      "valor": 65,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "Outros",
+      "descricao": "Compra lâmpada",
+      "valor": 45,
+      "conferencia": "Possível despesa; natureza a conciliar, sem dedução automática."
+    },
+    {
+      "data": "23/11/2026",
+      "tipo": "Outros",
+      "descricao": "Diária Gustavo",
+      "valor": 130,
+      "conferencia": "Possível despesa; natureza a conciliar, sem dedução automática."
+    }
+  ]
+}
