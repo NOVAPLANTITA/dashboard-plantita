@@ -1,0 +1,91 @@
+{
+  "atualizadoEm": "24/11/2026 — comanda fotografada",
+  "dataComanda": "24/11/2026",
+  "totalInformadoComanda": 9368,
+  "totalProvisorioComanda": 9368,
+  "totalLancamentos": 9439.2,
+  "diferencaConferencia": -71.2,
+  "detalhamentoPendente": false,
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 9439.2,
+  "observacao": "Fechamento manuscrito R$ 9.368,00 utilizado provisoriamente no diário e acumulado; diferença para a soma de todas as anotações. Café e compra mão francesa podem ser despesas e devem ser conciliados. Nomes manuscritos dos PIX sujeitos a conferência. Não duplicar PDV, granel ou entregas; preservar demais datas.",
+  "movimentos": [
+    {
+      "data": "24/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 700,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "24/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 872,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "24/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 69.5,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "24/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 1359.2,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "24/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 5627.1,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "24/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 55.9,
+      "conferencia": "Natureza da anotação a conciliar."
+    },
+    {
+      "data": "24/11/2026",
+      "tipo": "PIX",
+      "descricao": "Julia",
+      "valor": 35,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "24/11/2026",
+      "tipo": "PIX",
+      "descricao": "Susana (sobrenome a conferir)",
+      "valor": 90.5,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "24/11/2026",
+      "tipo": "PIX",
+      "descricao": "Valdeci Dino (nome a conferir)",
+      "valor": 392,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "24/11/2026",
+      "tipo": "PIX",
+      "descricao": "Thamara (nome a conferir)",
+      "valor": 135,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "24/11/2026",
+      "tipo": "Outros",
+      "descricao": "Compra mão francesa",
+      "valor": 103,
+      "conferencia": "Possível despesa; natureza a conciliar, sem dedução automática."
+    }
+  ]
+}
