@@ -1,0 +1,126 @@
+{
+  "atualizadoEm": "25/11/2026 — comanda fotografada",
+  "dataComanda": "25/11/2026",
+  "totalInformadoComanda": 7026,
+  "totalProvisorioComanda": 7026,
+  "totalLancamentos": 7027.55,
+  "diferencaConferencia": -1.55,
+  "detalhamentoPendente": false,
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 7027.55,
+  "observacao": "Comanda fotografada 1000356882.jpg. Fechamento manuscrito R$ 7.026,00 utilizado provisoriamente no diário e acumulado. Soma de todas as anotações R$ 7.027,55; diferença R$ 1,55. Conferir valores e nomes manuscritos dos PIX. Café, retirada para Célia, compra de galinha e diária registrados em Outros para conciliação, sem dedução automática, mantendo o método dos dias anteriores. Cielo sem valor informado. Não duplicar PDV, granel ou entregas; preservar demais datas.",
+  "movimentos": [
+    {
+      "data": "25/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 800,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 691,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 551.3,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 3162.35,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 29.9,
+      "conferencia": "Anotação a conciliar; sem dedução automática."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "PIX",
+      "descricao": "Joana Tito (nome a conferir)",
+      "valor": 398,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "PIX",
+      "descricao": "Jacira (nome a conferir)",
+      "valor": 64,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "PIX",
+      "descricao": "Noemia",
+      "valor": 70,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "PIX",
+      "descricao": "Rodrigo Ramos",
+      "valor": 111,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "PIX",
+      "descricao": "Goncalva (nome a conferir)",
+      "valor": 121,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "PIX",
+      "descricao": "Vale Otávio (nome a conferir)",
+      "valor": 170,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "PIX",
+      "descricao": "Karina Pereira",
+      "valor": 73,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "PIX",
+      "descricao": "Mauricio",
+      "valor": 56,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "Outros",
+      "descricao": "Retirado p/ Célia",
+      "valor": 500,
+      "conferencia": "Anotação a conciliar; sem dedução automática."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "Outros",
+      "descricao": "Compra de galinha",
+      "valor": 100,
+      "conferencia": "Anotação a conciliar; sem dedução automática."
+    },
+    {
+      "data": "25/11/2026",
+      "tipo": "Outros",
+      "descricao": "Diária João (nome a conferir)",
+      "valor": 130,
+      "conferencia": "Anotação a conciliar; sem dedução automática."
+    }
+  ]
+}
