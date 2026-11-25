@@ -16,6 +16,7 @@ function doGet(e) {
   const callback = String(p.callback || '');
   try {
     autenticarMed_(p.key);
+    if(p.action==='grain_summary')return saidaMed_(resumoGranelMed_(),callback);
     if(p.action==='health') {
       folhaMed_(); folhaVendasMed_();
       return saidaMed_({ok:true,action:'health',schema:3,
@@ -388,4 +389,18 @@ function registrarAberturaSacoMed_(body){
   const saved=localizarSacoMed_(sh,id);
   if(!saved)throw new Error('Abertura não confirmada na planilha.');
   return jsonMed_({ok:true,status:'registered',receipt:reciboSacoMed_(saved)});
+}
+
+// Resumo somente leitura: balança até 03/11, PDV desde 04/11; sem alterar registros.
+function resumoGranelMed_(){
+ const ss=SpreadsheetApp.openById(MED_SHEET_ID),start='2026-11-01',cutoff='2026-11-04',tz='America/Sao_Paulo',asOf=Utilities.formatDate(new Date(),tz,'yyyy-MM-dd'),days=new Map();
+ function date(v){if(v instanceof Date)return Utilities.formatDate(v,tz,'yyyy-MM-dd');const s=String(v||'').trim();if(/^\d{4}-\d{2}-\d{2}$/.test(s))return s;const m=s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);if(m)return m[3]+'-'+m[2]+'-'+m[1];throw Error('Data inválida')}
+ function rows(name,n){const sh=ss.getSheetByName(name);if(!sh)throw Error('Aba ausente');const l=sh.getLastRow();return l>1?sh.getRange(2,1,l-1,n).getValues():[]}
+ function add(d,c,n){if(!Number.isSafeInteger(c)||c<0||!Number.isSafeInteger(n)||n<0)throw Error('Valor inválido');const x=days.get(d)||{data:d,c:0,bipagens:0};x.c+=c;x.bipagens+=n;days.set(d,x)}
+ let seen=new Map();
+ for(const r of rows('Vendas_Balanca',9)){if(!r[0])continue;const d=date(r[1]);if(d<start||d>asOf)continue;if(d>=cutoff)throw Error('Balança após corte: conciliar');const id=String(r[0]),v=JSON.stringify(r);if(seen.has(id)){if(seen.get(id)!==v)throw Error('Duplicidade divergente');continue}seen.set(id,v);add(d,Math.round(Number(r[7])*100),1)}
+ seen=new Map();for(const r of rows(MED_SALES_TAB,11)){if(!r[0])continue;const d=date(r[2]);if(d<start||d>asOf)continue;if(d<cutoff)throw Error('PDV antes do corte: conciliar');if(String(r[8])!=='Registrado')continue;const id=String(r[0]);if(seen.has(id))throw Error('ID PDV duplicado');seen.set(id,true);const x=JSON.parse(String(r[10])).filter(i=>i.type==='granel');let c=0,n=0;for(const i of x){if(!Number.isSafeInteger(i.subtotal)||i.subtotal<0||!Number.isSafeInteger(i.qty)||i.qty<1)throw Error('Item inválido');c+=i.subtotal;n+=i.qty}if(c!==Math.round(Number(r[5])*100))throw Error('Subtotal divergente');if(n)add(d,c,n)}
+ const months=new Map();for(const x of [...days.values()].sort((a,b)=>a.data.localeCompare(b.data))){const k=x.data.slice(0,7),m=months.get(k)||{mes:k,rotulo:k,primeiraData:x.data,ultimaData:x.data,c:0,bipagens:0,dias:[]};m.c+=x.c;m.bipagens+=x.bipagens;m.ultimaData=x.data;m.dias.push({data:x.data,valor:x.c/100,bipagens:x.bipagens});months.set(k,m)}
+ const current=asOf.slice(0,7);if(!months.has(current))months.set(current,{mes:current,rotulo:current,primeiraData:asOf,ultimaData:asOf,c:0,bipagens:0,dias:[]});
+ return {ok:true,schema:1,asOf,cutoff,meses:[...months.values()].map(({c,...m})=>({...m,valor:c/100}))}
 }

@@ -46,8 +46,8 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
   <section class="hero">
     <div class="card">
       <h2>Base central do granel</h2>
-      <div class="sub">Esta tela reúne as vendas lidas na balança e os sacos abertos para venda a granel. Os números vêm da mesma ponte do Google Sheets usada pelos dois leitores.</div>
-      <div id="status" class="status">Verificando conexão…</div>
+      <div class="sub">Esta tela reúne as vendas lidas na balança e os sacos abertos para venda a granel. Vendas conciliadas entre balança antiga e PDV. Sacos mantidos na ponte original.</div>
+      <div id="status" class="status">Verificando conexão dos sacos…</div><div id="salesStatus" class="status" role="status">Consultando vendas conciliadas…</div>
     </div>
     <div class="card">
       <h2>Atualização automática</h2>
@@ -112,6 +112,7 @@ body{margin:0;background:radial-gradient(circle at 50% -20%,#0a493d,#051c20 34%,
   </section>
 </main>
 
+<script src="grain-sales-v2.js?v=20261125"></script>
 <script>
 const ENDPOINT_KEY='plantita_granel_dashboard_endpoint_v1';
 const LEGACY_KEY='plantita_granel_sync_endpoint_v1';
@@ -201,12 +202,12 @@ function render(d){
   ultimoResumo=d;
   const t=d.today||{},m=d.month||{};
   $('todayLabel').textContent=t.date||'—';$('monthLabel').textContent=m.label||'—';
-  $('todayReads').textContent=Number(t.bipagens||0).toLocaleString('pt-BR');$('todaySales').textContent=money(t.valor);
+
   $('todayBags').textContent=Number(t.sacos||0).toLocaleString('pt-BR');$('todayKg').textContent=num(t.kg)+' kg';
-  $('monthReads').textContent=Number(m.bipagens||0).toLocaleString('pt-BR');$('monthSales').textContent=money(m.valor);
+
   $('monthBags').textContent=Number(m.sacos||0).toLocaleString('pt-BR');$('monthKg').textContent=num(m.kg)+' kg';
-  $('salesBig').textContent=money(m.valor);$('salesReads').textContent=Number(m.bipagens||0).toLocaleString('pt-BR');
-  $('salesAvg').textContent=money(Number(m.bipagens)>0?Number(m.valor||0)/Number(m.bipagens):0);
+
+
   $('bagsBig').textContent=num(m.kg)+' kg';$('bagsCount').textContent=Number(m.sacos||0).toLocaleString('pt-BR');
   $('bagsAvg').textContent=(Number(m.sacos)>0?num(Number(m.kg||0)/Number(m.sacos)):num(0))+' kg';
   renderRanking(m);
@@ -215,6 +216,7 @@ function render(d){
   $('updated').textContent='Última consulta no celular: '+new Date().toLocaleString('pt-BR')+atualizado;
 }
 async function carregar(){
+ carregarVendas();
   const url=endpoint();
   if(!url){setStatus('Este celular ainda não está conectado ao Google. Toque em CONECTAR GOOGLE e cole a URL /exec usada no PC. A configuração feita no computador não passa automaticamente para o celular.','warn');$('updated').textContent='Nenhuma consulta feita neste aparelho.';return}
   if(carregando)return;
@@ -231,12 +233,22 @@ async function carregar(){
 let historicoMeses=[];
 const dataBR=iso=>{const p=String(iso||'').split('-');return p.length===3?p.reverse().join('/'):iso};
 const escHistorico=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let vendaResumo=null,vendaBusy=false;
+async function carregarVendas(){if(vendaBusy)return;vendaBusy=true;try{const r=await PlantitaGrainSales.load();vendaResumo=r;const now=PlantitaGrainSales.today(),m=r.data.meses.find(x=>x.mes===now.slice(0,7)),d=m?.dias.find(x=>x.data===now),fresh=r.live||r.data.asOf===now;
+ $('todayLabel').textContent=now;$('monthLabel').textContent=now.slice(0,7);
+ $('todayReads').textContent=fresh?num(d?.bipagens||0):'—';$('todaySales').textContent=fresh?money(d?.valor||0):'—';
+ $('monthReads').textContent=m?num(m.bipagens):'—';$('monthSales').textContent=m?money(m.valor):'—';$('salesBig').textContent=m?money(m.valor):'—';$('salesReads').textContent=m?num(m.bipagens):'—';$('salesAvg').textContent=m?money(m.bipagens?m.valor/m.bipagens:0):'—';
+ $('salesStatus').className='status '+(r.live?'ok':'warn');$('salesStatus').textContent=r.live?'Vendas conciliadas • Google ao vivo':'Vendas conciliadas • cópia de '+r.data.asOf+' • atualização ao vivo pendente da ponte PDV.';
+ atualizarHistorico();
+ }catch(e){$('salesStatus').textContent='Vendas indisponíveis: '+e.message}finally{vendaBusy=false}}
+function atualizarHistorico(){const selected=$('historicoMes').value,map=new Map(historicoMeses.map(m=>[m.mes,m]));if(vendaResumo)for(const m of vendaResumo.data.meses)map.set(m.mes,m);const all=[...map.values()].sort((a,b)=>b.mes.localeCompare(a.mes));if(!all.length)return;$('historicoMes').innerHTML=all.map(m=>'<option value="'+escHistorico(m.mes)+'">'+escHistorico(m.rotulo)+'</option>').join('');if(all.some(m=>m.mes===selected))$('historicoMes').value=selected;$('historicoMes').disabled=false;$('historicoMes').onchange=mostrarHistorico;mostrarHistorico()}
+
 function mostrarHistorico(){
- const m=historicoMeses.find(x=>x.mes===$('historicoMes').value);
+ const sel=$('historicoMes').value,m=vendaResumo?.data.meses.find(x=>x.mes===sel)||historicoMeses.find(x=>x.mes===sel);
  if(!m)return;
  $('historicoBipagens').textContent=num(m.bipagens);
  $('historicoValor').textContent=money(m.valor);
- $('historicoStatus').textContent='Registros disponíveis de '+dataBR(m.primeiraData)+' a '+dataBR(m.ultimaData)+'. Fonte: Base Central Granel Plantita (Vendas_Balanca), conferida em 03/11/2026. Este fechamento histórico é uma cópia e não inclui lançamentos retroativos após a conferência.';
+ $('historicoStatus').textContent=vendaResumo?.data.meses.some(x=>x.mes===m.mes)?'Vendas conciliadas • '+(vendaResumo.live?'Google ao vivo':'cópia de '+vendaResumo.data.asOf):'Registros disponíveis de '+dataBR(m.primeiraData)+' a '+dataBR(m.ultimaData)+'. Fonte: Base Central Granel Plantita (Vendas_Balanca), conferida em 03/11/2026. Este fechamento histórico é uma cópia e não inclui lançamentos retroativos após a conferência.';
  $('historicoDias').innerHTML=(m.dias||[]).map(x=>'<tr><td>'+escHistorico(dataBR(x.data))+'</td><td class="right">'+num(x.bipagens)+'</td><td class="right">'+money(x.valor)+'</td></tr>').join('');
 }
 async function carregarHistorico(){
@@ -246,10 +258,7 @@ async function carregarHistorico(){
   const d=await response.json();
   if(!Array.isArray(d.meses)||!d.meses.length)throw Error('Não há meses no histórico');
   historicoMeses=d.meses;
-  $('historicoMes').innerHTML=historicoMeses.map(m=>'<option value="'+escHistorico(m.mes)+'">'+escHistorico(m.rotulo)+'</option>').join('');
-  $('historicoMes').disabled=false;
-  $('historicoMes').onchange=mostrarHistorico;
-  mostrarHistorico();
+  atualizarHistorico();
  }catch(err){console.warn('Histórico do granel indisponível',err);$('historicoStatus').textContent='Não foi possível carregar o histórico de meses. Toque em ATUALIZAR para tentar novamente.'}
 }
 

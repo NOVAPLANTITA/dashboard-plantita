@@ -1,0 +1,133 @@
+{
+  "ok": true,
+  "schema": 1,
+  "asOf": "2026-11-25",
+  "cutoff": "2026-11-04",
+  "meses": [
+    {
+      "mes": "2026-11",
+      "rotulo": "Novembro 2026",
+      "primeiraData": "2026-11-02",
+      "ultimaData": "2026-11-25",
+      "valor": 27002.61,
+      "bipagens": 1246,
+      "dias": [
+        {
+          "data": "2026-11-02",
+          "valor": 472.84,
+          "bipagens": 25
+        },
+        {
+          "data": "2026-11-03",
+          "valor": 161.83,
+          "bipagens": 9
+        },
+        {
+          "data": "2026-11-04",
+          "valor": 2476.09,
+          "bipagens": 110
+        },
+        {
+          "data": "2026-11-05",
+          "valor": 1497.12,
+          "bipagens": 72
+        },
+        {
+          "data": "2026-11-06",
+          "valor": 1916.48,
+          "bipagens": 77
+        },
+        {
+          "data": "2026-11-07",
+          "valor": 295.03,
+          "bipagens": 13
+        },
+        {
+          "data": "2026-11-08",
+          "valor": 689.38,
+          "bipagens": 28
+        },
+        {
+          "data": "2026-11-09",
+          "valor": 1620.5,
+          "bipagens": 75
+        },
+        {
+          "data": "2026-11-10",
+          "valor": 1129.59,
+          "bipagens": 48
+        },
+        {
+          "data": "2026-11-11",
+          "valor": 1052.87,
+          "bipagens": 47
+        },
+        {
+          "data": "2026-11-13",
+          "valor": 2201.07,
+          "bipagens": 97
+        },
+        {
+          "data": "2026-11-14",
+          "valor": 1863.88,
+          "bipagens": 79
+        },
+        {
+          "data": "2026-11-15",
+          "valor": 1255.59,
+          "bipagens": 66
+        },
+        {
+          "data": "2026-11-16",
+          "valor": 1052.68,
+          "bipagens": 54
+        },
+        {
+          "data": "2026-11-17",
+          "valor": 1001.35,
+          "bipagens": 51
+        },
+        {
+          "data": "2026-11-18",
+          "valor": 530.14,
+          "bipagens": 25
+        },
+        {
+          "data": "2026-11-19",
+          "valor": 1490.7,
+          "bipagens": 74
+        },
+        {
+          "data": "2026-11-20",
+          "valor": 766.99,
+          "bipagens": 31
+        },
+        {
+          "data": "2026-11-21",
+          "valor": 1546.49,
+          "bipagens": 79
+        },
+        {
+          "data": "2026-11-22",
+          "valor": 1003.38,
+          "bipagens": 46
+        },
+        {
+          "data": "2026-11-23",
+          "valor": 1122.03,
+          "bipagens": 57
+        },
+        {
+          "data": "2026-11-24",
+          "valor": 724.77,
+          "bipagens": 27
+        },
+        {
+          "data": "2026-11-25",
+          "valor": 1131.81,
+          "bipagens": 56
+        }
+      ]
+    }
+  ]
+}
