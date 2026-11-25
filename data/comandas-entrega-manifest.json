@@ -1,5 +1,5 @@
 {
-  "atualizadoEm": "25/11/2026 — dez comandas de 24/11, R$ 1.882,50.",
+  "atualizadoEm": "25/11/2026 — nove comandas de 25/11, total manuscrito R$ 1.047,00; duas diferenças de R$ 1,00 sinalizadas.",
   "descricao": "Índice único para dashboard, comandas e rações por marca. Acrescentar novas fontes aqui junto dos novos registros; páginas não precisam de alteração mensal.",
   "fontes": [
     "data/comandas-entrega.json",
@@ -64,6 +64,7 @@
     "data/comandas-entrega-20261107.json",
     "data/comandas-entrega-20261109.json",
     "data/comandas-entrega-20261110.json",
-    "data/comandas-entrega-20261124.json"
+    "data/comandas-entrega-20261124.json",
+    "data/comandas-entrega-20261125.json"
   ]
 }
