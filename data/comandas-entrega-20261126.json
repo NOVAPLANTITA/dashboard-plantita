@@ -1,0 +1,103 @@
+{
+  "atualizadoEm": "26/11/2026 — sete comandas recebidas; cinco de 26/11 e duas de 25/11.",
+  "comandas": [
+    {
+      "data": "26/11/2026",
+      "cliente": "Marcelo",
+      "telefone": "",
+      "endereco": "Av. José Estima Filho (leitura aproximada)",
+      "descricao": "1 Fórmula Natural P/G (leitura aproximada), 15 kg (R$ 275,00)",
+      "valorProduto": 275,
+      "taxaEntrega": 0,
+      "total": 275,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Variante da ração e nome da via a conferir. Taxa não discriminada.",
+      "origemFoto": "1000357099.jpg"
+    },
+    {
+      "data": "26/11/2026",
+      "cliente": "Karina",
+      "telefone": "",
+      "endereco": "Av. Maximino Augusto de Carvalho (leitura aproximada)",
+      "descricao": "1 Churu rosa (R$ 28,00); 1 Churu roxo (R$ 28,00); 1 Bio Nature 2 kg (R$ 33,00)",
+      "valorProduto": 89,
+      "taxaEntrega": 0,
+      "total": 89,
+      "pagamento": "Cartão",
+      "prazo": "Até 15:00",
+      "conferencia": "Nome do cliente, terceiro produto e via com leitura aproximada. Taxa não discriminada.",
+      "origemFoto": "1000357098.jpg"
+    },
+    {
+      "data": "26/11/2026",
+      "cliente": "Dona Idalina (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "1 milho 50 kg (R$ 90,00); 1 rastelo de ferro (R$ 55,00)",
+      "valorProduto": 145,
+      "taxaEntrega": 0,
+      "total": 145,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Nome do cliente a conferir. Taxa não discriminada.",
+      "origemFoto": "1000357097.jpg"
+    },
+    {
+      "data": "26/11/2026",
+      "cliente": "Fabiane (leitura aproximada)",
+      "telefone": "",
+      "endereco": "",
+      "descricao": "Golden sênior (R$ 80,00); pastel (R$ 16,00; descrição a conferir)",
+      "valorProduto": 96,
+      "taxaEntrega": 5,
+      "total": 101,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Quantidades e endereço não identificados com segurança; segundo produto a conferir.",
+      "origemFoto": "1000357096.jpg"
+    },
+    {
+      "data": "26/11/2026",
+      "cliente": "Mateus",
+      "telefone": "",
+      "endereco": "Favela (anotação manuscrita)",
+      "descricao": "1 Misty 10 kg (R$ 76,00; nome a conferir)",
+      "valorProduto": 76,
+      "taxaEntrega": 0,
+      "total": 76,
+      "pagamento": "Pix",
+      "prazo": "",
+      "conferencia": "Nome comercial do produto com leitura aproximada. Taxa não discriminada.",
+      "origemFoto": "1000357095.jpg"
+    },
+    {
+      "data": "25/11/2026",
+      "cliente": "Caroline",
+      "telefone": "",
+      "endereco": "Av. Presidente Jânio da Silva Quadros",
+      "descricao": "1 kg Golden frango castrados (R$ 20,00); 1 kg Golden salmão castrados (R$ 20,00); 1 kg Premier R/P (R$ 18,00)",
+      "valorProduto": 58,
+      "taxaEntrega": 5,
+      "total": 63,
+      "pagamento": "Cartão",
+      "prazo": "",
+      "conferencia": "Linha riscada desconsiderada. Data manuscrita 25/11.",
+      "origemFoto": "1000357094.jpg"
+    },
+    {
+      "data": "25/11/2026",
+      "cliente": "Jheniffer (leitura aproximada)",
+      "telefone": "",
+      "endereco": "Estr. Ary Mando (leitura aproximada)",
+      "descricao": "6 kg Special Dog carne (R$ 54,00); 1 kg Magnus não castrados (R$ 14,00)",
+      "valorProduto": 68,
+      "taxaEntrega": 5,
+      "total": 73,
+      "pagamento": "PG (anotação manuscrita)",
+      "prazo": "",
+      "conferencia": "Data corrigida à mão para 25/11; nome e via com leitura aproximada.",
+      "origemFoto": "1000357093.jpg"
+    }
+  ]
+}
