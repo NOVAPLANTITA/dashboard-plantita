@@ -1,16 +1,16 @@
 {
   "ok": true,
   "schema": 1,
-  "asOf": "2026-11-25",
+  "asOf": "2026-11-26",
   "cutoff": "2026-11-04",
   "meses": [
     {
       "mes": "2026-11",
       "rotulo": "Novembro 2026",
       "primeiraData": "2026-11-02",
-      "ultimaData": "2026-11-25",
-      "valor": 27002.61,
-      "bipagens": 1246,
+      "ultimaData": "2026-11-26",
+      "valor": 27584.85,
+      "bipagens": 1275,
       "dias": [
         {
           "data": "2026-11-02",
@@ -126,6 +126,11 @@
           "data": "2026-11-25",
           "valor": 1131.81,
           "bipagens": 56
+        },
+        {
+          "data": "2026-11-26",
+          "valor": 582.24,
+          "bipagens": 29
         }
       ]
     }
