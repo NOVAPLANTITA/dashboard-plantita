@@ -1,0 +1,84 @@
+{
+  "atualizadoEm": "26/11/2026 — comanda fotografada",
+  "dataComanda": "26/11/2026",
+  "totalInformadoComanda": 7459,
+  "totalProvisorioComanda": 7459,
+  "totalLancamentos": 7462.07,
+  "diferencaConferencia": -3.07,
+  "detalhamentoPendente": false,
+  "conciliacaoPendente": true,
+  "totalTodasAnotacoes": 7462.07,
+  "observacao": "Fechamento manuscrito R$ 7.459,00 utilizado provisoriamente no diário e acumulado. Soma das anotações R$ 7462,07. Conferir a diferença. Café e compra registrados em Outros, sem dedução automática, conforme método anterior. PIX individuais identificados sem nomes pessoais. Não duplicar PDV, granel ou entregas.",
+  "movimentos": [
+    {
+      "data": "26/11/2026",
+      "tipo": "Dinheiro",
+      "descricao": "Dinheiro",
+      "valor": 800,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "26/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 1",
+      "valor": 1716.37,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "26/11/2026",
+      "tipo": "Getnet",
+      "descricao": "Getnet 2",
+      "valor": 838.5,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "26/11/2026",
+      "tipo": "Cielo",
+      "descricao": "Cielo",
+      "valor": 924.5,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "26/11/2026",
+      "tipo": "Mercado Pago",
+      "descricao": "Mercado Pago",
+      "valor": 2625.8,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "26/11/2026",
+      "tipo": "Outros",
+      "descricao": "Café",
+      "valor": 45.9,
+      "conferencia": "Anotação a conciliar; sem dedução automática."
+    },
+    {
+      "data": "26/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX 1",
+      "valor": 76,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "26/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX 2",
+      "valor": 145,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    },
+    {
+      "data": "26/11/2026",
+      "tipo": "Outros",
+      "descricao": "Compra (descrição a conferir)",
+      "valor": 260,
+      "conferencia": "Anotação a conciliar; sem dedução automática."
+    },
+    {
+      "data": "26/11/2026",
+      "tipo": "PIX",
+      "descricao": "PIX Mercado Pago",
+      "valor": 30,
+      "conferencia": "Leitura visual da comanda fotografada; conferir."
+    }
+  ]
+}
