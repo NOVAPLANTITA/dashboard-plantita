@@ -1,0 +1,18 @@
+{
+  "atualizadoEm": "27/11/2026 — comanda fotografada",
+  "dataComanda": "27/11/2026",
+  "totalInformadoComanda": 9050.12,
+  "totalProvisorioComanda": 9050.12,
+  "detalhamentoPendente": true,
+  "conciliacaoPendente": true,
+  "observacao": "Total manuscrito da comanda. Há rasura e valores individuais de leitura incerta; registrar uma única vez o fechamento, sem duplicar PDV, granel ou entregas. Meios de pagamento pendentes de conciliação.",
+  "movimentos": [
+    {
+      "data": "27/11/2026",
+      "tipo": "Comanda",
+      "descricao": "Fechamento diário — total manuscrito",
+      "valor": 9050.12,
+      "conferencia": "Total legível na comanda; detalhamento dos meios de pagamento a conciliar."
+    }
+  ]
+}
